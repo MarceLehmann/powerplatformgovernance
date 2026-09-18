@@ -103,10 +103,10 @@ export function flowDefinition() {
     Cutoff: compose('@utcNow()', 'Reset_feed_IDs'),
     Source_URL: compose("@trim(items('For_each_source')?['new_contenturl'])", 'Cutoff'),
     Validate_source_URL: { type: 'ParseJson', runAfter: after('Source_URL'), inputs: {
-      content: { scheme: "@uriScheme(outputs('Source_URL'))", host: "@uriHost(outputs('Source_URL'))", port: "@uriPort(outputs('Source_URL'))", credentials: "@contains(outputs('Source_URL'), '@')" },
-      schema: { type: 'object', required: ['scheme', 'host', 'port', 'credentials'], properties: {
+      content: { scheme: "@uriScheme(outputs('Source_URL'))", public_host: "@and(contains(uriHost(outputs('Source_URL')), '.'), not(isInt(last(split(uriHost(outputs('Source_URL')), '.')))), not(contains(uriHost(outputs('Source_URL')), ':')), not(contains(outputs('Source_URL'), decodeUriComponent('%5C'))), not(contains(outputs('Source_URL'), ' ')), not(contains(createArray('local', 'localhost', 'internal', 'test', 'invalid', 'example', 'onion'), last(split(toLower(uriHost(outputs('Source_URL'))), '.')))))", port: "@uriPort(outputs('Source_URL'))", credentials: "@contains(outputs('Source_URL'), '@')" },
+      schema: { type: 'object', required: ['scheme', 'public_host', 'port', 'credentials'], properties: {
         scheme: { type: 'string', enum: ['https'] }, port: { type: 'integer', enum: [443] }, credentials: { type: 'boolean', enum: [false] },
-        host: { type: 'string', pattern: '^(?!.*\\.(?:local|localhost|internal|test|invalid|example|onion)$)[a-zA-Z0-9][a-zA-Z0-9.-]*\\.[a-zA-Z]{2,}$' },
+        public_host: { type: 'boolean', enum: [true] },
       } },
     } },
     Is_RSS: condition(`@equals(items('For_each_source')?['new_kind'], ${kind.rss})`, {
@@ -168,20 +168,16 @@ export function flowDefinition() {
     }, 'Is_RSS'),
   };
   const queuedActions = {
-    Match_GitHub_run: { type: 'Query', runAfter: {}, inputs: { from: "@body('GitHub_results')?['workflow_runs']", where: "@equals(item()?['display_title'], concat('Curate ', items('For_each_source')?['new_requestid']))" } },
-    Run_found: condition("@greater(length(body('Match_GitHub_run')), 0)", {
-      Run_completed: condition("@equals(first(body('Match_GitHub_run'))?['status'], 'completed')", {
-        Run_succeeded: condition("@equals(first(body('Match_GitHub_run'))?['conclusion'], 'success')", {
-          Confirm_publication: update({ new_processing: `@if(equals(items('For_each_source')?['new_kind'], ${kind.rss}), ${processing.ready}, ${processing.published})`, new_watermark: "@items('For_each_source')?['new_pendingwatermark']", new_seenids: "@items('For_each_source')?['new_pendingseenids']", new_lastpublished: '@utcNow()', new_lastchecked: '@utcNow()', new_failures: 0, new_lastmessage: "@concat('GitHub publication confirmed: ', first(body('Match_GitHub_run'))?['html_url'])" }),
-        }, {
-          GitHub_failed: update({ new_processing: processing.review, new_lastmessage: "@concat('GitHub publication failed; watermark unchanged. Inspect ', first(body('Match_GitHub_run'))?['html_url'])", new_lastchecked: '@utcNow()' }),
-        }),
-      }),
-    }, {
+    Read_publication_receipt: connector('github', 'GetReference', {
+      repositoryOwner: 'MarceLehmann', repositoryName: 'powerplatformgovernance',
+      reference: "@concat('tags/curation-results/', items('For_each_source')?['new_requestid'])",
+    }),
+    Confirm_publication: update({ new_processing: `@if(equals(items('For_each_source')?['new_kind'], ${kind.rss}), ${processing.ready}, ${processing.published})`, new_watermark: "@items('For_each_source')?['new_pendingwatermark']", new_seenids: "@items('For_each_source')?['new_pendingseenids']", new_lastpublished: '@utcNow()', new_lastchecked: '@utcNow()', new_failures: 0, new_lastmessage: "@concat('GitHub publication confirmed: https://github.com/MarceLehmann/powerplatformgovernance/tree/curation-results/', items('For_each_source')?['new_requestid'])" }, 'Read_publication_receipt'),
+    Receipt_not_available: { type: 'Scope', runAfter: { Read_publication_receipt: ['Failed', 'TimedOut'] }, actions: {
       Request_expired: condition("@less(ticks(items('For_each_source')?['new_pendingwatermark']), ticks(addHours(utcNow(), -24)))", {
-        Missing_run_review: update({ new_processing: processing.review, new_lastmessage: 'No matching GitHub run after 24 hours. Check the GitHub connection and workflow; watermark unchanged.' }),
+        Missing_receipt_review: update({ new_processing: processing.review, new_lastchecked: '@utcNow()', new_lastmessage: 'No GitHub success receipt after 24 hours. Check the GitHub connection and publisher workflow; feed IDs and watermark unchanged.' }),
       }),
-    }, 'Match_GitHub_run'),
+    } },
   };
   return {
     $schema: 'https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#', contentVersion: '1.0.0.0',
@@ -190,8 +186,7 @@ export function flowDefinition() {
     actions: {
       Initialize_arrays: { type: 'InitializeVariable', runAfter: {}, inputs: { variables: [{ name: 'Candidates', type: 'array', value: [] }, { name: 'Publications', type: 'array', value: [] }, { name: 'SeenIDs', type: 'array', value: [] }] } },
       List_sources: { ...connector('dataverse', 'ListRecords', { entityName: config.entitySet, $filter: `(${eligibleFilter}) or new_processing eq ${processing.queued}`, $orderby: 'createdon asc' }, 'Initialize_arrays'), runtimeConfiguration: { paginationPolicy: { minimumItemCount: 5000 } } },
-      GitHub_results: { type: 'Http', runAfter: after('List_sources'), inputs: { method: 'GET', uri: `https://api.github.com/repos/${config.repository}/actions/workflows/publish-curation.yml/runs?event=repository_dispatch&per_page=100`, headers: { Accept: 'application/vnd.github+json', 'User-Agent': 'PowerPlatformGovernance' } } },
-      For_each_source: { type: 'Foreach', foreach: "@body('List_sources')?['value']", runAfter: after('GitHub_results'), runtimeConfiguration: { concurrency: { repetitions: 1 } }, actions: {
+      For_each_source: { type: 'Foreach', foreach: "@body('List_sources')?['value']", runAfter: after('List_sources'), runtimeConfiguration: { concurrency: { repetitions: 1 } }, actions: {
         Try_source: { type: 'Scope', runAfter: {}, actions: {
           Is_waiting_for_GitHub: condition(`@equals(items('For_each_source')?['new_processing'], ${processing.queued})`, queuedActions, readyActions),
         } },

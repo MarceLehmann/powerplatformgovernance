@@ -56,7 +56,9 @@ try {
     $stored = Invoke-RestMethod -Uri ($root + '/workflows(' + $flowId + ')?$select=clientdata,statecode') -Headers $dataverseHeaders
     $actual = ($stored.clientdata | ConvertFrom-Json -Depth 100).properties.definition | ConvertTo-Json -Depth 100 -Compress
     $expected = $manifest.definition | ConvertTo-Json -Depth 100 -Compress
-    if ($actual -ne $expected) { throw 'Stored definition differs from the local definition. Flow was not activated.' }
+    if (![System.Text.Json.Nodes.JsonNode]::DeepEquals([System.Text.Json.Nodes.JsonNode]::Parse($actual), [System.Text.Json.Nodes.JsonNode]::Parse($expected))) {
+        throw 'Stored definition differs from the local definition. Flow was not activated.'
+    }
     if ($Enable) {
         Invoke-RestMethod -Uri ($root + '/workflows(' + $flowId + ')') -Headers $dataverseHeaders -Method Patch -ContentType 'application/json' -Body '{"statecode":1,"statuscode":2}' | Out-Null
     }

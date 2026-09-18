@@ -53,3 +53,13 @@ jobs:
             done
             gh workflow run pages-deploy.yml --ref main
           fi
+      - name: Record successful publication
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REQUEST_ID: ${{ github.event.client_payload.request_id }}
+        run: |
+          [[ "$REQUEST_ID" =~ ^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$ ]]
+          if ! gh api "repos/$GITHUB_REPOSITORY/git/ref/tags/curation-results/$REQUEST_ID" --silent; then
+            gh api "repos/$GITHUB_REPOSITORY/git/refs" --method POST \
+              -f "ref=refs/tags/curation-results/$REQUEST_ID" -f "sha=$(git rev-parse HEAD)" --silent
+          fi

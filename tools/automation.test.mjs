@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 import { approval, config, flowDefinition, isEligible, kind, processing, tableDefinition } from './automation.mjs';
 
 const ready = { statecode: 0, new_enabled: true, new_approval: approval.approved, new_kind: kind.article, new_processing: processing.ready };
@@ -32,6 +33,7 @@ test('table matches submission fields and defaults to no approval or consent', (
 
 test('flow is sequential, approval-filtered, uses Foundry and confirms GitHub results', () => {
   const flow = flowDefinition();
+  assert.equal(JSON.stringify(flow).includes('"pattern"'), false);
   assert.equal(flow.triggers.Every_5_minutes.recurrence.interval, 5);
   assert.equal(flow.triggers.Every_5_minutes.runtimeConfiguration.concurrency.runs, 1);
   assert.match(flow.actions.List_sources.inputs.parameters.$filter, /new_enabled eq true and new_approval eq 100000001/);
@@ -55,12 +57,24 @@ test('flow is sequential, approval-filtered, uses Foundry and confirms GitHub re
   assert.equal(actions.get('Read_RSS').inputs.parameters.since, undefined);
   assert.match(actions.get('Unseen_RSS_items').inputs.where, /new_seenids/);
   assert.equal(actions.get('Confirm_publication').inputs.parameters['item/new_seenids'], "@items('For_each_source')?['new_pendingseenids']");
-  assert.equal(actions.get('GitHub_failed').inputs.parameters['item/new_seenids'], undefined);
+  assert.equal(actions.get('Read_publication_receipt').inputs.host.operationId, 'GetReference');
+  assert.deepEqual(actions.get('Confirm_publication').runAfter, { Read_publication_receipt: ['Succeeded'] });
+  assert.equal(actions.get('Missing_receipt_review').inputs.parameters['item/new_seenids'], undefined);
+  assert.equal(actions.has('GitHub_results'), false);
   assert.deepEqual(actions.get('Validate_source_URL').inputs.schema.properties.scheme.enum, ['https']);
+  assert.deepEqual(actions.get('Validate_source_URL').inputs.schema.properties.public_host.enum, [true]);
   assert.equal(actions.get('Dispatch_to_GitHub').inputs.parameters.body.event_type, 'curated-publication');
   assert.deepEqual(actions.get('Dispatch_to_GitHub').runAfter, { Mark_queued: ['Succeeded'] });
   assert.match(actions.get('Still_approved').expression, /modifiedon/);
   assert.equal(actions.get('Confirm_publication').inputs.parameters['item/new_failures'], 0);
-  assert.equal(actions.get('GitHub_failed').inputs.parameters['item/new_watermark'], undefined);
+  assert.equal(actions.get('Missing_receipt_review').inputs.parameters['item/new_watermark'], undefined);
   assert.equal(isEligible({ ...ready, new_processing: processing.queued }), false);
+});
+
+test('publisher confirms success using a private-repository readable receipt', () => {
+  const workflow = readFileSync(new URL('../.github/workflows/publish-curation.yml', import.meta.url), 'utf8');
+  assert.match(workflow, /test "\$GITHUB_ACTOR" = 'MarceLehmann'/);
+  assert.ok(workflow.indexOf('Record successful publication') > workflow.indexOf('Commit both languages and deploy'));
+  assert.match(workflow, /refs\/tags\/curation-results\/\$REQUEST_ID/);
+  assert.doesNotMatch(workflow, /if: always\(\)/);
 });
