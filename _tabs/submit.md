@@ -80,60 +80,6 @@ Help others discover practical Power Platform governance content. Choose what yo
   <p class="submission-status" data-submission-status aria-live="polite"></p>
 </form>
 
-<form class="submission-form" method="post" action="{{ site.data.submission.endpoint }}" data-submission-form>
-  <p>
-    <label for="submission-type">What would you like to submit?</label>
-    <select id="submission-type" name="submission_type" required>
-      <option value="rss_feed">An entire blog via RSS</option>
-      <option value="single_article">A single article</option>
-    </select>
-  </p>
-  <p>
-    <label for="name">Your name</label>
-    <input id="name" name="name" type="text" autocomplete="name" required>
-  </p>
-  <p>
-    <label for="email">Your email</label>
-    <input id="email" name="email" type="email" autocomplete="email" required>
-  </p>
-  <p>
-    <label for="blog-name">Blog or organisation</label>
-    <input id="blog-name" name="blog_name" type="text" required>
-  </p>
-  <p>
-    <label for="website-url">Website or article URL</label>
-    <input id="website-url" name="website_url" type="url" placeholder="https://" required>
-  </p>
-  <p>
-    <label for="feed-url">RSS or Atom feed URL <span>(required for feed submissions)</span></label>
-    <input id="feed-url" name="feed_url" type="url" placeholder="https://">
-  </p>
-  <p>
-    <label for="language">Content language</label>
-    <select id="language" name="language" required>
-      <option value="en">English</option>
-      <option value="de">Deutsch</option>
-      <option value="other">Other</option>
-    </select>
-  </p>
-  <p>
-    <label for="topics">Topics</label>
-    <input id="topics" name="topics" type="text" placeholder="DLP, ALM, security">
-  </p>
-  <p>
-    <label for="reason">Why is this useful for the governance community?</label>
-    <textarea id="reason" name="reason" rows="5" required></textarea>
-  </p>
-  <p class="submission-consent">
-    <label>
-      <input name="permission" type="checkbox" value="yes" required>
-      I confirm that I may submit this content and that the source can be credited.
-    </label>
-  </p>
-  <button type="submit">Send for review</button>
-  <p class="submission-status" data-submission-status aria-live="polite"></p>
-</form>
-
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const form = document.querySelector('[data-submission-form]');
