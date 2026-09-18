@@ -1,0 +1,4 @@
+# Callback supplied by GOVERNANCE_SUBMISSION_ENDPOINT during the Pages build.
+# Direct public intake approved on 2026-09-18; the rendered URL is public.
+endpoint: ""
+direct_webhook: true

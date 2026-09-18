@@ -4,14 +4,13 @@
 
 ## Purpose
 
-The site accepts article, blog and RSS/Atom suggestions through a JSON submission handler. The webhook intake is deployed and live-tested, but remains off until a protected public proxy is approved and connected. Form submission therefore remains disabled. Public suggestions always start unapproved and disabled. The [operations guide](2026-09-18_architektur_automation_betrieb.md#website-webhook) records the actual state; the [curation and source rules](2026-09-18_architektur_kuration_und_quellen.md) define the editorial and privacy contract.
+The site accepts article, blog and RSS/Atom suggestions through a JSON submission handler. Direct public webhook access was explicitly approved on 18 September 2026 after discussing spam and capacity risks. The intake is active; the separate publication flow remains off. The callback is injected through an Actions build secret and is intentionally visible in rendered HTML, not stored in Git history. Public suggestions always start unapproved and disabled. The [operations guide](2026-09-18_architektur_automation_betrieb.md#website-webhook) records the actual state; the [curation and source rules](2026-09-18_architektur_kuration_und_quellen.md) define the editorial and privacy contract.
 
 ## Flow
 
 ```mermaid
 flowchart LR
-    A[Public submission page] --> P[Protected proxy - pending approval]
-    P --> B[Power Automate HTTP trigger]
+    A[Public submission page] --> B[Power Automate HTTP trigger]
     B --> C[Validate and normalise payload]
     C --> D[Dataverse - unapproved and disabled]
     D --> H[Manual source-type check and approval]

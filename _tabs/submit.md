@@ -14,7 +14,7 @@ Suggest an article or blog about Power Platform governance. We publish short sum
 <p class="prompt-info">Submissions are not open yet. Please check back soon.</p>
 {% endif %}
 
-<form class="submission-form" method="post" action="{{ submission_endpoint | escape }}" data-submission-form>
+<form class="submission-form" method="post" action="{{ submission_endpoint | escape }}" data-submission-form data-direct-webhook="{{ site.data.submission.direct_webhook | default: false }}">
   <p>
     <label for="content-url">Article, blog or RSS URL</label>
     <input id="content-url" name="content_url" type="url" pattern="https://.+" maxlength="2048" placeholder="https://" required>

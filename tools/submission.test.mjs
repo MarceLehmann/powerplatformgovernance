@@ -4,14 +4,14 @@ import { readFileSync } from 'node:fs';
 import vm from 'node:vm';
 
 const source = readFileSync(new URL('../assets/js/submission.js', import.meta.url), 'utf8');
-function browser(fetch, endpoint = 'https://intake.example.org/submit', fields = {}) {
+function browser(fetch, endpoint = 'https://intake.example.org/submit', fields = {}, direct = false) {
   const listeners = {};
   const button = { disabled: true };
   const status = { textContent: '' };
   const attributes = {};
   let resets = 0;
   const form = {
-    querySelector: () => button, getAttribute: () => endpoint,
+    querySelector: () => button, getAttribute: name => name === 'action' ? endpoint : String(direct),
     addEventListener: (name, callback) => { listeners[name] = callback; }, reportValidity: () => true,
     setAttribute: (name, value) => { attributes[name] = value; }, removeAttribute: name => { delete attributes[name]; },
     reset: () => { resets++; },
@@ -85,5 +85,17 @@ test('failed or unconfirmed responses retain entries and never claim acceptance'
     assert.match(page.status.textContent, /entries are unchanged/);
     assert.doesNotMatch(page.status.textContent, /submitted for review/);
     assert.equal(page.button.disabled, false);
+  }
+});
+
+test('signed intake callback requires explicit direct mode and valid callback shape', async () => {
+  const endpoint = 'https://env.environment.api.powerplatform.com/powerautomate/automations/direct/cu/26/workflows/0123456789abcdef0123456789abcdef/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=nonsecret-test-value-only';
+  assert.equal(browser(accepted, endpoint).button.disabled, true);
+  const page = browser(accepted, endpoint, {}, true);
+  assert.equal(page.button.disabled, false);
+  await page.submit();
+  assert.equal(page.resets(), 1);
+  for (const invalid of [endpoint.replace('/triggers/manual/paths/invoke', '/other'), endpoint.replace('api.powerplatform.com', 'api.powerplatform.com.evil.org'), endpoint + '&sig=duplicate', endpoint + '&extra=true', endpoint.replace('sig=nonsecret-test-value-only', 'sig=short')]) {
+    assert.equal(browser(accepted, invalid, {}, true).button.disabled, true);
   }
 });

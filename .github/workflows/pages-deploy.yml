@@ -49,6 +49,7 @@ jobs:
         run: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: "production"
+          GOVERNANCE_SUBMISSION_ENDPOINT: ${{ secrets.GOVERNANCE_SUBMISSION_ENDPOINT }}
 
       - name: Test automation contracts
         run: |

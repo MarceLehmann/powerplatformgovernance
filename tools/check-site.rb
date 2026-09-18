@@ -73,6 +73,11 @@ end
 ['http://intake.example.org/', 'https://intake.example.org/?sig=example', 'https://user:example@intake.example.org/', 'https://tenant.logic.azure.com/workflows/example', 'https://env.api.powerplatform.com/automate/flows/example'].each do |endpoint|
   raise 'Unsafe submission endpoint accepted' if GovernanceSubmission.public_endpoint?(endpoint)
 end
+direct_endpoint = 'https://env.environment.api.powerplatform.com/powerautomate/automations/direct/cu/26/workflows/0123456789abcdef0123456789abcdef/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=nonsecret-test-value-only'
+raise 'Direct callback accepted without approval' if GovernanceSubmission.public_endpoint?(direct_endpoint)
+raise 'Approved direct callback rejected' unless GovernanceSubmission.public_endpoint?(direct_endpoint, direct_webhook: true)
+raise 'Duplicate signature accepted' if GovernanceSubmission.public_endpoint?(direct_endpoint + '&sig=duplicate', direct_webhook: true)
+raise 'Rendered endpoint is invalid' unless GovernanceSubmission.public_endpoint?(submit.at_css('form')['action'].to_s, direct_webhook: submit.at_css('form')['data-direct-webhook'] == 'true')
 
 sources = Nokogiri::HTML(File.read(File.join(site_dir, 'sources/index.html')))
 domains = sources.css('[data-source-domain]').map { |node| node['data-source-domain'] }

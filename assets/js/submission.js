@@ -9,8 +9,13 @@
   let sending = false;
   try {
     const url = new URL(endpoint);
-    configured = url.protocol === 'https:' && !url.username && !url.password && !url.search && !url.hash &&
-      (!url.port || url.port === '443') && !/(?:^|\.)(?:logic\.azure\.com|api\.powerplatform\.com|flow\.microsoft\.com)$/i.test(url.hostname);
+    const flowHost = /(?:^|\.)(?:logic\.azure\.com|api\.powerplatform\.com|flow\.microsoft\.com)$/i.test(url.hostname);
+    const directAllowed = form.getAttribute('data-direct-webhook') === 'true' && flowHost &&
+      /\/workflows\/[a-f0-9]{32}\/triggers\/manual\/paths\/invoke$/i.test(url.pathname) &&
+      ['api-version', 'sp', 'sv', 'sig'].every(key => url.searchParams.getAll(key).length === 1) &&
+      [...url.searchParams.keys()].length === 4 && url.searchParams.get('sig').length >= 20;
+    configured = url.protocol === 'https:' && !url.username && !url.password && !url.hash &&
+      (!url.port || url.port === '443') && (directAllowed || (!flowHost && !url.search));
   } catch {}
   button.disabled = !configured;
 
