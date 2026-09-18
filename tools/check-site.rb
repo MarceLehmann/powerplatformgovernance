@@ -1,8 +1,12 @@
 require 'nokogiri'
 require 'json'
+require 'jekyll'
+require 'yaml'
+require 'date'
+require_relative '../_plugins/curated-sources'
 
 site_dir = ARGV.fetch(0, '_site')
-required_pages = %w[index.html submit/index.html about/index.html tags/index.html archives/index.html]
+required_pages = %w[index.html submit/index.html about/index.html tags/index.html archives/index.html sources/index.html]
 required_pages.each do |path|
   raise "Missing page: #{path}" unless File.file?(File.join(site_dir, path))
 end
@@ -26,6 +30,21 @@ pages.each do |path|
   raise "Missing structured data: #{path}" if schema.empty?
   schema.each { |node| JSON.parse(node.text) }
   raise "Starter placeholder: #{path}" if document.to_html.match?(/twitter_username|example@domain\.com|Add Markdown syntax content/)
+  raise "Missing Sources navigation: #{path}" unless document.at_css('#sidebar nav a[href="/sources/"]')
+  raise "Categories still in navigation: #{path}" if document.at_css('#sidebar nav a[href="/categories/"]')
+  if document.at_css('[data-curated-entry]')
+    source = document.at_css('.curated-source cite a')
+    detailed = document.at_css('a.detailed-article')
+    raise "Missing direct original link: #{path}" unless source && detailed && source['href'] == detailed['href']
+    raise "Source must be external: #{path}" if source['href'].start_with?('https://powerplatformgovernance.com/')
+    raise "Missing TL;DR: #{path}" unless document.css('h2').any? { |node| node.text.include?('TL;DR') }
+    raise "Missing source dates: #{path}" unless document.at_css('.curated-source').text.include?('Original published')
+    contributor = document.at_css('.contributor-credit a')
+    if contributor
+      raise "Invalid LinkedIn credit: #{path}" unless contributor['href'].match?(%r{\Ahttps://(?:www\.)?linkedin\.com/in/[^\s]+\z})
+      raise "Contributor link must be marked ugc: #{path}" unless contributor['rel'].to_s.split.include?('ugc')
+    end
+  end
 end
 
 home = Nokogiri::HTML(File.read(File.join(site_dir, 'index.html')))
@@ -35,10 +54,68 @@ end
 
 submit = Nokogiri::HTML(File.read(File.join(site_dir, 'submit/index.html')))
 raise 'Expected one submission form' unless submit.css('form').size == 1
+required_fields = submit.css('form [required]').map { |node| node['name'] }
+raise 'Only the content URL should be required' unless required_fields == ['content_url']
+raise 'LinkedIn field missing' unless submit.at_css('input[name="submitter_linkedin"][type="url"]')
+consent = submit.at_css('input[name="publish_credit"]')
+raise 'Public credit must be opt-in' unless consent && !consent.key?('checked') && !consent.key?('required')
+raise 'Unnecessary email collection' if submit.at_css('input[type="email"]')
 if submit.at_css('form')['action'].to_s.strip.empty?
   raise 'Unconfigured submission must be disabled' unless submit.at_css('button[type="submit"][disabled]')
 end
 raise 'False submission confirmation' if submit.text.include?('Your suggestion has been received')
+
+sources = Nokogiri::HTML(File.read(File.join(site_dir, 'sources/index.html')))
+domains = sources.css('[data-source-domain]').map { |node| node['data-source-domain'] }
+raise 'Duplicate source domains' unless domains.uniq == domains
+raise 'Source for curated example missing' unless domains.include?('powerplatformtip.com')
+
+test_post = Struct.new(:data, :url, :date, :publishable) do
+  def write?
+    publishable
+  end
+end
+samples = [
+  ['https://WWW.PowerPlatformTip.com/article/one?ref=test#top', '/one/', true],
+  ['http://powerplatformtip.com/article/two', '/two/', true],
+  ['https://blog.example.org/article', '/three/', true],
+  ['https://hidden.example.org/article', '/hidden/', false],
+  ['javascript:alert(1)', '/invalid/', true],
+  ['https://user:password@example.org/article', '/credentials/', true],
+  ['not a URL', '/malformed/', true],
+  [nil, '/original/', true]
+].map do |url, path, publishable|
+  test_post.new({ 'source_url' => url, 'title' => 'Example' }, path, Time.utc(2026, 9, 18), publishable)
+end
+groups = GovernanceSources.collect(samples)
+raise 'Source URL normalization failed' unless groups.map { |group| group['domain'] } == %w[blog.example.org powerplatformtip.com]
+raise 'Source grouping failed' unless groups.last['posts'].size == 2
+raise 'HTTPS source origin lost' unless groups.last['url'] == 'https://www.powerplatformtip.com/'
+
+footer = Liquid::Template.parse(File.read('_includes/curated-footer.html'))
+[true, false, nil, 'false', 'true'].each do |permission|
+  rendered = footer.render!('page' => { 'submitted_by' => {
+    'name' => 'Contributor <test>',
+    'linkedin' => 'https://www.linkedin.com/in/example/',
+    'publish_credit' => permission
+  } })
+  credit = Nokogiri::HTML.fragment(rendered).at_css('.contributor-credit')
+  raise 'Credit leaked without explicit permission' unless !credit.nil? == (permission == true)
+  raise 'Credit name must be escaped' if credit && credit.at_css('test')
+end
+
+Dir.glob('_posts/*.md').each do |path|
+  frontmatter = File.read(path).match(/\A---\s*\n(.*?)\n---/m)
+  next unless frontmatter
+
+  data = YAML.safe_load(frontmatter[1], permitted_classes: [Date, Time])
+  credit = data['submitted_by']
+  next unless credit
+
+  raise "Unapproved personal data in public source: #{path}" unless credit['publish_credit'] == true
+  raise "Non-public contributor fields in source: #{path}" unless (credit.keys - %w[name linkedin publish_credit]).empty?
+end
+
 raise 'Internal architecture published' unless Dir.glob(File.join(site_dir, '*architektur*')).empty?
 raise 'Internal README published' if File.exist?(File.join(site_dir, 'README_CUSTOM.md'))
 raise 'Missing sitemap' unless File.file?(File.join(site_dir, 'sitemap.xml'))

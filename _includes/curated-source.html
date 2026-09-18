@@ -1,0 +1,6 @@
+<div class="curated-source" data-curated-entry>
+  <p><strong>TL;DR of an article from <a href="{{ page.source_site_url | escape }}">{{ page.source_name | escape }}</a>, by <a href="{{ page.source_author_url | escape }}">{{ page.source_author | escape }}</a>.</strong></p>
+  <p><cite><a href="{{ page.source_url | escape }}">{{ page.source_title | escape }}</a></cite><br>
+    <span class="text-muted small">Original published {{ page.source_published_at | date: '%d %b %Y' }}{% if page.source_updated_at %}; updated {{ page.source_updated_at | date: '%d %b %Y' }}{% endif %}. Original language: {{ page.source_language_name | escape }}.</span>
+  </p>
+</div>

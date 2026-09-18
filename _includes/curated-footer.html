@@ -1,0 +1,7 @@
+<p><strong><a class="detailed-article" href="{{ page.source_url | escape }}">Detailed article on {{ page.source_name | escape }} <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a></strong></p>
+
+{% if page.submitted_by.publish_credit == true %}
+  <p class="contributor-credit">Suggested by {% if page.submitted_by.linkedin %}<a href="{{ page.submitted_by.linkedin | escape }}" rel="ugc noopener">{{ page.submitted_by.name | default: 'a community contributor' | escape }}</a>{% else %}{{ page.submitted_by.name | default: 'a community contributor' | escape }}{% endif %}.</p>
+{% endif %}
+
+<p class="text-muted small">This is our own summary, not a republication or full translation.{% if page.source_license_url %} The original article is licensed under <a href="{{ page.source_license_url | escape }}">{{ page.source_license_name | escape }}</a>.{% endif %}{% if page.publisher_disclosure %} {{ page.publisher_disclosure | escape }}{% endif %}</p>

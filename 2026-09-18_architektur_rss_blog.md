@@ -2,9 +2,9 @@
 
 ## Ziel
 
-Ein Power Automate-Flow prüft alle 5 Minuten RSS-Feeds aus einer Liste von eingetragenen Websites. Neue Artikel werden direkt als Blog-Posts in das GitHub-Repository geschrieben. Es gibt keinen separaten Zwischenpuffer im Sinne einer `FeedArticles`-Liste; die Prüfung, Transformation und Veröffentlichung erfolgen im selben Flow direkt auf GitHub.
+Geplant ist ein Power Automate-Flow, der alle 5 Minuten RSS-Feeds eingetragener Websites prüft. Relevante Fundstellen werden als kurze eigene Zusammenfassungen mit sichtbarer Quelle und direktem Original-Link in GitHub abgelegt, nicht als Volltextkopien. Es gibt keine separate `FeedArticles`-Liste. Bis zur ausdrücklichen Freigabe einer automatischen Veröffentlichung wird vor der Veröffentlichung manuell geprüft.
 
-Die Idee ist dabei nicht nur ein reiner RSS-Aggregator, sondern ein governance-orientierter Content-Feed zu Themen wie:
+Die Website ist eine kuratierte Link- und Zusammenfassungssammlung. Die [Kurations- und Quellenregeln](2026-09-18_architektur_kuration_und_quellen.md) ergänzen und präzisieren diese technische Planung. Themen sind:
 
 - Power Platform Governance
 - Security & Compliance
@@ -22,12 +22,13 @@ flowchart LR
     D --> E[Parse XML / items]
   E --> F[Filter new items by link/guid/hash]
   F --> G[Extract title, excerpt, summary, date, tags, link]
-  G --> H[Create Markdown Frontmatter]
-  H --> I[GitHub API: write post directly]
+  G --> H[Create attributed summary draft in GitHub]
+  H --> R[Manual review]
+  R --> I[GitHub API: publish approved summary]
     I --> J[GitHub Repo]
     J --> K[Chirpy build / GitHub Pages]
     K --> L[Governance Blog]
-    G --> M[Optional Copilot Studio / AI summary]
+    G --> M[Existing custom connector: short summary]
 ```
 
 ## Datenmodell
@@ -46,7 +47,7 @@ flowchart LR
 
 ### 2) Direkt-Import ohne Zwischenlagerung
 
-Es gibt keine separate `FeedArticles`-Tabelle mehr. Jeder neue Feed-Eintrag wird direkt nach der Prüfung sofort als Markdown-Post in GitHub geschrieben.
+Es gibt keine separate `FeedArticles`-Tabelle. Relevante Feed-Einträge werden als Zusammenfassungsentwürfe direkt in GitHub abgelegt und erst nach Freigabe als Posts veröffentlicht. Der Originalartikel bleibt auf der Website seines Autors.
 
 Nur noch relevant:
 
@@ -74,8 +75,8 @@ Das heißt konkret: Der Flow prüft ein RSS-Item, entscheidet ob es neu ist, und
 4. Titel, Link, Description, Summary, PubDate oder Guid extrahieren
 5. Prüfen, ob der Artikel schon verarbeitet wurde
   - anhand `Guid`, `Link`, `HashKey`
-6. Wenn neu: direkt Markdown-Datei erzeugen
-7. Direkt über GitHub API in `_posts/` schreiben
+6. Wenn neu und relevant: einen kurzen, zugeordneten Zusammenfassungsentwurf direkt in GitHub erzeugen
+7. Nach manueller Freigabe über GitHub API in `_posts/` veröffentlichen
 8. Optional:
    - AI-Aktion für Summary / TL;DR
    - Text aus Artikel-URL abrufen, sofern RSS ungenau ist
@@ -123,8 +124,8 @@ Beide URLs sind indexierbar. Die Sprachversionen werden über `hreflang` miteina
 
 Regeln:
 
-- Die Originalsprache bleibt unverändert als Originalinhalt erhalten.
-- Foundry erzeugt über den Custom Connector die jeweils andere Sprachversion.
+- Der Originalinhalt bleibt bei der Quelle. Beide Fassungen sind kurze eigene Zusammenfassungen mit klarer Quellenangabe.
+- Der vorhandene Custom Connector formuliert die Kurzfassung in DE und EN, keine vollständige Übersetzung des Originalartikels.
 - Titel, Excerpt, TL;DR, Kategorien und Tags werden pro Sprache erzeugt.
 - `source_url` verweist in beiden Versionen auf den Originalartikel.
 - Die URLs erhalten denselben stabilen Artikel-Identifier und nur unterschiedliche Sprachpräfixe.
@@ -180,7 +181,7 @@ permalink: /de/2026/09/18/dlp-policies/
 - ...
 - ...
 
-## Aus dem Artikel
+## Warum für Governance relevant
 
 ...
 ```
@@ -191,7 +192,7 @@ permalink: /de/2026/09/18/dlp-policies/
 
 - GitHub PAT oder GitHub App
 - Repository `MarceLehmann/powerplatformgovernance`
-- Endpoint: `POST https://api.github.com/repos/{owner}/{repo}/contents/{path}`
+- Endpoint: `PUT https://api.github.com/repos/{owner}/{repo}/contents/{path}`
 - Inhalt als Base64 encodieren
 - Commit Message: `Add post: {title}`
 
@@ -207,9 +208,9 @@ Empfehlung: Einstieg mit direct API, später mit Action-Workflow skalieren.
 
 Die Übersetzung und Zusammenfassung läuft nicht über den AI Builder. Power Automate ruft dafür den eigenen Custom Connector auf, der mit Foundry verbunden ist.
 
-- Ein Copilot Studio Agent durchsucht die Blogbeiträge nach Governance-Themen
+- Power Automate übergibt relevante Inhalte an den vorhandenen Custom Connector; kein zusätzlicher Copilot Studio Agent
 - Foundry erkennt die Originalsprache
-- Foundry erzeugt die zweite Sprachversion
+- Foundry erzeugt zwei Fassungen unserer Kurzfassung
 - Foundry erzeugt sprachspezifischen Excerpt und TL;DR
 - Power Automate schreibt beide Markdown-Dateien direkt nach GitHub
 
@@ -225,10 +226,10 @@ Add hreflang links -> Chirpy build
 
 ## Sicherheits- und Qualitätsregeln
 
-- Keine fremden Artikel unverändert übernehmen, ohne Quelle zu behalten
+- Keine fremden Volltexte, vollständigen Übersetzungen oder unberechtigt übernommenen Medien veröffentlichen
 - `source_url` immer mit speichern
 - Duplikate vermeiden
-- Keine personenbezogenen Daten oder interne Informationen aus fremden Quellen mitnehmen
+- Originalautoren korrekt nennen; Einreicherdaten nur mit expliziter Freigabe veröffentlichen; keine privaten Kontakt- oder internen Informationen in GitHub speichern
 - Tags sauber normalisieren
 - nur aktive Feed-URLs verarbeiten
 - Fehlergrenzen sauber protokollieren in `LastStatus`
