@@ -11,7 +11,7 @@ Stand: 18.09.2026. Dieser Umsetzungsstand ersetzt die ältere Planung mit manuel
 5. Nur relevante Inhalte werden zu kurzen eigenen DE-/EN-Zusammenfassungen mit Originalquelle, Autor soweit belegt und direktem Original-Link verarbeitet.
 6. Der GitHub-Connector sendet die strukturierten Daten als `repository_dispatch` an `Publish Curated Articles`. Keine Zugangsdaten oder ungeprüften Markdown-Dateien im Payload.
 7. Der GitHub-Workflow validiert alles nochmals, dedupliziert anhand der Original-URL und schreibt beide Sprachversionen gemeinsam nach `_posts/`. Danach startet er den Pages-Build.
-8. Erst ein erfolgreich abgeschlossener Publisher-Lauf bestätigt die Feed-IDs bzw. setzt einen Einzelartikel auf `Published to GitHub`. Das bedeutet Git-Commit, nicht bereits bestätigtes Pages-Deployment.
+8. Nach erfolgreicher Validierung, Git-Übernahme und gegebenenfalls Pages-Build-Anforderung erstellt der Publisher die GitHub-Referenz `refs/tags/curation-results/<request_id>`. Der Flow liest diese Bestätigung authentifiziert über `GetReference`. Erst dann bestätigt er Feed-IDs bzw. setzt einen Einzelartikel auf `Published to GitHub`. Das bedeutet Git-Übernahme, nicht bereits bestätigtes Pages-Deployment. Ein bereits vorhandener Artikel wird ebenfalls bestätigt, ohne neue Dateien zu erzeugen.
 
 Es gibt keine separate Artikeltabelle und kein Speichern fremder Artikeltexte in Dataverse. Pro Quelle werden nur Betriebsstatus und verarbeitete Feed-IDs gespeichert. Der vollständige Artikel bleibt beim ursprünglichen Herausgeber.
 
@@ -47,7 +47,7 @@ Eine URL-Änderung an einer bereits freigegebenen Quelle nur nach Pausierung und
 | `submitter_linkedin` | `new_submitterlinkedin` |
 | `publish_credit` exakt `yes` | `new_publishcredit = true`, sonst `false` |
 
-Öffentliche Eingaben dürfen niemals `new_approval` oder `new_enabled` setzen. Der Webhook-Intake ist angelegt und live getestet; er weist zusätzliche Felder ab und setzt Freigabe/Aktivierung ausschliesslich serverseitig. **Direkte öffentliche Einbindung am 18.09.2026 nach Aufklärung über Spam- und Kapazitätsrisiken ausdrücklich freigegeben.** Der Einreichungsflow ist aktiv; der separate Veröffentlichungsflow bleibt ausgeschaltet.
+Öffentliche Eingaben dürfen niemals `new_approval` oder `new_enabled` setzen. Der Webhook-Intake ist angelegt und live getestet; er weist zusätzliche Felder ab und setzt Freigabe/Aktivierung ausschliesslich serverseitig. **Direkte öffentliche Einbindung am 18.09.2026 nach Aufklärung über Spam- und Kapazitätsrisiken ausdrücklich freigegeben.** Einreichungsflow und separater Fünf-Minuten-Veröffentlichungsflow sind aktiv. Ungeprüfte Einreichungen bleiben trotzdem gesperrt.
 
 ## Website-Webhook
 
@@ -61,7 +61,7 @@ Eine URL-Änderung an einer bereits freigegebenen Quelle nur nach Pausierung und
 - Antwort erst nach erfolgreicher Dataverse-Operation: HTTP 202 mit `accepted: true, status: awaiting_review`. Ungültige Eingaben: 400. Speicherfehler: 503. Keine persönlichen Daten, Datensatz-IDs oder Fehlerdetails in öffentlichen Antworten.
 - Callback-Adresse wird als GitHub-Actions-Secret `GOVERNANCE_SUBMISSION_ENDPOINT` erst beim Pages-Build eingebunden, nicht im Git-Verlauf gespeichert. **Im ausgelieferten HTML und im Browser ist sie absichtlich öffentlich; das Build-Secret ändert daran nichts.** Geschützte Flow-Eingaben/Ausgaben reduzieren persönliche Daten im Laufprotokoll. Die gespeicherten Dataverse-Angaben bleiben dort für Berechtigte sichtbar.
 - `tools/test-intake-live.ps1`: 11 echte HTTP-Prüfungen bestanden, einschliesslich gespeicherter Freigabesperre, Opt-in, Wiederholung und unzulässiger Steuerfelder. Das Skript verlangt einen ausgeschalteten Flow und darf nicht während des öffentlichen Betriebs ausgeführt werden.
-- Direkter Browser-Test gegen den echten Webhook: HTTP 202, bestätigte Meldung, Eingabefeld zurückgesetzt und genau ein Dataverse-Datensatz mit `Awaiting approval` / `No` / `Needs review`, ohne Namensdaten. Eigener Testdatensatz anschliessend entfernt. Fehlerbehandlung und Desktop/Mobil wurden zusätzlich mit abgefangenen Antworten geprüft.
+- Direkter Browser-Test auf `https://powerplatformgovernance.com/submit/` gegen den echten Webhook: HTTP 202, bestätigte Meldung, Eingabefeld zurückgesetzt und genau ein Dataverse-Datensatz je Test-URL mit `Awaiting approval` / `No` / `Needs review`, ohne Namensdaten. Eigene Testdatensätze anschliessend entfernt. Fehlerbehandlung und Desktop/Mobil wurden zusätzlich mit abgefangenen Antworten geprüft.
 
 ### Direkter Pilotbetrieb
 
@@ -81,27 +81,27 @@ Implementierungsgrundlage ist die Second-Brain-Notiz `Flow_per_Web_API_anlegen_c
 - Diese Prüfungen ersetzen keinen DNS-/Redirect-kontrollierten Fetch-Proxy. Deshalb nur manuell geprüfte öffentliche Quellen freigeben; kein ungeprüfter öffentlicher Auto-Import. Die HTTP-/RSS-Connectors sind keine vollständige SSRF-Schutzschicht.
 - Fremde Seiteninhalte sind untrusted data. Sie können keine Freigabe erteilen, Repository-Pfade bestimmen oder Tools ausführen. HTML-/Liquid-Ausgaben werden beim Rendern entschärft.
 - Maximal 30 neue Kandidaten pro Quelle und 2000 gemerkte Feed-IDs; grössere Mengen gehen in `Needs review`. Beim ersten Lauf kann der Startzeitpunkt historische Artikel ausschliessen. Keine stille Begrenzung mit anschliessendem Überspringen.
-- Fehler bestätigen keine Feed-IDs. Nach drei aufeinanderfolgenden Verarbeitungsfehlern erfolgt `Needs review`. Ein fehlgeschlagener GitHub-Lauf geht direkt zur Prüfung.
+- Fehler bestätigen keine Feed-IDs. Nach drei aufeinanderfolgenden Verarbeitungsfehlern erfolgt `Needs review`. Bereits übergebene Aufträge bleiben bei fehlender GitHub-Bestätigung in `Awaiting GitHub result`; sie werden nicht erneut an Foundry oder GitHub übergeben. Nach 24 Stunden ohne Bestätigung erfolgt `Needs review`, auch bei einem fehlgeschlagenen Publisher oder einer defekten Verbindung.
 - GitHub-Deduplizierung liest die vorhandenen Postdateien. Keine zusätzliche Artikel-Datenbank. Gleichzeitige Git-Commits werden bei abweichenden Dateien per Rebase wiederholt; echte Konflikte verlangen Prüfung.
-- GitHub-Laufstatus wird einmal je Zyklus über die öffentliche API gelesen. Die letzten 100 Publisher-Läufe werden berücksichtigt; nicht gefundene Aufträge gehen nach 24 Stunden zur Prüfung.
+- Das Repository bleibt privat. Erfolgsreferenzen werden ausschliesslich über die angemeldete GitHub-Verbindung gelesen; es gibt keine anonyme Actions-Abfrage und keine Begrenzung auf die letzten 100 Läufe. Bestätigungs-Tags nicht löschen, solange zugehörige Aufträge noch warten. Den tatsächlichen Fehler eines Publishers in GitHub Actions prüfen; der Connector liefert hier nur die Erfolgsbestätigung, nicht das Actions-Fehlerprotokoll.
 - Eine GitHub-Übergabe ist auf die vom Connector/API unterstützte Payload-Grösse begrenzt. Zu grosse Batches schlagen sichtbar fehl und werden nicht als veröffentlicht markiert.
 - Der Standard-GitHub-Connector fordert auch Organisationsrechte an. Die persönliche Zustimmung dazu erfolgt durch Marcel, nicht automatisiert durch den Assistenten.
 
 ## Bereitgestellter Stand
 
 - Solution, Tabelle, Fachformular, vier Ansichten und fünf Connection References sind angelegt. Die Tabelle ist einschliesslich beider interner Feed-ID-Felder veröffentlicht.
-- Cloud Flow `Power Platform Governance - RSS and articles - Every 5 minutes` ist gespeichert und **ausgeschaltet**.
-- Dataverse, RSS, Content Conversion und Foundry sind gebunden. Die GitHub-Referenz ist ungebunden, weil die persönliche GitHub-Anmeldung fehlt.
-- Der zuletzt gespeicherte Cloud-Entwurf nutzt noch den Zeitstempel-Fortschritt. Die verbesserte Feed-ID-Erkennung liegt in `tools/automation.mjs`; Power Automate blockiert das Aktualisieren, solange GitHub ungebunden ist. Nach der Anmeldung muss der Generator-Stand erneut übertragen werden.
-- Flow-Checker des gespeicherten Entwurfs: keine Fehler, Warnung wegen deaktiviertem Flow. Dies ersetzt keinen End-to-End-Test.
-- GitHub-Publisher und Vorlagen sind veröffentlicht. Die Pages-CI mit Automationsprüfungen, Websiteprüfungen und Deployment ist erfolgreich durchgelaufen. Der Publisher selbst wurde noch nicht durch einen Live-Dispatch ausgelöst.
+- Cloud Flow `Power Platform Governance - RSS and articles - Every 5 minutes`, ID `fbbf117b-3bb3-f111-aaac-70a8a505a30e`, ist mit Feed-ID-Erkennung gespeichert und **aktiv**. Die Definition wurde strukturell zurückgelesen; unterschiedliche JSON-Feldreihenfolge ist kein inhaltlicher Unterschied.
+- Dataverse, RSS, Content Conversion, Foundry und GitHub sind gebunden. GitHub ist als `MarceLehmann` verbunden; Connection-ID `shared-github-43814939-8f33-474b-9bb1-361497f42b59`. Der Publisher erlaubt weiterhin nur diesen GitHub-Akteur.
+- Live-Test: freigegebener bekannter Artikel wurde abgerufen, durch den bestehenden Foundry-Connector geprüft und über den GitHub-Connector übergeben. [Publisher-Lauf 35335821979](https://github.com/MarceLehmann/powerplatformgovernance/actions/runs/35335821979) erfolgreich; URL-Deduplizierung erzeugte korrekt `0 new language files`. Der Folgelauf bestätigte den Artikel über `GetReference` als veröffentlicht.
+- RSS-Live-Test: öffentlicher Feed gelesen und zehn IDs gespeichert. Ein zweiter Lauf bestätigte dieselben IDs ohne erneuten Foundry-Aufruf oder Dispatch. Eine aktivierte, aber nicht freigegebene Kontrollquelle blieb vollständig unangetastet. Diese kontrollierten Testquellen wurden entfernt; keine dauerhafte Feed-Freigabe wurde dabei angelegt.
+- Fehlende GitHub-Bestätigung live geprüft: 404 bleibt im Wartezustand ohne erneute Übergabe; nach simulierten 25 Stunden erfolgt `Needs review`, ohne Feed-IDs oder Wasserzeichen zu bestätigen. Power Automate meldet den abgefangenen 404 auch an den äusseren Fehlerzweig; dieser darf wartende Aufträge deshalb nicht auf `Error` zurücksetzen. Auch dieser eigene Testdatensatz wurde entfernt. Abschlussprüfung: beide Flows aktiv, keine Quelldatensätze vorhanden.
+- GitHub-Publisher und Vorlagen sind veröffentlicht. Pages-CI, Websiteprüfungen und Deployment sind erfolgreich durchgelaufen. Der Live-Test veröffentlichte bewusst keine neue Zusammenfassung; neue zweisprachige Postdateien sind zusätzlich durch temporäre Publisher-/Jekyll-Testdaten geprüft.
 - Lokale Prüfungen: Node-Tests für Gates und Flow-Struktur, Ruby-Tests für den Publisher, Jekyll-Build und Websiteprüfungen einschliesslich beider Sprachpfade und unbekannter Quelldaten. Ein absichtlich entfernter Canonical-Link in einer temporären deutschen Testseite wurde korrekt abgewiesen.
-- Noch offen: GitHub-Login, endgültige Flow-Speicherung, Testlauf von RSS und Einzelartikel einschliesslich Negativtest ohne Freigabe, anschliessend Aktivierung.
 
-## Wiederaufnahme
+## Änderungen und Betrieb
 
-1. GitHub-Verbindung in derselben Power-Automate-Umgebung mit dem Repository-Besitzer anmelden.
-2. `pwsh -File tools/deploy-automation.ps1` ausführen. Das Skript nutzt die vorhandene Azure-CLI-Anmeldung, prüft die komplette paginierte Connections-Liste, bindet GitHub und speichert den aktuellen Generator-Stand. Es gibt keine Tokens aus und lässt den Flow ausgeschaltet.
+1. Quellen über das Formular einreichen oder in Dataverse anlegen. Quelltyp und URL manuell prüfen, dann bewusst auf `Approved`, `Yes`, `Ready` setzen. Ohne freigegebene Quellen bleibt der aktive Flow im Leerlauf.
+2. Für Definitionänderungen zuerst den Veröffentlichungsflow ausschalten. `pwsh -File tools/deploy-automation.ps1` mit PowerShell 7.4 oder neuer ausführen. Das Skript nutzt die vorhandene Azure-CLI-Anmeldung, prüft die komplette paginierte Connections-Liste, bindet GitHub und speichert den aktuellen Generator-Stand. Es gibt keine Tokens aus und lässt den Flow standardmässig ausgeschaltet.
 3. Bei mehreren GitHub-Verbindungen die gewünschte Connection-ID mit `-GitHubConnection` angeben.
 4. Nach erfolgreichen kontrollierten End-to-End-Tests im Designer aktivieren. Alternativ kann das Bereitstellungsskript nach erfolgter Prüfung mit `-Enable` aktivieren.
 

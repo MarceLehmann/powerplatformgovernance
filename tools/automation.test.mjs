@@ -59,6 +59,9 @@ test('flow is sequential, approval-filtered, uses Foundry and confirms GitHub re
   assert.equal(actions.get('Confirm_publication').inputs.parameters['item/new_seenids'], "@items('For_each_source')?['new_pendingseenids']");
   assert.equal(actions.get('Read_publication_receipt').inputs.host.operationId, 'GetReference');
   assert.deepEqual(actions.get('Confirm_publication').runAfter, { Read_publication_receipt: ['Succeeded'] });
+  assert.equal(actions.get('Processing_not_queued').expression, `@not(equals(items('For_each_source')?['new_processing'], ${processing.queued}))`);
+  assert.ok(actions.get('Processing_not_queued').actions.Record_failure);
+  assert.deepEqual(Object.keys(actions.get('Processing_not_queued').else.actions), ['Preserve_receipt_state']);
   assert.equal(actions.get('Missing_receipt_review').inputs.parameters['item/new_seenids'], undefined);
   assert.equal(actions.has('GitHub_results'), false);
   assert.deepEqual(actions.get('Validate_source_URL').inputs.schema.properties.scheme.enum, ['https']);

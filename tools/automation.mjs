@@ -191,7 +191,11 @@ export function flowDefinition() {
           Is_waiting_for_GitHub: condition(`@equals(items('For_each_source')?['new_processing'], ${processing.queued})`, queuedActions, readyActions),
         } },
         Catch_source: { type: 'Scope', runAfter: { Try_source: ['Failed', 'TimedOut'] }, actions: {
-          Record_failure: update({ new_processing: `@if(greaterOrEquals(coalesce(items('For_each_source')?['new_failures'], 0), 2), ${processing.review}, ${processing.error})`, new_failures: "@add(coalesce(items('For_each_source')?['new_failures'], 0), 1)", new_lastchecked: '@utcNow()', new_lastmessage: "@concat('Processing failed; RSS watermark unchanged. Inspect flow run ', workflow()?['run']?['name'])" }),
+          Processing_not_queued: condition(`@not(equals(items('For_each_source')?['new_processing'], ${processing.queued}))`, {
+            Record_failure: update({ new_processing: `@if(greaterOrEquals(coalesce(items('For_each_source')?['new_failures'], 0), 2), ${processing.review}, ${processing.error})`, new_failures: "@add(coalesce(items('For_each_source')?['new_failures'], 0), 1)", new_lastchecked: '@utcNow()', new_lastmessage: "@concat('Processing failed; RSS watermark unchanged. Inspect flow run ', workflow()?['run']?['name'])" }),
+          }, {
+            Preserve_receipt_state: compose('Receipt lookup or confirmation failed; preserve queued or expired-review state. Never redispatch a waiting request.'),
+          }),
         } },
       } },
     }, outputs: {},
