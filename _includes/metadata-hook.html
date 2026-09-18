@@ -1,0 +1,4 @@
+{% if page.translation_url %}
+  <link rel="alternate" hreflang="{{ page.lang | escape }}" href="{{ page.url | absolute_url }}">
+  <link rel="alternate" hreflang="{% if page.lang == 'de' %}en{% else %}de{% endif %}" href="{{ page.translation_url | absolute_url }}">
+{% endif %}

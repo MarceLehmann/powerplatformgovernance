@@ -1,5 +1,7 @@
 # Architektur: RSS-gestützter Governance-Blog mit Power Automate und GitHub
 
+**Aktueller Umsetzungsstand:** Der neue [Betriebsleitfaden](2026-09-18_architektur_automation_betrieb.md) ersetzt die nachstehende Erstplanung. Der Auftrag vom 18.09.2026 erlaubt automatische Kurzfassungen relevanter Artikel aus freigegebenen, aktiven RSS-Quellen. Dataverse-Tabelle und ausgeschalteter Flow sind angelegt; die GitHub-Anmeldung steht noch aus.
+
 ## Ziel
 
 Geplant ist ein Power Automate-Flow, der alle 5 Minuten RSS-Feeds eingetragener Websites prüft. Relevante Fundstellen werden als kurze eigene Zusammenfassungen mit sichtbarer Quelle und direktem Original-Link in GitHub abgelegt, nicht als Volltextkopien. Es gibt keine separate `FeedArticles`-Liste. Bis zur ausdrücklichen Freigabe einer automatischen Veröffentlichung wird vor der Veröffentlichung manuell geprüft.

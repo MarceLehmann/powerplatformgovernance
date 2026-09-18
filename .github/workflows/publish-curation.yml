@@ -1,0 +1,55 @@
+name: Publish Curated Articles
+run-name: Curate ${{ github.event.client_payload.request_id }}
+on:
+  repository_dispatch:
+    types: [curated-publication]
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Require the authorised publisher
+        run: test "$GITHUB_ACTOR" = 'MarceLehmann'
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.4'
+          bundler-cache: true
+      - name: Validate publisher
+        run: bundle exec ruby tools/test-publish-curation.rb
+      - name: Validate and render approved summaries
+        run: bundle exec ruby tools/publish-curation.rb
+      - name: Build and check generated posts
+        env:
+          JEKYLL_ENV: production
+        run: |
+          bundle exec jekyll build
+          bundle exec ruby tools/check-site.rb
+          bundle exec htmlproofer _site --disable-external
+      - name: Commit both languages and deploy
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git add -- _posts
+          if ! git diff --cached --quiet; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git commit -m 'Publish approved governance summaries'
+            for attempt in 1 2 3; do
+              if git push origin HEAD:main; then
+                break
+              fi
+              if [ "$attempt" = 3 ]; then
+                exit 1
+              fi
+              git pull --rebase origin main
+            done
+            gh workflow run pages-deploy.yml --ref main
+          fi

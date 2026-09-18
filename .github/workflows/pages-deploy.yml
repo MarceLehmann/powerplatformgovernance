@@ -50,6 +50,13 @@ jobs:
         env:
           JEKYLL_ENV: "production"
 
+      - name: Test automation contracts
+        run: |
+          node --test tools/automation.test.mjs
+          bundle exec ruby tools/test-publish-curation.rb
+        env:
+          JEKYLL_ENV: "production"
+
       - name: Test site
         run: |
           bundle exec htmlproofer _site \

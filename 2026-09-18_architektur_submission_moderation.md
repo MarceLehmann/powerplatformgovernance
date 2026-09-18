@@ -1,8 +1,10 @@
 # Submission and moderation architecture
 
+**Updated decision, 18 September 2026:** approved and enabled RSS sources may now publish relevant short summaries automatically after Foundry assessment. Individual article URLs require their own approval. The [automation operations guide](2026-09-18_architektur_automation_betrieb.md) records the implemented model, deployment status and remaining GitHub authentication dependency.
+
 ## Purpose
 
-The site is designed to accept article, blog and RSS/Atom links. The public endpoint is not connected yet, so form submission remains disabled. Nothing is published automatically during the initial phase. The [curation and source rules](2026-09-18_architektur_kuration_und_quellen.md) define the editorial and privacy contract.
+The site is designed to accept article, blog and RSS/Atom links. The public endpoint is not connected yet, so form submission remains disabled. Public suggestions always start unapproved and disabled. The [curation and source rules](2026-09-18_architektur_kuration_und_quellen.md) define the editorial and privacy contract.
 
 ## Flow
 
@@ -58,7 +60,7 @@ Received -> Assessing -> Awaiting approval -> Approved -> Published
                                       \-> Rejected
 ```
 
-For an RSS source, approval should cover the source and not automatically grant publication rights to every future article. The flow should keep source approval and article approval separate.
+For an RSS source, approval now authorises automatic short summaries of relevant future entries, subject to the Foundry check. It never grants rights to republish full articles or third-party images. Individual article submissions require their own approval.
 
 ## GitHub publication contract
 
