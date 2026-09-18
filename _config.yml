@@ -29,13 +29,13 @@ github:
   username: MarceLehmann # change to your GitHub username
 
 twitter:
-  username: twitter_username # change to your Twitter username
+  username:
 
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Marcel Lehmann
-  email: example@domain.com # change to your email address
+  email:
   fediverse_handle: # fill in your fediverse handle. E.g. "@username@domain.com"
   links:
     # The first element serves as the copyright owner's link
@@ -221,6 +221,8 @@ exclude:
   - docs
   - tools
   - README.md
+  - README_CUSTOM.md
+  - "*_architektur_*.md"
   - LICENSE
   - purgecss.js
   - "*.config.js"
