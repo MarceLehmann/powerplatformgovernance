@@ -63,12 +63,13 @@ Eine URL-Änderung an einer bereits freigegebenen Quelle nur nach Pausierung und
 
 ## Bereitgestellter Stand
 
-- Solution, Tabelle, Fachformular, vier Ansichten und fünf Connection References sind angelegt.
+- Solution, Tabelle, Fachformular, vier Ansichten und fünf Connection References sind angelegt. Die Tabelle ist einschliesslich beider interner Feed-ID-Felder veröffentlicht.
 - Cloud Flow `Power Platform Governance - RSS and articles - Every 5 minutes` ist gespeichert und **ausgeschaltet**.
 - Dataverse, RSS, Content Conversion und Foundry sind gebunden. Die GitHub-Referenz ist ungebunden, weil die persönliche GitHub-Anmeldung fehlt.
 - Der zuletzt gespeicherte Cloud-Entwurf nutzt noch den Zeitstempel-Fortschritt. Die verbesserte Feed-ID-Erkennung liegt in `tools/automation.mjs`; Power Automate blockiert das Aktualisieren, solange GitHub ungebunden ist. Nach der Anmeldung muss der Generator-Stand erneut übertragen werden.
 - Flow-Checker des gespeicherten Entwurfs: keine Fehler, Warnung wegen deaktiviertem Flow. Dies ersetzt keinen End-to-End-Test.
-- Lokale Prüfungen: Node-Tests für Gates und Flow-Struktur, Ruby-Tests für den Publisher, Jekyll-Build und bestehende Websiteprüfungen.
+- GitHub-Publisher und Vorlagen sind veröffentlicht. Die Pages-CI mit Automationsprüfungen, Websiteprüfungen und Deployment ist erfolgreich durchgelaufen. Der Publisher selbst wurde noch nicht durch einen Live-Dispatch ausgelöst.
+- Lokale Prüfungen: Node-Tests für Gates und Flow-Struktur, Ruby-Tests für den Publisher, Jekyll-Build und Websiteprüfungen einschliesslich beider Sprachpfade und unbekannter Quelldaten. Ein absichtlich entfernter Canonical-Link in einer temporären deutschen Testseite wurde korrekt abgewiesen.
 - Noch offen: GitHub-Login, endgültige Flow-Speicherung, Testlauf von RSS und Einzelartikel einschliesslich Negativtest ohne Freigabe, anschliessend Aktivierung.
 
 ## Wiederaufnahme

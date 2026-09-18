@@ -16,7 +16,7 @@ css = File.read(File.join(site_dir, 'assets/css/jekyll-theme-chirpy.css'))
   raise "Missing production CSS: #{selector}" unless css.include?(selector)
 end
 
-pages = required_pages + Dir.glob(File.join(site_dir, 'posts/*/index.html')).map { |path| path.delete_prefix("#{site_dir}/") }
+pages = required_pages + Dir.glob(File.join(site_dir, '**/posts/*/index.html')).map { |path| path.delete_prefix("#{site_dir}/") }
 pages.each do |path|
   document = Nokogiri::HTML(File.read(File.join(site_dir, path)))
   title = document.at_css('title')&.text.to_s.strip
@@ -38,7 +38,7 @@ pages.each do |path|
     raise "Missing direct original link: #{path}" unless source && detailed && source['href'] == detailed['href']
     raise "Source must be external: #{path}" if source['href'].start_with?('https://powerplatformgovernance.com/')
     raise "Missing TL;DR: #{path}" unless document.css('h2').any? { |node| node.text.include?('TL;DR') }
-    raise "Missing source dates: #{path}" unless document.at_css('.curated-source').text.include?('Original published')
+    raise "Empty attribution link: #{path}" unless document.css('.curated-source a[href=""]').empty?
     contributor = document.at_css('.contributor-credit a')
     if contributor
       raise "Invalid LinkedIn credit: #{path}" unless contributor['href'].match?(%r{\Ahttps://(?:www\.)?linkedin\.com/in/[^\s]+\z})
