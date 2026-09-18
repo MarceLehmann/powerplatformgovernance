@@ -17,7 +17,7 @@ Suggest an article or blog about Power Platform governance. We publish short sum
 <form class="submission-form" method="post" action="{{ submission_endpoint | escape }}" data-submission-form>
   <p>
     <label for="content-url">Article, blog or RSS URL</label>
-    <input id="content-url" name="content_url" type="url" pattern="https?://.+" maxlength="2048" placeholder="https://" required>
+    <input id="content-url" name="content_url" type="url" pattern="https://.+" maxlength="2048" placeholder="https://" required>
   </p>
 
   <details class="submission-credit">
@@ -29,27 +29,12 @@ Suggest an article or blog about Power Platform governance. We publish short sum
     <p class="submission-consent"><label><input name="publish_credit" type="checkbox" value="yes"> I agree to have my name and LinkedIn profile published with this suggestion.</label></p>
   </details>
 
-  <button class="submission-submit" type="submit"{% if submission_endpoint == '' %} disabled{% endif %}><i class="fas fa-paper-plane" aria-hidden="true"></i> Send for review</button>
+  <div class="visually-hidden" aria-hidden="true">
+    <label for="submission-website">Website</label>
+    <input id="submission-website" name="website" type="text" tabindex="-1" autocomplete="off">
+  </div>
+  <button class="submission-submit" type="submit" disabled><i class="fas fa-paper-plane" aria-hidden="true"></i> Send for review</button>
   <p class="submission-status" data-submission-status aria-live="polite"></p>
 </form>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const form = document.querySelector('[data-submission-form]');
-    const status = document.querySelector('[data-submission-status]');
-
-    if (!form || !status) return;
-
-    form.addEventListener('invalid', function (event) {
-      const details = event.target.closest('details');
-      if (details) details.open = true;
-    }, true);
-
-    if (!form.getAttribute('action').trim()) {
-      form.addEventListener('submit', function (event) {
-        event.preventDefault();
-        status.textContent = 'Submissions are not open yet. Nothing has been sent.';
-      });
-    }
-  });
-</script>
+<script src="{{ '/assets/js/submission.js' | relative_url }}" defer></script>

@@ -47,7 +47,33 @@ Eine URL-Änderung an einer bereits freigegebenen Quelle nur nach Pausierung und
 | `submitter_linkedin` | `new_submitterlinkedin` |
 | `publish_credit` exakt `yes` | `new_publishcredit = true`, sonst `false` |
 
-Öffentliche Eingaben dürfen niemals `new_approval` oder `new_enabled` setzen. Ein späterer Intake muss Quelltyp und URL serverseitig prüfen und immer ungeprüft/inaktiv anlegen. **Der öffentliche Formular-Endpunkt ist weiterhin nicht angebunden.** Der aktuelle Auftrag liefert Tabelle und Verarbeitungsflow; die Website sendet noch keine Datensätze.
+Öffentliche Eingaben dürfen niemals `new_approval` oder `new_enabled` setzen. Der Webhook-Intake ist inzwischen angelegt und live getestet; er weist zusätzliche Felder ab und setzt Freigabe/Aktivierung ausschliesslich serverseitig. **Der öffentliche Proxy-Endpunkt ist noch nicht angebunden.** Die Website enthält die Versandlogik, bleibt ohne diesen Endpunkt aber deaktiviert.
+
+## Website-Webhook
+
+- Flow: `Power Platform Governance - Website submissions - Webhook`, ID `b8c08dea-43e2-43e2-90ce-e5c8e3fe3671`, in derselben Solution. Nach den Live-Tests wieder ausgeschaltet.
+- Definition: `tools/intake.mjs`; Bereitstellung: `pwsh -File tools/deploy-intake.ps1`. Ohne `-Enable` bleibt der Flow ausgeschaltet. Keine Abhängigkeit von GitHub oder Foundry.
+- Request: JSON per POST mit den vier Websitefeldern und optional leerem Honeypot-Feld `website`. Nur HTTPS, keine offensichtlichen lokalen/IP-Ziele oder URL-Zugangsdaten; LinkedIn nur persönliches Profil auf `linkedin.com` bzw. `www.linkedin.com`.
+- Keine URL wird beim Intake abgerufen. Keine KI-, GitHub- oder Veröffentlichungsaktion. `Approval = Awaiting approval`, `Processing enabled = No`, `Processing status = Needs review` sind fest verdrahtet.
+- Quelltyp wird zunächst als `Article` gespeichert. Bei der manuellen Prüfung auf `RSS` ändern, wenn ein Feed eingereicht wurde; danach bewusst freigeben, aktivieren und auf `Ready` setzen. Eine Blog-Startseite ohne nutzbaren Feed bleibt zur Klärung gesperrt.
+- Namen und LinkedIn werden nur mit `publish_credit = yes` übertragen und gespeichert. Ohne Einwilligung werden sie bereits im Browser weggelassen.
+- Bereits vorhandene URLs werden nicht geändert, auch nicht Einwilligung oder Freigabe. Fragmente werden entfernt. Die Lookup-Prüfung verhindert Wiederholungen nacheinander, ist jedoch keine atomare Eindeutigkeitsgarantie für gleichzeitige Requests. Die manuelle Prüfung muss solche Dubletten zusammenführen; keine automatische Freigabe.
+- Antwort erst nach erfolgreicher Dataverse-Operation: HTTP 202 mit `accepted: true, status: awaiting_review`. Ungültige Eingaben: 400. Speicherfehler: 503. Keine persönlichen Daten, Datensatz-IDs oder Fehlerdetails in öffentlichen Antworten.
+- Callback-Adresse bleibt geheim und wurde weder ins Repository geschrieben noch ausgegeben. Geschützte Flow-Eingaben/Ausgaben reduzieren persönliche Daten im Laufprotokoll. Die gespeicherten Dataverse-Angaben bleiben dort für Berechtigte sichtbar.
+- `tools/test-intake-live.ps1`: 11 echte HTTP-Prüfungen bestanden, einschliesslich gespeicherter Freigabesperre, Opt-in, Wiederholung und unzulässiger Steuerfelder. Eigene Testdatensätze wurden entfernt. Browser separat mit abgefangenem Test-Endpunkt geprüft: Erfolg, Fehler, Eingaben erhalten, keine privaten Namensdaten ohne Einwilligung, Desktop/Mobil ohne horizontalen Überlauf. **Noch kein Browser-bis-Dataverse-Test über einen echten öffentlichen Proxy.**
+
+### Offener Verbindungsschritt
+
+GitHub Pages kann eine signierte Flow-Adresse nicht geheim halten. Ein vorgeschalteter öffentlicher Endpunkt braucht daher eine separate Freigabe für Hosting und mögliche Kosten. Diese liegt noch nicht vor; es wurde keine Azure Function angelegt.
+
+Der geplante Proxy muss mindestens folgende Bedingungen erfüllen:
+
+1. Öffentlicher HTTPS-Endpunkt ohne Zugangsdaten in der URL; die Flow-Adresse nur serverseitig als Secret. Keine Rückgabe oder Protokollierung dieses Secrets.
+2. POST/OPTIONS, JSON mit maximal 8 KiB, dieselbe Feldprüfung, leeres Honeypot-Feld und serverseitige Begrenzung von Anfragen. CORS nur für `https://powerplatformgovernance.com`; CORS ist keine Authentifizierung und ersetzt keine Spam-Begrenzung.
+3. Erst nach bestätigter Webhook-Antwort Erfolg an den Browser melden. Fehler und Timeouts dürfen keinen falschen Erfolg erzeugen. HTTP 429 für überschrittene Limits.
+4. Proxy-URL unter `endpoint` in `_data/submission.yml` eintragen, Webhook aktivieren, Browser-bis-Dataverse-Test und Negativtests ausführen, Website veröffentlichen. Der Build verweigert signierte bzw. direkte Power-Automate-Callbacks; die Formularlogik tut dies ebenfalls.
+
+Implementierungsgrundlage ist die Second-Brain-Notiz `Flow_per_Web_API_anlegen_clientdata.md`. Zusätzlich live verifiziert: `ParseJson` unterstützt bei `OpenApiConnection` keine `pattern`-Schemas; `ParseJson`/`Compose` benötigen hier ausschliesslich geschützte Eingaben statt separat geschützter Ausgaben; synchrone `Response`-Aktionen erlauben keine Trigger-Parallelitätsbegrenzung.
 
 ## Sicherheit und Betriebsgrenzen
 

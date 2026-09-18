@@ -1,0 +1,89 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import vm from 'node:vm';
+
+const source = readFileSync(new URL('../assets/js/submission.js', import.meta.url), 'utf8');
+function browser(fetch, endpoint = 'https://intake.example.org/submit', fields = {}) {
+  const listeners = {};
+  const button = { disabled: true };
+  const status = { textContent: '' };
+  const attributes = {};
+  let resets = 0;
+  const form = {
+    querySelector: () => button, getAttribute: () => endpoint,
+    addEventListener: (name, callback) => { listeners[name] = callback; }, reportValidity: () => true,
+    setAttribute: (name, value) => { attributes[name] = value; }, removeAttribute: name => { delete attributes[name]; },
+    reset: () => { resets++; },
+  };
+  const values = { content_url: 'https://powerplatformtip.com/feed.xml', submitter_name: 'Private name', ...fields };
+  vm.runInNewContext(source, {
+    document: { querySelector: selector => selector === '[data-submission-form]' ? form : status },
+    URL, AbortController, setTimeout, clearTimeout, fetch,
+    FormData: class { get(name) { return values[name] ?? null; } },
+  });
+  return { button, status, attributes, submit: () => listeners.submit({ preventDefault() {} }), resets: () => resets };
+}
+const accepted = () => ({ ok: true, status: 202, json: async () => ({ accepted: true, status: 'awaiting_review' }) });
+
+test('submission sends JSON, omits private credit and confirms only accepted storage', async () => {
+  let request;
+  const page = browser(async (url, options) => { request = options; return accepted(); });
+  assert.equal(page.button.disabled, false);
+  await page.submit();
+  assert.deepEqual(JSON.parse(request.body), { content_url: 'https://powerplatformtip.com/feed.xml', website: '' });
+  assert.equal(request.credentials, 'omit');
+  assert.equal(page.resets(), 1);
+  assert.match(page.status.textContent, /submitted for review/);
+  assert.equal(page.button.disabled, false);
+});
+
+test('explicit consent is sent and repeat clicks cannot create concurrent requests', async () => {
+  let release;
+  let calls = 0;
+  let payload;
+  const page = browser(async (url, options) => {
+    calls++;
+    payload = JSON.parse(options.body);
+    await new Promise(resolve => { release = resolve; });
+    return accepted();
+  }, undefined, { publish_credit: 'yes' });
+  const pending = page.submit();
+  await page.submit();
+  assert.equal(calls, 1);
+  assert.equal(page.button.disabled, true);
+  assert.equal(page.attributes['aria-busy'], 'true');
+  assert.equal(payload.publish_credit, 'yes');
+  assert.equal(payload.submitter_name, 'Private name');
+  release();
+  await pending;
+  assert.equal(page.attributes['aria-busy'], undefined);
+});
+
+test('missing endpoints and credential-bearing callbacks stay disabled', async () => {
+  for (const endpoint of ['', 'http://intake.example.org/', 'https://intake.example.org/?sig=secret', 'https://tenant.logic.azure.com/path', 'https://env.api.powerplatform.com/path']) {
+    const page = browser(() => { throw new Error('Should not fetch'); }, endpoint);
+    assert.equal(page.button.disabled, true, endpoint);
+    await page.submit();
+    assert.equal(page.resets(), 0);
+    assert.match(page.status.textContent, /Nothing has been sent/);
+  }
+});
+
+test('failed or unconfirmed responses retain entries and never claim acceptance', async () => {
+  const outcomes = [
+    async () => { throw new Error('Network failure'); },
+    async () => ({ status: 429 }), async () => ({ status: 400 }),
+    async () => ({ ok: false, status: 503, json: async () => ({ accepted: false }) }),
+    async () => ({ ok: true, status: 200, json: async () => { throw new Error('HTML response'); } }),
+    async () => ({ ok: true, status: 202, json: async () => ({ accepted: false }) }),
+  ];
+  for (const fetch of outcomes) {
+    const page = browser(fetch);
+    await page.submit();
+    assert.equal(page.resets(), 0);
+    assert.match(page.status.textContent, /entries are unchanged/);
+    assert.doesNotMatch(page.status.textContent, /submitted for review/);
+    assert.equal(page.button.disabled, false);
+  }
+});

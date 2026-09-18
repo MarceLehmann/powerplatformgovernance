@@ -4,6 +4,7 @@ require 'jekyll'
 require 'yaml'
 require 'date'
 require_relative '../_plugins/curated-sources'
+require_relative '../_plugins/submission-endpoint'
 
 site_dir = ARGV.fetch(0, '_site')
 required_pages = %w[index.html submit/index.html about/index.html tags/index.html archives/index.html sources/index.html]
@@ -64,6 +65,14 @@ if submit.at_css('form')['action'].to_s.strip.empty?
   raise 'Unconfigured submission must be disabled' unless submit.at_css('button[type="submit"][disabled]')
 end
 raise 'False submission confirmation' if submit.text.include?('Your suggestion has been received')
+raise 'Missing JSON submission handler' unless submit.at_css('script[src="/assets/js/submission.js"][defer]')
+raise 'Missing submission honeypot' unless submit.at_css('input[name="website"][tabindex="-1"]')
+['', 'https://intake.example.org/submissions'].each do |endpoint|
+  raise 'Public proxy rejected' unless GovernanceSubmission.public_endpoint?(endpoint)
+end
+['http://intake.example.org/', 'https://intake.example.org/?sig=example', 'https://user:example@intake.example.org/', 'https://tenant.logic.azure.com/workflows/example', 'https://env.api.powerplatform.com/automate/flows/example'].each do |endpoint|
+  raise 'Unsafe submission endpoint accepted' if GovernanceSubmission.public_endpoint?(endpoint)
+end
 
 sources = Nokogiri::HTML(File.read(File.join(site_dir, 'sources/index.html')))
 domains = sources.css('[data-source-domain]').map { |node| node['data-source-domain'] }

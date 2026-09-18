@@ -52,7 +52,7 @@ jobs:
 
       - name: Test automation contracts
         run: |
-          node --test tools/automation.test.mjs
+          node --test tools/*.test.mjs
           bundle exec ruby tools/test-publish-curation.rb
         env:
           JEKYLL_ENV: "production"

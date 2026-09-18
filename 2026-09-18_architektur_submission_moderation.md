@@ -4,20 +4,20 @@
 
 ## Purpose
 
-The site is designed to accept article, blog and RSS/Atom links. The public endpoint is not connected yet, so form submission remains disabled. Public suggestions always start unapproved and disabled. The [curation and source rules](2026-09-18_architektur_kuration_und_quellen.md) define the editorial and privacy contract.
+The site accepts article, blog and RSS/Atom suggestions through a JSON submission handler. The webhook intake is deployed and live-tested, but remains off until a protected public proxy is approved and connected. Form submission therefore remains disabled. Public suggestions always start unapproved and disabled. The [operations guide](2026-09-18_architektur_automation_betrieb.md#website-webhook) records the actual state; the [curation and source rules](2026-09-18_architektur_kuration_und_quellen.md) define the editorial and privacy contract.
 
 ## Flow
 
 ```mermaid
 flowchart LR
-    A[Public submission page] --> B[Power Automate HTTP trigger]
+    A[Public submission page] --> P[Protected proxy - pending approval]
+    P --> B[Power Automate HTTP trigger]
     B --> C[Validate and normalise payload]
-    C --> D[Fetch RSS or article metadata]
-    D --> E[Custom connector]
+    C --> D[Dataverse - unapproved and disabled]
+    D --> H[Manual source-type check and approval]
+    H --> E[Scheduled flow and custom connector]
     E --> F[Foundry relevance and quality assessment]
-    F --> G[Recommendation and rating]
-    G --> H[Manual approval by Marcel]
-    H --> I[Create short attributed summaries via existing connector]
+    F --> I[Create short attributed summaries]
     I --> J[Commit approved posts to GitHub]
     J --> K[Chirpy and GitHub Pages]
 ```
@@ -31,7 +31,7 @@ The form sends these fields:
 - `submitter_linkedin`: optional personal LinkedIn profile URL
 - `publish_credit`: `yes` only when the optional checkbox is selected; absent means no permission
 
-No email, title, topics, source name or language is requested. Determine the link type and source metadata after intake. Power Automate should add a server-side submission ID and received timestamp. Do not trust rating, source metadata or approval fields from the browser.
+No email, title, topics, source name or language is requested. The optional `website` honeypot must be empty. Determine the link type during manual review; metadata is fetched only by the approved processing flow. Dataverse supplies the record ID and received timestamp. Never accept rating, source metadata or approval fields from the browser. The intake fetches no submitted URL and stores optional contributor data only with explicit credit permission.
 
 Only the literal `yes` permits public contributor credit; convert that to a boolean for publication. Without it, omit contributor fields entirely from Markdown, feeds, search output and JSON-LD. Keep any private processing or consent evidence out of the public Git repository. Validate URLs, redirect destinations and all personal fields server-side, block private-network fetch targets, and escape rendered text.
 
