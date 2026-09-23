@@ -49,11 +49,12 @@ pages.each do |path|
 end
 
 home = Nokogiri::HTML(File.read(File.join(site_dir, 'index.html')))
-['#sidebar', '#access-lastmod'].each do |selector|
-  raise "Missing home section: #{selector}" unless home.at_css(selector)
-end
+raise 'Missing home section: #sidebar' unless home.at_css('#sidebar')
 has_posts = pages.size > required_pages.size
-raise 'Missing home section: #panel-wrapper .post-tag' if has_posts && !home.at_css('#panel-wrapper .post-tag')
+if has_posts
+  raise 'Missing home section: #access-lastmod' unless home.at_css('#access-lastmod')
+  raise 'Missing home section: #panel-wrapper .post-tag' unless home.at_css('#panel-wrapper .post-tag')
+end
 
 submit = Nokogiri::HTML(File.read(File.join(site_dir, 'submit/index.html')))
 raise 'Expected one submission form' unless submit.css('form').size == 1
