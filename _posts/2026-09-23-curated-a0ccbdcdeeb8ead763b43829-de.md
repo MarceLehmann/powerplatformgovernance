@@ -1,7 +1,7 @@
 ---
 title: "Granulare Tracking-Kontrollen in Customer Insights – Journeys"
 description: "Warum ein einziger Schalter für fünf Tracking-Mechanismen regulierte Organisationen zur Alles-oder-nichts-Entscheidung zwingt."
-date: "2026-09-23T23:55:01Z"
+date: "2026-09-23T22:00:01Z"
 author: governance_editorial
 lang: de
 toc: false

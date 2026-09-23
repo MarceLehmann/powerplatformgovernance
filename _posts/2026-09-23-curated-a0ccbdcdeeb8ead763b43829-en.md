@@ -1,7 +1,7 @@
 ---
 title: "Granular Tracking Controls in Customer Insights – Journeys"
 description: "Why bundling five tracking mechanisms behind one toggle forces regulated organisations into an all-or-nothing compliance choice."
-date: "2026-09-23T23:55:00Z"
+date: "2026-09-23T22:00:00Z"
 author: governance_editorial
 lang: en
 toc: false
