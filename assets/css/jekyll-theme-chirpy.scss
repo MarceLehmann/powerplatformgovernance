@@ -35,6 +35,22 @@
 
 #sidebar #avatar:empty { display: none; }
 
+// Chirpy's bundled Bootstrap subset does not include the `.visually-hidden`
+// utility, so the submission form's honeypot field (which relies on it to
+// stay invisible to real visitors) was rendering as a plain, fully visible
+// "Website" field. Restoring the standard Bootstrap definition here.
+.visually-hidden {
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	padding: 0 !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	clip: rect(0, 0, 0, 0) !important;
+	white-space: nowrap !important;
+	border: 0 !important;
+}
+
 .curated-source {
 	margin: 1.5rem 0;
 	padding-left: 1rem;
