@@ -49,9 +49,11 @@ pages.each do |path|
 end
 
 home = Nokogiri::HTML(File.read(File.join(site_dir, 'index.html')))
-['#sidebar', '#access-lastmod', '#panel-wrapper .post-tag'].each do |selector|
+['#sidebar', '#access-lastmod'].each do |selector|
   raise "Missing home section: #{selector}" unless home.at_css(selector)
 end
+has_posts = pages.size > required_pages.size
+raise 'Missing home section: #panel-wrapper .post-tag' if has_posts && !home.at_css('#panel-wrapper .post-tag')
 
 submit = Nokogiri::HTML(File.read(File.join(site_dir, 'submit/index.html')))
 raise 'Expected one submission form' unless submit.css('form').size == 1
@@ -82,7 +84,6 @@ raise 'Rendered endpoint is invalid' unless GovernanceSubmission.public_endpoint
 sources = Nokogiri::HTML(File.read(File.join(site_dir, 'sources/index.html')))
 domains = sources.css('[data-source-domain]').map { |node| node['data-source-domain'] }
 raise 'Duplicate source domains' unless domains.uniq == domains
-raise 'Source for curated example missing' unless domains.include?('powerplatformtip.com')
 
 test_post = Struct.new(:data, :url, :date, :publishable) do
   def write?

@@ -112,7 +112,7 @@ module CurationPublisher
       frontmatter['submitted_by'] = public_credit if public_credit
       frontmatter['publisher_disclosure'] = locale == 'de' ? 'Beide Publikationen werden von Marcel Lehmann herausgegeben.' : 'Both publications are edited by Marcel Lehmann.' if parsed.host.delete_prefix('www.') == 'powerplatformtip.com'
       heading = locale == 'de' ? 'Bedeutung für Governance' : 'Governance takeaway'
-      content = "#{YAML.dump(frontmatter)}---\n\n{% include curated-source.html %}\n\n## TL;DR\n\n#{body_text(summary)}\n\n## #{heading}\n\n#{body_text(takeaway)}\n\n{% include curated-footer.html %}\n"
+      content = "#{YAML.dump(frontmatter)}---\n\n## TL;DR\n\n#{body_text(summary)}\n\n{% include curated-source.html %}\n\n## #{heading}\n\n#{body_text(takeaway)}\n\n{% include curated-footer.html %}\n"
       ["#{now.utc.strftime('%Y-%m-%d')}-curated-#{identifier}-#{locale}.md", content]
     end
   end

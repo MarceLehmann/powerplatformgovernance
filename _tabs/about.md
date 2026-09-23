@@ -23,7 +23,7 @@ The original author and the person who suggests a link are not necessarily the s
 
 Authors can request a correction or removal by emailing [info@kmupower.com](mailto:info@kmupower.com). Listing a source does not imply a partnership or endorsement.
 
-The initial articles on this site are introductory examples from Power Platform Governance. Product capabilities change, so verify requirements against current Microsoft documentation before applying changes in production.
+Product capabilities change, so verify requirements against current Microsoft documentation before applying changes in production.
 
 ## Editor
 
