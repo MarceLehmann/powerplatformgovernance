@@ -44,9 +44,9 @@ Dir.mktmpdir do |root|
     check(!rendered.nil?, "Missing rendered #{locale} page")
     document = Nokogiri::HTML5(File.read(rendered))
     check(document.css('head link[rel="alternate"][hreflang]').map { |link| link['hreflang'] }.sort == %w[de en], 'Missing reciprocal hreflang')
-    check(document.at_css('a.detailed-article')['href'] == article['source_url'], 'Original link changed')
+    check(document.at_css('a.original-link')['href'] == article['source_url'], 'Original link changed')
     check(document.css('.contributor-credit').empty?, 'Unapproved contributor rendered')
-    check(document.css('.curated-source a[href=""]').empty?, 'Empty author link')
+    check(document.css('.curated-attribution a[href=""]').empty?, 'Empty author link')
     check(document.at_css('html')['lang'] == locale, 'Incorrect document language')
   end
   check(CurationPublisher.publish(event, root).empty?, 'Repeated URL published twice')

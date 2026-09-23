@@ -34,13 +34,11 @@ pages.each do |path|
   raise "Missing Sources navigation: #{path}" unless document.at_css('#sidebar nav a[href="/sources/"]')
   raise "Categories still in navigation: #{path}" if document.at_css('#sidebar nav a[href="/categories/"]')
   if document.at_css('[data-curated-entry]')
-    source = document.at_css('.curated-source cite a')
-    detailed = document.at_css('a.detailed-article')
-    raise "Missing direct original link: #{path}" unless source && detailed && source['href'] == detailed['href']
-    raise "Source must be external: #{path}" if source['href'].start_with?('https://powerplatformgovernance.com/')
+    original = document.at_css('a.original-link')
+    raise "Missing direct original link: #{path}" unless original && !original['href'].to_s.empty?
+    raise "Source must be external: #{path}" if original['href'].start_with?('https://powerplatformgovernance.com/')
     raise "Missing TL;DR: #{path}" unless document.css('h2').any? { |node| node.text.include?('TL;DR') }
-    raise "Empty attribution link: #{path}" unless document.css('.curated-source a[href=""]').empty?
-    contributor = document.at_css('.contributor-credit a')
+    contributor = document.at_css('.contributor-credit')
     if contributor
       raise "Invalid LinkedIn credit: #{path}" unless contributor['href'].match?(%r{\Ahttps://(?:www\.)?linkedin\.com/in/[^\s]+\z})
       raise "Contributor link must be marked ugc: #{path}" unless contributor['rel'].to_s.split.include?('ugc')
@@ -108,13 +106,16 @@ raise 'Source URL normalization failed' unless groups.map { |group| group['domai
 raise 'Source grouping failed' unless groups.last['posts'].size == 2
 raise 'HTTPS source origin lost' unless groups.last['url'] == 'https://www.powerplatformtip.com/'
 
-footer = Liquid::Template.parse(File.read('_includes/curated-footer.html'))
+attribution = Liquid::Template.parse(File.read('_includes/curated-attribution.html'))
 [true, false, nil, 'false', 'true'].each do |permission|
-  rendered = footer.render!('page' => { 'submitted_by' => {
-    'name' => 'Contributor <test>',
-    'linkedin' => 'https://www.linkedin.com/in/example/',
-    'publish_credit' => permission
-  } })
+  rendered = attribution.render!('page' => {
+    'source_url' => 'https://example.org/article', 'source_site_url' => 'https://example.org/', 'source_name' => 'Example',
+    'submitted_by' => {
+      'name' => 'Contributor <test>',
+      'linkedin' => 'https://www.linkedin.com/in/example/',
+      'publish_credit' => permission,
+    },
+  })
   credit = Nokogiri::HTML.fragment(rendered).at_css('.contributor-credit')
   raise 'Credit leaked without explicit permission' unless !credit.nil? == (permission == true)
   raise 'Credit name must be escaped' if credit && credit.at_css('test')

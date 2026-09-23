@@ -1,7 +1,0 @@
-<div class="curated-source" data-curated-entry>
-  <p><strong>{% if page.lang == 'de' %}Kurzfassung eines Artikels von{% else %}TL;DR of an article from{% endif %} <a href="{{ page.source_site_url | escape }}">{{ page.source_name | escape }}</a>{% if page.source_author %}, {% if page.lang == 'de' %}verfasst von{% else %}by{% endif %} {% if page.source_author_url %}<a href="{{ page.source_author_url | escape }}">{{ page.source_author | escape }}</a>{% else %}{{ page.source_author | escape }}{% endif %}{% endif %}.</strong></p>
-  <p><cite><a href="{{ page.source_url | escape }}">{{ page.source_title | escape }}</a></cite><br>
-    <span class="text-muted small">{% if page.source_published_at %}{% if page.lang == 'de' %}Original veröffentlicht{% else %}Original published{% endif %} {{ page.source_published_at | date: '%d %b %Y' }}. {% endif %}{% if page.source_updated_at %}{% if page.lang == 'de' %}Aktualisiert{% else %}Updated{% endif %} {{ page.source_updated_at | date: '%d %b %Y' }}. {% endif %}{% if page.lang == 'de' %}Originalsprache{% else %}Original language{% endif %}: {{ page.source_language_name | escape }}.</span>
-  </p>
-  {% if page.translation_url %}<p class="small"><a href="{{ page.translation_url | relative_url }}" hreflang="{% if page.lang == 'de' %}en{% else %}de{% endif %}">{% if page.lang == 'de' %}Read this summary in English{% else %}Diese Kurzfassung auf Deutsch lesen{% endif %}</a></p>{% endif %}
-</div>

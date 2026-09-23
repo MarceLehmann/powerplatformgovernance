@@ -1,8 +1,0 @@
-<p><strong><a class="detailed-article" href="{{ page.source_url | escape }}">{% if page.lang == 'de' %}Ausführlicher Artikel auf{% else %}Detailed article on{% endif %} {{ page.source_name | escape }} <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a></strong></p>
-
-{% if page.submitted_by.publish_credit == true %}
-  {% assign contributor_fallback = 'a community contributor' %}{% if page.lang == 'de' %}{% assign contributor_fallback = 'einem Community-Mitglied' %}{% endif %}
-  <p class="contributor-credit">{% if page.lang == 'de' %}Vorgeschlagen von{% else %}Suggested by{% endif %} {% if page.submitted_by.linkedin %}<a href="{{ page.submitted_by.linkedin | escape }}" rel="ugc noopener">{{ page.submitted_by.name | default: contributor_fallback | escape }}</a>{% else %}{{ page.submitted_by.name | default: contributor_fallback | escape }}{% endif %}.</p>
-{% endif %}
-
-<p class="text-muted small">{% if page.lang == 'de' %}Dies ist unsere eigene Kurzfassung, keine Wiederveröffentlichung oder vollständige Übersetzung.{% else %}This is our own summary, not a republication or full translation.{% endif %}{% if page.source_license_url %} {% if page.lang == 'de' %}Der Originalartikel steht unter{% else %}The original article is licensed under{% endif %} <a href="{{ page.source_license_url | escape }}">{{ page.source_license_name | escape }}</a>.{% endif %}{% if page.publisher_disclosure %} {{ page.publisher_disclosure | escape }}{% endif %}</p>
