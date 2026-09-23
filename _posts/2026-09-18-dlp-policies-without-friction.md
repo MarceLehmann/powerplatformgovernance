@@ -35,3 +35,8 @@ Exceptions should have an owner, a business justification, an expiry date, and a
 - Classify connectors based on data flow and business risk.
 - Use environment strategy to separate experimentation from production.
 - Make every exception owned, justified, and time-bound.
+
+## Related reading
+
+- [Building a Power Platform Governance Foundation](/posts/power-platform-governance-foundation/)
+- [ALM for Power Platform Solutions: From Maker Project to Product](/posts/alm-for-power-platform-solutions/)

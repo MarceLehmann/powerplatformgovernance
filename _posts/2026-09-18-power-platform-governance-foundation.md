@@ -35,3 +35,9 @@ A useful governance dashboard combines active makers, application usage, environ
 - Define platform ownership before scaling adoption.
 - Start with a small set of enforceable controls.
 - Measure business value and platform risk together.
+
+## Related reading
+
+- [Designing DLP Policies Without Friction](/posts/dlp-policies-without-friction/)
+- [ALM for Power Platform Solutions: From Maker Project to Product](/posts/alm-for-power-platform-solutions/)
+- [CoE Starter Kit: permissions and orphaned resources](/posts/coe-permissions-and-ownership/)

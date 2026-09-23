@@ -31,6 +31,8 @@ The site is edited by **Marcel Lehmann**, founder of [KMUpower](https://kmupower
 
 Marcel also edits PowerPlatformTip. We disclose that connection when featuring it here.
 
+Follow [Power Platform Governance Daily](https://www.linkedin.com/company/111059078) on LinkedIn for the same curated entries in your feed, or connect with [Marcel](https://www.linkedin.com/in/marcelehmann/) directly.
+
 ## Contribute
 
 Suggest an article, blog or RSS feed on our [submission page]({{ '/submit/' | relative_url }}). A link is enough; your name and LinkedIn profile are optional. Publication is subject to review.

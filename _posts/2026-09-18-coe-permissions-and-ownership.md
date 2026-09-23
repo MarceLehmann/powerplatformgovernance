@@ -37,4 +37,9 @@ Marcel Lehmann's tip highlights two connected uses of the CoE Starter Kit: revie
 
 Treat offboarding as a resource-ownership check, not just an account closure. Pair access reviews with a named successor for important apps and flows. Check current CoE component availability before applying this older tip.
 
+## Related reading
+
+- [Building a Power Platform Governance Foundation](/posts/power-platform-governance-foundation/)
+- [Designing DLP Policies Without Friction](/posts/dlp-policies-without-friction/)
+
 {% include curated-footer.html %}

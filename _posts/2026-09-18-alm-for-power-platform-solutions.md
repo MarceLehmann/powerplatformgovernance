@@ -36,3 +36,8 @@ A deployment pipeline should validate the solution, apply environment-specific c
 - Separate development, testing, and production.
 - Use solutions as the transport boundary.
 - Automate validation and deployment wherever possible.
+
+## Related reading
+
+- [Building a Power Platform Governance Foundation](/posts/power-platform-governance-foundation/)
+- [CoE Starter Kit: permissions and orphaned resources](/posts/coe-permissions-and-ownership/)
