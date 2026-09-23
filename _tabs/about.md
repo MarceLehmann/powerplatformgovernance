@@ -8,6 +8,10 @@ description: "A curated collection of Power Platform governance articles: short 
 
 Power Platform Governance brings useful governance articles from different blogs into one place. Each curated entry offers a short TL;DR, a governance takeaway and a direct link to the detailed original article.
 
+## Why this exists
+
+I built this for myself as much as for anyone else. There are excellent Power Platform governance blogs scattered all over the web, and I was tired of checking a dozen feeds by hand to stay current. This site watches them for me and surfaces what's actually worth reading, in one place.
+
 ## What we cover
 
 - Environment strategy, platform ownership and adoption
