@@ -72,6 +72,8 @@ test('flow is sequential, approval-filtered, uses Foundry and confirms GitHub re
   assert.equal(actions.get('Confirm_publication').inputs.parameters['item/new_failures'], 0);
   assert.equal(actions.get('Missing_receipt_review').inputs.parameters['item/new_watermark'], undefined);
   assert.equal(isEligible({ ...ready, new_processing: processing.queued }), false);
+  assert.match(actions.get('Article_URL').inputs, /startsWith\(toLower\(trim\(items\('For_each_article'\)\?\['primaryLink'\]\)\), 'http'\)/);
+  assert.match(actions.get('Article_URL').inputs, /uriScheme\(outputs\('Source_URL'\)\)/);
 });
 
 test('publisher confirms success using a private-repository readable receipt', () => {

@@ -124,7 +124,7 @@ export function flowDefinition() {
       For_each_article: {
         type: 'Foreach', foreach: "@variables('Candidates')", runAfter: {}, runtimeConfiguration: { concurrency: { repetitions: 1 } },
         actions: {
-          Article_URL: compose("@trim(items('For_each_article')?['primaryLink'])"),
+          Article_URL: compose("@if(startsWith(toLower(trim(items('For_each_article')?['primaryLink'])), 'http'), trim(items('For_each_article')?['primaryLink']), concat(uriScheme(outputs('Source_URL')), '://', uriHost(outputs('Source_URL')), if(startsWith(trim(items('For_each_article')?['primaryLink']), '/'), '', '/'), trim(items('For_each_article')?['primaryLink'])))"),
           Same_approved_host: condition("@and(equals(toLower(uriHost(outputs('Article_URL'))), toLower(uriHost(outputs('Source_URL')))), equals(uriScheme(outputs('Article_URL')), 'https'), equals(uriPort(outputs('Article_URL')), 443), not(contains(outputs('Article_URL'), '@')))", {
             Fetch_article: { type: 'Http', inputs: { method: 'GET', uri: "@outputs('Article_URL')", headers: { Accept: 'text/html', 'User-Agent': 'PowerPlatformGovernance/1.0' }, retryPolicy: { type: 'exponential', count: 2, interval: 'PT10S' } }, runAfter: {}, limit: { timeout: 'PT1M' } },
             HTML_to_text: connector('conversion', 'HtmlToText', { Content: "@take(string(body('Fetch_article')), 100000)" }, 'Fetch_article'),
