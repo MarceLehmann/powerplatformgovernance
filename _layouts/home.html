@@ -5,30 +5,18 @@ layout: default
 {% include lang.html %}
 
 {% if paginator.page == 1 %}
-  <div class="hero-banner p-4 p-md-5 mb-4 rounded-3 border">
-    <h1 class="mb-2">Power Platform Governance</h1>
-    <p class="lead mb-3">Governance, standards, and practical guidance for Power Platform teams.</p>
-    <p class="mb-4">
-      Short, source-credited summaries of the governance reading worth your time &mdash;
-      environment strategy, DLP, ALM and CoE operations &mdash; curated by
-      <a href="https://kmupower.com/">Marcel Lehmann</a>, Microsoft MVP and founder of KMUpower.
-      Every entry links straight back to the original article.
+  <header class="home-intro mb-4">
+    <p class="lead text-muted mb-2">
+      Source-credited summaries of the Power Platform governance reading worth your time,
+      curated by <a href="https://kmupower.com/">Marcel Lehmann</a>, Microsoft MVP &mdash;
+      every entry links straight back to the original article.
     </p>
-    <div class="d-flex flex-wrap gap-2">
-      <a href="{{ '/about/' | relative_url }}" class="btn btn-outline-primary btn-sm">
-        <i class="fas fa-info-circle me-1"></i>About this project
-      </a>
-      <a href="{{ '/submit/' | relative_url }}" class="btn btn-outline-primary btn-sm">
-        <i class="fas fa-paper-plane me-1"></i>Suggest a source
-      </a>
-      <a href="{{ '/feed.xml' | relative_url }}" class="btn btn-outline-primary btn-sm">
-        <i class="fas fa-rss me-1"></i>Subscribe via RSS
-      </a>
-      <a href="https://www.linkedin.com/company/111059078" class="btn btn-outline-primary btn-sm" rel="me noopener" target="_blank">
-        <i class="fab fa-linkedin me-1"></i>Follow on LinkedIn
-      </a>
-    </div>
-  </div>
+    <p class="text-muted small mb-0">
+      <a href="{{ '/about/' | relative_url }}"><i class="fas fa-info-circle fa-fw me-1"></i>About this project</a>
+      <a href="{{ '/submit/' | relative_url }}" class="ms-3"><i class="fas fa-paper-plane fa-fw me-1"></i>Suggest a source</a>
+      <a href="{{ '/feed.xml' | relative_url }}" class="ms-3"><i class="fas fa-rss fa-fw me-1"></i>Subscribe via RSS</a>
+    </p>
+  </header>
 {% endif %}
 
 {% assign all_pinned = site.posts | where: 'pin', 'true' %}
