@@ -38,4 +38,36 @@
 </script>
 {% endif %}
 
+{%- if page.layout == 'post' -%}
+{%- comment -%}
+  Replaces jekyll-seo-tag's own BlogPosting block (stripped in head.html for post
+  pages) to fix two real bugs: "imageObject" instead of "ImageObject" casing, and
+  no @id on the author reference. original_article posts credit Marcel Lehmann as
+  Person; curated_summary posts credit the Organization (matches the existing
+  authors.yml-driven behaviour, now with a proper @id link). isBasedOn added for
+  curated posts as a direct, honest source credit (data already in front matter).
+{%- endcomment -%}
+{%- assign is_original = false -%}
+{%- if page.content_type == 'original_article' -%}{%- assign is_original = true -%}{%- endif -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+  "dateModified": {% if page.last_modified_at %}{{ page.last_modified_at | date_to_xmlschema | jsonify }}{% else %}{{ page.date | date_to_xmlschema | jsonify }}{% endif %},
+  "url": {{ page.url | absolute_url | jsonify }},
+  "inLanguage": {{ page.lang | jsonify }},
+  "mainEntityOfPage": { "@type": "WebPage", "@id": {{ page.url | absolute_url | jsonify }} },
+  {% if page.image -%}
+  "image": { "@type": "ImageObject", "url": {{ page.image.path | jsonify }}, "caption": {{ page.image.alt | jsonify }} },
+  {%- endif %}
+  {% unless is_original %}{% if page.source_url %}"isBasedOn": {{ page.source_url | jsonify }},{% endif %}{% endunless %}
+  "author": { "@id": "https://powerplatformgovernance.com/{% if is_original %}about/#person{% else %}#organization{% endif %}" },
+  "publisher": { "@id": "https://powerplatformgovernance.com/#organization" }
+}
+</script>
+{%- endif -%}
+
 {% include cookie-consent.html %}

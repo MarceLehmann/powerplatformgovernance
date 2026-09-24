@@ -16,15 +16,22 @@
     and on the homepage specifically it gets "name" wrong (renders the site
     author's name instead of the site title). The correct, @id-linked
     Organization/Person graph for / and /about/ is built by hand in
-    metadata-hook.html, so only strip jekyll-seo-tag's own
-    <script type="application/ld+json"> block on those two pages - every other
-    page (posts, /submit/, /tags/, /archives/, /sources/, ...) still needs
-    jekyll-seo-tag's own structured data, tools/check-site.rb requires at least
-    one JSON-LD block per page and we don't have a hand-built replacement for
-    those yet. Same stripping pattern already used unconditionally on
-    powerplatformtip.com, which does have full per-page replacements there.
+    metadata-hook.html, so strip jekyll-seo-tag's own
+    <script type="application/ld+json"> block on those two pages - the
+    meta/OG/Twitter tags are kept either way.
+
+    Also strip it on post pages (page.layout == 'post'): jekyll-seo-tag's own
+    BlogPosting output has two real bugs there - "imageObject" instead of the
+    correct "ImageObject" casing, and no @id on the author reference (so an
+    AI system reading a single post in isolation gets a thin, disconnected
+    author stub instead of the fuller Person/Organization entity). A hand-
+    built replacement BlogPosting block for posts lives in metadata-hook.html.
+
+    /submit/, /tags/, /archives/, /sources/, ... still need jekyll-seo-tag's
+    own structured data - tools/check-site.rb requires at least one JSON-LD
+    block per page and we don't have a hand-built replacement for those.
   {%- endcomment -%}
-  {%- if page.url == '/' or page.url == '/about/' -%}
+  {%- if page.url == '/' or page.url == '/about/' or page.layout == 'post' -%}
     {%- assign seo_ld_split = seo_tags | split: '<script type="application/ld+json">' -%}
     {%- if seo_ld_split.size > 1 -%}
       {%- assign seo_ld_tail = seo_ld_split[1] | split: '</script>' -%}
