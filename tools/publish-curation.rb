@@ -101,7 +101,7 @@ module CurationPublisher
       title = text(version['title'], 110)
       description = text(version['description'], 200)
       summary = text(version['tldr'], 600)
-      takeaway = text(version['takeaway'], 450)
+      takeaway = text(version['takeaway'], 900)
       alternate = locale == 'en' ? 'de' : 'en'
       frontmatter = {
         'title' => title, 'description' => description, 'date' => now.utc.iso8601,
