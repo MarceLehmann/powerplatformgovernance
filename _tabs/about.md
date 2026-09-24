@@ -1,7 +1,7 @@
 ---
 # the default layout is 'page'
 icon: fas fa-info-circle
-order: 4
+order: 5
 title: About
 description: "A curated collection of Power Platform governance articles: short summaries, clear source credit and links to the originals."
 ---

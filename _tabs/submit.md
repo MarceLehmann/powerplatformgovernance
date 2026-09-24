@@ -2,7 +2,7 @@
 layout: page
 title: Submit content
 icon: fas fa-paper-plane
-order: 5
+order: 6
 permalink: /submit/
 description: "Suggest a Power Platform governance blog or article for review and possible publication."
 ---
