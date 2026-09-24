@@ -5,8 +5,10 @@ curated article.
 Ported from MarceLehmann/Copilot_LinkedIn render/govcard.py + hand.py
 (statement layout only, English text only - card copy always stays
 English regardless of the post's language, matching the existing brand
-cards). Reads tools/pending-cards.json (written by publish-curation.rb),
-writes assets/img/curated/<id>.png per entry.
+cards). Unlike the source templates, this card carries no personal
+portrait or signature - this site publishes as governance_editorial,
+independent of any one person. Reads tools/pending-cards.json (written
+by publish-curation.rb), writes assets/img/curated/<id>.png per entry.
 """
 import json
 import math
@@ -19,7 +21,6 @@ W, H = 1080, 1350
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 FONT_DIR = os.path.join(HERE, 'render-assets', 'fonts')
-PORTRAIT_PATH = os.path.join(HERE, 'render-assets', 'marcel.jpg')
 MANIFEST_PATH = os.path.join(HERE, 'pending-cards.json')
 OUT_DIR = os.path.join(ROOT, 'assets', 'img', 'curated')
 
@@ -42,7 +43,6 @@ def _font_path(name):
 
 BOLD = _font_path('Kalam-Bold.ttf')
 REG = _font_path('Kalam-Regular.ttf')
-PORTRAIT = Image.open(PORTRAIT_PATH).convert('RGBA') if os.path.exists(PORTRAIT_PATH) else None
 
 
 def font(size, bold=True):
@@ -68,13 +68,6 @@ def check_mark(d, box, color, width=5, rng=None):
     w, h = x1 - x0, y1 - y0
     wobbly_line(d, [(x0, y0 + h * 0.55), (x0 + w * 0.35, y1)], color, width, rng, 0.9, 10)
     wobbly_line(d, [(x0 + w * 0.35, y1), (x1, y0)], color, width, rng, 0.9, 12)
-
-
-def foto(img, im, x, y, dia, ss=4):
-    big = im.convert('RGB').resize((dia * ss, dia * ss), Image.LANCZOS)
-    mask = Image.new('L', (dia * ss, dia * ss), 0)
-    ImageDraw.Draw(mask).ellipse([0, 0, dia * ss - 1, dia * ss - 1], fill=255)
-    img.paste(big.resize((dia, dia), Image.LANCZOS), (int(x), int(y)), mask.resize((dia, dia), Image.LANCZOS))
 
 
 class Card:
@@ -127,12 +120,7 @@ class Card:
 
     def footer(self):
         wobbly_line(self.d, [(70, H - 118), (W - 70, H - 118)], LGRAY, width=2, rng=self.rng)
-        if PORTRAIT is not None:
-            foto(self.img, PORTRAIT, 70, H - 100, 64)
-            hx = 150
-        else:
-            hx = 70
-        self.text((hx, H - 92), '#PowerPlatformGovernanceDaily', font=font(24, bold=False), fill=GRAY)
+        self.text((70, H - 92), '#PowerPlatformGovernanceDaily', font=font(24, bold=False), fill=GRAY)
         t = 'powerplatformgovernance.com'
         f = font(24)
         self.text((W - 70 - self.tl(t, f), H - 92), t, font=f, fill=TEAL)
