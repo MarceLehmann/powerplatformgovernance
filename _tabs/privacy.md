@@ -44,7 +44,11 @@ We use the information we collect to:
 
 ## Cookies and Tracking Technologies
 
-Google Analytics sets cookies to distinguish visitors and measure site usage. We do not use any cookies of our own beyond what Google Analytics sets. You can control or block these cookies through your browser settings, or opt out of Google Analytics tracking using the [Google Analytics Opt-out Browser Add-on](https://tools.google.com/dlpage/gaoptout).
+We ask for your consent before loading Google Analytics. On your first visit, a banner lets you **Accept** or **Decline**:
+- **Accept**: Google Analytics loads and sets cookies to distinguish visitors and measure site usage.
+- **Decline**: Google Analytics never loads; only a small first-party cookie remembers your choice for 365 days so we don't ask again.
+
+You can change your mind at any time by clearing the `cookie_consent` cookie in your browser settings, which will show the banner again on your next visit. You can also opt out of Google Analytics entirely using the [Google Analytics Opt-out Browser Add-on](https://tools.google.com/dlpage/gaoptout).
 
 ## Third-Party Services
 
