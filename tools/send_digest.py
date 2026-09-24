@@ -8,10 +8,13 @@ campaign to the PowerPlatformGovernance list, then updates the state file.
 
 Exits 0 with no API call if there is nothing new to send.
 """
+import datetime
 import json
 import os
 import re
 import sys
+import urllib.error
+import urllib.request
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -19,10 +22,8 @@ POSTS_DIR = REPO_ROOT / "_posts"
 STATE_FILE = REPO_ROOT / "tools" / "digest-sent.json"
 SITE_URL = "https://powerplatformgovernance.com"
 LIST_ID = 22
-SENDER_NAME = "Marcel Lehmann (Power Platform Governance)"
-# Verified Brevo sender - update once a dedicated governance@powerplatformgovernance.com
-# address has been verified in Brevo (Senders & IPs -> add a sender -> confirm via email).
-SENDER_EMAIL = "news@powerplatformtip.com"
+SENDER_NAME = "Power Platform Governance"
+SENDER_EMAIL = "governance@powerplatformtip.com"
 
 FRONTMATTER_RE = re.compile(r"^---\n(.*?)\n---\n(.*)$", re.DOTALL)
 TLDR_RE = re.compile(r"##\s*TL;DR\s*\n+(.*?)(?=\n##|\n\{%|\Z)", re.DOTALL)
@@ -135,9 +136,7 @@ def main():
     print(f"Found {len(new_articles)} new article(s) for the digest.")
     html = build_html(new_articles)
 
-    import urllib.request
-
-    today = __import__("datetime").date.today().isoformat()
+    today = datetime.date.today().isoformat()
     payload = {
         "name": f"Governance Digest {today}",
         "subject": f"Power Platform Governance: {len(new_articles)} neue Artikel / new articles ({today})",
@@ -152,8 +151,19 @@ def main():
         headers={"api-key": api_key, "Content-Type": "application/json", "Accept": "application/json"},
         method="POST",
     )
-    with urllib.request.urlopen(req) as resp:
-        campaign = json.loads(resp.read().decode("utf-8"))
+    try:
+        with urllib.request.urlopen(req) as resp:
+            campaign = json.loads(resp.read().decode("utf-8"))
+    except urllib.error.HTTPError as e:
+        body = json.loads(e.read().decode("utf-8"))
+        if body.get("code") == "invalid_parameter" and "no contacts" in body.get("message", "").lower():
+            print(
+                f"List {LIST_ID} has no subscribers yet - not sending, and NOT marking "
+                f"{len(new_articles)} article(s) as covered, so the first real subscriber "
+                f"still gets them in a future digest run."
+            )
+            return
+        raise
     campaign_id = campaign["id"]
     print(f"Created Brevo campaign {campaign_id}")
 
