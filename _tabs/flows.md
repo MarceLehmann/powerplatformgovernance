@@ -10,8 +10,6 @@ description: "Ten free Power Automate flows for Power Platform admins: inventori
 
 Ten flows to start automating Power Platform administration: four inventories (environments, apps, cloud flows, Copilot Studio agents), a security check (System Administrator role audit), DLP policy change tracking, automatic reassignment for orphaned apps and flows, DLP suspension notifications, and capacity warnings. Build them in this order and you already have more visibility into your tenant than most CoE teams manage in a year. Each one below is spelled out completely — the Dataverse table to create, every action in the flow, and the JSON schema to parse — not just a pattern to figure out yourself.
 
-This is the free starter set. The full **AdminHelper** package — all 50 flows, covering ownership and offboarding automation, Copilot Studio governance, ALM safeguards and Dataverse security in full — is a paid, ready-to-import solution available via [KMUpower](https://kmupower.com/) or [Power Platform Academy](https://www.powerplatformacademy.online/).
-
 ## Your first 10 flows
 
 **Before you start:** create one solution to hold everything (e.g. "Admin Starter Kit"), and inside it the five tables below. Each flow uses the **Recurrence** trigger (daily, early morning) and the **Power Platform for Admins V2** / **Power Apps for Admins** connectors where available, falling back to a raw HTTP action with Azure AD OAuth for anything those connectors don't cover.
@@ -146,8 +144,6 @@ This is the free starter set. The full **AdminHelper** package — all 50 flows,
 6. **Avoid alert fatigue:** before adding a new alert row, **List rows** on `cr_capacityalert` for that environment/type in the last 7 days — capacity numbers fluctuate normally, so don't re-alert on every single run once a row already exists.
 
 ---
-
-**Want the other 40?** These ten cover inventory, DLP visibility, orphaned-resource reassignment and capacity monitoring. The full **AdminHelper** package extends this into full ownership and offboarding automation, Copilot Studio governance, ALM safeguards and Dataverse security — all 50 flows as one importable solution, built on the same tables you just created. Find it via [KMUpower](https://kmupower.com/) or [Power Platform Academy](https://www.powerplatformacademy.online/), or get in touch at [info@kmupower.com](mailto:info@kmupower.com) for early access.
 
 ## Base URLs, authentication and a few notes
 
