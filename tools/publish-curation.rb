@@ -65,6 +65,22 @@ module CurationPublisher
     CGI.escapeHTML(value).gsub('{', '&#123;').gsub('}', '&#125;').gsub(/([\\`*_\[\]#])/) { |character| "\\#{character}" }
   end
 
+  def self.card_text(value, maximum)
+    cleaned = text(value, maximum)
+    raise ArgumentError, 'Card text must be plain English copy' unless cleaned.match?(/\A[A-Za-z0-9 .,'!?:&\/-]+\z/)
+    cleaned
+  end
+
+  def self.card(article, identifier)
+    {
+      'id' => identifier,
+      'topic' => card_text(article['card_topic'], 24),
+      'quote' => card_text(article['card_quote'], 140),
+      'take' => card_text(article['card_take'], 90),
+      'state' => card_text(article['card_state'], 24),
+    }
+  end
+
   def self.credit(data)
     return nil unless data.is_a?(Hash) && data['publish_credit'] == true
     name = text(data.fetch('name', ''), 100, optional: true)
@@ -106,17 +122,21 @@ module CurationPublisher
     end
     identifier = Digest::SHA256.hexdigest(key(source_url))[0, 24]
     public_credit = credit(credit_data)
-    %w[en de].map do |locale|
+    card_data = card(article, identifier)
+    image = { 'path' => "/assets/img/curated/#{identifier}.png" }
+    files = %w[en de].map do |locale|
       version = article.fetch(locale)
       title = text(version['title'], 110)
       description = text(version['description'], 200)
       summary = text(version['tldr'], 600)
       takeaway = bulleted_text(version['takeaway'], 900)
       alternate = locale == 'en' ? 'de' : 'en'
+      alt_prefix = locale == 'de' ? 'Governance-Karte' : 'Governance card'
       frontmatter = {
         'title' => title, 'description' => description, 'date' => now.utc.iso8601,
         'author' => 'governance_editorial', 'lang' => locale, 'toc' => false, 'tags' => tags,
         'content_type' => 'curated_summary', 'curation_id' => identifier,
+        'image' => image.merge('alt' => "#{alt_prefix}: #{card_data['quote']}"),
         'permalink' => "/#{locale}/posts/#{identifier}/", 'translation_url' => "/#{alternate}/posts/#{identifier}/",
       }.merge(source)
       frontmatter['submitted_by'] = public_credit if public_credit
@@ -125,6 +145,7 @@ module CurationPublisher
       content = "#{YAML.dump(frontmatter)}---\n\n## TL;DR\n\n#{body_text(summary)}\n\n{% include curated-attribution.html %}\n\n## #{heading}\n\n#{body_text(takeaway)}\n"
       ["#{now.utc.strftime('%Y-%m-%d')}-curated-#{identifier}-#{locale}.md", content]
     end
+    { 'files' => files, 'card' => card_data }
   end
 
   def self.publish(event, root, now: Time.now)
@@ -140,15 +161,21 @@ module CurationPublisher
       key(metadata['source_url']) if metadata.is_a?(Hash) && metadata['source_url']
     end
     pending = []
+    pending_cards = []
     articles.each do |article|
-      files = render(article, payload.fetch('credit', {}), now)
+      result = render(article, payload.fetch('credit', {}), now)
       identity = key(article['source_url'])
       next if existing.include?(identity)
-      pending.concat(files)
+      pending.concat(result['files'])
+      pending_cards << result['card']
       existing << identity
     end
     FileUtils.mkdir_p(File.join(root, '_posts'))
     pending.each { |name, content| File.write(File.join(root, '_posts', name), content, mode: 'wx', encoding: 'UTF-8') }
+    unless pending_cards.empty?
+      FileUtils.mkdir_p(File.join(root, 'tools'))
+      File.write(File.join(root, 'tools', 'pending-cards.json'), JSON.generate(pending_cards), encoding: 'UTF-8')
+    end
     pending.map(&:first)
   end
 end

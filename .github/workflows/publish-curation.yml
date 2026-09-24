@@ -26,6 +26,22 @@ jobs:
         run: bundle exec ruby tools/test-publish-curation.rb
       - name: Validate and render approved summaries
         run: bundle exec ruby tools/publish-curation.rb
+      - uses: actions/setup-python@v5
+        if: hashFiles('tools/pending-cards.json') != ''
+        with:
+          python-version: '3.12'
+      - name: Render governance card images
+        if: hashFiles('tools/pending-cards.json') != ''
+        run: |
+          set -euo pipefail
+          mkdir -p tools/render-assets/fonts
+          curl -fsSL -o tools/render-assets/fonts/Kalam-Bold.ttf \
+            https://raw.githubusercontent.com/google/fonts/main/ofl/kalam/Kalam-Bold.ttf
+          curl -fsSL -o tools/render-assets/fonts/Kalam-Regular.ttf \
+            https://raw.githubusercontent.com/google/fonts/main/ofl/kalam/Kalam-Regular.ttf
+          pip install pillow
+          python tools/render_card.py
+          rm -f tools/pending-cards.json
       - name: Build and check generated posts
         env:
           JEKYLL_ENV: production
@@ -37,7 +53,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          git add -- _posts
+          git add -- _posts assets/img/curated
           if ! git diff --cached --quiet; then
             git config user.name 'github-actions[bot]'
             git config user.email '41898282+github-actions[bot]@users.noreply.github.com'

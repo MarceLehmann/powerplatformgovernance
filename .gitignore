@@ -31,3 +31,9 @@ assets/js/dist
 .DS_Store
 Thumbs.db
 __pycache__/
+
+# Governance card renderer: fonts are fetched fresh each CI run (Google
+# Fonts), the manifest is a transient handoff file - only marcel.jpg
+# (the vendored portrait) is meant to be committed under render-assets/.
+/tools/render-assets/fonts/
+/tools/pending-cards.json

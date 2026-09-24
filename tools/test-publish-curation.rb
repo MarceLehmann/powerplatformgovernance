@@ -19,6 +19,8 @@ article = {
   'publishable' => true, 'source_url' => 'https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-56-empowering-tools-in-coe/',
   'source_title' => '#PowerPlatformTip 56', 'source_name' => 'PowerPlatformTip', 'source_author' => 'Marcel Lehmann',
   'source_language' => 'en', 'source_published_at' => '2023-05-30', 'tags' => %w[governance ownership],
+  'card_topic' => 'Ownership', 'card_quote' => 'Ownership is a chain. Check the links before one breaks.',
+  'card_take' => 'The owner leaves. The solution stays.', 'card_state' => 'Owned',
   'en' => { 'title' => 'CoE ownership reviews', 'description' => 'CoE tools support ownership reviews.', 'tldr' => 'CoE tools support reviews of permissions and orphaned resources.', 'takeaway' => "- Admins/CoE: include resource ownership in offboarding checks.\n- Security/Compliance: review orphaned resources on a fixed schedule." },
   'de' => { 'title' => 'CoE: Verantwortlichkeiten prüfen', 'description' => 'CoE-Werkzeuge unterstützen die Prüfung.', 'tldr' => 'CoE-Werkzeuge helfen bei der Prüfung von Berechtigungen und verwaisten Ressourcen.', 'takeaway' => "- Admins/CoE: Ressourcenverantwortung in Offboarding-Checks aufnehmen.\n- Security/Compliance: verwaiste Ressourcen nach festem Plan prüfen." },
 }
@@ -26,12 +28,16 @@ event = { 'action' => 'curated-publication', 'client_payload' => { 'request_id' 
 Dir.mktmpdir do |root|
   files = CurationPublisher.publish(event, root, now: Time.utc(2026, 9, 18))
   check(files.length == 2, 'Expected both language versions')
+  identifier = Digest::SHA256.hexdigest(CurationPublisher.key(article['source_url']))[0, 24]
   files.each do |name|
     content = File.read(File.join(root, '_posts', name))
     check(!content.include?('PRIVATE TEST NAME'), 'Private credit leaked')
     check(content.include?('translation_url:'), 'Missing alternate language')
     check(content.include?('source_url:'), 'Missing original source')
+    check(content.include?("path: /assets/img/curated/#{identifier}.png"), 'Missing card image path')
   end
+  manifest = JSON.parse(File.read(File.join(root, 'tools', 'pending-cards.json')))
+  check(manifest.length == 1 && manifest.first['id'] == identifier && manifest.first['quote'] == article['card_quote'], 'Bad pending-cards.json entry')
   repository = File.expand_path('..', __dir__)
   FileUtils.cp_r(File.join(repository, '_includes'), root)
   FileUtils.mkdir_p(File.join(root, '_data'))
@@ -62,6 +68,8 @@ rejects { CurationPublisher.render(article.merge('tags' => ['invented-tag']), {}
 rejects { CurationPublisher.render(article.merge('en' => article['en'].merge('tldr' => 'x' * 601)), {}, Time.now) }
 rejects { CurationPublisher.render(article.merge('en' => article['en'].merge('takeaway' => 'No bullet prefix on this line.')), {}, Time.now) }
 rejects { CurationPublisher.render(article.merge('en' => article['en'].merge('takeaway' => (1..5).map { |n| "- Group #{n}: too many lines." }.join("\n"))), {}, Time.now) }
+rejects { CurationPublisher.render(article.merge('card_quote' => 'Smart “quotes” break the renderer'), {}, Time.now) }
+rejects { CurationPublisher.render(article.merge('card_topic' => 'A topic label that is much too long for a chip'), {}, Time.now) }
 check(CurationPublisher.credit({ 'publish_credit' => 'true', 'name' => 'private' }).nil?, 'String consent accepted')
 check(!CurationPublisher.body_text('{% include secret %}<script>[click](https://evil.org)').include?('{%'), 'Liquid injection')
 check(!CurationPublisher.body_text('<script>').include?('<script>'), 'HTML injection')
