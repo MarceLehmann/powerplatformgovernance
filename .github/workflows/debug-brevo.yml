@@ -1,0 +1,16 @@
+name: Debug Brevo Key
+on:
+  workflow_dispatch: {}
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check key
+        env:
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+        run: |
+          echo "Length: ${#BREVO_API_KEY}"
+          echo "First 10: ${BREVO_API_KEY:0:10}"
+          echo "Last 10: ${BREVO_API_KEY: -10}"
+          curl -s -o /tmp/resp.json -w "HTTP %{http_code}\n" "https://api.brevo.com/v3/account" -H "api-key: $BREVO_API_KEY"
+          cat /tmp/resp.json
