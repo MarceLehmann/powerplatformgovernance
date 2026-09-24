@@ -62,6 +62,7 @@ layout: default
 {% endif %}
 
 <div id="post-list" class="flex-grow-1 px-xl-1">
+  {% assign posts = posts | where_exp: 'item', "item.lang == nil or item.lang == 'en'" %}
   {% for post in posts %}
     <article class="card-wrapper card">
       <a href="{{ post.url | relative_url }}" class="post-preview row g-0 flex-md-row-reverse">
