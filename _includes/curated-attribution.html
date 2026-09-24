@@ -6,7 +6,6 @@
       {% assign contributor_fallback = 'a community contributor' %}{% if page.lang == 'de' %}{% assign contributor_fallback = 'einem Community-Mitglied' %}{% endif %}
       &middot; {% if page.lang == 'de' %}vorgeschlagen von{% else %}suggested by{% endif %} {% if page.submitted_by.linkedin %}<a class="contributor-credit" href="{{ page.submitted_by.linkedin | escape }}" rel="ugc noopener">{{ page.submitted_by.name | default: contributor_fallback | escape }}</a>{% else %}{{ page.submitted_by.name | default: contributor_fallback | escape }}{% endif %}
     {% endif %}
-    {% if page.translation_url %}&middot; <a href="{{ page.translation_url | relative_url }}" hreflang="{% if page.lang == 'de' %}en{% else %}de{% endif %}">{% if page.lang == 'de' %}English{% else %}Deutsch{% endif %}</a>{% endif %}
   </p>
   <p class="text-muted small">{% if page.lang == 'de' %}Dies ist unsere eigene Kurzfassung, keine Wiederveröffentlichung oder vollständige Übersetzung.{% else %}This is our own summary, not a republication or full translation.{% endif %}{% if page.source_license_url %} {% if page.lang == 'de' %}Der Originalartikel steht unter{% else %}The original article is licensed under{% endif %} <a href="{{ page.source_license_url | escape }}">{{ page.source_license_name | escape }}</a>.{% endif %}{% if page.publisher_disclosure %} {{ page.publisher_disclosure | escape }}{% endif %}</p>
 </div>
