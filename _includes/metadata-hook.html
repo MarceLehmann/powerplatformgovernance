@@ -1,4 +1,39 @@
 {% if page.translation_url %}
   <link rel="alternate" hreflang="{{ page.lang | escape }}" href="{{ page.url | absolute_url }}">
   <link rel="alternate" hreflang="{% if page.lang == 'de' %}en{% else %}de{% endif %}" href="{{ page.translation_url | absolute_url }}">
+  <link rel="alternate" hreflang="x-default" href="{% if page.lang == 'en' %}{{ page.url | absolute_url }}{% else %}{{ page.translation_url | absolute_url }}{% endif %}">
+{% endif %}
+
+{% if page.url == '/' or page.url == '/about/' %}
+<!-- Organization + Person entity schema (GEO: links Marcel Lehmann / Power Platform Governance
+     to the sameAs profiles already emitted by jekyll-seo-tag on the WebSite object). -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://powerplatformgovernance.com/#organization",
+      "name": "Power Platform Governance",
+      "url": "https://powerplatformgovernance.com/",
+      "description": "A curated collection of Microsoft Power Platform governance articles: short, source-credited summaries with a clear governance takeaway and a direct link to the original article.",
+      "sameAs": [
+        "https://kmupower.com",
+        "https://www.powerplatformacademy.online",
+        "https://www.powerplatformtip.com"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://powerplatformgovernance.com/about/#person",
+      "name": "Marcel Lehmann",
+      "url": "https://powerplatformgovernance.com/about/",
+      "jobTitle": "Microsoft MVP",
+      "worksFor": { "@id": "https://powerplatformgovernance.com/#organization" },
+      "sameAs": ["https://www.linkedin.com/in/marcelehmann/"],
+      "knowsAbout": ["Power Platform Governance", "Power Automate", "Copilot Studio", "Dataverse"]
+    }
+  ]
+}
+</script>
 {% endif %}
