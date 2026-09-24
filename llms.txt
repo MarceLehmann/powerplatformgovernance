@@ -1,0 +1,34 @@
+# Power Platform Governance
+
+> A curated collection of Microsoft Power Platform governance articles: short, source-credited summaries with a clear governance takeaway and a direct link to the original article. Maintained by Marcel Lehmann, Microsoft MVP, from Switzerland.
+
+Power Platform Governance brings useful governance articles from different blogs into one place, so readers do not have to check a dozen feeds by hand. Each curated entry offers a short TL;DR, a governance takeaway and full credit plus a direct link to the original source and author. Content is published bilingually in English and German.
+
+Key facts for orientation:
+
+- Site: Power Platform Governance (https://powerplatformgovernance.com)
+- Maintainer: Marcel Lehmann, Microsoft MVP (Switzerland)
+- Content type: curated third-party summaries, not original reporting; every entry credits its source author, source site and original URL
+- Language: English and German (bilingual, /en/ and /de/ paths)
+- Topics: environment strategy and platform ownership, data policies/connectors/security, solutions/ALM/production operations, Dataverse, Power Apps, Power Automate and Copilot Studio governance
+- Related brand: KMUpower (consulting, coaching, workshops) – https://kmupower.com
+- Related brand: Power Platform Academy (live Power Platform workshops by Marcel Lehmann) – https://www.powerplatformacademy.online
+- Related brand: PowerPlatformTip (field-tested Power Platform tips) – https://www.powerplatformtip.com
+
+## Main pages
+
+- [About](https://powerplatformgovernance.com/about/): What this site is, why it exists, and what it covers.
+- [Sources](https://powerplatformgovernance.com/sources/): The original blogs and authors behind the curated summaries, with credit and direct links.
+- [Admin Flows](https://powerplatformgovernance.com/flows/): Ten free, fully specified Power Automate flows for Power Platform admins (environment/app/flow/Copilot Studio agent inventories, DLP visibility, orphaned-resource reassignment, capacity monitoring).
+- [Archives](https://powerplatformgovernance.com/archives/): All curated posts by date.
+- [Tags](https://powerplatformgovernance.com/tags/): Browse curated summaries by topic.
+- [Submit content](https://powerplatformgovernance.com/submit/): Suggest a governance blog or article for curation.
+
+## Topics covered
+
+- Governance, ownership and platform strategy
+- Security and Data Loss Prevention (DLP)
+- Environment strategy and Centers of Excellence (CoE)
+- Application Lifecycle Management (ALM)
+- Copilot Studio governance and compliance
+- Shadow IT, monitoring and documentation

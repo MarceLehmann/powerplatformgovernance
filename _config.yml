@@ -38,9 +38,10 @@ social:
   email:
   fediverse_handle: # fill in your fediverse handle. E.g. "@username@domain.com"
   links:
-    # Uncomment below to add social links
-    # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    - https://www.linkedin.com/in/marcelehmann/
+    - https://kmupower.com
+    - https://www.powerplatformacademy.online
+    - https://www.powerplatformtip.com
 
 # Site Verification Settings
 webmaster_verifications:
