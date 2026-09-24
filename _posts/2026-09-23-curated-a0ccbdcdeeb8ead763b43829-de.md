@@ -29,4 +29,4 @@ Customer Insights – Journeys bündelt aktuell fünf Tracking-Mechanismen — E
 
 ## Bedeutung für Governance
 
-Regulierte Organisationen mit Customer Insights – Journeys sollten jetzt prüfen, welche der fünf gebündelten Tracking-Mechanismen sie wirklich brauchen, bevor eine rechtliche Prüfung eine Alles-oder-nichts-Abschaltung erzwingt — getrennte Schalter gibt es noch nicht.
+Security/Compliance sollte jetzt prüfen, welche der fünf gebündelten Mechanismen — E-Mail-Pixel, Link-Klicks, Web-Tracking, Formular-Vorbefüllung, UTM-Tagging — die Organisation tatsächlich braucht, denn eine rechtliche Prüfung, die nur einen davon beanstandet, schaltet die anderen vier gleich mit ab. Admins/CoE sollten diese Abwägung jetzt dokumentieren, bevor sie zur Notfallentscheidung unter Compliance-Druck wird. Leadership/Business sollte wissen, dass es noch keine getrennten Schalter gibt — ein Einwilligungskonflikt in nur einer Jurisdiktion bedeutet aktuell eine Alles-oder-nichts-Entscheidung für den gesamten Tenant.
