@@ -18,7 +18,9 @@ New to admin automation and not sure where to start? These five give you full vi
 
 ### Starter flow 1: Environment inventory
 
-**Why first:** you can't govern what you don't have a list of. This is the foundation every other flow in this kit — and most of the other 45 — builds on.
+- **What it does:** reads every environment in the tenant daily — type, region, whether it has Dataverse — and writes it into one table you control.
+- **Who needs it:** any admin who has ever answered "how many environments do we actually have?" with a guess.
+- **Why it matters:** every other governance control — DLP, backups, security review — is scoped per environment. If the environment list is incomplete or stale, everything built on top of it inherits that blind spot.
 
 1. **Create table** `cr_environment` with columns: `cr_name` (primary, text), `cr_environmentid` (text), `cr_type` (choice: Production / Sandbox / Trial / Developer / Default), `cr_region` (text), `cr_hasdataverse` (yes/no), `cr_lastsyncedon` (date/time).
 2. **Trigger:** Recurrence — daily, 06:00.
@@ -29,7 +31,9 @@ New to admin automation and not sure where to start? These five give you full vi
 
 ### Starter flow 2: App inventory
 
-**Why second:** the second most common governance gap after environments — apps nobody remembers exist.
+- **What it does:** loops through every environment and lists every canvas app, with its owner and last-modified date.
+- **Who needs it:** CoE teams who need to answer "who owns this app" before that person leaves the company, not after.
+- **Why it matters:** apps outlive the makers who build them. Without a standing inventory, "who owns this" turns into a Teams-channel archaeology exercise every time it comes up — usually at the worst moment.
 
 1. **Create table** `cr_appinventory` with columns: `cr_name` (primary, text), `cr_appid` (text), `cr_owner` (text, UPN), `cr_environmentid` (text), `cr_lastmodifiedon` (date/time).
 2. **Trigger:** Recurrence — daily, following the environment inventory flow.
@@ -39,7 +43,9 @@ New to admin automation and not sure where to start? These five give you full vi
 
 ### Starter flow 3: Cloud flow inventory
 
-**Why third:** same shape as #2, but for flows — and it's what feeds the "orphaned flow" and "flow suspended by DLP" flows later in the full 50.
+- **What it does:** the same pattern as the app inventory, but for cloud flows — captures state, owner and environment for every flow in the tenant.
+- **Who needs it:** whoever gets paged when "a flow just stopped working" and has no way to check whether it was already known about.
+- **Why it matters:** a suspended or stopped flow is invisible unless someone happens to open it. This turns that into a queryable table instead of a mystery — and it's what the "orphaned flow" and "flow suspended by DLP" flows later in the full 50 build on.
 
 1. **Create table** `cr_flowinventory` with columns: `cr_name` (primary, text), `cr_flowid` (text), `cr_state` (choice: Started / Stopped / Suspended), `cr_owner` (text), `cr_environmentid` (text).
 2. **Trigger:** Recurrence — daily.
@@ -49,7 +55,9 @@ New to admin automation and not sure where to start? These five give you full vi
 
 ### Starter flow 4: Copilot Studio agent inventory
 
-**Why fourth:** agents are Dataverse rows (the `bot` table), not admin-API resources, so this one looks different from the previous three — and it's the one most CoE teams don't have yet.
+- **What it does:** pulls every Copilot Studio agent from Dataverse's `bot` table, including its authentication mode, owner and publish date.
+- **Who needs it:** Security/Compliance teams who don't yet have a tenant-wide answer to "which of our agents can be reached without signing in."
+- **Why it matters:** agents are the newest resource type on the platform and the easiest to lose track of — most CoE teams already have solid app and flow inventories, but nothing for Copilot Studio yet. This closes that gap before it becomes the next shadow-IT surface. Note this one looks different from the previous three: agents are Dataverse rows, not admin-API resources.
 
 1. **Create table** `cr_agentinventory` with columns: `cr_name` (primary, text), `cr_botid` (text), `cr_publishedon` (date/time), `cr_authenticationmode` (text), `cr_owner` (text), `cr_environmentid` (text).
 2. **Trigger:** Recurrence — daily.
@@ -59,7 +67,9 @@ New to admin automation and not sure where to start? These five give you full vi
 
 ### Starter flow 5: System Administrator role audit
 
-**Why fifth, and why it's the one security check in the starter kit:** the other four give you visibility. This one gives you a concrete, recurring answer to "who currently has full admin rights, and did we actually approve that?"
+- **What it does:** lists everyone holding the System Administrator role in every environment, monthly, and flags anyone not already reviewed.
+- **Who needs it:** Security/Compliance and whoever owns access reviews — this is the one flow in the kit that's a control, not just visibility.
+- **Why it matters:** System Administrator is full access to everything in an environment. That list only ever grows unless someone actively looks at it, so by the time an audit asks "who has admin and why," you want an answer that already exists instead of a scramble to produce one.
 
 1. **Create table** `cr_adminroleaudit` with columns: `cr_name` (primary, text — e.g. "`<user> – <environment> – <date>`"), `cr_user` (text), `cr_environmentid` (text), `cr_flaggedon` (date/time), `cr_reviewed` (yes/no, default no).
 2. **Trigger:** Recurrence — monthly is enough for this one; it doesn't change as often as the inventories.
