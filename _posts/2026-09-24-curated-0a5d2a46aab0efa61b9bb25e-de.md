@@ -35,4 +35,6 @@ Die Power-Platform-API liefert Copilot-Credit-Kapazität und Ressourcenverbrauch
 
 ## Bedeutung für Governance
 
-PPAC bleibt der erste Berichtspunkt; für eigene Historien kann die API-Datenspeicherung sinnvoll sein. Lesezugriff auf Dataverse begrenzen, Umgebungs-IDs separat auflösen und optionale Metadaten bei Änderungen testen, da GitHub-Copilot-Harness-Daten eingeschränkt sind.
+- Admins/CoE: den geplanten Flow bauen, der tageweise über Fortsetzungstoken abruft, aber zuerst PPAC nutzen und die Daten nur dann in Dataverse persistieren, wenn eigene Historien oder Analysen das wirklich erfordern.
+- Security/Compliance: Lesezugriff auf die gespeicherten Dataverse-Datensätze setzen und die Aufbewahrung nach Richtlinie festlegen, da hier laufend Verbrauchsdaten über bis zu 180 Tage anfallen.
+- Leadership/Business: ein tenantweites Credit-Dashboard ist damit erreichbar, aber mit laufendem Pflegeaufwand einplanen — Umgebungs-IDs müssen separat aufgelöst werden und optionale Antwortfelder können sich ändern, das ist also kein einmaliger Aufbau.

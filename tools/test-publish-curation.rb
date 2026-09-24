@@ -19,8 +19,8 @@ article = {
   'publishable' => true, 'source_url' => 'https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-56-empowering-tools-in-coe/',
   'source_title' => '#PowerPlatformTip 56', 'source_name' => 'PowerPlatformTip', 'source_author' => 'Marcel Lehmann',
   'source_language' => 'en', 'source_published_at' => '2023-05-30', 'tags' => %w[governance ownership],
-  'en' => { 'title' => 'CoE ownership reviews', 'description' => 'CoE tools support ownership reviews.', 'tldr' => 'CoE tools support reviews of permissions and orphaned resources.', 'takeaway' => 'Include resource ownership in offboarding checks.' },
-  'de' => { 'title' => 'CoE: Verantwortlichkeiten prüfen', 'description' => 'CoE-Werkzeuge unterstützen die Prüfung.', 'tldr' => 'CoE-Werkzeuge helfen bei der Prüfung von Berechtigungen und verwaisten Ressourcen.', 'takeaway' => 'Verantwortlichkeiten beim Offboarding prüfen.' },
+  'en' => { 'title' => 'CoE ownership reviews', 'description' => 'CoE tools support ownership reviews.', 'tldr' => 'CoE tools support reviews of permissions and orphaned resources.', 'takeaway' => "- Admins/CoE: include resource ownership in offboarding checks.\n- Security/Compliance: review orphaned resources on a fixed schedule." },
+  'de' => { 'title' => 'CoE: Verantwortlichkeiten prüfen', 'description' => 'CoE-Werkzeuge unterstützen die Prüfung.', 'tldr' => 'CoE-Werkzeuge helfen bei der Prüfung von Berechtigungen und verwaisten Ressourcen.', 'takeaway' => "- Admins/CoE: Ressourcenverantwortung in Offboarding-Checks aufnehmen.\n- Security/Compliance: verwaiste Ressourcen nach festem Plan prüfen." },
 }
 event = { 'action' => 'curated-publication', 'client_payload' => { 'request_id' => '00000000-0000-4000-8000-000000000001', 'articles' => [article], 'credit' => { 'name' => 'PRIVATE TEST NAME', 'publish_credit' => false } } }
 Dir.mktmpdir do |root|
@@ -48,6 +48,7 @@ Dir.mktmpdir do |root|
     check(document.css('.contributor-credit').empty?, 'Unapproved contributor rendered')
     check(document.css('.curated-attribution a[href=""]').empty?, 'Empty author link')
     check(document.at_css('html')['lang'] == locale, 'Incorrect document language')
+    check(document.css('li').length >= 2, 'Takeaway did not render as a bulleted list')
   end
   check(CurationPublisher.publish(event, root).empty?, 'Repeated URL published twice')
   article['source_url'] = article['source_url'].sub('www.', '').sub(%r{/$}, '') + '?utm_source=test'
@@ -59,6 +60,8 @@ rejects { CurationPublisher.url('https://user:password@powerplatformtip.com/') }
 rejects { CurationPublisher.credit({ 'publish_credit' => true, 'linkedin' => 'https://linkedin.com.evil.org/in/person' }) }
 rejects { CurationPublisher.render(article.merge('tags' => ['invented-tag']), {}, Time.now) }
 rejects { CurationPublisher.render(article.merge('en' => article['en'].merge('tldr' => 'x' * 601)), {}, Time.now) }
+rejects { CurationPublisher.render(article.merge('en' => article['en'].merge('takeaway' => 'No bullet prefix on this line.')), {}, Time.now) }
+rejects { CurationPublisher.render(article.merge('en' => article['en'].merge('takeaway' => (1..5).map { |n| "- Group #{n}: too many lines." }.join("\n"))), {}, Time.now) }
 check(CurationPublisher.credit({ 'publish_credit' => 'true', 'name' => 'private' }).nil?, 'String consent accepted')
 check(!CurationPublisher.body_text('{% include secret %}<script>[click](https://evil.org)').include?('{%'), 'Liquid injection')
 check(!CurationPublisher.body_text('<script>').include?('<script>'), 'HTML injection')

@@ -29,4 +29,6 @@ Customer Insights – Journeys bündelt aktuell fünf Tracking-Mechanismen — E
 
 ## Bedeutung für Governance
 
-Security/Compliance sollte jetzt prüfen, welche der fünf gebündelten Mechanismen — E-Mail-Pixel, Link-Klicks, Web-Tracking, Formular-Vorbefüllung, UTM-Tagging — die Organisation tatsächlich braucht, denn eine rechtliche Prüfung, die nur einen davon beanstandet, schaltet die anderen vier gleich mit ab. Admins/CoE sollten diese Abwägung jetzt dokumentieren, bevor sie zur Notfallentscheidung unter Compliance-Druck wird. Leadership/Business sollte wissen, dass es noch keine getrennten Schalter gibt — ein Einwilligungskonflikt in nur einer Jurisdiktion bedeutet aktuell eine Alles-oder-nichts-Entscheidung für den gesamten Tenant.
+- Security/Compliance: jetzt prüfen, welche der fünf gebündelten Mechanismen — E-Mail-Pixel, Link-Klicks, Web-Tracking, Formular-Vorbefüllung, UTM-Tagging — die Organisation tatsächlich braucht, denn eine rechtliche Prüfung, die nur einen davon beanstandet, schaltet die anderen vier gleich mit ab.
+- Admins/CoE: diese Abwägung jetzt dokumentieren, bevor sie zur Notfallentscheidung unter Compliance-Druck wird.
+- Leadership/Business: wissen, dass es noch keine getrennten Schalter gibt — ein Einwilligungskonflikt in nur einer Jurisdiktion bedeutet aktuell eine Alles-oder-nichts-Entscheidung für den gesamten Tenant.

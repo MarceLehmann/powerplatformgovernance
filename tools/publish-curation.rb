@@ -18,6 +18,16 @@ module CurationPublisher
     cleaned
   end
 
+  def self.bulleted_text(value, maximum)
+    raise ArgumentError, 'Expected plain text' unless value.is_a?(String)
+    lines = value.split("\n").map { |line| line.gsub(/\s+/, ' ').strip }.reject(&:empty?)
+    raise ArgumentError, 'Expected 1-4 takeaway lines' unless lines.length.between?(1, 4)
+    raise ArgumentError, 'Invalid takeaway line' unless lines.all? { |line| line.start_with?('- ') && line.length > 2 }
+    cleaned = lines.join("\n")
+    raise ArgumentError, 'Text outside allowed length' if cleaned.length > maximum
+    cleaned
+  end
+
   def self.url(value)
     parsed = URI.parse(text(value, 2048))
     host = parsed.host.to_s.downcase
@@ -101,7 +111,7 @@ module CurationPublisher
       title = text(version['title'], 110)
       description = text(version['description'], 200)
       summary = text(version['tldr'], 600)
-      takeaway = text(version['takeaway'], 900)
+      takeaway = bulleted_text(version['takeaway'], 900)
       alternate = locale == 'en' ? 'de' : 'en'
       frontmatter = {
         'title' => title, 'description' => description, 'date' => now.utc.iso8601,

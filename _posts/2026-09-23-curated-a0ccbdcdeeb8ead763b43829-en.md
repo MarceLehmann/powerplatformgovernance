@@ -29,4 +29,6 @@ Customer Insights – Journeys currently bundles five tracking mechanisms — em
 
 ## Governance takeaway
 
-Security/Compliance should audit today which of the five bundled mechanisms — email pixels, link clicks, web tracking, form prefill, UTM tagging — the organization actually relies on, since a legal review flagging just one forces the other four off with it. Admins/CoE should document that trade-off now, before it turns into an emergency decision made under a compliance deadline. Leadership/Business should know no separate switches exist yet, so a consent-rule conflict in a single jurisdiction currently means an all-or-nothing call for the whole tenant.
+- Security/Compliance: audit today which of the five bundled mechanisms — email pixels, link clicks, web tracking, form prefill, UTM tagging — the organization actually relies on, since a legal review flagging just one forces the other four off with it.
+- Admins/CoE: document that trade-off now, before it turns into an emergency decision made under a compliance deadline.
+- Leadership/Business: know no separate switches exist yet, so a consent-rule conflict in a single jurisdiction currently means an all-or-nothing call for the whole tenant.

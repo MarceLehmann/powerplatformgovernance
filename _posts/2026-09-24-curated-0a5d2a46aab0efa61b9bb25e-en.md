@@ -35,4 +35,6 @@ The Power Platform API exposes Copilot Credit entitlement and per-resource consu
 
 ## Governance takeaway
 
-Use PPAC first, then persist API data when custom history or analysis is required. Apply read-only Dataverse access, retain records under policy, resolve environment IDs separately, and test optional metadata because response fields may change.
+- Admins/CoE: build the scheduled flow to retrieve one day at a time via continuation tokens, but reach for PPAC first and persist this into Dataverse only when custom history or analysis genuinely requires it.
+- Security/Compliance: apply read-only access to the stored Dataverse records and set retention under policy, since this is ongoing consumption data accumulating for up to 180 days at a stretch.
+- Leadership/Business: a tenant-wide credit dashboard is achievable here, but budget for upkeep — environment IDs need separate resolution and optional response fields may change, so this isn't a one-time build.
