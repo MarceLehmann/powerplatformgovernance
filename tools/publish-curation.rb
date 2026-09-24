@@ -163,7 +163,12 @@ module CurationPublisher
     pending = []
     pending_cards = []
     articles.each do |article|
-      result = render(article, payload.fetch('credit', {}), now)
+      begin
+        result = render(article, payload.fetch('credit', {}), now)
+      rescue ArgumentError => e
+        warn "Skipped one article in the batch, rest continue: #{e.message} (#{article['source_url'].inspect})"
+        next
+      end
       identity = key(article['source_url'])
       next if existing.include?(identity)
       pending.concat(result['files'])

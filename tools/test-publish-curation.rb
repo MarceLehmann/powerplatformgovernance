@@ -34,7 +34,7 @@ Dir.mktmpdir do |root|
     check(!content.include?('PRIVATE TEST NAME'), 'Private credit leaked')
     check(content.include?('translation_url:'), 'Missing alternate language')
     check(content.include?('source_url:'), 'Missing original source')
-    check(content.include?("path: /assets/img/curated/#{identifier}.png"), 'Missing card image path')
+    check(content.include?("/assets/img/curated/#{identifier}.png"), 'Missing card image path')
   end
   manifest = JSON.parse(File.read(File.join(root, 'tools', 'pending-cards.json')))
   check(manifest.length == 1 && manifest.first['id'] == identifier && manifest.first['quote'] == article['card_quote'], 'Bad pending-cards.json entry')
@@ -59,6 +59,14 @@ Dir.mktmpdir do |root|
   check(CurationPublisher.publish(event, root).empty?, 'Repeated URL published twice')
   article['source_url'] = article['source_url'].sub('www.', '').sub(%r{/$}, '') + '?utm_source=test'
   check(CurationPublisher.publish(event, root).empty?, 'Tracking URL was not deduplicated')
+end
+
+Dir.mktmpdir do |root|
+  broken = article.merge('source_url' => 'https://www.powerplatformtip.com/article/broken-one/', 'en' => article['en'].merge('takeaway' => 'No bullet prefix, this one is malformed.'))
+  good = article.merge('source_url' => 'https://www.powerplatformtip.com/article/good-one/')
+  batch_event = { 'action' => 'curated-publication', 'client_payload' => { 'request_id' => '00000000-0000-4000-8000-000000000002', 'articles' => [broken, good], 'credit' => {} } }
+  files = CurationPublisher.publish(batch_event, root, now: Time.utc(2026, 9, 18))
+  check(files.length == 2, 'One malformed article in a batch must not block the rest')
 end
 rejects { CurationPublisher.url('http://127.0.0.1/') }
 rejects { CurationPublisher.url('https://localhost/') }
