@@ -49,6 +49,8 @@ test('flow is sequential, approval-filtered, uses Foundry and confirms GitHub re
       if (action.type === 'Foreach') assert.equal(action.runtimeConfiguration.concurrency.repetitions, 1);
       if (action.actions) visit(action.actions);
       if (action.else) visit(action.else.actions);
+      if (action.cases) for (const c of Object.values(action.cases)) visit(c.actions);
+      if (action.default) visit(action.default.actions);
     }
   }
   visit(flow.actions);
@@ -98,11 +100,19 @@ test('pending submissions are autonomously approved or rejected by the AI Foundr
       actions.set(name, action);
       if (action.actions) visit(action.actions);
       if (action.else) visit(action.else.actions);
+      if (action.cases) for (const c of Object.values(action.cases)) visit(c.actions);
+      if (action.default) visit(action.default.actions);
     }
   }
   visit(flow.actions);
-  assert.equal(actions.get('Is_pending_approval').expression, `@equals(items('For_each_source')?['new_approval'], ${approval.pending})`);
-  assert.ok(actions.get('Is_pending_approval').actions.Pending_URL, 'pending branch must exist for pending-approval records');
+  const router = actions.get('Is_waiting_for_GitHub');
+  assert.equal(router.type, 'Switch');
+  assert.match(router.expression, /new_processing'\], 100000004/);
+  assert.match(router.expression, /new_approval'\], 100000000/);
+  assert.equal(router.cases.Waiting_for_GitHub.case, 'queued');
+  assert.equal(router.cases.Pending_approval.case, 'pending');
+  assert.ok(router.cases.Pending_approval.actions.Pending_URL, 'pending branch must exist for pending-approval records');
+  assert.ok(router.default.actions.Reset_candidates, 'ready branch (default case) must still run the normal pipeline');
   assert.equal(actions.get('Foundry_gate').inputs.host.operationId, 'ChatCompletion');
   assert.equal(actions.get('Foundry_gate').inputs.parameters.body.messages[0].content.includes('AUTOMATICALLY approved'), true);
   assert.deepEqual(actions.get('Parse_gate').inputs.schema.required, ['meets_criteria', 'reason']);

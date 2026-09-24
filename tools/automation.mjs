@@ -237,9 +237,16 @@ export function flowDefinition() {
       List_sources: { ...connector('dataverse', 'ListRecords', { entityName: config.entitySet, $filter: `(${eligibleFilter}) or new_processing eq ${processing.queued} or new_approval eq ${approval.pending}`, $orderby: 'createdon asc' }, 'Initialize_arrays'), runtimeConfiguration: { paginationPolicy: { minimumItemCount: 5000 } } },
       For_each_source: { type: 'Foreach', foreach: "@body('List_sources')?['value']", runAfter: after('List_sources'), runtimeConfiguration: { concurrency: { repetitions: 1 } }, actions: {
         Try_source: { type: 'Scope', runAfter: {}, actions: {
-          Is_waiting_for_GitHub: condition(`@equals(items('For_each_source')?['new_processing'], ${processing.queued})`, queuedActions, {
-            Is_pending_approval: condition(`@equals(items('For_each_source')?['new_approval'], ${approval.pending})`, pendingActions, readyActions),
-          }),
+          Is_waiting_for_GitHub: {
+            type: 'Switch',
+            expression: `@if(equals(items('For_each_source')?['new_processing'], ${processing.queued}), 'queued', if(equals(items('For_each_source')?['new_approval'], ${approval.pending}), 'pending', 'ready'))`,
+            runAfter: {},
+            cases: {
+              Waiting_for_GitHub: { case: 'queued', actions: queuedActions },
+              Pending_approval: { case: 'pending', actions: pendingActions },
+            },
+            default: { actions: readyActions },
+          },
         } },
         Catch_source: { type: 'Scope', runAfter: { Try_source: ['Failed', 'TimedOut'] }, actions: {
           Processing_not_queued: condition(`@not(equals(items('For_each_source')?['new_processing'], ${processing.queued}))`, {
