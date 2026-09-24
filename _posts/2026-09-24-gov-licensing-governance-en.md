@@ -2,7 +2,7 @@
 title: "Expensive Isn't Building. Expensive Is Not Knowing."
 description: "Why Microsoft 365-included rights don't cover as much as people assume, how pay-as-you-go trades procurement friction for a live Azure bill, and why the licensing model itself is a moving target worth reviewing yearly."
 date: "2026-09-24T08:50:00Z"
-author: governance_editorial
+author: marcel_lehmann
 lang: en
 toc: true
 tags:

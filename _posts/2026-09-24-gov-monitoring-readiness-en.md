@@ -2,7 +2,7 @@
 title: "Monitoring That Nobody Reads Is Just Decoration"
 description: "Why a working alert and a heard alert are two different things, why stopping a bad flow needs to be a rehearsed five-minute action instead of an improvised one, and why audit logging has to be switched on before the incident it's meant to explain."
 date: "2026-09-24T09:10:00Z"
-author: governance_editorial
+author: marcel_lehmann
 lang: en
 toc: true
 tags:

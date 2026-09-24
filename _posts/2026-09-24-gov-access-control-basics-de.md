@@ -2,7 +2,7 @@
 title: "Drei Zugriffsgewohnheiten, die still alles andere untergraben"
 description: "Sicherheitsrollen nach dem Prinzip der geringsten Rechte, Freigabe an Gruppen statt an Einzelpersonen, und jeden offenen HTTP-Endpunkt als bewusste Entscheidung behandeln."
 date: "2026-09-24T08:25:01Z"
-author: governance_editorial
+author: marcel_lehmann
 lang: de
 toc: true
 tags:

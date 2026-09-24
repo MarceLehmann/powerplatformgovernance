@@ -2,7 +2,7 @@
 title: "Ein Agent kann jeden Test bestehen und trotzdem falsch antworten"
 description: "Warum Agent-Evaluation Korrektheit beweist, nicht Sicherheit, warum Grounding auf berechtigungsbeschränkte Daten die eigentliche Abhilfe gegen selbstsicher-falsche Antworten ist, und warum das, was ein Agent behält, eine eigene Governance-Entscheidung ist."
 date: "2026-09-24T08:55:01Z"
-author: governance_editorial
+author: marcel_lehmann
 lang: de
 toc: true
 tags:

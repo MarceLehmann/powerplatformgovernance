@@ -2,7 +2,7 @@
 title: "Two Names Per Solution, Always: Ownership That Survives Offboarding"
 description: "Why Microsoft ships PowerShell cmdlets specifically for orphaned flows, and why offboarding automation only works when it's triggered by the same event HR already generates."
 date: "2026-09-24T08:45:00Z"
-author: governance_editorial
+author: marcel_lehmann
 lang: en
 toc: true
 tags:

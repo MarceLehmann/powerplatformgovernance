@@ -2,7 +2,7 @@
 title: "Dein Daten-Gateway ist ein Single Point of Failure — bis du es clusterst"
 description: "Wie ein einzelnes On-Premises-Datengateway zu einem hochverfügbaren Cluster wird, wer es besitzen sollte und welche Einstellungen den Failover wirklich funktionieren lassen."
 date: "2026-09-24T08:00:01Z"
-author: governance_editorial
+author: marcel_lehmann
 lang: de
 toc: true
 tags:

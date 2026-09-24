@@ -2,7 +2,7 @@
 title: "Der Governance-Bericht, den ihr nicht selbst bauen müsst"
 description: "Der eingebaute Wochendigest beantwortet bereits das meiste, was ein CoE-Dashboard-Projekt bauen soll: Nutzung, inaktive Ressourcen und die meistgenutzten Apps, Flows und Maker. Ihn zu aktivieren ist ein Häkchen, kein Projekt."
 date: "2026-09-24T08:40:01Z"
-author: governance_editorial
+author: marcel_lehmann
 lang: de
 toc: true
 tags:

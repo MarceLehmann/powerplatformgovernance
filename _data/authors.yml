@@ -2,3 +2,8 @@ governance_editorial:
   name: Power Platform Governance
   type: Organization
   url: https://powerplatformgovernance.com/about/
+
+marcel_lehmann:
+  name: Marcel Lehmann
+  type: Person
+  url: https://powerplatformgovernance.com/about/

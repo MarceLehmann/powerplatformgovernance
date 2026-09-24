@@ -2,7 +2,7 @@
 title: "Three Access-Control Habits That Quietly Undo Everything Else"
 description: "Least-privilege security roles, sharing with groups instead of individuals, and treating every open HTTP endpoint as a decision someone has to actually make."
 date: "2026-09-24T08:25:00Z"
-author: governance_editorial
+author: marcel_lehmann
 lang: en
 toc: true
 tags:

@@ -2,7 +2,7 @@
 title: "Shadow IT Isn't a Discipline Problem, It's a Latency Problem"
 description: "Why demand for a tool doesn't disappear when IT says no, why the business/IT split itself manufactures workarounds, and why a slow yes creates exactly as much shadow IT as a silent no."
 date: "2026-09-24T09:00:00Z"
-author: governance_editorial
+author: marcel_lehmann
 lang: en
 toc: true
 tags:

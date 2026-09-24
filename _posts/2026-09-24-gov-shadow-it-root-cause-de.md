@@ -2,7 +2,7 @@
 title: "Schatten-IT ist kein Disziplinproblem, sondern ein Latenzproblem"
 description: "Warum Nachfrage nach einem Tool nicht verschwindet, wenn IT nein sagt, warum die Trennung zwischen Business und IT selbst Workarounds erzeugt, und warum ein langsames Ja genauso viel Schatten-IT schafft wie ein stilles Nein."
 date: "2026-09-24T09:00:01Z"
-author: governance_editorial
+author: marcel_lehmann
 lang: de
 toc: true
 tags:

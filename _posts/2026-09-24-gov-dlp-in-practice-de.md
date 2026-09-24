@@ -2,7 +2,7 @@
 title: "DLP ist eine Leitplanke, keine Mauer: Die Mechanik, die wirklich zählt"
 description: "Warum die Standardgruppe für Connectors wichtiger ist als sie aussieht, wie Aktions- und Endpunktkontrolle über Blockieren/Erlauben hinausgehen, und warum Tenant-Isolation eine separate Kontrolle ist, die DLP nicht abdeckt."
 date: "2026-09-24T08:30:01Z"
-author: governance_editorial
+author: marcel_lehmann
 lang: de
 toc: true
 tags:

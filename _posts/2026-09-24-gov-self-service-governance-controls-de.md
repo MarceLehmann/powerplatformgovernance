@@ -2,7 +2,7 @@
 title: "Drei Self-Service-Kontrollen, die die meisten Tenants nie aktivieren"
 description: "Impulskäufe von Lizenzen pro Produkt blockieren, eine Problem-App unter Quarantäne stellen ohne sie zu löschen, und neue Maker mit den eigenen Regeln statt Microsofts Standardhilfe begrüssen."
 date: "2026-09-24T08:15:01Z"
-author: governance_editorial
+author: marcel_lehmann
 lang: de
 toc: true
 tags:

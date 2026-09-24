@@ -2,7 +2,7 @@
 title: "The Only Manual That Ever Existed Walked Home at 5 PM"
 description: "Why a solution's name, its data location, and one paragraph of description are the three things that make it survivable after its maker leaves, and why none of them cost more than a few minutes to get right at build time."
 date: "2026-09-24T09:05:00Z"
-author: governance_editorial
+author: marcel_lehmann
 lang: en
 toc: true
 tags:

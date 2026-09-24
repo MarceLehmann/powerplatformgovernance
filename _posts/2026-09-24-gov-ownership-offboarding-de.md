@@ -2,7 +2,7 @@
 title: "Zwei Namen pro Lösung, immer: Besitz, der Offboarding übersteht"
 description: "Warum Microsoft eigene PowerShell-Cmdlets speziell für verwaiste Flows pflegt, und warum Offboarding-Automatisierung nur funktioniert, wenn sie vom selben Ereignis ausgelöst wird, das HR ohnehin schon erzeugt."
 date: "2026-09-24T08:45:01Z"
-author: governance_editorial
+author: marcel_lehmann
 lang: de
 toc: true
 tags:

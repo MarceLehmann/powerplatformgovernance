@@ -2,7 +2,7 @@
 title: "Three Self-Service Controls Most Tenants Never Turn On"
 description: "Blocking impulse license purchases per product, quarantining a problem app without deleting it, and greeting new makers with your actual rules instead of Microsoft's defaults."
 date: "2026-09-24T08:15:00Z"
-author: governance_editorial
+author: marcel_lehmann
 lang: en
 toc: true
 tags:

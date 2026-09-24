@@ -2,7 +2,7 @@
 title: "Einmal konfigurieren, viele regieren: Die Umgebungsfunktionen, die schon bezahlt sind"
 description: "Environment Routing, Environment Groups und das siebentägige Wiederherstellungsfenster — drei Managed-Environments-Funktionen, die laufende Handarbeit durch eine einmalige Konfiguration ersetzen."
 date: "2026-09-24T08:20:01Z"
-author: governance_editorial
+author: marcel_lehmann
 lang: de
 toc: true
 tags:

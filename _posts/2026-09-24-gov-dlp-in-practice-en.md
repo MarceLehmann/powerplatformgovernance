@@ -2,7 +2,7 @@
 title: "DLP Is a Guardrail, Not a Wall: The Mechanics That Actually Matter"
 description: "Why the default connector group matters more than it looks, how action-level and endpoint-level control go beyond block/allow, and why cross-tenant isolation is a separate control DLP doesn't cover."
 date: "2026-09-24T08:30:00Z"
-author: governance_editorial
+author: marcel_lehmann
 lang: en
 toc: true
 tags:

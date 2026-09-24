@@ -2,7 +2,7 @@
 title: "Monitoring, das niemand liest, ist nur Dekoration"
 description: "Warum ein funktionierender Alert und ein gehörter Alert zwei verschiedene Dinge sind, warum das Stoppen eines fehlerhaften Flows eine geübte Fünf-Minuten-Aktion sein muss statt einer improvisierten, und warum Audit-Logging eingeschaltet sein muss, bevor der Vorfall passiert, den es erklären soll."
 date: "2026-09-24T09:10:01Z"
-author: governance_editorial
+author: marcel_lehmann
 lang: de
 toc: true
 tags:

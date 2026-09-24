@@ -2,7 +2,7 @@
 title: "Qualitätstore statt Qualitätshoffnung: Solution Checker beim Import erzwingen"
 description: "Wie Managed Environments kritische Solution-Probleme beim Import blockieren oder nur warnen können, das PowerShell-Kommando dafür über mehrere Umgebungen hinweg, und wo man Ausnahmen setzt."
 date: "2026-09-24T08:05:01Z"
-author: governance_editorial
+author: marcel_lehmann
 lang: de
 toc: true
 tags:

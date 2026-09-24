@@ -2,7 +2,7 @@
 title: "The Governance Report You Don't Have to Build Yourself"
 description: "The built-in weekly digest already answers most of what a CoE dashboard project sets out to build: usage, inactive resources, and top apps, flows and makers. Turning it on is a checkbox, not a project."
 date: "2026-09-24T08:40:00Z"
-author: governance_editorial
+author: marcel_lehmann
 lang: en
 toc: true
 tags:

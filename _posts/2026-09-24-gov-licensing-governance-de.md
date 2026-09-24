@@ -2,7 +2,7 @@
 title: "Teuer ist nicht das Bauen. Teuer ist, es nicht zu wissen."
 description: "Warum Microsoft-365-Nutzungsrechte weniger abdecken, als der Name vermuten lässt, wie Pay-as-you-go Beschaffungsaufwand gegen eine laufende Azure-Rechnung eintauscht, und warum das Lizenzmodell selbst ein bewegliches Ziel ist, das sich jährlich zu prüfen lohnt."
 date: "2026-09-24T08:50:01Z"
-author: governance_editorial
+author: marcel_lehmann
 lang: de
 toc: true
 tags:

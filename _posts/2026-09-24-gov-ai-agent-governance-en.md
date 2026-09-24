@@ -2,7 +2,7 @@
 title: "An Agent Can Pass Every Test and Still Give a Bad Answer"
 description: "Why agent evaluation proves correctness, not safety, why grounding in permission-scoped data is the actual mitigation for confident-but-wrong output, and why what an agent retains is its own governance decision."
 date: "2026-09-24T08:55:00Z"
-author: governance_editorial
+author: marcel_lehmann
 lang: en
 toc: true
 tags:

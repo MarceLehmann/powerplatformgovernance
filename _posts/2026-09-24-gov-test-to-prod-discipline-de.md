@@ -2,7 +2,7 @@
 title: "Wer nicht zurückrollen kann, deployt nicht — er würfelt"
 description: "Warum jede Nicht-Entwicklungsumgebung nur verwaltete Lösungen sehen sollte, wer Produktiv-Flows besitzen sollte, und wie Verbindungsreferenzen und Umgebungsvariablen nicht mehr bei jedem Deployment von Hand eingegeben werden müssen."
 date: "2026-09-24T08:35:01Z"
-author: governance_editorial
+author: marcel_lehmann
 lang: de
 toc: true
 tags:

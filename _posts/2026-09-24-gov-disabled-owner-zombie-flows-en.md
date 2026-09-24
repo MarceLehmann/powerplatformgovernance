@@ -2,7 +2,7 @@
 title: "A Disabled Owner Does Not Disable the Flow"
 description: "Why a flow keeps existing after its owner leaves the company, what actually breaks first, and why Microsoft recommends service principal ownership for anything critical."
 date: "2026-09-24T08:10:00Z"
-author: governance_editorial
+author: marcel_lehmann
 lang: en
 toc: true
 tags:

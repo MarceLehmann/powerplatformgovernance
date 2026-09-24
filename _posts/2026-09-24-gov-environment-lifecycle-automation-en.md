@@ -2,7 +2,7 @@
 title: "Configure Once, Govern Many: The Environment Features You're Already Paying For"
 description: "Environment routing, environment groups, and the seven-day recovery window — three Managed Environments features that replace manual per-environment work with a setting configured once."
 date: "2026-09-24T08:20:00Z"
-author: governance_editorial
+author: marcel_lehmann
 lang: en
 toc: true
 tags:

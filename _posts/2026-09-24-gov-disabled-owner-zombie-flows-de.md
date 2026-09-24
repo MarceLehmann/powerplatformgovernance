@@ -2,7 +2,7 @@
 title: "Ein deaktivierter Besitzer deaktiviert nicht den Flow"
 description: "Warum ein Flow nach dem Weggang seines Besitzers weiterexistiert, was tatsächlich zuerst kaputtgeht, und warum Microsoft für alles Kritische Dienstkonto-Besitz empfiehlt."
 date: "2026-09-24T08:10:01Z"
-author: governance_editorial
+author: marcel_lehmann
 lang: de
 toc: true
 tags:

@@ -2,7 +2,7 @@
 title: "If You Can't Roll Back, You're Not Deploying — You're Gambling"
 description: "Why every non-development environment should only ever see managed solutions, who should own production flows, and how to stop connection references and environment variables from requiring manual re-entry on every deployment."
 date: "2026-09-24T08:35:00Z"
-author: governance_editorial
+author: marcel_lehmann
 lang: en
 toc: true
 tags:

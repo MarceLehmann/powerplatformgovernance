@@ -2,7 +2,7 @@
 title: "Quality Gates Beat Quality Hopes: Enforcing Solution Checker on Import"
 description: "How Managed Environments can block or warn on critical solution issues at import time, the PowerShell to turn it on across environments, and where to set exclusions."
 date: "2026-09-24T08:05:00Z"
-author: governance_editorial
+author: marcel_lehmann
 lang: en
 toc: true
 tags:

@@ -2,7 +2,7 @@
 title: "Das einzige Handbuch, das je existierte, ging um 17 Uhr nach Hause"
 description: "Warum Name, Datenstandort und ein Absatz Beschreibung einer Lösung darüber entscheiden, ob sie den Weggang ihres Makers übersteht, und warum keines davon mehr als ein paar Minuten kostet, wenn man es beim Bauen richtig macht."
 date: "2026-09-24T09:05:01Z"
-author: governance_editorial
+author: marcel_lehmann
 lang: de
 toc: true
 tags:

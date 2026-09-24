@@ -2,7 +2,7 @@
 title: "Your Data Gateway Is a Single Point of Failure Until You Cluster It"
 description: "How to move a lone on-premises data gateway into a high-availability cluster, who should own it, and the settings that keep failover actually working."
 date: "2026-09-24T08:00:00Z"
-author: governance_editorial
+author: marcel_lehmann
 lang: en
 toc: true
 tags:
