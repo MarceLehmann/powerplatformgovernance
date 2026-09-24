@@ -49,7 +49,7 @@ Dir.mktmpdir do |root|
     rendered = Dir.glob(File.join(root, '_site', locale, 'posts', '*', 'index.html')).first
     check(!rendered.nil?, "Missing rendered #{locale} page")
     document = Nokogiri::HTML5(File.read(rendered))
-    check(document.css('head link[rel="alternate"][hreflang]').map { |link| link['hreflang'] }.sort == %w[de en], 'Missing reciprocal hreflang')
+    check(document.css('head link[rel="alternate"][hreflang]').map { |link| link['hreflang'] }.sort == %w[de en x-default], 'Missing reciprocal hreflang')
     check(document.at_css('a.original-link')['href'] == article['source_url'], 'Original link changed')
     check(document.css('.contributor-credit').empty?, 'Unapproved contributor rendered')
     check(document.css('.curated-attribution a[href=""]').empty?, 'Empty author link')
