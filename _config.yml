@@ -155,7 +155,12 @@ pwa:
     deny_paths:
       # - "/example"  # URLs match `<SITE_URL>/example/*` will not be cached by the PWA
 
-paginate: 10
+# jekyll-paginate counts *all* posts (both languages) toward each page, so with
+# DE/EN pairs sharing the _posts collection, a per-language-filtered homepage
+# can't line up with paginator.total_pages without a custom generator. Set high
+# enough that the homepage stays a single page for the foreseeable archive size;
+# revisit with a real per-language collection split if the archive outgrows this.
+paginate: 300
 
 # The base URL of your site
 baseurl: ""
