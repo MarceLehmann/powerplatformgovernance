@@ -13,17 +13,23 @@
 
   {%- comment -%}
     jekyll-seo-tag emits its own JSON-LD alongside the meta/OG/Twitter tags above,
-    and on this site it gets "name" wrong on the homepage (renders the site
-    author's name instead of the site title). The correct, @id-linked entity
-    graph (Organization/Person) is built by hand in metadata-hook.html. Strip
-    jekyll-seo-tag's own <script type="application/ld+json"> block here so the
-    two don't conflict; the meta/OG/Twitter tags are kept as-is. Same pattern
-    already used on powerplatformtip.com for the same underlying bug.
+    and on the homepage specifically it gets "name" wrong (renders the site
+    author's name instead of the site title). The correct, @id-linked
+    Organization/Person graph for / and /about/ is built by hand in
+    metadata-hook.html, so only strip jekyll-seo-tag's own
+    <script type="application/ld+json"> block on those two pages - every other
+    page (posts, /submit/, /tags/, /archives/, /sources/, ...) still needs
+    jekyll-seo-tag's own structured data, tools/check-site.rb requires at least
+    one JSON-LD block per page and we don't have a hand-built replacement for
+    those yet. Same stripping pattern already used unconditionally on
+    powerplatformtip.com, which does have full per-page replacements there.
   {%- endcomment -%}
-  {%- assign seo_ld_split = seo_tags | split: '<script type="application/ld+json">' -%}
-  {%- if seo_ld_split.size > 1 -%}
-    {%- assign seo_ld_tail = seo_ld_split[1] | split: '</script>' -%}
-    {%- assign seo_tags = seo_ld_split[0] | append: seo_ld_tail[1] -%}
+  {%- if page.url == '/' or page.url == '/about/' -%}
+    {%- assign seo_ld_split = seo_tags | split: '<script type="application/ld+json">' -%}
+    {%- if seo_ld_split.size > 1 -%}
+      {%- assign seo_ld_tail = seo_ld_split[1] | split: '</script>' -%}
+      {%- assign seo_tags = seo_ld_split[0] | append: seo_ld_tail[1] -%}
+    {%- endif -%}
   {%- endif -%}
 
   <!-- Setup Open Graph image -->
