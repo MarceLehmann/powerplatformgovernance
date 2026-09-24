@@ -22,7 +22,7 @@ LIST_ID = 22
 SENDER_NAME = "Marcel Lehmann (Power Platform Governance)"
 # Verified Brevo sender - update once a dedicated governance@powerplatformgovernance.com
 # address has been verified in Brevo (Senders & IPs -> add a sender -> confirm via email).
-SENDER_EMAIL = "marcel.lehmann@powerplatformacademy.online"
+SENDER_EMAIL = "news@powerplatformtip.com"
 
 FRONTMATTER_RE = re.compile(r"^---\n(.*?)\n---\n(.*)$", re.DOTALL)
 TLDR_RE = re.compile(r"##\s*TL;DR\s*\n+(.*?)(?=\n##|\n\{%|\Z)", re.DOTALL)
