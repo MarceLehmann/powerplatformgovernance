@@ -10,6 +10,67 @@ description: "50 ready-to-adapt Power Automate flow patterns for Power Platform 
 
 Fifty flow ideas built specifically for **Power Platform admins**, with a focus on governance, Copilot Studio and AI. Each one shows a `GET` call to read the current state and a `PATCH`/`POST`/`DELETE` call to change or create something. These are patterns to adapt, not copy-paste production code — test every one in a sandbox first, and validate preview or undocumented endpoints against current Microsoft documentation before relying on them.
 
+## Starter Kit: your first 5 flows
+
+New to admin automation and not sure where to start? These five give you full visibility across the platform plus one concrete security check — build them in this order and you already know more about your tenant than most CoE teams do after a year. Unlike the quick reference below, each one here is spelled out completely: the Dataverse table to create, every action in the flow, and the JSON schema to parse.
+
+**Before you start:** create one solution to hold everything (e.g. "Admin Starter Kit"), and inside it the five tables below. Each flow uses the **Recurrence** trigger (daily, early morning) and the **Power Platform for Admins V2** / **Power Apps for Admins** connectors where available, falling back to a raw HTTP action with Azure AD OAuth for anything those connectors don't cover.
+
+### Starter flow 1: Environment inventory
+
+**Why first:** you can't govern what you don't have a list of. This is the foundation every other flow in this kit — and most of the other 45 — builds on.
+
+1. **Create table** `cr_environment` with columns: `cr_name` (primary, text), `cr_environmentid` (text), `cr_type` (choice: Production / Sandbox / Trial / Developer / Default), `cr_region` (text), `cr_hasdataverse` (yes/no), `cr_lastsyncedon` (date/time).
+2. **Trigger:** Recurrence — daily, 06:00.
+3. **HTTP action** — `GET {bap}/environments?api-version=2021-04-01&$expand=properties.capacity` (Azure AD OAuth, audience `https://service.powerapps.com/`).
+4. **Parse JSON** the response body with a schema built from a sample response (use "Generate from sample" in the flow designer and paste one real environment object).
+5. **Apply to each** `value` in the parsed array → **Add a new row** (or **Update a row** if `cr_environmentid` already exists — check first with **List rows**, filter `cr_environmentid eq '<id>'`) in `cr_environment`, mapping `properties.displayName`, `name` (the environment ID), `properties.environmentSku`, `properties.location`, and whether `properties.linkedEnvironmentMetadata` is present.
+6. **Error handling:** set the Apply-to-each's concurrency to sequential while testing, add a **Scope** around steps 3–5 with a parallel **Configure run after** branch on "has failed" that posts to a Teams channel with the error.
+
+### Starter flow 2: App inventory
+
+**Why second:** the second most common governance gap after environments — apps nobody remembers exist.
+
+1. **Create table** `cr_appinventory` with columns: `cr_name` (primary, text), `cr_appid` (text), `cr_owner` (text, UPN), `cr_environmentid` (text), `cr_lastmodifiedon` (date/time).
+2. **Trigger:** Recurrence — daily, following the environment inventory flow.
+3. **Apply to each** environment from `cr_environment` (List rows) → inside it, **HTTP**: `GET {pa}/apps?api-version=2016-11-01` (replace `{env}` with the current row's `cr_environmentid`).
+4. **Parse JSON**, then **Apply to each** app → upsert into `cr_appinventory`, mapping `properties.displayName`, `name`, `properties.owner.email`, and `properties.lastModifiedTime`.
+5. **Note:** this is a nested loop (environments → apps per environment) — watch the connector's throttling limits on large tenants and consider a **Delay** action between environment iterations.
+
+### Starter flow 3: Cloud flow inventory
+
+**Why third:** same shape as #2, but for flows — and it's what feeds the "orphaned flow" and "flow suspended by DLP" flows later in the full 50.
+
+1. **Create table** `cr_flowinventory` with columns: `cr_name` (primary, text), `cr_flowid` (text), `cr_state` (choice: Started / Stopped / Suspended), `cr_owner` (text), `cr_environmentid` (text).
+2. **Trigger:** Recurrence — daily.
+3. **Apply to each** environment → **HTTP**: `GET {flow}/v2/flows?api-version=2016-11-01`.
+4. **Parse JSON**, **Apply to each** flow → upsert into `cr_flowinventory`, mapping `properties.displayName`, `name`, `properties.state`, and the owner from `properties.creator.userId` (resolve to a UPN via a Microsoft Entra "Get user" action if you want a readable name instead of a GUID).
+5. **Flag for follow-up:** add a condition — if `properties.state` equals `Suspended`, also write a row into a simple `cr_flowreview` table (or just send a Teams notification) so suspended flows don't silently disappear into the inventory unnoticed.
+
+### Starter flow 4: Copilot Studio agent inventory
+
+**Why fourth:** agents are Dataverse rows (the `bot` table), not admin-API resources, so this one looks different from the previous three — and it's the one most CoE teams don't have yet.
+
+1. **Create table** `cr_agentinventory` with columns: `cr_name` (primary, text), `cr_botid` (text), `cr_publishedon` (date/time), `cr_authenticationmode` (text), `cr_owner` (text), `cr_environmentid` (text).
+2. **Trigger:** Recurrence — daily.
+3. **Apply to each** environment → **HTTP** (Dataverse Web API, OAuth audience is the environment's own URL): `GET {dv}/bots?$select=name,schemaname,publishedon,authenticationmode,_ownerid_value`.
+4. **Parse JSON**, **Apply to each** agent → upsert into `cr_agentinventory`.
+5. **The one check worth adding immediately:** a condition on `authenticationmode` — flag (Teams message or a review row) any agent whose value indicates no Entra ID authentication is configured. Verify the exact option-set value in your own environment first; it varies by Copilot Studio version.
+
+### Starter flow 5: System Administrator role audit
+
+**Why fifth, and why it's the one security check in the starter kit:** the other four give you visibility. This one gives you a concrete, recurring answer to "who currently has full admin rights, and did we actually approve that?"
+
+1. **Create table** `cr_adminroleaudit` with columns: `cr_name` (primary, text — e.g. "`<user> – <environment> – <date>`"), `cr_user` (text), `cr_environmentid` (text), `cr_flaggedon` (date/time), `cr_reviewed` (yes/no, default no).
+2. **Trigger:** Recurrence — monthly is enough for this one; it doesn't change as often as the inventories.
+3. **Apply to each** environment → **HTTP**: `GET {dv}/roles?$filter=name eq 'System Administrator'&$expand=systemuserroles_association($select=fullname,domainname)`.
+4. **Parse JSON**, **Apply to each** user in the expanded association → **List rows** on `cr_adminroleaudit` filtered by that user and environment; if no existing unreviewed row, **Add a new row** with `cr_reviewed` = no.
+5. **The actual governance step:** send the *new* rows (not the ones already reviewed last month) to whoever owns this decision — a Teams adaptive card with Approve/Revoke buttons is the natural next step once the basic flow is working, but even a plain summary email beats not looking at this list at all.
+
+---
+
+**Want the other 45?** These five cover inventory and one security check. The full **AdminHelper** package extends this into DLP monitoring, ownership and offboarding automation, Copilot Studio governance, ALM safeguards and Dataverse security — all 50 flows as one importable solution, built on the same five tables you just created. Get in touch at [info@kmupower.com](mailto:info@kmupower.com) if you want early access.
+
 ## Base URLs, authentication and a few notes
 
 To keep the examples short, these shorthand labels are used throughout:
