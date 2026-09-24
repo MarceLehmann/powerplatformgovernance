@@ -74,6 +74,10 @@ test('flow is sequential, approval-filtered, uses Foundry and confirms GitHub re
   assert.equal(isEligible({ ...ready, new_processing: processing.queued }), false);
   assert.match(actions.get('Article_URL').inputs, /startsWith\(toLower\(trim\(items\('For_each_article'\)\?\['primaryLink'\]\)\), 'http'\)/);
   assert.match(actions.get('Article_URL').inputs, /uriScheme\(outputs\('Source_URL'\)\)/);
+  assert.deepEqual(actions.get('Catch_article').runAfter, { Try_article: ['Failed', 'TimedOut'] });
+  assert.deepEqual(actions.get('Try_article').runAfter, { Article_URL: ['Succeeded'] });
+  assert.ok(actions.get('Try_article').actions.Same_approved_host, 'one bad article must not block the rest of the batch');
+  assert.deepEqual(actions.get('Recheck_source').runAfter, { For_each_article: ['Succeeded'] });
 });
 
 test('publisher confirms success using a private-repository readable receipt', () => {

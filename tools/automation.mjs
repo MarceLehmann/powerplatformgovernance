@@ -126,25 +126,30 @@ export function flowDefinition() {
         type: 'Foreach', foreach: "@variables('Candidates')", runAfter: {}, runtimeConfiguration: { concurrency: { repetitions: 1 } },
         actions: {
           Article_URL: compose("@if(startsWith(toLower(trim(items('For_each_article')?['primaryLink'])), 'http'), trim(items('For_each_article')?['primaryLink']), concat(uriScheme(outputs('Source_URL')), '://', uriHost(outputs('Source_URL')), if(startsWith(trim(items('For_each_article')?['primaryLink']), '/'), '', '/'), trim(items('For_each_article')?['primaryLink'])))"),
-          Same_approved_host: condition("@and(equals(toLower(uriHost(outputs('Article_URL'))), toLower(uriHost(outputs('Source_URL')))), equals(uriScheme(outputs('Article_URL')), 'https'), equals(uriPort(outputs('Article_URL')), 443), not(contains(outputs('Article_URL'), '@')))", {
-            Fetch_article: { type: 'Http', inputs: { method: 'GET', uri: "@outputs('Article_URL')", headers: { Accept: 'text/html', 'User-Agent': 'PowerPlatformGovernance/1.0' }, retryPolicy: { type: 'exponential', count: 2, interval: 'PT10S' } }, runAfter: {}, limit: { timeout: 'PT1M' } },
-            HTML_to_text: connector('conversion', 'HtmlToText', { Content: "@take(string(body('Fetch_article')), 600000)" }, 'Fetch_article'),
-            Foundry_extract: connector('foundry', 'ChatCompletion', {
-              deploymentId: 'model-router', 'api-version': '2024-08-01-preview', body: { messages: [
-                { role: 'system', content: extractionPrompt },
-                { role: 'user', content: "@string(addProperty(addProperty(addProperty(json('{}'), 'url', outputs('Article_URL')), 'feed', items('For_each_article')), 'page_text', take(body('HTML_to_text'), 30000)))" },
-              ], response_format: { type: 'json_object' } },
-            }, 'HTML_to_text'),
-            Parse_assessment: { type: 'ParseJson', runAfter: after('Foundry_extract'), inputs: {
-              content: "@body('Foundry_extract')?['choices']?[0]?['message']?['content']",
-              schema: { type: 'object', required: ['publishable', 'reason'], properties: { publishable: { type: 'boolean' }, reason: { type: 'string', maxLength: 200 } } },
-            } },
-            Relevant_article: condition("@equals(body('Parse_assessment')?['publishable'], true)", {
-              Add_publication: { type: 'AppendToArrayVariable', runAfter: {}, inputs: { name: 'Publications', value: "@addProperty(body('Parse_assessment'), 'source_url', outputs('Article_URL'))" } },
-            }, {}, 'Parse_assessment'),
-          }, {
-            Require_approved_host: { type: 'ParseJson', inputs: { content: { approved: false }, schema: { type: 'object', properties: { approved: { type: 'boolean', enum: [true] } }, required: ['approved'] } }, runAfter: {} },
-          }, 'Article_URL'),
+          Try_article: { type: 'Scope', runAfter: after('Article_URL'), actions: {
+            Same_approved_host: condition("@and(equals(toLower(uriHost(outputs('Article_URL'))), toLower(uriHost(outputs('Source_URL')))), equals(uriScheme(outputs('Article_URL')), 'https'), equals(uriPort(outputs('Article_URL')), 443), not(contains(outputs('Article_URL'), '@')))", {
+              Fetch_article: { type: 'Http', inputs: { method: 'GET', uri: "@outputs('Article_URL')", headers: { Accept: 'text/html', 'User-Agent': 'PowerPlatformGovernance/1.0' }, retryPolicy: { type: 'exponential', count: 2, interval: 'PT10S' } }, runAfter: {}, limit: { timeout: 'PT1M' } },
+              HTML_to_text: connector('conversion', 'HtmlToText', { Content: "@take(string(body('Fetch_article')), 600000)" }, 'Fetch_article'),
+              Foundry_extract: connector('foundry', 'ChatCompletion', {
+                deploymentId: 'model-router', 'api-version': '2024-08-01-preview', body: { messages: [
+                  { role: 'system', content: extractionPrompt },
+                  { role: 'user', content: "@string(addProperty(addProperty(addProperty(json('{}'), 'url', outputs('Article_URL')), 'feed', items('For_each_article')), 'page_text', take(body('HTML_to_text'), 30000)))" },
+                ], response_format: { type: 'json_object' } },
+              }, 'HTML_to_text'),
+              Parse_assessment: { type: 'ParseJson', runAfter: after('Foundry_extract'), inputs: {
+                content: "@body('Foundry_extract')?['choices']?[0]?['message']?['content']",
+                schema: { type: 'object', required: ['publishable', 'reason'], properties: { publishable: { type: 'boolean' }, reason: { type: 'string', maxLength: 200 } } },
+              } },
+              Relevant_article: condition("@equals(body('Parse_assessment')?['publishable'], true)", {
+                Add_publication: { type: 'AppendToArrayVariable', runAfter: {}, inputs: { name: 'Publications', value: "@addProperty(body('Parse_assessment'), 'source_url', outputs('Article_URL'))" } },
+              }, {}, 'Parse_assessment'),
+            }, {
+              Require_approved_host: { type: 'ParseJson', inputs: { content: { approved: false }, schema: { type: 'object', properties: { approved: { type: 'boolean', enum: [true] } }, required: ['approved'] } }, runAfter: {} },
+            }),
+          } },
+          Catch_article: { type: 'Scope', runAfter: { Try_article: ['Failed', 'TimedOut'] }, actions: {
+            Skipped_article: compose("@concat('Article could not be processed, skipped without affecting the rest of the batch: ', outputs('Article_URL'))"),
+          } },
         },
       },
       Recheck_source: connector('dataverse', 'GetItem', { entityName: config.entitySet, recordId: "@items('For_each_source')?['new_governancesourceid']" }, 'For_each_article'),
