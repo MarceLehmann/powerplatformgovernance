@@ -16,7 +16,10 @@ module GovernanceSources
 
   def self.collect(posts)
     groups = {}
-    posts.select(&:write?).sort_by(&:date).reverse_each do |post|
+    english_only = posts.select do |post|
+      post.write? && (post.data['lang'].nil? || post.data['lang'] == 'en')
+    end
+    english_only.sort_by(&:date).reverse_each do |post|
       source = origin(post.data['source_url'])
       next unless source
 
