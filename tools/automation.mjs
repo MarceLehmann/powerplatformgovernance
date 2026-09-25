@@ -223,26 +223,38 @@ export function flowDefinition() {
       Batch_requires_review: update({ new_processing: processing.review, new_lastmessage: 'Batch exceeds 30 new items or 2000 remembered feed IDs. Review the feed date or compact confirmed IDs before retrying.', new_lastchecked: '@utcNow()' }),
     }, 'Is_RSS'),
   };
+  // A submitted URL that's actually a feed (someone pastes their blog's /feed/ URL instead of
+  // a single post) reads as "not a real article" to the article-quality gate below and gets
+  // auto-rejected every time - correctly, since it genuinely isn't one article. Detect that
+  // case from the fetch itself (content type or an XML/RSS/Atom root) and route it straight to
+  // kind: rss instead, skipping the single-article gate entirely: relevance is then judged per
+  // article once the feed is polled normally (readyActions' own Foundry_extract/Parse_assessment
+  // already does that for every RSS item), not on the feed root itself.
+  const feedSignal = "or(contains(toLower(coalesce(outputs('Fetch_pending')?['headers']?['Content-Type'], '')), 'xml'), contains(toLower(coalesce(outputs('Fetch_pending')?['headers']?['Content-Type'], '')), 'rss'), contains(toLower(coalesce(outputs('Fetch_pending')?['headers']?['Content-Type'], '')), 'atom'), contains(toLower(take(string(body('Fetch_pending')), 500)), '<rss'), contains(toLower(take(string(body('Fetch_pending')), 500)), '<feed'), startsWith(trim(toLower(take(string(body('Fetch_pending')), 100))), '<?xml')";
   const pendingActions = {
     Pending_URL: compose("@trim(items('For_each_source')?['new_contenturl'])"),
     Validate_pending_URL: hostSafetyCheck("outputs('Pending_URL')", 'Pending_URL'),
     Fetch_pending: { type: 'Http', inputs: { method: 'GET', uri: "@outputs('Pending_URL')", headers: { Accept: 'text/html', 'User-Agent': 'PowerPlatformGovernance/1.0' }, retryPolicy: { type: 'exponential', count: 2, interval: 'PT10S' } }, runAfter: after('Validate_pending_URL'), limit: { timeout: 'PT1M' } },
-    Pending_to_text: connector('conversion', 'HtmlToText', { Content: "@take(string(body('Fetch_pending')), 600000)" }, 'Fetch_pending'),
-    Foundry_gate: connector('foundry', 'ChatCompletion', {
-      deploymentId: 'model-router', 'api-version': '2024-08-01-preview', body: { messages: [
-        { role: 'system', content: submissionGatePrompt },
-        { role: 'user', content: "@string(addProperty(addProperty(json('{}'), 'url', outputs('Pending_URL')), 'page_text', take(body('Pending_to_text'), 30000)))" },
-      ], response_format: { type: 'json_object' } },
-    }, 'Pending_to_text'),
-    Parse_gate: { type: 'ParseJson', runAfter: after('Foundry_gate'), inputs: {
-      content: "@body('Foundry_gate')?['choices']?[0]?['message']?['content']",
-      schema: { type: 'object', required: ['meets_criteria', 'reason'], properties: { meets_criteria: { type: 'boolean' }, reason: { type: 'string', maxLength: 200 } } },
-    } },
-    Apply_gate: condition("@equals(body('Parse_gate')?['meets_criteria'], true)", {
-      Approve_source: update({ new_approval: approval.approved, new_enabled: true, new_processing: processing.ready, new_lastchecked: '@utcNow()', new_lastmessage: "@concat('Auto-approved by AI Foundry quality gate: ', coalesce(body('Parse_gate')?['reason'], ''))" }),
+    Is_feed: condition(`@${feedSignal})`, {
+      Approve_feed_source: update({ new_kind: kind.rss, new_approval: approval.approved, new_enabled: true, new_processing: processing.ready, new_lastchecked: '@utcNow()', new_lastmessage: 'Auto-approved as an RSS feed (detected from content type/root element) - individual articles are judged on their own merits as the feed is polled.' }),
     }, {
-      Reject_source: update({ new_approval: approval.rejected, new_enabled: false, new_processing: processing.review, new_lastchecked: '@utcNow()', new_lastmessage: "@concat('Auto-rejected by AI Foundry quality gate: ', coalesce(body('Parse_gate')?['reason'], ''))" }),
-    }, 'Parse_gate'),
+      Pending_to_text: connector('conversion', 'HtmlToText', { Content: "@take(string(body('Fetch_pending')), 600000)" }),
+      Foundry_gate: connector('foundry', 'ChatCompletion', {
+        deploymentId: 'model-router', 'api-version': '2024-08-01-preview', body: { messages: [
+          { role: 'system', content: submissionGatePrompt },
+          { role: 'user', content: "@string(addProperty(addProperty(json('{}'), 'url', outputs('Pending_URL')), 'page_text', take(body('Pending_to_text'), 30000)))" },
+        ], response_format: { type: 'json_object' } },
+      }, 'Pending_to_text'),
+      Parse_gate: { type: 'ParseJson', runAfter: after('Foundry_gate'), inputs: {
+        content: "@body('Foundry_gate')?['choices']?[0]?['message']?['content']",
+        schema: { type: 'object', required: ['meets_criteria', 'reason'], properties: { meets_criteria: { type: 'boolean' }, reason: { type: 'string', maxLength: 200 } } },
+      } },
+      Apply_gate: condition("@equals(body('Parse_gate')?['meets_criteria'], true)", {
+        Approve_source: update({ new_approval: approval.approved, new_enabled: true, new_processing: processing.ready, new_lastchecked: '@utcNow()', new_lastmessage: "@concat('Auto-approved by AI Foundry quality gate: ', coalesce(body('Parse_gate')?['reason'], ''))" }),
+      }, {
+        Reject_source: update({ new_approval: approval.rejected, new_enabled: false, new_processing: processing.review, new_lastchecked: '@utcNow()', new_lastmessage: "@concat('Auto-rejected by AI Foundry quality gate: ', coalesce(body('Parse_gate')?['reason'], ''))" }),
+      }, 'Parse_gate'),
+    }, 'Fetch_pending'),
   };
 
   const queuedActions = {

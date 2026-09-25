@@ -196,3 +196,40 @@ test('YouTube and podcast sources are eligible and route through the content-kin
   assert.match(publicationValue, /outputs\('Video_ID'\)/);
   assert.doesNotMatch(publicationValue, /new_kind'\], 100000002/);
 });
+
+test('a submitted URL that is actually a feed is approved as RSS, not run through the single-article gate', () => {
+  const flow = flowDefinition();
+  const actions = new Map();
+  function visit(block) {
+    for (const [name, action] of Object.entries(block)) {
+      actions.set(name, action);
+      if (action.actions) visit(action.actions);
+      if (action.else) visit(action.else.actions);
+      if (action.cases) for (const c of Object.values(action.cases)) visit(c.actions);
+      if (action.default) visit(action.default.actions);
+    }
+  }
+  visit(flow.actions);
+
+  const isFeed = actions.get('Is_feed');
+  assert.equal(isFeed.type, 'If');
+  assert.deepEqual(isFeed.runAfter, { Fetch_pending: ['Succeeded'] });
+  // Detected from what the fetch itself returned - content type or an XML/RSS/Atom root -
+  // never from guessing at the URL string, since a real page can live at any path shape.
+  for (const signal of ["'headers'\\]\\?\\['Content-Type'\\]", "'<rss'", "'<feed'", "'<\\?xml'"]) {
+    assert.match(isFeed.expression, new RegExp(signal));
+  }
+
+  const approveFeed = isFeed.actions.Approve_feed_source;
+  assert.equal(approveFeed.inputs.parameters['item/new_kind'], kind.rss);
+  assert.equal(approveFeed.inputs.parameters['item/new_approval'], approval.approved);
+  assert.equal(approveFeed.inputs.parameters['item/new_enabled'], true);
+  assert.equal(approveFeed.inputs.parameters['item/new_processing'], processing.ready);
+
+  // A non-feed submission must still run the original single-article quality gate unchanged.
+  const notFeed = isFeed.else.actions;
+  assert.ok(notFeed.Pending_to_text);
+  assert.equal(actions.get('Foundry_gate').inputs.host.operationId, 'ChatCompletion');
+  assert.equal(actions.get('Approve_source').inputs.parameters['item/new_approval'], approval.approved);
+  assert.equal(actions.get('Reject_source').inputs.parameters['item/new_approval'], approval.rejected);
+});
