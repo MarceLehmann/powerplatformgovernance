@@ -50,6 +50,24 @@ try {
     $flowId = 'fbbf117b-3bb3-f111-aaac-70a8a505a30e'
     $existing = Invoke-RestMethod -Uri ($root + '/workflows(' + $flowId + ')?$select=statecode') -Headers $dataverseHeaders
     if ($existing.statecode -ne 0) { throw 'Stop the flow before deploying a new definition.' }
+
+    # Stopping the flow does not touch a run that was already in progress at that moment - it's
+    # left stranded in Running with no end time. Since the trigger's concurrency is capped at 1,
+    # a stranded run silently blocks every future scheduled trigger from starting at all, with no
+    # error anywhere, until someone notices and cancels it by hand (this happened for real during
+    # this project's first deployment). Cancel any such leftover run automatically, every time,
+    # so a deployment can never reintroduce that problem.
+    $flowToken = az account get-access-token --resource https://service.flow.microsoft.com/ --tenant $tenant --query accessToken -o tsv
+    if ($LASTEXITCODE -ne 0) { throw 'Power Automate (Flow) login required.' }
+    $flowHeaders = @{ Authorization = "Bearer $flowToken"; Accept = 'application/json' }
+    $runsUri = "https://api.flow.microsoft.com/providers/Microsoft.ProcessSimple/environments/$($config.environment)/flows/$flowId/runs?api-version=2016-11-01&`$top=10"
+    $recentRuns = Invoke-RestMethod -Uri $runsUri -Headers $flowHeaders
+    $stranded = @($recentRuns.value | Where-Object { $_.properties.status -in @('Running', 'Waiting') })
+    foreach ($run in $stranded) {
+        Write-Warning "Cancelling a run left stranded by the previous stop: $($run.name)"
+        Invoke-RestMethod -Uri "https://api.flow.microsoft.com/providers/Microsoft.ProcessSimple/environments/$($config.environment)/flows/$flowId/runs/$($run.name)/cancel?api-version=2016-11-01" -Headers $flowHeaders -Method Post | Out-Null
+    }
+
     Invoke-RestMethod -Uri ($root + '/connectionreferences(' + $githubReference.connectionreferenceid + ')') -Headers $dataverseHeaders -Method Patch -ContentType 'application/json' -Body (@{ connectionid = $github[0].name } | ConvertTo-Json) | Out-Null
     $clientData = @{ properties = @{ connectionReferences = $workflowReferences; definition = $manifest.definition }; schemaVersion = '1.0.0.0' } | ConvertTo-Json -Depth 100 -Compress
     Invoke-RestMethod -Uri ($root + '/workflows(' + $flowId + ')') -Headers $dataverseHeaders -Method Patch -ContentType 'application/json' -Body (@{ clientdata = $clientData } | ConvertTo-Json -Depth 100) | Out-Null
