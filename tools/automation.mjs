@@ -102,6 +102,15 @@ const connector = (name, operationId, parameters, ...dependencies) => ({
   inputs: { host: { apiId: `/providers/Microsoft.PowerApps/apis/${apiIds[name]}`, connectionName: name, operationId },
     parameters, authentication: "@parameters('$authentication')" },
 });
+// Every plain Http action in this flow has an explicit limit.timeout, but OpenApiConnection
+// actions (this file's connector() helper) never did - an AI model call that hangs or is just
+// slow has no bound and can silently stall the entire sequential For_each_source/For_each_article
+// loop for as long as the connector's own platform default allows, well past what any retry
+// policy on the surrounding Http fetches would ever catch. This happened for real: a run stalled
+// for 28+ minutes on what turned out to be a Foundry_extract call with no timeout at all.
+const foundryCall = (operationId, parameters, timeout, ...dependencies) => ({
+  ...connector('foundry', operationId, parameters, ...dependencies), limit: { timeout },
+});
 const update = (fields, ...dependencies) => connector('dataverse', 'UpdateRecord', {
   entityName: config.entitySet, recordId: "@items('For_each_source')?['new_governancesourceid']",
   ...Object.fromEntries(Object.entries(fields).map(([name, value]) => [`item/${name}`, value])),
@@ -170,7 +179,7 @@ export function flowDefinition() {
                   // $content property gives for a binary response.
                   Podcast_transcript: { case: 'podcast', actions: {
                     Fetch_audio: { type: 'Http', inputs: { method: 'GET', uri: "@outputs('Article_URL')", retryPolicy: { type: 'exponential', count: 2, interval: 'PT15S' } }, runAfter: {}, limit: { timeout: 'PT4M' } },
-                    Transcribe_audio: connector('foundry', 'TranscribeAudio', { deploymentId: 'whisper', 'api-version': '2024-10-21', body: { audio: "@body('Fetch_audio')?['$content']" } }, 'Fetch_audio'),
+                    Transcribe_audio: foundryCall('TranscribeAudio', { deploymentId: 'whisper', 'api-version': '2024-10-21', body: { audio: "@body('Fetch_audio')?['$content']" } }, 'PT5M', 'Fetch_audio'),
                     Set_extracted_text_podcast: set('ExtractedText', "@coalesce(body('Transcribe_audio')?['text'], '')", 'Transcribe_audio'),
                   } },
                 },
@@ -180,12 +189,12 @@ export function flowDefinition() {
                   Set_extracted_text_article: set('ExtractedText', "@body('HTML_to_text')", 'HTML_to_text'),
                 } },
               },
-              Foundry_extract: connector('foundry', 'ChatCompletion', {
+              Foundry_extract: foundryCall('ChatCompletion', {
                 deploymentId: 'model-router', 'api-version': '2024-08-01-preview', body: { messages: [
                   { role: 'system', content: extractionPrompt },
                   { role: 'user', content: "@string(addProperty(addProperty(addProperty(json('{}'), 'url', outputs('Article_URL')), 'feed', items('For_each_article')), 'page_text', take(variables('ExtractedText'), 30000)))" },
                 ], response_format: { type: 'json_object' } },
-              }, 'Content_kind_router'),
+              }, 'PT3M', 'Content_kind_router'),
               Parse_assessment: { type: 'ParseJson', runAfter: after('Foundry_extract'), inputs: {
                 content: "@body('Foundry_extract')?['choices']?[0]?['message']?['content']",
                 schema: { type: 'object', required: ['publishable', 'reason'], properties: { publishable: { type: 'boolean' }, reason: { type: 'string', maxLength: 200 } } },
@@ -239,12 +248,12 @@ export function flowDefinition() {
       Approve_feed_source: update({ new_kind: kind.rss, new_approval: approval.approved, new_enabled: true, new_processing: processing.ready, new_lastchecked: '@utcNow()', new_lastmessage: 'Auto-approved as an RSS feed (detected from content type/root element) - individual articles are judged on their own merits as the feed is polled.' }),
     }, {
       Pending_to_text: connector('conversion', 'HtmlToText', { Content: "@take(string(body('Fetch_pending')), 600000)" }),
-      Foundry_gate: connector('foundry', 'ChatCompletion', {
+      Foundry_gate: foundryCall('ChatCompletion', {
         deploymentId: 'model-router', 'api-version': '2024-08-01-preview', body: { messages: [
           { role: 'system', content: submissionGatePrompt },
           { role: 'user', content: "@string(addProperty(addProperty(json('{}'), 'url', outputs('Pending_URL')), 'page_text', take(body('Pending_to_text'), 30000)))" },
         ], response_format: { type: 'json_object' } },
-      }, 'Pending_to_text'),
+      }, 'PT3M', 'Pending_to_text'),
       Parse_gate: { type: 'ParseJson', runAfter: after('Foundry_gate'), inputs: {
         content: "@body('Foundry_gate')?['choices']?[0]?['message']?['content']",
         schema: { type: 'object', required: ['meets_criteria', 'reason'], properties: { meets_criteria: { type: 'boolean' }, reason: { type: 'string', maxLength: 200 } } },

@@ -233,3 +233,27 @@ test('a submitted URL that is actually a feed is approved as RSS, not run throug
   assert.equal(actions.get('Approve_source').inputs.parameters['item/new_approval'], approval.approved);
   assert.equal(actions.get('Reject_source').inputs.parameters['item/new_approval'], approval.rejected);
 });
+
+test('every Foundry connector call has an explicit timeout so a slow model response cannot stall the sequential loop indefinitely', () => {
+  const flow = flowDefinition();
+  const actions = new Map();
+  function visit(block) {
+    for (const [name, action] of Object.entries(block)) {
+      actions.set(name, action);
+      if (action.actions) visit(action.actions);
+      if (action.else) visit(action.else.actions);
+      if (action.cases) for (const c of Object.values(action.cases)) visit(c.actions);
+      if (action.default) visit(action.default.actions);
+    }
+  }
+  visit(flow.actions);
+
+  // Unlike the Http fetch actions (which already had explicit limits), OpenApiConnection calls
+  // to the Foundry connector had none at all - a real 28-minute stall on one such call, with no
+  // timeout and no retry to eventually surface it, is what motivated this test.
+  for (const name of ['Foundry_extract', 'Foundry_gate', 'Transcribe_audio']) {
+    const action = actions.get(name);
+    assert.equal(action.inputs.host.apiId.includes('azureaifoundry'), true, `${name} must call the Foundry connector`);
+    assert.match(action.limit?.timeout ?? '', /^PT\dM$/, `${name} must have an explicit ISO-8601 timeout`);
+  }
+});
