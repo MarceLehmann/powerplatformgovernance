@@ -1,0 +1,656 @@
+[
+  {
+    "name": "Anders Jensen",
+    "tech": "Copilot Studio;M365 Copilot",
+    "htmlUrl": "https://andersjensen.org",
+    "xmlUrl": "https://andersjensen.org/feed/"
+  },
+  {
+    "name": "Andreas Adner",
+    "tech": "Copilot Studio",
+    "htmlUrl": "https://nullpointer.se/",
+    "xmlUrl": "https://nullpointer.se/feed.xml"
+  },
+  {
+    "name": "Andrew Ly",
+    "tech": "Power Apps",
+    "htmlUrl": "https://www.365lyf.com",
+    "xmlUrl": "https://www.365lyf.com/feed/"
+  },
+  {
+    "name": "Anouck Fierens",
+    "tech": "SharePoint;Power Automate",
+    "htmlUrl": "https://365-anouck.be",
+    "xmlUrl": "https://365-anouck.be/feed/"
+  },
+  {
+    "name": "Anouck Fierens",
+    "tech": "SharePoint;Power Automate",
+    "htmlUrl": "https://365-anouck.be",
+    "xmlUrl": "https://feeds.transistor.fm/fusiontalk"
+  },
+  {
+    "name": "Aurelien CLERE",
+    "tech": "Power Apps;AI ERP",
+    "htmlUrl": "https://powerazure365.com",
+    "xmlUrl": "https://www.powerazure365.com/blog-1?format=rss"
+  },
+  {
+    "name": "Bhushan Gawale",
+    "tech": "Copilot Studio",
+    "htmlUrl": "https://bhushangawale.com/",
+    "xmlUrl": "https://bhushangawale.com/feed/"
+  },
+  {
+    "name": "Bijay Kumar Sahoo",
+    "tech": "Power Apps;Power Automate",
+    "htmlUrl": "https://www.spguides.com/author/fewlines4biju/",
+    "xmlUrl": "https://www.spguides.com/author/fewlines4biju/feed/"
+  },
+  {
+    "name": "Blake Scarlavai",
+    "tech": "Power Automate;Power Apps",
+    "htmlUrl": "https://powerplatstack.substack.com/",
+    "xmlUrl": "https://powerplatstack.substack.com/feed"
+  },
+  {
+    "name": "Bülent Altinsoy",
+    "tech": "Power Apps;Copilot Studio",
+    "htmlUrl": "https://thatalohaguy.substack.com/",
+    "xmlUrl": "https://thatalohaguy.substack.com/feed"
+  },
+  {
+    "name": "Carlos Javier Sosa Marquina",
+    "tech": "Power Apps;Power Automate",
+    "htmlUrl": "https://carlosjsosam.blogspot.com/",
+    "xmlUrl": "https://carlosjsosam.blogspot.com/feeds/posts/default?alt=rss"
+  },
+  {
+    "name": "Charles Lakes",
+    "tech": "Power Apps;Power Automate",
+    "htmlUrl": "https://charleslakes.com/",
+    "xmlUrl": "https://charleslakes.com/feed/"
+  },
+  {
+    "name": "Charles Sexton",
+    "tech": "Power Apps",
+    "htmlUrl": "https://www.charlessexton.com",
+    "xmlUrl": "https://www.charlessexton.com/blog/rss.xml"
+  },
+  {
+    "name": "Christian Abata",
+    "tech": "Power Automate;Microsoft 365",
+    "htmlUrl": "https://christianabata.com/",
+    "xmlUrl": "https://christianabata.com/feed/"
+  },
+  {
+    "name": "Clive Oldridge",
+    "tech": "Power Apps",
+    "htmlUrl": "https://www.clive-oldridge.com",
+    "xmlUrl": "https://www.clive-oldridge.com/feed.xml"
+  },
+  {
+    "name": "Daniel Cordoba",
+    "tech": "Copilot Studio",
+    "htmlUrl": "https://www.daniccardenas.com/",
+    "xmlUrl": "https://dynamicsduty.com/feed.xml"
+  },
+  {
+    "name": "David Vachala",
+    "tech": "Power Apps;Copilot Studio",
+    "htmlUrl": "https://easylowcode.fr",
+    "xmlUrl": "https://easylowcode.fr/feed/"
+  },
+  {
+    "name": "Diana Birkelbach",
+    "tech": "Power Apps",
+    "htmlUrl": "https://dianabirkelbach.wordpress.com/",
+    "xmlUrl": "https://dianabirkelbach.wordpress.com/feed/"
+  },
+  {
+    "name": "Divya Akula",
+    "tech": "Copilot Studio",
+    "htmlUrl": "https://www.divyaakula.com/",
+    "xmlUrl": "https://www.divyaakula.com/feed.xml"
+  },
+  {
+    "name": "Eickhel Mendoza",
+    "tech": "Power Apps",
+    "htmlUrl": "https://powernimbus.com/",
+    "xmlUrl": "https://powernimbus.com/feed/"
+  },
+  {
+    "name": "Eric Shupps",
+    "tech": "Microsoft 365;Power Automate",
+    "htmlUrl": "https://www.ericshupps.com",
+    "xmlUrl": "https://www.ericshupps.com/feed/"
+  },
+  {
+    "name": "Essam Shaaban",
+    "tech": "Power Apps",
+    "htmlUrl": "https://essamshaaban001.blogspot.com/",
+    "xmlUrl": "https://essamshaaban001.blogspot.com/feeds/posts/default?alt=rss"
+  },
+  {
+    "name": "Fausto Capellan Jr",
+    "tech": "Power Automate",
+    "htmlUrl": "https://faustocapellan.com",
+    "xmlUrl": "https://faustocapellan.com/feed/"
+  },
+  {
+    "name": "Gerjon Kunst",
+    "tech": "Copilot Studio;M365 Copilot",
+    "htmlUrl": "https://www.impactof.ai",
+    "xmlUrl": "https://impactofaiexplored.com/feed/"
+  },
+  {
+    "name": "Griffin Lickfeldt",
+    "tech": "Copilot Studio",
+    "htmlUrl": "https://citizendeveloper365.com/",
+    "xmlUrl": "https://citizendeveloper365.com/feed/"
+  },
+  {
+    "name": "Guido Preite",
+    "tech": "Power Apps",
+    "htmlUrl": "https://www.crmanswers.net/",
+    "xmlUrl": "https://www.crmanswers.net/feeds/posts/default"
+  },
+  {
+    "name": "Hardit Bhatia",
+    "tech": "Power Apps",
+    "htmlUrl": "https://thepoweraddict.com/",
+    "xmlUrl": "https://thepoweraddict.com/feed/"
+  },
+  {
+    "name": "Holger Imbery",
+    "tech": "Copilot Studio",
+    "htmlUrl": "https://holgerimbery.blog",
+    "xmlUrl": "https://holgerimbery.blog/feed.xml"
+  },
+  {
+    "name": "Jan Hajek",
+    "tech": "Power Apps",
+    "htmlUrl": "https://hajekj.net",
+    "xmlUrl": "https://hajekj.net/feed/"
+  },
+  {
+    "name": "Jeroen Scheper",
+    "tech": "Power Apps",
+    "htmlUrl": "https://jscheper.com",
+    "xmlUrl": "https://jscheper.com/feed/"
+  },
+  {
+    "name": "Jonas Rapp",
+    "tech": "Power Apps",
+    "htmlUrl": "https://jonasr.app",
+    "xmlUrl": "https://jonasr.app/feed/"
+  },
+  {
+    "name": "Jose Ramirez Espinosa",
+    "tech": "Power Automate",
+    "htmlUrl": "https://poweramics.mx",
+    "xmlUrl": "https://poweramics.mx/feed/"
+  },
+  {
+    "name": "Josh Cook",
+    "tech": "M365 Copilot;Copilot Studio",
+    "htmlUrl": "https://flowaltdelete.ca/",
+    "xmlUrl": "https://flowaltdelete.ca/feed/"
+  },
+  {
+    "name": "Karl-Johan Spiik",
+    "tech": "Copilot Studio;Power Automate",
+    "htmlUrl": "https://www.karlex.fi/",
+    "xmlUrl": "https://www.karlex.fi/feed/"
+  },
+  {
+    "name": "Kimmo Koski",
+    "tech": "Power Pages",
+    "htmlUrl": "https://www.kimmokoski.dev",
+    "xmlUrl": "https://www.kimmokoski.dev/feed/"
+  },
+  {
+    "name": "Kirti Prajapati",
+    "tech": "Power Apps;M365 Development",
+    "htmlUrl": "https://www.kirtiprajapati.com/",
+    "xmlUrl": "https://www.kirtiprajapati.com/feed/"
+  },
+  {
+    "name": "Kristine Risberg",
+    "tech": "Customer Service;Copilot Studio",
+    "htmlUrl": "https://contactcenterchronicles.com/",
+    "xmlUrl": "https://contactcenterchronicles.com/feed/"
+  },
+  {
+    "name": "Kuni Hirota",
+    "tech": "Copilot Studio",
+    "htmlUrl": "https://ai3.site",
+    "xmlUrl": "https://ai3.site/?feed=rss2"
+  },
+  {
+    "name": "Kylie Kiser",
+    "tech": "Customer Experience;Power Apps",
+    "htmlUrl": "https://Kyliekiser.com",
+    "xmlUrl": "https://Kyliekiser.com/feed/"
+  },
+  {
+    "name": "Lisa Crosbie",
+    "tech": "Copilot Studio;M365 Copilot",
+    "htmlUrl": "https://www.lisacrosbie.com",
+    "xmlUrl": "https://www.lisacrosbie.com/feed/"
+  },
+  {
+    "name": "Mar Llambi",
+    "tech": "Copilot Studio",
+    "htmlUrl": "https://www.llambi365.es/",
+    "xmlUrl": "https://www.llambi365.es/feeds/posts/default"
+  },
+  {
+    "name": "Marcelo Pacifico",
+    "tech": "Copilot Studio;M365 Copilot",
+    "htmlUrl": "https://copiloters.com.br/",
+    "xmlUrl": "https://copiloters.com.br/feed/"
+  },
+  {
+    "name": "Marco Amoedo Martinez",
+    "tech": "Power Apps;Copilot Studio",
+    "htmlUrl": "https://amoe.do",
+    "xmlUrl": "https://amoe.do/feed/"
+  },
+  {
+    "name": "Maria Graciela Martinez",
+    "tech": "Power Apps;Power Automate",
+    "htmlUrl": "https://powergi.net/blogs/",
+    "xmlUrl": "https://powergi.net/blogs/feed/"
+  },
+  {
+    "name": "Mario Trueba",
+    "tech": "Power Apps",
+    "htmlUrl": "https://mariotrueba365.com",
+    "xmlUrl": "https://mariotrueba365.com/feed/"
+  },
+  {
+    "name": "Mark Carrington",
+    "tech": "Power Apps",
+    "htmlUrl": "https://markcarrington.dev/",
+    "xmlUrl": "https://markcarrington.dev/feed/"
+  },
+  {
+    "name": "Markus Erlandsson",
+    "tech": "Power Apps",
+    "htmlUrl": "https://crmrocks.com/",
+    "xmlUrl": "https://crmrocks.com/feed/"
+  },
+  {
+    "name": "Marvin Bangert",
+    "tech": "SharePoint;Power Automate",
+    "htmlUrl": "https://cloudkumpel.de/",
+    "xmlUrl": "https://cloudkumpel.de/feed/"
+  },
+  {
+    "name": "Matthew Devaney",
+    "tech": "Power Automate;Copilot Studio",
+    "htmlUrl": "https://matthewdevaney.com",
+    "xmlUrl": "https://matthewdevaney.com/feed/"
+  },
+  {
+    "name": "Michael Pereira",
+    "tech": "Copilot Studio;Power Apps",
+    "htmlUrl": "https://blog.michaelfp.com.br",
+    "xmlUrl": "https://blog.michaelfp.com.br/feed/"
+  },
+  {
+    "name": "Mike Hartley",
+    "tech": "Power Apps;M365 Copilot",
+    "htmlUrl": "https://365-a11y.com",
+    "xmlUrl": "https://365-a11y.com/feed/"
+  },
+  {
+    "name": "Mike Hartley",
+    "tech": "Power Apps;M365 Copilot",
+    "htmlUrl": "https://hartofthemidlands.co.uk",
+    "xmlUrl": "https://hartofthemidlands.co.uk/feed/"
+  },
+  {
+    "name": "Mikko Koskinen",
+    "tech": "Copilot Studio",
+    "htmlUrl": "https://mikkokoskinen.com/",
+    "xmlUrl": "https://mikkokoskinen.com/feed/"
+  },
+  {
+    "name": "Ming Sze Wong",
+    "tech": "Power Apps",
+    "htmlUrl": "https://www.365power.nl",
+    "xmlUrl": "https://www.365power.nl/feed/"
+  },
+  {
+    "name": "Mohamed Ashiq Faleel",
+    "tech": "Power Automate;Power Apps",
+    "htmlUrl": "https://ashiqf.com/",
+    "xmlUrl": "https://ashiqf.com/feed/"
+  },
+  {
+    "name": "Natanael Turtledove",
+    "tech": "Power Apps",
+    "htmlUrl": "https://www.nati-turtledove.com/",
+    "xmlUrl": "https://www.nati-turtledove.com/feed/"
+  },
+  {
+    "name": "Neil Benson",
+    "tech": "Power Apps",
+    "htmlUrl": "https://practiceleading.com",
+    "xmlUrl": "https://practiceleading.com/feed/"
+  },
+  {
+    "name": "Neil Benson",
+    "tech": "Power Apps",
+    "htmlUrl": "https://amazingapps.show",
+    "xmlUrl": "https://amazingapps.show/feed/"
+  },
+  {
+    "name": "Nick Decourcy",
+    "tech": "Copilot Studio;M365 Copilot",
+    "htmlUrl": "https://www.brightideasagency.com/blog",
+    "xmlUrl": "https://brightideasagency.com/blog?format=rss"
+  },
+  {
+    "name": "Nick Doelman",
+    "tech": "Power Pages;Power Apps",
+    "htmlUrl": "https://readyxrm.blog",
+    "xmlUrl": "https://readyxrm.blog/feed/"
+  },
+  {
+    "name": "Nilüfer Doğan",
+    "tech": "Copilot Studio",
+    "htmlUrl": "https://medium.com/@dgnilufer",
+    "xmlUrl": "https://medium.com/feed/@dgnilufer"
+  },
+  {
+    "name": "Nisal Mihiranga",
+    "tech": "Microsoft Foundry;Copilot Studio",
+    "htmlUrl": "https://aiwithnisal.substack.com/",
+    "xmlUrl": "https://aiwithnisal.substack.com/feed"
+  },
+  {
+    "name": "Noorez Khamis",
+    "tech": "Power Automate;Microsoft 365",
+    "htmlUrl": "https://www.khamis.net",
+    "xmlUrl": "https://www.khamis.net/feed/"
+  },
+  {
+    "name": "Norm Young",
+    "tech": "Power Automate;SharePoint",
+    "htmlUrl": "https://normyoung.ca/",
+    "xmlUrl": "https://normyoung.ca/feed/"
+  },
+  {
+    "name": "Paul Murana",
+    "tech": "Power Automate",
+    "htmlUrl": "https://www.tachytelic.net/",
+    "xmlUrl": "https://www.tachytelic.net/feed/"
+  },
+  {
+    "name": "Paulien Buskens",
+    "tech": "Power Apps",
+    "htmlUrl": "https://paulienbuskens.com",
+    "xmlUrl": "https://paulienbuskens.com/feed/"
+  },
+  {
+    "name": "Pavan Mani Deep Yaragani",
+    "tech": "Power Apps",
+    "htmlUrl": "https://ecellorscrm.com",
+    "xmlUrl": "https://ecellorscrm.com/feed/"
+  },
+  {
+    "name": "Peter Ruiter",
+    "tech": "Copilot Studio;Customer Service",
+    "htmlUrl": "https://powerpete.com",
+    "xmlUrl": "https://powerpete.com/feed/"
+  },
+  {
+    "name": "Prashant G Bhoyar",
+    "tech": "Copilot Studio;Microsoft Foundry",
+    "htmlUrl": "https://www.pgbhoyar.com",
+    "xmlUrl": "https://www.pgbhoyar.com/feed/"
+  },
+  {
+    "name": "Preeti Sahu",
+    "tech": "Power Apps",
+    "htmlUrl": "https://www.enjoysharepoint.com/author/preeti/",
+    "xmlUrl": "https://www.enjoysharepoint.com/author/preeti/feed/"
+  },
+  {
+    "name": "Pronpen Manapronpaiboon",
+    "tech": "Power Automate",
+    "htmlUrl": "https://penbotrpa.com/",
+    "xmlUrl": "https://penbotrpa.com/feed/"
+  },
+  {
+    "name": "Rachit Garg",
+    "tech": "Copilot Studio;AI ERP",
+    "htmlUrl": "https://dynamicsexemplified.wordpress.com",
+    "xmlUrl": "https://dynamicsexemplified.wordpress.com/feed/"
+  },
+  {
+    "name": "Rami Mounla",
+    "tech": "Copilot Studio;Power Apps",
+    "htmlUrl": "https://xrmenterprise.com/",
+    "xmlUrl": "https://xrmenterprise.com/feed/"
+  },
+  {
+    "name": "Ramkumar Vellingiri",
+    "tech": "M365 Copilot;Copilot Studio",
+    "htmlUrl": "https://medium.com/@ramve1988",
+    "xmlUrl": "https://medium.com/feed/@ramve1988"
+  },
+  {
+    "name": "Ramón Rautenstrauch",
+    "tech": "M365 Copilot;Copilot Studio",
+    "htmlUrl": "https://www.consultor365.com/",
+    "xmlUrl": "https://www.consultor365.com/feed/"
+  },
+  {
+    "name": "Reshmee Auckloo",
+    "tech": "M365 Development;Copilot Studio",
+    "htmlUrl": "https://reshmeeauckloo.com/",
+    "xmlUrl": "https://reshmeeauckloo.com/index.xml"
+  },
+  {
+    "name": "Reza Niroomand",
+    "tech": "Power Apps",
+    "htmlUrl": "https://bycode.dev",
+    "xmlUrl": "https://bycode.dev/feed/"
+  },
+  {
+    "name": "Riccardo Gregori",
+    "tech": "Power Apps",
+    "htmlUrl": "https://dev.to/_neronotte",
+    "xmlUrl": "https://dev.to/feed/_neronotte"
+  },
+  {
+    "name": "Rishona Elijah",
+    "tech": "Copilot Studio",
+    "htmlUrl": "https://rishonapowerplatform.com/",
+    "xmlUrl": "https://rishonapowerplatform.com/feed/"
+  },
+  {
+    "name": "Romain GERARD",
+    "tech": "Copilot Studio",
+    "htmlUrl": "https://lowcodebeardedbear.wordpress.com/",
+    "xmlUrl": "https://lowcodebeardedbear.wordpress.com/feed/"
+  },
+  {
+    "name": "Sailaja Mantripragada",
+    "tech": "Power Apps",
+    "htmlUrl": "https://lowcodepower.com",
+    "xmlUrl": "https://lowcodepower.com/feed/"
+  },
+  {
+    "name": "Samir Daoudi",
+    "tech": "Power Apps",
+    "htmlUrl": "https://www.samtech365.com",
+    "xmlUrl": "https://www.samtech365.com/feed/"
+  },
+  {
+    "name": "Sandeep Mishra",
+    "tech": "Power Automate;Microsoft 365",
+    "htmlUrl": "https://www.mishrasandeep.com/",
+    "xmlUrl": "https://www.mishrasandeep.com/feed/"
+  },
+  {
+    "name": "Sanjay Prakash",
+    "tech": "Power Apps;Power Automate",
+    "htmlUrl": "https://softchief.com/",
+    "xmlUrl": "https://softchief.com/feed/"
+  },
+  {
+    "name": "Sanjay Prakash",
+    "tech": "Power Apps;Power Automate",
+    "htmlUrl": "https://softchief.com/blog",
+    "xmlUrl": "https://softchief.com/blog/feed/"
+  },
+  {
+    "name": "Shaheer Ahmad",
+    "tech": "Power Apps",
+    "htmlUrl": "https://shaheerahmad.hashnode.dev/",
+    "xmlUrl": "https://shaheerahmad.hashnode.dev/rss.xml"
+  },
+  {
+    "name": "Shaheer Ahmad",
+    "tech": "Power Apps",
+    "htmlUrl": "https://shaheer365.blogspot.com/",
+    "xmlUrl": "https://shaheer365.blogspot.com/feeds/posts/default?alt=rss"
+  },
+  {
+    "name": "Siva Sai Krishna Rachakonda",
+    "tech": "Power Apps;Power Automate",
+    "htmlUrl": "https://www.krishnarachakonda.com",
+    "xmlUrl": "https://www.krishnarachakonda.com/feed/"
+  },
+  {
+    "name": "Stefan Strube",
+    "tech": "Power Apps;Power Automate",
+    "htmlUrl": "https://2die4it.com",
+    "xmlUrl": "https://2die4it.com/feed/"
+  },
+  {
+    "name": "Tanguy Touzard",
+    "tech": "Power Apps",
+    "htmlUrl": "https://mscrmtools.blogspot.com",
+    "xmlUrl": "https://mscrmtools.blogspot.com/feeds/posts/default?alt=rss"
+  },
+  {
+    "name": "Temmy Raharjo",
+    "tech": "Power Apps;Power Automate",
+    "htmlUrl": "https://temmyraharjo.com/",
+    "xmlUrl": "https://temmyraharjo.com/rss.xml"
+  },
+  {
+    "name": "Tomoyuki Hirakawa",
+    "tech": "Power Automate",
+    "htmlUrl": "https://zenn.dev/flali",
+    "xmlUrl": "https://zenn.dev/flali/feed"
+  },
+  {
+    "name": "Tomoyuki Hirakawa",
+    "tech": "Power Automate",
+    "htmlUrl": "https://flali.hatenablog.com/",
+    "xmlUrl": "https://flali.hatenablog.com/rss"
+  },
+  {
+    "name": "Tomáš Říha",
+    "tech": "Power Automate",
+    "htmlUrl": "https://tomriha.com/",
+    "xmlUrl": "https://tomriha.com/feed/"
+  },
+  {
+    "name": "Veronique Lengelle",
+    "tech": "Power Automate;Copilot Studio",
+    "htmlUrl": "https://veronicageek.com",
+    "xmlUrl": "https://veronicageek.com/feed/"
+  },
+  {
+    "name": "Wes Preston",
+    "tech": "Power Apps;Microsoft 365",
+    "htmlUrl": "https://idubbs.com/blog/",
+    "xmlUrl": "https://idubbs.com/blog/feed/"
+  },
+  {
+    "name": "Yannick Reekmans",
+    "tech": "Power Apps;M365 Development",
+    "htmlUrl": "https://blog.yannickreekmans.be/",
+    "xmlUrl": "https://blog.yannickreekmans.be/feed/"
+  },
+  {
+    "name": "Zsolt Zombik",
+    "tech": "Copilot Studio;Power Apps",
+    "htmlUrl": "https://aidevme.com",
+    "xmlUrl": "https://aidevme.com/feed/"
+  },
+  {
+    "name": "Георгий Дубинский",
+    "tech": "Power Pages",
+    "htmlUrl": "https://crmtipoftheday.com",
+    "xmlUrl": "https://crmtipoftheday.com/feed/"
+  },
+  {
+    "name": "ณพล เฮงบำรุง",
+    "tech": "Copilot Studio;Microsoft Fabric",
+    "htmlUrl": "https://www.duckyengineer.com/",
+    "xmlUrl": "https://www.duckyengineer.com/feed/"
+  },
+  {
+    "name": "きぬ あさ",
+    "tech": "Power Automate;Microsoft 365",
+    "htmlUrl": "https://note.com/kinuasa/",
+    "xmlUrl": "https://note.com/kinuasa/rss"
+  },
+  {
+    "name": "きぬ あさ",
+    "tech": "Power Automate;Microsoft 365",
+    "htmlUrl": "https://note.com/kinuasa/",
+    "xmlUrl": "https://www.ka-net.org/blog/?feed=rss2"
+  },
+  {
+    "name": "ヨウセイ ニシムラ",
+    "tech": "Power Apps;Power Automate",
+    "htmlUrl": "https://youseibubu.com/",
+    "xmlUrl": "https://youseibubu.com/feed/"
+  },
+  {
+    "name": "典子 松本",
+    "tech": "Power Automate",
+    "htmlUrl": "https://zuvuyalink.net/nrjlog/",
+    "xmlUrl": "https://zuvuyalink.net/nrjlog/feed/"
+  },
+  {
+    "name": "友花 田辺",
+    "tech": "Power Automate;Power Apps",
+    "htmlUrl": "https://tana-techlog.net/",
+    "xmlUrl": "https://tana-techlog.net/?feed=rss2"
+  },
+  {
+    "name": "智哉 吉田",
+    "tech": "Power Apps",
+    "htmlUrl": "https://koruneko.hatenablog.com/",
+    "xmlUrl": "https://koruneko.hatenablog.com/rss"
+  },
+  {
+    "name": "석희 한",
+    "tech": "Copilot Studio",
+    "htmlUrl": "https://pnumber.wixsite.com/blog",
+    "xmlUrl": "https://pnumber.wixsite.com/blog/blog-feed.xml"
+  },
+  {
+    "name": "재석 이",
+    "tech": "Copilot Studio",
+    "htmlUrl": "https://blog.naver.com/ilovehandson",
+    "xmlUrl": "https://rss.blog.naver.com/ilovehandson.xml"
+  },
+  {
+    "name": "허 석",
+    "tech": "Power Automate;Copilot Studio",
+    "htmlUrl": "https://blog.naver.com/asomi",
+    "xmlUrl": "https://rss.blog.naver.com/asomi.xml"
+  }
+]
