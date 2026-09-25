@@ -7,7 +7,7 @@ permalink: /submit/
 description: "Suggest a Power Platform governance blog or article for review and possible publication."
 ---
 
-Suggest an article or blog about Power Platform governance. We publish short summaries after review, credit the original author and link to the detailed article.
+Suggest an article, blog, YouTube video or podcast episode about Power Platform governance. We publish short summaries after review, credit the original author and link back to the original.
 
 {% assign submission_endpoint = site.data.submission.endpoint | default: '' | strip %}
 {% if submission_endpoint == '' %}
@@ -16,7 +16,7 @@ Suggest an article or blog about Power Platform governance. We publish short sum
 
 <form class="submission-form" method="post" action="{{ submission_endpoint | escape }}" data-submission-form data-direct-webhook="{{ site.data.submission.direct_webhook | default: false }}">
   <p>
-    <label for="content-url">Article, blog or RSS URL</label>
+    <label for="content-url">Article, blog, RSS, YouTube or podcast URL</label>
     <input id="content-url" name="content_url" type="url" pattern="https://.+" maxlength="2048" placeholder="https://" required>
   </p>
 

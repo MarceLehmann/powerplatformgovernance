@@ -44,6 +44,12 @@ pages.each do |path|
       raise "Contributor link must be marked ugc: #{path}" unless contributor['rel'].to_s.split.include?('ugc')
     end
   end
+  video = document.at_css('.source-video-embed iframe')
+  if video
+    raise "Video embed must use the privacy-enhanced domain: #{path}" unless video['src'].to_s.start_with?('https://www.youtube-nocookie.com/embed/')
+    raise "Video embed missing an accessible title: #{path}" if video['title'].to_s.strip.empty?
+    raise "Video embed must lazy-load: #{path}" unless video['loading'] == 'lazy'
+  end
 end
 
 home = Nokogiri::HTML(File.read(File.join(site_dir, 'index.html')))

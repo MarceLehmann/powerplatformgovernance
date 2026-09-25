@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { approval, config, flowDefinition, isEligible, kind, processing, tableDefinition } from './automation.mjs';
+import { approval, config, eligibleFilter, flowDefinition, isEligible, kind, processing, tableDefinition } from './automation.mjs';
 
 const ready = { statecode: 0, new_enabled: true, new_approval: approval.approved, new_kind: kind.article, new_processing: processing.ready };
 
@@ -77,7 +77,8 @@ test('flow is sequential, approval-filtered, uses Foundry and confirms GitHub re
   assert.match(actions.get('Article_URL').inputs, /startsWith\(toLower\(trim\(items\('For_each_article'\)\?\['primaryLink'\]\)\), 'http'\)/);
   assert.match(actions.get('Article_URL').inputs, /uriScheme\(outputs\('Source_URL'\)\)/);
   assert.deepEqual(actions.get('Catch_article').runAfter, { Try_article: ['Failed', 'TimedOut'] });
-  assert.deepEqual(actions.get('Try_article').runAfter, { Article_URL: ['Succeeded'] });
+  assert.deepEqual(actions.get('Try_article').runAfter, { Video_ID: ['Succeeded'] });
+  assert.deepEqual(actions.get('Video_ID').runAfter, { Article_URL: ['Succeeded'] });
   assert.ok(actions.get('Try_article').actions.Same_approved_host, 'one bad article must not block the rest of the batch');
   assert.deepEqual(actions.get('Recheck_source').runAfter, { For_each_article: ['Succeeded'] });
 });
@@ -127,4 +128,55 @@ test('pending submissions are autonomously approved or rejected by the AI Foundr
   assert.notEqual(actions.get('Fetch_pending').type, undefined);
   assert.equal(actions.get('Fetch_pending').type, 'Http');
   assert.deepEqual(actions.get('Fetch_pending').runAfter, { Validate_pending_URL: ['Succeeded'] });
+});
+
+test('YouTube and podcast sources are eligible and route through the content-kind switch', () => {
+  assert.equal(isEligible({ ...ready, new_kind: kind.youtube }), true);
+  assert.equal(isEligible({ ...ready, new_kind: kind.podcast }), true);
+  assert.match(eligibleFilter, /new_kind eq 100000002/);
+  assert.match(eligibleFilter, /new_kind eq 100000003/);
+  const attributes = Object.fromEntries(tableDefinition.Attributes.map(attribute => [attribute.SchemaName, attribute]));
+  const kindOptions = Object.fromEntries(attributes.new_kind.OptionSet.Options.map(option => [option.Label.LocalizedLabels[0].Label, option.Value]));
+  assert.equal(kindOptions.YouTube, kind.youtube);
+  assert.equal(kindOptions.Podcast, kind.podcast);
+
+  const flow = flowDefinition();
+  const actions = new Map();
+  function visit(block) {
+    for (const [name, action] of Object.entries(block)) {
+      actions.set(name, action);
+      if (action.actions) visit(action.actions);
+      if (action.else) visit(action.else.actions);
+      if (action.cases) for (const c of Object.values(action.cases)) visit(c.actions);
+      if (action.default) visit(action.default.actions);
+    }
+  }
+  visit(flow.actions);
+
+  const router = actions.get('Content_kind_router');
+  assert.equal(router.type, 'Switch');
+  assert.match(router.expression, /new_kind'\], 100000002/);
+  assert.match(router.expression, /new_kind'\], 100000003/);
+  assert.equal(router.cases.Youtube_transcript.case, 'youtube');
+  assert.equal(router.cases.Podcast_transcript.case, 'podcast');
+  assert.ok(router.default.actions.Fetch_article, 'plain articles and RSS items must still fetch HTML by default');
+
+  // Every branch must write the same shared variable so Foundry_extract has one stable place to read from.
+  assert.equal(actions.get('Set_extracted_text_youtube').inputs.name, 'ExtractedText');
+  assert.equal(actions.get('Set_extracted_text_podcast').inputs.name, 'ExtractedText');
+  assert.equal(actions.get('Set_extracted_text_article').inputs.name, 'ExtractedText');
+  assert.equal(actions.get('Foundry_extract').inputs.parameters.body.messages[1].content.includes("variables('ExtractedText')"), true);
+  assert.deepEqual(actions.get('Foundry_extract').runAfter, { Content_kind_router: ['Succeeded'] });
+
+  const initial = flow.actions.Initialize_arrays.inputs.variables;
+  assert.ok(initial.some(variable => variable.name === 'ExtractedText' && variable.type === 'string'), 'ExtractedText must be declared once at the top level');
+
+  // Video_ID must be safely evaluable for every kind (never references a skipped action's output).
+  assert.doesNotMatch(actions.get('Video_ID').inputs, /outputs\('Fetch_transcript'\)|body\('Transcribe_audio'\)/);
+  assert.match(actions.get('Video_ID').inputs, /100000002/);
+
+  const publicationValue = actions.get('Add_publication').inputs.value;
+  assert.match(publicationValue, /'source_type'/);
+  assert.match(publicationValue, /'source_video_id'/);
+  assert.match(publicationValue, /outputs\('Video_ID'\)/);
 });

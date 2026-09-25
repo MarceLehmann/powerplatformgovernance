@@ -8,18 +8,18 @@ export const config = {
   intervalMinutes: 5,
 };
 
-export const kind = { article: 100000000, rss: 100000001 };
+export const kind = { article: 100000000, rss: 100000001, youtube: 100000002, podcast: 100000003 };
 export const approval = { pending: 100000000, approved: 100000001, rejected: 100000002 };
 export const processing = { ready: 100000000, published: 100000001, review: 100000002, error: 100000003, queued: 100000004 };
 
 export function isEligible(record) {
   return record.statecode === 0 && record.new_enabled === true &&
     record.new_approval === approval.approved &&
-    [kind.article, kind.rss].includes(record.new_kind) &&
+    [kind.article, kind.rss, kind.youtube, kind.podcast].includes(record.new_kind) &&
     [processing.ready, processing.error].includes(record.new_processing);
 }
 
-export const eligibleFilter = `statecode eq 0 and new_enabled eq true and new_approval eq ${approval.approved} and (new_kind eq ${kind.article} or new_kind eq ${kind.rss}) and (new_processing eq ${processing.ready} or new_processing eq ${processing.error})`;
+export const eligibleFilter = `statecode eq 0 and new_enabled eq true and new_approval eq ${approval.approved} and (new_kind eq ${kind.article} or new_kind eq ${kind.rss} or new_kind eq ${kind.youtube} or new_kind eq ${kind.podcast}) and (new_processing eq ${processing.ready} or new_processing eq ${processing.error})`;
 
 const label = (text) => ({ LocalizedLabels: [{ Label: text, LanguageCode: 1033 }] });
 const base = (name, title, required = false) => ({
@@ -53,8 +53,8 @@ export const tableDefinition = {
   PrimaryNameAttribute: 'new_name', IsAuditEnabled: { Value: true },
   Attributes: [
     { ...text('name', 'Name'), IsPrimaryName: true, RequiredLevel: { Value: 'ApplicationRequired' } },
-    { ...text('contenturl', 'Article or RSS URL', 2048, 'Url'), RequiredLevel: { Value: 'ApplicationRequired' } },
-    choice('kind', 'Source type', { Article: kind.article, RSS: kind.rss }, kind.article),
+    { ...text('contenturl', 'Article, RSS, YouTube or podcast URL', 2048, 'Url'), RequiredLevel: { Value: 'ApplicationRequired' } },
+    choice('kind', 'Source type', { Article: kind.article, RSS: kind.rss, YouTube: kind.youtube, Podcast: kind.podcast }, kind.article),
     choice('approval', 'Approval', { 'Awaiting approval': approval.pending, Approved: approval.approved, Rejected: approval.rejected }, approval.pending),
     boolean('enabled', 'Processing enabled'),
     choice('processing', 'Processing status', { Ready: processing.ready, 'Published to GitHub': processing.published, 'Needs review': processing.review, Error: processing.error, 'Awaiting GitHub result': processing.queued }, processing.ready),
@@ -147,22 +147,46 @@ export function flowDefinition() {
         type: 'Foreach', foreach: "@variables('Candidates')", runAfter: {}, runtimeConfiguration: { concurrency: { repetitions: 1 } },
         actions: {
           Article_URL: compose("@if(startsWith(toLower(trim(items('For_each_article')?['primaryLink'])), 'http'), trim(items('For_each_article')?['primaryLink']), concat(uriScheme(outputs('Source_URL')), '://', uriHost(outputs('Source_URL')), if(startsWith(trim(items('For_each_article')?['primaryLink']), '/'), '', '/'), trim(items('For_each_article')?['primaryLink'])))"),
-          Try_article: { type: 'Scope', runAfter: after('Article_URL'), actions: {
+          Video_ID: compose(`@if(not(equals(items('For_each_source')?['new_kind'], ${kind.youtube})), '', if(contains(outputs('Article_URL'), 'v='), first(split(last(split(outputs('Article_URL'), 'v=')), '&')), if(contains(outputs('Article_URL'), 'youtu.be/'), first(split(last(split(outputs('Article_URL'), 'youtu.be/')), '?')), if(contains(outputs('Article_URL'), '/shorts/'), first(split(last(split(outputs('Article_URL'), '/shorts/')), '?')), ''))))`, 'Article_URL'),
+          Try_article: { type: 'Scope', runAfter: after('Video_ID'), actions: {
             Same_approved_host: condition("@and(equals(toLower(uriHost(outputs('Article_URL'))), toLower(uriHost(outputs('Source_URL')))), equals(uriScheme(outputs('Article_URL')), 'https'), equals(uriPort(outputs('Article_URL')), 443), not(contains(outputs('Article_URL'), '@')))", {
-              Fetch_article: { type: 'Http', inputs: { method: 'GET', uri: "@outputs('Article_URL')", headers: { Accept: 'text/html', 'User-Agent': 'PowerPlatformGovernance/1.0' }, retryPolicy: { type: 'exponential', count: 2, interval: 'PT10S' } }, runAfter: {}, limit: { timeout: 'PT1M' } },
-              HTML_to_text: connector('conversion', 'HtmlToText', { Content: "@take(string(body('Fetch_article')), 600000)" }, 'Fetch_article'),
+              Content_kind_router: {
+                type: 'Switch', runAfter: {},
+                expression: `@if(equals(items('For_each_source')?['new_kind'], ${kind.youtube}), 'youtube', if(equals(items('For_each_source')?['new_kind'], ${kind.podcast}), 'podcast', 'text'))`,
+                cases: {
+                  Youtube_transcript: { case: 'youtube', actions: {
+                    Fetch_transcript: { type: 'Http', inputs: { method: 'GET', uri: "@concat('https://www.youtube.com/api/timedtext?fmt=json3&lang=en&v=', outputs('Video_ID'))", headers: { Accept: 'application/json' }, retryPolicy: { type: 'exponential', count: 2, interval: 'PT10S' } }, runAfter: {}, limit: { timeout: 'PT1M' } },
+                    Transcript_segments: { type: 'Select', inputs: { from: "@coalesce(body('Fetch_transcript')?['events'], createArray())", select: "@coalesce(item()?['segs'][0]?['utf8'], ' ')" }, runAfter: after('Fetch_transcript') },
+                    Set_extracted_text_youtube: set('ExtractedText', "@join(body('Transcript_segments'), ' ')", 'Transcript_segments'),
+                  } },
+                  // Podcast transcription via the Azure AI Foundry custom connector. The operationId
+                  // 'AudioTranscription' and the audio/deploymentId parameter names below are a best
+                  // guess and MUST be confirmed against the connector's actual operations before the
+                  // first podcast source is approved - see check-site.rb / repo notes for the flag.
+                  Podcast_transcript: { case: 'podcast', actions: {
+                    Fetch_audio: { type: 'Http', inputs: { method: 'GET', uri: "@outputs('Article_URL')", retryPolicy: { type: 'exponential', count: 2, interval: 'PT15S' } }, runAfter: {}, limit: { timeout: 'PT4M' } },
+                    Transcribe_audio: connector('foundry', 'AudioTranscription', { deploymentId: 'whisper', audio: "@body('Fetch_audio')" }, 'Fetch_audio'),
+                    Set_extracted_text_podcast: set('ExtractedText', "@coalesce(body('Transcribe_audio')?['text'], '')", 'Transcribe_audio'),
+                  } },
+                },
+                default: { actions: {
+                  Fetch_article: { type: 'Http', inputs: { method: 'GET', uri: "@outputs('Article_URL')", headers: { Accept: 'text/html', 'User-Agent': 'PowerPlatformGovernance/1.0' }, retryPolicy: { type: 'exponential', count: 2, interval: 'PT10S' } }, runAfter: {}, limit: { timeout: 'PT1M' } },
+                  HTML_to_text: connector('conversion', 'HtmlToText', { Content: "@take(string(body('Fetch_article')), 600000)" }, 'Fetch_article'),
+                  Set_extracted_text_article: set('ExtractedText', "@body('HTML_to_text')", 'HTML_to_text'),
+                } },
+              },
               Foundry_extract: connector('foundry', 'ChatCompletion', {
                 deploymentId: 'model-router', 'api-version': '2024-08-01-preview', body: { messages: [
                   { role: 'system', content: extractionPrompt },
-                  { role: 'user', content: "@string(addProperty(addProperty(addProperty(json('{}'), 'url', outputs('Article_URL')), 'feed', items('For_each_article')), 'page_text', take(body('HTML_to_text'), 30000)))" },
+                  { role: 'user', content: "@string(addProperty(addProperty(addProperty(json('{}'), 'url', outputs('Article_URL')), 'feed', items('For_each_article')), 'page_text', take(variables('ExtractedText'), 30000)))" },
                 ], response_format: { type: 'json_object' } },
-              }, 'HTML_to_text'),
+              }, 'Content_kind_router'),
               Parse_assessment: { type: 'ParseJson', runAfter: after('Foundry_extract'), inputs: {
                 content: "@body('Foundry_extract')?['choices']?[0]?['message']?['content']",
                 schema: { type: 'object', required: ['publishable', 'reason'], properties: { publishable: { type: 'boolean' }, reason: { type: 'string', maxLength: 200 } } },
               } },
               Relevant_article: condition("@equals(body('Parse_assessment')?['publishable'], true)", {
-                Add_publication: { type: 'AppendToArrayVariable', runAfter: {}, inputs: { name: 'Publications', value: "@addProperty(body('Parse_assessment'), 'source_url', outputs('Article_URL'))" } },
+                Add_publication: { type: 'AppendToArrayVariable', runAfter: {}, inputs: { name: 'Publications', value: `@addProperty(addProperty(addProperty(body('Parse_assessment'), 'source_url', outputs('Article_URL')), 'source_type', if(equals(items('For_each_source')?['new_kind'], ${kind.youtube}), 'youtube', if(equals(items('For_each_source')?['new_kind'], ${kind.podcast}), 'podcast', 'article'))), 'source_video_id', outputs('Video_ID'))` } },
               }, {}, 'Parse_assessment'),
             }, {
               Require_approved_host: { type: 'ParseJson', inputs: { content: { approved: false }, schema: { type: 'object', properties: { approved: { type: 'boolean', enum: [true] } }, required: ['approved'] } }, runAfter: {} },
@@ -233,7 +257,7 @@ export function flowDefinition() {
     parameters: { $authentication: { defaultValue: {}, type: 'SecureObject' }, $connections: { defaultValue: {}, type: 'Object' } },
     triggers: { Every_5_minutes: { type: 'Recurrence', recurrence: { frequency: 'Minute', interval: config.intervalMinutes }, runtimeConfiguration: { concurrency: { runs: 1 } } } },
     actions: {
-      Initialize_arrays: { type: 'InitializeVariable', runAfter: {}, inputs: { variables: [{ name: 'Candidates', type: 'array', value: [] }, { name: 'Publications', type: 'array', value: [] }, { name: 'SeenIDs', type: 'array', value: [] }] } },
+      Initialize_arrays: { type: 'InitializeVariable', runAfter: {}, inputs: { variables: [{ name: 'Candidates', type: 'array', value: [] }, { name: 'Publications', type: 'array', value: [] }, { name: 'SeenIDs', type: 'array', value: [] }, { name: 'ExtractedText', type: 'string', value: '' }] } },
       List_sources: { ...connector('dataverse', 'ListRecords', { entityName: config.entitySet, $filter: `(${eligibleFilter}) or new_processing eq ${processing.queued} or new_approval eq ${approval.pending}`, $orderby: 'createdon asc' }, 'Initialize_arrays'), runtimeConfiguration: { paginationPolicy: { minimumItemCount: 5000 } } },
       For_each_source: { type: 'Foreach', foreach: "@body('List_sources')?['value']", runAfter: after('List_sources'), runtimeConfiguration: { concurrency: { repetitions: 1 } }, actions: {
         Try_source: { type: 'Scope', runAfter: {}, actions: {

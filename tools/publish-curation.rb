@@ -10,6 +10,8 @@ require 'fileutils'
 module CurationPublisher
   TAGS = %w[governance security compliance dlp environments alm ownership coe dataverse power-apps power-automate copilot-studio].freeze
   TRACKING = /\A(?:utm_.+|fbclid|gclid|msclkid)\z/i
+  SOURCE_TYPES = %w[article youtube podcast].freeze
+  YOUTUBE_ID = /\A[A-Za-z0-9_-]{11}\z/
 
   def self.text(value, maximum, optional: false)
     raise ArgumentError, 'Expected plain text' unless value.is_a?(String)
@@ -120,6 +122,15 @@ module CurationPublisher
       value = source_date(article[field])
       source[field] = value if value
     end
+    source_type = text(article.fetch('source_type', 'article'), 20, optional: true)
+    source_type = 'article' if source_type.empty?
+    raise ArgumentError, 'Invalid source type' unless SOURCE_TYPES.include?(source_type)
+    source['source_type'] = source_type
+    if source_type == 'youtube'
+      video_id = text(article.fetch('source_video_id', ''), 20)
+      raise ArgumentError, 'Invalid YouTube video ID' unless video_id.match?(YOUTUBE_ID)
+      source['source_video_id'] = video_id
+    end
     identifier = Digest::SHA256.hexdigest(key(source_url))[0, 24]
     public_credit = credit(credit_data)
     card_data = card(article, identifier)
@@ -142,7 +153,8 @@ module CurationPublisher
       frontmatter['submitted_by'] = public_credit if public_credit
       frontmatter['publisher_disclosure'] = locale == 'de' ? 'Beide Publikationen werden von Marcel Lehmann herausgegeben.' : 'Both publications are edited by Marcel Lehmann.' if parsed.host.delete_prefix('www.') == 'powerplatformtip.com'
       heading = locale == 'de' ? 'Bedeutung für Governance' : 'Governance takeaway'
-      content = "#{YAML.dump(frontmatter)}---\n\n## TL;DR\n\n#{body_text(summary)}\n\n{% include curated-attribution.html %}\n\n## #{heading}\n\n#{body_text(takeaway)}\n"
+      video_embed = source_type == 'youtube' ? "\n{% include source-video-embed.html %}\n" : ''
+      content = "#{YAML.dump(frontmatter)}---\n\n## TL;DR\n\n#{body_text(summary)}\n\n{% include curated-attribution.html %}\n#{video_embed}\n## #{heading}\n\n#{body_text(takeaway)}\n"
       ["#{now.utc.strftime('%Y-%m-%d')}-curated-#{identifier}-#{locale}.md", content]
     end
     { 'files' => files, 'card' => card_data }
