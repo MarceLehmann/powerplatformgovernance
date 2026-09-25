@@ -168,6 +168,15 @@ test('YouTube and podcast sources are eligible and route through the content-kin
   // regardless of source kind, since the router above depends on it being always-evaluated.
   assert.doesNotMatch(actions.get('Video_ID').inputs, /new_kind/);
 
+  // Confirmed against the live Azure AI Foundry connector's swagger (not a guess): operationId
+  // TranscribeAudio, api-version 2024-10-21, and audio must be the base64 $content of the
+  // fetched file (the connector takes plain JSON, not multipart/form-data).
+  const transcribe = actions.get('Transcribe_audio');
+  assert.equal(transcribe.inputs.host.operationId, 'TranscribeAudio');
+  assert.equal(transcribe.inputs.parameters['api-version'], '2024-10-21');
+  assert.equal(transcribe.inputs.parameters.deploymentId, 'whisper');
+  assert.equal(transcribe.inputs.parameters.body.audio, "@body('Fetch_audio')?['$content']");
+
   // Every branch must write the same shared variable so Foundry_extract has one stable place to read from.
   assert.equal(actions.get('Set_extracted_text_youtube').inputs.name, 'ExtractedText');
   assert.equal(actions.get('Set_extracted_text_podcast').inputs.name, 'ExtractedText');

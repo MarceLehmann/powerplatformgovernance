@@ -163,13 +163,14 @@ export function flowDefinition() {
                     Transcript_segments: { type: 'Select', inputs: { from: "@coalesce(body('Fetch_transcript')?['events'], createArray())", select: "@coalesce(item()?['segs'][0]?['utf8'], ' ')" }, runAfter: after('Fetch_transcript') },
                     Set_extracted_text_youtube: set('ExtractedText', "@join(body('Transcript_segments'), ' ')", 'Transcript_segments'),
                   } },
-                  // Podcast transcription via the Azure AI Foundry custom connector. The operationId
-                  // 'AudioTranscription' and the audio/deploymentId parameter names below are a best
-                  // guess and MUST be confirmed against the connector's actual operations before the
-                  // first podcast source is approved - see check-site.rb / repo notes for the flag.
+                  // Podcast transcription via the Azure AI Foundry custom connector (confirmed against
+                  // the connector's live swagger: operationId TranscribeAudio, deploymentId 'whisper',
+                  // api-version 2024-10-21). The connector takes plain JSON, not multipart - audio must
+                  // be a base64 string with no data: prefix, which is exactly what a native HTTP action's
+                  // $content property gives for a binary response.
                   Podcast_transcript: { case: 'podcast', actions: {
                     Fetch_audio: { type: 'Http', inputs: { method: 'GET', uri: "@outputs('Article_URL')", retryPolicy: { type: 'exponential', count: 2, interval: 'PT15S' } }, runAfter: {}, limit: { timeout: 'PT4M' } },
-                    Transcribe_audio: connector('foundry', 'AudioTranscription', { deploymentId: 'whisper', audio: "@body('Fetch_audio')" }, 'Fetch_audio'),
+                    Transcribe_audio: connector('foundry', 'TranscribeAudio', { deploymentId: 'whisper', 'api-version': '2024-10-21', body: { audio: "@body('Fetch_audio')?['$content']" } }, 'Fetch_audio'),
                     Set_extracted_text_podcast: set('ExtractedText', "@coalesce(body('Transcribe_audio')?['text'], '')", 'Transcribe_audio'),
                   } },
                 },
