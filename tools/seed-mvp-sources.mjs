@@ -1,6 +1,11 @@
-// Bulk-creates new_governancesource RSS records for Power Platform MVP blogs whose feed
-// was verified to actually respond with feed content (see tools/mvp-blog-sources.json and
-// the verification notes in the commit that added this script).
+// Bulk-creates new_governancesource RSS records for Power Platform MVP blogs and YouTube
+// channels whose feed was verified to actually respond with feed content (see
+// tools/mvp-blog-sources.json, tools/mvp-youtube-channels.json and the verification notes
+// in the commits that added this script).
+//
+// The YouTube channel feeds list individual video uploads as feed items - those get proper
+// transcript handling (not an HTML scrape) because automation.mjs's Content_kind_router now
+// detects a YouTube URL from the item's own link, not just the source's declared kind.
 //
 // These are curated by Marcel directly, not public submissions, so they're created already
 // approved and enabled - they bypass the AI Foundry submission gate (that gate expects a
@@ -16,7 +21,11 @@ import { readFileSync } from 'node:fs';
 import { config, kind, approval, processing } from './automation.mjs';
 
 const dryRun = process.argv.includes('--dry-run');
-const sources = JSON.parse(readFileSync(new URL('./mvp-blog-sources.json', import.meta.url), 'utf8'));
+const blogs = JSON.parse(readFileSync(new URL('./mvp-blog-sources.json', import.meta.url), 'utf8'))
+  .map(entry => ({ label: `${entry.name} - ${entry.tech}`, xmlUrl: entry.xmlUrl }));
+const youtubeChannels = JSON.parse(readFileSync(new URL('./mvp-youtube-channels.json', import.meta.url), 'utf8'))
+  .map(entry => ({ label: `${entry.name} - YouTube channel`, xmlUrl: entry.feedUrl }));
+const sources = [...blogs, ...youtubeChannels];
 
 function getToken() {
   const token = execFileSync('az', ['account', 'get-access-token', '--resource', config.organization, '--query', 'accessToken', '-o', 'tsv'], { shell: true }).toString().trim();
@@ -53,7 +62,7 @@ async function main() {
       continue;
     }
     const record = {
-      new_name: `${source.name} - ${source.tech}`.slice(0, 100),
+      new_name: source.label.slice(0, 100),
       new_contenturl: source.xmlUrl,
       new_kind: kind.rss,
       new_approval: approval.approved,

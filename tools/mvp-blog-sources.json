@@ -3,654 +3,1417 @@
     "name": "Anders Jensen",
     "tech": "Copilot Studio;M365 Copilot",
     "htmlUrl": "https://andersjensen.org",
-    "xmlUrl": "https://andersjensen.org/feed/"
+    "xmlUrl": "https://andersjensen.org/feed/",
+    "company": "andersjensenorg",
+    "awardCategory": "Business Applications;M365",
+    "yearsInProgram": "5",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/a12190a4-c755-ed11-9561-000d3a197333",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/a12190a4-c755-ed11-9561-000d3a197333",
+    "bio": "Microsoft 365 Copilot, Copilot Studio and Power Automate Instructor — Anders Jensen is a Microsoft MVP, instructor, YouTuber, and co-founder of andersjensenorg. He specializes in practical training in Microsoft 365 Copilot, Copilot Studio, Power Automate, AI, and automation.…"
   },
   {
     "name": "Andreas Adner",
     "tech": "Copilot Studio",
     "htmlUrl": "https://nullpointer.se/",
-    "xmlUrl": "https://nullpointer.se/feed.xml"
+    "xmlUrl": "https://nullpointer.se/feed.xml",
+    "company": "Mavrix Consulting",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "2",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/0de6c0bc-3659-480e-9a13-32134326a3f2?639160317278649356",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/0de6c0bc-3659-480e-9a13-32134326a3f2",
+    "bio": "Helping organizations unlock the full potential of the Microsoft AI tech stack. — With 15 years of experience building solutions on Dynamics 365 and Power Platform, my main focus is now on Microsoft AI — creating intelligent agents that can reason, interact, and take meaningful…"
   },
   {
     "name": "Andrew Ly",
     "tech": "Power Apps",
     "htmlUrl": "https://www.365lyf.com",
-    "xmlUrl": "https://www.365lyf.com/feed/"
+    "xmlUrl": "https://www.365lyf.com/feed/",
+    "company": "Informotion",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "10",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/4fb9b452-a004-e811-8104-3863bb2bca60",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/4fb9b452-a004-e811-8104-3863bb2bca60",
+    "bio": "10x Microsoft MVP, 6x FastTrack Recognized Solution Architect — Andrew has over 25 years of experience across the Microsoft stack, and specializes in applications architecture on the Microsoft Power Platform and Dynamics 365. Andrew spent over nine years working in the…"
   },
   {
     "name": "Anouck Fierens",
     "tech": "SharePoint;Power Automate",
     "htmlUrl": "https://365-anouck.be",
-    "xmlUrl": "https://365-anouck.be/feed/"
+    "xmlUrl": "https://365-anouck.be/feed/",
+    "company": "ANFI Solutions CommV",
+    "awardCategory": "M365;Business Applications",
+    "yearsInProgram": "4",
+    "twitter": "https://twitter.com/anouckfierens",
+    "photoUrl": "https://images.mvp.microsoft.com/0520b388-3988-411e-9717-b2d0cab1529a?638762660455170044",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/0520b388-3988-411e-9717-b2d0cab1529a",
+    "bio": "M365 Consultant working with Power Platform and SharePoint — Anouck is specializing in Microsoft 365 and the Power Platform. She has more than 14 years of experience working with Microsoft technology, starting as a SharePoint developer and evolving to a modern workplace…"
   },
   {
     "name": "Anouck Fierens",
     "tech": "SharePoint;Power Automate",
     "htmlUrl": "https://365-anouck.be",
-    "xmlUrl": "https://feeds.transistor.fm/fusiontalk"
+    "xmlUrl": "https://feeds.transistor.fm/fusiontalk",
+    "company": "ANFI Solutions CommV",
+    "awardCategory": "M365;Business Applications",
+    "yearsInProgram": "4",
+    "twitter": "https://twitter.com/anouckfierens",
+    "photoUrl": "https://images.mvp.microsoft.com/0520b388-3988-411e-9717-b2d0cab1529a?638762660455170044",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/0520b388-3988-411e-9717-b2d0cab1529a",
+    "bio": "M365 Consultant working with Power Platform and SharePoint — Anouck is specializing in Microsoft 365 and the Power Platform. She has more than 14 years of experience working with Microsoft technology, starting as a SharePoint developer and evolving to a modern workplace…"
   },
   {
     "name": "Aurelien CLERE",
     "tech": "Power Apps;AI ERP",
     "htmlUrl": "https://powerazure365.com",
-    "xmlUrl": "https://www.powerazure365.com/blog-1?format=rss"
+    "xmlUrl": "https://www.powerazure365.com/blog-1?format=rss",
+    "company": "Dynagile",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "8",
+    "twitter": "https://twitter.com/aurelien_clere",
+    "photoUrl": "https://images.mvp.microsoft.com/590e6cec-1f89-ea11-a812-000d3a8ccaf5?639034016300971757",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/590e6cec-1f89-ea11-a812-000d3a8ccaf5",
+    "bio": "CTO - Global Technical Architect — With over 15 years of experience in the Dynamics universe (ERP, CRM), I am a Global Technical Architect, CTO, and Associate Director at Dynagile Consulting, a leading partner for Microsoft Business Applications. I am also a Microsoft MVP…"
   },
   {
     "name": "Bhushan Gawale",
     "tech": "Copilot Studio",
     "htmlUrl": "https://bhushangawale.com/",
-    "xmlUrl": "https://bhushangawale.com/feed/"
+    "xmlUrl": "https://bhushangawale.com/feed/",
+    "company": "Rapid Circle",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "2",
+    "twitter": "https://twitter.com/bhushangawale",
+    "photoUrl": "https://images.mvp.microsoft.com/416c8645-dd55-4098-8f8c-0d01546e7254?638869548971011132",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/416c8645-dd55-4098-8f8c-0d01546e7254",
+    "bio": "Chief AI Officer | TOGAF® 9 | Azure Architect — Bhushan Gawale is a Chief AI Officer at Rapid Circle, a leading digital transformation partner for Microsoft cloud solutions. He has over 17 years of experience in enterprise applications design and development, spanning diverse…"
   },
   {
     "name": "Bijay Kumar Sahoo",
     "tech": "Power Apps;Power Automate",
     "htmlUrl": "https://www.spguides.com/author/fewlines4biju/",
-    "xmlUrl": "https://www.spguides.com/author/fewlines4biju/feed/"
+    "xmlUrl": "https://www.spguides.com/author/fewlines4biju/feed/",
+    "company": "TSInfo Technologies Pvt Ltd",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "13",
+    "twitter": "https://twitter.com/fewlines4biju",
+    "photoUrl": "https://images.mvp.microsoft.com/b59207f9-3c9a-e411-93f2-9cb65495d3c4?639197793391825604",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/b59207f9-3c9a-e411-93f2-9cb65495d3c4",
+    "bio": "Business Applications MVP | Power Platform Expert | Founder TSinfo Technologies — I am a Microsoft Business Applications MVP based in India, specializing in Microsoft 365, SharePoint, and the Power Platform (Power Apps, Power Automate, Power BI, Copilot Studio, Power Pages,…"
   },
   {
     "name": "Blake Scarlavai",
     "tech": "Power Automate;Power Apps",
     "htmlUrl": "https://powerplatstack.substack.com/",
-    "xmlUrl": "https://powerplatstack.substack.com/feed"
+    "xmlUrl": "https://powerplatstack.substack.com/feed",
+    "company": "Root16 Reply",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "2",
+    "twitter": "https://twitter.com/bscarlav",
+    "photoUrl": "https://images.mvp.microsoft.com/4ece74b7-9e59-4f96-8955-933ab237134a?639079223916620369",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/4ece74b7-9e59-4f96-8955-933ab237134a",
+    "bio": "Principal Consultant specializing in Microsoft Power Platform, D365 & Copilot AI — Blake Scarlavai is a Principal Consultant at Root16 Reply with over 18 years of experience in the Microsoft ecosystem, specializing in Dynamics 365, Power Platform, and Copilot Studio. His…"
   },
   {
     "name": "Bülent Altinsoy",
     "tech": "Power Apps;Copilot Studio",
     "htmlUrl": "https://thatalohaguy.substack.com/",
-    "xmlUrl": "https://thatalohaguy.substack.com/feed"
+    "xmlUrl": "https://thatalohaguy.substack.com/feed",
+    "company": "Avanade",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "3",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/fd9af9d8-ce1a-4052-988a-5fc7faf35b67?638713554422835232",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/fd9af9d8-ce1a-4052-988a-5fc7faf35b67",
+    "bio": "Solution Architect | Entertainer | Trainer | Speaker | Community Leader — Bülent has worked at Avande for 15 years, where he drives Copilot and Copilot Studio. He is passionate about sharing his knowledge and insights on Copilot and the Power Platform."
   },
   {
     "name": "Carlos Javier Sosa Marquina",
     "tech": "Power Apps;Power Automate",
     "htmlUrl": "https://carlosjsosam.blogspot.com/",
-    "xmlUrl": "https://carlosjsosam.blogspot.com/feeds/posts/default?alt=rss"
+    "xmlUrl": "https://carlosjsosam.blogspot.com/feeds/posts/default?alt=rss",
+    "company": "knowmad mood",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "2",
+    "twitter": "https://twitter.com/cjsosam",
+    "photoUrl": "https://images.mvp.microsoft.com/70fa29ab-34e7-49b9-8279-f46453a8468e?638923396976350263",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/70fa29ab-34e7-49b9-8279-f46453a8468e",
+    "bio": "Power Platform Architect — Technology enthusiast with more than 25 years of experience in development, architecture and administration on SharePoint technologies, and other Microsoft development projects. He works at knowmad mood (previosly atSistemas) as Power Platform…"
   },
   {
     "name": "Charles Lakes",
     "tech": "Power Apps;Power Automate",
     "htmlUrl": "https://charleslakes.com/",
-    "xmlUrl": "https://charleslakes.com/feed/"
+    "xmlUrl": "https://charleslakes.com/feed/",
+    "company": "The II Lakes Group",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "3",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/412a8360-f9be-4f25-a54d-be349efa1197?639199932242084016",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/412a8360-f9be-4f25-a54d-be349efa1197",
+    "bio": "BizApps Power Apps MVP | Creative Solution Architect | Low-code Advocate — Charles is a technical speaker and low-code advocate with a pro-code background, specializing in transforming business data architecture. With a passion for innovation, he shares his expertise to solve…"
   },
   {
     "name": "Charles Sexton",
     "tech": "Power Apps",
     "htmlUrl": "https://www.charlessexton.com",
-    "xmlUrl": "https://www.charlessexton.com/blog/rss.xml"
+    "xmlUrl": "https://www.charlessexton.com/blog/rss.xml",
+    "company": "Capgemini",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "4",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/f7269f87-669e-4b97-bf3a-d7055f83018a?638533551148258438",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/f7269f87-669e-4b97-bf3a-d7055f83018a",
+    "bio": "Power Platform Solution Architect | YouTuber | Speaker | Blogger — A web developer-turned-Power Platform Solutions Architect. Charlie is equal parts creative and logical, loving design and enjoying solving problems. One of his greatest skills is the ability to simplify, which…"
   },
   {
     "name": "Christian Abata",
     "tech": "Power Automate;Microsoft 365",
     "htmlUrl": "https://christianabata.com/",
-    "xmlUrl": "https://christianabata.com/feed/"
+    "xmlUrl": "https://christianabata.com/feed/",
+    "company": "Christian Abata",
+    "awardCategory": "Business Applications;M365",
+    "yearsInProgram": "7",
+    "twitter": "https://twitter.com/christian_abata",
+    "photoUrl": "https://images.mvp.microsoft.com/c6593757-ef18-eb11-a813-000d3a8dfe0d",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/c6593757-ef18-eb11-a813-000d3a8dfe0d",
+    "bio": "FastTrack Power Automate (RPA) Architect — Leading digital transformation and adoption projects with Office 365 tools. Power Platform Architect responsible for guiding clients across LATAM in their transition to using Low-code tools that directly contribute to their business…"
   },
   {
     "name": "Clive Oldridge",
     "tech": "Power Apps",
     "htmlUrl": "https://www.clive-oldridge.com",
-    "xmlUrl": "https://www.clive-oldridge.com/feed.xml"
+    "xmlUrl": "https://www.clive-oldridge.com/feed.xml",
+    "company": "DXC",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "3",
+    "twitter": null,
+    "photoUrl": null,
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/bf535ff2-899f-40a0-a3cc-094fed0a3a18",
+    "bio": "Power platform solution architect — I'm a bee keeping family man that spends his work life advocating for clean, fit for purpose technical architecture grounded by Microsoft technology. The Power Platform has been the foundation over a decade of my career and not once have I…"
   },
   {
     "name": "Daniel Cordoba",
     "tech": "Copilot Studio",
     "htmlUrl": "https://www.daniccardenas.com/",
-    "xmlUrl": "https://dynamicsduty.com/feed.xml"
+    "xmlUrl": "https://dynamicsduty.com/feed.xml",
+    "company": "Arbentia",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "2",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/9d3e4664-c5a8-4523-aa34-811496526dd2?638896310073394198",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/9d3e4664-c5a8-4523-aa34-811496526dd2",
+    "bio": "Arquitecto de software enfocado en Power Platform, Dynamics 365 e IA — Consultor tecnológico especializado en tecnologías Microsoft. Trabajo como arquitecto de software, definiendo arquitecturas, buenas prácticas y apoyando en la entrega de soluciones. Programo siempre que puedo…"
   },
   {
     "name": "David Vachala",
     "tech": "Power Apps;Copilot Studio",
     "htmlUrl": "https://easylowcode.fr",
-    "xmlUrl": "https://easylowcode.fr/feed/"
+    "xmlUrl": "https://easylowcode.fr/feed/",
+    "company": "WAKERS",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "5",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/c1b201c3-ff3e-ed11-bba3-000d3a197333",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/c1b201c3-ff3e-ed11-bba3-000d3a197333",
+    "bio": "Business Applications & Cloud Solutions Architect with IA — Je suis spécialisé sur les technologies Microsoft depuis de nombreuses années et practice Leader Business Applications. J'accompagne tout type d'organisation à trouver des solutions efficaces dans l'écosystème Microsoft…"
   },
   {
     "name": "Diana Birkelbach",
     "tech": "Power Apps",
     "htmlUrl": "https://dianabirkelbach.wordpress.com/",
-    "xmlUrl": "https://dianabirkelbach.wordpress.com/feed/"
+    "xmlUrl": "https://dianabirkelbach.wordpress.com/feed/",
+    "company": "ORBIS SE",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "7",
+    "twitter": "https://twitter.com/DianaBirkelbach",
+    "photoUrl": "https://images.mvp.microsoft.com/a6293911-f448-eb11-a813-000d3a8dfe0d",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/a6293911-f448-eb11-a813-000d3a8dfe0d",
+    "bio": "Power Platform Developer | PCFLady | Blogger — I'm a Principal Software Architect @ORBIS SE Germany. Over 25 years of experience in web development, working with Dynamics 365 and Power Platform right from the beginning. I'm focused on the pro-dev aspects of the Power Platform,…"
   },
   {
     "name": "Divya Akula",
     "tech": "Copilot Studio",
     "htmlUrl": "https://www.divyaakula.com/",
-    "xmlUrl": "https://www.divyaakula.com/feed.xml"
+    "xmlUrl": "https://www.divyaakula.com/feed.xml",
+    "company": "Sulava MEA",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "4",
+    "twitter": "https://twitter.com/_divyaakula",
+    "photoUrl": "https://images.mvp.microsoft.com/4a3a580e-34ca-4df4-9f81-b7adaa2e79da?638532788735812915",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/4a3a580e-34ca-4df4-9f81-b7adaa2e79da",
+    "bio": "Solutions Architect | Technology Enthusiast |AI to Responsible Development — I bring my expertise in solution architecture to the table, constantly exploring new technologies, particularly those related to AI. My true focus lies in the ethical implications of AI, especially its…"
   },
   {
     "name": "Eickhel Mendoza",
     "tech": "Power Apps",
     "htmlUrl": "https://powernimbus.com/",
-    "xmlUrl": "https://powernimbus.com/feed/"
+    "xmlUrl": "https://powernimbus.com/feed/",
+    "company": "Intelequia Technologies, S.L.",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "8",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/8a5d43c1-20fa-e911-a99a-000d3a1378f6",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/8a5d43c1-20fa-e911-a99a-000d3a1378f6",
+    "bio": "Author | Microsoft Business Apps Evangelist | MCT | Business Apps Manager — Eickhel Mendoza is a Microsoft Business Applications MVP with extensive experience in project management, Microsoft Azure development, and Microsoft Power Platform technologies. He is also the author of…"
   },
   {
     "name": "Eric Shupps",
     "tech": "Microsoft 365;Power Automate",
     "htmlUrl": "https://www.ericshupps.com",
-    "xmlUrl": "https://www.ericshupps.com/feed/"
+    "xmlUrl": "https://www.ericshupps.com/feed/",
+    "company": "Apptigent",
+    "awardCategory": "M365;Business Applications",
+    "yearsInProgram": "20",
+    "twitter": "https://twitter.com/eshupps",
+    "photoUrl": "https://images.mvp.microsoft.com/bb2988ae-3c9a-e411-93f2-9cb65495d3c4",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/bb2988ae-3c9a-e411-93f2-9cb65495d3c4",
+    "bio": "The SharePoint Cowboy — Eric Shupps is the Chief Architect of Apptigent, a leading provider of cloud-based enterprise software solutions. Eric has worked in th eindustry for more than 30 years, primarily focused on Microsoft software and services, as a consultant, administrator,…"
   },
   {
     "name": "Essam Shaaban",
     "tech": "Power Apps",
     "htmlUrl": "https://essamshaaban001.blogspot.com/",
-    "xmlUrl": "https://essamshaaban001.blogspot.com/feeds/posts/default?alt=rss"
+    "xmlUrl": "https://essamshaaban001.blogspot.com/feeds/posts/default?alt=rss",
+    "company": "St. Jude Children's Research Hospital",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "4",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/480e02e6-5d73-4ace-bf70-43c208560dcd?638501800027224968",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/480e02e6-5d73-4ace-bf70-43c208560dcd",
+    "bio": "Senior Software Engineer — I’m a Microsoft MVP and Senior Software Engineer, with a strong focus on the Microsoft Power Platform. I specialize in building scalable, enterprise-grade solutions using Power Apps, Power Automate, Power BI, Dataverse, and AI Builder to support…"
   },
   {
     "name": "Fausto Capellan Jr",
     "tech": "Power Automate",
     "htmlUrl": "https://faustocapellan.com",
-    "xmlUrl": "https://faustocapellan.com/feed/"
+    "xmlUrl": "https://faustocapellan.com/feed/",
+    "company": "VeCa Enterprises, LLC",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "9",
+    "twitter": "https://twitter.com/fcapellanjr",
+    "photoUrl": "https://images.mvp.microsoft.com/caa206dc-a123-e911-a97e-000d3a137208?638878384396345106",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/caa206dc-a123-e911-a97e-000d3a137208",
+    "bio": "Fausto Capellan, Jr — Fausto Capellan, Jr is a Microsoft MVP in Business Applications, focused on the Power Platform: Microsoft Power Automate and Power Apps. He has worked with SharePoint both as an admin and as a developer for over 13 years. He is a frequent speaker at events…"
   },
   {
     "name": "Gerjon Kunst",
     "tech": "Copilot Studio;M365 Copilot",
     "htmlUrl": "https://www.impactof.ai",
-    "xmlUrl": "https://impactofaiexplored.com/feed/"
+    "xmlUrl": "https://impactofaiexplored.com/feed/",
+    "company": "Interstellar",
+    "awardCategory": "Business Applications;M365",
+    "yearsInProgram": "3",
+    "twitter": "https://twitter.com/gkunst",
+    "photoUrl": "https://images.mvp.microsoft.com/2bf2a8e6-8323-4c52-ad9c-90a2ae56284d?639186588623133519",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/2bf2a8e6-8323-4c52-ad9c-90a2ae56284d",
+    "bio": "AI Lead | CTO | Dual Microsoft MVP Speaker & Podcast Host — I'm Gerjon an incurable tech optimist with 25+ years of experience pushing the boundary between \"can't\" and \"can\" and automating the boring bits along the way. Today, on a daily basis I help organizations move from AI…"
   },
   {
     "name": "Griffin Lickfeldt",
     "tech": "Copilot Studio",
     "htmlUrl": "https://citizendeveloper365.com/",
-    "xmlUrl": "https://citizendeveloper365.com/feed/"
+    "xmlUrl": "https://citizendeveloper365.com/feed/",
+    "company": null,
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "2",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/dff6cfdf-0add-4731-bd79-3ab1fb74f069?638956596653311494",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/dff6cfdf-0add-4731-bd79-3ab1fb74f069",
+    "bio": "Microsoft MVP | Solution Architect | Host of CitizenDeveloper365 — I’m an AI and Power Platform Solutions Architect focused on helping organizations turn AI into real, measurable business outcomes. I design and build AI agents using Copilot Studio, develop apps and automations…"
   },
   {
     "name": "Guido Preite",
     "tech": "Power Apps",
     "htmlUrl": "https://www.crmanswers.net/",
-    "xmlUrl": "https://www.crmanswers.net/feeds/posts/default"
+    "xmlUrl": "https://www.crmanswers.net/feeds/posts/default",
+    "company": "Freelancer",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "13",
+    "twitter": "https://twitter.com/crmanswers",
+    "photoUrl": "https://images.mvp.microsoft.com/9b9407f9-3c9a-e411-93f2-9cb65495d3c4?638877587642289401",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/9b9407f9-3c9a-e411-93f2-9cb65495d3c4",
+    "bio": "#Dynamics365 & #PowerPlatform Software Architect — Working with Microsoft Dynamics from CRM 4.0 to Dynamics 365."
   },
   {
     "name": "Hardit Bhatia",
     "tech": "Power Apps",
     "htmlUrl": "https://thepoweraddict.com/",
-    "xmlUrl": "https://thepoweraddict.com/feed/"
+    "xmlUrl": "https://thepoweraddict.com/feed/",
+    "company": "RSM",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "8",
+    "twitter": "https://twitter.com/thepoweraddict",
+    "photoUrl": "https://images.mvp.microsoft.com/3eea61e6-1f89-ea11-a812-000d3a8ccaf5?638675755293849533",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/3eea61e6-1f89-ea11-a812-000d3a8ccaf5",
+    "bio": "Microsoft Business Applications MVP / Power Factory Manager at RSM — Hardit Bhatia is an Electrical Engineer with a MBA in Finance. With over 10 years experience in consulting and a deep interest in analytical tasks, he got addicted to Power Apps in just a few weeks after…"
   },
   {
     "name": "Holger Imbery",
     "tech": "Copilot Studio",
     "htmlUrl": "https://holgerimbery.blog",
-    "xmlUrl": "https://holgerimbery.blog/feed.xml"
+    "xmlUrl": "https://holgerimbery.blog/feed.xml",
+    "company": "NTT Germany AG & CO KG - NTTDATA Inc.",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "3",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/5c9e3bf2-d7b7-4d6f-9daf-09914393fc83?638713197109629528",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/5c9e3bf2-d7b7-4d6f-9daf-09914393fc83",
+    "bio": "CopilotStudio | PowerPlatform | Azure | Dynamics - principal architect @NTTDATA — As a Principal Architect and Microsoft MVP, I am leading the design and deployment of agentic AI systems that enable autonomous decision-making and intelligent process automation across enterprise…"
   },
   {
     "name": "Jan Hajek",
     "tech": "Power Apps",
     "htmlUrl": "https://hajekj.net",
-    "xmlUrl": "https://hajekj.net/feed/"
+    "xmlUrl": "https://hajekj.net/feed/",
+    "company": "NETWORG",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "9",
+    "twitter": "https://twitter.com/hajekj",
+    "photoUrl": "https://images.mvp.microsoft.com/962f4ea2-aa90-e811-813c-3863bb2bca60",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/962f4ea2-aa90-e811-813c-3863bb2bca60",
+    "bio": "I am Honza, hi. — My journey started at my high school where I helped co-organize local Windows User Group meetups and met many wonderful people, including some of the top local Microsoft MVPs. Throughout the years at high school I learned to code. My coding career started with…"
   },
   {
     "name": "Jeroen Scheper",
     "tech": "Power Apps",
     "htmlUrl": "https://jscheper.com",
-    "xmlUrl": "https://jscheper.com/feed/"
+    "xmlUrl": "https://jscheper.com/feed/",
+    "company": "Nexus Digital Horizon",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "2",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/18c54cd7-bdeb-431b-926f-00e0f7b3773a?638876813818879562",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/18c54cd7-bdeb-431b-926f-00e0f7b3773a",
+    "bio": "Power Platform enthousiast with a passion for AI — My name is Jeroen Scheper, living in the North East of the Netherlands. Almost 20 years ago my \"Dynamics journey\" started as a X++ developer for a company developing software for the Social Housing industry in the Netherlands.…"
   },
   {
     "name": "Jonas Rapp",
     "tech": "Power Apps",
     "htmlUrl": "https://jonasr.app",
-    "xmlUrl": "https://jonasr.app/feed/"
+    "xmlUrl": "https://jonasr.app/feed/",
+    "company": "CRMK",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "11",
+    "twitter": "https://twitter.com/rappen",
+    "photoUrl": "https://images.mvp.microsoft.com/0bb83d2f-c7fa-e611-8104-3863bb363e80?639068463781392256",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/0bb83d2f-c7fa-e611-8104-3863bb363e80",
+    "bio": "I create things. I am a developer. Lazy by design. — Solving the solved before solving. Software developer since 1994. Microsoft Dynamics 365 (CRM) since 2009. XrmToolBox contributor since 2014. Blockbuster tools: FetchXML Builder, Plugin Trace Viewer, and Bulk Data Updater.…"
   },
   {
     "name": "Jose Ramirez Espinosa",
     "tech": "Power Automate",
     "htmlUrl": "https://poweramics.mx",
-    "xmlUrl": "https://poweramics.mx/feed/"
+    "xmlUrl": "https://poweramics.mx/feed/",
+    "company": "Axentit",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "3",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/6467464a-ffe0-4606-877c-dee8ec5fd545?638844277320123481",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/6467464a-ffe0-4606-877c-dee8ec5fd545",
+    "bio": "Consultant focused on Power Automate and Microsoft Dynamics projects — I'm 43 years old, and during the last 18 years I have participated in different ERP and CRM implementation projects, of the Microsoft Dynamics family. I seek to share knowledge, experiences and success…"
   },
   {
     "name": "Josh Cook",
     "tech": "M365 Copilot;Copilot Studio",
     "htmlUrl": "https://flowaltdelete.ca/",
-    "xmlUrl": "https://flowaltdelete.ca/feed/"
+    "xmlUrl": "https://flowaltdelete.ca/feed/",
+    "company": "Upzoids",
+    "awardCategory": "M365;Business Applications",
+    "yearsInProgram": "7",
+    "twitter": "https://twitter.com/FlowAltDelete",
+    "photoUrl": "https://images.mvp.microsoft.com/2d07c038-ef18-eb11-a813-000d3a8dfe0d",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/2d07c038-ef18-eb11-a813-000d3a8dfe0d",
+    "bio": "Power Platform MVP Josh Cook: Innovator & Community Leader — A recognized Microsoft MVP (Business Applications) since 2019, Josh Cook embodies passion and expertise in the Power Platform domain. Specializing as a Power Automate and Power Virtual Agents Super User, Josh has been…"
   },
   {
     "name": "Karl-Johan Spiik",
     "tech": "Copilot Studio;Power Automate",
     "htmlUrl": "https://www.karlex.fi/",
-    "xmlUrl": "https://www.karlex.fi/feed/"
+    "xmlUrl": "https://www.karlex.fi/feed/",
+    "company": "CGI",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "3",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/e3af492c-66ae-4039-8378-655be3e4de63?638581136755881300",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/e3af492c-66ae-4039-8378-655be3e4de63",
+    "bio": "Power Platform Architect, AI Agent Hero, Leadership Hacker and Author — Karl-Johan is a Senior Consultant with over 19 years of experience delivering solutions with Microsoft technologies. In the past eight years, he has specialized in the Power Platform, focusing on Copilot…"
   },
   {
     "name": "Kimmo Koski",
     "tech": "Power Pages",
     "htmlUrl": "https://www.kimmokoski.dev",
-    "xmlUrl": "https://www.kimmokoski.dev/feed/"
+    "xmlUrl": "https://www.kimmokoski.dev/feed/",
+    "company": "Meltlake",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "3",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/45cc52a1-366a-4b99-b5fe-e9359bc90b88?638660895218258655",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/45cc52a1-366a-4b99-b5fe-e9359bc90b88",
+    "bio": "Power Platform solution architect, advisor and speaker — I'm a Power Platform solution architect who has been tinkering with the platform from CRM 4.0 forward. Currently focused more on custom Power Platform solutions and governance. I love to build communities and share my…"
   },
   {
     "name": "Kirti Prajapati",
     "tech": "Power Apps;M365 Development",
     "htmlUrl": "https://www.kirtiprajapati.com/",
-    "xmlUrl": "https://www.kirtiprajapati.com/feed/"
+    "xmlUrl": "https://www.kirtiprajapati.com/feed/",
+    "company": "SharePoint Consulting Solutions OPC Pvt Ltd",
+    "awardCategory": "Business Applications;M365",
+    "yearsInProgram": "8",
+    "twitter": "https://twitter.com/kirtipprajapati",
+    "photoUrl": "https://images.mvp.microsoft.com/3e3d1f51-7042-ea11-a812-000d3a8cc830",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/3e3d1f51-7042-ea11-a812-000d3a8cc830",
+    "bio": "M365 Development and Power Apps MVP | Independent Consultant — A results-oriented Technology Solution Architect with 20+ years of experience in Microsoft Technologies especially with designing, implementing, and auditing enterprise-grade Microsoft Power Platform, Dynamics 365,…"
   },
   {
     "name": "Kristine Risberg",
     "tech": "Customer Service;Copilot Studio",
     "htmlUrl": "https://contactcenterchronicles.com/",
-    "xmlUrl": "https://contactcenterchronicles.com/feed/"
+    "xmlUrl": "https://contactcenterchronicles.com/feed/",
+    "company": "CRMK",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "2",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/26e9f4a0-b100-431a-8722-d7788e1b8cf8?638883886852173844",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/26e9f4a0-b100-431a-8722-d7788e1b8cf8",
+    "bio": "Solution Architect | D365 Contact Center & Copilot Studio — I'm a solution architect and consultant specializing in D365 Contact Center and conversational AI agents in Copilot Studio, focusing on modern service management solutions powered by AI and Copilot. I thrive at the…"
   },
   {
     "name": "Kuni Hirota",
     "tech": "Copilot Studio",
     "htmlUrl": "https://ai3.site",
-    "xmlUrl": "https://ai3.site/?feed=rss2"
+    "xmlUrl": "https://ai3.site/?feed=rss2",
+    "company": "Ai3,Inc.",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "2",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/c629dcdc-3495-4409-aa4f-3f9d3d10199e?639079726318402145",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/c629dcdc-3495-4409-aa4f-3f9d3d10199e",
+    "bio": "CEO of Ai3 LLC | Making AI as Basic as Reading and Writing — I am the CEO of Ai3 LLC and a Generative AI expert focused on advancing AI literacy and practical adoption. My mission is to make generative AI as fundamental and accessible as reading and writing, enabling people from…"
   },
   {
     "name": "Kylie Kiser",
     "tech": "Customer Experience;Power Apps",
     "htmlUrl": "https://Kyliekiser.com",
-    "xmlUrl": "https://Kyliekiser.com/feed/"
+    "xmlUrl": "https://Kyliekiser.com/feed/",
+    "company": "Kylie K Consulting",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "8",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/f0951341-e697-e911-a999-000d3a1362e3",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/f0951341-e697-e911-a999-000d3a1362e3",
+    "bio": "Power Platform Enthusiast | User Group Chapter Leader | FTRSA — Kylie Kiser is a Power Platform enthusiast who has been working with Microsoft technologies for over 15 years. She is passionate about the community and shows this through blogging, presenting, and hosting events.…"
   },
   {
     "name": "Lisa Crosbie",
     "tech": "Copilot Studio;M365 Copilot",
     "htmlUrl": "https://www.lisacrosbie.com",
-    "xmlUrl": "https://www.lisacrosbie.com/feed/"
+    "xmlUrl": "https://www.lisacrosbie.com/feed/",
+    "company": "Barhead / Akkodis",
+    "awardCategory": "Business Applications;M365",
+    "yearsInProgram": "8",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/4108e80f-21fa-e911-a998-000d3a137a43",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/4108e80f-21fa-e911-a998-000d3a137a43",
+    "bio": "Content Creator, YouTuber, Speaker — Lisa Crosbie is a trusted expert in practical applications of AI at work, helping businesses understand and realize the value of AI-powered tools like Microsoft 365 Copilot and Copilot Studio. She works directly with organizations to navigate…"
   },
   {
     "name": "Mar Llambi",
     "tech": "Copilot Studio",
     "htmlUrl": "https://www.llambi365.es/",
-    "xmlUrl": "https://www.llambi365.es/feeds/posts/default"
+    "xmlUrl": "https://www.llambi365.es/feeds/posts/default",
+    "company": "SIEMENS",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "7",
+    "twitter": "https://twitter.com/Mar_llambi",
+    "photoUrl": "https://images.mvp.microsoft.com/dd3235d9-6bd1-ea11-a812-000d3a8ccaf5?638474960459701470",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/dd3235d9-6bd1-ea11-a812-000d3a8ccaf5",
+    "bio": "Woman in Tech - Senior Technical Architect - Passionate and in constant learning — I breathe, innovate, design and develop as a way of survival. If curiosity killed the cat, I think I have no more lives left. With a developer background, working with .NET and C#, I got my first…"
   },
   {
     "name": "Marcelo Pacifico",
     "tech": "Copilot Studio;M365 Copilot",
     "htmlUrl": "https://copiloters.com.br/",
-    "xmlUrl": "https://copiloters.com.br/feed/"
+    "xmlUrl": "https://copiloters.com.br/feed/",
+    "company": "L3",
+    "awardCategory": "Business Applications;M365",
+    "yearsInProgram": "3",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/429774b3-79f8-4cbc-a5b5-69357f75b71b?639197366310899073",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/429774b3-79f8-4cbc-a5b5-69357f75b71b",
+    "bio": "Passionate about innovation, and naturally per technology and AI. — I am a Dual Microsoft Most Valuable Professional (MVP) in Microsoft 365 Copilot and Copilot Studio, Microsoft Certified Trainer (MCT), speaker, and AI Business Solutions Specialist. I specialize in AI-powered…"
   },
   {
     "name": "Marco Amoedo Martinez",
     "tech": "Power Apps;Copilot Studio",
     "htmlUrl": "https://amoe.do",
-    "xmlUrl": "https://amoe.do/feed/"
+    "xmlUrl": "https://amoe.do/feed/",
+    "company": "KPMG",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "21",
+    "twitter": "https://twitter.com/marcoamoedo",
+    "photoUrl": "https://images.mvp.microsoft.com/abf98fa8-3c9a-e411-93f2-9cb65495d3c4",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/abf98fa8-3c9a-e411-93f2-9cb65495d3c4",
+    "bio": "Delivering Digital Transformation with Microsoft Cloud Technologies — Engineer in Computer Science. Marco Amoedo works for KPMG as CTO for Microsoft technologies. He is a technology strategist with expert knowledge in enterprise software engineering, customer experience and…"
   },
   {
     "name": "Maria Graciela Martinez",
     "tech": "Power Apps;Power Automate",
     "htmlUrl": "https://powergi.net/blogs/",
-    "xmlUrl": "https://powergi.net/blogs/feed/"
+    "xmlUrl": "https://powergi.net/blogs/feed/",
+    "company": "Power[GI]",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "2",
+    "twitter": null,
+    "photoUrl": null,
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/a6ac0a4c-c329-4e3a-85b8-49cc8ef4da6e",
+    "bio": "Power Platform Consultant | Business Process Automation Specialist — I use my mix of technology expertise and financial background to find, design, develop and implement the right solution for each business requirement. In the last four years, I’ve been using Microsoft’s Power…"
   },
   {
     "name": "Mario Trueba",
     "tech": "Power Apps",
     "htmlUrl": "https://mariotrueba365.com",
-    "xmlUrl": "https://mariotrueba365.com/feed/"
+    "xmlUrl": "https://mariotrueba365.com/feed/",
+    "company": "KPMG",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "2",
+    "twitter": "https://twitter.com/mariotrueba365",
+    "photoUrl": "https://images.mvp.microsoft.com/22f76096-c6e4-4eb3-a767-9caf4e706954?639083373121295251",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/22f76096-c6e4-4eb3-a767-9caf4e706954",
+    "bio": "Enabling Digital Transformation through Microsoft Technologies — Mario began his programming journey at the age of 8, when he discovered that writing code in C++ was more appealing than studying medicine. This early curiosity led him to explore multiple technologies before…"
   },
   {
     "name": "Mark Carrington",
     "tech": "Power Apps",
     "htmlUrl": "https://markcarrington.dev/",
-    "xmlUrl": "https://markcarrington.dev/feed/"
+    "xmlUrl": "https://markcarrington.dev/feed/",
+    "company": "Data8 Ltd",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "7",
+    "twitter": "https://twitter.com/MarkMpn/",
+    "photoUrl": "https://images.mvp.microsoft.com/697c65f3-f3a7-eb11-b1ac-000d3a53daf4",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/697c65f3-f3a7-eb11-b1ac-000d3a53daf4",
+    "bio": "Passionate about helping people get more out of their Business Applications data — I am a full-stack developer but with a particular interest in database and business logic development. In my work at Data8 I have developed a catalog of data quality solutions focussed on…"
   },
   {
     "name": "Markus Erlandsson",
     "tech": "Power Apps",
     "htmlUrl": "https://crmrocks.com/",
-    "xmlUrl": "https://crmrocks.com/feed/"
+    "xmlUrl": "https://crmrocks.com/feed/",
+    "company": "Erlit AB",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "3",
+    "twitter": "https://twitter.com/MarkusErlandsso",
+    "photoUrl": "https://images.mvp.microsoft.com/843bf6c1-bb40-4f02-894c-e192ba347e07?639074205106460677",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/843bf6c1-bb40-4f02-894c-e192ba347e07",
+    "bio": "Dynamics CRM Developer — Been a Dynamics CRM developer since 2009, a podcaster at CRM Rocks since 2013, the first ever CRM focused podcast."
   },
   {
     "name": "Marvin Bangert",
     "tech": "SharePoint;Power Automate",
     "htmlUrl": "https://cloudkumpel.de/",
-    "xmlUrl": "https://cloudkumpel.de/feed/"
+    "xmlUrl": "https://cloudkumpel.de/feed/",
+    "company": "glueckkanja AG",
+    "awardCategory": "M365;Business Applications",
+    "yearsInProgram": "4",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/ec06f1cd-f116-ee11-8f6e-000d3a1ad36b?638270801398564180",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/ec06f1cd-f116-ee11-8f6e-000d3a1ad36b",
+    "bio": "Modern Collaboration & Power Platform Cloud Architect — I work as a Cloud Architect at glueckkanja AG in Germany, am the organizer of the Power Platform User Group Cologne, speaker, blogger, and Power Platform community contributor. Started many years ago with SharePoint Server…"
   },
   {
     "name": "Matthew Devaney",
     "tech": "Power Automate;Copilot Studio",
     "htmlUrl": "https://matthewdevaney.com",
-    "xmlUrl": "https://matthewdevaney.com/feed/"
+    "xmlUrl": "https://matthewdevaney.com/feed/",
+    "company": "Hitachi Solutions",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "7",
+    "twitter": "https://twitter.com/mattbdevaney",
+    "photoUrl": "https://images.mvp.microsoft.com/72b912be-37e8-ea11-a814-000d3a8dfe0d",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/72b912be-37e8-ea11-a814-000d3a8dfe0d",
+    "bio": "I Was An Accountant (CPA) For 10 Years, Now I'm A Power Platform Architect — I’m a Power Platform Architect living in Winnipeg, Canada who is slightly obsessed with cats 🐱 I’ve blazed a trail as Power Platform career switcher. My career started with working for 10 years as an…"
   },
   {
     "name": "Michael Pereira",
     "tech": "Copilot Studio;Power Apps",
     "htmlUrl": "https://blog.michaelfp.com.br",
-    "xmlUrl": "https://blog.michaelfp.com.br/feed/"
+    "xmlUrl": "https://blog.michaelfp.com.br/feed/",
+    "company": "MFP IT",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "3",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/f3f0f4f4-a496-448d-bf10-73021156c05b?638633917368209757",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/f3f0f4f4-a496-448d-bf10-73021156c05b",
+    "bio": "Software Architect | C# & .NET Expert | Innovating with Power Platform Solutions — I’m a Software Architect passionate about building innovative, scalable solutions by combining my expertise in C# and .NET with the power of Microsoft Power Platform. Over the years, I’ve helped…"
   },
   {
     "name": "Mike Hartley",
     "tech": "Power Apps;M365 Copilot",
     "htmlUrl": "https://365-a11y.com",
-    "xmlUrl": "https://365-a11y.com/feed/"
+    "xmlUrl": "https://365-a11y.com/feed/",
+    "company": "Capgemini",
+    "awardCategory": "Business Applications;M365",
+    "yearsInProgram": "6",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/7ffd2886-2c20-ec11-b6e6-000d3a1fcc1f",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/7ffd2886-2c20-ec11-b6e6-000d3a1fcc1f",
+    "bio": "A dash of Business Applications, a sprinkling of M365 & loads of Accessibility! — Community is the heart of all I do. Supporting, enabling, and being part of helping people learn and grow through User Groups, Events, Podcasts, Blogs and all those things. Building community is…"
   },
   {
     "name": "Mike Hartley",
     "tech": "Power Apps;M365 Copilot",
     "htmlUrl": "https://hartofthemidlands.co.uk",
-    "xmlUrl": "https://hartofthemidlands.co.uk/feed/"
+    "xmlUrl": "https://hartofthemidlands.co.uk/feed/",
+    "company": "Capgemini",
+    "awardCategory": "Business Applications;M365",
+    "yearsInProgram": "6",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/7ffd2886-2c20-ec11-b6e6-000d3a1fcc1f",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/7ffd2886-2c20-ec11-b6e6-000d3a1fcc1f",
+    "bio": "A dash of Business Applications, a sprinkling of M365 & loads of Accessibility! — Community is the heart of all I do. Supporting, enabling, and being part of helping people learn and grow through User Groups, Events, Podcasts, Blogs and all those things. Building community is…"
   },
   {
     "name": "Mikko Koskinen",
     "tech": "Copilot Studio",
     "htmlUrl": "https://mikkokoskinen.com/",
-    "xmlUrl": "https://mikkokoskinen.com/feed/"
+    "xmlUrl": "https://mikkokoskinen.com/feed/",
+    "company": "Forward Forever",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "2",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/d30d8846-5fb5-4156-8cf2-44d8ff3bae8e?639201469970174356",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/d30d8846-5fb5-4156-8cf2-44d8ff3bae8e",
+    "bio": "MVP Copilot Studio, AI & Copilot Lead — I’m an AI & Copilot Lead at Forward Forever, helping organizations adopt AI, Copilot, and agent solutions in a practical, governed, and scalable way. My work spans advisory, architecture, pre-sales, and capability development. With 20+…"
   },
   {
     "name": "Ming Sze Wong",
     "tech": "Power Apps",
     "htmlUrl": "https://www.365power.nl",
-    "xmlUrl": "https://www.365power.nl/feed/"
+    "xmlUrl": "https://www.365power.nl/feed/",
+    "company": "Addax IT Consulting B.V.",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "7",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/1e81e3d0-37e8-ea11-a814-000d3a8dfe0d?638474943957966282",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/1e81e3d0-37e8-ea11-a814-000d3a8dfe0d",
+    "bio": "Microsoft 365 & Power Platform Consultant, MVP Power Automate & Power Apps, MCT — I am Michelle Wong, an experienced Microsoft 365 and Power Platform Consultant, I have been recognized as a Microsoft MVP in Business Applications, with specialization in Power Apps and Power…"
   },
   {
     "name": "Mohamed Ashiq Faleel",
     "tech": "Power Automate;Power Apps",
     "htmlUrl": "https://ashiqf.com/",
-    "xmlUrl": "https://ashiqf.com/feed/"
+    "xmlUrl": "https://ashiqf.com/feed/",
+    "company": "Fujitsu Sweden",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "6",
+    "twitter": "https://twitter.com/AshiqFaleel",
+    "photoUrl": "https://images.mvp.microsoft.com/7547bdf1-0d07-ec11-b6e6-000d3a57952c?638562208828303949",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/7547bdf1-0d07-ec11-b6e6-000d3a57952c",
+    "bio": "Power Platform Architect — I am a dedicated Microsoft 365 enthusiast with a deep passion for software development. I love exploring new ideas and transforming them into reality through careful planning and execution. Quality is a top priority for me, and I strive to ensure that…"
   },
   {
     "name": "Natanael Turtledove",
     "tech": "Power Apps",
     "htmlUrl": "https://www.nati-turtledove.com/",
-    "xmlUrl": "https://www.nati-turtledove.com/feed/"
+    "xmlUrl": "https://www.nati-turtledove.com/feed/",
+    "company": null,
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "4",
+    "twitter": "https://twitter.com/NatiTurts",
+    "photoUrl": "https://images.mvp.microsoft.com/49c370ed-78a5-4b1f-a6c5-7bf758e8a02a?638448809534301764",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/49c370ed-78a5-4b1f-a6c5-7bf758e8a02a",
+    "bio": "Solutions Architect | Power Platform Enthusiast — I am a 12x Microsoft Certified Power Platform Solutions Architect and #PowerAddict who gave up living the beach life in Cape Town 🏖 to join the amazing Microsoft Power Platform Community in the UK 🇬🇧. With a passion for…"
   },
   {
     "name": "Neil Benson",
     "tech": "Power Apps",
     "htmlUrl": "https://practiceleading.com",
-    "xmlUrl": "https://practiceleading.com/feed/"
+    "xmlUrl": "https://practiceleading.com/feed/",
+    "company": "ChandlerCX",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "17",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/038d78ba-3c9a-e411-93f2-9cb65495d3c4",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/038d78ba-3c9a-e411-93f2-9cb65495d3c4",
+    "bio": "Chief product officer at ChandlerCX, intelligent customer communications — At ChanderCX, I serve as the chief product officer as we continue to build AI-driven automation into the CX customer communications platform. Organisations in regulated industries – such as financial…"
   },
   {
     "name": "Neil Benson",
     "tech": "Power Apps",
     "htmlUrl": "https://amazingapps.show",
-    "xmlUrl": "https://amazingapps.show/feed/"
+    "xmlUrl": "https://amazingapps.show/feed/",
+    "company": "ChandlerCX",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "17",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/038d78ba-3c9a-e411-93f2-9cb65495d3c4",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/038d78ba-3c9a-e411-93f2-9cb65495d3c4",
+    "bio": "Chief product officer at ChandlerCX, intelligent customer communications — At ChanderCX, I serve as the chief product officer as we continue to build AI-driven automation into the CX customer communications platform. Organisations in regulated industries – such as financial…"
   },
   {
     "name": "Nick Decourcy",
     "tech": "Copilot Studio;M365 Copilot",
     "htmlUrl": "https://www.brightideasagency.com/blog",
-    "xmlUrl": "https://brightideasagency.com/blog?format=rss"
+    "xmlUrl": "https://brightideasagency.com/blog?format=rss",
+    "company": "Bright Ideas Agency",
+    "awardCategory": "Business Applications;M365",
+    "yearsInProgram": "3",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/5b01f041-9993-4213-9261-fe4fdc5e84b4?638740090403274566",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/5b01f041-9993-4213-9261-fe4fdc5e84b4",
+    "bio": "Advisor to SME leaders on Microsoft 365 Copilot and AI adoption — Nick helps leaders in smaller businesses achieve more using technology: specifically, Microsoft 365, Microsoft Copilot, and other AI tools. He has worked with businesses around the globe on technology strategy,…"
   },
   {
     "name": "Nick Doelman",
     "tech": "Power Pages;Power Apps",
     "htmlUrl": "https://readyxrm.blog",
-    "xmlUrl": "https://readyxrm.blog/feed/"
+    "xmlUrl": "https://readyxrm.blog/feed/",
+    "company": "self-employed",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "4",
+    "twitter": "https://twitter.com/readyxrm",
+    "photoUrl": "https://images.mvp.microsoft.com/0b70f91a-d5cd-412d-84af-e74591099741?638720329539001348",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/0b70f91a-d5cd-412d-84af-e74591099741",
+    "bio": "Power Platform Specialist, Trainer, and Coach — Nick is an independent Power Platform specialist, trainer and coach. Nick delivers presentations, workshops and collaborates on Power Platform, Power Pages, and Dynamics CRM/365 projects worldwide. Nick is also a cohost on the…"
   },
   {
     "name": "Nilüfer Doğan",
     "tech": "Copilot Studio",
     "htmlUrl": "https://medium.com/@dgnilufer",
-    "xmlUrl": "https://medium.com/feed/@dgnilufer"
+    "xmlUrl": "https://medium.com/feed/@dgnilufer",
+    "company": "IAEA",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "2",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/18aa081f-669e-4286-ab69-1010f40004b7?638923195816881843",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/18aa081f-669e-4286-ab69-1010f40004b7",
+    "bio": "Power Platform & Copilot Studio Developer | Microsoft MVP | User Group Leader — I work as an AI Engineer , building AI-powered applications with Microsoft Power Platform and Azure AI tools. I use Power Apps, Power Automate, and Copilot Studio to create business solutions. I've…"
   },
   {
     "name": "Nisal Mihiranga",
     "tech": "Microsoft Foundry;Copilot Studio",
     "htmlUrl": "https://aiwithnisal.substack.com/",
-    "xmlUrl": "https://aiwithnisal.substack.com/feed"
+    "xmlUrl": "https://aiwithnisal.substack.com/feed",
+    "company": "TechOne Global",
+    "awardCategory": "Microsoft Foundry;Business Applications",
+    "yearsInProgram": "3",
+    "twitter": "https://twitter.com/nisalm/",
+    "photoUrl": "https://images.mvp.microsoft.com/2ace5623-60d4-4082-b77c-bf2ac40222ae?638634515128041883",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/2ace5623-60d4-4082-b77c-bf2ac40222ae",
+    "bio": "AI Practitioner, Microsoft Certified Trainer, Author and Community Contributor — I'm a seasoned IT professional specializing in data science and artificial intelligence. Currently, I serve as the Associate Vice President – Data & AI at TechOne Global, where I focus on driving…"
   },
   {
     "name": "Noorez Khamis",
     "tech": "Power Automate;Microsoft 365",
     "htmlUrl": "https://www.khamis.net",
-    "xmlUrl": "https://www.khamis.net/feed/"
+    "xmlUrl": "https://www.khamis.net/feed/",
+    "company": "Creospark",
+    "awardCategory": "Business Applications;M365",
+    "yearsInProgram": "16",
+    "twitter": "https://twitter.com/nkhamis",
+    "photoUrl": "https://images.mvp.microsoft.com/0bbd70c0-3c9a-e411-93f2-9cb65495d3c4?638567707092816788",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/0bbd70c0-3c9a-e411-93f2-9cb65495d3c4",
+    "bio": "Enterprise Cloud Solutions Architect (Microsoft 365, Power Platform, SharePoint) — Noorez Khamis is a Microsoft recognized MVP in Microsoft Cloud Tech (Microsoft 365, Azure, Copilot, Content AI, Power Platform, Dynamics 365, Teams & SharePoint). His background is an Information…"
   },
   {
     "name": "Norm Young",
     "tech": "Power Automate;SharePoint",
     "htmlUrl": "https://normyoung.ca/",
-    "xmlUrl": "https://normyoung.ca/feed/"
+    "xmlUrl": "https://normyoung.ca/feed/",
+    "company": "AvePoint",
+    "awardCategory": "Business Applications;M365",
+    "yearsInProgram": "8",
+    "twitter": "https://twitter.com/stormin_30",
+    "photoUrl": "https://images.mvp.microsoft.com/43b1c8f9-6f42-ea11-a812-000d3a8ccaf5?638878424769625293",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/43b1c8f9-6f42-ea11-a812-000d3a8ccaf5",
+    "bio": "Power Platform Solution Architect | Microsoft MVP — Norm Young is a Power Platform Solution Architect at AvePoint. He is a 8-time Microsoft MVP with a focus on building collaborative solutions using SharePoint, Microsoft Teams and the Power Platform. Norm blogs and speaks about…"
   },
   {
     "name": "Paul Murana",
     "tech": "Power Automate",
     "htmlUrl": "https://www.tachytelic.net/",
-    "xmlUrl": "https://www.tachytelic.net/feed/"
+    "xmlUrl": "https://www.tachytelic.net/feed/",
+    "company": "Accendo Solutions Ltd",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "6",
+    "twitter": "https://twitter.com/paulie_m",
+    "photoUrl": "https://images.mvp.microsoft.com/c00b077e-0d07-ec11-b6e6-000d3a57952c",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/c00b077e-0d07-ec11-b6e6-000d3a57952c",
+    "bio": "Independent Office 365 Specialist and Developer. — I'm a six-time Microsoft MVP, and I still get the same kick from automating a painful manual process as I did on day one. I work with companies across a wide range of sectors, helping them streamline business processes and hit…"
   },
   {
     "name": "Paulien Buskens",
     "tech": "Power Apps",
     "htmlUrl": "https://paulienbuskens.com",
-    "xmlUrl": "https://paulienbuskens.com/feed/"
+    "xmlUrl": "https://paulienbuskens.com/feed/",
+    "company": "Qubix",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "4",
+    "twitter": "https://twitter.com/paulienbuskens",
+    "photoUrl": "https://images.mvp.microsoft.com/3f4cc2ad-55bf-4e9f-bee5-5627503cbb71?638562175020629910",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/3f4cc2ad-55bf-4e9f-bee5-5627503cbb71",
+    "bio": "Business Applications MVP - Power Platform Consultant — Paulien works as a Power Platform Consultant for Qubix. She has been working with Power Platform and SharePoint development since 2019. Her focus is now on Power Platform and especially Power Apps and Power Automate. Its in…"
   },
   {
     "name": "Pavan Mani Deep Yaragani",
     "tech": "Power Apps",
     "htmlUrl": "https://ecellorscrm.com",
-    "xmlUrl": "https://ecellorscrm.com/feed/"
+    "xmlUrl": "https://ecellorscrm.com/feed/",
+    "company": "NeoSoft",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "3",
+    "twitter": "https://twitter.com/EcellorsCrm",
+    "photoUrl": "https://images.mvp.microsoft.com/651578bf-91ad-4ca9-b0c0-9c0b8f0b4c30?638582345445219749",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/651578bf-91ad-4ca9-b0c0-9c0b8f0b4c30",
+    "bio": "Power Platform Solution Architect | Microsoft MVP | Blogger & Community Speaker — I am a Power Platform Solution Architect with nearly 12+ years of experience, specializing in Microsoft Power Platform and Azure. I'm passionate about solving real-world problems using Power…"
   },
   {
     "name": "Peter Ruiter",
     "tech": "Copilot Studio;Customer Service",
     "htmlUrl": "https://powerpete.com",
-    "xmlUrl": "https://powerpete.com/feed/"
+    "xmlUrl": "https://powerpete.com/feed/",
+    "company": "Capgemini",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "4",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/e73916b4-cdbc-49cc-9cf7-904941224997?639233231485745113",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/e73916b4-cdbc-49cc-9cf7-904941224997",
+    "bio": "Principal Solution Architect and Microsoft CX CTO @ Capgemini NL — I am a Principal Solution Architect and Microsoft CX CTO at Capgemini NL and the Global Microsoft Contact Center lead for Capgemini Group, a global leader in consulting, digital transformation, and technology…"
   },
   {
     "name": "Prashant G Bhoyar",
     "tech": "Copilot Studio;Microsoft Foundry",
     "htmlUrl": "https://www.pgbhoyar.com",
-    "xmlUrl": "https://www.pgbhoyar.com/feed/"
+    "xmlUrl": "https://www.pgbhoyar.com/feed/",
+    "company": "Applied Information Sciences, Inc",
+    "awardCategory": "Business Applications;Microsoft Foundry",
+    "yearsInProgram": "11",
+    "twitter": "https://twitter.com/pgbhoyar",
+    "photoUrl": "https://images.mvp.microsoft.com/450e3fcf-4d15-e711-810b-3863bb36edf8",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/450e3fcf-4d15-e711-810b-3863bb36edf8",
+    "bio": "7 x AI MVP| 4 x Business Applications MVP| Speaker| Author| Leading AI Architect — Personal Email Address: pgbhoyar@gmail.com Prashant G Bhoyar is a Microsoft AI & Business Applications MVP & Microsoft Certified Trainer (MCT). Currently, he works as an AI Architect in the Office…"
   },
   {
     "name": "Preeti Sahu",
     "tech": "Power Apps",
     "htmlUrl": "https://www.enjoysharepoint.com/author/preeti/",
-    "xmlUrl": "https://www.enjoysharepoint.com/author/preeti/feed/"
+    "xmlUrl": "https://www.enjoysharepoint.com/author/preeti/feed/",
+    "company": "TSinfo Technologies Private Limited",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "1",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/d11ec6cd-727d-4e03-abb3-b28751b9624e?639241248652084725",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/d11ec6cd-727d-4e03-abb3-b28751b9624e",
+    "bio": "Power Apps Expert | Power Platform Specialist | Consultant TSinfo Technologies — I work as a Power Platform Specialist at TSinfo Technologies, where I mainly focus on Power Apps and other Microsoft Power Platform technologies, including Power Automate, Power BI, and Microsoft…"
   },
   {
     "name": "Pronpen Manapronpaiboon",
     "tech": "Power Automate",
     "htmlUrl": "https://penbotrpa.com/",
-    "xmlUrl": "https://penbotrpa.com/feed/"
+    "xmlUrl": "https://penbotrpa.com/feed/",
+    "company": "SCG Chemicals",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "3",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/f504ed24-d758-4e01-9f87-07dcedfe4a0c?638817074232751877",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/f504ed24-d758-4e01-9f87-07dcedfe4a0c",
+    "bio": "I worked in customer service for 8 years and am now an automation developer. — I'm a Power Automate Desktop developer based in Samutprakarn, Thailand, with a slight obsession with birds 🐧. My career began as a Project Coordinator and Customer Service Export Officer, and I now…"
   },
   {
     "name": "Rachit Garg",
     "tech": "Copilot Studio;AI ERP",
     "htmlUrl": "https://dynamicsexemplified.wordpress.com",
-    "xmlUrl": "https://dynamicsexemplified.wordpress.com/feed/"
+    "xmlUrl": "https://dynamicsexemplified.wordpress.com/feed/",
+    "company": "Aispire Solutions",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "5",
+    "twitter": "https://twitter.com/rachitgarg1210",
+    "photoUrl": "https://images.mvp.microsoft.com/9ee12c5d-95fb-ed11-8f6d-000d3a560942",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/9ee12c5d-95fb-ed11-8f6d-000d3a560942",
+    "bio": "Microsoft Dynamics 365 and Power platform enthusiast. — I love solving complex business problems using Microsoft Dynamics 365 business applications and power platform. I have been implementing Microsoft Dynamics 365 Finance and Operations and it's previous versions a.k.a…"
   },
   {
     "name": "Rami Mounla",
     "tech": "Copilot Studio;Power Apps",
     "htmlUrl": "https://xrmenterprise.com/",
-    "xmlUrl": "https://xrmenterprise.com/feed/"
+    "xmlUrl": "https://xrmenterprise.com/feed/",
+    "company": "Capgemini",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "12",
+    "twitter": "https://twitter.com/ramimounla",
+    "photoUrl": "https://images.mvp.microsoft.com/845a3682-b20f-e511-aa77-6c3be5a8e164?638935718271361389",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/845a3682-b20f-e511-aa77-6c3be5a8e164",
+    "bio": "Power Platform Fanatic — I have an unexplainable passion for the Power Platform."
   },
   {
     "name": "Ramkumar Vellingiri",
     "tech": "M365 Copilot;Copilot Studio",
     "htmlUrl": "https://medium.com/@ramve1988",
-    "xmlUrl": "https://medium.com/feed/@ramve1988"
+    "xmlUrl": "https://medium.com/feed/@ramve1988",
+    "company": "Haleon",
+    "awardCategory": "M365;Business Applications",
+    "yearsInProgram": "3",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/31e4c931-269d-4849-852b-ca040f988bc6?638844563781742695",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/31e4c931-269d-4849-852b-ca040f988bc6",
+    "bio": "The Journey of a Digital Workplace Visionary — As a Digital Workplace Architect with a deep focus on Microsoft 365, I specialize in designing intuitive, scalable environments that empower people to do their best work. My passion lies in simplifying complexity—whether through…"
   },
   {
     "name": "Ramón Rautenstrauch",
     "tech": "M365 Copilot;Copilot Studio",
     "htmlUrl": "https://www.consultor365.com/",
-    "xmlUrl": "https://www.consultor365.com/feed/"
+    "xmlUrl": "https://www.consultor365.com/feed/",
+    "company": null,
+    "awardCategory": "M365;Business Applications",
+    "yearsInProgram": "3",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/69585a54-60ae-41ff-bf19-c2e58ec3ba35?638713525074443362",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/69585a54-60ae-41ff-bf19-c2e58ec3ba35",
+    "bio": "Consultor Copilot & IA 🤖. CMO 😍. Apasionado ❤️ del Marketing. — Apasionado ❤️ del Marketing. SEO 🧠. CMO 😍. Especialista en soluciones Microsoft 🙌. Consultor Copilot, IA y Dynamics 365 Customer Insights 🤖. Soñador 💭. Facilitador PLAYMOBILpro 🎓. Padre de Lukas 😍. 🎯 Toda mi…"
   },
   {
     "name": "Reshmee Auckloo",
     "tech": "M365 Development;Copilot Studio",
     "htmlUrl": "https://reshmeeauckloo.com/",
-    "xmlUrl": "https://reshmeeauckloo.com/index.xml"
+    "xmlUrl": "https://reshmeeauckloo.com/index.xml",
+    "company": "Avanade",
+    "awardCategory": "M365;Business Applications",
+    "yearsInProgram": "4",
+    "twitter": "https://twitter.com/reshmeeauckloo",
+    "photoUrl": "https://images.mvp.microsoft.com/0f1a57c4-8c6d-47f7-af32-c76191045ef2?638404987334876036",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/0f1a57c4-8c6d-47f7-af32-c76191045ef2",
+    "bio": "SharePoint Developer passionate about technology — I have worked on multiple digital initiatives aimed at improving processes and increasing efficiency using Microsoft technologies. I first became interested in a career in technology while studying Management with Information…"
   },
   {
     "name": "Reza Niroomand",
     "tech": "Power Apps",
     "htmlUrl": "https://bycode.dev",
-    "xmlUrl": "https://bycode.dev/feed/"
+    "xmlUrl": "https://bycode.dev/feed/",
+    "company": "Reply",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "2",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/6a2fa25d-daa6-48e2-9902-92cc9caaa231?639028933253298973",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/6a2fa25d-daa6-48e2-9902-92cc9caaa231",
+    "bio": "Solution Architect | Azure, Power Platform, .NET | Dev Experience & Architecture — Reza is a Microsoft MVP and Solution Architect with a strong focus on Azure, Power Platform, and .NET. He has extensive experience designing and delivering enterprise-grade solutions for regulated…"
   },
   {
     "name": "Riccardo Gregori",
     "tech": "Power Apps",
     "htmlUrl": "https://dev.to/_neronotte",
-    "xmlUrl": "https://dev.to/feed/_neronotte"
+    "xmlUrl": "https://dev.to/feed/_neronotte",
+    "company": "Avanade",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "3",
+    "twitter": null,
+    "photoUrl": null,
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/eee1dff5-5139-4c70-980a-5791ac09b429",
+    "bio": "📐 Power Platform Architect |👨🏻‍💻 Master Ninja Developer |🤖 Pro Code Avenger — I wrote my first lines of code at 11 years old, sparking a lifelong passion for programming. Inspired by Microsoft MVPs, I explored numerous languages and platforms—Cobol, Pascal, VB6, VB.NET, Java, C,…"
   },
   {
     "name": "Rishona Elijah",
     "tech": "Copilot Studio",
     "htmlUrl": "https://rishonapowerplatform.com/",
-    "xmlUrl": "https://rishonapowerplatform.com/feed/"
+    "xmlUrl": "https://rishonapowerplatform.com/feed/",
+    "company": "Barhead Solutions",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "6",
+    "twitter": "https://twitter.com/RishonaElijah",
+    "photoUrl": "https://images.mvp.microsoft.com/90bd8cfa-ccb0-ec11-983f-000d3a1017e3",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/90bd8cfa-ccb0-ec11-983f-000d3a1017e3",
+    "bio": "Microsoft Certified Trainer (MCT) & Power Platform Evangelist — Rishona Elijah is a Microsoft MVP for Business Applications and a Microsoft Certified Trainer (MCT). She writes training material, is a speaker, runs a blog (rishonapowerplatform.com), and is an instructor for…"
   },
   {
     "name": "Romain GERARD",
     "tech": "Copilot Studio",
     "htmlUrl": "https://lowcodebeardedbear.wordpress.com/",
-    "xmlUrl": "https://lowcodebeardedbear.wordpress.com/feed/"
+    "xmlUrl": "https://lowcodebeardedbear.wordpress.com/feed/",
+    "company": "Expertime",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "2",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/e7644293-d0d9-4126-8c61-c3d29e4a6031?639028788815511867",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/e7644293-d0d9-4126-8c61-c3d29e4a6031",
+    "bio": "Power Platform, Copilot Studio and Applied AI — Passionate about Power Platform and Copilot Studio, I help organizations design and deploy reliable, secure, and scalable low-code solutions and AI agents. I place great importance on knowledge sharing, clear guidance, and…"
   },
   {
     "name": "Sailaja Mantripragada",
     "tech": "Power Apps",
     "htmlUrl": "https://lowcodepower.com",
-    "xmlUrl": "https://lowcodepower.com/feed/"
+    "xmlUrl": "https://lowcodepower.com/feed/",
+    "company": "VRIDHISOLUTIONS INC",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "2",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/f902e01b-c758-4367-a183-6cef94dc15d4?639107540218026026",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/f902e01b-c758-4367-a183-6cef94dc15d4",
+    "bio": "Microsoft MVP | Power Platform/AI Governance & Copilot Advisor | MCT | Speaker — I’m a builder who moved into governance—because I’ve seen what happens when systems scale faster than the thinking behind them. I design and deliver enterprise solutions using Microsoft Power…"
   },
   {
     "name": "Samir Daoudi",
     "tech": "Power Apps",
     "htmlUrl": "https://www.samtech365.com",
-    "xmlUrl": "https://www.samtech365.com/feed/"
+    "xmlUrl": "https://www.samtech365.com/feed/",
+    "company": "LogiSam",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "4",
+    "twitter": "https://twitter.com/daoudi_samir",
+    "photoUrl": "https://images.mvp.microsoft.com/31e11042-b4dc-440c-8448-3246d94397f6?638621243159217782",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/31e11042-b4dc-440c-8448-3246d94397f6",
+    "bio": "Microsoft MVP | Founder of LogiSam — I currently hold 26 Microsoft certifications and specialise in Copilot, Microsoft Power Platform, SharePoint, Teams, C#, and SQL Server. I have spent a significant part of my professional career designing and building complex business…"
   },
   {
     "name": "Sandeep Mishra",
     "tech": "Power Automate;Microsoft 365",
     "htmlUrl": "https://www.mishrasandeep.com/",
-    "xmlUrl": "https://www.mishrasandeep.com/feed/"
+    "xmlUrl": "https://www.mishrasandeep.com/feed/",
+    "company": "STW Services LLP",
+    "awardCategory": "Business Applications;M365",
+    "yearsInProgram": "4",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/2d930bf2-2de4-4fba-8846-6874f2d3cc5b?638475700702668546",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/2d930bf2-2de4-4fba-8846-6874f2d3cc5b",
+    "bio": "Process automation and predictive dashboard using AI, Power Automate, Gen AI — MVP, Microsoft Power Automate, and SharePoint Specialist. 14+ yrs in MS 365, excels in Dynamics 365, Workflow Automation, Power Apps, SharePoint. Expert in streamlining processes for e-commerce,…"
   },
   {
     "name": "Sanjay Prakash",
     "tech": "Power Apps;Power Automate",
     "htmlUrl": "https://softchief.com/",
-    "xmlUrl": "https://softchief.com/feed/"
+    "xmlUrl": "https://softchief.com/feed/",
+    "company": "Logyscal Solutions (P) LTD",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "6",
+    "twitter": "https://twitter.com/thesoftchief",
+    "photoUrl": "https://images.mvp.microsoft.com/1ff32085-fa36-ec11-b6e6-00224825194e?639013701723949199",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/1ff32085-fa36-ec11-b6e6-00224825194e",
+    "bio": "Power Platform & Dynamics 365 CE Microsoft MVP, MCT,Solution Architect, YouTuber — My name is Sanjaya Prakash Pradhan and I am a Microsoft MVP, Microsoft Certified Trainer (MCT), Solution Architect, Blogger, YouTuber, Community Lead in Dynamics 365, Power Platform and Azure. My…"
   },
   {
     "name": "Sanjay Prakash",
     "tech": "Power Apps;Power Automate",
     "htmlUrl": "https://softchief.com/blog",
-    "xmlUrl": "https://softchief.com/blog/feed/"
+    "xmlUrl": "https://softchief.com/blog/feed/",
+    "company": "Logyscal Solutions (P) LTD",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "6",
+    "twitter": "https://twitter.com/thesoftchief",
+    "photoUrl": "https://images.mvp.microsoft.com/1ff32085-fa36-ec11-b6e6-00224825194e?639013701723949199",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/1ff32085-fa36-ec11-b6e6-00224825194e",
+    "bio": "Power Platform & Dynamics 365 CE Microsoft MVP, MCT,Solution Architect, YouTuber — My name is Sanjaya Prakash Pradhan and I am a Microsoft MVP, Microsoft Certified Trainer (MCT), Solution Architect, Blogger, YouTuber, Community Lead in Dynamics 365, Power Platform and Azure. My…"
   },
   {
     "name": "Shaheer Ahmad",
     "tech": "Power Apps",
     "htmlUrl": "https://shaheerahmad.hashnode.dev/",
-    "xmlUrl": "https://shaheerahmad.hashnode.dev/rss.xml"
+    "xmlUrl": "https://shaheerahmad.hashnode.dev/rss.xml",
+    "company": "S365 Solutions",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "3",
+    "twitter": "https://twitter.com/ShaheerAhmadCh",
+    "photoUrl": "https://images.mvp.microsoft.com/d667f796-68b2-4580-be96-4c073caf6ffb?638694039060341973",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/d667f796-68b2-4580-be96-4c073caf6ffb",
+    "bio": "Microsoft Certified | Techno-Functional Consultant | Blogger — As the Community Lead and Founder of 365Connect Community in Punjab, Pakistan, Shaheer showcases his passion for community building, event organization, and fostering an environment where individuals can thrive in…"
   },
   {
     "name": "Shaheer Ahmad",
     "tech": "Power Apps",
     "htmlUrl": "https://shaheer365.blogspot.com/",
-    "xmlUrl": "https://shaheer365.blogspot.com/feeds/posts/default?alt=rss"
+    "xmlUrl": "https://shaheer365.blogspot.com/feeds/posts/default?alt=rss",
+    "company": "S365 Solutions",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "3",
+    "twitter": "https://twitter.com/ShaheerAhmadCh",
+    "photoUrl": "https://images.mvp.microsoft.com/d667f796-68b2-4580-be96-4c073caf6ffb?638694039060341973",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/d667f796-68b2-4580-be96-4c073caf6ffb",
+    "bio": "Microsoft Certified | Techno-Functional Consultant | Blogger — As the Community Lead and Founder of 365Connect Community in Punjab, Pakistan, Shaheer showcases his passion for community building, event organization, and fostering an environment where individuals can thrive in…"
   },
   {
     "name": "Siva Sai Krishna Rachakonda",
     "tech": "Power Apps;Power Automate",
     "htmlUrl": "https://www.krishnarachakonda.com",
-    "xmlUrl": "https://www.krishnarachakonda.com/feed/"
+    "xmlUrl": "https://www.krishnarachakonda.com/feed/",
+    "company": null,
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "7",
+    "twitter": "https://twitter.com/rachakonda78",
+    "photoUrl": "https://images.mvp.microsoft.com/2ea7fbd8-f348-eb11-a813-000d3a8dfe0d",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/2ea7fbd8-f348-eb11-a813-000d3a8dfe0d",
+    "bio": "Consultant, Trainer, Speaker, YouTuber, Blogger — Krishna Rachakonda has over 20+ years of experience in Microsoft technologies such as .NET, C#, SharePoint, Office 365, Azure and Power Platform. Krishna Rachakonda worked with wide variety of clients in Oil & Gas, Manufacturing,…"
   },
   {
     "name": "Stefan Strube",
     "tech": "Power Apps;Power Automate",
     "htmlUrl": "https://2die4it.com",
-    "xmlUrl": "https://2die4it.com/feed/"
+    "xmlUrl": "https://2die4it.com/feed/",
+    "company": "Strukton",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "8",
+    "twitter": "https://twitter.com/StefanS365",
+    "photoUrl": "https://images.mvp.microsoft.com/3de4c419-2610-ea11-a811-000d3a8ccb3e",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/3de4c419-2610-ea11-a811-000d3a8ccb3e",
+    "bio": "Solution Architect — Explorer into the wondrous eco system of Microsoft and beyond. Experienced traveller in the cloud worlds of Microsoft 365, Dynamics 365, Power Platform and Azure. Building on the Power Platform. Working as Solution Architect at Strukton. Co-founder of…"
   },
   {
     "name": "Tanguy Touzard",
     "tech": "Power Apps",
     "htmlUrl": "https://mscrmtools.blogspot.com",
-    "xmlUrl": "https://mscrmtools.blogspot.com/feeds/posts/default?alt=rss"
+    "xmlUrl": "https://mscrmtools.blogspot.com/feeds/posts/default?alt=rss",
+    "company": "TALENT BUSINESS SOLUTIONS",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "17",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/178d78ba-3c9a-e411-93f2-9cb65495d3c4",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/178d78ba-3c9a-e411-93f2-9cb65495d3c4",
+    "bio": "Creator/Owner of XrmToolBox for Microsoft Dynamics CRM — Tanguy is a technical and functional consultant on Dynamics CRM solution. He is working on this solution since 2004, when he was an intern at Microsoft France. Since then, Tanguy had covered all the technical and…"
   },
   {
     "name": "Temmy Raharjo",
     "tech": "Power Apps;Power Automate",
     "htmlUrl": "https://temmyraharjo.com/",
-    "xmlUrl": "https://temmyraharjo.com/rss.xml"
+    "xmlUrl": "https://temmyraharjo.com/rss.xml",
+    "company": "Avanade Sdn. Bhd.",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "6",
+    "twitter": "https://twitter.com/temmy_raharjo",
+    "photoUrl": "https://images.mvp.microsoft.com/530f367a-2c20-ec11-b6e6-000d3a1fcc1f",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/530f367a-2c20-ec11-b6e6-000d3a1fcc1f",
+    "bio": "Dynamics CRM CE Tech Consultant | Blogger | MCP | Certified Scrum Master — Temmy Wahyu Raharjo is a Dynamics CRM Technical Consultant and a Blogger. He is recognized as an MVP (Most Valuable Professional) in Business Applications. He is passionate about the concept of Test…"
   },
   {
     "name": "Tomoyuki Hirakawa",
     "tech": "Power Automate",
     "htmlUrl": "https://zenn.dev/flali",
-    "xmlUrl": "https://zenn.dev/flali/feed"
+    "xmlUrl": "https://zenn.dev/flali/feed",
+    "company": "株式会社 ASAHI Accounting Robot 研究所",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "3",
+    "twitter": "https://twitter.com/flali_world",
+    "photoUrl": "https://images.mvp.microsoft.com/3837ee65-3e71-4aa9-a7e1-1384080f9a01?638764147636209109",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/3837ee65-3e71-4aa9-a7e1-1384080f9a01",
+    "bio": "ふらりです！ — I am a robot !"
   },
   {
     "name": "Tomoyuki Hirakawa",
     "tech": "Power Automate",
     "htmlUrl": "https://flali.hatenablog.com/",
-    "xmlUrl": "https://flali.hatenablog.com/rss"
+    "xmlUrl": "https://flali.hatenablog.com/rss",
+    "company": "株式会社 ASAHI Accounting Robot 研究所",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "3",
+    "twitter": "https://twitter.com/flali_world",
+    "photoUrl": "https://images.mvp.microsoft.com/3837ee65-3e71-4aa9-a7e1-1384080f9a01?638764147636209109",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/3837ee65-3e71-4aa9-a7e1-1384080f9a01",
+    "bio": "ふらりです！ — I am a robot !"
   },
   {
     "name": "Tomáš Říha",
     "tech": "Power Automate",
     "htmlUrl": "https://tomriha.com/",
-    "xmlUrl": "https://tomriha.com/feed/"
+    "xmlUrl": "https://tomriha.com/feed/",
+    "company": "Freelance",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "6",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/4426c4b6-2c20-ec11-b6e6-000d3a1fcc1f?638882450178418284",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/4426c4b6-2c20-ec11-b6e6-000d3a1fcc1f",
+    "bio": "Freelance business process automation consultant — As a freelance business process automation consultant I help businesses automate their daily tasks using mainly Power Platform, SharePoint, and the other M365 tools."
   },
   {
     "name": "Veronique Lengelle",
     "tech": "Power Automate;Copilot Studio",
     "htmlUrl": "https://veronicageek.com",
-    "xmlUrl": "https://veronicageek.com/feed/"
+    "xmlUrl": "https://veronicageek.com/feed/",
+    "company": null,
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "9",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/0d1cfba5-67c1-e811-816b-3863bb2e0320",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/0d1cfba5-67c1-e811-816b-3863bb2e0320",
+    "bio": "M365 Developer for a Microsoft partner — Passionate about Microsoft technologies."
   },
   {
     "name": "Wes Preston",
     "tech": "Power Apps;Microsoft 365",
     "htmlUrl": "https://idubbs.com/blog/",
-    "xmlUrl": "https://idubbs.com/blog/feed/"
+    "xmlUrl": "https://idubbs.com/blog/feed/",
+    "company": "TrecStone",
+    "awardCategory": "Business Applications;M365",
+    "yearsInProgram": "19",
+    "twitter": "https://twitter.com/idubbs",
+    "photoUrl": "https://images.mvp.microsoft.com/455a80b4-3c9a-e411-93f2-9cb65495d3c4",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/455a80b4-3c9a-e411-93f2-9cb65495d3c4",
+    "bio": "M365 and Power Platform Consultant. MGCI Board Member. M365 Twin Cities. — Wes is an independent consultant based in Minneapolis, MN and works primarily as a M365 and Power Apps platform evangelist, product specialist and solution designer. Wes assists organizations through…"
   },
   {
     "name": "Yannick Reekmans",
     "tech": "Power Apps;M365 Development",
     "htmlUrl": "https://blog.yannickreekmans.be/",
-    "xmlUrl": "https://blog.yannickreekmans.be/feed/"
+    "xmlUrl": "https://blog.yannickreekmans.be/feed/",
+    "company": "Qubix",
+    "awardCategory": "Business Applications;M365",
+    "yearsInProgram": "9",
+    "twitter": "https://twitter.com/YannickReekmans",
+    "photoUrl": "https://images.mvp.microsoft.com/7d987768-f467-e911-a983-000d3a137780",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/7d987768-f467-e911-a983-000d3a137780",
+    "bio": "Solution Architect focused on Power Platform, loving all things development! — Yannick started his career right after the launch of SharePoint 2010, inheriting some leftover projects on 2007 and 2003. He continued his journey as a technical consultant, doing development on all…"
   },
   {
     "name": "Zsolt Zombik",
     "tech": "Copilot Studio;Power Apps",
     "htmlUrl": "https://aidevme.com",
-    "xmlUrl": "https://aidevme.com/feed/"
+    "xmlUrl": "https://aidevme.com/feed/",
+    "company": "HSO International B.V.",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "1",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/cb38f439-5803-4997-82c1-a4d283e863d3?639238377243304946",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/cb38f439-5803-4997-82c1-a4d283e863d3",
+    "bio": "Power Apps & Copilot Studio MVP | Dataverse config & ALM specialist — I'm a Power Apps and Copilot Studio specialist focused on Dataverse architecture and application lifecycle management. My work centers on building scalable Power Platform solutions — from typed configuration…"
   },
   {
     "name": "Георгий Дубинский",
     "tech": "Power Pages",
     "htmlUrl": "https://crmtipoftheday.com",
-    "xmlUrl": "https://crmtipoftheday.com/feed/"
+    "xmlUrl": "https://crmtipoftheday.com/feed/",
+    "company": "AlexaCRM",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "19",
+    "twitter": "https://twitter.com/georgedude",
+    "photoUrl": "https://images.mvp.microsoft.com/872d88ae-3c9a-e411-93f2-9cb65495d3c4?638354507293235762",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/872d88ae-3c9a-e411-93f2-9cb65495d3c4",
+    "bio": "Power Platform Enabler: Awakening the Platform Hero in You — Enabling others to create wonderful things with Power Platform and Dynamics 365 since 2007. Creator of https://crmtipoftheday.com and https://crm.audio."
   },
   {
     "name": "ณพล เฮงบำรุง",
     "tech": "Copilot Studio;Microsoft Fabric",
     "htmlUrl": "https://www.duckyengineer.com/",
-    "xmlUrl": "https://www.duckyengineer.com/feed/"
+    "xmlUrl": "https://www.duckyengineer.com/feed/",
+    "company": "GEN - M Groups (วิศวกรเป็ด)",
+    "awardCategory": "Business Applications;Data Platform",
+    "yearsInProgram": "3",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/a5ccba76-89b5-4679-bd73-ade3ff52c4a7?638611452318042033",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/a5ccba76-89b5-4679-bd73-ade3ff52c4a7",
+    "bio": "วิศวกรเป็ด- GEN AI |Power Platform|Power BI|Copilot Studio|Power Automate|Fabric — Passionate ,Dedicated and result-oriented with Genrative AI ,Copilot 365 , Copilot Studio , Low code technology(Power Platform) ,Data Analytics (Power BI & Microsoft Fabric),Digital marketing…"
   },
   {
     "name": "きぬ あさ",
     "tech": "Power Automate;Microsoft 365",
     "htmlUrl": "https://note.com/kinuasa/",
-    "xmlUrl": "https://note.com/kinuasa/rss"
+    "xmlUrl": "https://note.com/kinuasa/rss",
+    "company": "independent developer",
+    "awardCategory": "Business Applications;M365",
+    "yearsInProgram": "17",
+    "twitter": "https://twitter.com/kinuasa",
+    "photoUrl": "https://images.mvp.microsoft.com/e18d78ba-3c9a-e411-93f2-9cb65495d3c4",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/e18d78ba-3c9a-e411-93f2-9cb65495d3c4",
+    "bio": "fav: Office Scripts, VBA, Power Automate for desktop, Microsoft Designer — note( https://note.com/kinuasa )やブログ( https://www.ka-net.org/blog/ )、ホームページ( https://www.ka-net.org/ )、SNSでOffice スクリプトやOffice アドイン、リボンのカスタマイズ、VBAといったMicrosoft Officeに関する話題を中心に情報発信していますが、最近ではPower…"
   },
   {
     "name": "きぬ あさ",
     "tech": "Power Automate;Microsoft 365",
     "htmlUrl": "https://note.com/kinuasa/",
-    "xmlUrl": "https://www.ka-net.org/blog/?feed=rss2"
+    "xmlUrl": "https://www.ka-net.org/blog/?feed=rss2",
+    "company": "independent developer",
+    "awardCategory": "Business Applications;M365",
+    "yearsInProgram": "17",
+    "twitter": "https://twitter.com/kinuasa",
+    "photoUrl": "https://images.mvp.microsoft.com/e18d78ba-3c9a-e411-93f2-9cb65495d3c4",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/e18d78ba-3c9a-e411-93f2-9cb65495d3c4",
+    "bio": "fav: Office Scripts, VBA, Power Automate for desktop, Microsoft Designer — note( https://note.com/kinuasa )やブログ( https://www.ka-net.org/blog/ )、ホームページ( https://www.ka-net.org/ )、SNSでOffice スクリプトやOffice アドイン、リボンのカスタマイズ、VBAといったMicrosoft Officeに関する話題を中心に情報発信していますが、最近ではPower…"
   },
   {
     "name": "ヨウセイ ニシムラ",
     "tech": "Power Apps;Power Automate",
     "htmlUrl": "https://youseibubu.com/",
-    "xmlUrl": "https://youseibubu.com/feed/"
+    "xmlUrl": "https://youseibubu.com/feed/",
+    "company": "株式会社エヌサーフ（n-surf Co., Ltd.）",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "4",
+    "twitter": "https://twitter.com/youseibubu",
+    "photoUrl": "https://images.mvp.microsoft.com/190b9e46-28b1-4453-9d21-bb373dd53637?638561968471495305",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/190b9e46-28b1-4453-9d21-bb373dd53637",
+    "bio": "ヨウセイです！Power Appsが大好きでブログや動画、登壇などやっています！ — SharePoint、C#技術者を経てPower Apps、Power Automate技術者に。 Power Platformを活用したシステム開発や技術支援、コンサルティングなどをお仕事に ブログ（https://youseibubu.com）やYouTube、イベントへの登壇などを中心にPower Apps、Power Automateの情報発信を行っています。"
   },
   {
     "name": "典子 松本",
     "tech": "Power Automate",
     "htmlUrl": "https://zuvuyalink.net/nrjlog/",
-    "xmlUrl": "https://zuvuyalink.net/nrjlog/feed/"
+    "xmlUrl": "https://zuvuyalink.net/nrjlog/feed/",
+    "company": "ASAHI Accounting Robot研究所",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "12",
+    "twitter": "https://twitter.com/nori790822",
+    "photoUrl": "https://images.mvp.microsoft.com/440f295b-aea0-e511-8114-c4346bac0abc",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/440f295b-aea0-e511-8114-c4346bac0abc",
+    "bio": "I love Power Automate! — 現在、ASAHI Accounting Robot研究所（通称：ロボ研）に所属し、Power Platform Architectとして主にPower Automateの導入支援や講習を行っています。 サイバー大学の客員講師として「業務効率化のためのデジタルツール活用」を担当し、Power Platformの基礎と活用方法を紹介しています。 またASCII.jpにて、Power Automateを主題とした連載記事を執筆しています。 -…"
   },
   {
     "name": "友花 田辺",
     "tech": "Power Automate;Power Apps",
     "htmlUrl": "https://tana-techlog.net/",
-    "xmlUrl": "https://tana-techlog.net/?feed=rss2"
+    "xmlUrl": "https://tana-techlog.net/?feed=rss2",
+    "company": null,
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "5",
+    "twitter": "https://twitter.com/dreams_panda",
+    "photoUrl": "https://images.mvp.microsoft.com/3df836c5-396f-ed11-81ab-000d3a5600fa",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/3df836c5-396f-ed11-81ab-000d3a5600fa",
+    "bio": "Power Automateを中心としたコミュニティや管理機能に特化したコミュニティの主催・運営をしています。 — Power Platform や Microsoft 365の活用方法や考え方を紹介する活動を行っています。Power Automateを中心としたコミュニティや管理機能に特化したコミュニティの主催・運営をしています。"
   },
   {
     "name": "智哉 吉田",
     "tech": "Power Apps",
     "htmlUrl": "https://koruneko.hatenablog.com/",
-    "xmlUrl": "https://koruneko.hatenablog.com/rss"
+    "xmlUrl": "https://koruneko.hatenablog.com/rss",
+    "company": "AKKODiSコンサルティング株式会社",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "5",
+    "twitter": "https://twitter.com/koruneko32767",
+    "photoUrl": "https://images.mvp.microsoft.com/19ea3563-95fb-ed11-8f6d-000d3a560942",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/19ea3563-95fb-ed11-8f6d-000d3a560942",
+    "bio": "コルネです。Power Appsでゲーム作成している人です。 — いくつかのコミュニティを運営しています。 - Japan Power Platform Game Builders(https://jppgb.connpass.com/) - 業務改善検討会(https://bpr-tbd.connpass.com/) - Japan Power Platform Dev User Group(https://jppdevug.connpass.com/) - Japan Power Platform Community…"
   },
   {
     "name": "석희 한",
     "tech": "Copilot Studio",
     "htmlUrl": "https://pnumber.wixsite.com/blog",
-    "xmlUrl": "https://pnumber.wixsite.com/blog/blog-feed.xml"
+    "xmlUrl": "https://pnumber.wixsite.com/blog/blog-feed.xml",
+    "company": "INSIGHT365",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "16",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/93e968c6-3c9a-e411-93f2-9cb65495d3c4",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/93e968c6-3c9a-e411-93f2-9cb65495d3c4",
+    "bio": "Microsoft 365 및 Power Platform으로 가장 쉽게 개발할 수 있는 방법을 찾고 있습니다. — I started as a SharePoint MVP, then I was an Office 365 MVP, and now I'm a Business Application MVP, and I'm focusing on Power Platform, which is the Microsoft Business Application Platform, and I'm also working on…"
   },
   {
     "name": "재석 이",
     "tech": "Copilot Studio",
     "htmlUrl": "https://blog.naver.com/ilovehandson",
-    "xmlUrl": "https://rss.blog.naver.com/ilovehandson.xml"
+    "xmlUrl": "https://rss.blog.naver.com/ilovehandson.xml",
+    "company": "FAMIGEN",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "7",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/bb99e0f6-37e8-ea11-a814-000d3a8dfe0d",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/bb99e0f6-37e8-ea11-a814-000d3a8dfe0d",
+    "bio": "Hello, I'm Jaeseok :) — My main goal is to help make AI more accessible to everyone. I believe that the interest in AI technology, especially from those who are not developers, fosters an opportunity for us to examine many different problems in society in more domain specific…"
   },
   {
     "name": "허 석",
     "tech": "Power Automate;Copilot Studio",
     "htmlUrl": "https://blog.naver.com/asomi",
-    "xmlUrl": "https://rss.blog.naver.com/asomi.xml"
+    "xmlUrl": "https://rss.blog.naver.com/asomi.xml",
+    "company": "Heo Seok",
+    "awardCategory": "Business Applications",
+    "yearsInProgram": "3",
+    "twitter": null,
+    "photoUrl": "https://images.mvp.microsoft.com/bb649315-2a49-452c-baff-ff7cbc06ca27?638555853575143744",
+    "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/bb649315-2a49-452c-baff-ff7cbc06ca27",
+    "bio": "Power Platform MVP advocating AI-driven digital transformation for SMBs — As Eldon Solution's CEO, I specialize in empowering SMBs with AI-driven digital transformation using Microsoft Power Platform. My expertise in Power Apps, Power Automate, and Copilot Studio enables…"
   }
 ]

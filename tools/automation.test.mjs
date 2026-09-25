@@ -155,11 +155,18 @@ test('YouTube and podcast sources are eligible and route through the content-kin
 
   const router = actions.get('Content_kind_router');
   assert.equal(router.type, 'Switch');
-  assert.match(router.expression, /new_kind'\], 100000002/);
+  // Routes on the URL itself (Video_ID non-empty), not the source's declared kind, so a plain
+  // RSS feed whose items are YouTube links (e.g. a channel's own upload feed) still gets
+  // transcript handling instead of an HTML scrape.
+  assert.match(router.expression, /not\(empty\(outputs\('Video_ID'\)\)\)/);
   assert.match(router.expression, /new_kind'\], 100000003/);
   assert.equal(router.cases.Youtube_transcript.case, 'youtube');
   assert.equal(router.cases.Podcast_transcript.case, 'podcast');
   assert.ok(router.default.actions.Fetch_article, 'plain articles and RSS items must still fetch HTML by default');
+
+  // Video_ID itself must not gate on new_kind - it has to resolve for any matching URL
+  // regardless of source kind, since the router above depends on it being always-evaluated.
+  assert.doesNotMatch(actions.get('Video_ID').inputs, /new_kind/);
 
   // Every branch must write the same shared variable so Foundry_extract has one stable place to read from.
   assert.equal(actions.get('Set_extracted_text_youtube').inputs.name, 'ExtractedText');
@@ -173,10 +180,10 @@ test('YouTube and podcast sources are eligible and route through the content-kin
 
   // Video_ID must be safely evaluable for every kind (never references a skipped action's output).
   assert.doesNotMatch(actions.get('Video_ID').inputs, /outputs\('Fetch_transcript'\)|body\('Transcribe_audio'\)/);
-  assert.match(actions.get('Video_ID').inputs, /100000002/);
 
   const publicationValue = actions.get('Add_publication').inputs.value;
   assert.match(publicationValue, /'source_type'/);
   assert.match(publicationValue, /'source_video_id'/);
   assert.match(publicationValue, /outputs\('Video_ID'\)/);
+  assert.doesNotMatch(publicationValue, /new_kind'\], 100000002/);
 });

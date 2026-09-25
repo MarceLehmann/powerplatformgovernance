@@ -147,12 +147,16 @@ export function flowDefinition() {
         type: 'Foreach', foreach: "@variables('Candidates')", runAfter: {}, runtimeConfiguration: { concurrency: { repetitions: 1 } },
         actions: {
           Article_URL: compose("@if(startsWith(toLower(trim(items('For_each_article')?['primaryLink'])), 'http'), trim(items('For_each_article')?['primaryLink']), concat(uriScheme(outputs('Source_URL')), '://', uriHost(outputs('Source_URL')), if(startsWith(trim(items('For_each_article')?['primaryLink']), '/'), '', '/'), trim(items('For_each_article')?['primaryLink'])))"),
-          Video_ID: compose(`@if(not(equals(items('For_each_source')?['new_kind'], ${kind.youtube})), '', if(contains(outputs('Article_URL'), 'v='), first(split(last(split(outputs('Article_URL'), 'v=')), '&')), if(contains(outputs('Article_URL'), 'youtu.be/'), first(split(last(split(outputs('Article_URL'), 'youtu.be/')), '?')), if(contains(outputs('Article_URL'), '/shorts/'), first(split(last(split(outputs('Article_URL'), '/shorts/')), '?')), ''))))`, 'Article_URL'),
+          // Detected from the URL itself, not the source's declared kind: an RSS feed (e.g. a
+          // YouTube channel's own upload feed) surfaces individual video links as feed items,
+          // and those need transcript handling exactly like a directly-submitted kind: youtube
+          // source would. Safe to run unconditionally - non-YouTube URLs just resolve to ''.
+          Video_ID: compose(`@if(contains(outputs('Article_URL'), 'v='), first(split(last(split(outputs('Article_URL'), 'v=')), '&')), if(contains(outputs('Article_URL'), 'youtu.be/'), first(split(last(split(outputs('Article_URL'), 'youtu.be/')), '?')), if(contains(outputs('Article_URL'), '/shorts/'), first(split(last(split(outputs('Article_URL'), '/shorts/')), '?')), '')))`, 'Article_URL'),
           Try_article: { type: 'Scope', runAfter: after('Video_ID'), actions: {
             Same_approved_host: condition("@and(equals(toLower(uriHost(outputs('Article_URL'))), toLower(uriHost(outputs('Source_URL')))), equals(uriScheme(outputs('Article_URL')), 'https'), equals(uriPort(outputs('Article_URL')), 443), not(contains(outputs('Article_URL'), '@')))", {
               Content_kind_router: {
                 type: 'Switch', runAfter: {},
-                expression: `@if(equals(items('For_each_source')?['new_kind'], ${kind.youtube}), 'youtube', if(equals(items('For_each_source')?['new_kind'], ${kind.podcast}), 'podcast', 'text'))`,
+                expression: `@if(not(empty(outputs('Video_ID'))), 'youtube', if(equals(items('For_each_source')?['new_kind'], ${kind.podcast}), 'podcast', 'text'))`,
                 cases: {
                   Youtube_transcript: { case: 'youtube', actions: {
                     Fetch_transcript: { type: 'Http', inputs: { method: 'GET', uri: "@concat('https://www.youtube.com/api/timedtext?fmt=json3&lang=en&v=', outputs('Video_ID'))", headers: { Accept: 'application/json' }, retryPolicy: { type: 'exponential', count: 2, interval: 'PT10S' } }, runAfter: {}, limit: { timeout: 'PT1M' } },
@@ -186,7 +190,7 @@ export function flowDefinition() {
                 schema: { type: 'object', required: ['publishable', 'reason'], properties: { publishable: { type: 'boolean' }, reason: { type: 'string', maxLength: 200 } } },
               } },
               Relevant_article: condition("@equals(body('Parse_assessment')?['publishable'], true)", {
-                Add_publication: { type: 'AppendToArrayVariable', runAfter: {}, inputs: { name: 'Publications', value: `@addProperty(addProperty(addProperty(body('Parse_assessment'), 'source_url', outputs('Article_URL')), 'source_type', if(equals(items('For_each_source')?['new_kind'], ${kind.youtube}), 'youtube', if(equals(items('For_each_source')?['new_kind'], ${kind.podcast}), 'podcast', 'article'))), 'source_video_id', outputs('Video_ID'))` } },
+                Add_publication: { type: 'AppendToArrayVariable', runAfter: {}, inputs: { name: 'Publications', value: `@addProperty(addProperty(addProperty(body('Parse_assessment'), 'source_url', outputs('Article_URL')), 'source_type', if(not(empty(outputs('Video_ID'))), 'youtube', if(equals(items('For_each_source')?['new_kind'], ${kind.podcast}), 'podcast', 'article'))), 'source_video_id', outputs('Video_ID'))` } },
               }, {}, 'Parse_assessment'),
             }, {
               Require_approved_host: { type: 'ParseJson', inputs: { content: { approved: false }, schema: { type: 'object', properties: { approved: { type: 'boolean', enum: [true] } }, required: ['approved'] } }, runAfter: {} },
