@@ -292,10 +292,17 @@ test('a feed with more than 30 unseen items is capped and caught up gradually, n
   assert.equal(actions.has('Batch_within_limit'), false, 'the batch-size gate must be gone entirely');
   assert.equal(actions.has('Batch_requires_review'), false, 'batch size must never park a source in review');
 
+  // SetVariable can't self-reference the variable it writes (Power Automate rejects that at
+  // save time - confirmed for real: the first version of this fix failed to deploy with
+  // "Self reference is not supported when updating the value of variable 'Candidates'"), so
+  // the capped array must be computed in a Compose first, not read+written in one SetVariable.
+  const composeCapped = actions.get('Compose_capped');
+  assert.equal(composeCapped.inputs, "@take(variables('Candidates'), 30)");
+  assert.deepEqual(composeCapped.runAfter, { Is_RSS: ['Succeeded'] });
   const cap = actions.get('Cap_candidates');
   assert.equal(cap.inputs.name, 'Candidates');
-  assert.equal(cap.inputs.value, "@take(variables('Candidates'), 30)");
-  assert.deepEqual(cap.runAfter, { Is_RSS: ['Succeeded'] });
+  assert.equal(cap.inputs.value, "@outputs('Compose_capped')");
+  assert.deepEqual(cap.runAfter, { Compose_capped: ['Succeeded'] });
   assert.deepEqual(actions.get('For_each_article').runAfter, { Cap_candidates: ['Succeeded'] });
 
   // Set_feed_IDs must still record every ID this poll actually saw (not just the capped 30), so

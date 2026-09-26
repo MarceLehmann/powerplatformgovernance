@@ -162,7 +162,10 @@ export function flowDefinition() {
     // person for. Take the newest 30 (RSS feeds are newest-first by convention) and let the rest
     // wait for the next few 5-minute cycles - Set_feed_IDs below still records every ID this poll
     // actually saw, so nothing gets silently reprocessed or lost, it just catches up gradually.
-    Cap_candidates: set('Candidates', "@take(variables('Candidates'), 30)", 'Is_RSS'),
+    // SetVariable can't self-reference the variable it's writing (Power Automate rejects that
+    // at save time), so the capped array has to be computed in a Compose first.
+    Compose_capped: compose("@take(variables('Candidates'), 30)", 'Is_RSS'),
+    Cap_candidates: set('Candidates', "@outputs('Compose_capped')", 'Compose_capped'),
     For_each_article: {
       type: 'Foreach', foreach: "@variables('Candidates')", runAfter: after('Cap_candidates'), runtimeConfiguration: { concurrency: { repetitions: 1 } },
         actions: {
