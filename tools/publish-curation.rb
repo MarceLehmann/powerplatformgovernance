@@ -63,6 +63,12 @@ module CurationPublisher
     parsed.iso8601
   end
 
+  def self.slug(title)
+    cleaned = title.downcase.gsub(/[^a-z0-9]+/, '-').gsub(/-{2,}/, '-').gsub(/\A-|-\z/, '')
+    return cleaned if cleaned.length <= 70
+    cleaned[0, 70].sub(/-[^-]*\z/, '')
+  end
+
   def self.body_text(value)
     CGI.escapeHTML(value).gsub('{', '&#123;').gsub('}', '&#125;').gsub(/([\\`*_\[\]#])/) { |character| "\\#{character}" }
   end
@@ -135,6 +141,12 @@ module CurationPublisher
     public_credit = credit(credit_data)
     card_data = card(article, identifier)
     image = { 'path' => "/assets/img/curated/#{identifier}.png" }
+    # A human-readable slug for the URL/filename, not the raw hash - readers and search engines
+    # both do better with /posts/power-platform-solution-checker-4a815e50/ than the bare hash.
+    # Derived from the English title so both language versions share the same permalink shape
+    # (matching how they already share the same identifier), with a short hash suffix so two
+    # similarly-titled articles can never collide.
+    url_slug = "#{slug(text(article.fetch('en').fetch('title'), 110))}-#{identifier[0, 8]}"
     files = %w[en de].map do |locale|
       version = article.fetch(locale)
       title = text(version['title'], 110)
@@ -148,14 +160,14 @@ module CurationPublisher
         'author' => 'governance_editorial', 'lang' => locale, 'toc' => false, 'tags' => tags,
         'content_type' => 'curated_summary', 'curation_id' => identifier,
         'image' => image.merge('alt' => "#{alt_prefix}: #{card_data['quote']}"),
-        'permalink' => "/#{locale}/posts/#{identifier}/", 'translation_url' => "/#{alternate}/posts/#{identifier}/",
+        'permalink' => "/#{locale}/posts/#{url_slug}/", 'translation_url' => "/#{alternate}/posts/#{url_slug}/",
       }.merge(source)
       frontmatter['submitted_by'] = public_credit if public_credit
       frontmatter['publisher_disclosure'] = locale == 'de' ? 'Beide Publikationen werden von Marcel Lehmann herausgegeben.' : 'Both publications are edited by Marcel Lehmann.' if parsed.host.delete_prefix('www.') == 'powerplatformtip.com'
       heading = locale == 'de' ? 'Bedeutung für Governance' : 'Governance takeaway'
       video_embed = source_type == 'youtube' ? "\n{% include source-video-embed.html %}\n" : ''
       content = "#{YAML.dump(frontmatter)}---\n\n## TL;DR\n\n#{body_text(summary)}\n\n{% include curated-attribution.html %}\n#{video_embed}\n## #{heading}\n\n#{body_text(takeaway)}\n"
-      ["#{now.utc.strftime('%Y-%m-%d')}-curated-#{identifier}-#{locale}.md", content]
+      ["#{now.utc.strftime('%Y-%m-%d')}-#{url_slug}-#{locale}.md", content]
     end
     { 'files' => files, 'card' => card_data }
   end

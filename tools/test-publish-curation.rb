@@ -35,6 +35,11 @@ Dir.mktmpdir do |root|
     check(content.include?('translation_url:'), 'Missing alternate language')
     check(content.include?('source_url:'), 'Missing original source')
     check(content.include?("/assets/img/curated/#{identifier}.png"), 'Missing card image path')
+    # The URL/filename must be a readable slug from the title, not the bare hash - the hash still
+    # backs the image path and curation_id (checked above/below), just not what readers see.
+    check(name.include?('coe-ownership-reviews'), "Filename is not a readable slug: #{name}")
+    check(!name.include?(identifier), 'Filename must not be the raw hash')
+    check(content.match?(%r{permalink: "/[a-z]{2}/posts/coe-ownership-reviews-[0-9a-f]{8}/"}), 'Permalink is not a readable slug')
   end
   manifest = JSON.parse(File.read(File.join(root, 'tools', 'pending-cards.json')))
   check(manifest.length == 1 && manifest.first['id'] == identifier && manifest.first['quote'] == article['card_quote'], 'Bad pending-cards.json entry')
