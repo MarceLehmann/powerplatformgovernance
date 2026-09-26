@@ -256,4 +256,14 @@ test('every Foundry connector call has an explicit timeout so a slow model respo
     assert.equal(action.inputs.host.apiId.includes('azureaifoundry'), true, `${name} must call the Foundry connector`);
     assert.match(action.limit?.timeout ?? '', /^PT\dM$/, `${name} must have an explicit ISO-8601 timeout`);
   }
+
+  // The same gap existed on Read_RSS and both HtmlToText conversion calls - confirmed for real on
+  // Read_RSS separately (a feed whose origin server returns a slow Cloudflare 522 stalled it for
+  // over 30 minutes with no error, blocking every source after it in that run).
+  assert.match(actions.get('Read_RSS').limit?.timeout ?? '', /^PT\dM$/, 'Read_RSS must have an explicit timeout');
+  for (const name of ['HTML_to_text', 'Pending_to_text']) {
+    const action = actions.get(name);
+    assert.equal(action.inputs.host.apiId.includes('conversionservice'), true, `${name} must call the conversion connector`);
+    assert.match(action.limit?.timeout ?? '', /^PT\dM$/, `${name} must have an explicit timeout`);
+  }
 });
