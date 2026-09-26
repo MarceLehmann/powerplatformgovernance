@@ -155,9 +155,16 @@ export function flowDefinition() {
     }, {
       Set_article_candidate: set('Candidates', "@createArray(addProperty(json('{}'), 'primaryLink', outputs('Source_URL')))"),
     }, 'Validate_source_URL'),
-    Batch_within_limit: condition("@and(lessOrEquals(length(variables('Candidates')), 30), lessOrEquals(length(variables('SeenIDs')), 2000))", {
-      For_each_article: {
-        type: 'Foreach', foreach: "@variables('Candidates')", runAfter: {}, runtimeConfiguration: { concurrency: { repetitions: 1 } },
+    // A feed with a large back-catalog (or a first-ever check with no watermark yet) can easily
+    // surface more than 30 unseen items in one pass. That used to stop the whole source and mark
+    // it "needs review" until a human manually bounded new_feedfrom or compacted new_seenids -
+    // a scaling artifact, not a real problem, and not something this system should ever need a
+    // person for. Take the newest 30 (RSS feeds are newest-first by convention) and let the rest
+    // wait for the next few 5-minute cycles - Set_feed_IDs below still records every ID this poll
+    // actually saw, so nothing gets silently reprocessed or lost, it just catches up gradually.
+    Cap_candidates: set('Candidates', "@take(variables('Candidates'), 30)", 'Is_RSS'),
+    For_each_article: {
+      type: 'Foreach', foreach: "@variables('Candidates')", runAfter: after('Cap_candidates'), runtimeConfiguration: { concurrency: { repetitions: 1 } },
         actions: {
           Article_URL: compose("@if(startsWith(toLower(trim(items('For_each_article')?['primaryLink'])), 'http'), trim(items('For_each_article')?['primaryLink']), concat(uriScheme(outputs('Source_URL')), '://', uriHost(outputs('Source_URL')), if(startsWith(trim(items('For_each_article')?['primaryLink']), '/'), '', '/'), trim(items('For_each_article')?['primaryLink'])))"),
           // Detected from the URL itself, not the source's declared kind: an RSS feed (e.g. a
@@ -230,11 +237,8 @@ export function flowDefinition() {
           No_relevant_articles: update({ new_watermark: "@outputs('Cutoff')", new_seenids: "@string(variables('SeenIDs'))", new_lastchecked: '@utcNow()', new_processing: `@if(equals(items('For_each_source')?['new_kind'], ${kind.rss}), ${processing.ready}, ${processing.review})`, new_failures: 0, new_lastmessage: 'No new publishable governance article found. Feed IDs confirmed; individual article requires review.' }),
         }),
       }, {
-        Changed_during_run: compose('Source changed or approval withdrawn; no publication requested.'),
-      }, 'Recheck_source'),
-    }, {
-      Batch_requires_review: update({ new_processing: processing.review, new_lastmessage: 'Batch exceeds 30 new items or 2000 remembered feed IDs. Review the feed date or compact confirmed IDs before retrying.', new_lastchecked: '@utcNow()' }),
-    }, 'Is_RSS'),
+      Changed_during_run: compose('Source changed or approval withdrawn; no publication requested.'),
+    }, 'Recheck_source'),
   };
   // A submitted URL that's actually a feed (someone pastes their blog's /feed/ URL instead of
   // a single post) reads as "not a real article" to the article-quality gate below and gets

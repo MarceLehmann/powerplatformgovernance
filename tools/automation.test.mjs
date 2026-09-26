@@ -267,3 +267,39 @@ test('every Foundry connector call has an explicit timeout so a slow model respo
     assert.match(action.limit?.timeout ?? '', /^PT\dM$/, `${name} must have an explicit timeout`);
   }
 });
+
+test('a feed with more than 30 unseen items is capped and caught up gradually, never stopped for manual review', () => {
+  const flow = flowDefinition();
+  const actions = new Map();
+  function visit(block) {
+    for (const [name, action] of Object.entries(block)) {
+      assert.equal(actions.has(name), false, `Duplicate action ${name}`);
+      actions.set(name, action);
+      for (const [dependency] of Object.entries(action.runAfter ?? {})) {
+        assert.ok(block[dependency], `${name}: missing dependency ${dependency}`);
+      }
+      if (action.actions) visit(action.actions);
+      if (action.else) visit(action.else.actions);
+      if (action.cases) for (const c of Object.values(action.cases)) visit(c.actions);
+      if (action.default) visit(action.default.actions);
+    }
+  }
+  visit(flow.actions);
+
+  // Batch size used to be a hard gate that parked the whole source in "needs review" until a
+  // human manually bounded new_feedfrom or compacted new_seenids - a scaling artifact, not a
+  // real failure, and never something this system should stop and wait on a person for.
+  assert.equal(actions.has('Batch_within_limit'), false, 'the batch-size gate must be gone entirely');
+  assert.equal(actions.has('Batch_requires_review'), false, 'batch size must never park a source in review');
+
+  const cap = actions.get('Cap_candidates');
+  assert.equal(cap.inputs.name, 'Candidates');
+  assert.equal(cap.inputs.value, "@take(variables('Candidates'), 30)");
+  assert.deepEqual(cap.runAfter, { Is_RSS: ['Succeeded'] });
+  assert.deepEqual(actions.get('For_each_article').runAfter, { Cap_candidates: ['Succeeded'] });
+
+  // Set_feed_IDs must still record every ID this poll actually saw (not just the capped 30), so
+  // the overflow isn't reprocessed forever - it's what lets the source catch up gradually across
+  // the next few 5-minute cycles instead of either stalling or looping on the same backlog.
+  assert.match(actions.get('Set_feed_IDs').inputs.value, /body\('Current_feed_IDs'\)/);
+});
