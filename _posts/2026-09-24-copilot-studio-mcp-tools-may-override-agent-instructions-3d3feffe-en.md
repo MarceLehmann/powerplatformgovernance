@@ -1,0 +1,35 @@
+---
+title: Copilot Studio MCP tools may override agent instructions
+description: A custom MCP server caused a Copilot Studio agent to answer an unrelated
+  question despite instructions restricting conversation to a training course.
+date: '2026-09-24T02:53:09Z'
+author: governance_editorial
+lang: en
+toc: false
+tags:
+- copilot-studio
+- security
+content_type: curated_summary
+curation_id: 3d3feffe84d4963384edd009
+permalink: "/en/posts/copilot-studio-mcp-tools-may-override-agent-instructions-3d3feffe/"
+translation_url: "/de/posts/copilot-studio-mcp-tools-may-override-agent-instructions-3d3feffe/"
+source_url: https://www.itaintboring.com/ai/youve-added-instructions-to-your-copilot-studio-agent-what-happens-next/
+source_site_url: https://www.itaintboring.com/
+source_title: You’ve added instructions to your Copilot Studio agent. What happens
+  next?
+source_name: It Ain’t Boring
+source_language: en
+source_language_name: English
+source_author: Alex Shlega
+source_published_at: '2025-11-09'
+---
+## TL;DR
+
+A Copilot Studio agent followed an instruction to reject questions unrelated to a training course, but later answered one after a matching custom MCP tool returned numbers. The author infers that MCP tools may take priority over agent instructions, allowing tool responses to continue a conversation despite configured constraints and creating unpredictable behaviour.
+
+{% include curated-attribution.html %}
+
+## Governance takeaway
+
+- Admins/CoE: test every Copilot Studio agent instruction together with its configured tools, especially custom MCP servers, because a matching tool may change the agent's response path.
+- Security/Compliance: treat instruction-only restrictions as insufficient control until tool invocation and response handling have been tested, because the example shows an agent continuing an unrelated conversation after an MCP response.

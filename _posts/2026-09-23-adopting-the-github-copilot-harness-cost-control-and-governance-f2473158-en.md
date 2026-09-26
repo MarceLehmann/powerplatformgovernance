@@ -1,0 +1,40 @@
+---
+title: 'Adopting the GitHub Copilot Harness: Cost Control and Governance'
+description: How to find GitHub Copilot harness agents in a tenant and cap their Copilot
+  Credit consumption at the environment and agent level.
+date: '2026-09-23T23:53:00Z'
+author: governance_editorial
+lang: en
+toc: false
+tags:
+- governance
+- copilot-studio
+content_type: curated_summary
+curation_id: f247315811797320ffc7f424
+image:
+  path: https://marcelehmann.github.io/Copilot_LinkedIn/img/govd-44.png
+  alt: Governance card about controlling Copilot agent credit costs.
+permalink: "/en/posts/adopting-the-github-copilot-harness-cost-control-and-governance-f2473158/"
+translation_url: "/de/posts/adopting-the-github-copilot-harness-cost-control-and-governance-f2473158/"
+source_url: https://microsoft.github.io/mcscatblog/posts/copilot-harness-cost-governance/
+source_site_url: https://microsoft.github.io/
+source_title: 'Adopting the GitHub Copilot Harness: Cost Control and Governance in
+  Copilot Studio'
+source_name: The Custom Engine
+source_author: Lewis Baybutt
+source_language: en
+source_language_name: English
+source_published_at: '2026-08-07'
+source_updated_at: '2026-08-13'
+---
+## TL;DR
+
+GitHub Copilot harness agents draw from the same Copilot Credit pool as regular agents but are easy to miss in an audit — find them via the isCLIAgent property in Power Platform inventory, then split maker-development environments from funded production ones. Environment-level controls (Admin Center > Copilot Studio > Manage Copilot Credits) set allocation, tenant-pool access and pay-as-you-go; agent-level limits can cap an individual agent at, for example, 1,000 credits with an 80% alert.
+
+{% include curated-attribution.html %}
+
+## Governance takeaway
+
+- Admins/CoE: run the isCLIAgent inventory check now — harness agents draw from the same credit pool as regular agents but don't surface in a normal agent audit.
+- Security/Compliance: treat that audit gap as the finding itself — a cost review that doesn't separately query for isCLIAgent misses these agents entirely, not just undercounts them.
+- Leadership/Business: fund a notification path to agent owners, not just admins, since the built-in 80% alert reaching only admins means a production agent can quietly run past its own limit while the environment keeps paying.

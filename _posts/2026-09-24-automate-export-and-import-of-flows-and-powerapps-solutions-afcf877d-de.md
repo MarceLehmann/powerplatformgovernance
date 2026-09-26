@@ -1,0 +1,40 @@
+---
+title: Export und Import von Flows und PowerApps-Solutions automatisieren
+description: 'Solution-Backups zum geplanten Workflow machen: versionierte Exporte
+  automatisieren und genau wissen, wie man daraus wiederherstellt.'
+date: '2026-09-24T00:01:01Z'
+author: governance_editorial
+lang: de
+toc: false
+tags:
+- alm
+- governance
+content_type: curated_summary
+curation_id: afcf877d8476cb884a3d32b8
+image:
+  path: https://marcelehmann.github.io/Copilot_LinkedIn/img/govd-39.png
+  alt: Governance-Karte zum Automatisieren geplanter Solution-Backups.
+permalink: "/de/posts/automate-export-and-import-of-flows-and-powerapps-solutions-afcf877d/"
+translation_url: "/en/posts/automate-export-and-import-of-flows-and-powerapps-solutions-afcf877d/"
+source_url: https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-8-automate-export-and-import-flows-powerapps-solutions/
+source_site_url: https://www.powerplatformtip.com/
+source_title: "#PowerPlatformTip 8: Automate Export and Import of Flows and PowerApps
+  Solutions"
+source_name: PowerPlatformTip
+source_author: Marcel Lehmann
+source_author_url: https://www.powerplatformtip.com/about/
+source_language: en
+source_language_name: English
+publisher_disclosure: Beide Publikationen werden von Marcel Lehmann herausgegeben.
+---
+## TL;DR
+
+Flows und Apps in eine Solution packen und deren Export als geplanten Cloud-Flow automatisieren, der täglich oder wöchentlich ein versioniertes ZIP in SharePoint, OneDrive oder Blob Storage ablegt — Wiederherstellung durch erneuten Import dieses ZIPs in die Zielumgebung. Für mehrere Zielumgebungen Umgebungsvariablen oder separate Flows pro Umgebung nutzen.
+
+{% include curated-attribution.html %}
+
+## Bedeutung für Governance
+
+- Admins/CoE: das als geplanten Flow bauen statt als Schritt, an den jemand vor einer riskanten Änderung denken muss, und eine versionierte Historie führen, damit ein Rollback weiter zurückreicht als der letzte Export.
+- Maker: bekommen dadurch ein echtes Sicherheitsnetz — eine kaputte Solution lässt sich aus einem bekannt guten ZIP wiederherstellen, statt aus dem Gedächtnis neu aufgebaut zu werden.
+- Leadership/Business: prüfen, ob dieser Backup-Job tatsächlich existiert, bevor eine kritische Solution als produktionsreif gilt — "wir exportieren vor Änderungen" ist kein Kontinuitätsplan.

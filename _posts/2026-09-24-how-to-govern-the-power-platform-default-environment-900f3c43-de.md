@@ -1,0 +1,39 @@
+---
+title: Wie man die Power-Platform-Standardumgebung regelt
+description: Eines von drei Modellen für die Default Environment wählen - nur persönliche
+  Produktivität, geduldet aber überwacht, oder gesperrt - und niemals mischen.
+date: '2026-09-24T00:20:01Z'
+author: governance_editorial
+lang: de
+toc: false
+tags:
+- governance
+- environments
+- dlp
+content_type: curated_summary
+curation_id: 900f3c4394c14e62694dc6cd
+image:
+  path: https://marcelehmann.github.io/Copilot_LinkedIn/img/govd-02.png
+  alt: 'Governance-Karte: Der Spielplatz — echte Lösungen bekommen echte Umgebungen.'
+permalink: "/de/posts/how-to-govern-the-power-platform-default-environment-900f3c43/"
+translation_url: "/en/posts/how-to-govern-the-power-platform-default-environment-900f3c43/"
+source_url: https://www.michaelroth42.com/post/2026-02-10-how-to-govern-the-power-platform-default-environment/
+source_site_url: https://www.michaelroth42.com/
+source_title: How to Govern the Power Platform Default Environment
+source_name: michaelroth42.com
+source_author: Michael Roth
+source_language: en
+source_language_name: English
+source_published_at: '2026-02-10'
+---
+## TL;DR
+
+Genau ein Modell für die Default Environment wählen — nur persönliche Produktivität, geduldet-aber-überwacht, oder gesperrt für Maker — und diese nie im selben Tenant mischen. Basis-Kontrollen in jedem Fall: Teilen mit "Jeder" deaktivieren (wer teilt, weiss selten, wer "jeder" tatsächlich alles einschliesst), Trials, virale Pläne und Auto-Claim-Richtlinien abschalten, die Premium-Lizenzen ohne Entscheidungspunkt vergeben, und geplante Flows einsetzen, die blockierte Connectors oder übermässig geteilte Lösungen melden.
+
+{% include curated-attribution.html %}
+
+## Bedeutung für Governance
+
+- Admins/CoE: prüfen, welches der drei Modelle aktuell tatsächlich gilt — ein Tenant, der je nach Nachfrage alle drei gleichzeitig fährt, ist der eigentliche Befund, nicht die Frage nach dem "besten" Modell.
+- Security/Compliance: kontrollieren, ob Teilen mit "Jeder" deaktiviert ist und Auto-Claim-Richtlinien keine Premium-Lizenzen ohne Entscheidungspunkt vergeben, da beides gängige, nie überprüfte Standardeinstellungen sind.
+- Maker: brauchen eine benannte Alternativumgebung zum Bauen, bevor die Default Environment gesperrt wird — sonst umgehen sie die Richtlinie genau an dem Tag, an dem sie greift.
