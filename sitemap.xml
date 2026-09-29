@@ -1,0 +1,46 @@
+---
+layout: null
+sitemap: false
+# Sitemap-Regeln (alles automatisch, keine Handpflege - neue Posts erscheinen nach dem Build von selbst):
+#  - ersetzt das Standard-Sitemap des jekyll-sitemap-Plugins (das Plugin schreibt keine eigene, wenn diese Datei existiert)
+#  - nur HTML-Seiten (URL endet auf "/"): keine Assets, Manifeste, robots.txt, *.min
+#  - nicht enthalten: sitemap: false, robots: noindex, redirect_to
+#  - nicht enthalten: Listen (tags, categories, archives), Formular-Seite (submit), Rechtliches (privacy), 404, Pagination (/page2/)
+#  - Einzelne Seite ausschliessen: sitemap: false in den Front Matter der Seite
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>{{ site.url }}/</loc>
+</url>
+{%- assign excluded_paths = "/archives/|/tags/|/categories/|/privacy/|/submit/|/404" | split: "|" -%}
+{%- assign listed_pages = site.tabs | concat: site.pages -%}
+{%- for item in listed_pages -%}
+{%- assign skip = false -%}
+{%- if item.sitemap == false or item.redirect_to or item.robots contains 'noindex' -%}{%- assign skip = true -%}{%- endif -%}
+{%- assign last_char = item.url | slice: -1 -%}
+{%- if item.url == '/' or last_char != '/' -%}{%- assign skip = true -%}{%- endif -%}
+{%- assign page_head = item.url | slice: 0, 5 -%}
+{%- assign page_digit = item.url | slice: 5, 1 -%}
+{%- if page_head == '/page' and page_digit != '' and '0123456789' contains page_digit -%}{%- assign skip = true -%}{%- endif -%}
+{%- for path in excluded_paths -%}
+{%- if item.url contains path -%}{%- assign skip = true -%}{%- endif -%}
+{%- endfor -%}
+{%- unless skip -%}
+<url>
+<loc>{{ item.url | absolute_url | xml_escape }}</loc>
+{%- if item.last_modified_at %}
+<lastmod>{{ item.last_modified_at | date_to_xmlschema }}</lastmod>
+{%- endif %}
+</url>
+{%- endunless -%}
+{%- endfor -%}
+{%- for post in site.posts -%}
+{%- unless post.sitemap == false or post.redirect_to or post.robots contains 'noindex' -%}
+<url>
+<loc>{{ post.url | absolute_url | xml_escape }}</loc>
+<lastmod>{{ post.last_modified_at | default: post.date | date_to_xmlschema }}</lastmod>
+</url>
+{%- endunless -%}
+{%- endfor -%}
+</urlset>
