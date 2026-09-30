@@ -1,6 +1,21 @@
 # Architektur: RSS-gestützter Governance-Blog mit Power Automate und GitHub
 
-**Aktueller Umsetzungsstand:** Der neue [Betriebsleitfaden](2026-09-18_architektur_automation_betrieb.md) ersetzt die nachstehende Erstplanung. Der Auftrag vom 18.09.2026 erlaubt automatische Kurzfassungen relevanter Artikel aus freigegebenen, aktiven RSS-Quellen. Dataverse-Tabelle und ausgeschalteter Flow sind angelegt; die GitHub-Anmeldung steht noch aus.
+**Historisches Dokument.** Dies ist die Erstplanung vom 18.09.2026. Massgeblich sind der [Betriebsleitfaden](2026-09-18_architektur_automation_betrieb.md), die [Kurations- und Quellenregeln](2026-09-18_architektur_kuration_und_quellen.md) und die [Einreichungsarchitektur](2026-09-18_architektur_submission_moderation.md), jeweils fortgeschrieben am 30.09.2026. Die Umsetzung weicht in wesentlichen Punkten von dieser Planung ab (Liste unten). Der Text danach bleibt unverändert als Planungsstand erhalten.
+
+## Abweichungen der Umsetzung (Stand 30.09.2026)
+
+| Planung | Umsetzung |
+|---|---|
+| Manuelle Freigabe jedes Artikels, später Moderations-Workflow | Autonome Freigabe seit 24.09.: Feed-Erkennung und KI-Gate für Einreichungen, Relevanzprüfung je Eintrag |
+| SharePoint-Liste oder Dataverse als Quellenliste | Dataverse-Tabelle `new_governancesource` in der Solution `PowerPlatformGovernance` |
+| Feed-Abruf per HTTP und eigenes XML-Parsing | RSS-Connector (`ListFeedItems`); Artikel per HTTP-Abruf und Content-Conversion-Connector |
+| Deduplizierung über Hash aus Titel und Link sowie `LastStatus` | Feed-IDs je Quelle in Dataverse; Original-URL-Deduplizierung im Publisher gegen die vorhandenen Beiträge |
+| Commit über die GitHub REST API oder eine Action | Der Flow sendet `repository_dispatch`, der Workflow `Publish Curated Articles` validiert, schreibt und committet; Quittung als Git-Tag |
+| KI über einen eigenen Custom Connector zu Azure AI Foundry, ohne AI Builder und ohne Copilot-Studio-Agent | Wie geplant: Custom Connector `AzureAIFoundry-Privat` mit `ChatCompletion` (`model-router`). Neu hinzugekommen ist `TranscribeAudio` (`whisper`) für Podcasts |
+| URLs wie `/de/2026/09/18/dlp-policies/` | `/de/posts/<titel>-<hash8>/` und `/en/posts/<titel>-<hash8>/` |
+| Front Matter mit `categories`, Cover-Bild und Person als Autor | `author: governance_editorial`, Tags aus fester Liste, `content_type`, `curation_id`, Quellenfelder und ein Karten-Bild je Beitrag |
+| Quellarten RSS und Artikel | zusätzlich YouTube und Podcast |
+| Phase 3: Eingabeformular, Moderation, Standard-Tags, Suche, Filter und Copilot-Studio-Agent | Formular und Standard-Tags umgesetzt, Moderation autonom, Suche über die eingebaute Suche des Chirpy-Themes, Filter über Tags, kein Copilot-Studio-Agent |
 
 ## Ziel
 
@@ -57,7 +72,7 @@ Nur noch relevant:
 - Hash / Link / GUID für Deduplizierung
 - `LastStatus` für Fehler- und Laufzeit-Log
 
-Das heißt konkret: Der Flow prüft ein RSS-Item, entscheidet ob es neu ist, und schreibt dann sofort ein neues Post-File nach `_posts/` auf GitHub.
+Das heisst konkret: Der Flow prüft ein RSS-Item, entscheidet ob es neu ist, und schreibt dann sofort ein neues Post-File nach `_posts/` auf GitHub.
 
 ## Power Automate-Flow
 
@@ -285,4 +300,4 @@ Dann folgt:
 - Deduplikation
 - Markdown-Datei-Generierung
 - GitHub Commit
-- anschließend AI Summary / TL;DR
+- anschliessend AI Summary / TL;DR

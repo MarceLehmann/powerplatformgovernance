@@ -1,61 +1,70 @@
 # Power Platform Governance
 
-Dieses Repository ist die technische Basis für einen Governance-Blog rund um Microsoft Power Platform: Security, Standards, ALM, DLP, Environment-Strategy, Dataverse, Power Apps, Power Automate, Copilot Studio und Betriebspraxis.
+Dieses Repository ist die technische Basis von [powerplatformgovernance.com](https://powerplatformgovernance.com): einer kuratierten Sammlung von Kurzfassungen zu Microsoft Power Platform Governance (Security, Standards, ALM, DLP, Environment-Strategie, Dataverse, Power Apps, Power Automate, Copilot Studio und Betriebspraxis). Kuratierte Beiträge entstehen überwiegend automatisch: Power-Automate-Flows befüllen die Seite aus einer Quellenliste, und GitHub veröffentlicht sie. Eigene Artikel (15 Paare) und die Seiten unter `_tabs/` werden von Hand gepflegt. Stand: 30.09.2026.
 
-Die Idee ist ein Blog, der nicht manuell gepflegt wird, sondern durch einen Power Automate-Flow mit RSS-Feeds aus einer Community-Liste von Websites automatisch aktualisiert wird. Neue Inhalte werden als Markdown-Artikel formatiert, in das Repository geschrieben und per GitHub veröffentlicht.
+## Zielbild und Umsetzung
 
-## Zielbild
-
-- Chirpy-basierte Website mit Governance-Content
-- Eingabeformular / Web-Formular für Websites mit RSS-Feed
-- Power Automate läuft alle 5 Minuten
-- RSS-Feeds werden geprüft, neue Einträge erkannt
-- Titel, Kurzbeschreibung, Link, Datum, Tags und Summary / TL;DR extrahiert
-- Neue Artikel als Markdown in `_posts/` geschrieben
-- Commit in GitHub, damit der Blog automatisch neu gebaut wird
-- Optional: Copilot Studio Agent für Suche und Zusammenfassungen
+- Chirpy-basierte Jekyll-Website auf GitHub Pages mit eigener Domain; Beiträge zweisprachig (DE und EN)
+- Öffentliches Einreichungsformular, das einen Webhook-Flow aufruft und in Dataverse speichert
+- Verarbeitungs-Flow alle 5 Minuten: Quellen prüfen (Artikel, RSS, YouTube, Podcast), Foundry-Bewertung, kurze DE-/EN-Zusammenfassung
+- Neue Einreichungen werden autonom entschieden (Feed-Erkennung oder KI-Gate, ohne menschliche Prüfung)
+- Übergabe per `repository_dispatch` an den Publisher-Workflow: er validiert, dedupliziert, schreibt beide Sprachen nach `_posts/`, rendert ein Karten-Bild je Beitrag und baut die Seite
+- Zusätzlich: IndexNow, täglicher E-Mail-Digest über Brevo, Cookie-Einwilligung mit Google Analytics und Microsoft Clarity
 
 ## Architektur
 
-1. Website-Submission
-   - Besucher oder Community-Mitglieder tragen Website + RSS-URL ein
-   - Daten landen in SharePoint-Liste oder Dataverse-Tabelle
+```mermaid
+flowchart LR
+    Q[Einreichung oder kuratierte Quelle] --> D[(Dataverse: new_governancesource)]
+    D --> F[Power Automate: alle 5 Minuten]
+    F --> A[Azure AI Foundry: Bewertung und Kurzfassung DE/EN]
+    A --> G[GitHub repository_dispatch]
+    G --> P[Publisher-Workflow: prüft, dedupliziert, schreibt _posts, rendert Karten]
+    P --> S[GitHub Pages]
+    P -. Quittungs-Tag .-> F
+```
 
-2. RSS-Scanner
-   - Flow läuft alle 5 Minuten
-   - Liest alle aktiven Quellen
-   - Prüft neue Einträge anhand GUID / Link / PubDate
-
-3. Content-Transformation
-   - Titel, Excerpt, Summary, Tags, Datum
-   - Falls der Feed nur wenig Inhalt liefert: AI-Summary aus dem Artikeltext
-
-4. Blog Publishing
-   - Markdown-Datei im `_posts/`-Ordner erstellen
-   - Frontmatter mit Kategorie, Tags und Source URL
-   - Commit an GitHub
-   - Chirpy rendert die Seite neu
+Die Details stehen in den Dokumenten unten. Der Überblick über Freigabe, Quellarten und Betriebsgrenzen ist der Betriebsleitfaden.
 
 ## Technischer Stack
 
-- Frontend: Jekyll + Chirpy
-- Feed-Input: SharePoint List oder Dataverse
-- Orchestrierung: Power Automate
-- Feed-Parsing: HTTP + XML-Parsing
-- GitHub-Publishing: GitHub REST API oder GitHub Action
-- AI: optional Copilot bzw. Azure OpenAI für TL;DR / Summary
+- Website: Jekyll und das Chirpy-Theme (Gem `jekyll-theme-chirpy`), Build und Deployment über GitHub Actions
+- Quellenliste und Betriebsstatus: Dataverse, Tabelle `new_governancesource`
+- Orchestrierung: zwei Power-Automate-Cloud-Flows, per Code erzeugt (`tools/automation.mjs`, `tools/intake.mjs`) und mit PowerShell bereitgestellt (`tools/deploy-automation.ps1`, `tools/deploy-intake.ps1`)
+- KI: Azure AI Foundry über den eigenen Custom Connector `AzureAIFoundry-Privat` (`model-router` für Text, `whisper` für Audio)
+- Veröffentlichung: GitHub-Connector, Workflow `Publish Curated Articles` (`tools/publish-curation.rb`)
+- Karten-Bilder: `tools/render_card.py` (Python, Pillow); Digest: `tools/send_digest.py` (Brevo)
 
-## Doku
+## Dokumentation
 
-- Architektur-Detail: [2026-09-18_architektur_rss_blog.md](2026-09-18_architektur_rss_blog.md)
+- [Betrieb und Freigabe](2026-09-18_architektur_automation_betrieb.md): Ablauf, Quellarten, autonome Freigabe, Sicherheit, Zeitlimits, Workflows, bekannte Lücken, Änderungsverlauf
+- [Kuration, Quellen und Einreichungen](2026-09-18_architektur_kuration_und_quellen.md): redaktionelle Regeln, Einreichung, Quellenübersicht, SEO und GEO
+- [Einreichung und Moderation](2026-09-18_architektur_submission_moderation.md) (englisch): Ablauf, Bewertungen, Zustände
+- [RSS-Blog, Erstplanung](2026-09-18_architektur_rss_blog.md): historisch, mit Liste der Abweichungen der Umsetzung
 
-## Nächste Schritte
+Alle vier tragen im Dateinamen das Datum der Erstfassung. Sie wurden am 30.09.2026 an den Code angepasst; die Erstplanung ist als historisch gekennzeichnet.
 
-1. SharePoint- oder Dataverse-Struktur aufsetzen
-2. RSS-Feed-Parsing mit 2–3 Live-Feeds testen
-3. Markdown-Datei-Generierung und GitHub-Commit bauen
-4. Copilot-Studio-Integration ergänzen
+## Lokal arbeiten und prüfen
 
-## Status
+Voraussetzungen: Ruby (CI nutzt 3.4), Node (in den Workflows nicht festgelegt, die Tests laufen mit Node 22), für die Bereitstellung PowerShell 7.4 und die Azure CLI. Die Karten-Bilder brauchen Python 3.12 mit Pillow und die Schrift Kalam; nur die CI lädt die Schriftdateien, lokal bricht `tools/render_card.py` ohne sie mit „Missing font“ ab.
 
-Das Repository ist als Chirpy-Blog bereits funktionsfähig und wurde mit einem lokalen Jekyll-Build verifiziert.
+```bash
+export LC_ALL=C.UTF-8            # Ruby braucht UTF-8, sonst brechen Umlaute die Tests
+bundle install
+node --test tools/*.test.mjs
+bundle exec ruby tools/test-publish-curation.rb
+bash tools/test.sh               # Build, Seitenprüfung (tools/check-site.rb) und htmlproofer
+bash tools/run.sh                # lokaler Server
+```
+
+## Geheimnisse und Variablen
+
+Nie im Repository. Als GitHub-Actions-Secrets: `GOVERNANCE_SUBMISSION_ENDPOINT` (Callback des Einreichungs-Webhooks, wird beim Build eingebunden) und `BREVO_API_KEY` (Digest).
+
+## Schwesterseite
+
+[Power Platform News](https://powerplatformnews.com) ist in Vorbereitung und nicht live. Es nutzt dieselbe Engine mit eigenem Profil (`_data/profile.json`), eigener Tabelle und eigenen Flows. Den Konvergenz-Vertrag und die dort umgesetzten Verbesserungen beschreibt die Spezifikation im Repository `powerplatformnews.com` (Branch `ccr-453447c5-qyg2zo`, noch nicht gemerged).
+
+## Offene Punkte
+
+Siehe „Bekannte Lücken“ im Betriebsleitfaden.
