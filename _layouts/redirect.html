@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<article class="px-1">
+  <header>
+    <h1 data-toc-skip>{{ page.title }}</h1>
+    {% if page.description %}
+      <p class="post-desc fw-light mb-4">{{ page.description }}</p>
+    {% endif %}
+  </header>
+
+  <div class="content">
+    <p>
+      {% if page.lang == 'de' %}
+        Diese Seite wurde verschoben. Weiter zu
+      {% else %}
+        This page has moved. Continue to
+      {% endif %}
+      <a href="{{ page.redirect_to }}">{{ page.redirect_to }}</a>.
+    </p>
+  </div>
+</article>
+
+<script>location.replace("{{ page.redirect_to }}");</script>

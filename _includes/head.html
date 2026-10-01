@@ -76,6 +76,17 @@
 
   {{ seo_tags }}
 
+  {%- if page.redirect_to -%}
+    <!-- T-0098: dead-URL stub pages (layout: redirect) bounce the visitor client-side;
+         canonical_url front matter already points jekyll-seo-tag's canonical at the
+         live target above, this just adds the actual redirect. -->
+    <meta http-equiv="refresh" content="0; url={{ page.redirect_to }}">
+  {%- endif -%}
+
+  {%- if page.robots -%}
+    <meta name="robots" content="{{ page.robots }}">
+  {%- endif -%}
+
   {%- if site.social.fediverse_handle %}
     <!-- Fediverse handle/creator -->
     <meta name="fediverse:creator" content="{{ site.social.fediverse_handle }}">
