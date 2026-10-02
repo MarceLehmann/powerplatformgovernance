@@ -19,7 +19,7 @@ test('RSS repeats, articles stop after publication, errors can retry', () => {
   assert.equal(isEligible({ ...ready, new_kind: kind.rss }), true);
   assert.equal(isEligible({ ...ready, new_processing: processing.published }), false);
   assert.equal(isEligible({ ...ready, new_processing: processing.error }), true);
-  assert.equal(config.intervalMinutes, 5);
+  assert.equal(config.intervalMinutes, 360);
 });
 
 test('table matches submission fields and defaults to no approval or consent', () => {
@@ -34,8 +34,8 @@ test('table matches submission fields and defaults to no approval or consent', (
 test('flow is sequential, approval-filtered, uses Foundry and confirms GitHub results', () => {
   const flow = flowDefinition();
   assert.equal(JSON.stringify(flow).includes('"pattern"'), false);
-  assert.equal(flow.triggers.Every_5_minutes.recurrence.interval, 5);
-  assert.equal(flow.triggers.Every_5_minutes.runtimeConfiguration.concurrency.runs, 1);
+  assert.equal(flow.triggers.Recurring_check.recurrence.interval, 360);
+  assert.equal(flow.triggers.Recurring_check.runtimeConfiguration.concurrency.runs, 1);
   assert.match(flow.actions.List_sources.inputs.parameters.$filter, /new_enabled eq true and new_approval eq 100000001/);
   const actions = new Map();
   function visit(block) {
