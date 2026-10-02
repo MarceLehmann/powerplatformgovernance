@@ -1415,5 +1415,18 @@
     "photoUrl": "https://images.mvp.microsoft.com/bb649315-2a49-452c-baff-ff7cbc06ca27?638555853575143744",
     "profileUrl": "https://mvp.microsoft.com/en-US/mvp/profile/bb649315-2a49-452c-baff-ff7cbc06ca27",
     "bio": "Power Platform MVP advocating AI-driven digital transformation for SMBs — As Eldon Solution's CEO, I specialize in empowering SMBs with AI-driven digital transformation using Microsoft Power Platform. My expertise in Power Apps, Power Automate, and Copilot Studio enables…"
+  },
+  {
+    "name": "MVPTreff",
+    "tech": "Copilot Studio;Power Apps;Power Automate;Power BI",
+    "htmlUrl": "https://www.mvptreff.de/blog/",
+    "xmlUrl": "https://www.mvptreff.de/feed/",
+    "company": null,
+    "awardCategory": null,
+    "yearsInProgram": null,
+    "twitter": null,
+    "photoUrl": null,
+    "profileUrl": null,
+    "bio": "German-language community blog run by a team of Microsoft MVPs and community members, covering Copilot & AI, Microsoft 365, Azure and Power Platform topics."
   }
 ]
