@@ -1,0 +1,47 @@
+---
+title: Copilot Studio KI-Entwicklung braucht weiterhin menschliche Prüfung
+description: KI-Coding-Agenten können Copilot-Studio-Änderungen erzeugen und testen.
+  Anforderungen, Architektur, Sicherheitsprüfung und Bereitstellung bleiben menschliche
+  Aufgaben.
+date: '2026-10-02T04:59:52Z'
+author: governance_editorial
+lang: de
+toc: false
+tags:
+- governance
+- security
+- alm
+- dataverse
+- copilot-studio
+content_type: curated_summary
+curation_id: 1662ecb06a7785e9c8e1329b
+image:
+  path: "/assets/img/curated/1662ecb06a7785e9c8e1329b.png"
+  alt: 'Governance-Karte: AI can generate and test. Humans must own the requirement,
+    review and deployment.'
+permalink: "/de/posts/copilot-studio-ai-development-still-requires-human-review-1662ecb0/"
+translation_url: "/en/posts/copilot-studio-ai-development-still-requires-human-review-1662ecb0/"
+source_url: https://www.karlex.fi/ai-driven-does-not-mean-ai-autonomous-what-copilot-studio-development-looks-like-now/
+source_site_url: https://www.karlex.fi/
+source_title: 'AI-driven does not mean AI-autonomous: what Copilot Studio development
+  looks like now'
+source_name: Karl-Johan Spiik, Microsoft MVP
+source_language: en
+source_language_name: English
+source_author: Karl-Johan Spiik
+source_published_at: '2026-10-02'
+source_type: article
+---
+
+## TL;DR
+
+Coding-Agenten für Copilot Studio können Dataverse-Schemas prüfen, Topics erzeugen und Änderungen testen, ersetzen aber weder technische Kontrollen noch menschliche Verantwortung. Menschen behalten Anforderungen, kritische Prüfung, Review und Bereitstellung. Erforderliche Toolverbindungen müssen in Copilot Studio manuell erstellt, KI-Logik validiert und Architekturentscheidungen geprüft werden.
+
+{% include curated-attribution.html %}
+
+## Bedeutung für Governance
+
+- Makers: Generierte Topics und Geschäftslogik validieren, besonders wenn ein Agent Werte ableitet statt Nutzende zu fragen.
+- Admins/CoE: Zwischen Entwicklung und Test einen Architektur-Review einplanen, wenn Coding-Agenten Integrationen oder Muster wählen.
+- Security/Compliance: Agentenanweisungen nicht als Kontrollen behandeln; Sicherheits-, Authentifizierungs- und Plattformgrenzen menschlich validieren.
+- Leadership/Business: Use-Case-Verantwortliche einbinden, damit KI-generierte Entscheidungen fachlich geprüft werden.
