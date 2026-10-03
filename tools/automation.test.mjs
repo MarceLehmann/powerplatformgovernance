@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { approval, config, eligibleFilter, flowDefinition, isEligible, kind, processing, tableDefinition } from './automation.mjs';
+import { approval, config, eligibleFilter, extractionPrompt, flowDefinition, isEligible, kind, processing, tableDefinition } from './automation.mjs';
 
 const ready = { statecode: 0, new_enabled: true, new_approval: approval.approved, new_kind: kind.article, new_processing: processing.ready };
 
@@ -309,4 +309,25 @@ test('a feed with more than 30 unseen items is capped and caught up gradually, n
   // the overflow isn't reprocessed forever - it's what lets the source catch up gradually across
   // the next few 5-minute cycles instead of either stalling or looping on the same backlog.
   assert.match(actions.get('Set_feed_IDs').inputs.value, /body\('Current_feed_IDs'\)/);
+});
+
+test('extraction prompt asks for exactly 5 evidence-bound FAQ items per language, placed before the closing rule', () => {
+  assert.match(extractionPrompt, /faq \(exactly 5 objects with question and answer/);
+  assert.ok(extractionPrompt.includes('exactly 5'));
+  assert.ok(extractionPrompt.includes('40-80 words'));
+  assert.ok(extractionPrompt.includes('faq not supported'));
+  assert.ok(extractionPrompt.includes('Answer ONLY from the supplied evidence'));
+  const faqAt = extractionPrompt.indexOf('Write the faq for each language');
+  const closingAt = extractionPrompt.indexOf('No other keys.');
+  assert.ok(faqAt > 0, 'FAQ paragraph is missing');
+  assert.ok(faqAt < closingAt, 'FAQ paragraph must come before "No other keys."');
+  assert.equal(extractionPrompt.indexOf('No other keys.'), extractionPrompt.lastIndexOf('No other keys.'));
+  assert.ok(extractionPrompt.trimEnd().endsWith('No other keys.'));
+});
+
+test('the flow sends the extraction prompt including the FAQ rules to Foundry', () => {
+  const flow = flowDefinition();
+  const text = JSON.stringify(flow);
+  assert.ok(text.includes('Write the faq for each language'));
+  assert.ok(text.includes('faq not supported'));
 });
