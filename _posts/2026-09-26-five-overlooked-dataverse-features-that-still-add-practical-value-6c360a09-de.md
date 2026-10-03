@@ -28,6 +28,17 @@ source_language_name: English
 source_author: Nick Doelman
 source_published_at: '2025-08-28'
 source_type: article
+faq:
+  - question: "Brauche ich eine Dynamics-365-Lizenz, um den Dynamics 365 Outlook Connector zu nutzen?"
+    answer: "Nein. Wer eine Power-Apps-Lizenz hat, darf ihn laut Autor uneingeschränkt verwenden. Er ordnet E-Mails Dataverse-Datensätzen zu und verknüpft Dataverse-Kontakte mit Outlook-Kontakten, was im Alltag viel Abtippen erspart. Als einen Grund für die geringe Verbreitung sieht der Autor die irreführende Benennung."
+  - question: "Was bringt die native Exchange-Online-Integration in Dataverse?"
+    answer: "Sie erlaubt es, E-Mails aus Power Apps zu senden und zu empfangen, ohne einen Power-Automate-Flow, wodurch Flow-Läufe im Kontingent bleiben, und ohne ein spezielles Servicekonto. Für die Einrichtung braucht es Serverintegration, Postfächer, Warteschlangen und E-Mail-fähige Tabellen, was der Artikel der Microsoft-Dokumentation überlässt."
+  - question: "Wo finde ich den Geschwindigkeitstest von Dataverse und wie setze ich ihn ein?"
+    answer: "Hänge tools/diagnostics/diag.aspx an die crm.dynamics.com-Adresse deiner Umgebung an. Das Werkzeug hilft bei langsamen modellgesteuerten Apps, indem es misst, wie deine Umgebung antwortet. Der Autor empfiehlt, es regelmässig laufen zu lassen und Vergleichswerte aufzubewahren, damit du Leistungseinbussen erkennst, indem du aktuelle mit früheren Messungen vergleichst."
+  - question: "Wie funktionieren Feldzuordnungen in Dataverse und wo liegen ihre Grenzen?"
+    answer: "Legst du in einer modellgesteuerten App einen verknüpften Datensatz an, etwa einen Kontakt aus dem Unterraster einer Firma, werden zugeordnete Werte in den neuen Datensatz kopiert. Das passiert nur bei der Erstellung, setzt gleiche Feldtypen und gleich grosse oder kleinere Felder voraus, und spätere Änderungen am übergeordneten Datensatz wirken nicht nach. Die Oberfläche gibt es nur im klassischen Tabellen-Designer."
+  - question: "Kann ich in Dataverse ohne Code eine Nachschlagespalte für mehrere Tabellen anlegen?"
+    answer: "Nicht auf maker-freundliche Art. Die Kundensuche auf Konto oder Kontakt ist eingebaut, eigene Nachschlagespalten auf mehrere Tabellen erfordern aber SDK-Zugriff. XrmToolBox bietet dafür ein Hilfsprogramm, das den Zugang erleichtert. Als Beispiel nennt der Autor eine Spesen-App, in der mehrere Buchungsnachschlagen zu einer einzigen werden und das Formular vereinfachen."
 ---
 
 ## TL;DR

@@ -31,6 +31,17 @@ submitted_by:
   publish_credit: true
   name: Mirko Peters
   linkedin: https://www.linkedin.com/in/m365showpodcast/
+faq:
+  - question: "Why do raw language models produce unreliable finance numbers?"
+    answer: "Asking an ungrounded AI model to analyze a quarterly P&L statement often results in hallucinated figures and conflicting versions of the truth. The article therefore separates general reasoning from deterministic calculation: generative AI excels at exploration, while traditional computing handles the math, using governed logic such as Power BI semantic models."
+  - question: "Which five layers make up the governed agent architecture?"
+    answer: "Data, Logic, Tools, Skills and Governance. The data layer rests on trusted enterprise data in OneLake and Delta tables. Logic covers DAX calculations, SQL queries, Python scripts and standardized KPIs. Tools let agents query data through semantic models and MCP servers. Skills instruct how to interpret data for business processes and user personas, and Governance enforces permissions, security boundaries and automated compliance."
+  - question: "What does Direct Lake contribute to this design?"
+    answer: "Direct Lake lets Power BI query Delta format data stored in OneLake directly. This eliminates data duplication and repeated import refreshes while maintaining high analytical performance. In the architecture, it supports the semantic models that supply governed calculations, relationships and business logic, so that AI agents do not hallucinate financial metrics."
+  - question: "Where do the agents reach users in this scenario?"
+    answer: "Microsoft Copilot Studio and data agents translate the governed insights into conversational answers inside Microsoft Teams. The article treats AI agents less like chatbots and more like digital employees with clearly defined roles, with the Governance layer enforcing permissions, security boundaries and automated compliance."
+  - question: "What role do Power BI semantic models play for the agents?"
+    answer: "Semantic models act as the deterministic source of truth, supplying governed calculations, relationships and business logic so AI agents do not hallucinate financial metrics. The agents reason and explore, while the figures come from the model. This addresses the problem of hallucinated figures and conflicting versions of the truth when an ungrounded model analyzes a P&L statement."
 ---
 
 ## TL;DR

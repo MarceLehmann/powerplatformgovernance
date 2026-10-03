@@ -27,6 +27,17 @@ source_language_name: English
 source_author: Anders Jensen
 source_published_at: '2026-08-12'
 source_type: article
+faq:
+  - question: "Was ist ein Harness in Copilot Studio und welche drei gibt es?"
+    answer: "Der Harness ist die Infrastruktur rund um das KI-Modell, also Werkzeuge, Gedächtnis, Dateihandling und die Schleife, mit der ein Agent selbständig an einer Aufgabe arbeitet, bis sie erledigt ist. Es gibt drei: Copilot Chat, Standard mit Themen und Triggern im klassischen Stil sowie GitHub Copilot, den Standard für neue Agenten seit dem 3. August 2026."
+  - question: "Kann ich einen Agenten nach dem Anlegen auf einen anderen Harness umstellen?"
+    answer: "Nein, die Wahl ist endgültig. Ein GitHub-Copilot-Agent lässt sich nicht in einen Standard-Agenten umwandeln, und umgekehrt geht es auch nicht. Eine falsche Entscheidung heisst, den Agenten komplett neu zu bauen. Der Autor rät daher, den Harness festzulegen, bevor viel Aufbauarbeit anfällt."
+  - question: "Ab wann zählen Credits auf dem GitHub-Copilot-Harness?"
+    answer: "Schon ab dem ersten Bauschritt und nicht erst mit der Veröffentlichung. Jeder Testchat in der Vorschau, jede von der KI geschriebene Anweisung und jeder Evaluationslauf verbraucht Credits. Manuelles Konfigurieren und das Bedienen der Oberfläche bleiben kostenlos. Klassische Agenten werden erst bei der Veröffentlichung abgerechnet, das Testen läuft jetzt also auf dem Zähler."
+  - question: "Was gilt für Agenten, die vor dem 3. August 2026 erstellt wurden?"
+    answer: "Sie behalten ihre bisherige Preisgestaltung bis zum 1. September 2026. Danach laufen alle Agenten über Credits, unabhängig vom Erstellungsdatum, sodass die Kosten ab diesem Stichtag planbar werden. Eine Microsoft-365-Copilot-Lizenz deckt interne Nutzung auf dem Standard-Harness ab, auf dem GitHub-Copilot-Harness aber weder beim Bauen noch im Produktivbetrieb."
+  - question: "Was ersetzt die Themen im neuen Copilot Studio?"
+    answer: "Skills. Ein Skill besteht aus Name, Beschreibung und Anweisungen in normaler Sprache. Du beschreibst, was der Agent erreichen soll und wann er den Skill einsetzt, und der Agent entscheidet selbst über das Wie, indem er plant, handelt, prüft und weitermacht. Die Oberfläche gliedert sich in die vier Reiter Build, Preview, Evaluate und Monitor."
 ---
 
 ## TL;DR

@@ -14,6 +14,17 @@ image:
   alt: "Governance card: On the Road — the fastest legal path beats any lockdown."
 permalink: "/en/posts/gov-shadow-it-root-cause/"
 translation_url: "/de/posts/gov-shadow-it-root-cause/"
+faq:
+  - question: "Why do employees buy tools on a personal credit card instead of waiting for IT?"
+    answer: "Because the legal path is slower than the illegal one. A request that takes six weeks does not make the business need go away, it makes someone solve it without you. Unmanaged, unlicensed tools on expense reports come from a business need that outran the response time of the process meant to handle it, not from malice or a training gap."
+  - question: "How does the catalog in Power Platform reduce shadow IT?"
+    answer: "It lets makers discover and reuse already-approved components instead of starting from a purchase decision. A catalog with real content competes on speed with an unauthorized tool in a way a policy document never will, because finding something that already works becomes the fast option instead of the slow, unauthorized purchase."
+  - question: "What is a fusion team in low-code development?"
+    answer: "A fusion team puts pro developers, makers and admins together on the same solution, instead of business handing IT a spec across a wall. Microsoft's low-code guidance calls the tension structural, since business users prototyping in isolation creates siloing and shadow IT. Pairing a maker with an IT partner removes the handoff point where the gap opens."
+  - question: "Is a fast no better than a slow maybe for IT requests?"
+    answer: "Yes. The failure mode is the absence of an answer, not a decline. An explicit no within three days closes the loop, while months of under review is an open loop that resolves itself through a channel nobody wanted. Microsoft's DLP exception guidance treats response time as part of the policy, because every unanswered request is an incentive to stop asking."
+  - question: "What does a fast request process need in practice?"
+    answer: "Something small: a request form, a standing weekly decision slot and a committed answer within days, with no being an acceptable outcome as long as it arrives on schedule. The goal is a fast answer, not a faster yes. A silent still pending creates as much shadow IT as an explicit no."
 ---
 
 ## TL;DR

@@ -29,6 +29,17 @@ source_language_name: English
 source_author: Karl-Johan Spiik
 source_published_at: '2026-09-30'
 source_type: article
+faq:
+  - question: "Why can a good evaluation result still wave through wrong agent answers?"
+    answer: "Because the general quality grader measures relevance, coverage and grounding, and does not compare the response with the expected answer. In the example, a question about open flame in the stable produced a cited answer traceable to an approved source that said the opposite of what was expected. The evaluation still marked it as passing."
+  - question: "What did comparing two test runs with almost the same score show?"
+    answer: "The first run scored 7 out of 20 even though four documents should never have been approved, such as a superseded policy and a draft marked as not in force, while three correct current documents were left out. A second run with only six approved documents scored about 6 out of 20 and correctly refused drafts. Same score, opposite meaning."
+  - question: "How does the curated library that the agent answers from work?"
+    answer: "Teams create content in a document library. When a named person ticks a yes or no column, a Power Automate flow copies the file with its owner into the curated library, and unticking deletes the copy. The agent only reads that library, with model knowledge and web browsing switched off in its YAML configuration."
+  - question: "What do the monthly audits of the curated library check?"
+    answer: "Three audits look for outdated files, orphaned files with nobody vouching for them, and departed owners whose profile lookups fail. Each finding creates one Adaptive Card in a Teams governance channel, naming the owning team and asking a named person to update or retire the source document. The automation forces the decision but does not make it."
+  - question: "Why does a control run matter when testing a Copilot Studio agent?"
+    answer: "A control run repeats the evaluation without changing the agent. On a production agent the score moved from 24 to 31 out of 43 without touching anything. Without that repeat, the noise would have been read as a regression one week and a fix the next. The order is repeat first, diagnose second, change third."
 ---
 
 ## TL;DR

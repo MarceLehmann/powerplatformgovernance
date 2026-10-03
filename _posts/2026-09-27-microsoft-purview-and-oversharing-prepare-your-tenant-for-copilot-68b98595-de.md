@@ -31,6 +31,17 @@ submitted_by:
   publish_credit: true
   name: Mirko Peters
   linkedin: https://www.linkedin.com/in/m365showpodcast/
+faq:
+  - question: "Warum bringt Copilot Dateien ans Licht, die jahrelang unauffindbar blieben?"
+    answer: "Copilot sucht in natürlicher Sprache über alles, was ein Benutzer lesen darf, Sicherheit durch Unauffindbarkeit endet damit. Tief vergrabene oder zu weit geteilte Dateien, die per Stichwortsuche niemand fand, sind plötzlich sofort abrufbar. Laut Artikel ist das kein Fehler von Copilot, sondern alte Governance-Nachlässigkeit: Copilot hält sich an Berechtigungen und deckt schwache auf."
+  - question: "Welche Purview-Funktionen nennt der Artikel als Mindestanforderung für Copilot?"
+    answer: "Vertraulichkeitsbezeichnungen und automatische Klassifizierung. Laut Artikel bestimmen die Bezeichnungen, ob Inhalte von Copilot-Agenten indexiert, zusammengefasst oder herangezogen werden dürfen. Weiter heisst es, Administratoren sollten automatische Kennzeichnungsrichtlinien einsetzen, damit neu erstellte Dokumente mit personenbezogenen Daten oder geistigem Eigentum klassifiziert und eingeschränkt werden."
+  - question: "Wie finde ich Oversharing in SharePoint, Teams und OneDrive?"
+    answer: "Der Artikel verweist auf die Oversharing-Berichte in den erweiterten SharePoint-Verwaltungsdashboards, die gefährdete Sites in Teams, OneDrive und SharePoint aufzeigen. Zusätzlich empfiehlt er, die globale Freigabe zu prüfen, etwa Alle ausser externen Benutzern und breites Teilen mit Gästen, und abzugleichen, ob das dem tatsächlichen Bedarf entspricht."
+  - question: "Welche Rolle spielen DLP-Richtlinien von Power Automate für die Copilot-Bereitschaft?"
+    answer: "Copilot erreicht externe Dienste über Connectors, fehlende DLP-Richtlinien in Power Automate können daher interne Daten an Werkzeuge wie Jira abfliessen lassen. Der Artikel empfiehlt ausdrückliche DLP-Richtlinien auf Umgebungsebene, damit KI-gestützte Abläufe nicht sicheren internen Speicher mit unerlaubten externen Zielen verbinden."
+  - question: "Sollte ich alte Projekt-Sites vor dem Copilot-Rollout archivieren?"
+    answer: "Der Artikel behandelt die Archivierung als Teil des Umgangs mit Altinhalten. Archivierung nimmt inaktive Sites aus dem aktiven Microsoft-Graph-Index, sodass sie nicht mehr in alltäglichen Prompts auftauchen und gesetzliche Aufbewahrungsfristen weiter eingehalten werden. Bei aktiven Sites rät er zu höchstens drei Ordnerebenen sowie verwalteten Metadaten und Inhaltstypen."
 ---
 
 ## TL;DR

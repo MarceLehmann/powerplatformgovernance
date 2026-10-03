@@ -15,6 +15,17 @@ image:
   alt: "Governance card: The Open Wall — DLP is a guardrail, not a wall."
 permalink: "/en/posts/gov-dlp-in-practice/"
 translation_url: "/de/posts/gov-dlp-in-practice/"
+faq:
+  - question: "Why should the default DLP connector group stay on Non-Business instead of Blocked?"
+    answer: "Microsoft 365 Enterprise license connectors and a few core Power Platform connectors are exempt from being blocked. If the default group is Blocked, those exempt connectors silently land in Non-Business instead, so a secure by default setting hides exceptions nobody chose. Keep Non-Business as the default and move connectors to Business or Blocked after you have evaluated the risk."
+  - question: "What is connector action control in a DLP policy?"
+    answer: "It lets you allow a connector but restrict which of its actions can be used, for example allowing read actions while blocking anything that modifies data. New actions a connector gains after an update can be set to auto-allow or auto-block, so the policy does not silently loosen over time. It is more precise than a flat block."
+  - question: "Which connectors support endpoint filtering in a DLP policy?"
+    answer: "Endpoint filtering covers six connectors: HTTP, HTTP with Microsoft Entra ID, HTTP Webhook, SQL Server, Azure Blob Storage and SMTP. It governs which specific endpoints a maker can connect to, but it only applies when a maker hardcodes a static endpoint value. Dynamic values are not covered."
+  - question: "Do advanced connector policies replace classic DLP policies?"
+    answer: "Not completely yet. Advanced connector policies use a default-deny allowlist instead of Business, Non-Business and Blocked. They run in Mixed mode next to classic DLP by default, where the most restrictive rule wins, or in ACP-only mode once an environment is fully migrated. They cover certified connectors only, so classic DLP still handles custom connectors and HTTP."
+  - question: "Does a DLP policy stop access to another tenant's data?"
+    answer: "No. Cross-tenant access is controlled by tenant isolation, a separate setting that is off by default, so cross-tenant connections work seamlessly until you turn it on. Once on, you choose one-way or two-way blocking and allow-list partner tenants by ID or domain. You configure it in the admin center under Security, then Identity and access."
 ---
 
 ## TL;DR

@@ -14,6 +14,17 @@ image:
   alt: "Governance-Karte: Das Gruppen-Regelbuch — einmal konfigurieren, viele regieren."
 permalink: "/de/posts/gov-environment-lifecycle-automation/"
 translation_url: "/en/posts/gov-environment-lifecycle-automation/"
+faq:
+  - question: "Was bewirkt Environment Routing für neue Maker in der Power Platform?"
+    answer: "Es leitet einen sich anmeldenden Maker in seine eigene persönliche Entwicklungsumgebung statt in die Default-Umgebung und stellt sie bei Bedarf sofort bereit. Diese Umgebungen sind standardmässig verwaltet und lassen sich einer Environment Group zuordnen, sodass sie die Governance-Regeln von Anfang an erben. Du aktivierst es unter Verwalten, Tenant-Einstellungen, Environment Routing."
+  - question: "Darf mehr als eine Routing-Regel auf Jeder zielen?"
+    answer: "Nein. Nur eine Routing-Regel darf auf Jeder zielen, und hast du bereits mehrere Regeln, muss diese in der Prioritätsreihenfolge zuletzt stehen. Das System prüft die Regeln von oben nach unten und wendet die erste Übereinstimmung an. Alternativ kannst du eine bestimmte Sicherheitsgruppe als Ziel festlegen."
+  - question: "Was passiert mit den eigenen Einstellungen einer Umgebung, wenn ich sie einer Environment Group hinzufüge?"
+    answer: "Die Einstellungen der Gruppe überschreiben sie. Hat eine Umgebung eigene Einstellungen für etwas, das auch die Gruppe steuert, etwa Willkommensinhalt oder Freigabelimits, ersetzt das Hinzufügen diese individuellen Werte. Es ist kein Zusammenführen. Lege die Regeln der Gruppe deshalb fest, bevor du bestehende, bereits konfigurierte Umgebungen hinzufügst."
+  - question: "Kann ich eine versehentlich gelöschte Power-Platform-Umgebung wiederherstellen?"
+    answer: "Ja, innerhalb eines Fensters von sieben Tagen. Das Admin Center führt eine Liste Kürzlich gelöschte Umgebungen, und die Wiederherstellung ist ein Klick oder ein PowerShell-Cmdlet entfernt, nämlich Get-AdminPowerAppSoftDeletedEnvironment und Recover-AdminPowerAppEnvironment. Produktivumgebungen mit Dynamics-365-Anwendungen bekommen bis zu 28 Tage. Die Wiederherstellung kann mehrere Stunden dauern."
+  - question: "Was muss ich nach der Wiederherstellung einer Umgebung prüfen?"
+    answer: "Die Wiederherstellung ist kein vollständiges Rückgängigmachen. Solution-fähige Cloud-Flows kommen deaktiviert zurück und müssen in der richtigen Abhängigkeitsreihenfolge manuell aktiviert werden. Verbindungen mit geänderten Zugangsdaten oder Besitzern müssen eventuell neu autorisiert werden, und Anwendungsbenutzer samt Dienstprinzipal-Zugangsdaten solltest du prüfen. Wiederhergestellt heisst, dass eine Prüfung nötig ist."
 ---
 
 ## TL;DR

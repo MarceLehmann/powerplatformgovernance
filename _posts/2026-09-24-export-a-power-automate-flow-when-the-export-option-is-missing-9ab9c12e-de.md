@@ -25,6 +25,17 @@ source_author: Marcel Lehmann
 source_published_at: '2026-09-23'
 source_updated_at: '2026-09-23'
 publisher_disclosure: Beide Publikationen werden von Marcel Lehmann herausgegeben.
+faq:
+  - question: "Warum fehlt für meinen Cloud-Flow die Option Paket exportieren?"
+    answer: "Solution-aware Flows haben die eigenständige Option Export > Package (.zip) absichtlich nicht. Der Artikel ergänzt, dass der Export-Button auch nach dem Entfernen des Flows aus der Lösung verborgen bleiben kann. Der URL-Trick dieses Tipps führt trotzdem zur Exportseite. Für wiederholbare Verschiebungen mehrerer Flows bevorzugt der Artikel Dataverse-Lösungen."
+  - question: "Wie funktioniert der URL-Trick zum Exportieren eines Flows?"
+    answer: "Nachdem du den Flow aus der Lösung entfernt hast, öffnest du seine Detailseite unter Meine Flows und ersetzt am Ende der Adresse details durch export, dann Enter. Es öffnet sich die Exportseite, auf der du das Paket umbenennst, als Importverhalten Neu erstellen oder Aktualisieren wählst und die Zip-Datei herunterlädst."
+  - question: "Welche Entfernen-Option muss ich beim Lösen eines Flows aus der Lösung meiden?"
+    answer: "Nicht Delete from this environment wählen, denn das würde den Flow löschen statt nur herauszulösen. Stattdessen Remove und dann Remove from this solution verwenden, was den Flow nur aus der Lösung löst. Dieser Schritt steht am Anfang, noch bevor man die URL auf der Detailseite ändert. Exportieren dürfen nur Besitzer oder Miteigentümer des Flows."
+  - question: "Wird der Export-Trick über die Flow-URL von Microsoft offiziell unterstützt?"
+    answer: "Nein. Der Artikel nennt ihn einen praktischen Umweg über die Oberfläche und keine offiziell dokumentierte Funktion. Der dokumentierte Weg ist der Export ganzer Dataverse-Lösungen fürs Lebenszyklusmanagement. Nur Besitzer oder Miteigentümer des Flows können so exportieren, und im Browser müssen Cookies von Drittanbietern erlaubt sein."
+  - question: "Wo importiere ich ein Flow-Paket, das mit diesem Trick exportiert wurde?"
+    answer: "In der Zielumgebung zu My flows gehen, dann Import, dann Import Package (Legacy) wählen und die Zip-Datei hochladen. Laut Artikel ist für diesen Standard-Paketexport und -import eines einzelnen Cloud-Flows keine Premium-Lizenz nötig. Für wiederholbare Verschiebungen mehrerer Flows empfiehlt er stattdessen Dataverse-Lösungen."
 ---
 ## TL;DR
 

@@ -22,6 +22,17 @@ source_author_url: https://www.powerplatformtip.com/about/
 source_language: en
 source_language_name: English
 publisher_disclosure: Both publications are edited by Marcel Lehmann.
+faq:
+  - question: "What do secure inputs and secure outputs hide in the flow run history?"
+    answer: "They mask sensitive values such as passwords, tokens and personal details in a flow's run history. Anyone opening the history sees only a note at that spot saying the content is hidden due to the security configuration. That keeps confidential information in logs away from unauthorised viewers and supports data-protection compliance."
+  - question: "What do secure inputs and outputs not protect in Power Automate?"
+    answer: "They change nothing about processing. Data is still processed normally, and the masking only affects what is displayed in the log. The post therefore classes the setting as one part of a broader data-security strategy and advises considering the full context of your data processing. Related tips treat masking trigger outputs and securing service-account credentials as separate points."
+  - question: "How do I turn on secure inputs or outputs for an action?"
+    answer: "Open the affected action in your flow, go to its settings, toggle secure inputs, secure outputs or both, and save the change. The two options are independent and are set per action. That lets you mask only where truly sensitive values pass through."
+  - question: "Do secure inputs and outputs slow down a flow run?"
+    answer: "Hardly. According to the post, enabling them has minimal impact on execution speed, because it only changes how data is logged, not how it is processed. So performance is no reason to avoid the setting. Both options can be toggled individually for each action."
+  - question: "Which actions benefit most from secure inputs or outputs?"
+    answer: "Actions that process sensitive data such as passwords, tokens or personal details. The post's example masks a bearer token in an action's run history, where both inputs and outputs then show only a note that the content is hidden. You can enable inputs, outputs or both for each action, based on your security needs."
 ---
 ## TL;DR
 

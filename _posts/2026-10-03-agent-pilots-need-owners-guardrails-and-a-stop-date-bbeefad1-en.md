@@ -27,6 +27,17 @@ source_language_name: English
 source_author: Karl-Johan Spiik
 source_published_at: '2026-10-03'
 source_type: article
+faq:
+  - question: "Which three failure recipes does the article name for AI agent pilots?"
+    answer: "Buy before you understand, run a pilot with no end date, and own nothing so nobody can be blamed. The author presents them as a formula that guarantees failure when followed together, and the antidote is simple: one process, one metric and one stop date. The article stresses that no end date means no decision."
+  - question: "What belongs on a pilot card for an AI agent?"
+    answer: "Agent name, business owner, supporting roles, success metric, timeframe, guardrails and the next decision gate. The article suggests an example metric of 10 percent fewer unplanned downtimes and a 60 day pilot with a fixed stop date. The card forces the team to name an accountable owner before anything is built."
+  - question: "Why does a pilot need a stop date?"
+    answer: "Without one, the pilot drifts, consumes budget and never reaches a verdict on scale, change or stop. A defined end, such as 60 days, ties the work to a decision gate where the sponsor decides based on the agreed metric. The article puts it plainly: no end date means no decision."
+  - question: "What numbers does the talk give about unclear AI projects?"
+    answer: "More than 70 percent of organisations have already formed their opinion from outside factors before writing their own problem down, and only 14 percent of initiatives get approved after scoping and a business case. One real example grew to eleven times the cost from MVP to expansion, and teams covering several specialisms had three times the success rate of single-specialism teams."
+  - question: "Which five phases does the article describe, and where does funding fall short?"
+    answer: "Decide, Align, Configure, Adopt and Optimize. Four of the five phases are starved of budget according to the talk, since money tends to go to the build step. The author asks teams to plan resources for adoption and optimization too, otherwise a working agent will not be used or improved."
 ---
 
 ## TL;DR

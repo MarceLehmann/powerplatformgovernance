@@ -29,6 +29,17 @@ source_language_name: English
 source_author: Josh Cook
 source_published_at: '2026-10-02'
 source_type: article
+faq:
+  - question: "What happens in Copilot Studio when a hook workflow fails or times out?"
+    answer: "The agent simply continues. The documentation says that a hook workflow which fails, times out or returns an unreadable response does not stop the agent. Only an explicit deny from the hook blocks a tool call. That is why a hook cannot be the only barrier against unauthorized actions."
+  - question: "At which lifecycle events can a Copilot Studio hook run?"
+    answer: "Six events are supported: session start, prompt submission, agent error, before a tool runs, after a tool succeeds and after a tool fails. Before a tool runs, a hook can inspect and change the tool arguments or deny the call. Afterwards it can adjust the result or log what happened. Hooks are in preview."
+  - question: "Where should rules that block unauthorized updates be enforced?"
+    answer: "In the underlying service, not in the hook. The documentation says rules that must block unauthorized updates belong in the service itself. A hook can log update calls and reject those that break business rules, but it is an extra layer. The permission in the service has to hold even when the hook is broken."
+  - question: "How can I test that a Dataverse pilot stays protected when a hook breaks?"
+    answer: "Break the hook workflow on purpose and then try an update that should be blocked. If the underlying service permissions still refuse it, the real control works. The article suggests this for a pilot together with logging update tool calls in the hook and rejecting requests that violate business rules."
+  - question: "Can a Copilot Studio hook change what a tool call receives or returns?"
+    answer: "Yes. Before execution a hook can inspect the tool arguments, modify them or deny the call. After execution it can adjust the returned result and log the outcome. The platform triggers the hook workflow automatically at the lifecycle event, so the agent does not call it as a tool."
 ---
 
 ## TL;DR

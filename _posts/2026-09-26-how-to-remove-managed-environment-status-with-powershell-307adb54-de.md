@@ -31,6 +31,17 @@ submitted_by:
   publish_credit: true
   name: Michael Roth
   linkedin: https://www.linkedin.com/in/michaelroth42/
+faq:
+  - question: "Warum möchte man den Status Managed Environment wieder entfernen?"
+    answer: "Der Beitrag nennt die Lizenzfolge als Hintergrund. Managed Environments verlangen eine Premium-Lizenz für jeden Benutzer, was der Autor in vielen Organisationen für schwer durchsetzbar hält. Ein Kunde hatte gefragt, wie sich eine verwaltete in eine nicht verwaltete Umgebung zurückführen lässt. Der Autor zeigt dafür einen kurzen PowerShell-Weg, der den Managed-Status aufhebt."
+  - question: "Was braucht man, bevor man den Befehl ausführt?"
+    answer: "Das PowerShell-Modul Microsoft.PowerApps.Administration.PowerShell muss installiert sein. Ausserdem sind Rechte als Umgebungsadministrator oder Mandantenadministrator nötig. Die Anmeldung erfolgt mit dem Cmdlet Add-PowerAppsAccount, das ein Anmeldefenster öffnet. Erst nach der Anmeldung lässt sich die Governance-Konfiguration der Umgebung ändern, die im Beitrag auf die Schutzstufe Basic gesetzt wird."
+  - question: "Welches Objekt wird für das Zurücksetzen benötigt?"
+    answer: "Zuerst legt man ein eigenes Objekt an, das nur eine Eigenschaft enthält: die Schutzstufe protectionlevel mit dem Wert Basic. Der Autor speichert es in einer Variablen namens IWantOut und merkt an, dass man sie beliebig benennen kann. Dieses Objekt übergibt man im nächsten Schritt als neue Governance-Konfiguration."
+  - question: "Welches Cmdlet entfernt den Managed-Status und mit welchen Parametern?"
+    answer: "Das Cmdlet Set-AdminPowerAppEnvironmentGovernanceConfiguration. Es braucht zwei Parameter: EnvironmentName mit der Kennung der Umgebung und UpdatedGovernanceConfiguration mit dem zuvor erstellten Objekt. Nach der Ausführung ist der Status Managed Environment entfernt, die Umgebung gilt dann als nicht verwaltet. Für weitere Details verweist der Autor auf die offizielle Microsoft-Dokumentation."
+  - question: "Welche Verwechslung warnt der Autor bei EnvironmentName?"
+    answer: "In der Dokumentation heisst der Parameter EnvironmentName, der Autor sagt aber, dass er mit Name die Environment ID meint. Er merkt an, wie oft Name und ID in der Dokumentation verwechselt werden. Der Platzhalter im Cmdlet-Beispiel ist daher durch die ID der verwalteten Umgebung zu ersetzen."
 ---
 
 ## TL;DR

@@ -14,6 +14,17 @@ image:
   alt: "Governance-Karte: Geübt — fünf Minuten zum Stoppen, schriftlich festgehalten."
 permalink: "/de/posts/gov-monitoring-readiness/"
 translation_url: "/en/posts/gov-monitoring-readiness/"
+faq:
+  - question: "Welche Grenzen haben die Pro-Lauf-Fehler-Alerts von Power Automate?"
+    answer: "Sie decken nur Fehler mit einer bekannten Lösung ab, haben eine Abkühlphase von 28 Tagen pro Flow, damit wiederholte Fehler nicht denselben Alert doppelt auslösen, und müssen in den Flow-Einstellungen ausdrücklich aktiviert werden. Nichts davon hilft, wenn die E-Mail in einem Postfach landet, das niemand öffnet. Benenne darum eine lesende Person und eine Rotation."
+  - question: "Wie sehen Admins fehlgeschlagene Flow-Läufe, ohne auf Alert-Mails angewiesen zu sein?"
+    answer: "Zwei Wege hängen nicht davon ab, dass jemand eine E-Mail liest. Die Monitor-Erfahrung im Power Platform Admin Center zeigt jeden fehlgeschlagenen Lauf auf Umgebungsebene ohne Ausnahmen, und der wöchentliche Fehler-Digest fasst alle Fehler zusammen, auch die allgemeinen ohne Pro-Lauf-E-Mail. Beides nützt nur, wenn jemand damit beauftragt ist, hinzuschauen."
+  - question: "Wie stoppt ein Admin einen ausser Kontrolle geratenen Cloud-Flow?"
+    answer: "Über die Deaktivieren-Aktion in der Flow-Verwaltungsansicht des Power Platform Admin Centers, den Flow-Detailbildschirm der mobilen App oder das PowerShell-Cmdlet Disable-AdminFlow für Skripte und Bulk-Aktionen. Nötig ist die Rolle Environment Admin. Der Mechanismus ist nicht die Lücke, sondern zu wissen, wo er ist, und ihn vor einem Vorfall einmal ausprobiert zu haben."
+  - question: "Zeigt Dataverse-Auditing auch Änderungen aus der Zeit vor dem Einschalten?"
+    answer: "Nein. Das Auditing erfasst nur Änderungen, die nach dem Einschalten der Einstellungen auf Umgebungs- und Tabellenebene erfolgten, einen rückwirkenden Blick gibt es nicht. Aktiviere es zuerst für die Umgebung, dann für die relevanten Tabellen und Spalten, und lege gleichzeitig eine Aufbewahrungsfrist fest. Priorisiere Tabellen, die mit Admin-Aktionen und Zugriffsänderungen verbunden sind."
+  - question: "Was sollte vorbereitet sein, bevor ein Vorfall einen Flow-Stopp erzwingt?"
+    answer: "Drei Dinge: Jemand weiss, wo der Schalter ist, diese Person hat tatsächlich die Rolle, die das Recht dazu gewährt, und eine kurze Kommunikationsvorlage existiert, damit das Stoppen nicht die Reaktionszeit verbraucht, die für die Eindämmung gedacht ist. Ohne Übung wird aus jetzt sofort stoppen schnell eine Suche von 45 Minuten."
 ---
 
 ## TL;DR

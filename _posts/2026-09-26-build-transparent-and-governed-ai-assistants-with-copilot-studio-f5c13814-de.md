@@ -34,6 +34,17 @@ submitted_by:
   publish_credit: true
   name: Michael Roth
   linkedin: https://www.linkedin.com/in/michaelroth42/
+faq:
+  - question: "Welche acht Schritte schlägt der Beitrag für verantwortungsvolle KI vor?"
+    answer: "Sich und andere über KI bilden, offene Initiativen mit Transparenz unterstützen, KI-Produkte kritisch auf ihren Wert prüfen, ethische Diskussionen führen, Transparenz bei Trainingsdaten und Modellen fordern, eigene Projekte ausprobieren und teilen, verantwortungsvolle KI im Betrieb fördern und gemeinschaftsgetragene Werkzeuge bauen, die Gemeinschaften statt Konzernen dienen."
+  - question: "Was können Citizen Developer laut Beitrag mit Copilot Studio konkret bauen?"
+    answer: "Sie können nachvollziehbare, prüfbare KI-Assistenten bauen, gut dokumentierte Abläufe mit klarer Entscheidungslogik, Lösungen, die Mitarbeitende mit verantwortungsvoller Automatisierung entlasten, und Systeme, die Governance-Vorgaben sowie Fairness und Inklusion berücksichtigen. Wichtig ist, dass Entscheidungen sichtbar bleiben und dass andere verstehen können, wie eine Lösung funktioniert."
+  - question: "Welche KI-Anwendungen kritisiert der Autor als Spielerei?"
+    answer: "Er nennt fünf Beispiele: E-Mail-Entwürfe als aufgewertete Textvervollständigung, Sitzungszusammenfassungen als einfache Transkription mit Regeln, Kundenchatbots als Entscheidungsbäume mit natürlicher Sprache, Präsentationsgeneratoren als Umformatierung von Vorlagen und KI-personalisiertes Marketing als automatisiertes A/B-Testing. Sein Vorwurf ist, dass solche Anwendungen wenig echten Wert schaffen."
+  - question: "Was meint der Autor mit Solarpunk?"
+    answer: "Für ihn ist Solarpunk eine Zukunftsvision, in der Technik und Natur harmonisch nebeneinander bestehen und Innovation Gemeinschaften dient, nicht nur Konzernen. Es geht um Nachhaltigkeit, Zugänglichkeit und geteiltes Wissen. Er nennt es einen utopischen Gedanken und gibt zu, dass es kitschig klingen mag, will aber aktiv mitgestalten, wie Technik und besonders KI unser Leben beeinflussen."
+  - question: "Nennt der Beitrag ein bestimmtes Open-Source-KI-Modell?"
+    answer: "Nein, es wird kein einzelnes Modell oder Projekt genannt. Open Source erscheint als Bewegung und Haltung. Als Beispiel dafür, dass Microsoft Open Source annimmt, erwähnt der Autor GitHub, VS Code und .NET. Seine Aufforderung an Copilot-Studio-Nutzer lautet, Komponenten, Rahmenwerke und gute Praktiken mit Kollegen zu teilen und auch in Low-Code-Umgebungen zu offenen KI-Projekten beizutragen."
 ---
 
 ## TL;DR

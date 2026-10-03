@@ -14,6 +14,17 @@ image:
   alt: "Governance card: The Group Rulebook — configure once, govern many."
 permalink: "/en/posts/gov-environment-lifecycle-automation/"
 translation_url: "/de/posts/gov-environment-lifecycle-automation/"
+faq:
+  - question: "What does Power Platform environment routing do for new makers?"
+    answer: "It directs a signing-in maker to a personal developer environment of their own instead of the Default environment, provisioned on the spot if they do not have one yet. These environments are managed by default and can be pointed at an environment group, so they inherit your governance rules from the moment they exist. Enable it under Manage, Tenant settings, Environment routing."
+  - question: "Can more than one environment routing rule target Everyone?"
+    answer: "No. Only one routing rule can target Everyone, and if you already have several rules, that one must sit last in the priority order. The system evaluates rules from top to bottom and applies the first match. As an alternative target you can choose a specific security group."
+  - question: "What happens to an environment's own settings when I add it to an environment group?"
+    answer: "The group's settings override them. If an environment already has its own settings for something the group also controls, such as welcome content or sharing limits, adding it replaces those individual settings. It is not a merge. Plan the group's rules before you add existing, already configured environments. A new member inherits the group's current rules immediately."
+  - question: "Can I recover an accidentally deleted Power Platform environment?"
+    answer: "Yes, within seven days. The admin center keeps a Recently deleted environments list, and recovery is one click or one PowerShell cmdlet away, using Get-AdminPowerAppSoftDeletedEnvironment and Recover-AdminPowerAppEnvironment. Production environments running Dynamics 365 applications get a longer window of up to 28 days. Recovery itself can take several hours."
+  - question: "What still needs checking after an environment is recovered?"
+    answer: "Recovery is not a full undo. Solution-aware cloud flows come back disabled and must be re-enabled manually in dependency order. Connections tied to changed credentials or owners may need reauthorizing, and application users and their service principal credentials should be re-checked. Treat recovered as meaning a validation pass is needed, not as exactly how it was an hour ago."
 ---
 
 ## TL;DR

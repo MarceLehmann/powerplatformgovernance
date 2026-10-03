@@ -29,6 +29,17 @@ source_language_name: English
 source_author: Softchief Author
 source_published_at: '2026-09-29'
 source_type: article
+faq:
+  - question: "Wann nehme ich eine PCF-Komponente und wann JavaScript in Dynamics 365?"
+    answer: "PCF baut eigene Oberflächenkomponenten, JavaScript ergänzt in der Regel Verhalten auf Formularen modellgesteuerter Apps. Nimm PCF, wenn du Darstellung oder Bearbeitung neu gestalten willst, etwa einen Schieberegler für Zahlen, eine Kalenderansicht oder eine Kartenansicht. Nimm JavaScript, wenn du auf Formularereignisse wie Laden, Feldänderung oder Speichern reagierst, Werte setzt oder Felder ein- und ausblendest."
+  - question: "Reicht es, ein Feld per JavaScript auszublenden, um Daten zu schützen?"
+    answer: "Nein. Ein Feld im Browser auszublenden oder dort einen Wert zu prüfen, sichert die Daten nicht. Clientseitige Prüfungen helfen bei der Benutzerführung, wichtige Datenregeln müssen serverseitig durchgesetzt werden. Den Zugriff steuern Sicherheitsrollen und Berechtigungen der Plattform. Das gilt für PCF-Komponenten und Formularskripte gleichermassen."
+  - question: "Ist Xrm.Page für neuen Formularcode in Dynamics 365 noch empfohlen?"
+    answer: "Nein. Microsoft kennzeichnet den älteren Xrm.Page-Ansatz als veraltet und empfiehlt für neuen Code, wo anwendbar, den formContext. Formularskripte sollen die unterstützte Client-API nutzen und den Ausführungskontext übergeben. Direkte Eingriffe ins DOM rät der Beitrag ab, weil das interne Markup kein stabiler Vertrag ist und Anpassungen bei App-Änderungen brechen können."
+  - question: "In welchen Apps laufen PCF-Komponenten und Formularskripte?"
+    answer: "Formularskripte gelten für Formulare modellgesteuerter Apps. PCF-Komponenten unterstützen sowohl modellgesteuerte als auch Canvas-Apps, wobei die Unterstützung je nach Komponententyp, Zielfläche und Konfiguration variiert. Prüfe deshalb vor der Entwicklung, ob dein Feld und deine App für die geplante Komponente unterstützt sind, und teste immer in der Ziel-App mit echten Daten."
+  - question: "Was sollte ich vor dem Entwickeln einer PCF-Komponente oder eines Formularskripts klären?"
+    answer: "Kläre die Anforderung und die unterstützte Plattformfläche, die Fähigkeiten im Team und die langfristige Zuständigkeit. PCF verlangt in der Regel TypeScript und Framework-Wissen, Formularskripte JavaScript und Client-API-Kenntnis. Baue für riskante Annahmen einen Prototyp, etwa zu Mobilgeräten oder komplexen Formularen, und teste Barrierefreiheit, denn eigene Controls bringen Tastaturbedienung und Screenreader nicht automatisch mit."
 ---
 
 ## TL;DR

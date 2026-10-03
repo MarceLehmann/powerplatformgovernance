@@ -27,6 +27,17 @@ source_language_name: English
 source_author: Matthew Devaney
 source_published_at: '2026-09-27'
 source_type: article
+faq:
+  - question: "How does the agent in the loan example decide when a person has to review?"
+    answer: "The agent compares the stated loan purpose with a list of pre-evaluated purposes. If a match exists, it returns that exact purpose and its category. If none exists, it returns an empty string and the category Human-Review. A condition in the flow then checks whether the category is Human-Review and sends only those applications to a loan officer."
+  - question: "Which SharePoint lists does the loan review flow need?"
+    answer: "Two lists. The applications list holds the full legal name, the requested amount and the loan purpose. The purposes list holds nine pre-evaluated purposes with the category Allowed or Flagged, for example education as allowed and cryptocurrency trading as flagged. After the review, three more columns are added for the decision, a human-reviewed flag and the rationale."
+  - question: "What does the human review action collect and how does it reach the right person?"
+    answer: "The flow sends an Outlook message titled Action Required together with the applicant's name. It states the loan purpose that matched no category and asks for a decision, yes to approve or no to flag. The person fills in two fields, the decision and a rationale. Submitting them lets the flow continue, and both values are then stored."
+  - question: "How does the flow record human and automated decisions in SharePoint?"
+    answer: "After a human review, an expression sets the decision field to Allowed for yes and otherwise to Flagged, the human-reviewed flag to yes, and the rationale is copied over. In the else branch the flow takes the agent's category, sets the flag to no and leaves the rationale blank. Both paths update the same application item in the SharePoint list."
+  - question: "What happens in the author's test of the human review flow?"
+    answer: "The author submits a loan application, and the workflow decides that a human review is needed. The loan officer receives an email with a form, fills in the decision and the rationale and submits it. The agent waits for this response and then moves on. Finally, the flow records the loan decision, the human-review status and the rationale in the SharePoint list."
 ---
 
 ## TL;DR

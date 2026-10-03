@@ -28,6 +28,17 @@ source_language_name: English
 source_author: Nick Doelman
 source_published_at: '2026-02-26'
 source_type: article
+faq:
+  - question: "What can the Power Pages plugin for Claude Code build without manual setup?"
+    answer: "In the author test it produced a complete Power Pages site from a prompt: data model, Dataverse tables, relationships and authentication, followed by deployment and activation. The author mostly approved plans and gave direction. The plugin is in public preview, works with approval checkpoints so a human stays in the loop, and recognised existing tables such as Contact."
+  - question: "Which configuration gaps did the author find in the AI-built Power Pages site?"
+    answer: "The plugin was not solution aware; the author's reaction in the article is 'Not solution aware! Arg! What?!?'. It also missed critical parts of the table permissions setup, forgetting to add a table, and missed a Web API site setting. Authentication needs to be configured manually when anything other than Microsoft Entra ID is used."
+  - question: "Is building a Power Pages site with AI faster than using the design studio?"
+    answer: "Not necessarily. The author found that the design studio and the management app would have been a bit quicker. The AI result looked more polished and was more flexible, but the process was resource hungry: it used up his daily allocation three times before he upgraded from the Pro to the Max plan."
+  - question: "Does AI-assisted building make the traditional Power Pages tools obsolete?"
+    answer: "No. The author concludes that there still is a place for the traditional Power Pages tools to build and configure sites. He says it will be interesting to see how the technology evolves and is adopted over the next few months. Power Pages single-page apps keep the benefits of Dataverse integration, hosting and security."
+  - question: "What should a reviewer verify before an AI-generated Power Pages site goes live?"
+    answer: "Check the points where the test fell short: whether the site is solution aware, whether table permissions exist and are complete, whether the Web API site setting is present, and whether any authentication other than Microsoft Entra ID was configured manually. The plugin creates action plans and asks for approval, so a human stays in the loop."
 ---
 
 ## TL;DR

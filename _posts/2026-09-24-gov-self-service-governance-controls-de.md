@@ -14,6 +14,17 @@ image:
   alt: "Governance-Karte: Der Impulskauf — MSCommerce PowerShell, eine Richtlinie, erledigt."
 permalink: "/de/posts/gov-self-service-governance-controls/"
 translation_url: "/en/posts/gov-self-service-governance-controls/"
+faq:
+  - question: "Wie blockiere ich Self-Service-Käufe von Microsoft-Produkten?"
+    answer: "Es gibt keinen einzelnen Tenant-weiten Schalter. Neue Microsoft-365- und Power-Platform-Produkte werden mit aktiviertem Self-Service-Kauf ausgeliefert, und du schaltest ihn pro Produkt über das PowerShell-Modul MSCommerce ab, mit Update-MSCommerceProductPolicy und der Richtlinie AllowSelfServicePurchase. Das Deaktivieren blockiert für dieses Produkt sowohl Käufe als auch Testversionen."
+  - question: "Was passiert mit einem Self-Service-Abonnement, wenn der Käufer das Unternehmen verlässt?"
+    answer: "Es kündigt sich nicht von selbst. Das Abonnement läuft weiter, bis es jemand aktiv kündigt oder ein Admin die Kündigung über den Support anstösst. Das Blockieren der Richtlinie für die Zukunft berührt bereits Aktives nicht. Prüfe bestehende Käufe im Microsoft-365-Admin-Center unter Abrechnung, Ihre Produkte, bevor du neue Käufe sperrst."
+  - question: "Was bewirkt die Quarantäne einer Power-Apps-App?"
+    answer: "Die Quarantäne macht die App für Endnutzer sofort unzugänglich, lässt sie aber für den Maker zum Weiterbearbeiten und für Admins zur Prüfung intakt. Du setzt sie mit Set-AppAsQuarantined und hebst sie mit Set-AppAsUnquarantined auf. Wer die App schon geöffnet hat, kann sie noch ein paar Sekunden nutzen. Sie deckt Canvas-Apps und Code-Apps ab, Model-Driven Apps noch nicht."
+  - question: "Warum eine Problem-App unter Quarantäne stellen statt sie zu löschen?"
+    answer: "Löschen ist endgültig und vernichtet die Arbeit des Makers. Bei der Quarantäne sehen Admins die App weiter im Admin Center und in PowerShell, Maker öffnen und bearbeiten sie weiter in Power Apps Studio, und nur Endnutzer, die sie starten wollen, werden blockiert. Set-AppAsUnquarantined macht sie wieder verfügbar, sobald das Problem gelöst ist."
+  - question: "Wo richte ich den Maker-Willkommensinhalt in einer Managed Environment ein?"
+    answer: "Im Power Platform Admin Center unter Verwalten, Umgebungen: Managed Environment auswählen, Managed Environment bearbeiten und unter Maker Welcome content den Text als Markdown eingeben. Du kannst eine Learn more URL ergänzen und verlangen, dass Maker einen Nutzungsbedingungslink bestätigen, was protokolliert und in Microsoft Purview auditierbar ist. Der Inhalt einer Environment Group überschreibt den der Umgebung."
 ---
 
 ## TL;DR

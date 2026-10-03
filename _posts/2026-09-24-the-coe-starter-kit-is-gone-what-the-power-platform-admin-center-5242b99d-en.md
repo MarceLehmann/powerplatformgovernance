@@ -23,6 +23,17 @@ source_author: Maximilian Götz
 source_language: en
 source_language_name: English
 source_published_at: '2026-06-03'
+faq:
+  - question: "Is the CoE Starter Kit officially deprecated with a migration deadline?"
+    answer: "No formal deprecation notice or deadline exists. The kit was never an official Microsoft product but a community-driven accelerator maintained outside standard product support. Monthly releases stopped in February 2026, and in May 2026 Microsoft confirmed that it gets no new features and no maintenance. Existing installations keep running until something breaks."
+  - question: "Which governance gaps remain in the admin center compared with the CoE Starter Kit?"
+    answer: "The article names five high-risk gaps: shadow IT detection without risk scoring, lifecycle management without ownership transfer workflows, no cross-tenant visibility, DLP enforcement without violation alerts, and no governance of customization quality or connector misuse. Of nine capabilities, only environment management is fully covered natively."
+  - question: "What does the Power Platform admin center already cover well?"
+    answer: "It offers a tenant-wide inventory of apps, flows, connectors and environments without a separate Dataverse environment, environment management including DLP and capacity, usage monitoring such as app launches and flow runs, and admin actions like reassigning owners, deleting orphaned apps and managing sharing. It shows what exists, but not whether it is a risk."
+  - question: "What do organizations really have to rebuild when leaving the CoE Starter Kit?"
+    answer: "The contextual layer, because the raw object list now comes from Microsoft. That means a named owner per resource, a lifecycle state, a compliance classification and a risk ranking that shows which resources need attention first. The article advises planning the move around that layer instead of around the object list."
+  - question: "Why can keeping the unmaintained CoE Starter Kit become expensive?"
+    answer: "The kit needed its own Dataverse environment with licensing and maintenance overhead, its flows ran through service accounts on premium connectors, and admins had to spend time keeping it compatible with platform changes. The article says the running cost of a frozen accelerator rises while its coverage falls. With more than 50 environments, several tenants or many ungoverned apps built over three years, the gap is likely material."
 ---
 ## TL;DR
 

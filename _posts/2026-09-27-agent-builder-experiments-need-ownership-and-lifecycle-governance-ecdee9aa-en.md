@@ -29,6 +29,17 @@ source_language_name: English
 source_author: Karl-Johan Spiik
 source_published_at: '2026-09-27'
 source_type: article
+faq:
+  - question: "Which governance gaps showed up after many Agent Builder experiments?"
+    answer: "Anyone could create agents, and by the time they showed up in the admin center there were already hundreds. Nobody deleted anything, partly because the delete function is hidden so deep that people have to be taught where it is. The result was an inventory problem. Agent 365 later improved visibility into which agents exist, how they are shared, how many people use them and how many answers they have given, though not answer quality."
+  - question: "How does the self-built governance flow for Agent Builder agents work?"
+    answer: "The Graph API detects new agents and stores them in a SharePoint list. Power Automate sends the owner a Teams card with questions: have you read the ground rules, have you shared the agent, what is it for? An agent unused for 60 days triggers another card where the owner can delete the agent or say why it should stay."
+  - question: "After how many days without use are agents flagged in the example?"
+    answer: "After 60 days of inactivity. The owner then receives a card offering the choice to delete the agent or explain why it should stay. The flow is not meant to block people but to find those with good ideas and point them forward. Use cases that are too big get redirected in conversation to platforms that fit better."
+  - question: "What mattered more for agent quality than clever instructions?"
+    answer: "Good knowledge. Early agents with one paragraph of instructions failed repeatedly, and the fix often lay in the SharePoint content rather than the agent logic. On top of that, instructions are capped at 8,000 characters, so eight roles in one agent get messy. Agents also do not follow links automatically that a human would naturally read on."
+  - question: "Which licence does the governance flow for Agent Builder agents need?"
+    answer: "In the example, one Agent 365 licence in the organisation also provides access to the Graph API. On that basis the speaker built his flow from the Graph API, a SharePoint list as a minimum viable backend, Power Automate and Teams adaptive cards. He kept the build deliberately small so that it can be thrown away once Agent 365 catches up."
 ---
 
 ## TL;DR

@@ -15,6 +15,17 @@ image:
   alt: "Governance card: The Night Watch — sweep for zombies monthly."
 permalink: "/en/posts/gov-disabled-owner-zombie-flows/"
 translation_url: "/de/posts/gov-disabled-owner-zombie-flows/"
+faq:
+  - question: "Does disabling a user in Entra ID turn off the flows they own?"
+    answer: "No. Disabling the account is an identity control that tells Power Automate nothing about the flow, so the flow stays On and keeps running on its normal schedule or trigger. What fails is narrower: connections authorized under the disabled account start rejecting calls, often for weeks before anyone notices, while the flow still looks enabled in the maker portal."
+  - question: "What breaks first when a flow owner's account is disabled?"
+    answer: "The connections break first. Any action using a connection created by the disabled account errors immediately or on the next run, depending on the connector. Licensing comes next if ownership moves to someone without the right premium license, where Power Automate allows a 30-day grace period. The flow itself is never switched off automatically."
+  - question: "Should business critical flows be owned by a service principal?"
+    answer: "Yes, that is what Microsoft recommends. Flows owned by a service principal are not tied to one employee, so departures do not disrupt them. Permissions can be scoped tighter than a person's day-to-day access, and the audit trail reflects the automation itself. This removes the failure mode structurally instead of relying on offboarding checklists."
+  - question: "How does licensing work for a flow owned by a service principal?"
+    answer: "A non-interactive service principal is never assigned a license directly. Power Automate lets you designate a separate licensed co-owner whose entitlement the flow runs under, so the service principal stays the owner of record while a real person covers the premium license requirement. Without that step, a service principal flow using premium features gets suspended for non-compliance."
+  - question: "How can I find flows whose owners have already left?"
+    answer: "Run a monthly or more frequent sweep that compares flow owners against their directory status. The flow inventory in the Power Platform admin center plus the tenant's user list is enough to build it as a scheduled flow. It should flag every flow with a disabled owner, so someone reassigns it deliberately instead of it degrading quietly."
 ---
 
 ## TL;DR

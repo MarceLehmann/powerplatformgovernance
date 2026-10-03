@@ -25,6 +25,17 @@ source_author: Marcel Lehmann
 source_published_at: '2026-09-23'
 source_updated_at: '2026-09-23'
 publisher_disclosure: Both publications are edited by Marcel Lehmann.
+faq:
+  - question: "Why is the Export Package option missing for my cloud flow?"
+    answer: "Solution-aware flows lack the standalone Export > Package (.zip) option by design. The article adds that even after a flow is removed from its solution, the export button may remain hidden. The URL workaround in this tip gets you to the export page anyway. For repeatable multi-flow moves, the article prefers Dataverse solutions."
+  - question: "How does the URL trick for exporting a flow work?"
+    answer: "After removing the flow from its solution, open its details page under My flows and replace details with export at the end of the address, then press Enter. The export page opens, where you can rename the package, choose Create as new or Update as import behavior and download the zip file."
+  - question: "Which remove option must I avoid when detaching a flow from a solution?"
+    answer: "Do not pick Delete from this environment, because that would delete the flow instead of just detaching it. Use Remove and then Remove from this solution, which only detaches the flow from the solution. This step comes first, before you change the URL on the flow's details page. Only a flow owner or co-owner can export."
+  - question: "Is the flow export URL workaround officially supported by Microsoft?"
+    answer: "No. The article calls it a practical UI workaround and not an officially documented feature. The documented path is to export entire Dataverse solutions for lifecycle management. Only flow owners or co-owners can export this way, and third-party cookies must be enabled in the browser."
+  - question: "Where can I import a flow package exported with this workaround?"
+    answer: "In the target environment, go to My flows, then Import, then Import Package (Legacy), and upload the zip file. The article notes that no premium is needed for this standard package export and import of a single cloud flow. For repeatable, multi-flow moves, it recommends Dataverse solutions instead."
 ---
 ## TL;DR
 

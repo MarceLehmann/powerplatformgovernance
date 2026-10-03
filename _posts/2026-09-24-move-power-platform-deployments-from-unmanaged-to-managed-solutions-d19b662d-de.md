@@ -26,6 +26,17 @@ source_language_name: English
 source_author: Benedikt Bergmann
 source_published_at: '2025-02-04'
 source_updated_at: '2025-02-04'
+faq:
+  - question: "Wie wandle ich eine unmanaged Lösung in einer Zielumgebung in eine managed Lösung um?"
+    answer: "Du installierst dieselben Komponenten erneut als managed Lösung, dabei schaltet das System sie von unmanaged auf managed um. Du kannst dieselbe Lösung nochmals als managed installieren oder eine neue Lösung mit denselben Komponenten verwenden. Bei derselben Lösung deinstallierst du die alte unmanaged Variante zuerst, weil dieselbe Lösung nicht doppelt in einer Umgebung liegen kann, einmal unmanaged und einmal managed."
+  - question: "Welche Fehlermeldung kommt, wenn die unmanaged Lösung noch installiert ist?"
+    answer: "Die Meldung besagt, dass die Lösung bereits unmanaged installiert ist und das Paket sie im managed Modus installieren will. Import kann Lösungen nur aktualisieren, wenn die Modi übereinstimmen. Die Ursache ist also das parallele Vorhandensein beider Varianten. Deinstalliere zuerst die unmanaged Lösung und importiere danach die managed Version."
+  - question: "Mit welchem Parameter erzwinge ich die Umwandlung in managed beim Import per PAC, GitHub oder Azure DevOps?"
+    answer: "Bei der Power Platform CLI nutzt du das Flag convert-to-managed mit zwei Bindestrichen beim Import. In GitHub Actions heisst der Parameter convert-to-managed, in Azure DevOps ConvertToManaged. Der Autor bemängelt, dass der Text Import as a Managed solution in der DevOps-Oberfläche die Umwandlung kaum erkennen lässt. Ein Leserkommentar vom Februar 2025 legt nahe, dass das Flag inzwischen standardmässig aktiv ist, was die Importdauer beeinflussen könnte."
+  - question: "Warum ist der Herausgeber beim Umbau auf managed Lösungen wichtig?"
+    answer: "Alle Lösungen einer Umgebung sollten denselben Herausgeber haben, damit sich Komponenten zwischen Lösungen verschieben lassen. Eine Komponente muss ausserdem in mindestens einer Lösung des Herausgebers bleiben, mit dem sie erstmals installiert wurde. Bei verschiedenen Herausgebern wird das Neustrukturieren von Lösungen schwieriger, was der Autor beim Wechsel auf managed Lösungen oft tut."
+  - question: "Was bedeutet das Layering von Lösungen nach der Umstellung auf managed?"
+    answer: "Lösungen werden chronologisch nach Installationszeitpunkt geschichtet, neuere liegen über älteren, und die unmanaged Ebene bleibt immer ganz oben. Beim Wechsel auf managed spielt deshalb die Installationsreihenfolge eine Rolle. Komponenten von Microsoft, Drittanbietern und ISVs werden gemäss ihrer Bereitstellung geschichtet. Der Autor verweist auf Felix Verduin, der diesen Punkt hervorgehoben hat."
 ---
 ## TL;DR
 
