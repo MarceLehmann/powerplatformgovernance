@@ -68,8 +68,13 @@ test('flow is sequential, approval-filtered, uses Foundry and confirms GitHub re
   assert.equal(actions.has('GitHub_results'), false);
   assert.deepEqual(actions.get('Validate_source_URL').inputs.schema.properties.scheme.enum, ['https']);
   assert.deepEqual(actions.get('Validate_source_URL').inputs.schema.properties.public_host.enum, [true]);
-  assert.equal(actions.get('Dispatch_to_GitHub').inputs.parameters.body.event_type, 'curated-publication');
-  assert.deepEqual(actions.get('Dispatch_to_GitHub').runAfter, { Mark_queued: ['Succeeded'] });
+  // T-0074: publishable items are staged (shared dedup table, alternate-key race safety) rather
+  // than dispatched to GitHub directly - the resolver flow (dedup-staging.mjs) does that after
+  // the dedup window.
+  assert.equal(actions.has('Dispatch_to_GitHub'), false, 'live flow no longer dispatches directly - the resolver does, after staging');
+  assert.equal(actions.get('Create_staging_entry').inputs.parameters.entityName, 'new_contentstagings');
+  assert.deepEqual(actions.get('Catch_stage').runAfter, { Try_stage: ['Failed'] });
+  assert.deepEqual(actions.get('Mark_staged').runAfter, { Stage_publications: ['Succeeded'] });
   assert.match(actions.get('Still_approved').expression, /modifiedon/);
   assert.equal(actions.get('Confirm_publication').inputs.parameters['item/new_failures'], 0);
   assert.equal(actions.get('Missing_receipt_review').inputs.parameters['item/new_watermark'], undefined);
