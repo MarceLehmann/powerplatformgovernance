@@ -48,6 +48,70 @@
 </script>
 {% endif %}
 
+{% if page.url == '/faq/' %}
+<!-- FAQPage schema (GEO: mirrors the on-page Q&A verbatim so AI answer engines and
+     rich results can surface it directly). Keep in sync with _tabs/faq.md by hand -
+     there is no single source shared between the two. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Power Platform Governance?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A curated collection of Power Platform governance articles from different blogs, brought into one place. Each entry is a short summary with a clear governance takeaway and a direct link to the original article." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you republish full articles?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. We write an independent short summary and a governance takeaway, and link directly to the original. We never reproduce or translate a full article." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you choose what to feature?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Every candidate goes through an automated relevance check before it is summarized: it has to be substantially about Power Platform governance, security, compliance, DLP, environments, ALM, ownership, CoE, Dataverse, Power Apps, Power Automate or Copilot Studio administration, with enough original content to summarize responsibly. Generic AI news or marketing does not pass." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this affiliated with Microsoft?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. This is an independent project edited by Marcel Lehmann, a Microsoft MVP and founder of KMUpower. It is not an official Microsoft publication." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I suggest a blog or article?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Use the submission page. A link is enough; your name and LinkedIn profile are optional. Every suggestion is reviewed before publication." }
+    },
+    {
+      "@type": "Question",
+      "name": "Why isn't a specific blog listed yet?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Either it hasn't been suggested yet, or it didn't pass the relevance check for this site's scope. Suggest it through the submission page and it will be reviewed." }
+    },
+    {
+      "@type": "Question",
+      "name": "Who is behind this site?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Marcel Lehmann, founder of KMUpower, a Swiss Power Platform consultancy and training business. He also edits PowerPlatformTip; that connection is disclosed when featuring it here." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Power Platform governance, in practice?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The set of decisions and controls around who can build what, where, with which data and connectors - environment strategy, Data Loss Prevention (DLP) policies, ALM and ownership of what gets built. It's less about restricting makers and more about making sure the platform stays manageable as adoption grows." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need Premium licensing for basic governance?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Core controls - environment strategy, DLP policies, security roles - are available on a standard Power Apps/Power Automate license. Premium connectors and Dataverse become relevant for specific controls, not for governance as a whole." }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between governance and a Center of Excellence (CoE)?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Governance is the set of rules and controls themselves. A CoE is the team and the tooling that applies those rules in practice: inventories, approvals, nudges and reporting. You can have governance without a formal CoE team, especially in smaller organizations." }
+    }
+  ]
+}
+</script>
+{% endif %}
+
 {%- if page.layout == 'post' -%}
 {%- comment -%}
   Replaces jekyll-seo-tag's own BlogPosting block (stripped in head.html for post
