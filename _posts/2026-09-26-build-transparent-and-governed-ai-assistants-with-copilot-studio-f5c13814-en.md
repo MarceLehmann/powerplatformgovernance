@@ -33,6 +33,13 @@ submitted_by:
   publish_credit: true
   name: Michael Roth
   linkedin: https://www.linkedin.com/in/michaelroth42/
+faq:
+  - question: "Which eight steps does the post propose for responsible AI?"
+    answer: "Educate yourself and others, support open initiatives, judge AI products critically, discuss ethics, demand transparency in training data and models, experiment and share your own projects, encourage responsible adoption at work and build community-driven tools."
+  - question: "What can citizen developers concretely build with Copilot Studio according to the post?"
+    answer: "They can build transparent, auditable AI assistants, well-documented workflows with clear decision logic, solutions that relieve employees through responsible automation and systems that respect governance rules as well as fairness and inclusion."
+  - question: "Which AI uses does the author dismiss as gimmicks?"
+    answer: "He lists five: email drafting as glorified autocomplete, meeting summaries as basic transcription, customer chatbots as decision trees, presentation builders as template reformatting and AI-personalised marketing as automated A/B testing."
 ---
 
 ## TL;DR

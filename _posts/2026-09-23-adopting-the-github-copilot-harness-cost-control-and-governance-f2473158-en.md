@@ -26,6 +26,13 @@ source_language: en
 source_language_name: English
 source_published_at: '2026-08-07'
 source_updated_at: '2026-08-13'
+faq:
+  - question: "Why do GitHub Copilot harness agents consume credits while still being built?"
+    answer: "Makers can consume Copilot Credits while building, previewing and evaluating agents, before those agents reach a formal production lifecycle. That moves cost control earlier."
+  - question: "How do I find all harness agents in my tenant?"
+    answer: "Query the Power Platform Inventory API with a POST, filter on the Copilot Studio agent resource type and set the isCLIAgent property to true."
+  - question: "What do the four enforcement rules for credit allocations mean?"
+    answer: "Alert warns administrators as capacity nears its limit, TenantPool lets an environment draw unallocated pool capacity, PayGo enables pay-as-you-go billing through approved Azure subscriptions, and Deny blocks consumption once capacity runs out."
 ---
 ## TL;DR
 

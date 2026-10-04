@@ -28,6 +28,13 @@ source_language_name: English
 source_author: Nick Doelman
 source_published_at: '2025-08-28'
 source_type: article
+faq:
+  - question: "Brauche ich eine Dynamics-365-Lizenz, um den Dynamics 365 Outlook Connector zu nutzen?"
+    answer: "Nein. Wer eine Power-Apps-Lizenz hat, darf ihn laut Autor uneingeschränkt verwenden."
+  - question: "Was bringt die native Exchange-Online-Integration in Dataverse?"
+    answer: "Sie erlaubt es, E-Mails aus Power Apps zu senden und zu empfangen, ohne einen Power-Automate-Flow, wodurch Flow-Läufe im Kontingent bleiben, und ohne ein spezielles Servicekonto."
+  - question: "Wie funktionieren Feldzuordnungen in Dataverse und wo liegen ihre Grenzen?"
+    answer: "Zugeordnete Werte werden in einen neuen verknüpften Datensatz kopiert, aber nur bei der Erstellung und nur bei gleichen Feldtypen und gleich grossen oder kleineren Feldern. Spätere Änderungen am übergeordneten Datensatz wirken nicht nach."
 ---
 
 ## TL;DR

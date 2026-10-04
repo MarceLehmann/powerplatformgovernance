@@ -22,6 +22,13 @@ source_language: en
 source_language_name: English
 source_author: Benedikt
 source_published_at: '2025-03-31'
+faq:
+  - question: "Welche Aufgabe hat eine XML-Map-Datei im Power-Platform-ALM?"
+    answer: "Sie legt fest, welche Plug-in-DLLs und Webressourcen zu einer Lösung gehören und wo sie auf dem lokalen Datenträger liegen. Die Pipeline kann dann frisch gebaute Binärdateien aus dem Build-Ergebnis verwenden."
+  - question: "Welche Zuordnungsarten kennt eine Map-Datei in der Power Platform?"
+    answer: "Die Ordnerzuordnung bildet einen ganzen Ordner ab und dient meist Webressourcen. Die Datei-zu-Datei-Zuordnung verknüpft genau eine Quelle mit einem Ziel und ist bei Plug-in-DLLs üblich."
+  - question: "Warum braucht es Map-Dateien, obwohl Lösungen die Komponenten schon enthalten?"
+    answer: "Je nachdem, ob man einem umgebungszentrierten oder quellcodezentrierten ALM-Ansatz folgt, wird eine Lösung aus einer Umgebung statt aus einem Repository erzeugt."
 ---
 ## TL;DR
 

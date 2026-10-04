@@ -22,6 +22,13 @@ source_language: en
 source_language_name: English
 source_author: Alex Shlega
 source_published_at: '2025-09-22'
+faq:
+  - question: "Why does the author use a custom table for texts instead of content snippets?"
+    answer: "Snippets may need customization on a custom site rendered with JavaScript and Liquid, and the author finds them hard for translators to manage. A custom table can be maintained in the main model-driven app."
+  - question: "How is the text table structured?"
+    answer: "The table holds a name used as the key, an English label and a French label, and the query reads only active records."
+  - question: "What is the downside of this solution?"
+    answer: "Because the texts are replaced after the page has loaded, occasional flickering can occur while the original content is still visible."
 ---
 ## TL;DR
 

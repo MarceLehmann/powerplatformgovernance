@@ -30,6 +30,13 @@ source_language_name: English
 source_author: Karl-Johan Spiik
 source_published_at: '2026-09-28'
 source_type: article
+faq:
+  - question: "Which prerequisites does the keynote name for AI that transforms a business?"
+    answer: "Four pillars with human leadership as the foundation: data maturity, process maturity, governance, and AI evolution, which the world drives on its own."
+  - question: "Why are AI champion networks not enough in Heikniemi's view?"
+    answer: "A network of five percent engaged staff giving five percent of their time suffices, in his view, only for basic Copilot use."
+  - question: "Which governance challenges does the keynote highlight for AI?"
+    answer: "Access control is hard for humans and doubly so for systems created by agents. Documenting decisions with their data needs logging that many firms lack and could not query."
 ---
 
 ## TL;DR

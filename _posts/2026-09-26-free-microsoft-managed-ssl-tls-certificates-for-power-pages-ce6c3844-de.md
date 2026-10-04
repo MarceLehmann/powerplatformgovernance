@@ -26,6 +26,13 @@ source_language_name: English
 source_author: Nick Doelman
 source_published_at: '2026-09-18'
 source_type: article
+faq:
+  - question: "Was muss ich vor dem Microsoft-verwalteten Zertifikat für Power Pages ausschalten?"
+    answer: "Zuerst müssen CDN und Web Application Firewall deaktiviert sein. Sind sie aktiv, wird die Option für das Microsoft-verwaltete Zertifikat nicht ausgegraut, sie erscheint gar nicht erst."
+  - question: "Ist meine Power-Pages-Website beim Wechsel auf das verwaltete Zertifikat erreichbar?"
+    answer: "Nein, während des Wechsels ist die Website unter der eigenen URL nicht erreichbar, bis die neue Bindung fertig ist. Microsoft weist darauf hin, dass der Abschluss mehrere Minuten dauert."
+  - question: "Kostet das verwaltete Zertifikat für Power Pages extra, und kann ich eigene weiter nutzen?"
+    answer: "Es kostet nichts zusätzlich, und Microsoft stellt es bereit, konfiguriert und erneuert es automatisch. Ein eigenes Zertifikat kannst du weiterhin hochladen oder ein vorhandenes verwenden."
 ---
 
 ## TL;DR

@@ -25,6 +25,13 @@ source_language_name: English
 source_author: Petros Feleskouras
 source_published_at: '2026-08-25'
 source_updated_at: '2026-08-26'
+faq:
+  - question: "Which Power Platform API route returns the tenant's Copilot Credit capacity?"
+    answer: "The MCSMessages route under licensing and entitlements returns entitled, allocated, consumed, available and status values."
+  - question: "Why can the admin center reports fall short for Copilot Credit consumption?"
+    answer: "The standard reports under Licensing and Copilot Studio do not let you reshape the data, own the records or keep trends beyond the standard window."
+  - question: "What limitations apply to the data from the Copilot Credit consumption API?"
+    answer: "The API can return several rows for one agent on the same day when channel, feature, model or environment differ."
 ---
 ## TL;DR
 

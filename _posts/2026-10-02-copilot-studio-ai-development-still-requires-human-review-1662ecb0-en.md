@@ -30,6 +30,13 @@ source_language_name: English
 source_author: Karl-Johan Spiik
 source_published_at: '2026-10-02'
 source_type: article
+faq:
+  - question: "How does the coding-agent workflow differ from traditional Copilot Studio development?"
+    answer: "According to Koskinen the steps did not disappear, they moved. The coding-agent workflow changes where the manual work happens, and validation and platform knowledge still matter."
+  - question: "What does Koskinen leave to AI and what stays with people?"
+    answer: "AI can drive context, generation and testing, plus documentation lookup and schema inspection. Humans keep the requirement, challenge, review and deploy, and need to validate architecture, business logic, security, authentication and edge cases."
+  - question: "What limits do coding agents currently have in Copilot Studio?"
+    answer: "Coding agents cannot yet create tool references inside topics. Power Automate flows created by agents can create their connections, whereas topics cannot, so the connection has to be created manually in the UI."
 ---
 
 ## TL;DR

@@ -29,6 +29,13 @@ source_language_name: English
 source_author: Softchief Author
 source_published_at: '2026-09-29'
 source_type: article
+faq:
+  - question: "When should I choose a PCF control and when JavaScript in Dynamics 365?"
+    answer: "PCF builds custom interface components, while JavaScript usually adds client-side behaviour to model-driven app forms."
+  - question: "Is hiding a field with JavaScript enough to protect the data?"
+    answer: "No. Hiding a field or checking its value in the browser does not secure the data."
+  - question: "Is Xrm.Page still recommended for new form code in Dynamics 365?"
+    answer: "No. Microsoft marks the older Xrm.Page approach as deprecated and recommends formContext for new code where applicable."
 ---
 
 ## TL;DR

@@ -32,6 +32,13 @@ submitted_by:
   publish_credit: true
   name: Mirko Peters
   linkedin: https://www.linkedin.com/in/m365showpodcast/
+faq:
+  - question: "Why should confidence scores be judged per field rather than per document?"
+    answer: "Scores apply field by field: a supplier name may reach 99 percent while the invoice number gets only 65 percent. A single verdict per document either rejects valid files or lets dangerous errors through."
+  - question: "Does a 98 percent confidence score on an invoice total guarantee correct data?"
+    answer: "No. The score only expresses how certain the model is about reading the characters, not whether the number is valid for the business."
+  - question: "How should a Power Automate flow react to mandatory fields with low confidence?"
+    answer: "The flow compares the confidence of every mandatory field with predefined thresholds. If one falls below, it pauses automatic record creation and routes the file into a dedicated review queue."
 ---
 
 ## TL;DR

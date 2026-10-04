@@ -25,6 +25,13 @@ source_language_name: English
 source_author: Nick Doelman
 source_published_at: '2026-09-18'
 source_type: article
+faq:
+  - question: "What do I need to switch off before using the Microsoft managed certificate for Power Pages?"
+    answer: "CDN and the web application firewall must be turned off first. When they are enabled, the Microsoft managed certificate option is not greyed out, it does not appear at all."
+  - question: "Will my Power Pages site stay reachable while I switch to the managed certificate?"
+    answer: "No. During the switch the site is unreachable on its custom URL until the new binding is complete, and Microsoft warns that finishing takes several minutes."
+  - question: "Is the Microsoft managed certificate for Power Pages free, and can I still use my own?"
+    answer: "It costs nothing extra, and Microsoft provisions, configures and renews it automatically. You can still upload your own certificate or use an existing one."
 ---
 
 ## TL;DR

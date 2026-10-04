@@ -29,6 +29,13 @@ source_language_name: English
 source_author: Karl-Johan Spiik
 source_published_at: '2026-09-27'
 source_type: article
+faq:
+  - question: "Welche Governance-Lücken zeigten sich nach den vielen Agent-Builder-Experimenten?"
+    answer: "Jeder konnte Agenten erstellen, und als sie im Admin Center auftauchten, waren es schon Hunderte."
+  - question: "Wie funktioniert der selbst gebaute Governance-Ablauf für Agent-Builder-Agenten?"
+    answer: "Die Graph-API erkennt neue Agenten und schreibt sie in eine SharePoint-Liste."
+  - question: "Nach wie vielen Tagen ohne Nutzung werden Agenten im Beispiel gemeldet?"
+    answer: "Nach 60 Tagen Inaktivität. Dann erhält der Besitzer eine Karte mit der Wahl, den Agenten zu löschen oder zu begründen, warum er bleiben soll."
 ---
 
 ## TL;DR

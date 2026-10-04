@@ -14,6 +14,13 @@ image:
   alt: "Governance card: The Basement Server — the gateway everyone uses needs an owner."
 permalink: "/en/posts/gov-data-gateway-ownership/"
 translation_url: "/de/posts/gov-data-gateway-ownership/"
+faq:
+  - question: "What happens to my flows and reports if the only on-premises data gateway goes offline?"
+    answer: "Every flow, app and report that depends on on-premises data stops at once. There is no partial degradation to notice ahead of time, because it works until the moment it does not."
+  - question: "How many gateways can a data gateway cluster have, and must their versions match?"
+    answer: "A cluster supports up to ten members, and all of them need to run the same gateway version, because mixed versions can cause failures that are hard to trace back to one outdated node."
+  - question: "Should I turn on Distribute requests across all active gateways in this cluster?"
+    answer: "It is worth turning on once you have more than two nodes. By default all traffic goes to the primary until it is down, so the second and third gateways sit idle."
 ---
 
 ## TL;DR

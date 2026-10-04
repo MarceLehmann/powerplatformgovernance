@@ -23,6 +23,13 @@ source_language: en
 source_language_name: English
 source_author: Alex Shlega
 source_published_at: '2025-11-08'
+faq:
+  - question: "Why does a Copilot Studio MCP tool keep asking users to connect?"
+    answer: "In the reported case, Credentials to use was set to End user credentials, so the tool kept showing the connection prompt despite an active connection."
+  - question: "What fixed the problem?"
+    answer: "Switching the tool to Maker-provided credentials stopped the prompt and made the test agent work. Extra connections and API key authentication did not help."
+  - question: "What should security teams check before using maker-provided credentials?"
+    answer: "Whether maker-provided credentials suit the connector and usage scenario, because the agent then no longer requires each user to connect. The source does not define the resulting access boundaries."
 ---
 ## TL;DR
 

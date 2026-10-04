@@ -15,6 +15,13 @@ image:
   alt: "Governance card: The Open Wall — DLP is a guardrail, not a wall."
 permalink: "/en/posts/gov-dlp-in-practice/"
 translation_url: "/de/posts/gov-dlp-in-practice/"
+faq:
+  - question: "Why should the default DLP connector group stay on Non-Business instead of Blocked?"
+    answer: "Microsoft 365 Enterprise license connectors and a few core Power Platform connectors are exempt from being blocked."
+  - question: "What is connector action control in a DLP policy?"
+    answer: "It lets you allow a connector but restrict which of its actions can be used, for example allowing read actions while blocking anything that modifies data."
+  - question: "Do advanced connector policies replace classic DLP policies?"
+    answer: "Not completely yet. Advanced connector policies use a default-deny allowlist and cover certified connectors only, so classic DLP still handles custom connectors and HTTP."
 ---
 
 ## TL;DR

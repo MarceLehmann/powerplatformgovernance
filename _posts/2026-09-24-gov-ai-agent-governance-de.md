@@ -14,6 +14,13 @@ image:
   alt: "Governance-Karte: Das Orakel — dein Agent ist selbstsicher, liegt er auch richtig?"
 permalink: "/de/posts/gov-ai-agent-governance/"
 translation_url: "/en/posts/gov-ai-agent-governance/"
+faq:
+  - question: "Kann ein Copilot-Studio-Agent die Evaluation bestehen und trotzdem unangemessen antworten?"
+    answer: "Ja. Die Evaluation misst Korrektheit und Performance, nicht Sicherheit, Bias oder Ethik, daher braucht ein Freigabegate einen separaten Responsible-AI-Review."
+  - question: "Wie reduziere ich selbstsicher falsche Antworten eines Copilot-Studio-Agenten?"
+    answer: "Gründe die Antworten auf vertrauenswürdige Datenquellen, die auf das beschränkt sind, was der anfragende Nutzer sehen darf. Eine ungesteuerte Wissensquelle riskiert überzeugt vorgetragene falsche Antworten."
+  - question: "Warum ist der Wirkungsradius eines Agenten grösser als der einer normalen App?"
+    answer: "Ein Agent handelt sofort und in grossem Massstab auf Basis unvollständiger oder falscher Informationen, wo eine Person vielleicht innegehalten und nachgefragt hätte."
 ---
 
 ## TL;DR

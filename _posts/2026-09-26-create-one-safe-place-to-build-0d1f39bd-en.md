@@ -33,6 +33,13 @@ submitted_by:
   publish_credit: true
   name: Michael Roth
   linkedin: https://www.linkedin.com/in/michaelroth42/
+faq:
+  - question: "Why should the DLP policy of a maker environment resemble production?"
+    answer: "Because makers would otherwise build with capabilities that do not exist in production and be disappointed later."
+  - question: "How should access to a maker environment be granted?"
+    answer: "Through competence, not automatically for everyone in the directory. A learning module of about 30 minutes comes first, then access through a security group managed by the governance team or IT."
+  - question: "When does it make sense to split a maker lab into several environments?"
+    answer: "One general maker lab is the default. Splitting is justified when advanced cases need risky connectors, a business unit has consistently high maker volume, or makers build model-driven apps with real business logic."
 ---
 
 ## TL;DR

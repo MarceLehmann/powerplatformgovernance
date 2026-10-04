@@ -31,6 +31,13 @@ submitted_by:
   publish_credit: true
   name: Mirko Peters
   linkedin: https://www.linkedin.com/in/m365showpodcast/
+faq:
+  - question: "Warum bringt Copilot Dateien ans Licht, die jahrelang unauffindbar blieben?"
+    answer: "Copilot sucht in natürlicher Sprache über alles, was ein Benutzer lesen darf, Sicherheit durch Unauffindbarkeit endet damit. Tief vergrabene oder zu weit geteilte Dateien, die per Stichwortsuche niemand fand, sind plötzlich sofort abrufbar."
+  - question: "Welche Purview-Funktionen nennt der Artikel als Mindestanforderung für Copilot?"
+    answer: "Vertraulichkeitsbezeichnungen und automatische Klassifizierung. Laut Artikel bestimmen die Bezeichnungen, ob Inhalte von Copilot-Agenten indexiert, zusammengefasst oder herangezogen werden dürfen."
+  - question: "Wie finde ich Oversharing in SharePoint, Teams und OneDrive?"
+    answer: "Der Artikel verweist auf die Oversharing-Berichte in den erweiterten SharePoint-Verwaltungsdashboards, die gefährdete Sites in Teams, OneDrive und SharePoint aufzeigen."
 ---
 
 ## TL;DR

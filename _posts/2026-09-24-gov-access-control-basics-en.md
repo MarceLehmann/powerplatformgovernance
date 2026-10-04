@@ -14,6 +14,13 @@ image:
   alt: "Governance card: The Shadow Admin — grant the least, log the rest."
 permalink: "/en/posts/gov-access-control-basics/"
 translation_url: "/de/posts/gov-access-control-basics/"
+faq:
+  - question: "Which predefined security role should I assign instead of System Administrator?"
+    answer: "Assign the narrowest predefined role that covers the task, not System Administrator."
+  - question: "Why shouldn't I copy the System Administrator role to build a new role?"
+    answer: "Copied roles do not automatically pick up new privileges from product updates, so they quietly become outdated."
+  - question: "Why is sharing an app with a security group better than sharing with named people?"
+    answer: "A security group controls access in one place: add someone and they are in, remove them and they are out. Sharing with individuals creates one grant per person, each to be found and revoked separately."
 ---
 
 ## TL;DR

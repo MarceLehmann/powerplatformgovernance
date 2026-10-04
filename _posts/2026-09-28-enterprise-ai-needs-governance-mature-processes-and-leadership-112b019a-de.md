@@ -30,6 +30,13 @@ source_language_name: English
 source_author: Karl-Johan Spiik
 source_published_at: '2026-09-28'
 source_type: article
+faq:
+  - question: "Welche Voraussetzungen nennt die Keynote für KI, die ein Unternehmen verändert?"
+    answer: "Vier Säulen mit menschlicher Führung als Fundament: Datenreife, Prozessreife, Governance und die Entwicklung der KI selbst, auf die der Markt unabhängig einwirkt."
+  - question: "Warum reichen KI-Champion-Netzwerke nach Ansicht von Heikniemi nicht aus?"
+    answer: "Ein Netzwerk aus fünf Prozent engagierter Mitarbeitender mit fünf Prozent Zeitanteil genügt seiner Ansicht nach nur für die einfache Nutzung von Copilot."
+  - question: "Welche Governance-Herausforderungen hebt die Keynote für KI hervor?"
+    answer: "Zugriffskontrolle ist schon für Menschen schwierig und für von Agenten erstellte Systeme doppelt. Entscheidungen samt Daten zu dokumentieren verlangt Protokolle, die viele Firmen weder haben noch abfragen könnten."
 ---
 
 ## TL;DR

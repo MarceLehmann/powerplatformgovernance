@@ -28,6 +28,13 @@ source_language_name: English
 source_author: Anders Jensen
 source_published_at: '2026-08-13'
 source_type: article
+faq:
+  - question: "Welche Einstellung schalte ich beim Bau eines dokumentbasierten Agenten im neuen Copilot Studio zuerst aus?"
+    answer: "Search all websites. Sie ist standardmässig aktiv, und der Autor nennt das Abschalten den wichtigsten einzelnen Klick der Anleitung."
+  - question: "Kosten Tests in der Vorschau schon Credits, bevor ein Agent veröffentlicht ist?"
+    answer: "Ja. Jeder Testchat verbraucht Credits, auch vor der Veröffentlichung, nur die manuelle Konfiguration ist gratis."
+  - question: "Sollte ein interner HR-Agent am ersten Tag firmenweit live gehen?"
+    answer: "Der Autor rät davon ab: Am ersten Tag für alle zu veröffentlichen ist der schnellste Weg, dass ein Tippfehler in den Anweisungen zum Problem der ganzen Firma wird."
 ---
 
 ## TL;DR

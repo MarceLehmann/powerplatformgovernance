@@ -27,6 +27,13 @@ source_language_name: English
 source_author: Nick Doelman
 source_published_at: '2026-08-13'
 source_type: article
+faq:
+  - question: "Which two gates must a Power Pages Web API request pass?"
+    answer: "The first gate is the site settings per table: Webapi/contact/enabled must be true, since the default is False, and the matching fields setting needs an explicit column list."
+  - question: "Why is a wildcard in the Web API fields setting dangerous in Power Pages?"
+    answer: "An asterisk in the fields setting publishes every column of that table."
+  - question: "What is risky about the Authenticated Users Role flag on custom web roles?"
+    answer: "When it is set to Yes, the custom role becomes the default role for every authenticated user, whether you assigned the user to it or not."
 ---
 
 ## TL;DR

@@ -27,6 +27,13 @@ source_language_name: English
 source_author: Matthew Devaney
 source_published_at: '2026-09-20'
 source_type: article
+faq:
+  - question: "How does Copilot Studio involve a person in an agent's decision?"
+    answer: "The agent sends a message through Teams or email, collects the person's response and uses it to decide its next action."
+  - question: "When does an agent need a human review step?"
+    answer: "When situations are unexpected or too risky for autonomous decisions, since planning cannot cover every situation."
+  - question: "Who decides which decisions agents may not make alone?"
+    answer: "Leadership and business owners identify the decisions agents must not make independently, while security teams watch for autonomous decisions that need human oversight."
 ---
 
 ## TL;DR

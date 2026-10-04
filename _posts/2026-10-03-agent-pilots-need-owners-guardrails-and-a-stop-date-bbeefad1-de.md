@@ -27,6 +27,13 @@ source_language_name: English
 source_author: Karl-Johan Spiik
 source_published_at: '2026-10-03'
 source_type: article
+faq:
+  - question: "Welche drei Misserfolgsrezepte nennt der Artikel für KI-Agenten-Piloten?"
+    answer: "Kaufen, bevor man versteht, einen Pilot ohne Enddatum fahren und nichts besitzen, sodass niemand verantwortlich ist."
+  - question: "Was gehört auf eine Pilotkarte für einen KI-Agenten?"
+    answer: "Agentenname, fachlicher Verantwortlicher, unterstützende Rollen, Erfolgskennzahl, Zeitrahmen, Leitplanken und das nächste Entscheidungstor."
+  - question: "Warum braucht ein Pilot ein Stopp-Datum?"
+    answer: "Ohne Datum treibt der Pilot dahin, verbraucht Budget und erreicht nie ein Urteil über Ausbau, Anpassung oder Abbruch."
 ---
 
 ## TL;DR

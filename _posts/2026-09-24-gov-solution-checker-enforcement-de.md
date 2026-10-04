@@ -14,6 +14,13 @@ image:
   alt: "Governance-Karte: Der Röntgenblick — Qualitätstore schlagen Qualitätshoffnung."
 permalink: "/de/posts/gov-solution-checker-enforcement/"
 translation_url: "/en/posts/gov-solution-checker-enforcement/"
+faq:
+  - question: "Welche drei Erzwingungsstufen hat der Solution Checker in Managed Environments?"
+    answer: "Kein heisst keine automatische Validierung. Warnen prüft jeden Import einer benutzerdefinierten Lösung automatisch, lässt ihn bei kritischen Problemen trotzdem durchlaufen, weist darauf hin und schickt eine E-Mail an Power-Platform- und Dynamics-365-Service-Administratoren."
+  - question: "Stoppen mittlere und niedrige Solution-Checker-Befunde einen Import?"
+    answer: "Nein. Nur Regeln der Schweregrad-Stufe kritisch können eine Blockierung oder die Warnmeldung auslösen."
+  - question: "Welche Erzwingungsstufe passt zu Production und Developer?"
+    answer: "Microsofts Adoptionsempfehlung für Enterprise-Tenants sieht Blockieren mit E-Mails für Default, Production und Teams-Umgebungen vor, Warnen ohne E-Mails für Developer und Sandbox."
 ---
 
 ## TL;DR

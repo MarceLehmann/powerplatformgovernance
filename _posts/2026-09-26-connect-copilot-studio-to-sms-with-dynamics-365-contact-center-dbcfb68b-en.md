@@ -28,6 +28,13 @@ source_language_name: English
 source_author: Matthew Devaney
 source_published_at: '2026-08-30'
 source_type: article
+faq:
+  - question: "What do I need so a Copilot Studio agent can send and receive SMS?"
+    answer: "You need three building blocks: a Copilot Studio agent with instructions and a knowledge source, a standalone installation of Dynamics 365 Contact Center and a paid Twilio account with a purchased phone number."
+  - question: "Does a free Twilio trial account work with Dynamics 365 Contact Center?"
+    answer: "No. The author states that a free trial account cannot be connected to Contact Center successfully."
+  - question: "Which rules should the instructions of an SMS agent contain?"
+    answer: "The example asks to keep replies under 320 characters where possible, to answer only from the knowledge base and not to guess."
 ---
 
 ## TL;DR

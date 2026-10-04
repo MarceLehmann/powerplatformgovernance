@@ -15,6 +15,13 @@ image:
   alt: "Governance-Karte: Die Nachtwache — monatlich nach Zombies suchen."
 permalink: "/de/posts/gov-disabled-owner-zombie-flows/"
 translation_url: "/en/posts/gov-disabled-owner-zombie-flows/"
+faq:
+  - question: "Schaltet das Deaktivieren eines Benutzers in Entra ID dessen Flows ab?"
+    answer: "Nein. Der Flow bleibt Ein und läuft weiter, aber Verbindungen unter dem deaktivierten Konto lehnen Aufrufe ab, oft wochenlang unbemerkt."
+  - question: "Was geht zuerst kaputt, wenn das Konto des Flow-Besitzers deaktiviert wird?"
+    answer: "Zuerst die Verbindungen, je nach Connector sofort oder beim nächsten Lauf. Der Flow selbst wird nie automatisch abgeschaltet."
+  - question: "Sollten geschäftskritische Flows einem Dienstprinzipal gehören?"
+    answer: "Ja, das empfiehlt Microsoft. Flows im Besitz eines Dienstprinzipals hängen an keiner einzelnen Mitarbeiterin, Austritte stören sie also nicht."
 ---
 
 ## TL;DR

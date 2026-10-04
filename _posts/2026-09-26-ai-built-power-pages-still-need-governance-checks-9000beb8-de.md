@@ -29,6 +29,13 @@ source_language_name: English
 source_author: Nick Doelman
 source_published_at: '2026-02-26'
 source_type: article
+faq:
+  - question: "Was kann das Power-Pages-Plugin für Claude Code ohne manuelle Einrichtung bauen?"
+    answer: "Im Test des Autors entstand aus einem Prompt eine komplette Power-Pages-Seite mit Datenmodell, Dataverse-Tabellen, Beziehungen und Authentifizierung, danach folgten Bereitstellung und Aktivierung."
+  - question: "Welche Konfigurationslücken fand der Autor in der KI-gebauten Power-Pages-Seite?"
+    answer: "Das Plugin ist nicht solution-aware, bei den Tabellenberechtigungen fehlten wichtige Teile (eine Tabelle wurde vergessen), und eine Web-API-Websiteeinstellung fehlte. Jede Authentifizierung ausser Microsoft Entra ID muss manuell eingerichtet werden."
+  - question: "Was sollte eine Prüfung kontrollieren, bevor eine KI-generierte Power-Pages-Seite live geht?"
+    answer: "Prüfen, ob die Seite solution-aware ist, ob die Tabellenberechtigungen vollständig sind, ob die Web-API-Websiteeinstellung gesetzt ist und ob jede Authentifizierung ausser Microsoft Entra ID manuell eingerichtet wurde."
 ---
 
 ## TL;DR

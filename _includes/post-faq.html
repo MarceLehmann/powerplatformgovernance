@@ -1,0 +1,30 @@
+{%- comment -%}
+  FAQ block for curated posts. Visible text and FAQPage JSON-LD are both generated here from the
+  same page.faq list (front matter: exactly 3 question/answer pairs, plain text), so they cannot drift apart.
+  Posts without a faq key render nothing.
+{%- endcomment -%}
+{%- if page.faq and page.faq.size > 0 -%}
+<section class="post-faq" id="faq" aria-labelledby="faq-heading">
+  <h2 id="faq-heading">{% if page.lang == 'de' %}Häufige Fragen{% else %}Frequently asked questions{% endif %}</h2>
+  {%- for item in page.faq %}
+  <h3>{{ item.question | escape }}</h3>
+  <p>{{ item.answer | escape }}</p>
+  {%- endfor %}
+</section>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": {{ page.lang | jsonify }},
+  "mainEntity": [
+    {%- for item in page.faq -%}
+    {
+      "@type": "Question",
+      "name": {{ item.question | jsonify }},
+      "acceptedAnswer": { "@type": "Answer", "text": {{ item.answer | jsonify }} }
+    }{%- unless forloop.last -%},{%- endunless -%}
+    {%- endfor -%}
+  ]
+}
+</script>
+{%- endif -%}

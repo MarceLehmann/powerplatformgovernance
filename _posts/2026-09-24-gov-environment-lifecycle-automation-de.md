@@ -14,6 +14,13 @@ image:
   alt: "Governance-Karte: Das Gruppen-Regelbuch — einmal konfigurieren, viele regieren."
 permalink: "/de/posts/gov-environment-lifecycle-automation/"
 translation_url: "/en/posts/gov-environment-lifecycle-automation/"
+faq:
+  - question: "Was bewirkt Environment Routing für neue Maker in der Power Platform?"
+    answer: "Es leitet einen sich anmeldenden Maker in seine eigene persönliche Entwicklungsumgebung statt in die Default-Umgebung und stellt sie bei Bedarf sofort bereit."
+  - question: "Was passiert mit den eigenen Einstellungen einer Umgebung, wenn ich sie einer Environment Group hinzufüge?"
+    answer: "Die Einstellungen der Gruppe überschreiben sie. Hat eine Umgebung eigene Einstellungen für etwas, das auch die Gruppe steuert, etwa Willkommensinhalt oder Freigabelimits, ersetzt das Hinzufügen diese individuellen Werte."
+  - question: "Kann ich eine versehentlich gelöschte Power-Platform-Umgebung wiederherstellen?"
+    answer: "Ja, innerhalb eines Fensters von sieben Tagen. Das Admin Center führt eine Liste Kürzlich gelöschte Umgebungen, und die Wiederherstellung ist ein Klick oder ein PowerShell-Cmdlet entfernt, nämlich Get-AdminPowerAppSoftDeletedEnvironment und Recover-AdminPowerAppEnvironment."
 ---
 
 ## TL;DR

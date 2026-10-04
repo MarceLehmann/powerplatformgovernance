@@ -20,6 +20,13 @@ source_name: Powerplatform.se
 source_language: en
 source_language_name: English
 source_published_at: '2025-06-10'
+faq:
+  - question: "What are orphan customer profile lookups in Dataverse?"
+    answer: "They are lookup fields pointing to a customer profile that no longer exists. They arise when Customer Insights Data works together with Dataverse."
+  - question: "Why do such orphan lookups appear?"
+    answer: "The trigger is often an effort to reduce licensing costs, since every 100,000 unified profiles in Customer Insights Data bring significant monthly costs."
+  - question: "How can the problem be fixed in the author's view?"
+    answer: "He names two ways: a Power Automate flow that checks whether the customer profile ID is still valid, or an integration rebuilt to write only changed fields."
 ---
 ## TL;DR
 

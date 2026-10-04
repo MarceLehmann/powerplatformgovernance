@@ -26,6 +26,13 @@ source_author_url: https://www.powerplatformtip.com/about/
 source_language: en
 source_language_name: English
 publisher_disclosure: Both publications are edited by Marcel Lehmann.
+faq:
+  - question: "Is it possible to hand a cloud flow to a new owner without export and import?"
+    answer: "Yes, if the flow is solution-aware. Add it to a solution in a Dataverse-enabled environment, open the flow details, choose Edit and add the new owner."
+  - question: "Do the old and the new flow owner both stay on the flow?"
+    answer: "Yes. The original owner and the new owner become co-owners, so nothing breaks."
+  - question: "How long until the new owner license applies to a scheduled flow?"
+    answer: "For scheduled or automated flows, the license of the new owner takes effect within about 7 days. Editing and saving the flow again applies it immediately."
 ---
 ## TL;DR
 

@@ -26,6 +26,13 @@ source_language: en
 source_language_name: English
 source_published_at: '2022-05-18'
 publisher_disclosure: Both publications are edited by Marcel Lehmann.
+faq:
+  - question: "Why can a user without SharePoint write access still create list items through a flow?"
+    answer: "A flow connection belongs to whoever configured it, not to whoever triggers the flow."
+  - question: "What is the main security risk of this permission elevation pattern?"
+    answer: "The flow becomes your security boundary, because it runs with the service account's permissions regardless of which user triggered it. The end user never directly accesses the restricted resource."
+  - question: "How much access should the service account behind an elevated flow get?"
+    answer: "Only the specific permissions the operation needs, for example write access to a restricted SharePoint list or update rights on a Dataverse table. The article advises least privilege, not broad admin access."
 ---
 ## TL;DR
 

@@ -20,6 +20,13 @@ source_name: Powerplatform.se
 source_language: en
 source_language_name: English
 source_published_at: '2025-05-06'
+faq:
+  - question: "Warum Abhängigkeiten prüfen, bevor ich in Customer Insights Data eine Power-Query-Datenquelle ersetze?"
+    answer: "Measures und Segmente können noch von der Datenquelle abhängen, und der Artikel warnt, dass Abhängigkeiten von extern genutzten Tabellen bestehen bleiben können."
+  - question: "Wie öffne ich die API-Liste, die Datenquellen-Abhängigkeiten zeigt?"
+    answer: "In Customer Insights Data zu Permissions gehen und den Tab API öffnen, dann die einzig verfügbare API Customer insights v1 wählen. Nach ListAll suchen und ListAllMeasuresMetadata auswählen, später ListAllSegments."
+  - question: "Welche Optionen gibt es für eine Kennzahl, die noch die alte Datenquelle nutzt?"
+    answer: "Man kann das Measure entfernen oder alle seine Abhängigkeiten auf eine andere Datenquelle umstellen, im Artikel eine Delta-Datenquelle, und es aktualisieren."
 ---
 ## TL;DR
 

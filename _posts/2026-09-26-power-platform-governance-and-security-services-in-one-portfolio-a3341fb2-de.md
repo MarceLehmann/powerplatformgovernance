@@ -31,6 +31,13 @@ submitted_by:
   publish_credit: true
   name: Michael Roth
   linkedin: https://www.linkedin.com/in/michaelroth42/
+faq:
+  - question: "Was enthält der Governance Kickstart im Governance-Portfolio der Power Platform?"
+    answer: "Er ist ein zweitägiger Workshop zum Aufbau von Governance in einer Organisation und kostet laut Portfolio 3000 EUR."
+  - question: "Wie sind die monatlichen Retainer im Portfolio aufgebaut?"
+    answer: "Drei Stufen: BASIC mit etwa 4 Stunden pro Woche für 4800 EUR im Monat, PRO mit etwa 6 Stunden für 7200 EUR und PREMIUM mit etwa 8 Stunden für 9600 EUR."
+  - question: "Lassen sich die Governance- und Sicherheitsangebote kombinieren?"
+    answer: "Ja. Laut Seite sind die Leistungen aus allen Bereichen kombinierbar, alle Pakete sind flexibel anpassbar, und die genannten Preise dienen der Orientierung."
 ---
 
 ## TL;DR

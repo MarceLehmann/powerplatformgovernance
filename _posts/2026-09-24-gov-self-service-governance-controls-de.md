@@ -14,6 +14,13 @@ image:
   alt: "Governance-Karte: Der Impulskauf — MSCommerce PowerShell, eine Richtlinie, erledigt."
 permalink: "/de/posts/gov-self-service-governance-controls/"
 translation_url: "/en/posts/gov-self-service-governance-controls/"
+faq:
+  - question: "Wie blockiere ich Self-Service-Käufe von Microsoft-Produkten?"
+    answer: "Es gibt keinen einzelnen Tenant-weiten Schalter. Du schaltest ihn pro Produkt mit dem PowerShell-Modul MSCommerce und Update-MSCommerceProductPolicy ab, was Käufe und Testversionen blockiert."
+  - question: "Was passiert mit einem Self-Service-Abonnement, wenn der Käufer das Unternehmen verlässt?"
+    answer: "Es kündigt sich nicht von selbst. Das Abonnement läuft weiter, bis es jemand aktiv kündigt oder ein Admin die Kündigung über den Support anstösst."
+  - question: "Was bewirkt die Quarantäne einer Power-Apps-App?"
+    answer: "Die Quarantäne macht die App für Endnutzer sofort unzugänglich, lässt sie aber für den Maker zum Weiterbearbeiten und für Admins zur Prüfung intakt."
 ---
 
 ## TL;DR

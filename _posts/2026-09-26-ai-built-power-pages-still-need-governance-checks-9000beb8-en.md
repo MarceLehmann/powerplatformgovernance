@@ -28,6 +28,13 @@ source_language_name: English
 source_author: Nick Doelman
 source_published_at: '2026-02-26'
 source_type: article
+faq:
+  - question: "What can the Power Pages plugin for Claude Code build without manual setup?"
+    answer: "In the author test it produced a complete Power Pages site from a prompt: data model, Dataverse tables, relationships and authentication, followed by deployment and activation."
+  - question: "Which configuration gaps did the author find in the AI-built Power Pages site?"
+    answer: "The plugin was not solution aware, missed critical table permissions (one table was forgotten) and missed a Web API site setting. Authentication other than Microsoft Entra ID needs manual configuration."
+  - question: "What should a reviewer verify before an AI-generated Power Pages site goes live?"
+    answer: "Check whether the site is solution aware, whether table permissions are complete, whether the Web API site setting exists and whether any authentication other than Microsoft Entra ID was set up manually."
 ---
 
 ## TL;DR

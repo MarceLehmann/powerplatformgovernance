@@ -29,6 +29,13 @@ source_language_name: English
 source_author: Softchief Author
 source_published_at: '2026-09-29'
 source_type: article
+faq:
+  - question: "Wann nehme ich eine PCF-Komponente und wann JavaScript in Dynamics 365?"
+    answer: "PCF baut eigene Oberflächenkomponenten, JavaScript ergänzt in der Regel Verhalten auf Formularen modellgesteuerter Apps."
+  - question: "Reicht es, ein Feld per JavaScript auszublenden, um Daten zu schützen?"
+    answer: "Nein. Ein Feld im Browser auszublenden oder dort einen Wert zu prüfen, sichert die Daten nicht."
+  - question: "Ist Xrm.Page für neuen Formularcode in Dynamics 365 noch empfohlen?"
+    answer: "Nein. Microsoft kennzeichnet den älteren Xrm.Page-Ansatz als veraltet und empfiehlt für neuen Code, wo anwendbar, den formContext."
 ---
 
 ## TL;DR

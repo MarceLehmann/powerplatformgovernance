@@ -28,6 +28,13 @@ source_language_name: English
 source_author: Josiah Opiyo
 source_published_at: '2026-09-10'
 source_type: article
+faq:
+  - question: "Was kann der PnP-PowerShell-Agent für Copilot bei der Tenant-Verwaltung?"
+    answer: "Er übersetzt eine Anfrage in normaler Sprache in passende PnP-PowerShell-Befehle, sodass Administratoren das gewünschte Ergebnis beschreiben statt die Syntax auswendig zu kennen."
+  - question: "Macht Verwaltung per natürlicher Sprache Änderungen im Tenant automatisch sicherer?"
+    answer: "Nein. Der Beitrag hält fest, dass natürliche Sprache administrative Aktionen nicht von selbst sicher macht."
+  - question: "Ist der PnP-PowerShell-Agent für Copilot bereits ein fertiges Werkzeug?"
+    answer: "Nein. Teile sind noch in Arbeit. Skills zum Erstellen, Bewerten und Aktualisieren von Skripten sind angekündigt, aber nicht fertig, daher gelten die Skript-Funktionen als noch nicht verfügbar."
 ---
 
 ## TL;DR

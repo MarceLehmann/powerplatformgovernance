@@ -13,6 +13,13 @@ image:
   alt: "Governance-Karte: Die Überraschungsrechnung — die Lizenz kennen, bevor die Nutzer kommen."
 permalink: "/de/posts/gov-licensing-governance/"
 translation_url: "/en/posts/gov-licensing-governance/"
+faq:
+  - question: "Deckt eine Microsoft-365-Lizenz eigene Power Apps, Premium-Flows oder Copilot-Studio-Agenten ab?"
+    answer: "Nein. Manche Microsoft-365-Lizenzen enthalten begrenzte Nutzungsrechte für Power Apps, Power Automate und Dataverse, aber nur für die Arbeit mit Microsoft-365-Daten über Standard-Connectors."
+  - question: "Wie funktioniert die Abrechnung mit Pay-as-you-go in der Power Platform?"
+    answer: "Pay-as-you-go verknüpft eine Umgebung mit einem Azure-Abonnement, sodass Nutzung über die enthaltenen Mengen hinaus über Azure-Meter abgerechnet wird, ohne vorab Kapazität zu kaufen."
+  - question: "Wie behalte ich die Kosten bei Pay-as-you-go im Griff?"
+    answer: "Richte Azure-Cost-Management-Warnungen vor dem Rollout ein und nutze den herunterladbaren Nutzungsbericht auf der Abrechnungsplan-Seite im Power Platform Admin Center."
 ---
 
 ## TL;DR

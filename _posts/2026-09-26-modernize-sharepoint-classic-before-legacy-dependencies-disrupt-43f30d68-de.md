@@ -29,6 +29,13 @@ source_language_name: English
 source_author: Josiah Opiyo
 source_published_at: '2026-09-12'
 source_type: article
+faq:
+  - question: "Was ist der wertvollste erste Schritt, bevor SharePoint Classic abgeschaltet wird?"
+    answer: "Eine gezielte Abhängigkeitsinventur, die der Autor als wertvollsten Einzelschritt bezeichnet."
+  - question: "Vor welchen versteckten Abhängigkeiten in SharePoint Classic warnt der Beitrag?"
+    answer: "Script-Editor-Webparts, die vor acht Jahren eingefügt wurden, Integrationen auf Basis von ACS, die seit der Migration niemand mehr angefasst hat, und Warnungen, auf die sich Abteilungen verlassen, weil es immer so gemacht wurde."
+  - question: "Wie ersetzt man SharePoint-Warnungen, die auslaufen?"
+    answer: "Geh vom Geschäftsprozess aus und nicht von einer technischen Umwandlung. Kläre, bei welchen Ereignissen eine Benachrichtigung nötig ist, wer sie bekommen muss und wie eskaliert wird."
 ---
 
 ## TL;DR

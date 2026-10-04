@@ -14,6 +14,13 @@ image:
   alt: "Governance-Karte: Die Geister-App — zwei Namen pro Lösung, immer."
 permalink: "/de/posts/gov-ownership-offboarding/"
 translation_url: "/en/posts/gov-ownership-offboarding/"
+faq:
+  - question: "Wie finde ich alle Flows, die ein ausgeschiedener Mitarbeiter erstellt hat?"
+    answer: "Nutze das PowerShell-Cmdlet Get-AdminFlow mit dem Parameter CreatedBy und der Objekt-ID der Person, um alle ihre Flows auf einmal zu finden."
+  - question: "Warum scheitert ein verwaister Flow?"
+    answer: "Ein verwaister Flow ist einer, dessen Besitzerkonto nicht mehr existiert oder ungültig ist, und er scheitert, weil seine Verbindungen an dieses Konto gebunden waren."
+  - question: "Warum soll ich bei jeder Lösung einen Stellvertreter erfassen?"
+    answer: "Jedes Neuzuweisungs-Cmdlet braucht einen Menschen, der entscheidet, wer der neue Besitzer wird, und genau das beantwortet ein benannter Stellvertreter bereits."
 ---
 
 ## TL;DR

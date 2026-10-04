@@ -22,6 +22,13 @@ source_author_url: https://www.powerplatformtip.com/about/
 source_language: en
 source_language_name: English
 publisher_disclosure: Beide Publikationen werden von Marcel Lehmann herausgegeben.
+faq:
+  - question: "Was verbergen sichere Eingaben und sichere Ausgaben im Flow-Verlauf?"
+    answer: "Sie maskieren sensible Werte wie Passwörter, Token und persönliche Angaben im Ausführungsverlauf eines Flows."
+  - question: "Was schützen sichere Eingaben und Ausgaben in Power Automate nicht?"
+    answer: "Sie verändern nichts an der Verarbeitung. Die Daten werden weiterhin normal verarbeitet, die Maskierung betrifft nur die Anzeige im Protokoll."
+  - question: "Wie aktiviere ich sichere Eingaben oder Ausgaben für eine Aktion?"
+    answer: "Öffne die betroffene Aktion in deinem Flow, wechsle in den Bereich Einstellungen, schalte sichere Eingaben, sichere Ausgaben oder beides um und speichere die Änderung."
 ---
 ## TL;DR
 

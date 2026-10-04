@@ -29,6 +29,13 @@ source_language_name: English
 source_author: Nick Doelman
 source_published_at: '2025-08-28'
 source_type: article
+faq:
+  - question: "Do I need a Dynamics 365 license to use the Dynamics 365 Outlook connector?"
+    answer: "No. According to the author, anyone with a Power Apps license is fully entitled to use it."
+  - question: "What is the advantage of native Exchange Online integration in Dataverse?"
+    answer: "It lets you send and receive emails from Power Apps without a Power Automate flow, so flow run allocations are preserved, and it needs no special service account."
+  - question: "How do Dataverse field mappings work and what are their limits?"
+    answer: "Mapped values are copied to a new related record, but only at creation and only for matching field types of equal or smaller size. Later parent changes do not cascade."
 ---
 
 ## TL;DR

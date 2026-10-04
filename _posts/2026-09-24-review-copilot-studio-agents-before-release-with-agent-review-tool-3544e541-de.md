@@ -21,6 +21,13 @@ source_language: en
 source_language_name: English
 source_author: Ramakrishnan Raman
 source_published_at: '2026-08-18'
+faq:
+  - question: "Was ist das Agent Review Tool und wo bekommt man es?"
+    answer: "Es ist ein Prüfwerkzeug für Copilot-Studio-Agenten vor der Veröffentlichung und Teil des Copilot Agent Kit. Es ist über den Microsoft Marketplace verfügbar."
+  - question: "Nach welchen vier Kriterien bewertet das Tool die Qualität von Anweisungen?"
+    answer: "Die Bewertung der Anweisungen folgt vier Dimensionen: Clarity, Actionability, Scope discipline und Composability."
+  - question: "Wie veränderten sich die Ergebnisse im Beispiel nach der Überarbeitung?"
+    answer: "Der fiktive ZAVA Visual Merchandiser startete mit 63 Prozent, 39 von 54 bestandenen Prüfungen, 8 Fehlern und 7 Warnungen."
 ---
 ## TL;DR
 

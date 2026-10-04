@@ -22,6 +22,13 @@ source_name: Powerplatform.se
 source_language: en
 source_language_name: English
 source_published_at: '2025-02-04'
+faq:
+  - question: "Warum braucht es eine eigene Weiterleitungsseite für Links aus Journeys?"
+    answer: "Weil Customer Insights Journeys keine Links mit eigener Markendomain anbietet. Die entsprechende Funktion wurde zurückgestellt und aus Release Wave 2 2024 entfernt."
+  - question: "Wie funktioniert die selbst gebaute Weiterleitungsseite technisch?"
+    answer: "Es ist eine einfache HTML-Seite mit etwas JavaScript, die auf der Firmendomain liegt, etwa unter contoso.com/redirect.html."
+  - question: "Was muss bei der Klickverfolgung in Customer Insights Journeys beachtet werden?"
+    answer: "Das eingebaute Link-Tracking muss ausgeschaltet bleiben, sonst landen Empfangende wieder auf einer Weiterleitungsseite von Microsoft. Als Ersatz nennt der Autor zwei Wege."
 ---
 ## TL;DR
 

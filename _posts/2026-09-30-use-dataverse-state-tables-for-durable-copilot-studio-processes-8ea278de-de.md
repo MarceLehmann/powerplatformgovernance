@@ -30,6 +30,13 @@ source_language_name: English
 source_author: Holger Imbery
 source_published_at: '2026-09-13'
 source_type: article
+faq:
+  - question: "Warum soll ein Copilot-Studio-Agent den Zustand eines langlaufenden Prozesses nicht selbst halten?"
+    answer: "Der Agent gilt als zustandsloser Arbeiter, den Prozess trägt eine dauerhafte Dataverse-Tabelle."
+  - question: "Was bedeutet die Single-Writer-Regel für die State-Spalte?"
+    answer: "Nur eine Komponente, ein eigener Agent-Flow, darf die Spalte State schreiben und prüft Übergänge gegen eine Liste erlaubter Übergänge. Alles andere liest den Zustand und schlägt Übergänge nur vor."
+  - question: "Wie wartet ein Prozess mehrere Tage, ohne eine Copilot-Studio-Sitzung offen zu halten?"
+    answer: "Zeitgesteuerte Sweeper-Flows prüfen den Zeitstempel NextActionAt und holen fällige Fälle ab. Ein Freigabe-Agent schreibt zum Beispiel PendingApproval mit einer Frist für Erinnerungen und endet danach, ohne eine Sitzung zu halten."
 ---
 
 ## TL;DR

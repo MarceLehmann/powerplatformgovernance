@@ -26,6 +26,13 @@ source_language_name: English
 source_author: Benedikt Bergmann
 source_published_at: '2025-02-04'
 source_updated_at: '2025-02-04'
+faq:
+  - question: "How do I convert an unmanaged solution in a downstream environment to managed?"
+    answer: "You install the same components again as a managed solution, and the system switches them from unmanaged to managed."
+  - question: "What error appears when the unmanaged solution is still installed?"
+    answer: "The message says the solution is already installed as unmanaged while the package tries to install it as managed. Uninstall the unmanaged solution first, then import the managed one."
+  - question: "Which parameter forces the conversion to managed during import with PAC, GitHub or Azure DevOps?"
+    answer: "With the Power Platform CLI you use the convert-to-managed flag with two hyphens on import. In GitHub Actions the parameter is convert-to-managed, and in Azure DevOps it is ConvertToManaged."
 ---
 ## TL;DR
 

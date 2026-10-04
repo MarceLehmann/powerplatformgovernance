@@ -14,6 +14,13 @@ image:
   alt: "Governance-Karte: Der Schatten-Admin — gib das Minimum, protokolliere den Rest."
 permalink: "/de/posts/gov-access-control-basics/"
 translation_url: "/en/posts/gov-access-control-basics/"
+faq:
+  - question: "Welche vordefinierte Sicherheitsrolle vergebe ich statt System Administrator?"
+    answer: "Vergib die am engsten gefasste vordefinierte Rolle, die zur Aufgabe passt."
+  - question: "Warum sollte ich die Rolle System Administrator nicht kopieren, um eine neue Rolle zu bauen?"
+    answer: "Kopierte Rollen übernehmen neue Rechte aus Produkt-Updates nicht automatisch und veralten deshalb still."
+  - question: "Was bringt die Freigabe an eine Sicherheitsgruppe statt an einzelne Personen?"
+    answer: "Eine Sicherheitsgruppe steuert den Zugriff an einem Ort: Wer hinzukommt, ist drin, wer entfernt wird, ist draussen. Einzelfreigaben erzeugen pro Person eine eigene Berechtigung, die einzeln gefunden und entzogen werden muss."
 ---
 
 ## TL;DR

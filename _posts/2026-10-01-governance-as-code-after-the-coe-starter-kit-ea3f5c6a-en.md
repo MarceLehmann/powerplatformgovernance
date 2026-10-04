@@ -29,6 +29,13 @@ source_language_name: English
 source_author: Karl-Johan Spiik
 source_published_at: '2026-10-01'
 source_type: article
+faq:
+  - question: "What happened to the CoE Starter Kit, and what gap remains?"
+    answer: "Microsoft archived the repository in July. The speaker had used the kit since 2020 and describes keeping up with its releases as nearly full-time work."
+  - question: "Which three stages does the maturity ladder for governance as code describe?"
+    answer: "Stage one is the PAC CLI in the terminal with AI chat. Stage two runs existing community code that shows inventory in dashboards. Stage three is a custom solution adding purpose, policies and ownership."
+  - question: "Which warnings apply when using the PAC CLI with an AI agent?"
+    answer: "Keep the CLI current, since recent updates added fifteen new command groups, mostly in preview. Verify the active authentication profile, because the speaker accidentally enabled features in the wrong tenant."
 ---
 
 ## TL;DR

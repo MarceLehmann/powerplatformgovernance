@@ -15,6 +15,13 @@ image:
   alt: "Governance-Karte: Die offene Mauer — DLP ist eine Leitplanke, keine Mauer."
 permalink: "/de/posts/gov-dlp-in-practice/"
 translation_url: "/en/posts/gov-dlp-in-practice/"
+faq:
+  - question: "Warum sollte die Standardgruppe in DLP auf Non-Business bleiben statt auf Blocked?"
+    answer: "Connectors der Microsoft-365-Enterprise-Lizenz und einige Kern-Connectors der Power Platform sind von einer Blockierung ausgenommen."
+  - question: "Was leistet Connector Action Control in einer DLP-Richtlinie?"
+    answer: "Sie erlaubt einen Connector, schränkt aber ein, welche seiner Aktionen genutzt werden dürfen, etwa Lese-Aktionen erlauben und alles blockieren, was Daten verändert."
+  - question: "Ersetzen Advanced Connector Policies die klassischen DLP-Richtlinien schon vollständig?"
+    answer: "Noch nicht. Sie arbeiten mit einer Default-Deny-Allowlist und decken nur zertifizierte Connectors ab, Custom Connectors und HTTP bleiben bei klassischem DLP."
 ---
 
 ## TL;DR

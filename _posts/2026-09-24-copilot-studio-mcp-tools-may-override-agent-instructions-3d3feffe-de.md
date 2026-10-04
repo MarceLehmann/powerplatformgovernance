@@ -23,6 +23,13 @@ source_language: en
 source_language_name: English
 source_author: Alex Shlega
 source_published_at: '2025-11-09'
+faq:
+  - question: "Reichen Anweisungen allein, damit ein Copilot-Studio-Agent beim Thema bleibt?"
+    answer: "Nicht verlässlich. Im Beispiel lehnte der Agent eine fremde Frage zunächst ab, beantwortete sie aber, nachdem ein passendes benutzerdefiniertes MCP-Tool Zahlen zurückgab."
+  - question: "Welches Risiko entsteht durch benutzerdefinierte MCP-Tools in einem Agenten?"
+    answer: "Der Autor leitet ab, dass MCP-Tools Vorrang vor Agentenanweisungen haben können, sodass eine Tool-Antwort eine Unterhaltung trotz gesetzter Einschränkungen fortsetzt und das Verhalten unvorhersehbar wird."
+  - question: "Was sollten Admins und Security-Teams testen?"
+    answer: "Jede Agentenanweisung zusammen mit allen konfigurierten Tools testen, besonders mit benutzerdefinierten MCP-Servern, und Einschränkungen durch Anweisungen allein erst als Kontrolle werten, wenn Tool-Aufrufe und Antworten geprüft sind."
 ---
 ## TL;DR
 

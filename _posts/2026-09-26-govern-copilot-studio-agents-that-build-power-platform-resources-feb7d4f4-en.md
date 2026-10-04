@@ -31,6 +31,13 @@ source_language_name: English
 source_author: Ranjith D
 source_published_at: '2026-09-05'
 source_type: article
+faq:
+  - question: "What does a Power Platform MCP server enable for a Copilot Studio agent?"
+    answer: "It connects Copilot Studio to Power Platform resources through the Model Context Protocol."
+  - question: "Which permission levels does the server setup offer?"
+    answer: "There are presets and a custom choice. Option 1, everyday automation, is the safe default for flows, connections and SharePoint and Excel helpers."
+  - question: "Which controls apply to agents that create Power Platform resources themselves?"
+    answer: "Without instructions to the contrary, the agent may create things without checking first. The sample instructions make it inspect the environment, propose a short plan and wait for an explicit GO before changing anything."
 ---
 
 ## TL;DR

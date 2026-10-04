@@ -27,6 +27,13 @@ source_language_name: English
 source_author: Karl-Johan Spiik
 source_published_at: '2026-10-03'
 source_type: article
+faq:
+  - question: "Which three failure recipes does the article name for AI agent pilots?"
+    answer: "Buy before you understand, run a pilot with no end date, and own nothing so nobody can be blamed."
+  - question: "What belongs on a pilot card for an AI agent?"
+    answer: "Agent name, business owner, supporting roles, success metric, timeframe, guardrails and the next decision gate."
+  - question: "Why does a pilot need a stop date?"
+    answer: "Without one, the pilot drifts, consumes budget and never reaches a verdict on scale, change or stop."
 ---
 
 ## TL;DR

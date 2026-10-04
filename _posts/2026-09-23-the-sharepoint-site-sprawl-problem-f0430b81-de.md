@@ -24,6 +24,13 @@ source_author: Josiah Opiyo
 source_language: en
 source_language_name: English
 source_published_at: '2026-08-16'
+faq:
+  - question: "Warum ist Unsicherheit das eigentliche Problem bei vielen SharePoint-Sites?"
+    answer: "Weil bei wachsender Zahl an Sites Grundfragen unbeantwortet bleiben: Wo gehört Inhalt hin, wem gehört die Site, ist der Inhalt noch relevant, wer hat Zugriff, und gibt es ein doppeltes Angebot für denselben Zweck?"
+  - question: "Wodurch entsteht Wildwuchs bei SharePoint-Sites, obwohl IT ihn vermeiden will?"
+    answer: "Selbstbedienung beim Erstellen wurde eingeführt, um IT-Engpässe zu vermeiden. Anlegen ist einfach, Aufräumen schwer."
+  - question: "Heisst eine hohe Zahl an SharePoint-Sites automatisch schlechte Governance?"
+    answer: "Nein. Eine grosse Zahl allein sagt nichts über die Qualität."
 ---
 ## TL;DR
 

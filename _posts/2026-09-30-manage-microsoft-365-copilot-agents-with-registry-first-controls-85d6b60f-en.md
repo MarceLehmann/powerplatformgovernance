@@ -27,6 +27,13 @@ source_language_name: English
 source_author: Anders Jensen
 source_published_at: '2026-07-24'
 source_type: article
+faq:
+  - question: "Where can admins see every agent in a Microsoft 365 tenant?"
+    answer: "In the Microsoft 365 admin center, open Agents, then All agents and the Registry tab."
+  - question: "What happens when an admin blocks an agent in the Microsoft 365 registry?"
+    answer: "Nobody in the organization can install or use the agent any more, and it is also removed from users who already installed it."
+  - question: "How do I limit a Microsoft 365 Copilot agent to a pilot group?"
+    answer: "Open the agent in the registry, go to the Users tab and choose Available to. The options are All users, No users or Specific users or groups."
 ---
 
 ## TL;DR

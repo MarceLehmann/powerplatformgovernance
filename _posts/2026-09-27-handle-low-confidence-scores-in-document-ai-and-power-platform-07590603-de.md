@@ -33,6 +33,13 @@ submitted_by:
   publish_credit: true
   name: Mirko Peters
   linkedin: https://www.linkedin.com/in/m365showpodcast/
+faq:
+  - question: "Warum sollte man Konfidenzwerte pro Feld statt pro Dokument bewerten?"
+    answer: "Die Werte gelten feldweise: Der Lieferantenname kann 99 Prozent erreichen, die Rechnungsnummer nur 65 Prozent. Ein einziges Urteil pro Dokument führt entweder zu zu vielen Ablehnungen oder zu gefährlichen Fehlern."
+  - question: "Garantiert ein Konfidenzwert von 98 Prozent beim Rechnungsbetrag, dass die Daten stimmen?"
+    answer: "Nein. Der Wert sagt nur, wie sicher das Modell beim Lesen der Zeichen ist, nicht ob die Zahl geschäftlich gültig ist."
+  - question: "Wie sollte ein Power-Automate-Flow auf Pflichtfelder mit niedriger Konfidenz reagieren?"
+    answer: "Der Flow bewertet die Konfidenz jedes Pflichtfelds gegen vordefinierte Schwellen. Fällt eines darunter, legt er den Datensatz nicht automatisch an, sondern leitet die Datei in eine eigene Prüfwarteschlange."
 ---
 
 ## TL;DR

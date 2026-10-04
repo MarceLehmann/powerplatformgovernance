@@ -26,6 +26,13 @@ source_language_name: English
 source_author: Anders Jensen
 source_published_at: '2026-08-12'
 source_type: article
+faq:
+  - question: "What is a harness in Copilot Studio and which three harnesses exist?"
+    answer: "The harness is the infrastructure around the AI model: tools, memory, file handling and the loop that lets an agent work until a task is finished."
+  - question: "Can I switch an agent to a different harness after creating it?"
+    answer: "No. The harness choice is permanent: a GitHub Copilot agent cannot be converted to Standard, or the reverse, so a wrong choice means rebuilding the agent."
+  - question: "When do credits start counting on the GitHub Copilot harness?"
+    answer: "From the first build step instead of from publication. Each test chat in Preview, each AI-written instruction and each evaluation run consumes credits, while manual configuration and clicking through the interface stay free."
 ---
 
 ## TL;DR

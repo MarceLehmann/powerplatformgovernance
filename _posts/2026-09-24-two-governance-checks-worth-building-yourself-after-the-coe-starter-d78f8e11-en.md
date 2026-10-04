@@ -22,6 +22,13 @@ source_author: Matthias Einig
 source_language: en
 source_language_name: English
 source_published_at: '2026-06-23'
+faq:
+  - question: "How current is a governance inventory for Microsoft 365 and Power Platform?"
+    answer: "It is not real time. Graph API endpoints are throttled, so for larger tenants live data across many services is, according to Rencore, not technically possible for any vendor apart from Microsoft."
+  - question: "Can governance tooling intercept an app or flow before it is created?"
+    answer: "Not at the moment it happens, because Microsoft does not expose that event to third-party tools. What works is detecting new apps and flows afterwards and notifying the creator."
+  - question: "What data does a governance tool like Rencore collect and where is it hosted?"
+    answer: "It collects metadata only, with no file content, message bodies or user-generated content. The data goes into a dedicated Azure resource group per customer, encrypted with a customer-specific key."
 ---
 ## TL;DR
 

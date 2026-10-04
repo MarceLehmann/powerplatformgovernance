@@ -28,6 +28,13 @@ source_language_name: English
 source_author: Matthew Devaney
 source_published_at: '2026-09-27'
 source_type: article
+faq:
+  - question: "Wie entscheidet der Agent im Kreditbeispiel, wann ein Mensch prüfen muss?"
+    answer: "Der Agent vergleicht den angegebenen Kreditzweck mit einer Liste vorbewerteter Zwecke. Gibt es einen passenden Eintrag, liefert er genau diesen Zweck und dessen Kategorie zurück."
+  - question: "Was erfasst die menschliche Prüfaktion und wie erreicht sie die zuständige Person?"
+    answer: "Der Flow sendet eine Outlook-Nachricht mit dem Betreff Action Required und dem Namen des Antragstellers."
+  - question: "Wie hält der Flow Entscheidungen von Mensch und Agent in SharePoint fest?"
+    answer: "Nach einer menschlichen Prüfung setzt eine Formel das Feld Entscheidung auf Allowed bei Ja und sonst auf Flagged, das Kennzeichen menschlicher Prüfung auf Ja, und die Begründung wird übernommen."
 ---
 
 ## TL;DR

@@ -29,6 +29,13 @@ source_author: Tiina Rytkönen
 source_published_at: '2026-09-25'
 source_updated_at: '2026-09-25'
 source_type: article
+faq:
+  - question: "Warum reicht die Admin-Konsole eines einzelnen KI-Anbieters für die Governance nicht aus?"
+    answer: "Jede Konsole sieht nur ihren eigenen Anbieter und kann nicht beantworten, was eine Person über alle KI-Systeme hinweg darf."
+  - question: "Wie ordnet ein identitätsbasierter Ansatz KI-Konten verschiedener Anbieter einer Person zu?"
+    answer: "Jedes KI-Konto wird einer einzelnen Person in Entra ID zugeordnet. Dieselbe Mitarbeiterin erscheint dann einmal mit einem gebündelten Bestand statt getrennt in jedem Werkzeug."
+  - question: "Liest der identitätsbasierte Ansatz Prompts oder Dateiinhalte mit?"
+    answer: "Nein. Gespräche, Dateiinhalte und Prompt-Texte werden bewusst nicht ausgewertet."
 ---
 ## TL;DR
 

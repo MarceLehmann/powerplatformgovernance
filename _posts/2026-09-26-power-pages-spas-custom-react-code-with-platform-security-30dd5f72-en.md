@@ -27,6 +27,13 @@ source_language_name: English
 source_author: Nick Doelman
 source_published_at: '2025-09-04'
 source_type: article
+faq:
+  - question: "Which frameworks does Power Pages support for single-page apps, and in what status?"
+    answer: "React, Angular and Vue are supported. At the time of the post the feature was in preview, so the author says to expect some glitches."
+  - question: "How do you upload the compiled React site to Power Pages?"
+    answer: "First you sign in with pac auth create and the environment ID. That ID sits in the session details, which you open via the gear icon on the Power Pages home page."
+  - question: "Which restrictions and advantages do code sites in Power Pages have?"
+    answer: "With a single-page app you cannot add or edit pages, and the default styling templates are not available. In return you can set up the platform's authentication and table permissions."
 ---
 
 ## TL;DR

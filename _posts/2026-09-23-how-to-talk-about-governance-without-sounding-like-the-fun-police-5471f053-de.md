@@ -27,6 +27,13 @@ submitted_by:
   publish_credit: true
   name: Michael Roth
   linkedin: https://www.linkedin.com/in/michaelroth42/
+faq:
+  - question: "Warum ersetzt Vertrauen in die Maker keine Governance?"
+    answer: "Vertrauen funktioniert zwischen Menschen, eine Plattform wächst aber über persönliche Beziehungen hinaus. Der Beitrag nennt Flows ohne Dokumentation, Apps, die nach dem Weggang ihres Erstellers brechen, unbemerkt extern geteilte Daten und verwaiste Systeme."
+  - question: "Was ist das Governance-Trilemma?"
+    answer: "Sicherheit, Compliance und Befähigung konkurrieren miteinander, und der Artikel beschreibt, was passiert, wenn nur eines gewinnt."
+  - question: "Wie erkläre ich Governance der Geschäftsleitung?"
+    answer: "Stelle sie als vorbeugende Massnahme dar und übersetze sie in Risikosprache: Datenabfluss, Prüfbereitschaft und technische Schulden."
 ---
 ## TL;DR
 

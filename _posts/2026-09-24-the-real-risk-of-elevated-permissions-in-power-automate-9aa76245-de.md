@@ -27,6 +27,13 @@ source_language: en
 source_language_name: English
 source_published_at: '2022-05-18'
 publisher_disclosure: Beide Publikationen werden von Marcel Lehmann herausgegeben.
+faq:
+  - question: "Warum kann jemand ohne Schreibrecht auf SharePoint über einen Flow trotzdem Listeneinträge anlegen?"
+    answer: "Die Verbindung eines Flows gehört der Person, die sie eingerichtet hat, nicht der Person, die den Flow auslöst."
+  - question: "Was ist das Hauptrisiko dieses Musters zur Rechteerhöhung?"
+    answer: "Der Flow wird zur Sicherheitsgrenze, weil er mit den Rechten des Servicekontos läuft, egal welcher Benutzer ihn auslöst. Der Endnutzer greift nie direkt auf die geschützte Ressource zu."
+  - question: "Wie viele Rechte soll das Dienstkonto hinter einem erhöhten Flow bekommen?"
+    answer: "Nur die Berechtigungen, die der Vorgang braucht, zum Beispiel Schreibzugriff auf eine eingeschränkte SharePoint-Liste oder Aktualisierungsrechte auf einer Dataverse-Tabelle. Der Artikel rät zu Least Privilege statt breiter Admin-Rechte."
 ---
 ## TL;DR
 

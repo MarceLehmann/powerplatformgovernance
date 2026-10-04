@@ -25,6 +25,13 @@ source_author: Josiah Opiyo
 source_language: en
 source_language_name: English
 source_published_at: '2026-08-03'
+faq:
+  - question: "Which permissions does the guest user script check in Microsoft 365?"
+    answer: "It checks three areas: Microsoft Entra ID directory roles, Teams ownership and SharePoint site collection administrators."
+  - question: "What does the CSV report from the guest permissions script contain?"
+    answer: "The script exports a CSV with five columns: Display Name, User Principal Name, Permission Type, Assigned Role and Resource. The results from Entra ID, Teams and SharePoint end up in a single report."
+  - question: "Why do guests keep elevated permissions after a project has ended?"
+    answer: "Permissions are spread across different Microsoft 365 admin interfaces, so nobody sees them in one place. The author describes a guest consultant who was still a Teams owner months after the project ended."
 ---
 ## TL;DR
 

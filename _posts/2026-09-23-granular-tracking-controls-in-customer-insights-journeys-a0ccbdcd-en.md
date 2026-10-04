@@ -21,6 +21,13 @@ source_name: powerplatform.se
 source_language: en
 source_language_name: English
 source_published_at: '2026-02-14'
+faq:
+  - question: "Which five behaviors does the single tracking toggle in Customer Insights bundle?"
+    answer: "One global setting switches five things together: the email open pixel, link click tracking, web tracking, form prefill and automatic UTM parameter appending."
+  - question: "How could a privacy team keep click tracking but disable the open pixel?"
+    answer: "Not today, because one toggle covers both. The author proposes separate switches for each mechanism, so link click tracking could stay on while the open pixel is off."
+  - question: "Why are email open rates from the tracking pixel unreliable?"
+    answer: "Mail clients distort the signal. Outlook only downloads images when the user approves them, so a message can be read without the pixel firing."
 ---
 ## TL;DR
 

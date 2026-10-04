@@ -31,6 +31,13 @@ source_language_name: English
 source_author: Ranjith D
 source_published_at: '2026-09-05'
 source_type: article
+faq:
+  - question: "Was macht ein Power-Platform-MCP-Server für einen Copilot-Studio-Agenten möglich?"
+    answer: "Er verbindet Copilot Studio über das Model Context Protocol mit Power-Platform-Ressourcen."
+  - question: "Welche Berechtigungsstufen bietet die Einrichtung des Servers?"
+    answer: "Es gibt Voreinstellungen und eine eigene Auswahl. Option 1, Alltagsautomatisierung, gilt als sicherer Standard für Flows, Verbindungen sowie SharePoint- und Excel-Hilfen."
+  - question: "Welche Kontrollen gelten für Agenten, die Power-Platform-Ressourcen selbst anlegen?"
+    answer: "Ohne passende Anweisungen legt der Agent womöglich einfach los, ohne zu prüfen. Die Beispielanweisungen lassen ihn die Umgebung untersuchen, einen kurzen Plan vorlegen und vor jeder Änderung auf ein ausdrückliches GO warten."
 ---
 
 ## TL;DR

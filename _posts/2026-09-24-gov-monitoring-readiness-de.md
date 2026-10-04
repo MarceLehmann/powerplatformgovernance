@@ -14,6 +14,13 @@ image:
   alt: "Governance-Karte: Geübt — fünf Minuten zum Stoppen, schriftlich festgehalten."
 permalink: "/de/posts/gov-monitoring-readiness/"
 translation_url: "/en/posts/gov-monitoring-readiness/"
+faq:
+  - question: "Welche Grenzen haben die Pro-Lauf-Fehler-Alerts von Power Automate?"
+    answer: "Sie decken nur Fehler mit bekannter Lösung ab, haben pro Flow eine Abkühlphase von 28 Tagen und müssen in den Flow-Einstellungen ausdrücklich aktiviert werden."
+  - question: "Wie sehen Admins fehlgeschlagene Flow-Läufe, ohne auf Alert-Mails angewiesen zu sein?"
+    answer: "Die Monitor-Erfahrung im Admin Center zeigt jeden fehlgeschlagenen Lauf, und der wöchentliche Fehler-Digest fasst alle Fehler zusammen. Beides nützt nur, wenn jemand damit beauftragt ist."
+  - question: "Wie stoppt ein Admin einen ausser Kontrolle geratenen Cloud-Flow?"
+    answer: "Über die Deaktivieren-Aktion in der Flow-Verwaltungsansicht des Power Platform Admin Centers, den Flow-Detailbildschirm der mobilen App oder das PowerShell-Cmdlet Disable-AdminFlow für Skripte und Bulk-Aktionen."
 ---
 
 ## TL;DR

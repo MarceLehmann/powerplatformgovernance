@@ -28,6 +28,13 @@ source_language_name: English
 source_author: Nick Doelman
 source_published_at: '2026-07-16'
 source_type: article
+faq:
+  - question: "What do I need to build Dataverse with VS Code and an AI agent?"
+    answer: "You need a Power Platform tenant with an environment, admin-level access to the tenant, an agentic coding tool, a GitHub account for source control and Visual Studio Code, which is free and cross-platform."
+  - question: "Is a free AI subscription enough for building Dataverse solutions in VS Code?"
+    answer: "Free tiers work, but according to the author you burn through the credits fast. He uses Claude's Max plan himself because he uses Claude Code every day and needs the capacity."
+  - question: "Does building with an AI agent in VS Code replace Dataverse knowledge?"
+    answer: "No. The author states plainly that you still need to understand how Dataverse works and how apps fit together to build something good."
 ---
 
 ## TL;DR

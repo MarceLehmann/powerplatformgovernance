@@ -21,6 +21,13 @@ source_name: Powerplatform.se
 source_language: en
 source_language_name: English
 source_published_at: '2025-06-10'
+faq:
+  - question: "Was sind verwaiste Kundenprofil-Verknüpfungen in Dataverse?"
+    answer: "Es sind Nachschlagefelder, die auf ein Kundenprofil zeigen, das nicht mehr existiert. Sie entstehen, wenn Customer Insights Data mit Dataverse zusammenarbeitet."
+  - question: "Warum entstehen solche verwaisten Verknüpfungen?"
+    answer: "Auslöser ist oft der Versuch, Lizenzkosten zu senken, denn je 100 000 vereinheitlichte Profile fallen in Customer Insights Data erhebliche monatliche Kosten an."
+  - question: "Wie lässt sich das Problem aus Sicht des Autors beheben?"
+    answer: "Er nennt zwei Wege: einen Power-Automate-Flow, der prüft, ob die Kundenprofil-ID noch gültig ist, oder eine umgebaute Integration, die nur geänderte Felder schreibt."
 ---
 ## TL;DR
 

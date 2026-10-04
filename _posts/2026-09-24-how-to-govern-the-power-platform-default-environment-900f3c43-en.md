@@ -25,6 +25,13 @@ source_author: Michael Roth
 source_language: en
 source_language_name: English
 source_published_at: '2026-02-10'
+faq:
+  - question: "Can the Power Platform default environment be limited to a security group?"
+    answer: "No. Everyone in the tenant can access the default environment, including external guests and B2B users, and it cannot be administered through standard security group structures."
+  - question: "What does sharing an app with everyone really do in the default environment?"
+    answer: "It technically grants permissions to all user accounts in the directory, which can include external guests and sometimes service accounts or managed identities."
+  - question: "Which licensing defaults create hidden costs in the default environment?"
+    answer: "Trials and viral plans, self-service purchases and auto-claim policies. Auto-claim assigns premium licenses when users touch premium features, so one shared app can trigger license assignments for everyone who opens it."
 ---
 ## TL;DR
 

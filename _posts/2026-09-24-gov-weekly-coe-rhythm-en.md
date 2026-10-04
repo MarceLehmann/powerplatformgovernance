@@ -14,6 +14,13 @@ image:
   alt: "Governance card: The Scoreboard — two numbers beat any governance deck."
 permalink: "/en/posts/gov-weekly-coe-rhythm/"
 translation_url: "/de/posts/gov-weekly-coe-rhythm/"
+faq:
+  - question: "What does the Managed Environments weekly digest contain?"
+    answer: "Three parts: a usage summary for the past month, a list of apps and flows not launched in a while, and the most popular apps and flows with top makers."
+  - question: "How do I turn on the weekly digest for an environment?"
+    answer: "Enable tenant-level analytics first, because usage insights depend on it."
+  - question: "Do I still need the CoE Starter Kit if I use the weekly digest?"
+    answer: "The digest does not require a CoE Starter Kit, which is why it is worth turning on regardless."
 ---
 
 ## TL;DR

@@ -26,6 +26,13 @@ source_language_name: English
 source_author: Benedikt Bergmann
 source_published_at: '2025-02-04'
 source_updated_at: '2025-02-04'
+faq:
+  - question: "Wie wandle ich eine unmanaged Lösung in einer Zielumgebung in eine managed Lösung um?"
+    answer: "Du installierst dieselben Komponenten erneut als managed Lösung, dabei schaltet das System sie von unmanaged auf managed um."
+  - question: "Welche Fehlermeldung kommt, wenn die unmanaged Lösung noch installiert ist?"
+    answer: "Die Meldung besagt, dass die Lösung bereits unmanaged installiert ist und das Paket sie managed installieren will. Deinstalliere zuerst die unmanaged Lösung und importiere danach die managed Version."
+  - question: "Mit welchem Parameter erzwinge ich die Umwandlung in managed beim Import per PAC, GitHub oder Azure DevOps?"
+    answer: "Bei der Power Platform CLI nutzt du das Flag convert-to-managed mit zwei Bindestrichen beim Import. In GitHub Actions heisst der Parameter convert-to-managed, in Azure DevOps ConvertToManaged."
 ---
 ## TL;DR
 

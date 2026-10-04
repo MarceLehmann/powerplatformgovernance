@@ -22,6 +22,13 @@ source_language: en
 source_language_name: English
 source_author: Alex Shlega
 source_published_at: '2025-09-22'
+faq:
+  - question: "Warum nutzt der Autor statt Content Snippets eine eigene Tabelle für Texte?"
+    answer: "Snippets brauchen auf einer eigenen Seite mit JavaScript und Liquid womöglich Anpassungen, und der Autor findet sie für Übersetzende schwer zu verwalten. Eine eigene Tabelle lässt sich in der modellgesteuerten Hauptapp pflegen."
+  - question: "Wie ist die Texttabelle aufgebaut?"
+    answer: "Die Tabelle enthält einen Namen als Schlüssel, eine englische und eine französische Bezeichnung, und die Abfrage liest nur aktive Datensätze."
+  - question: "Welchen Nachteil hat die Lösung?"
+    answer: "Weil die Texte erst nach dem Laden der Seite ersetzt werden, kann es gelegentlich flackern, solange der ursprüngliche Inhalt noch sichtbar ist."
 ---
 ## TL;DR
 

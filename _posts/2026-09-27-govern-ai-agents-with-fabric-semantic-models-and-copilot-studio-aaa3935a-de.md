@@ -32,6 +32,13 @@ submitted_by:
   publish_credit: true
   name: Mirko Peters
   linkedin: https://www.linkedin.com/in/m365showpodcast/
+faq:
+  - question: "Warum liefern reine Sprachmodelle unzuverlässige Finanzzahlen?"
+    answer: "Ein ungeerdetes KI-Modell, das eine Quartals-GuV analysieren soll, liefert oft halluzinierte Zahlen und widersprüchliche Wahrheiten."
+  - question: "Aus welchen fünf Schichten besteht die gesteuerte Agentenarchitektur?"
+    answer: "Daten, Logik, Tools, Skills und Governance. Die Datenebene ruht auf vertrauenswürdigen Unternehmensdaten in OneLake und Delta-Tabellen."
+  - question: "Was trägt Direct Lake zu diesem Entwurf bei?"
+    answer: "Direct Lake lässt Power BI Daten im Delta-Format aus OneLake direkt abfragen. Das beseitigt Datenduplikate und wiederholte Import-Aktualisierungen bei gleichbleibend hoher Analyseleistung."
 ---
 
 ## TL;DR

@@ -30,6 +30,13 @@ source_author: Nick Doelman
 source_published_at: '2026-01-02'
 source_updated_at: '2026-01-02'
 source_type: article
+faq:
+  - question: "Wie erlaube ich einer React-Single-Page-App, Dataverse-Daten zu lesen?"
+    answer: "Jede Tabelle wird über die Websiteeinstellung Webapi/tablename/enabled mit dem Wert true freigegeben, und die Spalten werden in Webapi/tablename/fields namentlich aufgeführt."
+  - question: "Wie begrenzt das Tutorial, welche Datensätze ein angemeldeter Benutzer sieht?"
+    answer: "Das Tutorial konfiguriert Tabellenberechtigungen und Webrollen so, dass nur authentifizierte Benutzer ihre eigenen Sitzungsdatensätze sehen."
+  - question: "Welche Einschränkungen nennt der Artikel für BYOC-Code-Sites?"
+    answer: "Die lokale Vorschau erreicht Dataverse nicht, daher testet man die Integration nach dem Hochladen auf Power Pages. Das Design Studio deaktiviert für Code-Sites die Arbeitsbereiche für Seiten und Stile."
 ---
 
 ## TL;DR

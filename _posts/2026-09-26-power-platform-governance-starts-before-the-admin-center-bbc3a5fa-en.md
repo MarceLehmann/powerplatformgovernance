@@ -33,6 +33,13 @@ submitted_by:
   publish_credit: true
   name: Michael Roth
   linkedin: https://www.linkedin.com/in/michaelroth42/
+faq:
+  - question: "Which four questions should shape Power Platform governance before any admin setting?"
+    answer: "What do we want to enable, what do we want to protect, where do we accept risk, and where do we not."
+  - question: "Why does the article say that leaving defaults unchanged is a decision?"
+    answer: "The article lists defaults such as tenant isolation being disabled, custom connectors working in the Default Environment and self-service purchases being enabled."
+  - question: "What does low code lower and what does it leave unchanged?"
+    answer: "The article says low code lowers the barrier to entry but does not lower the complexity threshold."
 ---
 
 ## TL;DR

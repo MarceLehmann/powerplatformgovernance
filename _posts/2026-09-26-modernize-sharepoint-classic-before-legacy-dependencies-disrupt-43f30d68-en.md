@@ -29,6 +29,13 @@ source_language_name: English
 source_author: Josiah Opiyo
 source_published_at: '2026-09-12'
 source_type: article
+faq:
+  - question: "What is the most valuable first step before retiring SharePoint Classic?"
+    answer: "A focused dependency inventory, which the author calls the single most valuable step."
+  - question: "Which hidden SharePoint Classic dependencies does the article warn about?"
+    answer: "Script Editor web parts added eight years ago, integrations built on ACS authentication that nobody has touched since the migration, and alerts that departments rely on because that is how they have always done it."
+  - question: "How should teams replace SharePoint alerts that are being retired?"
+    answer: "Start from the business workflow instead of converting technically. Clarify which events need a notification, who has to receive it and what the escalation path is."
 ---
 
 ## TL;DR

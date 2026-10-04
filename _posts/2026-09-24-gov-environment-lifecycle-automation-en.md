@@ -14,6 +14,13 @@ image:
   alt: "Governance card: The Group Rulebook — configure once, govern many."
 permalink: "/en/posts/gov-environment-lifecycle-automation/"
 translation_url: "/de/posts/gov-environment-lifecycle-automation/"
+faq:
+  - question: "What does Power Platform environment routing do for new makers?"
+    answer: "It directs a signing-in maker to a personal developer environment of their own instead of the Default environment, provisioned on the spot if they do not have one yet."
+  - question: "What happens to an environment's own settings when I add it to an environment group?"
+    answer: "The group's settings override them. If an environment already has its own settings for something the group also controls, such as welcome content or sharing limits, adding it replaces those individual settings."
+  - question: "Can I recover an accidentally deleted Power Platform environment?"
+    answer: "Yes, within seven days. The admin center keeps a Recently deleted environments list, and recovery is one click or one PowerShell cmdlet away, using Get-AdminPowerAppSoftDeletedEnvironment and Recover-AdminPowerAppEnvironment."
 ---
 
 ## TL;DR

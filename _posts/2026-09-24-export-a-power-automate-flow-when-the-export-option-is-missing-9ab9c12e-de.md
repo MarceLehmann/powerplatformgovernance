@@ -25,6 +25,13 @@ source_author: Marcel Lehmann
 source_published_at: '2026-09-23'
 source_updated_at: '2026-09-23'
 publisher_disclosure: Beide Publikationen werden von Marcel Lehmann herausgegeben.
+faq:
+  - question: "Warum fehlt für meinen Cloud-Flow die Option Paket exportieren?"
+    answer: "Solution-aware Flows haben die eigenständige Option Export > Package (.zip) absichtlich nicht. Der Artikel ergänzt, dass der Export-Button auch nach dem Entfernen des Flows aus der Lösung verborgen bleiben kann."
+  - question: "Wie funktioniert der URL-Trick zum Exportieren eines Flows?"
+    answer: "Nachdem du den Flow aus der Lösung entfernt hast, öffnest du seine Detailseite unter Meine Flows und ersetzt am Ende der Adresse details durch export, dann Enter."
+  - question: "Wird der Export-Trick über die Flow-URL von Microsoft offiziell unterstützt?"
+    answer: "Nein. Der Artikel nennt ihn einen praktischen Umweg über die Oberfläche und keine offiziell dokumentierte Funktion."
 ---
 ## TL;DR
 

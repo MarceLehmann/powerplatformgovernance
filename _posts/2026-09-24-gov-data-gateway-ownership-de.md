@@ -14,6 +14,13 @@ image:
   alt: "Governance-Karte: Der Keller-Server — das Gateway, das alle nutzen, braucht einen Besitzer."
 permalink: "/de/posts/gov-data-gateway-ownership/"
 translation_url: "/en/posts/gov-data-gateway-ownership/"
+faq:
+  - question: "Was passiert mit Flows und Reports, wenn das einzige On-Premises-Datengateway ausfällt?"
+    answer: "Jeder Flow, jede App und jeder Report mit Zugriff auf lokale Daten steht gleichzeitig still. Es gibt keine graduelle Verschlechterung, die vorher auffällt, denn es funktioniert, bis es nicht mehr funktioniert."
+  - question: "Wie viele Gateways hat ein Gateway-Cluster höchstens, und müssen die Versionen übereinstimmen?"
+    answer: "Ein Cluster unterstützt bis zu zehn Mitglieder, und alle müssen dieselbe Gateway-Version fahren, weil gemischte Versionen zu Ausfällen führen können, die sich schwer auf einen veralteten Knoten zurückführen lassen."
+  - question: "Lohnt sich die Einstellung Anfragen auf alle aktiven Gateways in diesem Cluster verteilen?"
+    answer: "Ab mehr als zwei Knoten lohnt sie sich. Standardmässig geht der gesamte Traffic ans primäre Gateway, solange es läuft, sodass das zweite und dritte Gateway bis zum nächsten Ausfall brachliegen."
 ---
 
 ## TL;DR

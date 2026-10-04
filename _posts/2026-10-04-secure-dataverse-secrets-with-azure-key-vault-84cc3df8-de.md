@@ -29,6 +29,13 @@ source_language_name: English
 source_author: Jonas Rapp
 source_published_at: '2026-10-04'
 source_type: article
+faq:
+  - question: "Wo gehören sensible Werte von Dataverse-Umgebungsvariablen hin?"
+    answer: "Sensible Werte wie API-Schlüssel gehören über eine Secret-Variable in Azure Key Vault, nicht in Textvariablen oder direkt in Flows."
+  - question: "Wie liest ein Cloud Flow das Secret?"
+    answer: "Mit der Dataverse-Aktion RetrieveEnvironmentVariableSecretValue und aktivierten Secure Outputs, damit das abgerufene Geheimnis im Ausführungsverlauf verborgen bleibt."
+  - question: "Was müssen Admins einrichten?"
+    answer: "Der Dataverse-Identität die Rolle Key Vault Secrets User geben und Microsoft.PowerPlatform für das Abonnement registrieren. Keine Standardreferenzen zwischen Umgebungen verwenden."
 ---
 
 ## TL;DR

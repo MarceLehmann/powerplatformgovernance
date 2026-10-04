@@ -22,6 +22,13 @@ source_author_url: https://www.powerplatformtip.com/about/
 source_language: en
 source_language_name: English
 publisher_disclosure: Both publications are edited by Marcel Lehmann.
+faq:
+  - question: "What do secure inputs and secure outputs hide in the flow run history?"
+    answer: "They mask sensitive values such as passwords, tokens and personal details in a flow's run history."
+  - question: "What do secure inputs and outputs not protect in Power Automate?"
+    answer: "They change nothing about processing. Data is still processed normally, and the masking only affects what is displayed in the log."
+  - question: "How do I turn on secure inputs or outputs for an action?"
+    answer: "Open the affected action in your flow, go to its settings, toggle secure inputs, secure outputs or both, and save the change."
 ---
 ## TL;DR
 

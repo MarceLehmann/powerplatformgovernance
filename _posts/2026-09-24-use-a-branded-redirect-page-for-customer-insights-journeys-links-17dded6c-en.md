@@ -21,6 +21,13 @@ source_name: Powerplatform.se
 source_language: en
 source_language_name: English
 source_published_at: '2025-02-04'
+faq:
+  - question: "Why does a custom redirect page make sense for links from journeys?"
+    answer: "Because Customer Insights Journeys offers no links on your own brand domain. The matching feature was deprioritized and removed from Release Wave 2 2024."
+  - question: "How does the self-built redirect page work technically?"
+    answer: "It is a simple HTML page with a little JavaScript, hosted on the company domain, for example at contoso.com/redirect.html."
+  - question: "What has to be considered for click tracking in Customer Insights Journeys?"
+    answer: "The built-in link tracking has to stay disabled, otherwise recipients land on a Microsoft redirect page again. As a replacement the author names two routes."
 ---
 ## TL;DR
 

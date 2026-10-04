@@ -26,6 +26,13 @@ source_language_name: English
 source_author: Josiah Opiyo
 source_published_at: '2026-09-04'
 source_type: article
+faq:
+  - question: "Which setting turns off Add shortcut to OneDrive for the whole SharePoint tenant?"
+    answer: "The setting is called DisableAddToOneDrive and is set to True. It applies at tenant level rather than per site and is set with a PnP PowerShell script."
+  - question: "Why use a script instead of manual administration for this SharePoint setting?"
+    answer: "The author did not want to manage the setting manually or site by site, because the requirement was a tenant-level change."
+  - question: "How does the script sign in to the tenant without an interactive login?"
+    answer: "It uses non-interactive certificate-based authentication through an Azure AD app registration. For that you need the client ID, the certificate thumbprint and the tenant identifier."
 ---
 
 ## TL;DR

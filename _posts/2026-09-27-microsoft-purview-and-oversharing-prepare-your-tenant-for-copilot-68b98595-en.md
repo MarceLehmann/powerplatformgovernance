@@ -31,6 +31,13 @@ submitted_by:
   publish_credit: true
   name: Mirko Peters
   linkedin: https://www.linkedin.com/in/m365showpodcast/
+faq:
+  - question: "Why does Copilot surface files that stayed hidden for years?"
+    answer: "Copilot searches with natural language across everything a user is allowed to read, so security through obscurity ends. Deeply buried or overshared files that nobody found with keyword search become instantly retrievable."
+  - question: "Which Purview features does the article call minimum requirements for Copilot?"
+    answer: "Sensitivity labels and automated classification. The article says labels dictate whether content can be indexed, summarized or referenced by Copilot agents."
+  - question: "How can I find oversharing in SharePoint, Teams and OneDrive?"
+    answer: "The article points to the oversharing reports in the advanced SharePoint administration dashboards, which identify vulnerable sites across Teams, OneDrive and SharePoint."
 ---
 
 ## TL;DR

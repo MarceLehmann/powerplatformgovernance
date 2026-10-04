@@ -28,6 +28,13 @@ source_language_name: English
 source_author: Nishkalank Bezawada
 source_published_at: '2026-08-24'
 source_type: article
+faq:
+  - question: "Meldet sich der PnP PowerShell MCP Server selbst bei Microsoft 365 an?"
+    answer: "Nein. Der Server meldet dich nie von sich aus an, sondern nutzt die Verbindung, die du bereits mit Connect-PnPOnline aufgebaut hast."
+  - question: "Was passiert, wenn der PnP PowerShell MCP Server einen zerstörenden Befehl ausführen will?"
+    answer: "Dann fragt er zuerst bei dir nach. Jeder Befehl ist als nur lesend, wiederholbar oder zerstörend gekennzeichnet, harmlose lassen sich automatisch freigeben, riskante brauchen weiterhin deine Bestätigung."
+  - question: "Ist der PnP PowerShell MCP Server schon für den Produktivbetrieb geeignet?"
+    answer: "Nein. Es handelt sich ausdrücklich um eine frühe Beta, die sich noch verändert, und die Autoren schreiben selbst, dass sie noch nicht produktionsreif ist."
 ---
 
 ## TL;DR

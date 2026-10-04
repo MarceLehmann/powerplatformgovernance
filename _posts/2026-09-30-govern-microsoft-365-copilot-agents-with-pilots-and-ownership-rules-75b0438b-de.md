@@ -29,6 +29,13 @@ source_language_name: English
 source_author: Anders Jensen
 source_published_at: '2026-07-12'
 source_type: article
+faq:
+  - question: "Welchen Zugriff haben deklarative Agenten in Microsoft 365 Copilot?"
+    answer: "Denselben wie der Benutzer und nicht mehr. Agenten können keine SharePoint-Sites, Postfächer oder Teams-Kanäle öffnen, die der Benutzer selbst nicht öffnen kann."
+  - question: "Was ist das Hauptrisiko beim Aktivieren von Agenten in Microsoft 365 Copilot?"
+    answer: "Oversharing. Agenten geben keine Daten preis, aktivieren aber bestehende Berechtigungen schnell, wodurch zu breiter Zugriff auf alte SharePoint-Sites sichtbar wird."
+  - question: "Was passiert mit Agenten, wenn ihr Ersteller das Unternehmen verlässt?"
+    answer: "Mit Agent Builder gebaute Agenten können herrenlos werden, wenn Mitarbeitende die Stelle wechseln. Das Admin Center bietet Verwaltungsregeln für Agenten ohne Besitzer, die sie an die Führungskraft des früheren Besitzers übertragen."
 ---
 
 ## TL;DR

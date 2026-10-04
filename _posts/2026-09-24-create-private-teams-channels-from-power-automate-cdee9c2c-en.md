@@ -26,6 +26,13 @@ source_language_name: English
 source_author: Marcel Lehmann
 source_published_at: '2026-07-09'
 publisher_disclosure: Both publications are edited by Marcel Lehmann.
+faq:
+  - question: "Why can't the Teams connector in Power Automate create a private channel?"
+    answer: "The native Teams connector only creates standard channels and offers no option to set the membership type or assign an owner."
+  - question: "Why does Graph return a 400 error when I create a private Teams channel?"
+    answer: "Most likely because no owner was included. A private channel cannot be created empty, so the request needs a members array with at least one person holding the owner role."
+  - question: "Do I need an app registration for the Graph call in Power Automate?"
+    answer: "No. The HTTP with Microsoft Entra ID action uses the preauthorized identity of the connection, so app registration and secret management are not needed."
 ---
 ## TL;DR
 

@@ -14,6 +14,13 @@ image:
   alt: "Governance card: Documented — one paragraph per solution, written at ship."
 permalink: "/en/posts/gov-documentation-debt/"
 translation_url: "/de/posts/gov-documentation-debt/"
+faq:
+  - question: "What naming pattern does Microsoft recommend for Power Platform environments?"
+    answer: "Names are limited to 100 characters, should stay short and meaningful and follow a fixed, predictable pattern. The recommended example combines lifecycle stage, region, business unit and purpose, giving names like Prod-US-Finance-Payroll."
+  - question: "Why is storing app data in a personal OneDrive a risk?"
+    answer: "The file is tied to one person's account. If that person goes on leave, changes roles or leaves, the team app built on it stops working."
+  - question: "What should a maker write down on the day a solution ships?"
+    answer: "Three sentences are enough: what the solution does and for whom, what data it touches, and why it was built this way instead of another way."
 ---
 
 ## TL;DR

@@ -26,6 +26,13 @@ source_language_name: English
 source_author: Josiah Opiyo
 source_published_at: '2026-09-04'
 source_type: article
+faq:
+  - question: "Welche Einstellung schaltet Zu OneDrive hinzufügen für den ganzen SharePoint-Tenant ab?"
+    answer: "Die Einstellung heisst DisableAddToOneDrive und wird auf True gesetzt. Sie gilt auf Tenant-Ebene, nicht pro Site, und wird mit einem PnP-PowerShell-Skript gesetzt."
+  - question: "Warum ein Skript statt manueller Verwaltung für diese SharePoint-Einstellung?"
+    answer: "Der Autor wollte die Einstellung weder manuell noch pro Site verwalten, denn gefordert war eine Änderung auf Tenant-Ebene."
+  - question: "Wie meldet sich das Skript ohne interaktive Anmeldung beim Tenant an?"
+    answer: "Es nutzt zertifikatsbasierte, nicht interaktive Authentifizierung über eine Azure-AD-App-Registrierung. Dafür brauchst du die Client-ID, den Fingerabdruck des Zertifikats und die Tenant-Kennung."
 ---
 
 ## TL;DR

@@ -14,6 +14,13 @@ image:
   alt: "Governance card: The Impulse Buy — MSCommerce PowerShell, one policy, done."
 permalink: "/en/posts/gov-self-service-governance-controls/"
 translation_url: "/de/posts/gov-self-service-governance-controls/"
+faq:
+  - question: "How do I block self-service purchases of Microsoft products?"
+    answer: "There is no single tenant-wide switch. You turn it off per product with the MSCommerce PowerShell module, using Update-MSCommerceProductPolicy, which blocks both purchases and trials."
+  - question: "What happens to a self-service subscription when the buyer leaves the company?"
+    answer: "It does not cancel itself. The subscription keeps running until someone actively cancels it or an admin requests cancellation through support."
+  - question: "What does quarantining a Power Apps app do?"
+    answer: "Quarantine makes the app instantly unavailable to end users while leaving it intact for the maker to keep editing and for admins to inspect."
 ---
 
 ## TL;DR

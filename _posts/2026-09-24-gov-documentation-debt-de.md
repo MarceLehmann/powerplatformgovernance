@@ -14,6 +14,13 @@ image:
   alt: "Governance-Karte: Dokumentiert — ein Absatz pro Lösung, geschrieben beim Go-Live."
 permalink: "/de/posts/gov-documentation-debt/"
 translation_url: "/en/posts/gov-documentation-debt/"
+faq:
+  - question: "Welches Namensschema empfiehlt Microsoft für Power-Platform-Umgebungen?"
+    answer: "Namen sind auf 100 Zeichen begrenzt, sollen kurz und aussagekräftig bleiben und einem festen, vorhersehbaren Muster folgen. Das empfohlene Beispiel kombiniert Lifecycle-Phase, Region, Geschäftseinheit und Zweck, etwa Prod-US-Finance-Payroll."
+  - question: "Warum ist es riskant, App-Daten in einem persönlichen OneDrive abzulegen?"
+    answer: "Die Datei ist an das Konto einer Person gebunden. Geht sie in den Urlaub, wechselt die Rolle oder verlässt das Unternehmen, hört die darauf gebaute Team-App auf zu funktionieren."
+  - question: "Was soll ein Maker am Tag des Go-Live aufschreiben?"
+    answer: "Drei Sätze reichen: was die Lösung tut und für wen, welche Daten sie berührt und warum sie so gebaut wurde und nicht anders."
 ---
 
 ## TL;DR

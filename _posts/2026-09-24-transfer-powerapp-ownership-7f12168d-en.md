@@ -25,6 +25,13 @@ source_author_url: https://www.powerplatformtip.com/about/
 source_language: en
 source_language_name: English
 publisher_disclosure: Both publications are edited by Marcel Lehmann.
+faq:
+  - question: "How do I reassign a Power App when its maker has left?"
+    answer: "Use either the CoE Starter Kit admin apps, which give a graphical interface for the inventory and for ownership transfers, or the Set-AdminPowerAppOwner cmdlet from the Microsoft.PowerApps.Administration.PowerShell module."
+  - question: "What happens to the previous owner after Set-AdminPowerAppOwner runs?"
+    answer: "The previous owner becomes Can View, which keeps read access but removes ownership privileges. Data and connections of the app stay intact during the transfer."
+  - question: "Which permissions do I need to change the owner of an app I do not own?"
+    answer: "You need Power Platform admin, environment admin or Global admin credentials. Standard maker permissions are not enough."
 ---
 ## TL;DR
 

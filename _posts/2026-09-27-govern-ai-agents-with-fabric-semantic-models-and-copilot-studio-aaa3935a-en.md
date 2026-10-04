@@ -31,6 +31,13 @@ submitted_by:
   publish_credit: true
   name: Mirko Peters
   linkedin: https://www.linkedin.com/in/m365showpodcast/
+faq:
+  - question: "Why do raw language models produce unreliable finance numbers?"
+    answer: "Asking an ungrounded AI model to analyze a quarterly P&L statement often results in hallucinated figures and conflicting versions of the truth."
+  - question: "Which five layers make up the governed agent architecture?"
+    answer: "Data, Logic, Tools, Skills and Governance. The data layer rests on trusted enterprise data in OneLake and Delta tables."
+  - question: "What does Direct Lake contribute to this design?"
+    answer: "Direct Lake lets Power BI query Delta format data stored in OneLake directly. This eliminates data duplication and repeated import refreshes while maintaining high analytical performance."
 ---
 
 ## TL;DR

@@ -26,6 +26,13 @@ source_language: en
 source_language_name: English
 source_published_at: '2026-08-07'
 source_updated_at: '2026-08-13'
+faq:
+  - question: "Warum verbrauchen Agenten mit GitHub-Copilot-Harness schon beim Bauen Credits?"
+    answer: "Makers können Copilot Credits schon beim Erstellen, Testen in der Vorschau und Auswerten verbrauchen, noch bevor ein Agent einen formalen Produktivbetrieb erreicht. Dadurch verschiebt sich der Zeitpunkt der Kostenkontrolle nach vorn."
+  - question: "Wie finde ich alle Harness-Agenten in meinem Tenant?"
+    answer: "Frage das Power Platform Inventory API per POST ab, filtere den Ressourcentyp der Copilot-Studio-Agenten und setze die Eigenschaft isCLIAgent auf wahr."
+  - question: "Was bedeuten die vier Durchsetzungsregeln für Credit-Zuteilungen?"
+    answer: "Alert warnt Administratoren bei nahendem Limit, TenantPool erlaubt einer Umgebung nicht zugeteilte Kapazität aus dem Pool, PayGo aktiviert Abrechnung nach Verbrauch über freigegebene Azure-Abonnements, und Deny stoppt den Verbrauch bei erschöpfter Kapazität."
 ---
 ## TL;DR
 

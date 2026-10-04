@@ -14,6 +14,13 @@ image:
   alt: "Governance card: The Tightrope — boring deployments, reliable platform."
 permalink: "/en/posts/gov-test-to-prod-discipline/"
 translation_url: "/de/posts/gov-test-to-prod-discipline/"
+faq:
+  - question: "Why should only managed solutions be imported outside development?"
+    answer: "Deleting an unmanaged solution removes only its container while the customizations stay active in the environment's default solution, but removing a managed solution removes everything it contains."
+  - question: "Who should own flows in production?"
+    answer: "Service principals, according to a named ALM best practice. A person can leave or lose access, and the flow's connections then fail silently, while a service principal is not disabled by an HR process."
+  - question: "Can I edit a managed solution directly in a target environment?"
+    answer: "No. A managed solution cannot be edited directly, only through an unmanaged solution layered on top."
 ---
 
 ## TL;DR

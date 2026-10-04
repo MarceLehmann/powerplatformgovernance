@@ -25,6 +25,13 @@ source_language: en
 source_language_name: English
 source_author: Anders Fjordhoj
 source_published_at: '2026-08-24'
+faq:
+  - question: "Do custom apps that call the Work IQ API directly consume Copilot Credits?"
+    answer: "Yes, when usage-based billing is enabled, direct Work IQ API calls from custom solutions consume Copilot Credits. A Microsoft 365 Copilot license is not required for this route."
+  - question: "Why does the GitHub Copilot harness in Copilot Studio still cost credits for licensed users?"
+    answer: "In that harness, the unified Work IQ integration through Model Context Protocol tools consumes Copilot Credits even when the user holds a Microsoft 365 Copilot license."
+  - question: "Which admin center sets Work IQ spending limits and which one handles agent limits?"
+    answer: "The Microsoft 365 admin center holds Work IQ spending policies. The Power Platform admin center manages Copilot Studio environment capacity, prepaid credits and monthly agent limits."
 ---
 ## TL;DR
 

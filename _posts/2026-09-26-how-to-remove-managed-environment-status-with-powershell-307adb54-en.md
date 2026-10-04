@@ -31,6 +31,13 @@ submitted_by:
   publish_credit: true
   name: Michael Roth
   linkedin: https://www.linkedin.com/in/michaelroth42/
+faq:
+  - question: "Why would you want to remove the Managed Environment status again?"
+    answer: "The post names licensing as the background. Managed Environments require a premium license for every user, which the author calls a tough sell in many organizations."
+  - question: "What do you need before running the command?"
+    answer: "The PowerShell module Microsoft.PowerApps.Administration.PowerShell must be installed. You also need rights as environment admin or tenant admin."
+  - question: "Which cmdlet removes the managed status, and with which parameters?"
+    answer: "The cmdlet Set-AdminPowerAppEnvironmentGovernanceConfiguration. It needs two parameters: EnvironmentName with the identifier of the environment and UpdatedGovernanceConfiguration with the object created before."
 ---
 
 ## TL;DR

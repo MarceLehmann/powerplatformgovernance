@@ -25,6 +25,13 @@ source_author: Michael Roth
 source_language: en
 source_language_name: English
 source_published_at: '2026-02-10'
+faq:
+  - question: "Lässt sich die Standardumgebung der Power Platform auf eine Sicherheitsgruppe beschränken?"
+    answer: "Nein. In der Standardumgebung hat jede Person im Mandanten Zugriff, auch externe Gäste und B2B-Benutzer, und sie lässt sich nicht über übliche Sicherheitsgruppen verwalten."
+  - question: "Was bewirkt Freigabe für alle in der Standardumgebung tatsächlich?"
+    answer: "Technisch erhalten alle Benutzerkonten im Verzeichnis Berechtigungen, darunter externe Gäste und teils Dienstkonten oder verwaltete Identitäten."
+  - question: "Welche Lizenz-Standardeinstellungen verursachen versteckte Kosten in der Standardumgebung?"
+    answer: "Testversionen und virale Pläne, Selbstbedienungskäufe und Auto-Claim-Richtlinien. Auto-Claim weist Premium-Lizenzen zu, sobald jemand Premium-Funktionen berührt, daher kann eine geteilte App Zuweisungen für alle auslösen, die sie öffnen."
 ---
 ## TL;DR
 

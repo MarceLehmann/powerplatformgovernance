@@ -24,6 +24,13 @@ source_author: Josiah Opiyo
 source_language: en
 source_language_name: English
 source_published_at: '2026-08-16'
+faq:
+  - question: "Why is uncertainty the real problem with many SharePoint sites?"
+    answer: "Because as sites multiply, basic questions stay unanswered: where does content belong, who owns the site, is the content still relevant, who has access, and is there a duplicate space for the same purpose?"
+  - question: "What causes sprawl in SharePoint even though IT wants to avoid it?"
+    answer: "Self-service creation was introduced to avoid IT bottlenecks. Creating is easy while retiring is hard."
+  - question: "Does a high number of SharePoint sites automatically mean poor governance?"
+    answer: "No. A large number of sites says nothing about quality on its own."
 ---
 ## TL;DR
 

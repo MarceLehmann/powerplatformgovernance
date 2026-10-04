@@ -21,6 +21,13 @@ source_name: powerplatform.se
 source_language: en
 source_language_name: English
 source_published_at: '2026-02-14'
+faq:
+  - question: "Welche fünf Verhaltensweisen bündelt der einzelne Tracking-Schalter in Customer Insights?"
+    answer: "Eine globale Einstellung schaltet fünf Dinge gemeinsam: das E-Mail-Öffnungspixel, das Verfolgen von Link-Klicks, das Web-Tracking, das Vorausfüllen von Formularen und das automatische Anhängen von UTM-Parametern."
+  - question: "Wie könnte ein Datenschutzteam Klick-Tracking behalten, aber das Öffnungspixel abschalten?"
+    answer: "Heute nicht, denn ein einzelner Schalter deckt beides ab. Der Autor schlägt getrennte Schalter für jeden Mechanismus vor, damit das Klick-Tracking an bleiben könnte, während der Öffnungspixel aus ist."
+  - question: "Warum sind Öffnungsraten aus dem Tracking-Pixel unzuverlässig?"
+    answer: "Mailclients verfälschen das Signal. Outlook lädt Bilder nur nach Zustimmung des Nutzers herunter, daher kann eine Mail gelesen werden, ohne dass der Pixel auslöst."
 ---
 ## TL;DR
 

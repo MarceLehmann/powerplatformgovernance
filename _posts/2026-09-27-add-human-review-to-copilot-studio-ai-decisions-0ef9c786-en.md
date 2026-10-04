@@ -27,6 +27,13 @@ source_language_name: English
 source_author: Matthew Devaney
 source_published_at: '2026-09-27'
 source_type: article
+faq:
+  - question: "How does the agent in the loan example decide when a person has to review?"
+    answer: "The agent compares the stated loan purpose with a list of pre-evaluated purposes. If a match exists, it returns that exact purpose and its category."
+  - question: "What does the human review action collect and how does it reach the right person?"
+    answer: "The flow sends an Outlook message titled Action Required together with the applicant's name."
+  - question: "How does the flow record human and automated decisions in SharePoint?"
+    answer: "After a human review, an expression sets the decision field to Allowed for yes and otherwise to Flagged, the human-reviewed flag to yes, and the rationale is copied over."
 ---
 
 ## TL;DR

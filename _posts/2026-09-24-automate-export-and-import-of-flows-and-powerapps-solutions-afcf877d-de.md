@@ -26,6 +26,13 @@ source_author_url: https://www.powerplatformtip.com/about/
 source_language: en
 source_language_name: English
 publisher_disclosure: Beide Publikationen werden von Marcel Lehmann herausgegeben.
+faq:
+  - question: "Warum lässt sich ein gelöschter oder kaputter Power-Automate-Flow nicht einfach rückgängig machen?"
+    answer: "Power Automate hat kein eingebautes Rückgängigmachen und keine Wiederherstellung per Klick für gelöschte oder defekte Flows."
+  - question: "Was muss vorhanden sein, damit Flows automatisch exportiert werden können?"
+    answer: "Flows und Apps in einer Lösung bündeln, dann exportiert ein geplanter Cloud-Flow sie als Zip und legt jeden Export in SharePoint, OneDrive oder Azure Blob Storage ab."
+  - question: "Welches Dateiformat erzeugt der automatische Export?"
+    answer: "Die Plattform exportiert Lösungen als Zip-Dateien, sowohl managed als auch unmanaged. Zum Wiederherstellen wird die gespeicherte Zip-Datei zurück in die Zielumgebung importiert, womit Flow, App oder Lösung wieder zum Leben erwachen."
 ---
 ## TL;DR
 

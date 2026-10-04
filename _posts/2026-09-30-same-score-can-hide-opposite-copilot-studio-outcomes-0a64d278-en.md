@@ -29,6 +29,13 @@ source_language_name: English
 source_author: Karl-Johan Spiik
 source_published_at: '2026-09-30'
 source_type: article
+faq:
+  - question: "Why can a good evaluation result still wave through wrong agent answers?"
+    answer: "Because the general quality grader measures relevance, coverage and grounding, and does not compare the response with the expected answer."
+  - question: "What did comparing two test runs with almost the same score show?"
+    answer: "The first run scored 7 out of 20 although four documents should never have been approved and three correct ones were missing. A second run scored about 6 and refused drafts correctly."
+  - question: "Why does a control run matter when testing a Copilot Studio agent?"
+    answer: "A control run repeats the evaluation without changing the agent. On a production agent the score moved from 24 to 31 out of 43 without touching anything."
 ---
 
 ## TL;DR

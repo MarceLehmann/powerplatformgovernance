@@ -31,6 +31,13 @@ submitted_by:
   publish_credit: true
   name: Michael Roth
   linkedin: https://www.linkedin.com/in/michaelroth42/
+faq:
+  - question: "What does the Governance Kickstart in the Power Platform governance portfolio include?"
+    answer: "It is a two-day workshop for setting up governance in an organization, priced at EUR 3,000 according to the portfolio."
+  - question: "How are the monthly retainers in the portfolio structured?"
+    answer: "Three levels: BASIC with about 4 hours per week at EUR 4,800 per month, PRO with about 6 hours at EUR 7,200 and PREMIUM with about 8 hours at EUR 9,600."
+  - question: "Can the governance and security services be combined?"
+    answer: "Yes. According to the page, the services can be combined across all areas, all packages can be adapted flexibly, and the listed prices serve as orientation."
 ---
 
 ## TL;DR

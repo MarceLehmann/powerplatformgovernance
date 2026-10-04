@@ -25,6 +25,13 @@ source_author: Josiah Opiyo
 source_language: en
 source_language_name: English
 source_published_at: '2026-09-04'
+faq:
+  - question: "Which governance capabilities does SharePoint Advanced Management offer?"
+    answer: "The post names site ownership policies, inactive site management, attestations, catalog management and change history."
+  - question: "Which five starting points should governance begin with?"
+    answer: "Ownership, lifecycle, access, oversharing and evidence. They cover who is responsible for a site, which content is obsolete, who can reach what, unintended broad exposure, and validation through reports and reviews."
+  - question: "Does everything have to be perfectly tidy before using Copilot with SharePoint?"
+    answer: "No. The author writes that the goal is not necessarily to make everything perfect."
 ---
 ## TL;DR
 

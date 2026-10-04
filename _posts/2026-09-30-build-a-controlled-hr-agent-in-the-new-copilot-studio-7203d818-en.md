@@ -28,6 +28,13 @@ source_language_name: English
 source_author: Anders Jensen
 source_published_at: '2026-08-13'
 source_type: article
+faq:
+  - question: "Which setting should I switch off first when building a document-based agent in the new Copilot Studio?"
+    answer: "Search all websites. It is enabled by default, and the author calls turning it off the most important single click of the guide."
+  - question: "Do tests in Preview cost credits before an agent is published?"
+    answer: "Yes. Every test chat consumes credits even before publication, while manual configuration is free."
+  - question: "Should an internal HR agent go live company-wide on day one?"
+    answer: "The author advises against it: publishing to everyone on day one is the fastest way for a typo in your instructions to become the whole company's problem."
 ---
 
 ## TL;DR

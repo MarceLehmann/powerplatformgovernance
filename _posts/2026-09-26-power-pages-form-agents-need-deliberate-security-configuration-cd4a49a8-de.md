@@ -29,6 +29,13 @@ source_language_name: English
 source_author: Nick Doelman
 source_published_at: '2025-08-21'
 source_type: article
+faq:
+  - question: "Welche Voraussetzungen braucht ein Formular-Agent in Power Pages, damit er sichtbar wird?"
+    answer: "Copilot muss im Power Platform Admin Center aktiviert sein, der Site-Copilot muss eingeschaltet sein, und man ergänzt die Websiteeinstellung SiteCopilot/EnableNativeControlPVABots mit dem Wert true."
+  - question: "Wie verhindere ich, dass ein Formular-Agent alle Spalten einer Tabelle offenlegt?"
+    answer: "In der Power-Pages-Verwaltungs-App die Websiteeinstellung für die Web-API-Felder suchen und den Platzhalter durch eine kommagetrennte Liste der Spalten des Formulars ersetzen."
+  - question: "Wer sollte auf einen Power-Pages-Formular-Agenten zugreifen dürfen?"
+    answer: "Nur die Webrollen, die man im Sicherheits-Tab des Agenten auswählt. Der Autor warnt davor, den Agenten leichtfertig für nicht authentifizierte Benutzer freizugeben."
 ---
 
 ## TL;DR

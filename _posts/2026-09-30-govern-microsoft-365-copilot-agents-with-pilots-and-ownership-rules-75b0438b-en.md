@@ -29,6 +29,13 @@ source_language_name: English
 source_author: Anders Jensen
 source_published_at: '2026-07-12'
 source_type: article
+faq:
+  - question: "What access do declarative agents have in Microsoft 365 Copilot?"
+    answer: "The same as the user and nothing more. Agents cannot open SharePoint sites, mailboxes or Teams channels that the user cannot open."
+  - question: "What is the main risk when enabling agents in Microsoft 365 Copilot?"
+    answer: "Oversharing. Agents do not leak data, but they activate existing permissions quickly, so overly broad access on old SharePoint sites becomes visible."
+  - question: "What happens to agents when their builder leaves the company?"
+    answer: "Agents built with Agent Builder can become ownerless when employees change jobs. The admin center offers management rules for ownerless agents, which transfer them to the manager of the previous owner."
 ---
 
 ## TL;DR

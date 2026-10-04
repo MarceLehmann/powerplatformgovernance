@@ -25,6 +25,13 @@ source_author: Josiah Opiyo
 source_language: en
 source_language_name: English
 source_published_at: '2026-08-03'
+faq:
+  - question: "Welche Berechtigungen prüft das Skript für Gastbenutzer in Microsoft 365?"
+    answer: "Es prüft drei Bereiche: Verzeichnisrollen in Microsoft Entra ID, Besitzerschaft in Teams und Administratoren von SharePoint-Websitesammlungen."
+  - question: "Was steht im CSV-Bericht des Skripts für Gastberechtigungen?"
+    answer: "Das Skript exportiert eine CSV-Datei mit fünf Spalten: Anzeigename, Benutzerprinzipalname, Berechtigungsart, zugewiesene Rolle und Ressource. Die Ergebnisse aus Entra ID, Teams und SharePoint stehen in einem einzigen Bericht."
+  - question: "Warum behalten Gäste erhöhte Rechte, nachdem ein Projekt beendet ist?"
+    answer: "Die Berechtigungen sind auf verschiedene Verwaltungsoberflächen von Microsoft 365 verteilt, deshalb sieht sie niemand an einer Stelle. Der Autor schildert einen Gast-Berater, der Monate nach Projektende noch Besitzer eines Teams war."
 ---
 ## TL;DR
 

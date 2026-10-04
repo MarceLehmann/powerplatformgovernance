@@ -15,6 +15,13 @@ image:
   alt: "Governance card: The Night Watch — sweep for zombies monthly."
 permalink: "/en/posts/gov-disabled-owner-zombie-flows/"
 translation_url: "/de/posts/gov-disabled-owner-zombie-flows/"
+faq:
+  - question: "Does disabling a user in Entra ID turn off the flows they own?"
+    answer: "No. The flow stays On and keeps running, but connections authorized under the disabled account start rejecting calls, often unnoticed for weeks."
+  - question: "What breaks first when a flow owner's account is disabled?"
+    answer: "The connections break first, either immediately or on the next run depending on the connector. The flow itself is never switched off automatically."
+  - question: "Should business critical flows be owned by a service principal?"
+    answer: "Yes, that is what Microsoft recommends. Flows owned by a service principal are not tied to one employee, so departures do not disrupt them."
 ---
 
 ## TL;DR

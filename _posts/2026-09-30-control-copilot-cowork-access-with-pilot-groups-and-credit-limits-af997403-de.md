@@ -28,6 +28,13 @@ source_language_name: English
 source_author: Anders Jensen
 source_published_at: '2026-07-12'
 source_type: article
+faq:
+  - question: "Welche Administratorrollen braucht es für Cowork-Abrechnung und Ausgabenrichtlinien?"
+    answer: "Ein globaler Administrator oder Abrechnungsadministrator wählt die Abrechnungsmethode, während ein KI-Administrator Ausgabenrichtlinien erstellen und Limits setzen kann."
+  - question: "Wie beschränke ich Cowork auf eine Pilotgruppe statt auf die ganze Organisation?"
+    answer: "Standardmässig gilt der Geltungsbereich für die ganze Organisation. Wähle Einrichtung anpassen, öffne Benutzer- und Gruppenzugriff und nimm Bestimmte Gruppen."
+  - question: "Was passiert, wenn jemand das Credit-Limit erreicht?"
+    answer: "Der Zugriff entfällt bis zum Ersten des nächsten Monats. Im Beispiel des Artikels mit 20000 Credits monatlich kommt eine Warnung bei 15000 sofort und danach wöchentlich bis zum Ersten per E-Mail."
 ---
 
 ## TL;DR

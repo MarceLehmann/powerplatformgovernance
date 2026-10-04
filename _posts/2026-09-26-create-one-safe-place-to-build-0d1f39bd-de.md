@@ -34,6 +34,13 @@ submitted_by:
   publish_credit: true
   name: Michael Roth
   linkedin: https://www.linkedin.com/in/michaelroth42/
+faq:
+  - question: "Warum sollte die DLP-Richtlinie einer Maker-Umgebung der Produktion ähneln?"
+    answer: "Weil Maker sonst mit Möglichkeiten bauen, die es in der Produktion nicht gibt, und später enttäuscht werden."
+  - question: "Wie sollte der Zugang zu einer Maker-Umgebung geregelt werden?"
+    answer: "Über Kompetenz, nicht automatisch für alle im Verzeichnis. Zuerst ein Lernmodul von etwa 30 Minuten, danach der Zugang über eine Sicherheitsgruppe, die das Governance-Team oder die IT verwaltet."
+  - question: "Wann lohnt es sich, ein Maker Lab in mehrere Umgebungen aufzuteilen?"
+    answer: "Standardmässig genügt ein allgemeines Maker Lab. Aufgeteilt wird, wenn Fortgeschrittene riskante Connectors brauchen, ein Fachbereich dauerhaft viele Maker hat oder Maker Model-Driven Apps mit echter Geschäftslogik bauen."
 ---
 
 ## TL;DR

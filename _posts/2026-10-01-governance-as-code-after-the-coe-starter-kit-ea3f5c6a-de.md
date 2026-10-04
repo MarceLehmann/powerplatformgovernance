@@ -29,6 +29,13 @@ source_language_name: English
 source_author: Karl-Johan Spiik
 source_published_at: '2026-10-01'
 source_type: article
+faq:
+  - question: "Was ist mit dem CoE Starter Kit passiert, und was bleibt als Lücke?"
+    answer: "Microsoft hat das Repository im Juli archiviert. Der Redner nutzte das Kit seit 2020 und beschreibt, dass die Pflege der Releases fast eine Vollzeitaufgabe war."
+  - question: "Welche drei Stufen beschreibt die Reifeleiter für Governance as Code?"
+    answer: "Stufe eins ist die PAC-CLI im Terminal mit KI-Chat. Stufe zwei führt vorhandenen Community-Code aus, der Inventar in Dashboards zeigt. Stufe drei ist eine eigene Lösung, die Zweck, Richtlinien und Verantwortliche ergänzt."
+  - question: "Welche Warnungen gelten beim Arbeiten mit der PAC-CLI und einem KI-Agenten?"
+    answer: "Halte die CLI aktuell, denn neuere Versionen brachten fünfzehn neue Befehlsgruppen, meist in der Vorschau. Prüfe das aktive Authentifizierungsprofil, weil der Redner versehentlich Funktionen im falschen Tenant aktivierte."
 ---
 
 ## TL;DR

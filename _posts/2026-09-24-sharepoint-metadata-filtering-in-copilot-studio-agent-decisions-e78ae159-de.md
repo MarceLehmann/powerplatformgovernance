@@ -27,6 +27,13 @@ source_language_name: English
 source_author: Adi Leibowitz
 source_published_at: '2026-09-01'
 source_updated_at: '2026-09-02'
+faq:
+  - question: "Was leistet das SharePoint-Metadatenfilter-Werkzeug in Copilot Studio?"
+    answer: "Es filtert Dokumente nach Autor, Bearbeiter, Datum, Dateityp, Ordner oder eigenen Spalten und liefert Dateinamen, URLs, Spaltenwerte, verfügbare Spalten, Trefferzahlen und gruppierte Summen."
+  - question: "Wie kombiniert der Agent Metadatenfilter und Inhaltssuche, um Richtlinien für Kanada zu finden?"
+    answer: "Er filtert zuerst die Bibliothek über die Spalte Country auf den Wert Canada und erhält die URLs der passenden Dateien."
+  - question: "Hebelt das Metadatenfiltern in Copilot Studio die SharePoint-Berechtigungen aus?"
+    answer: "Nein. Das Filtern grenzt nur den Inhaltsumfang ein und ersetzt keine Zugriffssteuerung."
 ---
 ## TL;DR
 

@@ -14,6 +14,13 @@ image:
   alt: "Governance card: The Ghost App — two names per solution, always."
 permalink: "/en/posts/gov-ownership-offboarding/"
 translation_url: "/de/posts/gov-ownership-offboarding/"
+faq:
+  - question: "How do I find all flows created by a departed employee?"
+    answer: "Use the PowerShell cmdlet Get-AdminFlow with the CreatedBy parameter and the user's object ID to find every flow that person created, in bulk."
+  - question: "Why does an orphaned flow stop working?"
+    answer: "An orphaned flow is one whose owner account no longer exists or is no longer valid, and it fails because its connections were tied to that account."
+  - question: "Why record a deputy for every solution when it is created?"
+    answer: "Every reassignment cmdlet still needs a human to decide who the new owner is, and a named deputy already answers that."
 ---
 
 ## TL;DR

@@ -28,6 +28,13 @@ source_language_name: English
 source_author: Nick Doelman
 source_published_at: '2025-08-21'
 source_type: article
+faq:
+  - question: "What must be in place before a Power Pages form agent shows up on the site?"
+    answer: "Copilot must be enabled in the Power Platform admin center, the site copilot must be switched on, and you add the site setting SiteCopilot/EnableNativeControlPVABots set to true."
+  - question: "How do I stop a Power Pages form agent from exposing every column of a table?"
+    answer: "In the Power Pages management app, find the Web API fields site setting and change it from the wildcard to a comma-separated list of the columns on your form."
+  - question: "Who should be allowed to use a Power Pages form agent?"
+    answer: "Only the web roles you select on the security tab of the agent. The author warns to be careful exposing the agent to non-authenticated users."
 ---
 
 ## TL;DR

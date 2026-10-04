@@ -28,6 +28,13 @@ source_language_name: English
 source_author: Anders Jensen
 source_published_at: '2026-07-12'
 source_type: article
+faq:
+  - question: "Which admin roles are needed for Cowork billing and spending policies?"
+    answer: "A Global Administrator or Billing Administrator chooses the billing method, while an AI Administrator can create spending policies and set limits."
+  - question: "How do I limit Cowork to a pilot group instead of the whole organization?"
+    answer: "The default scope is organization-wide. Choose Customize setup configuration, open User and group access and select Specific groups."
+  - question: "What happens when someone reaches the credit limit?"
+    answer: "Access is lost until the first day of the next month. In the article's example with 20,000 monthly credits, an alert at 15,000 sends an email immediately and weekly until the first."
 ---
 
 ## TL;DR

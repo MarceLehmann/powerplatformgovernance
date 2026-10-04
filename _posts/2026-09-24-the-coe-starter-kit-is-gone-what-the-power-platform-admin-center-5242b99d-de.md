@@ -23,6 +23,13 @@ source_author: Maximilian Götz
 source_language: en
 source_language_name: English
 source_published_at: '2026-06-03'
+faq:
+  - question: "Ist das CoE Starter Kit offiziell mit einer Frist zur Migration eingestellt?"
+    answer: "Nein, es gibt weder eine formale Einstellungsmeldung noch eine Frist. Das Kit war nie ein offizielles Microsoft-Produkt, sondern ein Beschleuniger aus der Community, der ausserhalb des normalen Produktsupports gepflegt wurde."
+  - question: "Welche Governance-Lücken lässt das Admin Center gegenüber dem CoE Starter Kit?"
+    answer: "Der Beitrag nennt fünf Lücken mit hohem Risiko: Schatten-IT ohne Risikobewertung, Lebenszyklus ohne Workflows für Besitzerwechsel, keine Sicht über mehrere Tenants, DLP-Durchsetzung ohne Alarm bei Verstössen und keine Kontrolle von Qualität und Connector-Missbrauch."
+  - question: "Was muss ich beim Abschied vom CoE Starter Kit wirklich neu aufbauen?"
+    answer: "Die Kontextebene, denn die reine Objektliste liefert jetzt Microsoft selbst."
 ---
 ## TL;DR
 

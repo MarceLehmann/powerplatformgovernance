@@ -23,6 +23,13 @@ source_author: Maximilian Götz
 source_language: en
 source_language_name: English
 source_published_at: '2026-06-03'
+faq:
+  - question: "Is the CoE Starter Kit officially deprecated with a migration deadline?"
+    answer: "No formal deprecation notice or deadline exists. The kit was never an official Microsoft product but a community-driven accelerator maintained outside standard product support."
+  - question: "Which governance gaps remain in the admin center compared with the CoE Starter Kit?"
+    answer: "The article names five high-risk gaps: shadow IT detection without risk scoring, lifecycle management without ownership transfer workflows, no cross-tenant visibility, DLP enforcement without violation alerts, and no governance of customization quality or connector misuse."
+  - question: "What do organizations really have to rebuild when leaving the CoE Starter Kit?"
+    answer: "The contextual layer, because the raw object list now comes from Microsoft."
 ---
 ## TL;DR
 

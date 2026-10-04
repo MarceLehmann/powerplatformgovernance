@@ -28,6 +28,13 @@ source_language_name: English
 source_author: Anders Jensen
 source_published_at: '2026-07-24'
 source_type: article
+faq:
+  - question: "Wo sehen Admins alle Agenten eines Microsoft-365-Tenants?"
+    answer: "Im Microsoft 365 Admin Center unter Agents auf All agents und dann auf den Reiter Registry."
+  - question: "Was geschieht, wenn man einen Agenten in der Microsoft-365-Registry blockiert?"
+    answer: "Niemand in der Organisation kann den Agenten danach installieren oder nutzen, und bei Personen, die ihn schon installiert hatten, verschwindet er ebenfalls."
+  - question: "Wie beschränke ich einen Microsoft-365-Copilot-Agenten auf eine Pilotgruppe?"
+    answer: "Den Agenten in der Registry öffnen, zum Reiter Users wechseln und Available to wählen. Zur Auswahl stehen All users, No users und Specific users or groups."
 ---
 
 ## TL;DR

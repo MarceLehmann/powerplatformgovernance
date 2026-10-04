@@ -14,6 +14,13 @@ image:
   alt: "Governance-Karte: Unterwegs — der schnellste legale Weg schlägt jede Lockdown-Massnahme."
 permalink: "/de/posts/gov-shadow-it-root-cause/"
 translation_url: "/en/posts/gov-shadow-it-root-cause/"
+faq:
+  - question: "Warum kaufen Mitarbeitende Tools mit der privaten Kreditkarte, statt auf die IT zu warten?"
+    answer: "Weil der legale Weg langsamer ist als der illegale. Eine Anfrage, die sechs Wochen braucht, lässt das Geschäftsbedürfnis nicht verschwinden, sie führt dazu, dass es jemand ohne dich löst."
+  - question: "Wie hilft der Catalog in Power Platform gegen Schatten-IT?"
+    answer: "Maker können darin bereits genehmigte Komponenten finden und wiederverwenden, statt bei einer Kaufentscheidung zu starten."
+  - question: "Ist ein schnelles Nein bei IT-Anfragen besser als ein langsames Vielleicht?"
+    answer: "Ja. Der Fehlerfall ist nicht das Nein, sondern das Fehlen einer Antwort."
 ---
 
 ## TL;DR

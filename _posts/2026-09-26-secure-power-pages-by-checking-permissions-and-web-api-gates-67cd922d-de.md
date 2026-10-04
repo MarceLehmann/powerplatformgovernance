@@ -27,6 +27,13 @@ source_language_name: English
 source_author: Nick Doelman
 source_published_at: '2026-08-13'
 source_type: article
+faq:
+  - question: "Welche zwei Hürden muss eine Web-API-Anfrage in Power Pages passieren?"
+    answer: "Die erste Hürde sind die Websiteeinstellungen pro Tabelle: Webapi/contact/enabled muss auf true stehen, denn der Standard ist False, und die zugehörige Spalteneinstellung braucht eine ausdrückliche Spaltenliste."
+  - question: "Warum ist ein Platzhalter in der Spalteneinstellung der Web API in Power Pages gefährlich?"
+    answer: "Ein Sternchen in der Spalteneinstellung veröffentlicht jede Spalte der Tabelle."
+  - question: "Was ist am Flag Authenticated Users Role bei eigenen Webrollen riskant?"
+    answer: "Steht es auf Yes, wird die eigene Rolle zur Standardrolle für jeden angemeldeten Benutzer, egal ob du ihn ihr zugewiesen hast."
 ---
 
 ## TL;DR

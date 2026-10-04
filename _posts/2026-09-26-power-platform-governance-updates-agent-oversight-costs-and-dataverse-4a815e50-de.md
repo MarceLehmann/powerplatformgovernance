@@ -30,6 +30,13 @@ source_author: Josh Cook
 source_published_at: '2026-09-25'
 source_updated_at: '2026-09-25'
 source_type: article
+faq:
+  - question: "Was bietet Copilot Managed Runtime für Apps, die mit KI gebaut wurden?"
+    answer: "Von Microsoft betriebenes Hosting für Anwendungen aus Cowork, Code und Copilot Studio, seit dem 25. September in der öffentlichen Vorschau. Genannt werden Entra-Identität, kontrollierte Datenverbindungen und Nutzungsüberwachung."
+  - question: "Welche neuen Ausgabenkontrollen bringt das Kostenmanagement in Agent 365?"
+    answer: "Neu sind Modellzugriffskontrollen, über die Microsoft Graph API verwaltbare Ausgabenrichtlinien, im Copilot sichtbarer Creditverbrauch und ein Wertbericht. Die Unterstützung für Copilot Studio ist für Oktober geplant."
+  - question: "Deckt eine Microsoft-365-Copilot-Lizenz Copilot-Studio-Agenten auf dem GitHub-Copilot-Harness ab?"
+    answer: "Nein. Agenten auf dem GitHub-Copilot-Harness verbrauchen Credits beim Bauen, Testen, Auswerten und im Betrieb, und die Microsoft-365-Copilot-Lizenz deckt diese Nutzung nicht ab."
 ---
 ## TL;DR
 

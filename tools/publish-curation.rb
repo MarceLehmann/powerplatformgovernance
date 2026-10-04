@@ -6,12 +6,15 @@ require 'uri'
 require 'digest'
 require 'cgi'
 require 'fileutils'
+require 'set'
 
 module CurationPublisher
   TAGS = %w[governance security compliance dlp environments alm ownership coe dataverse power-apps power-automate copilot-studio].freeze
   TRACKING = /\A(?:utm_.+|fbclid|gclid|msclkid)\z/i
   SOURCE_TYPES = %w[article youtube podcast].freeze
   YOUTUBE_ID = /\A[A-Za-z0-9_-]{11}\z/
+  FAQ_COUNT = 3
+  FAQ_FORBIDDEN = /[<>{}`*_\[\]#]/
 
   def self.text(value, maximum, optional: false)
     raise ArgumentError, 'Expected plain text' unless value.is_a?(String)
@@ -28,6 +31,35 @@ module CurationPublisher
     cleaned = lines.join("\n")
     raise ArgumentError, 'Text outside allowed length' if cleaned.length > maximum
     cleaned
+  end
+
+  # Normalised form of a FAQ question for duplicate checks: lower case, letters and digits only.
+  def self.faq_key(value)
+    value.to_s.downcase.gsub(/[^\p{L}\p{N}]/, '')
+  end
+
+  # Exactly 3 plain-text question/answer pairs per language. Any violation raises ArgumentError,
+  # which publish() turns into "skip this article, continue with the rest". known_questions is
+  # the set of normalised questions that already exist in this language in the repository.
+  def self.faq_items(value, known_questions = Set.new)
+    raise ArgumentError, "Expected exactly #{FAQ_COUNT} FAQ items" unless value.is_a?(Array) && value.length == FAQ_COUNT
+    seen = Set.new
+    value.map do |item|
+      raise ArgumentError, 'Invalid FAQ item' unless item.is_a?(Hash) && item.keys.sort == %w[answer question]
+      raw_question = item['question']
+      raw_answer = item['answer']
+      raise ArgumentError, 'FAQ text must be plain text' unless raw_question.is_a?(String) && raw_answer.is_a?(String)
+      raise ArgumentError, 'FAQ text must be a single line' if raw_question.match?(/[\r\n]/) || raw_answer.match?(/[\r\n]/)
+      raise ArgumentError, 'FAQ text contains forbidden characters' if raw_question.match?(FAQ_FORBIDDEN) || raw_answer.match?(FAQ_FORBIDDEN)
+      question = text(raw_question, 140)
+      raise ArgumentError, 'FAQ question must be 15-140 characters and end with a question mark' unless question.length >= 15 && question.end_with?('?')
+      answer = text(raw_answer, 400)
+      raise ArgumentError, 'FAQ answer must be 8-35 words' unless answer.split(' ').length.between?(8, 35)
+      identity = faq_key(question)
+      raise ArgumentError, 'Duplicate FAQ question' if seen.include?(identity) || known_questions.include?(identity)
+      seen << identity
+      { 'question' => question, 'answer' => answer }
+    end
   end
 
   def self.url(value)
@@ -107,7 +139,7 @@ module CurationPublisher
     end
   end
 
-  def self.render(article, credit_data, now)
+  def self.render(article, credit_data, now, known_questions = {})
     raise ArgumentError, 'Article is not publishable' unless article['publishable'] == true
     source_url = url(article['source_url'])
     parsed = URI.parse(source_url)
@@ -147,12 +179,15 @@ module CurationPublisher
     # (matching how they already share the same identifier), with a short hash suffix so two
     # similarly-titled articles can never collide.
     url_slug = "#{slug(text(article.fetch('en').fetch('title'), 110))}-#{identifier[0, 8]}"
+    faq_keys = {}
     files = %w[en de].map do |locale|
       version = article.fetch(locale)
       title = text(version['title'], 110)
       description = text(version['description'], 200)
       summary = text(version['tldr'], 600)
       takeaway = bulleted_text(version['takeaway'], 900)
+      faq = faq_items(version['faq'], known_questions.fetch(locale, Set.new))
+      faq_keys[locale] = faq.map { |item| faq_key(item['question']) }
       alternate = locale == 'en' ? 'de' : 'en'
       alt_prefix = locale == 'de' ? 'Governance-Karte' : 'Governance card'
       frontmatter = {
@@ -163,13 +198,14 @@ module CurationPublisher
         'permalink' => "/#{locale}/posts/#{url_slug}/", 'translation_url' => "/#{alternate}/posts/#{url_slug}/",
       }.merge(source)
       frontmatter['submitted_by'] = public_credit if public_credit
+      frontmatter['faq'] = faq
       frontmatter['publisher_disclosure'] = locale == 'de' ? 'Beide Publikationen werden von Marcel Lehmann herausgegeben.' : 'Both publications are edited by Marcel Lehmann.' if parsed.host.delete_prefix('www.') == 'powerplatformtip.com'
       heading = locale == 'de' ? 'Bedeutung für Governance' : 'Governance takeaway'
       video_embed = source_type == 'youtube' ? "\n{% include source-video-embed.html %}\n" : ''
       content = "#{YAML.dump(frontmatter)}---\n\n## TL;DR\n\n#{body_text(summary)}\n\n{% include curated-attribution.html %}\n#{video_embed}\n## #{heading}\n\n#{body_text(takeaway)}\n"
       ["#{now.utc.strftime('%Y-%m-%d')}-#{url_slug}-#{locale}.md", content]
     end
-    { 'files' => files, 'card' => card_data }
+    { 'files' => files, 'card' => card_data, 'faq_keys' => faq_keys }
   end
 
   def self.publish(event, root, now: Time.now)
@@ -178,23 +214,31 @@ module CurationPublisher
     raise ArgumentError, 'Invalid request ID' unless payload['request_id'].is_a?(String) && payload['request_id'].match?(/\A[0-9a-f-]{36}\z/)
     articles = payload['articles']
     raise ArgumentError, 'Invalid batch size' unless articles.is_a?(Array) && articles.length.between?(1, 30)
+    known_questions = Hash.new { |hash, locale| hash[locale] = Set.new }
     existing = Dir.glob(File.join(root, '_posts', '*.md')).filter_map do |path|
       raw = File.read(path, encoding: 'UTF-8')
       next unless raw.start_with?("---\n", "---\r\n")
       metadata = YAML.safe_load(raw.split(/^---\s*$\r?/, 3)[1], permitted_classes: [Date, Time], aliases: false)
+      if metadata.is_a?(Hash) && metadata['faq'].is_a?(Array) && metadata['lang'].is_a?(String)
+        metadata['faq'].each { |item| known_questions[metadata['lang']] << faq_key(item['question']) if item.is_a?(Hash) }
+      end
       key(metadata['source_url']) if metadata.is_a?(Hash) && metadata['source_url']
     end
     pending = []
     pending_cards = []
     articles.each do |article|
       begin
-        result = render(article, payload.fetch('credit', {}), now)
+        # An article that is already published is skipped before its FAQ is compared with the
+        # existing questions, otherwise it would be reported as a duplicate of itself.
+        next if existing.include?(key(article['source_url']))
+        result = render(article, payload.fetch('credit', {}), now, known_questions)
       rescue ArgumentError => e
         warn "Skipped one article in the batch, rest continue: #{e.message} (#{article['source_url'].inspect})"
         next
       end
       identity = key(article['source_url'])
       next if existing.include?(identity)
+      result['faq_keys'].each { |locale, keys| known_questions[locale].merge(keys) }
       pending.concat(result['files'])
       pending_cards << result['card']
       existing << identity

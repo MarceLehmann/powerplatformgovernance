@@ -13,6 +13,13 @@ image:
   alt: "Governance card: The Surprise Bill — know the license before the users arrive."
 permalink: "/en/posts/gov-licensing-governance/"
 translation_url: "/de/posts/gov-licensing-governance/"
+faq:
+  - question: "Does a Microsoft 365 license cover custom Power Apps, premium flows or Copilot Studio agents?"
+    answer: "No. Some Microsoft 365 licenses include limited Power Apps, Power Automate and Dataverse use rights, but only for working with Microsoft 365 data through standard connectors."
+  - question: "How does Power Platform pay-as-you-go billing work?"
+    answer: "It links an environment to an Azure subscription, so usage above the included amounts bills through Azure meters instead of requiring capacity purchased upfront."
+  - question: "How do I keep pay-as-you-go costs under control?"
+    answer: "Set up Azure Cost Management alerts before rollout, and use the downloadable usage report on the billing plan page in the Power Platform admin center."
 ---
 
 ## TL;DR

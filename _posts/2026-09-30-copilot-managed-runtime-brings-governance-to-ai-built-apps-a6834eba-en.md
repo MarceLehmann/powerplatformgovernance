@@ -29,6 +29,13 @@ source_author: Ramón Rautenstrauch
 source_published_at: '2026-09-30'
 source_updated_at: '2026-09-30'
 source_type: article
+faq:
+  - question: "What do apps built with Copilot Managed Runtime inherit automatically?"
+    answer: "They inherit Microsoft Entra authentication and run on Microsoft-hosted execution. Tenant policies apply to them and they appear in the inventory of the Microsoft 365 admin center."
+  - question: "Which controls does the managed runtime support for administrators?"
+    answer: "Conditional Access, data loss prevention, connector restrictions, sharing boundaries and lifecycle management. These controls come from the platform, so administrators gain visibility into AI-built apps instead of only trying to prevent them."
+  - question: "Does the managed runtime remove the need for governance design?"
+    answer: "No. The article says that governance built in by design does not mean security can be forgotten, and that a poorly configured policy remains a poorly configured policy."
 ---
 
 ## TL;DR

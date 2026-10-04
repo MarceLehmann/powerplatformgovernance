@@ -30,6 +30,13 @@ source_language_name: English
 source_author: Holger Imbery
 source_published_at: '2026-09-13'
 source_type: article
+faq:
+  - question: "Why should a Copilot Studio agent not hold the state of a long-running process?"
+    answer: "The agent is treated as a stateless worker, and the process lives in a persistent Dataverse table."
+  - question: "What does the single-writer rule mean for the State column?"
+    answer: "Only one component, a dedicated agent flow, may write the State column, and it validates transitions against an allowed list. Everything else reads the state and proposes transitions."
+  - question: "How can a process wait several days without keeping a Copilot Studio session open?"
+    answer: "Scheduled sweeper flows check the NextActionAt timestamp and pick up cases that are due. An approval agent, for example, writes PendingApproval with a deadline for reminders and then stops, holding no session."
 ---
 
 ## TL;DR

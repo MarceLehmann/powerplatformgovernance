@@ -29,6 +29,13 @@ source_author: Tiina Rytkönen
 source_published_at: '2026-09-25'
 source_updated_at: '2026-09-25'
 source_type: article
+faq:
+  - question: "Why can a single AI provider's admin console not govern a company's whole AI estate?"
+    answer: "Each console only sees its own provider, so none can answer what one person can access across every AI system."
+  - question: "How does identity-based governance link AI accounts from different providers?"
+    answer: "It matches every AI account to one person in Entra ID. The same employee then appears once with a combined inventory of everything they can reach, instead of separately in each tool."
+  - question: "Does identity-based AI governance read prompts or file contents?"
+    answer: "No. Conversations, file contents and prompt text are deliberately not examined."
 ---
 ## TL;DR
 

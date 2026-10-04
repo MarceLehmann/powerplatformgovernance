@@ -28,6 +28,13 @@ source_language_name: English
 source_author: Nishkalank Bezawada
 source_published_at: '2026-08-24'
 source_type: article
+faq:
+  - question: "Does the PnP PowerShell MCP Server sign in to Microsoft 365 for me?"
+    answer: "No. The server never signs in on its own and reuses the connection you already created with Connect-PnPOnline."
+  - question: "What happens when the PnP PowerShell MCP Server wants to run a destructive command?"
+    answer: "It asks for your confirmation before anything runs. Every command is marked as read-only, idempotent or destructive, so safe operations can be approved automatically while risky ones still need your decision."
+  - question: "Is the PnP PowerShell MCP Server ready for production use?"
+    answer: "No. The release is an explicit early beta that is still evolving, and the authors state that it is not production-ready yet."
 ---
 
 ## TL;DR

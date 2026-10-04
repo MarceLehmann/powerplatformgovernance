@@ -14,6 +14,13 @@ image:
   alt: "Governance card: The X-Ray — quality gates beat quality hopes."
 permalink: "/en/posts/gov-solution-checker-enforcement/"
 translation_url: "/de/posts/gov-solution-checker-enforcement/"
+faq:
+  - question: "What are the three enforcement levels for solution checker in Managed Environments?"
+    answer: "None means no automatic validation. Warn checks every custom solution import and, if critical issues are found, lets the import complete but flags it and emails Power Platform and Dynamics 365 service administrators."
+  - question: "Do medium and low solution checker findings stop an import?"
+    answer: "No. Only critical-severity rules can trigger a block or the warning message."
+  - question: "Which enforcement level should production and developer environments use?"
+    answer: "Microsoft's adoption guidance for enterprise-scale tenants suggests Block with emails for Default, Production and Teams environments, and Warn without emails for Developer and Sandbox."
 ---
 
 ## TL;DR

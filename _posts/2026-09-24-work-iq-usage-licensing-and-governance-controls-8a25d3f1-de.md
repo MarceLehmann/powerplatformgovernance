@@ -24,6 +24,13 @@ source_language: en
 source_language_name: English
 source_author: Anders Fjordhoj
 source_published_at: '2026-08-24'
+faq:
+  - question: "Verbrauchen eigene Anwendungen, die die Work-IQ-API direkt aufrufen, Copilot Credits?"
+    answer: "Ja, sobald nutzungsbasierte Abrechnung aktiviert ist, verbrauchen direkte Work-IQ-API-Aufrufe aus eigenen Lösungen Copilot Credits. Eine Microsoft-365-Copilot-Lizenz ist für diesen Weg nicht nötig."
+  - question: "Warum kostet der GitHub-Copilot-Harness in Copilot Studio trotz Lizenz weiterhin Credits?"
+    answer: "In diesem Harness verbraucht die einheitliche Work-IQ-Anbindung über Model-Context-Protocol-Tools Copilot Credits, auch wenn die Person eine Microsoft-365-Copilot-Lizenz besitzt."
+  - question: "Welches Admincenter steuert Work-IQ-Ausgaben und welches die Agentenlimits?"
+    answer: "Im Microsoft-365-Admincenter liegen die Ausgabenrichtlinien für Work IQ. Das Power Platform Admin Center verwaltet Umgebungskapazität, vorausbezahlte Credits und monatliche Agentenlimits von Copilot Studio."
 ---
 ## TL;DR
 

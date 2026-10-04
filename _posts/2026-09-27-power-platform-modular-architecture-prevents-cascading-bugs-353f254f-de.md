@@ -33,6 +33,13 @@ submitted_by:
   publish_credit: true
   name: Mirko Peters
   linkedin: https://www.linkedin.com/in/m365showpodcast/
+faq:
+  - question: "Was ist laut dem Beitrag die Ursache von Fehlern, die sich durch Features ziehen?"
+    answer: "Als Wurzel nennt der Beitrag enge Kopplung. Wird ein Fehler behoben, taucht an anderer Stelle der nächste auf, was er als Whack-a-Mole-Problem in Low-Code-Anwendungen von Unternehmen beschreibt."
+  - question: "Wie sollten E-Mails in einer modularen Power-Platform-Lösung versendet werden?"
+    answer: "Als Anti-Pattern gilt, den Outlook- oder Office-365-Connector in jeden Flow einzubauen. Besser schreibt jeder Flow in eine ausgehende Staging-Tabelle in Dataverse."
+  - question: "Wie viel Governance und welche Architektur empfiehlt der Beitrag?"
+    answer: "Organisationen pendeln oft zwischen zwei Extremen, keine Governance oder zu viel davon. Der Beitrag rät zu einer Aufsicht, die sich nach der Geschäftskritikalität und dem Risiko richtet."
 ---
 
 ## TL;DR

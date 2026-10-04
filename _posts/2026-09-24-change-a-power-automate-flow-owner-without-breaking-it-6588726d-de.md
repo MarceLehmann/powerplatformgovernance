@@ -26,6 +26,13 @@ source_author_url: https://www.powerplatformtip.com/about/
 source_language: en
 source_language_name: English
 publisher_disclosure: Beide Publikationen werden von Marcel Lehmann herausgegeben.
+faq:
+  - question: "Lässt sich ein Cloud-Flow ohne Export und Import an eine neue Person übergeben?"
+    answer: "Ja, wenn der Flow lösungsfähig ist. Füge ihn in einer Umgebung mit Dataverse zu einer Lösung hinzu, öffne die Details des Flows, wähle Bearbeiten und trage den neuen Besitzer ein."
+  - question: "Bleiben der alte und der neue Besitzer beide am Flow?"
+    answer: "Ja. Der bisherige und der neue Besitzer werden Miteigentümer, deshalb geht nichts kaputt."
+  - question: "Wie lange dauert es, bis die Lizenz des neuen Besitzers bei einem geplanten Flow greift?"
+    answer: "Bei geplanten oder automatischen Flows wirkt die Lizenz des neuen Besitzers nach etwa 7 Tagen. Wenn du den Flow bearbeitest und neu speicherst, gilt sie sofort."
 ---
 ## TL;DR
 

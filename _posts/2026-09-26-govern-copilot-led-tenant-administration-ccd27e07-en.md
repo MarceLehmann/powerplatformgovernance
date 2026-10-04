@@ -28,6 +28,13 @@ source_language_name: English
 source_author: Josiah Opiyo
 source_published_at: '2026-09-10'
 source_type: article
+faq:
+  - question: "What does the PnP PowerShell agent for Copilot do for tenant administrators?"
+    answer: "It turns a request written in plain language into proper PnP PowerShell commands, so administrators describe the outcome instead of remembering syntax."
+  - question: "Does natural language make Copilot-driven tenant administration safe by default?"
+    answer: "No. The article states that natural language does not make administrative actions safe by itself."
+  - question: "Is the PnP PowerShell Copilot agent finished tooling?"
+    answer: "No. Parts of it are still works in progress. Skills for creating, evaluating and updating scripts are announced but not finished, so treat the script features as not yet available."
 ---
 
 ## TL;DR

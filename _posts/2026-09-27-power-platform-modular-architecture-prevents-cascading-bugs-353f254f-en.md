@@ -33,6 +33,13 @@ submitted_by:
   publish_credit: true
   name: Mirko Peters
   linkedin: https://www.linkedin.com/in/m365showpodcast/
+faq:
+  - question: "What does the post name as the cause of bugs that ripple across features?"
+    answer: "The post names tight coupling as the root. Fixing one bug makes the next one appear elsewhere, which it describes as a whack-a-mole problem in enterprise low-code applications."
+  - question: "How should emails be sent in a modular Power Platform solution?"
+    answer: "The anti-pattern is embedding the Outlook or Office 365 connector in every flow. Better, each flow writes to an outbound staging table in Dataverse."
+  - question: "How much governance and which architecture does the post recommend?"
+    answer: "Organizations often swing between two extremes, no governance or too much of it. The post advises oversight proportional to business criticality and risk."
 ---
 
 ## TL;DR

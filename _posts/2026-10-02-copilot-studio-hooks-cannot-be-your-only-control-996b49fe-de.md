@@ -29,6 +29,13 @@ source_language_name: English
 source_author: Josh Cook
 source_published_at: '2026-10-02'
 source_type: article
+faq:
+  - question: "Was passiert in Copilot Studio, wenn ein Hook-Workflow fehlschlägt oder eine Zeitüberschreitung hat?"
+    answer: "Der Agent macht einfach weiter. Laut Dokumentation hält ein Hook-Workflow, der scheitert, in eine Zeitüberschreitung läuft oder eine unlesbare Antwort liefert, den Agenten nicht auf."
+  - question: "Wo müssen Regeln durchgesetzt werden, die unbefugte Änderungen blockieren?"
+    answer: "Im zugrunde liegenden Dienst, nicht im Hook. Die Dokumentation sagt, dass Regeln gegen unbefugte Änderungen im Dienst selbst durchgesetzt bleiben sollen."
+  - question: "Wie teste ich, ob ein Dataverse-Pilot geschützt bleibt, wenn ein Hook ausfällt?"
+    answer: "Zerstöre den Hook-Workflow absichtlich und versuche dann eine Änderung, die blockiert werden müsste. Lehnt der zugrunde liegende Dienst sie weiterhin ab, funktioniert die eigentliche Kontrolle."
 ---
 
 ## TL;DR

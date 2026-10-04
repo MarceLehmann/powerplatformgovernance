@@ -14,6 +14,13 @@ image:
   alt: "Governance card: On the Road — the fastest legal path beats any lockdown."
 permalink: "/en/posts/gov-shadow-it-root-cause/"
 translation_url: "/de/posts/gov-shadow-it-root-cause/"
+faq:
+  - question: "Why do employees buy tools on a personal credit card instead of waiting for IT?"
+    answer: "Because the legal path is slower than the illegal one. A request that takes six weeks does not make the business need go away, it makes someone solve it without you."
+  - question: "How does the catalog in Power Platform reduce shadow IT?"
+    answer: "It lets makers discover and reuse already-approved components instead of starting from a purchase decision."
+  - question: "Is a fast no better than a slow maybe for IT requests?"
+    answer: "Yes. The failure mode is the absence of an answer, not a decline."
 ---
 
 ## TL;DR

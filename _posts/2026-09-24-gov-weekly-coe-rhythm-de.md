@@ -14,6 +14,13 @@ image:
   alt: "Governance-Karte: Die Anzeigetafel — zwei Kennzahlen schlagen jedes Governance-Deck."
 permalink: "/de/posts/gov-weekly-coe-rhythm/"
 translation_url: "/en/posts/gov-weekly-coe-rhythm/"
+faq:
+  - question: "Was enthält der Wochendigest der Managed Environments?"
+    answer: "Drei Teile: eine Nutzungsübersicht des letzten Monats, eine Liste von Apps und Flows, die eine Weile nicht gestartet wurden, und die beliebtesten Apps und Flows samt Top-Makern."
+  - question: "Wie aktiviere ich den Wochendigest für eine Umgebung?"
+    answer: "Aktiviere zuerst die Tenant-Level-Analytics, denn Usage Insights hängen davon ab."
+  - question: "Brauche ich das CoE Starter Kit, wenn ich den Wochendigest nutze?"
+    answer: "Nein, der Digest setzt kein CoE Starter Kit voraus, und genau deshalb lohnt sich die Aktivierung unabhängig davon."
 ---
 
 ## TL;DR

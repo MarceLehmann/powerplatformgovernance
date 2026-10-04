@@ -26,6 +26,13 @@ submitted_by:
   publish_credit: true
   name: Michael Roth
   linkedin: https://www.linkedin.com/in/michaelroth42/
+faq:
+  - question: "Why does trusting makers not replace governance?"
+    answer: "Trust works between people, but a platform grows beyond personal relationships. The article points to undocumented flows, apps that break after their creator leaves, data shared externally without anyone noticing and orphaned systems."
+  - question: "What is the governance trilemma?"
+    answer: "Security, compliance and enablement compete, and the article describes what happens when only one wins."
+  - question: "How should I explain governance to executives?"
+    answer: "Present it as proactive prevention and translate it into risk language: data exposure, audit readiness and technical debt."
 ---
 ## TL;DR
 

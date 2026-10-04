@@ -20,6 +20,13 @@ source_name: Powerplatform.se
 source_language: en
 source_language_name: English
 source_published_at: '2025-05-06'
+faq:
+  - question: "Why check dependencies before replacing a Power Query datasource in Customer Insights Data?"
+    answer: "Measures and segments may still depend on the datasource, and the article warns that dependencies from things externally using the table can remain."
+  - question: "How do I open the API list that exposes datasource dependencies?"
+    answer: "In Customer Insights Data go to Permissions and open the API tab, then choose the only available API, Customer insights v1. Search for ListAll and select ListAllMeasuresMetadata, later ListAllSegments."
+  - question: "What are the options for a measure that still uses the old datasource?"
+    answer: "You can either remove the measure, or change all its dependencies to another datasource, a Delta one in the article, and refresh it."
 ---
 ## TL;DR
 

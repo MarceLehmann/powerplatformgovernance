@@ -14,6 +14,13 @@ image:
   alt: "Governance-Karte: Der Drahtseilakt — langweilige Deployments, verlässliche Plattform."
 permalink: "/de/posts/gov-test-to-prod-discipline/"
 translation_url: "/en/posts/gov-test-to-prod-discipline/"
+faq:
+  - question: "Warum sollen ausserhalb der Entwicklung nur verwaltete Lösungen importiert werden?"
+    answer: "Wird eine nicht verwaltete Lösung gelöscht, verschwindet nur ihr Container, und die Anpassungen bleiben in der Standardlösung aktiv, während das Entfernen einer verwalteten Lösung alles darin Enthaltene entfernt."
+  - question: "Wem sollten Flows in Produktion gehören?"
+    answer: "Dienstprinzipale, so lautet eine benannte ALM-Best-Practice. Eine Person kann gehen oder den Zugriff verlieren, dann scheitern die Verbindungen des Flows unbemerkt, ein Dienstprinzipal wird nicht durch einen HR-Prozess deaktiviert."
+  - question: "Kann ich eine verwaltete Lösung direkt in der Zielumgebung bearbeiten?"
+    answer: "Nein. Eine verwaltete Lösung lässt sich nicht direkt bearbeiten, nur über eine darübergelegte nicht verwaltete Lösung."
 ---
 
 ## TL;DR

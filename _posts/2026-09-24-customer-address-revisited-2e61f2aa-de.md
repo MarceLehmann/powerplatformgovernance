@@ -19,6 +19,13 @@ source_name: Powerplatform.se
 source_language: en
 source_language_name: English
 source_published_at: '2025-03-16'
+faq:
+  - question: "Wo speichert Dataverse die Adressen von Konten, Kontakten und Leads?"
+    answer: "Adressen von Konten und Kontakten liegen nicht in den Haupttabellen, sondern in einer eigenen Tabelle namens customeraddress. Leads verwenden dafür die separate Tabelle leadaddress."
+  - question: "Wie viele Adressdatensätze legt Dataverse standardmässig an?"
+    answer: "Mit den Standardeinstellungen entstehen pro Konto zwei Adressdatensätze, pro Kontakt drei und pro Lead zwei, auch wenn keine Adressdaten erfasst sind."
+  - question: "Warum wird das bei Marketing mit vielen Leads zum Problem?"
+    answer: "Weil die leeren Adressen mit der Zahl der Leads wachsen. Bei einer Million Leads entstehen zwei Millionen leere Lead-Adressen."
 ---
 ## TL;DR
 

@@ -26,6 +26,13 @@ source_language_name: English
 source_author: Anders Jensen
 source_published_at: '2026-08-12'
 source_type: article
+faq:
+  - question: "What does a Copilot Credit cost and how can I buy it?"
+    answer: "One credit costs one cent by default and sits in one shared tenant pool."
+  - question: "Does a Microsoft 365 Copilot license exempt agents from credits?"
+    answer: "Only on the classic harnesses. Internal users with such a license get the B2E exemption on Standard and Copilot Chat agents."
+  - question: "Who shares the credit budget with Copilot Studio agents?"
+    answer: "Copilot Cowork, Dynamics 365 and Work IQ draw from the same tenant pool, so agents compete with Cowork users for one budget."
 ---
 
 ## TL;DR

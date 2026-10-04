@@ -25,6 +25,13 @@ source_language_name: English
 source_author: Petros Feleskouras
 source_published_at: '2026-08-25'
 source_updated_at: '2026-08-26'
+faq:
+  - question: "Welcher Endpunkt der Power-Platform-API liefert die Copilot-Credit-Kapazität des Tenants?"
+    answer: "Die Route für MCSMessages unter licensing und entitlements liefert Werte für berechtigt, zugewiesen, verbraucht, verfügbar und Status."
+  - question: "Warum reichen die Berichte im Admin Center für den Copilot-Credit-Verbrauch manchmal nicht?"
+    answer: "Die Standardberichte unter Licensing und Copilot Studio erlauben es nicht, Daten umzuformen, eigene Datensätze zu besitzen oder Verläufe über das Standardfenster hinaus zu halten."
+  - question: "Welche Einschränkungen gelten für die Daten der Copilot-Credit-Verbrauchs-API?"
+    answer: "Die API kann für einen Agenten am selben Tag mehrere Zeilen liefern, wenn sich Kanal, Funktion, Modell oder Umgebung unterscheiden."
 ---
 ## TL;DR
 

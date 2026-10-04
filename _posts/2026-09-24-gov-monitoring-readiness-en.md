@@ -14,6 +14,13 @@ image:
   alt: "Governance card: Drilled — five minutes to stop, in writing."
 permalink: "/en/posts/gov-monitoring-readiness/"
 translation_url: "/de/posts/gov-monitoring-readiness/"
+faq:
+  - question: "What are the limits of Power Automate per-run failure alerts?"
+    answer: "They cover only failures with a known fix, have a 28-day cooldown per flow, and must be turned on explicitly in the flow's settings."
+  - question: "How can admins see failed flow runs without relying on alert emails?"
+    answer: "The Monitor experience in the admin center shows every failed run, and the weekly failure digest summarizes all failures. Both only help if someone is assigned to look."
+  - question: "How can an admin stop a runaway cloud flow?"
+    answer: "Use the Disable action in the flow management view of the Power Platform admin center, the flow details screen in the mobile app, or the Disable-AdminFlow PowerShell cmdlet for scripted or bulk action."
 ---
 
 ## TL;DR

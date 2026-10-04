@@ -30,6 +30,13 @@ source_author: Nick Doelman
 source_published_at: '2026-01-02'
 source_updated_at: '2026-01-02'
 source_type: article
+faq:
+  - question: "How do I allow a React single page app to read Dataverse data?"
+    answer: "Enable each table through the site setting Webapi/tablename/enabled set to true, and list the columns by name in Webapi/tablename/fields."
+  - question: "How does the tutorial limit which records a signed-in user sees?"
+    answer: "The tutorial configures table permissions and web roles so that only authenticated users can see their own session records."
+  - question: "What limits does the article mention for BYOC code sites?"
+    answer: "Local preview cannot reach Dataverse, so you test the integration after uploading the site to Power Pages. The design studio disables the pages and style workspaces for code sites."
 ---
 
 ## TL;DR

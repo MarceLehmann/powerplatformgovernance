@@ -26,6 +26,13 @@ source_language_name: English
 source_author: Anders Jensen
 source_published_at: '2026-08-12'
 source_type: article
+faq:
+  - question: "Was kostet ein Copilot Credit und wie kaufe ich ihn?"
+    answer: "Ein Credit kostet standardmässig einen Cent und liegt in einem gemeinsamen Pool des Tenants."
+  - question: "Befreit eine Microsoft-365-Copilot-Lizenz Agenten von Credits?"
+    answer: "Nur bei den klassischen Harnesses. Interne Benutzer mit einer solchen Lizenz erhalten bei Standard- und Copilot-Chat-Agenten die B2E-Ausnahme."
+  - question: "Wer teilt sich das Credit-Budget mit Copilot-Studio-Agenten?"
+    answer: "Copilot Cowork, Dynamics 365 und Work IQ ziehen aus demselben Pool des Tenants, Agenten konkurrieren also mit den Cowork-Nutzern um ein Budget."
 ---
 
 ## TL;DR

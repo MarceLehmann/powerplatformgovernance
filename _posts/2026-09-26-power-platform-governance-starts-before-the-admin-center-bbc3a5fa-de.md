@@ -33,6 +33,13 @@ submitted_by:
   publish_credit: true
   name: Michael Roth
   linkedin: https://www.linkedin.com/in/michaelroth42/
+faq:
+  - question: "Welche vier Fragen sollten die Power-Platform-Governance vor jeder Admin-Einstellung prägen?"
+    answer: "Was wollen wir ermöglichen, was wollen wir schützen, wo akzeptieren wir Risiko und wo nicht."
+  - question: "Warum ist laut Artikel das Belassen der Standardeinstellungen eine Entscheidung?"
+    answer: "Der Artikel nennt Standards wie deaktivierte Tenant-Isolation, Custom Connectors, die in der Default-Umgebung funktionieren, und aktivierte Self-Service-Käufe."
+  - question: "Was senkt Low Code und was lässt es unverändert?"
+    answer: "Der Artikel sagt, Low Code senke die Einstiegshürde, nicht aber die Komplexitätsschwelle."
 ---
 
 ## TL;DR

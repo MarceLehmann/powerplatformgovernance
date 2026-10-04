@@ -34,6 +34,13 @@ submitted_by:
   publish_credit: true
   name: Michael Roth
   linkedin: https://www.linkedin.com/in/michaelroth42/
+faq:
+  - question: "Welche acht Schritte schlägt der Beitrag für verantwortungsvolle KI vor?"
+    answer: "Sich und andere bilden, offene Initiativen unterstützen, KI-Produkte kritisch prüfen, ethisch diskutieren, Transparenz bei Trainingsdaten und Modellen fordern, eigene Projekte ausprobieren und teilen, verantwortungsvolle KI im Betrieb fördern und gemeinschaftsgetragene Werkzeuge bauen."
+  - question: "Was können Citizen Developer laut Beitrag mit Copilot Studio konkret bauen?"
+    answer: "Sie können nachvollziehbare, prüfbare KI-Assistenten bauen, gut dokumentierte Abläufe mit klarer Entscheidungslogik, Lösungen, die Mitarbeitende mit verantwortungsvoller Automatisierung entlasten, und Systeme, die Governance-Vorgaben sowie Fairness und Inklusion berücksichtigen."
+  - question: "Welche KI-Anwendungen kritisiert der Autor als Spielerei?"
+    answer: "Er nennt fünf: E-Mail-Entwürfe als aufgewertete Textvervollständigung, Sitzungszusammenfassungen als einfache Transkription, Kundenchatbots als Entscheidungsbäume, Präsentationsgeneratoren als Umformatierung von Vorlagen und KI-personalisiertes Marketing als automatisiertes A/B-Testing."
 ---
 
 ## TL;DR

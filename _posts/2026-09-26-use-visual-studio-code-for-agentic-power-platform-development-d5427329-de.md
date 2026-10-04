@@ -28,6 +28,13 @@ source_language_name: English
 source_author: Nick Doelman
 source_published_at: '2026-07-16'
 source_type: article
+faq:
+  - question: "Was brauche ich, um Dataverse mit VS Code und einem KI-Agenten aufzubauen?"
+    answer: "Du brauchst einen Power-Platform-Tenant mit Umgebung, Administratorzugriff auf den Tenant, ein agentisches Coding-Werkzeug, ein GitHub-Konto für die Versionsverwaltung und Visual Studio Code, das kostenlos und plattformübergreifend ist."
+  - question: "Reicht ein kostenloses KI-Abonnement für die Entwicklung mit VS Code und Dataverse?"
+    answer: "Kostenlose Stufen funktionieren, die Credits sind laut Autor aber schnell aufgebraucht. Er nutzt selbst den Max-Tarif von Claude, weil er Claude Code täglich einsetzt und die Kapazität braucht."
+  - question: "Ersetzt die Entwicklung per KI-Agent in VS Code das Dataverse-Fachwissen?"
+    answer: "Nein. Der Autor sagt ausdrücklich, dass du weiterhin verstehen musst, wie Dataverse funktioniert und wie Apps zusammenpassen, um eine gute Lösung zu bauen."
 ---
 
 ## TL;DR

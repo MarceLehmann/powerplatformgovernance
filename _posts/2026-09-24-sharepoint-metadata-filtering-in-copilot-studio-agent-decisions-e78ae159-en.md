@@ -27,6 +27,13 @@ source_language_name: English
 source_author: Adi Leibowitz
 source_published_at: '2026-09-01'
 source_updated_at: '2026-09-02'
+faq:
+  - question: "What does the SharePoint metadata filter tool do in Copilot Studio?"
+    answer: "It filters documents by author, editor, date, file type, folder or custom columns and returns filenames, URLs, column values, available columns, match counts and grouped totals."
+  - question: "How does the agent combine metadata filtering and content search to find policies for Canada?"
+    answer: "It first filters the library on the Country column for the value Canada and receives the URLs of the matching files."
+  - question: "Does metadata filtering in Copilot Studio override SharePoint permissions?"
+    answer: "No. Filtering only narrows the content scope and does not replace access control."
 ---
 ## TL;DR
 

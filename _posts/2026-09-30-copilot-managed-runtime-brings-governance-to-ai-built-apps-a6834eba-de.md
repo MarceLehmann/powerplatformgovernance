@@ -29,6 +29,13 @@ source_author: Ramón Rautenstrauch
 source_published_at: '2026-09-30'
 source_updated_at: '2026-09-30'
 source_type: article
+faq:
+  - question: "Was erben Apps, die mit der Copilot Managed Runtime gebaut werden, automatisch?"
+    answer: "Sie erben die Anmeldung über Microsoft Entra und laufen auf Microsoft-gehosteter Ausführung. Mandantenrichtlinien gelten für sie, und sie erscheinen im Inventar des Microsoft-365-Admincenters."
+  - question: "Welche Kontrollen unterstützt die Managed Runtime für Administratoren?"
+    answer: "Bedingter Zugriff, Schutz vor Datenverlust, Connector-Einschränkungen, Freigabegrenzen und Lebenszyklusverwaltung. Diese Kontrollen kommen von der Plattform, sodass Administratoren Einblick in KI-gebaute Apps gewinnen, statt nur deren Erstellung verhindern zu wollen."
+  - question: "Ersetzt die Managed Runtime das Entwerfen einer Governance?"
+    answer: "Nein. Der Artikel sagt, dass von Anfang an eingebaute Governance nicht heisst, dass man Sicherheit vergessen kann, und dass eine schlecht konfigurierte Richtlinie eine schlecht konfigurierte Richtlinie bleibt."
 ---
 
 ## TL;DR

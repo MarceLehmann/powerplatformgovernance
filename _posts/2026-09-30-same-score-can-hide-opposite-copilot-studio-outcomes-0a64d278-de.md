@@ -29,6 +29,13 @@ source_language_name: English
 source_author: Karl-Johan Spiik
 source_published_at: '2026-09-30'
 source_type: article
+faq:
+  - question: "Warum kann eine Bewertung mit gutem Ergebnis trotzdem falsche Agentenantworten durchwinken?"
+    answer: "Weil der General-Qualitätsprüfer Relevanz, Abdeckung und Verankerung in den Quellen misst, die Antwort aber nicht mit der erwarteten Antwort vergleicht."
+  - question: "Was zeigte der Vergleich zweier Testläufe mit fast gleichem Punktestand?"
+    answer: "Im ersten Lauf erreichte der Agent 7 von 20 Punkten, obwohl vier Dokumente nie hätten freigegeben werden dürfen und drei korrekte fehlten. Ein zweiter Lauf kam auf etwa 6 Punkte und lehnte Entwürfe korrekt ab."
+  - question: "Warum ist ein Kontrolllauf beim Testen eines Copilot-Studio-Agenten sinnvoll?"
+    answer: "Ein Kontrolllauf wiederholt die Auswertung ohne Änderung am Agenten. Bei einem Produktivagenten stieg der Punktestand so von 24 auf 31 von 43, obwohl nichts verändert wurde."
 ---
 
 ## TL;DR

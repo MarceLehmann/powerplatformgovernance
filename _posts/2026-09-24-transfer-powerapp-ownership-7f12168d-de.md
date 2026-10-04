@@ -25,6 +25,13 @@ source_author_url: https://www.powerplatformtip.com/about/
 source_language: en
 source_language_name: English
 publisher_disclosure: Beide Publikationen werden von Marcel Lehmann herausgegeben.
+faq:
+  - question: "Wie weise ich eine Power App neu zu, wenn ihr Ersteller gegangen ist?"
+    answer: "Nutze entweder die Admin-Apps des CoE Starter Kits, die eine grafische Oberfläche für Inventar und Besitzerwechsel bieten, oder das Cmdlet Set-AdminPowerAppOwner aus dem Modul Microsoft.PowerApps.Administration.PowerShell."
+  - question: "Was passiert mit dem bisherigen Besitzer, nachdem Set-AdminPowerAppOwner gelaufen ist?"
+    answer: "Der bisherige Besitzer erhält die Rolle Can View, behält also Lesezugriff, verliert aber die Besitzerrechte. Daten und Verbindungen der App bleiben bei der Übertragung unverändert erhalten."
+  - question: "Welche Rechte brauche ich, um den Besitzer einer fremden App zu ändern?"
+    answer: "Du brauchst entsprechende Zugangsdaten als Power-Platform-Administrator, Umgebungsadministrator oder Global Admin. Normale Maker-Rechte genügen dafür nicht."
 ---
 ## TL;DR
 

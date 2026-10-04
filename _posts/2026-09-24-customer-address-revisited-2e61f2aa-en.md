@@ -19,6 +19,13 @@ source_name: Powerplatform.se
 source_language: en
 source_language_name: English
 source_published_at: '2025-03-16'
+faq:
+  - question: "Where does Dataverse store the addresses of accounts, contacts and leads?"
+    answer: "Addresses of accounts and contacts do not live in the main tables but in a separate table called customeraddress. Leads use the separate table leadaddress for this."
+  - question: "How many address records does Dataverse create by default?"
+    answer: "With the default settings, each account gets two address records, each contact three and each lead two, even when no address data is entered."
+  - question: "Why does this become a problem in marketing with many leads?"
+    answer: "Because the empty addresses grow with the number of leads. One million leads generate two million empty lead addresses."
 ---
 ## TL;DR
 

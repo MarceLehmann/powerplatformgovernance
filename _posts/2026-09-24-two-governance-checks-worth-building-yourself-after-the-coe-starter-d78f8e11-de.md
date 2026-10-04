@@ -22,6 +22,13 @@ source_author: Matthias Einig
 source_language: en
 source_language_name: English
 source_published_at: '2026-06-23'
+faq:
+  - question: "Wie aktuell ist ein Governance-Inventar für Microsoft 365 und Power Platform?"
+    answer: "Nicht in Echtzeit. Die Graph-API-Endpunkte werden gedrosselt, daher sind Live-Daten über viele Dienste bei grösseren Tenants laut Rencore für keinen Anbieter ausser Microsoft technisch machbar."
+  - question: "Kann Governance das Erstellen einer App oder eines Flows vor dem Anlegen abfangen?"
+    answer: "Nein, nicht im Moment des Entstehens, denn Microsoft stellt dieses Ereignis Drittwerkzeugen nicht zur Verfügung. Möglich ist, neue Apps und Flows danach zu erkennen und den Ersteller zu benachrichtigen."
+  - question: "Welche Daten sammelt ein Governance-Werkzeug wie Rencore, und wo werden sie gehostet?"
+    answer: "Es sammelt nur Metadaten, keine Dateiinhalte, Nachrichtentexte oder nutzergenerierten Inhalte. Die Daten landen in einer eigenen Azure-Ressourcengruppe pro Kunde, verschlüsselt mit einem kundenspezifischen Schlüssel."
 ---
 ## TL;DR
 

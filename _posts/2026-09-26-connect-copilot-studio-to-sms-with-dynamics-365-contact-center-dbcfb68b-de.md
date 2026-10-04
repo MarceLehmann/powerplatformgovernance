@@ -28,6 +28,13 @@ source_language_name: English
 source_author: Matthew Devaney
 source_published_at: '2026-08-30'
 source_type: article
+faq:
+  - question: "Was brauche ich, damit ein Copilot-Studio-Agent SMS senden und empfangen kann?"
+    answer: "Du brauchst drei Bausteine: einen Copilot-Studio-Agenten mit Anweisungen und Wissensquelle, eine eigenständige Installation von Dynamics 365 Contact Center und ein kostenpflichtiges Twilio-Konto mit gekaufter Telefonnummer."
+  - question: "Funktioniert ein kostenloses Twilio-Testkonto mit Dynamics 365 Contact Center?"
+    answer: "Nein. Der Autor stellt klar, dass sich ein kostenloses Testkonto nicht erfolgreich mit Contact Center verbinden lässt."
+  - question: "Welche Regeln sollten die Anweisungen eines SMS-Agenten enthalten?"
+    answer: "Im Beispiel gehört dazu die Vorgabe, Antworten möglichst unter 320 Zeichen zu halten, nur aus der Wissensbasis zu antworten und nicht zu raten."
 ---
 
 ## TL;DR

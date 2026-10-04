@@ -26,6 +26,13 @@ source_author: Josiah Opiyo
 source_language: en
 source_language_name: English
 source_published_at: '2026-09-04'
+faq:
+  - question: "Welche Funktionen bietet SharePoint Advanced Management für die Governance?"
+    answer: "Der Beitrag nennt Richtlinien für Website-Eigentümer, die Verwaltung inaktiver Websites, Bestätigungen, Katalogverwaltung und Änderungsverlauf."
+  - question: "Mit welchen fünf Punkten sollte man die Governance beginnen?"
+    answer: "Eigentum, Lebenszyklus, Zugriff, Überfreigabe und Belege. Sie klären, wer für eine Website verantwortlich ist, welche Inhalte überholt sind, wer worauf zugreifen kann, wo unbeabsichtigt breit geteilt wird und was Berichte und Überprüfungen belegen."
+  - question: "Muss vor dem Einsatz von Copilot in SharePoint alles perfekt geordnet sein?"
+    answer: "Nein. Der Autor schreibt, das Ziel sei nicht unbedingt, alles perfekt zu machen."
 ---
 ## TL;DR
 

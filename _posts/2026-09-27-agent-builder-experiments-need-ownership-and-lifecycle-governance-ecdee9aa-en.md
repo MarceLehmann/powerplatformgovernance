@@ -29,6 +29,13 @@ source_language_name: English
 source_author: Karl-Johan Spiik
 source_published_at: '2026-09-27'
 source_type: article
+faq:
+  - question: "Which governance gaps showed up after many Agent Builder experiments?"
+    answer: "Anyone could create agents, and by the time they showed up in the admin center there were already hundreds."
+  - question: "How does the self-built governance flow for Agent Builder agents work?"
+    answer: "The Graph API detects new agents and stores them in a SharePoint list."
+  - question: "After how many days without use are agents flagged in the example?"
+    answer: "After 60 days of inactivity. The owner then receives a card offering the choice to delete the agent or explain why it should stay."
 ---
 
 ## TL;DR

@@ -14,6 +14,13 @@ image:
   alt: "Governance card: The Oracle — your agent is confident, is it right?"
 permalink: "/en/posts/gov-ai-agent-governance/"
 translation_url: "/de/posts/gov-ai-agent-governance/"
+faq:
+  - question: "Can a Copilot Studio agent pass evaluation and still give an inappropriate answer?"
+    answer: "Yes. Evaluation measures correctness and performance, not safety, bias or ethics, so a release gate needs a separate responsible AI review step."
+  - question: "How do I reduce confidently wrong answers from a Copilot Studio agent?"
+    answer: "Ground responses in trusted data sources scoped to what the requesting user may see. An ungoverned knowledge source risks a confidently delivered wrong answer."
+  - question: "Why does an agent have a bigger blast radius than a regular app?"
+    answer: "An agent acts on incomplete or wrong information immediately and at scale, where a person might have paused to double-check."
 ---
 
 ## TL;DR

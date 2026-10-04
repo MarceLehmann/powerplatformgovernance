@@ -28,6 +28,13 @@ source_author: James Westlake
 source_published_at: '2026-09-29'
 source_updated_at: '2026-09-29'
 source_type: article
+faq:
+  - question: "Which three questions stop AI pilots from moving into production?"
+    answer: "People ask what the system can reach, who owns it and what happens if it touches something it should not."
+  - question: "What should an AI inventory record for each system?"
+    answer: "Four things: the number of active users, the cost, the content and systems it can reach, and a named owner."
+  - question: "Why do Microsoft Purview and Entra not give a complete AI overview on their own?"
+    answer: "Purview classifies and protects data across Microsoft 365 and audits Microsoft 365 Copilot interactions, but its reach into non-Microsoft services depends on connectors."
 ---
 
 ## TL;DR

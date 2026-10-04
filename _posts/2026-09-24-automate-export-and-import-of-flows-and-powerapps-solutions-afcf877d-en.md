@@ -26,6 +26,13 @@ source_author_url: https://www.powerplatformtip.com/about/
 source_language: en
 source_language_name: English
 publisher_disclosure: Both publications are edited by Marcel Lehmann.
+faq:
+  - question: "Why can a deleted or broken Power Automate flow not simply be undone?"
+    answer: "Power Automate has no built-in undo and no one-click restore for deleted or broken flows."
+  - question: "What must be in place before flows can be exported automatically?"
+    answer: "Package your flows and apps in a solution, then let a scheduled cloud flow export it as a zip and save each export to SharePoint, OneDrive or Azure Blob Storage."
+  - question: "What file format does the automated export produce?"
+    answer: "The platform exports solutions as zip files, both managed and unmanaged. To restore, import the saved zip back into the target environment to bring the flow, app or solution back to life."
 ---
 ## TL;DR
 

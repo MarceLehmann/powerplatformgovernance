@@ -22,6 +22,13 @@ source_language: en
 source_language_name: English
 source_author: Benedikt
 source_published_at: '2025-03-31'
+faq:
+  - question: "What does an XML map file do in Power Platform ALM?"
+    answer: "It defines which plugin DLLs and web resources belong to a solution and where they are saved on the local disk. The pipeline can then use freshly built binaries from the build output."
+  - question: "Which mapping types can a Power Platform map file use?"
+    answer: "Folder mapping maps a whole folder and is typically used for web resources. File-to-file mapping links one source file to one target file and is common for plugin DLLs."
+  - question: "Why are map files needed when solutions already contain the components?"
+    answer: "Depending on whether you follow an environment-centric or a source-code-centric ALM approach, a solution may be created from an environment instead of a repository."
 ---
 ## TL;DR
 

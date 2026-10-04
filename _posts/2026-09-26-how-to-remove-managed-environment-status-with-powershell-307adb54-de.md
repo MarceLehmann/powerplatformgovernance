@@ -31,6 +31,13 @@ submitted_by:
   publish_credit: true
   name: Michael Roth
   linkedin: https://www.linkedin.com/in/michaelroth42/
+faq:
+  - question: "Warum möchte man den Status Managed Environment wieder entfernen?"
+    answer: "Der Beitrag nennt die Lizenzfolge als Hintergrund. Managed Environments verlangen eine Premium-Lizenz für jeden Benutzer, was der Autor in vielen Organisationen für schwer durchsetzbar hält."
+  - question: "Was braucht man, bevor man den Befehl ausführt?"
+    answer: "Das PowerShell-Modul Microsoft.PowerApps.Administration.PowerShell muss installiert sein. Ausserdem sind Rechte als Umgebungsadministrator oder Mandantenadministrator nötig."
+  - question: "Welches Cmdlet entfernt den Managed-Status und mit welchen Parametern?"
+    answer: "Das Cmdlet Set-AdminPowerAppEnvironmentGovernanceConfiguration. Es braucht zwei Parameter: EnvironmentName mit der Kennung der Umgebung und UpdatedGovernanceConfiguration mit dem zuvor erstellten Objekt."
 ---
 
 ## TL;DR

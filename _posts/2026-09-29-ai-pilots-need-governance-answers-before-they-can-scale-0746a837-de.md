@@ -28,6 +28,13 @@ source_author: James Westlake
 source_published_at: '2026-09-29'
 source_updated_at: '2026-09-29'
 source_type: article
+faq:
+  - question: "Welche drei Fragen blockieren die Skalierung von KI-Piloten?"
+    answer: "Gefragt wird, worauf das System zugreifen kann, wem es gehört und was passiert, wenn es etwas berührt, das es nicht berühren sollte."
+  - question: "Welche Angaben gehören pro KI-System in ein Inventar?"
+    answer: "Vier Angaben: die Zahl aktiver Nutzer, die Kosten, die erreichbaren Inhalte und Systeme sowie ein namentlich genannter Verantwortlicher."
+  - question: "Warum liefern Microsoft Purview und Entra allein keinen KI-Gesamtüberblick?"
+    answer: "Purview klassifiziert und schützt Daten in Microsoft 365 und prüft Copilot-Interaktionen, reicht je nach Konnektoren aber nur begrenzt in fremde Dienste."
 ---
 
 ## TL;DR

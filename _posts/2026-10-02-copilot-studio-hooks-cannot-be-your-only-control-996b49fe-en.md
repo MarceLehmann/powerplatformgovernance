@@ -29,6 +29,13 @@ source_language_name: English
 source_author: Josh Cook
 source_published_at: '2026-10-02'
 source_type: article
+faq:
+  - question: "What happens in Copilot Studio when a hook workflow fails or times out?"
+    answer: "The agent simply continues. The documentation says that a hook workflow which fails, times out or returns an unreadable response does not stop the agent."
+  - question: "Where should rules that block unauthorized updates be enforced?"
+    answer: "In the underlying service, not in the hook. The documentation says rules that must block unauthorized updates belong in the service itself."
+  - question: "How can I test that a Dataverse pilot stays protected when a hook breaks?"
+    answer: "Break the hook workflow on purpose and then try an update that should be blocked. If the underlying service permissions still refuse it, the real control works."
 ---
 
 ## TL;DR

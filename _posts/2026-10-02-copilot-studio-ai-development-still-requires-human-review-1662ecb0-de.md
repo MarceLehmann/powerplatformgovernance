@@ -31,6 +31,13 @@ source_language_name: English
 source_author: Karl-Johan Spiik
 source_published_at: '2026-10-02'
 source_type: article
+faq:
+  - question: "Wie unterscheidet sich der Ablauf mit Coding-Agent von klassischer Copilot-Studio-Entwicklung?"
+    answer: "Laut Koskinen sind die Schritte nicht verschwunden, sondern verschoben. Der Ablauf mit Coding-Agent verlagert die manuelle Arbeit, und Validierung sowie Plattformwissen bleiben wichtig."
+  - question: "Was überlässt Koskinen der KI und was bleibt beim Menschen?"
+    answer: "Die KI kann Kontext, Erzeugung und Tests übernehmen, dazu Dokumentationssuche und das Prüfen von Schemata. Beim Menschen bleiben Anforderung, Hinterfragen, Prüfung und Bereitstellung, ausserdem validiert er Architektur, Geschäftslogik, Sicherheit, Authentifizierung und Randfälle."
+  - question: "Welche Grenzen haben Coding-Agenten bei Copilot Studio aktuell?"
+    answer: "Coding-Agenten können in Themen noch keine Tool-Referenzen anlegen. Von Agenten erstellte Power-Automate-Flows können ihre Verbindungen erzeugen, Themen können das nicht, die Verbindung muss daher manuell in der Oberfläche angelegt werden."
 ---
 
 ## TL;DR

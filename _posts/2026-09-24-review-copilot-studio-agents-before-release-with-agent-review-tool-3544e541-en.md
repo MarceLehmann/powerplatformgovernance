@@ -21,6 +21,13 @@ source_language: en
 source_language_name: English
 source_author: Ramakrishnan Raman
 source_published_at: '2026-08-18'
+faq:
+  - question: "What is the Agent Review Tool and where do you get it?"
+    answer: "It is a review tool for Copilot Studio agents before release and part of the Copilot Agent Kit. It is available through the Microsoft Marketplace."
+  - question: "By which four criteria does the tool judge the quality of instructions?"
+    answer: "The instruction rating follows four dimensions: Clarity, Actionability, Scope discipline and Composability."
+  - question: "How did the results change in the example after the rework?"
+    answer: "The fictional ZAVA Visual Merchandiser started with 63 percent, 39 of 54 checks passed, 8 errors and 7 warnings."
 ---
 ## TL;DR
 
