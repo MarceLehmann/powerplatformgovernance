@@ -21,15 +21,11 @@ source_language_name: English
 source_published_at: '2025-03-16'
 faq:
   - question: "Where does Dataverse store the addresses of accounts, contacts and leads?"
-    answer: "Addresses of accounts and contacts do not live in the main tables but in a separate table called customeraddress. Leads use the separate table leadaddress for this. The data is hidden from typical user operations, yet it still counts in the storage calculations of the Power Platform admin center."
+    answer: "Addresses of accounts and contacts do not live in the main tables but in a separate table called customeraddress. Leads use the separate table leadaddress for this."
   - question: "How many address records does Dataverse create by default?"
-    answer: "With the default settings, each account gets two address records, each contact three and each lead two, even when no address data is entered. Fields such as createdon, modifiedon and modifiedby are always created, so even these empty records take up storage in Dataverse."
+    answer: "With the default settings, each account gets two address records, each contact three and each lead two, even when no address data is entered."
   - question: "Why does this become a problem in marketing with many leads?"
-    answer: "Because the empty addresses grow with the number of leads. One million leads generate two million empty lead addresses. They consume storage although they hold no information. The post describes the scenario for organizations using Dataverse in marketing with millions of leads."
-  - question: "Which new features improve the handling of address records?"
-    answer: "There are two new options. First, Dataverse creates customeraddress and leadaddress records only when they actually contain data. Second, customeraddress records can be removed without deleting the related contact, account or lead. Both address the storage taken up by empty address records, which show up in the storage calculations of the Power Platform admin center."
-  - question: "How do you clean up existing empty addresses, and what should you watch for?"
-    answer: "The first feature does not remove existing empty records. The second feature removes customeraddress records without deleting the contact, account or lead, which the author calls much easier. As a workaround, create new records with the first feature on, merge them with the old ones and remove the old deactivated records. He demands a forced backup of the instance before running anything like this."
+    answer: "Because the empty addresses grow with the number of leads. One million leads generate two million empty lead addresses."
 ---
 ## TL;DR
 

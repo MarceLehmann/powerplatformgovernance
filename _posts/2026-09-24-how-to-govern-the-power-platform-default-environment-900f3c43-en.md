@@ -27,15 +27,11 @@ source_language_name: English
 source_published_at: '2026-02-10'
 faq:
   - question: "Can the Power Platform default environment be limited to a security group?"
-    answer: "No. Everyone in the tenant can access the default environment, including external guests and B2B users, and it cannot be administered through standard security group structures. It also allows no manual backups, although you can get at backup data by working with Microsoft support. These limits are why the article asks you to decide what the environment is for."
+    answer: "No. Everyone in the tenant can access the default environment, including external guests and B2B users, and it cannot be administered through standard security group structures."
   - question: "What does sharing an app with everyone really do in the default environment?"
-    answer: "It technically grants permissions to all user accounts in the directory, which can include external guests and sometimes service accounts or managed identities. Makers usually picture only their colleagues, so the real audience is far larger than intended. The article treats this invisible scaling as the main governance risk and recommends disabling sharing with everyone."
-  - question: "Which governance models does the article offer for the default environment?"
-    answer: "Three: personal productivity only, which it recommends; tolerated but discouraged, a transition phase for existing tenants with expected migration; and locked down for makers, who are redirected to dedicated learning environments. Mixing models creates unpredictability, so pick one and document it. A lockdown needs a viable alternative or users will find workarounds."
+    answer: "It technically grants permissions to all user accounts in the directory, which can include external guests and sometimes service accounts or managed identities."
   - question: "Which licensing defaults create hidden costs in the default environment?"
-    answer: "Trials and viral plans, self-service purchases and auto-claim policies. Trials expire silently and break solutions built on them, self-service purchases create commitments nobody approved, and auto-claim assigns premium licenses when users touch premium features. One shared app using premium features can therefore trigger license assignments for everyone who opens it."
-  - question: "What belongs on the minimum baseline for the default environment?"
-    answer: "Disable sharing with everyone, reduce or disable trials and viral plans, disable self-service purchases and disable auto-claim policies. Add a strict, intentional DLP policy, scheduled checks that detect violations and notify owners, and a clearly named alternative environment where makers can experiment. Before anything is enforced, tell makers the rules and why they exist, for example through a central hub."
+    answer: "Trials and viral plans, self-service purchases and auto-claim policies. Auto-claim assigns premium licenses when users touch premium features, so one shared app can trigger license assignments for everyone who opens it."
 ---
 ## TL;DR
 

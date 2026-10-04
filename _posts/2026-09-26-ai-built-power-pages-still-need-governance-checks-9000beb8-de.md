@@ -31,15 +31,11 @@ source_published_at: '2026-02-26'
 source_type: article
 faq:
   - question: "Was kann das Power-Pages-Plugin für Claude Code ohne manuelle Einrichtung bauen?"
-    answer: "Im Test des Autors entstand aus einem Prompt eine komplette Power-Pages-Seite mit Datenmodell, Dataverse-Tabellen, Beziehungen und Authentifizierung, danach folgten Bereitstellung und Aktivierung. Der Autor genehmigte vor allem Pläne und gab die Richtung vor. Das Plugin ist in der öffentlichen Preview, arbeitet mit Freigabepunkten und erkannte bestehende Tabellen wie Contact."
+    answer: "Im Test des Autors entstand aus einem Prompt eine komplette Power-Pages-Seite mit Datenmodell, Dataverse-Tabellen, Beziehungen und Authentifizierung, danach folgten Bereitstellung und Aktivierung."
   - question: "Welche Konfigurationslücken fand der Autor in der KI-gebauten Power-Pages-Seite?"
-    answer: "Das Plugin ist nicht solution-aware; der Autor reagiert im Artikel mit 'Not solution aware! Arg! What?!?'. Zudem fehlten wichtige Teile bei den Tabellenberechtigungen, eine Tabelle wurde vergessen, und eine Web-API-Websiteeinstellung fehlte. Bei jeder Authentifizierung ausser Microsoft Entra ID muss die Konfiguration manuell erfolgen."
-  - question: "Geht der Aufbau einer Power-Pages-Seite mit KI schneller als im Design Studio?"
-    answer: "Nicht unbedingt. Laut Autor wäre die Arbeit mit dem Design Studio und der Verwaltungs-App etwas schneller gewesen. Das KI-Ergebnis war optisch ansprechender und flexibler, der Prozess aber ressourcenhungrig: Das Tageskontingent war dreimal aufgebraucht, bevor er vom Pro- auf den Max-Plan wechselte."
-  - question: "Machen KI-gestützte Methoden die klassischen Power-Pages-Werkzeuge überflüssig?"
-    answer: "Nein. Der Autor schliesst, dass es weiterhin einen Platz für die klassischen Power-Pages-Werkzeuge zum Bauen und Konfigurieren von Seiten gibt. Er hält es für interessant zu sehen, wie sich die Technik in den nächsten Monaten entwickelt und durchsetzt. Single-Page-Apps auf Power Pages behalten die Vorteile von Dataverse-Anbindung, Hosting und Sicherheit."
+    answer: "Das Plugin ist nicht solution-aware, bei den Tabellenberechtigungen fehlten wichtige Teile (eine Tabelle wurde vergessen), und eine Web-API-Websiteeinstellung fehlte. Jede Authentifizierung ausser Microsoft Entra ID muss manuell eingerichtet werden."
   - question: "Was sollte eine Prüfung kontrollieren, bevor eine KI-generierte Power-Pages-Seite live geht?"
-    answer: "Die Punkte prüfen, an denen der Test Lücken zeigte: ob die Seite solution-aware ist, ob Tabellenberechtigungen vorhanden und vollständig sind, ob die Web-API-Websiteeinstellung gesetzt ist und ob jede Authentifizierung ausser Microsoft Entra ID von Hand eingerichtet wurde. Das Plugin erstellt Aktionspläne und fragt nach Freigabe, sodass ein Mensch eingebunden bleibt."
+    answer: "Prüfen, ob die Seite solution-aware ist, ob die Tabellenberechtigungen vollständig sind, ob die Web-API-Websiteeinstellung gesetzt ist und ob jede Authentifizierung ausser Microsoft Entra ID manuell eingerichtet wurde."
 ---
 
 ## TL;DR

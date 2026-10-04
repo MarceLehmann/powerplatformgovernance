@@ -26,15 +26,11 @@ source_language_name: English
 source_published_at: '2026-08-16'
 faq:
   - question: "Why is uncertainty the real problem with many SharePoint sites?"
-    answer: "Because as sites multiply, basic questions stay unanswered: where does content belong, who owns the site, is the content still relevant, who has access, and is there a duplicate space for the same purpose? While these remain open, administration turns reactive. The sheer number of sites is not the core issue, the missing overview is."
+    answer: "Because as sites multiply, basic questions stay unanswered: where does content belong, who owns the site, is the content still relevant, who has access, and is there a duplicate space for the same purpose?"
   - question: "What causes sprawl in SharePoint even though IT wants to avoid it?"
-    answer: "Self-service creation was introduced to avoid IT bottlenecks. Creating is easy while retiring is hard. On top of that, Teams and Microsoft 365 groups are closely connected to SharePoint, so restricting one creation route does not necessarily address every route through which new sites can appear."
-  - question: "Which site attributes does the post look at for SharePoint governance?"
-    answer: "The post covers ownership status, such as owners who have left or have inactive accounts, time without meaningful activity, external sharing, duplicate sites serving the same purpose, naming and purpose, sensitivity, membership and permissions, and lifecycle expectations. Together these questions help administrators see where attention is actually needed rather than just producing another large list of sites."
+    answer: "Self-service creation was introduced to avoid IT bottlenecks. Creating is easy while retiring is hard."
   - question: "Does a high number of SharePoint sites automatically mean poor governance?"
-    answer: "No. A large number of sites says nothing about quality on its own. What matters is whether the organisation understands what it has and can make sensible decisions about it. Some organisations keep self-service creation open and add clearer guidance, ownership expectations, lifecycle reviews and reporting, while others require approval for certain types of creation."
-  - question: "Which measures and tools help against uncontrolled growth of SharePoint sites?"
-    answer: "The post lists lifecycle reviews with reporting, approvals for certain site types, ownership policies that flag sites failing the defined requirements and the site lifecycle management capabilities for ownership, inactivity and attestation. Named tools are PowerShell for inventory and reporting and the SharePoint admin center with its controls and reports."
+    answer: "No. A large number of sites says nothing about quality on its own."
 ---
 ## TL;DR
 

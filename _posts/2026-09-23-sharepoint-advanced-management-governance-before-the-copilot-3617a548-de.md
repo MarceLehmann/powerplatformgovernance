@@ -28,15 +28,11 @@ source_language_name: English
 source_published_at: '2026-09-04'
 faq:
   - question: "Welche Funktionen bietet SharePoint Advanced Management für die Governance?"
-    answer: "Der Beitrag nennt Richtlinien für Website-Eigentümer, die Verwaltung inaktiver Websites, Bestätigungen, Katalogverwaltung und Änderungsverlauf. Dazu kommen Governance-Berichte, Berichte zu Berechtigungen und Benutzerzugriff, Überwachung von Freigabelinks, Snapshots von Vertraulichkeitsbezeichnungen und Zugriffsprüfungen. Der Bericht zur Data Access Governance ist über PowerShell verfügbar."
+    answer: "Der Beitrag nennt Richtlinien für Website-Eigentümer, die Verwaltung inaktiver Websites, Bestätigungen, Katalogverwaltung und Änderungsverlauf."
   - question: "Mit welchen fünf Punkten sollte man die Governance beginnen?"
-    answer: "Der Beitrag schlägt fünf Startpunkte vor. Eigentum klärt, wer für eine Website verantwortlich ist. Lebenszyklus fragt, welche Websites oder Inhalte inaktiv oder überholt sind. Zugriff zeigt, wer worauf und warum zugreifen kann. Überfreigabe deckt unbeabsichtigt breite Sichtbarkeit auf. Belege prüfen Annahmen anhand von Berichten und Überprüfungen."
-  - question: "Welche ergänzenden Schutzmassnahmen nennt der Beitrag neben SAM?"
-    answer: "Genannt werden Microsoft Entra Conditional Access, Sicherheitsgruppen, eingeschränkter Zugriff, Restricted Content Discovery und Download-Richtlinien. Der Beitrag stellt sie neben die Berichte von SharePoint Advanced Management. Berichte zu Berechtigungen, Benutzerzugriff und Freigabelinks helfen Administratoren zu erkennen, wo Aufmerksamkeit nötig ist, statt jede Website gleich zu behandeln."
-  - question: "Welche Einblicke gibt es zu Agenten und Copilot-Inhalten?"
-    answer: "Der Beitrag hebt neuere Berichte zu Agenten hervor, darunter Einblicke in kürzlich erstellte Agenten und in die Interaktion von Agenten mit Inhalten in SharePoint und OneDrive. Zudem steht PowerShell etwa für Berichte zur Data Access Governance bereit. Den Agentenbericht nennt der Autor besonders interessant."
+    answer: "Eigentum, Lebenszyklus, Zugriff, Überfreigabe und Belege. Sie klären, wer für eine Website verantwortlich ist, welche Inhalte überholt sind, wer worauf zugreifen kann, wo unbeabsichtigt breit geteilt wird und was Berichte und Überprüfungen belegen."
   - question: "Muss vor dem Einsatz von Copilot in SharePoint alles perfekt geordnet sein?"
-    answer: "Nein. Der Autor schreibt, das Ziel sei nicht unbedingt, alles perfekt zu machen. Es gehe darum, Prioritäten zu erkennen und verhältnismässige Kontrollen anzuwenden. Dafür dienen die fünf Startpunkte Eigentum, Lebenszyklus, Zugriff, Überfreigabe und Belege. Der Beitrag ist ein Community-Beitrag von Josiah Opiyo mit drei Minuten Lesezeit."
+    answer: "Nein. Der Autor schreibt, das Ziel sei nicht unbedingt, alles perfekt zu machen."
 ---
 ## TL;DR
 

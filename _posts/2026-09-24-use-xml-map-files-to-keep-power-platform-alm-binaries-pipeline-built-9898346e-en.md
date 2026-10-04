@@ -24,15 +24,11 @@ source_author: Benedikt
 source_published_at: '2025-03-31'
 faq:
   - question: "What does an XML map file do in Power Platform ALM?"
-    answer: "It defines which plugin DLLs and web resources belong to a solution and where they are saved on the local disk. The pipeline can then use freshly built binaries from the build output. This keeps binaries out of the repository and makes sure only tested, pipeline-built components reach downstream environments."
+    answer: "It defines which plugin DLLs and web resources belong to a solution and where they are saved on the local disk. The pipeline can then use freshly built binaries from the build output."
   - question: "Which mapping types can a Power Platform map file use?"
-    answer: "Folder mapping maps a whole folder and is typically used for web resources. File-to-file mapping links one source file to one target file and is common for plugin DLLs. File-to-path mapping searches for specific files inside mapped folders, which helps when the file structure is spread across several locations."
-  - question: "How do the Power Platform Build Tools pick up a map file?"
-    answer: "Add the MapFile parameter to the unpack and pack steps of the Build Tools in the YAML pipeline and point it at the XML file. The unpack and pack steps of the CLI offer the option to use map files, and the Azure DevOps UI of the Build Tools shows it as well. The author stores one map file per solution in his repository."
+    answer: "Folder mapping maps a whole folder and is typically used for web resources. File-to-file mapping links one source file to one target file and is common for plugin DLLs."
   - question: "Why are map files needed when solutions already contain the components?"
-    answer: "Depending on whether you follow an environment-centric or a source-code-centric ALM approach, a solution may be created from an environment instead of a repository. Developers usually deploy pro-code components to development that are not ready for downstream environments. Map files let the pipeline supply the binaries, so what reaches downstream environments has been built and tested."
-  - question: "Does the PAC clone command also work with map files?"
-    answer: "Yes, the article names the PAC clone command as a more recent addition for a healthy ALM that supports map files. With a clone, a developer creates a copy of a solution on the local disc that works with a normal msbuild command, which allows a more pro-dev way of working. The author admits map files can be confusing at first."
+    answer: "Depending on whether you follow an environment-centric or a source-code-centric ALM approach, a solution may be created from an environment instead of a repository."
 ---
 ## TL;DR
 

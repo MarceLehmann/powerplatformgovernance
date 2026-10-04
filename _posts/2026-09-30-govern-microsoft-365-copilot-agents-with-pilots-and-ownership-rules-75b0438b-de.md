@@ -31,15 +31,11 @@ source_published_at: '2026-07-12'
 source_type: article
 faq:
   - question: "Welchen Zugriff haben deklarative Agenten in Microsoft 365 Copilot?"
-    answer: "Denselben wie der Benutzer und nicht mehr. Agenten können keine SharePoint-Sites, Postfächer oder Teams-Kanäle öffnen, die der Benutzer selbst nicht öffnen kann. Sie laufen auf demselben Orchestrator, denselben Sprachmodellen und KI-Diensten wie Copilot, erben dessen Datenschutz und beachten Vertraulichkeitsbezeichnungen und Verschlüsselung aus Purview Information Protection."
+    answer: "Denselben wie der Benutzer und nicht mehr. Agenten können keine SharePoint-Sites, Postfächer oder Teams-Kanäle öffnen, die der Benutzer selbst nicht öffnen kann."
   - question: "Was ist das Hauptrisiko beim Aktivieren von Agenten in Microsoft 365 Copilot?"
-    answer: "Oversharing. Agenten geben keine Daten preis, aktivieren aber bestehende Berechtigungen schnell, wodurch zu breiter Zugriff auf alte SharePoint-Sites sichtbar wird. Der Autor nennt das ein Problem der Datenhygiene. Microsoft empfiehlt vor einem breiten Rollout Purview und SharePoint Advanced Management, die beide in Copilot-Lizenzen enthalten sind."
-  - question: "Welche Steuerungen gibt es im Admin Center für Agenten in Microsoft 365?"
-    answer: "Der Bereich Agents bietet Benutzerzugriff für alle, niemanden oder ausgewählte Benutzer und Gruppen, zulässige Agententypen von Microsoft, der eigenen Organisation und externen Herausgebern (auf Wunsch nur zertifizierte), Freigabe oder Sperre pro Agent, Regeln zum Teilen sowie Verwaltungsregeln mit Richtlinienvorlagen, auch für Agenten ohne Besitzer."
+    answer: "Oversharing. Agenten geben keine Daten preis, aktivieren aber bestehende Berechtigungen schnell, wodurch zu breiter Zugriff auf alte SharePoint-Sites sichtbar wird."
   - question: "Was passiert mit Agenten, wenn ihr Ersteller das Unternehmen verlässt?"
-    answer: "Mit Agent Builder gebaute Agenten können herrenlos werden, wenn Mitarbeitende die Stelle wechseln. Das Admin Center bietet Verwaltungsregeln für Agenten ohne Besitzer, die sie an die Führungskraft des früheren Besitzers übertragen. Den Wildwuchs an Agenten zählt der Autor zu den Risiken, die ohne Leitplanken entstehen."
-  - question: "Warum verursacht auch das Abschalten von Agenten Kosten?"
-    answer: "Einschränkungen treiben Benutzer zu nicht freigegebenen Werkzeugen und zu Schatten-KI ausserhalb der IT-Sicht. Seit Dezember 2025 funktionieren die integrierten Agenten Researcher und Analyst als Werkzeuge in Copilot Chat auch bei deaktivierten Agenten, nur ihre Sichtbarkeit in der linken Navigation folgt dem Schalter. Der Autor schlägt vor, mit den Agenten von Microsoft und den eigenen zu beginnen, per Benutzerzugriff eine Pilotgruppe zu öffnen und danach zu erweitern, sobald die Nutzung bekannt ist."
+    answer: "Mit Agent Builder gebaute Agenten können herrenlos werden, wenn Mitarbeitende die Stelle wechseln. Das Admin Center bietet Verwaltungsregeln für Agenten ohne Besitzer, die sie an die Führungskraft des früheren Besitzers übertragen."
 ---
 
 ## TL;DR

@@ -31,15 +31,11 @@ source_published_at: '2025-08-28'
 source_type: article
 faq:
   - question: "Do I need a Dynamics 365 license to use the Dynamics 365 Outlook connector?"
-    answer: "No. According to the author, anyone with a Power Apps license is fully entitled to use it. It associates emails with Dataverse records and links Dataverse contacts to Outlook contacts. The author sees naming confusion as one reason why the connector is so rarely used."
+    answer: "No. According to the author, anyone with a Power Apps license is fully entitled to use it."
   - question: "What is the advantage of native Exchange Online integration in Dataverse?"
-    answer: "It lets you send and receive emails from Power Apps without a Power Automate flow, so flow run allocations are preserved, and it needs no special service account. Setup involves server integration, mailboxes, queues and email-enabled features, which the article leaves to Microsoft documentation."
-  - question: "Where is the Dataverse diagnostics speed test and how should I use it?"
-    answer: "Append tools/diagnostics/diag.aspx to the crm.dynamics.com address of your environment. The tool helps with slow model-driven apps by measuring how your environment responds. The author recommends running it regularly and keeping baseline results, so you can spot performance degradation by comparing current runs with earlier ones."
+    answer: "It lets you send and receive emails from Power Apps without a Power Automate flow, so flow run allocations are preserved, and it needs no special service account."
   - question: "How do Dataverse field mappings work and what are their limits?"
-    answer: "When you create a related record in a model-driven app, such as a contact from an account subgrid, mapped values are copied to the new child record. This happens only at creation, needs matching field types and fields of equal or smaller size, and later changes on the parent do not cascade. The interface exists only in the classic table designer."
-  - question: "Can I create a multi-table lookup in Dataverse without code?"
-    answer: "Not in a maker-friendly way. The customer lookup that points to accounts or contacts is built in, but custom lookups to several tables need SDK access. XrmToolBox offers a utility that eases the work. The author gives an expense app as an example, where several booking-type lookups can become one multi-table lookup and simplify the form for users."
+    answer: "Mapped values are copied to a new related record, but only at creation and only for matching field types of equal or smaller size. Later parent changes do not cascade."
 ---
 
 ## TL;DR

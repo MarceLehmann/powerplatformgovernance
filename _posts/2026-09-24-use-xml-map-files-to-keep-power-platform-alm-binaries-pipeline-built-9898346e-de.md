@@ -24,15 +24,11 @@ source_author: Benedikt
 source_published_at: '2025-03-31'
 faq:
   - question: "Welche Aufgabe hat eine XML-Map-Datei im Power-Platform-ALM?"
-    answer: "Sie legt fest, welche Plug-in-DLLs und Webressourcen zu einer Lösung gehören und wo sie auf dem lokalen Datenträger liegen. Die Pipeline kann dann frisch gebaute Binärdateien aus dem Build-Ergebnis verwenden. So bleiben Binärdateien aus dem Repository draussen, und nur getestete, von der Pipeline gebaute Komponenten erreichen die nachgelagerten Umgebungen."
+    answer: "Sie legt fest, welche Plug-in-DLLs und Webressourcen zu einer Lösung gehören und wo sie auf dem lokalen Datenträger liegen. Die Pipeline kann dann frisch gebaute Binärdateien aus dem Build-Ergebnis verwenden."
   - question: "Welche Zuordnungsarten kennt eine Map-Datei in der Power Platform?"
-    answer: "Die Ordnerzuordnung bildet einen ganzen Ordner ab und dient meist Webressourcen. Die Datei-zu-Datei-Zuordnung verknüpft genau eine Quelle mit einem Ziel und ist bei Plug-in-DLLs üblich. Die Datei-zu-Pfad-Zuordnung sucht bestimmte Dateien in zugeordneten Ordnern, was bei verteilter Dateistruktur hilft. Welche Art passt, hängt davon ab, wie die Build-Ausgabe der Lösung aufgebaut ist und wo die Dateien liegen."
-  - question: "Wie nutzen die Power Platform Build Tools eine Map-Datei?"
-    answer: "Den Parameter MapFile in den Schritten Unpack und Pack der Build Tools in der YAML-Pipeline ergänzen und auf die XML-Datei verweisen. Die Unpack- und Pack-Schritte der CLI bieten die Option für Map-Dateien, und die Azure-DevOps-Oberfläche der Build Tools zeigt sie ebenfalls an. Der Autor legt pro Lösung eine Map-Datei in seinem Repository ab."
+    answer: "Die Ordnerzuordnung bildet einen ganzen Ordner ab und dient meist Webressourcen. Die Datei-zu-Datei-Zuordnung verknüpft genau eine Quelle mit einem Ziel und ist bei Plug-in-DLLs üblich."
   - question: "Warum braucht es Map-Dateien, obwohl Lösungen die Komponenten schon enthalten?"
-    answer: "Je nachdem, ob man einem umgebungszentrierten oder quellcodezentrierten ALM-Ansatz folgt, wird eine Lösung aus einer Umgebung statt aus einem Repository erzeugt. Entwickler deployen Pro-Code-Komponenten meist in die Entwicklungsumgebung, obwohl diese für nachgelagerte Umgebungen noch nicht bereit sind. Map-Dateien lassen die Pipeline die Binärdateien liefern, sodass gebaute und getestete Stände ankommen."
-  - question: "Funktioniert der Befehl PAC clone ebenfalls mit Map-Dateien?"
-    answer: "Ja, der Artikel nennt den PAC-Befehl clone als neuere Ergänzung für ein gesundes ALM, die Map-Dateien unterstützt. Mit einem Clone legt ein Entwickler eine Kopie der Lösung auf der lokalen Platte an, die mit einem normalen msbuild-Befehl arbeitet, was eine Arbeitsweise näher am Pro-Dev erlaubt. Der Autor räumt ein, dass Map-Dateien anfangs verwirren können."
+    answer: "Je nachdem, ob man einem umgebungszentrierten oder quellcodezentrierten ALM-Ansatz folgt, wird eine Lösung aus einer Umgebung statt aus einem Repository erzeugt."
 ---
 ## TL;DR
 

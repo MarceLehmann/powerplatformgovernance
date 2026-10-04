@@ -33,15 +33,11 @@ submitted_by:
   linkedin: https://www.linkedin.com/in/michaelroth42/
 faq:
   - question: "Was enthält der Governance Kickstart im Governance-Portfolio der Power Platform?"
-    answer: "Er ist ein zweitägiger Workshop zum Aufbau von Governance in einer Organisation und kostet laut Portfolio 3000 EUR. Er steht in der Governance-Gruppe neben dem Health Check zum gleichen Preis, dem Adoption-und-Enablement-Workshop und dem Kurs Admin in 4 Wochen mit vier Terminen. Die genannten Preise sind eine Orientierung und kein verbindliches Angebot."
+    answer: "Er ist ein zweitägiger Workshop zum Aufbau von Governance in einer Organisation und kostet laut Portfolio 3000 EUR."
   - question: "Wie sind die monatlichen Retainer im Portfolio aufgebaut?"
-    answer: "Es gibt drei Stufen: BASIC mit etwa 4 Stunden pro Woche für 4800 EUR im Monat, PRO mit etwa 6 Stunden pro Woche für 7200 EUR und PREMIUM mit etwa 8 Stunden pro Woche für 9600 EUR. Das Portfolio führt sie als Advisory-Partner-Retainer. Die Inhalte der Seite sind grösstenteils auf Deutsch."
-  - question: "Welche Sicherheitsangebote listet das Portfolio neben Governance auf?"
-    answer: "Ein Security Quick Check für 3000 EUR, ein Rollen-und-Rechte-Review für 2000 EUR, ein Custom Connector Review für 1500 EUR, das Secure Maker Playbook als PDF für 149 EUR und ein eintägiger Secure-by-Design-Workshop für 1500 EUR. Das Custom Connector Review wird als Sicherheitsbewertung von APIs beschrieben."
-  - question: "Was umfasst der Copilot-Bereich des Portfolios?"
-    answer: "Ein Copilot Readiness Assessment für 4500 EUR, ein eintägiger KI-Enablement-Workshop für 1500 EUR und ein Copilot Governance Framework für 9000 EUR. Das Portfolio beschreibt das Assessment als Prüfung der Vorbereitung, den Workshop als eintägige Einführung und das Framework als Anleitung mit Coaching."
+    answer: "Drei Stufen: BASIC mit etwa 4 Stunden pro Woche für 4800 EUR im Monat, PRO mit etwa 6 Stunden für 7200 EUR und PREMIUM mit etwa 8 Stunden für 9600 EUR."
   - question: "Lassen sich die Governance- und Sicherheitsangebote kombinieren?"
-    answer: "Ja. Laut Seite sind die Leistungen aus allen Bereichen kombinierbar, alle Pakete sind flexibel anpassbar, und die genannten Preise dienen der Orientierung. Ausserdem führt sie mit dem First Aid Kit ein Kombiangebot aus Health Check, Governance Kickstart und 2 Stunden für 5500 EUR."
+    answer: "Ja. Laut Seite sind die Leistungen aus allen Bereichen kombinierbar, alle Pakete sind flexibel anpassbar, und die genannten Preise dienen der Orientierung."
 ---
 
 ## TL;DR

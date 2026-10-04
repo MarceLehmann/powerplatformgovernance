@@ -35,15 +35,11 @@ submitted_by:
   linkedin: https://www.linkedin.com/in/m365showpodcast/
 faq:
   - question: "Warum sollte man Konfidenzwerte pro Feld statt pro Dokument bewerten?"
-    answer: "Die Werte gelten feldweise: In einem Dokument kann der Lieferantenname mit 99 Prozent erkannt werden, die Rechnungsnummer wegen eines verdeckten Bereichs aber nur mit 65 Prozent. Ein einziges Ampelsignal für das ganze Dokument führt entweder zu zu vielen Ablehnungen oder zu gefährlichen Fehlern. Unkritische interne Felder vertragen niedrigere Schwellen, Finanz- und Rechtsdaten brauchen strenge Prüfung."
+    answer: "Die Werte gelten feldweise: Der Lieferantenname kann 99 Prozent erreichen, die Rechnungsnummer nur 65 Prozent. Ein einziges Urteil pro Dokument führt entweder zu zu vielen Ablehnungen oder zu gefährlichen Fehlern."
   - question: "Garantiert ein Konfidenzwert von 98 Prozent beim Rechnungsbetrag, dass die Daten stimmen?"
-    answer: "Nein. Der Wert sagt nur, wie sicher das Modell beim Lesen der Zeichen ist, nicht ob die Zahl geschäftlich gültig ist. Weicht der erkannte Betrag von der Summe der Positionen plus Steuer ab oder fehlt der Lieferant in der Liste freigegebener Anbieter, bedeutet hohe Konfidenz nichts. Solche Geschäftsregeln müssen deshalb unabhängig von der KI geprüft werden."
+    answer: "Nein. Der Wert sagt nur, wie sicher das Modell beim Lesen der Zeichen ist, nicht ob die Zahl geschäftlich gültig ist."
   - question: "Wie sollte ein Power-Automate-Flow auf Pflichtfelder mit niedriger Konfidenz reagieren?"
-    answer: "Der Flow bewertet die Konfidenz jedes Pflichtfelds gegen vordefinierte Schwellen. Fällt eines darunter, legt er den Datensatz nicht automatisch an, sondern leitet die Datei in eine eigene Prüfwarteschlange. Die Quelle nennt einen Vertrag mit sicher erkanntem Ablaufdatum, aber unklarem Vertragsverantwortlichen. So gelangen keine fehlerhaften Daten in Kernsysteme, und menschlicher Aufwand konzentriert sich auf echte Ausnahmen."
-  - question: "Was sollte Dataverse bei der Verarbeitung von Ausnahmedokumenten speichern?"
-    answer: "Dataverse dient als zentrale Quelle für jedes Dokument der Pipeline. Gespeichert werden die extrahierten Feldwerte samt Konfidenz, der Eingangszeitpunkt, das verwendete Extraktionsmodell, die prüfende Person, ihre Korrekturen und das Ziel des Dokuments nach der Prüfung. Damit werden Ausnahmen nicht zu digitalen Parkplätzen, und die Historie unterstützt Compliance-Anforderungen."
-  - question: "Wie sollte eine Prüfoberfläche in Power Apps für unsichere Extraktionen aufgebaut sein?"
-    answer: "Sie zeigt das Originaldokument oder Bild direkt neben den extrahierten Formularfeldern. Prüfende erkennen sofort, welches Feld die Warnung ausgelöst hat, sehen den Quelltext, tragen Korrekturen ein und geben den Eintrag in den laufenden Workflow zurück. Verstreute Nachrichten, rohe PDFs und manuelle Updates im Backend verfehlen laut Quelle den Zweck der Automatisierung."
+    answer: "Der Flow bewertet die Konfidenz jedes Pflichtfelds gegen vordefinierte Schwellen. Fällt eines darunter, legt er den Datensatz nicht automatisch an, sondern leitet die Datei in eine eigene Prüfwarteschlange."
 ---
 
 ## TL;DR

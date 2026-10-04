@@ -16,15 +16,11 @@ permalink: "/en/posts/gov-ai-agent-governance/"
 translation_url: "/de/posts/gov-ai-agent-governance/"
 faq:
   - question: "Can a Copilot Studio agent pass evaluation and still give an inappropriate answer?"
-    answer: "Yes. Agent evaluation measures correctness and performance against a test set, not AI ethics or safety problems, so an agent can pass every test case and still produce an inappropriate answer. Microsoft's migration guidance says plainly that evaluation does not report on safety, bias or ethics, so a release gate built only on evaluation scores needs a separate responsible AI review step."
-  - question: "Which governance checklist should a Copilot Studio agent complete before going live?"
-    answer: "The same one a regular app needs. Microsoft asks for a named executive accountable for the agent portfolio, a documented Responsible AI impact assessment before deployment, enforced data residency and sensitivity labels, a visible escalation path to a human, and a decommission criterion decided at build time. Run it before launch, not after a problem surfaces."
+    answer: "Yes. Evaluation measures correctness and performance, not safety, bias or ethics, so a release gate needs a separate responsible AI review step."
   - question: "How do I reduce confidently wrong answers from a Copilot Studio agent?"
-    answer: "Ground responses in trusted data sources scoped to what the requesting user is permitted to see, instead of trusting model-generated content for anything consequential. An agent does not clean up bad or ambiguous input, it accelerates it with confidence. An unscoped or ungoverned knowledge source risks a confidently delivered wrong answer, which differs from a person saying they are not sure."
-  - question: "How long should an agent keep conversation transcripts?"
-    answer: "Transcripts are not kept forever by default, but the retention period is a governance question that needs its own deliberate answer rather than whatever Microsoft ships as default. Every stored transcript is a copy of what a user told the agent. Dataverse audit log retention is a separate lever, because it covers system change history and not conversation content."
+    answer: "Ground responses in trusted data sources scoped to what the requesting user may see. An ungoverned knowledge source risks a confidently delivered wrong answer."
   - question: "Why does an agent have a bigger blast radius than a regular app?"
-    answer: "An agent acts on incomplete or wrong information immediately and at scale, where a person might have paused to double-check. The governance basics are the same ownership and access discipline any solution needs, but the stakes are higher. Microsoft's guidance treats governance as the thing the agent's ROI depends on, not as a tax layered on top."
+    answer: "An agent acts on incomplete or wrong information immediately and at scale, where a person might have paused to double-check."
 ---
 
 ## TL;DR

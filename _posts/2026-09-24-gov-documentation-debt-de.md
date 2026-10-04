@@ -16,15 +16,11 @@ permalink: "/de/posts/gov-documentation-debt/"
 translation_url: "/en/posts/gov-documentation-debt/"
 faq:
   - question: "Welches Namensschema empfiehlt Microsoft für Power-Platform-Umgebungen?"
-    answer: "Namen sind auf 100 Zeichen begrenzt, sollen kurz und aussagekräftig bleiben und einem festen, vorhersehbaren Muster folgen. Das empfohlene Beispiel kombiniert Lifecycle-Phase, Region, Geschäftseinheit und Zweck, etwa Prod-US-Finance-Payroll. So erkennen Admins den Zweck, ohne die Umgebung zu öffnen. Namen sind im Admin Center sichtbar, kodiere darin nichts Vertrauliches."
+    answer: "Namen sind auf 100 Zeichen begrenzt, sollen kurz und aussagekräftig bleiben und einem festen, vorhersehbaren Muster folgen. Das empfohlene Beispiel kombiniert Lifecycle-Phase, Region, Geschäftseinheit und Zweck, etwa Prod-US-Finance-Payroll."
   - question: "Warum ist es riskant, App-Daten in einem persönlichen OneDrive abzulegen?"
-    answer: "Das Risiko liegt nicht im Speicherort, denn persönliches OneDrive ist ein konformer Dienst im Tenant. Es liegt darin, von wem die Verfügbarkeit abhängt. Die Datei ist an das Konto einer Person gebunden. Geht sie in den Urlaub, wechselt die Rolle oder verlässt das Unternehmen, hört die Team-App auf zu funktionieren. SharePoint und Dataverse sind organisatorisch besessen und haben diesen Ausfallmodus nicht."
-  - question: "Was frage ich bei der Aufnahme einer Lösung zum Datenstandort?"
-    answer: "Frag, wo die Daten der App tatsächlich liegen und ob ihre Verfügbarkeit davon abhängt, dass das Konto einer bestimmten Person aktiv bleibt. Die Frage bei der Aufnahme der Solution ist besser als ein Audit-Befund Monate später. Eine Power-Apps- oder Power-Automate-Lösung kann für ihren Maker einwandfrei laufen, während ihre Daten dort liegen, wo sonst niemand hinkommt."
+    answer: "Die Datei ist an das Konto einer Person gebunden. Geht sie in den Urlaub, wechselt die Rolle oder verlässt das Unternehmen, hört die darauf gebaute Team-App auf zu funktionieren."
   - question: "Was soll ein Maker am Tag des Go-Live aufschreiben?"
-    answer: "Drei Sätze reichen: was die Lösung tut und für wen, welche Daten sie berührt und warum sie so gebaut wurde und nicht anders. Das Warum ist das Detail, das tatsächlich verloren geht. Es braucht weder eine Dokumentationsplattform noch ein Vorlagen-Gremium. Wissen, das nur im Kopf einer Person existiert, hat ein Verfallsdatum, das niemand im Voraus kennt."
-  - question: "Warum verlangt Microsoft bei der Catalog-Einreichung eine Beschreibung und Geschäftsbegründung?"
-    answer: "Andere Maker lesen die Beschreibung und die Begründung, bevor sie eine Lösung installieren. Microsoft behandelt das als tragenden Teil des Workflows und nicht als optionale Nebensache, weil Maker deine Beschreibung lesen, um mehr zu erfahren. Wer eine Lösung zur Wiederverwendung einreicht, baut die Erwartung an Dokumentation damit direkt in die Plattform ein."
+    answer: "Drei Sätze reichen: was die Lösung tut und für wen, welche Daten sie berührt und warum sie so gebaut wurde und nicht anders."
 ---
 
 ## TL;DR

@@ -29,15 +29,11 @@ submitted_by:
   linkedin: https://www.linkedin.com/in/michaelroth42/
 faq:
   - question: "Warum ersetzt Vertrauen in die Maker keine Governance?"
-    answer: "Vertrauen funktioniert zwischen Menschen, eine Plattform wächst aber über persönliche Beziehungen hinaus. Der Beitrag nennt Flows ohne Dokumentation, Apps, die nach dem Weggang ihres Erstellers brechen, unbemerkt extern geteilte Daten und verwaiste Systeme. Seine Kernaussage: Governance lässt Vertrauen skalieren. Als Beispiel dienen 50 Maker, 12 Abteilungen und 90 Connectors, die systematische Übersicht brauchen."
+    answer: "Vertrauen funktioniert zwischen Menschen, eine Plattform wächst aber über persönliche Beziehungen hinaus. Der Beitrag nennt Flows ohne Dokumentation, Apps, die nach dem Weggang ihres Erstellers brechen, unbemerkt extern geteilte Daten und verwaiste Systeme."
   - question: "Was ist das Governance-Trilemma?"
-    answer: "Sicherheit, Compliance und Befähigung konkurrieren miteinander, und der Artikel beschreibt, was passiert, wenn nur eines gewinnt. Nur Sicherheit ergibt ein gesperrtes System, in dem niemand bauen kann, nur Befähigung führt zum Kontrollverlust, und nur Compliance macht die Plattform zum bürokratischen Hindernisparcours, in dem Maker aufhören zu probieren. Ein praktischer Ausgleich: Experimente in persönlichen Umgebungen erlauben, in der Produktion aber Namenskonventionen und Besitzerdokumentation verlangen."
+    answer: "Sicherheit, Compliance und Befähigung konkurrieren miteinander, und der Artikel beschreibt, was passiert, wenn nur eines gewinnt."
   - question: "Wie erkläre ich Governance der Geschäftsleitung?"
-    answer: "Stelle sie als vorbeugende Massnahme dar und übersetze sie in Risikosprache: Datenabfluss, Prüfbereitschaft und technische Schulden. Der Artikel gibt jeder Zielgruppe eine eigene Botschaft, denn Führungskräfte halten Governance oft für verfrüht, Maker fürchten den Verlust von Werkzeugen und Manager langsamere Lieferung. Dauernde Kommunikation zählt mehr als eine einmalige Erklärung."
-  - question: "Welche Argumente überzeugen Maker und IT-Administratoren?"
-    answer: "Maker hören, dass Governance ihre Apps vor dem Ausfall schützt, am besten mit einer Geschichte wie Flows, die stehen bleiben, wenn das Konto des Besitzers gelöscht wird. IT-Administratoren hören, dass vollständiges Abriegeln die Leute zu nicht freigegebenen Werkzeugen treibt. Dazu passt das Angebot einer Partnerschaft mit gemeinsamen Dashboards und gemeinsam entworfenen Richtlinien."
-  - question: "Wo sollte ein Governance-Programm laut Artikel beginnen?"
-    answer: "Klein. Wähle eine Richtlinie und ein Gespräch statt einer Gesamtlösung und hinterlasse die Dinge ein wenig besser, als du sie vorgefunden hast. Funktionierende Governance fällt kaum auf, weil sie passt, etwa durch Namenskonventionen für Übergaben, Umgebungsstrategien und App-Kataloge. Für Rechtsabteilungen schlägt der Beitrag Stufen vor, mit risikoarmen Zonen und strengen Zonen für regulierte Daten."
+    answer: "Stelle sie als vorbeugende Massnahme dar und übersetze sie in Risikosprache: Datenabfluss, Prüfbereitschaft und technische Schulden."
 ---
 ## TL;DR
 

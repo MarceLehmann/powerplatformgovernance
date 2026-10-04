@@ -28,15 +28,11 @@ source_published_at: '2025-02-04'
 source_updated_at: '2025-02-04'
 faq:
   - question: "How do I convert an unmanaged solution in a downstream environment to managed?"
-    answer: "You install the same components again as a managed solution, and the system switches them from unmanaged to managed. You can install the same solution again as managed or install a new solution containing the same components. If you reinstall the same solution, uninstall the old unmanaged one first, because the same solution cannot exist twice in one environment, once unmanaged and once managed."
+    answer: "You install the same components again as a managed solution, and the system switches them from unmanaged to managed."
   - question: "What error appears when the unmanaged solution is still installed?"
-    answer: "The message says the solution is already installed as unmanaged and the supplied package is trying to install it in managed mode, and that import can only update solutions when the modes match. The cause is having both variants side by side. Uninstall the unmanaged solution first, then import the managed one."
+    answer: "The message says the solution is already installed as unmanaged while the package tries to install it as managed. Uninstall the unmanaged solution first, then import the managed one."
   - question: "Which parameter forces the conversion to managed during import with PAC, GitHub or Azure DevOps?"
-    answer: "With the Power Platform CLI you use the convert-to-managed flag with two hyphens on import. In GitHub Actions the parameter is convert-to-managed, and in Azure DevOps it is ConvertToManaged. The author notes that the Azure DevOps text Import as a Managed solution does not make the conversion obvious. A reader comment from February 2025 suggests the flag may now be true by default, which could affect import time."
-  - question: "Why does the publisher matter when moving to managed solutions?"
-    answer: "All solutions in an environment should share the same publisher so that components can be moved between solutions. A component must also stay in at least one solution of the publisher it was first installed with. With different publishers this makes it harder to restructure solutions, which the author often does when moving to managed solutions."
-  - question: "What does solution layering mean after switching to managed?"
-    answer: "Solutions layer chronologically by installation date and time, newer ones on top of older ones, and the unmanaged layer always stays on top. When you switch to managed, installation order therefore matters. Components inherited from Microsoft, third-party vendors and ISVs layer according to their deployment sequence. The author credits Felix Verduin for pointing this out."
+    answer: "With the Power Platform CLI you use the convert-to-managed flag with two hyphens on import. In GitHub Actions the parameter is convert-to-managed, and in Azure DevOps it is ConvertToManaged."
 ---
 ## TL;DR
 

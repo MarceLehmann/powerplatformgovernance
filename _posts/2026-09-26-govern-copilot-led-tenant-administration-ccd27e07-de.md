@@ -30,15 +30,11 @@ source_published_at: '2026-09-10'
 source_type: article
 faq:
   - question: "Was kann der PnP-PowerShell-Agent für Copilot bei der Tenant-Verwaltung?"
-    answer: "Er übersetzt eine Anfrage in normaler Sprache in passende PnP-PowerShell-Befehle, sodass Administratoren das gewünschte Ergebnis beschreiben statt die Syntax auswendig zu kennen. Der Agent arbeitet mit Skills: Ein Setup-Skill übernimmt Installation, Konfiguration und Anmeldung, ein Skill für Microsoft 365 die täglichen Aufgaben wie Sites, Listen, Bibliotheken, Seiten und Berechtigungen. Weitere Skills für Skripte sind geplant."
-  - question: "Welche Anmeldearten unterstützt der Setup-Skill des PnP-PowerShell-Agenten?"
-    answer: "Der Setup-Skill unterstützt die interaktive Anmeldung und den Weg über eine App-Registrierung, bei der du zwischen Zertifikat und Geheimnis wählst. Der Beitrag betont, dass diese Wahl die Sicherheitslage jeder Automatisierung bestimmt. Entscheide dich deshalb bewusst für ein Verfahren, bevor der Agent Einstellungen im Tenant ändern darf, und nimm nicht einfach die bequemste Variante."
-  - question: "Wo lässt sich der PnP-PowerShell-Agent für Copilot installieren?"
-    answer: "Der Vortrag zeigte zwei Umgebungen. In VS Code installierst du das Plugin, wechselst zum PnP-PowerShell-Agenten und stellst deine Anfragen im Dialog. Einen ähnlichen Ablauf gibt es für die GitHub Copilot CLI, angepasst an die Kommandozeile. Wähle die Umgebung, in der du ohnehin arbeitest. In beiden Fällen kommt zuerst das Setup und danach die Verwaltung im Gespräch."
+    answer: "Er übersetzt eine Anfrage in normaler Sprache in passende PnP-PowerShell-Befehle, sodass Administratoren das gewünschte Ergebnis beschreiben statt die Syntax auswendig zu kennen."
   - question: "Macht Verwaltung per natürlicher Sprache Änderungen im Tenant automatisch sicherer?"
-    answer: "Nein. Der Beitrag hält fest, dass natürliche Sprache administrative Aktionen nicht von selbst sicher macht. Du musst weiterhin klären, wer den Agenten nutzen darf, wie die erzeugten Aktionen geprüft werden und wie sich das Plugin pflegen lässt, während es sich weiterentwickelt. Offen bleibt die Frage, wie eine solche Verwaltung zu steuern ist, wenn sie die Tenant-Konfiguration verändern kann."
+    answer: "Nein. Der Beitrag hält fest, dass natürliche Sprache administrative Aktionen nicht von selbst sicher macht."
   - question: "Ist der PnP-PowerShell-Agent für Copilot bereits ein fertiges Werkzeug?"
-    answer: "Nein. Teile sind noch in Arbeit. Skills zum Erstellen, Bewerten und Aktualisieren von Skripten sind angekündigt, aber nicht fertig, und das Bewertungsverfahren, das den Agenten über die Zeit bewertet und verbessert, ist beobachtenswert. Eine Demo-Anfrage für ein Backup-Skript deutet nur an, was die geplanten Skript-Skills leisten könnten. Behandle die Skript-Funktionen deshalb als noch nicht verfügbar."
+    answer: "Nein. Teile sind noch in Arbeit. Skills zum Erstellen, Bewerten und Aktualisieren von Skripten sind angekündigt, aber nicht fertig, daher gelten die Skript-Funktionen als noch nicht verfügbar."
 ---
 
 ## TL;DR

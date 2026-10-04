@@ -30,15 +30,11 @@ source_updated_at: '2026-09-29'
 source_type: article
 faq:
   - question: "Welche drei Fragen blockieren die Skalierung von KI-Piloten?"
-    answer: "Gefragt wird, worauf das System zugreifen kann, wem es gehört und was passiert, wenn es etwas berührt, das es nicht berühren sollte. Laut Quelle ist das keine Vorsicht und keine Bürokratie, sondern eine Frage, die niemand beantworten kann und die deshalb wie ein Nein wirkt. Ohne Antworten wird der Pilot verlängert, kostet weiter Geld und erreicht nie genug Personen, um die Zahl aus seinem Business Case zu liefern."
+    answer: "Gefragt wird, worauf das System zugreifen kann, wem es gehört und was passiert, wenn es etwas berührt, das es nicht berühren sollte."
   - question: "Welche Angaben gehören pro KI-System in ein Inventar?"
-    answer: "Vier Angaben: die Zahl aktiver Nutzer, die Kosten, die erreichbaren Inhalte und Systeme sowie ein namentlich genannter Verantwortlicher. Ein Inventar zeigt, was tatsächlich passiert, während Richtliniendokumente nur beschreiben, was passieren soll. Die Quelle merkt an, dass das Aufspüren doppelter Werkzeuge, veralteter Piloten und überholter Zugriffe die Governance-Arbeit oft selbst finanziert."
-  - question: "Was kostet ein KI-Pilot, der nie skaliert?"
-    answer: "Neben der laufenden Lizenzgebühr pflegt ein Team weiter ein Werkzeug für eine kleine Gruppe, im Beispiel der Quelle zwölf Nutzer. Der Business Case ging von einem Ertrag aus, den erst die Skalierung liefern könnte. Dazu leidet die Glaubwürdigkeit: Die Finanzabteilung sieht bei späteren KI-Anträgen eine Liste genehmigter Investitionen, die nie skaliert haben. In keinem Bericht taucht das auf, weil nichts schiefging."
+    answer: "Vier Angaben: die Zahl aktiver Nutzer, die Kosten, die erreichbaren Inhalte und Systeme sowie ein namentlich genannter Verantwortlicher."
   - question: "Warum liefern Microsoft Purview und Entra allein keinen KI-Gesamtüberblick?"
-    answer: "Purview klassifiziert und schützt Daten in Microsoft 365 und prüft Copilot-Interaktionen, reicht je nach Konnektoren aber nur begrenzt in fremde Dienste. Entra steuert Identität und Zugriff für angebundene Anwendungen und sieht Anmeldungen mit Arbeitskonto, nicht aber per Karte gekaufte Werkzeuge. Ein gemeinsames Inventar mit Nutzern, Kosten und Reichweite über alle Anbieter entsteht in keinem von beiden."
-  - question: "Wie viele Unternehmen erzielen laut McKinsey wesentlichen Nutzen aus KI?"
-    answer: "In der McKinsey-Umfrage von 2026 nutzen fast neun von zehn Organisationen KI in mindestens einem Geschäftsbereich. Nur 37 Prozent berichten von einem Effekt auf den Gewinn, und 6 Prozent erzielen wesentlichen Wert, unverändert zum Vorjahr. Die Quelle sieht den Unterschied nicht bei der Technik, sondern darin, dass diese 6 Prozent etwas in Produktion gebracht haben."
+    answer: "Purview klassifiziert und schützt Daten in Microsoft 365 und prüft Copilot-Interaktionen, reicht je nach Konnektoren aber nur begrenzt in fremde Dienste."
 ---
 
 ## TL;DR

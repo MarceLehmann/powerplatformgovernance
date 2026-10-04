@@ -25,15 +25,11 @@ source_language_name: English
 source_published_at: '2026-06-03'
 faq:
   - question: "Ist das CoE Starter Kit offiziell mit einer Frist zur Migration eingestellt?"
-    answer: "Nein, es gibt weder eine formale Einstellungsmeldung noch eine Frist. Das Kit war nie ein offizielles Microsoft-Produkt, sondern ein Beschleuniger aus der Community, der ausserhalb des normalen Produktsupports gepflegt wurde. Die monatlichen Releases endeten im Februar 2026, im Mai 2026 bestätigte Microsoft, dass es keine neuen Funktionen und keine Pflege mehr gibt. Bestehende Installationen laufen weiter, bis etwas bricht."
+    answer: "Nein, es gibt weder eine formale Einstellungsmeldung noch eine Frist. Das Kit war nie ein offizielles Microsoft-Produkt, sondern ein Beschleuniger aus der Community, der ausserhalb des normalen Produktsupports gepflegt wurde."
   - question: "Welche Governance-Lücken lässt das Admin Center gegenüber dem CoE Starter Kit?"
-    answer: "Der Beitrag nennt fünf Lücken mit hohem Risiko: Schatten-IT ohne Risikobewertung, Lebenszyklus ohne Workflows für Besitzerwechsel, keine Sicht über mehrere Tenants, DLP-Durchsetzung ohne Alarm bei Verstössen und keine Kontrolle von Qualität und Connector-Missbrauch. Von neun Fähigkeiten ist nur die Umgebungsverwaltung nativ vollständig abgedeckt."
-  - question: "Was deckt das Power Platform Admin Center bereits gut ab?"
-    answer: "Es liefert ein tenantweites Inventar von Apps, Flows, Connectors und Umgebungen ohne eigene Dataverse-Umgebung, Umgebungsverwaltung samt DLP und Kapazität, Nutzungsauswertungen wie App-Starts und Flow-Läufe sowie Admin-Aktionen wie Besitzer neu zuweisen, verwaiste Apps löschen und Freigaben verwalten. Es zeigt, was existiert, bewertet aber kein Risiko."
+    answer: "Der Beitrag nennt fünf Lücken mit hohem Risiko: Schatten-IT ohne Risikobewertung, Lebenszyklus ohne Workflows für Besitzerwechsel, keine Sicht über mehrere Tenants, DLP-Durchsetzung ohne Alarm bei Verstössen und keine Kontrolle von Qualität und Connector-Missbrauch."
   - question: "Was muss ich beim Abschied vom CoE Starter Kit wirklich neu aufbauen?"
-    answer: "Die Kontextebene, denn die reine Objektliste liefert jetzt Microsoft selbst. Dazu gehören ein benannter Besitzer pro Ressource, ein Lebenszyklusstatus, eine Compliance-Einstufung und eine Risikoreihenfolge, die zeigt, was zuerst Aufmerksamkeit braucht. Der Artikel rät, den Umstieg um diese Ebene zu planen und nicht um die Objektliste."
-  - question: "Warum kann der Weiterbetrieb des ungepflegten CoE Starter Kits teuer werden?"
-    answer: "Das Kit brauchte eine eigene Dataverse-Umgebung mit Lizenz- und Wartungsaufwand, seine Flows liefen über Servicekonten mit Premium-Connectors, und Admins mussten Zeit investieren, um es mit Plattformänderungen kompatibel zu halten. Laut Artikel steigen die Betriebskosten eines eingefrorenen Beschleunigers, während seine Abdeckung sinkt. Bei über 50 Umgebungen, mehreren Tenants oder vielen ungesteuerten Apps der letzten drei Jahre ist die Lücke wahrscheinlich erheblich."
+    answer: "Die Kontextebene, denn die reine Objektliste liefert jetzt Microsoft selbst."
 ---
 ## TL;DR
 

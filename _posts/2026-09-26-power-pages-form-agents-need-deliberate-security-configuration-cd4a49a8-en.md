@@ -30,15 +30,11 @@ source_published_at: '2025-08-21'
 source_type: article
 faq:
   - question: "What must be in place before a Power Pages form agent shows up on the site?"
-    answer: "Copilot must be enabled in the Power Platform admin center, the site copilot must be switched on, and you add the site setting SiteCopilot/EnableNativeControlPVABots set to true. The author notes that this part is not in the documentation. The feature is in preview, so its behavior may be unpredictable."
+    answer: "Copilot must be enabled in the Power Platform admin center, the site copilot must be switched on, and you add the site setting SiteCopilot/EnableNativeControlPVABots set to true."
   - question: "How do I stop a Power Pages form agent from exposing every column of a table?"
-    answer: "In the Power Pages management app, find the Web API fields site setting and change it from the wildcard to a comma-separated list of the columns on your form. The preview setup enables all table columns for the Web API when the form is converted, so the default exposes every column of the table."
+    answer: "In the Power Pages management app, find the Web API fields site setting and change it from the wildcard to a comma-separated list of the columns on your form."
   - question: "Who should be allowed to use a Power Pages form agent?"
-    answer: "Only the web roles you select on the security tab of the agent. The author warns to be careful exposing the agent to non-authenticated users. He also says to configure appropriate table permissions and web roles to access the form. The conversion process initially enables every table column for the Web API."
-  - question: "Why can't I use public mode for a form agent in a developer environment?"
-    answer: "The author notes that a site built on a developer environment cannot be made into public mode. In that case you need Entra ID and the Copilot authentication settings so that records are actually saved to Dataverse. The article does not walk through that configuration step by step."
-  - question: "How does a Power Pages form agent differ from a normal form?"
-    answer: "The agent converses with the visitor to gather the information, displays a summary at the end and allows submission, which creates the same Dataverse records as a traditional form. For now it does not do much beyond collecting information, like a form. The author expects it to be able to take other actions or engage other agents eventually."
+    answer: "Only the web roles you select on the security tab of the agent. The author warns to be careful exposing the agent to non-authenticated users."
 ---
 
 ## TL;DR

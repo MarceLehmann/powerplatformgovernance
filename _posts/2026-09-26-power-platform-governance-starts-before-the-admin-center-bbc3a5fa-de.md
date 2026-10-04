@@ -35,15 +35,11 @@ submitted_by:
   linkedin: https://www.linkedin.com/in/michaelroth42/
 faq:
   - question: "Welche vier Fragen sollten die Power-Platform-Governance vor jeder Admin-Einstellung prägen?"
-    answer: "Was wollen wir ermöglichen, was wollen wir schützen, wo akzeptieren wir Risiko und wo nicht. Der Artikel sagt, Einstellungen seien nur die technische Umsetzung dieser Entscheidungen. Alles, was als Standard existiert, wird irgendwann genutzt, und die Standardeinstellungen von Microsoft sind auf Akzeptanz ausgelegt."
+    answer: "Was wollen wir ermöglichen, was wollen wir schützen, wo akzeptieren wir Risiko und wo nicht."
   - question: "Warum ist laut Artikel das Belassen der Standardeinstellungen eine Entscheidung?"
-    answer: "Der Artikel nennt Standards wie deaktivierte Tenant-Isolation, Custom Connectors, die in der Default-Umgebung funktionieren, und aktivierte Self-Service-Käufe. Microsofts Standards seien auf Akzeptanz optimiert und gingen von maximaler Nutzung bei minimaler Reibung aus. Nicht zu entscheiden sei trotzdem eine Entscheidung, eine, die die Plattform weit offen lässt."
+    answer: "Der Artikel nennt Standards wie deaktivierte Tenant-Isolation, Custom Connectors, die in der Default-Umgebung funktionieren, und aktivierte Self-Service-Käufe."
   - question: "Was senkt Low Code und was lässt es unverändert?"
-    answer: "Der Artikel sagt, Low Code senke die Einstiegshürde, nicht aber die Komplexitätsschwelle. Das gehört zu seiner Argumentation, dass Governance kein rein technisches Thema ist, denn der Autor beschreibt sie als soziales System und nicht als technisches. Die Rolle der Admins beschreibt er entsprechend als die eines Übersetzers."
-  - question: "Wie soll ein Admin im beschriebenen Governance-Modell auftreten?"
-    answer: "Als Übersetzer zwischen Business, IT, Risiko und Realität, nicht als jemand, der einseitig handelt. Governance wird als soziales System beschrieben, nicht als technisches. Laut Artikel erzeugen Regeln ohne Kommunikation Widerstand, Richtlinien ohne Kontext Verwirrung, und Blockieren ohne Alternativen erzeugt Schatten-IT."
-  - question: "Welche Themen deckt die angekündigte Governance-Serie als Nächstes ab?"
-    answer: "Die angekündigte Serie beginnt mit der Default-Umgebung als Teil 1 und behandelt danach Maker-Umgebungen, Sicherheits-Baselines, Eigentümermodelle und Monitoring. Beobachtbarkeit und Risikobewertung werden als weitere Themen genannt. Bevor man etwas konfiguriert, rät der Autor, die Antworten auf die vier Fragen aufzuschreiben."
+    answer: "Der Artikel sagt, Low Code senke die Einstiegshürde, nicht aber die Komplexitätsschwelle."
 ---
 
 ## TL;DR

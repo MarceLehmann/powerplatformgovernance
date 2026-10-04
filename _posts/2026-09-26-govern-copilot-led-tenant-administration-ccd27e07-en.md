@@ -30,15 +30,11 @@ source_published_at: '2026-09-10'
 source_type: article
 faq:
   - question: "What does the PnP PowerShell agent for Copilot do for tenant administrators?"
-    answer: "It turns a request written in plain language into proper PnP PowerShell commands, so administrators describe the outcome instead of remembering syntax. The agent works through skills. A Setup skill covers installation, configuration and sign-in, while a Manage Microsoft 365 skill handles everyday tasks such as creating sites, managing lists and libraries, updating pages and handling permissions. Skills for scripts are planned."
-  - question: "Which sign-in methods does the PnP PowerShell Copilot setup skill support?"
-    answer: "The Setup skill supports interactive login and an app registration approach, and for app registrations you can choose between a certificate and a secret. The article stresses that these authentication choices define the security posture of any automation. Decide on one method deliberately before the agent may change tenant settings, rather than taking whatever is quickest to set up."
-  - question: "Where can I install the PnP PowerShell agent for Copilot?"
-    answer: "The presentation covered two environments. In VS Code you install the plugin, switch to the PnP PowerShell agent and start issuing requests as a conversation. A similar workflow exists for the GitHub Copilot CLI, adapted to the command line. Pick the one you already work in. Either way you run the setup first and then manage the tenant through conversation."
+    answer: "It turns a request written in plain language into proper PnP PowerShell commands, so administrators describe the outcome instead of remembering syntax."
   - question: "Does natural language make Copilot-driven tenant administration safe by default?"
-    answer: "No. The article states that natural language does not make administrative actions safe by itself. You still need to decide who may use the agent, how generated actions are reviewed and how the plugin stays maintainable as it evolves. The open question it ends on is how natural-language administration should be governed when it can change tenant configuration."
+    answer: "No. The article states that natural language does not make administrative actions safe by itself."
   - question: "Is the PnP PowerShell Copilot agent finished tooling?"
-    answer: "No. Parts of it are still works in progress. Skills for creating, evaluating and updating scripts are announced but not finished, and the evaluation approach that scores and improves the agent over time is worth watching. A demo request for a backup script only hints at what the planned script skills could become, so treat the script features as not yet available."
+    answer: "No. Parts of it are still works in progress. Skills for creating, evaluating and updating scripts are announced but not finished, so treat the script features as not yet available."
 ---
 
 ## TL;DR

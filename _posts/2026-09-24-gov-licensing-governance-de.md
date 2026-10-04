@@ -15,15 +15,11 @@ permalink: "/de/posts/gov-licensing-governance/"
 translation_url: "/en/posts/gov-licensing-governance/"
 faq:
   - question: "Deckt eine Microsoft-365-Lizenz eigene Power Apps, Premium-Flows oder Copilot-Studio-Agenten ab?"
-    answer: "Nein. Manche Microsoft-365-Lizenzen enthalten begrenzte Nutzungsrechte für Power Apps, Power Automate und Dataverse, aber nur für die Arbeit mit Microsoft-365-Daten über Standard-Connectors. Sie berechtigen nicht zum Betrieb eigenständiger Custom Apps, Premium-Flows oder Copilot-Studio-Agenten. Das Admin Center kann sogar einen Dataverse-Diensteplan zeigen, was nach breiterem Zugriff aussieht, als gewährt wird."
-  - question: "Wann fallen die Grenzen von Microsoft-365-Lizenzen meist auf?"
-    answer: "Beim breiteren Rollout. Eine Lösung wird gebaut und funktioniert für den Maker einwandfrei, dann trifft sie auf Nutzer, deren Microsoft-365-Lizenz nicht abdeckt, was die Lösung braucht. Die Lücke wird beim Rollout entdeckt und nicht davor. Prüfe deshalb vorab, was die bestehende Lizenz eines Nutzers tatsächlich berechtigt, statt anzunehmen, sie decke die neue Lösung ab."
+    answer: "Nein. Manche Microsoft-365-Lizenzen enthalten begrenzte Nutzungsrechte für Power Apps, Power Automate und Dataverse, aber nur für die Arbeit mit Microsoft-365-Daten über Standard-Connectors."
   - question: "Wie funktioniert die Abrechnung mit Pay-as-you-go in der Power Platform?"
-    answer: "Pay-as-you-go verknüpft eine Umgebung mit einem Azure-Abonnement, sodass Nutzung über die enthaltenen Mengen hinaus über Azure-Meter abgerechnet wird, ohne vorab Kapazität zu kaufen. Es eignet sich für breit verteilte Apps mit unvorhersehbarer Nutzung oder um reale Adoptionszahlen zu ermitteln. Es ist laufende Verbrauchsabrechnung und kein gedeckeltes Abonnement, die Kosten brauchen also weiter Beobachtung."
+    answer: "Pay-as-you-go verknüpft eine Umgebung mit einem Azure-Abonnement, sodass Nutzung über die enthaltenen Mengen hinaus über Azure-Meter abgerechnet wird, ohne vorab Kapazität zu kaufen."
   - question: "Wie behalte ich die Kosten bei Pay-as-you-go im Griff?"
-    answer: "Richte Azure-Cost-Management-Warnungen vor dem Rollout ein und nutze den herunterladbaren Nutzungsbericht auf der Abrechnungsplan-Seite im Power Platform Admin Center. Er zeigt, welche Umgebungen, Apps und Nutzer die Meter getrieben haben, was Azure Cost Management allein nicht aufschlüsselt. Eine Umgebung aus der Abrechnungsrichtlinie zu entfernen oder die Richtlinie zu löschen, stoppt weitere Kosten sofort."
-  - question: "Ist der Power-Apps-Per-App-Plan für Neukunden noch erhältlich?"
-    answer: "Über einige Einkaufskanäle nicht mehr. Der Per-App-Plan, eine kapazitätsbasierte Lizenz für den Betrieb einer einzelnen App in einer Umgebung, war ab Januar 2026 für Neukunden über einige Kanäle nicht mehr verfügbar, während die Verfügbarkeit für Bestandskunden und Partner je nach Kanal variiert. Darum lohnt es sich, das Lizenzmodell regelmässig nach Plan zu überprüfen."
+    answer: "Richte Azure-Cost-Management-Warnungen vor dem Rollout ein und nutze den herunterladbaren Nutzungsbericht auf der Abrechnungsplan-Seite im Power Platform Admin Center."
 ---
 
 ## TL;DR

@@ -41,9 +41,10 @@ pages.each do |path|
     visible_questions = faq_blocks.first.css('h3').map { |node| node.text.strip }
     visible_answers = faq_blocks.first.css('p').map { |node| node.text.strip }
     entities = faq_pages.first['mainEntity']
-    raise "FAQPage must list exactly 5 questions: #{path}" unless entities.is_a?(Array) && entities.size == 5
-    raise "FAQ must show exactly 5 questions and answers: #{path}" unless visible_questions.size == 5 && visible_answers.size == 5
+    raise "FAQPage must list exactly 3 questions: #{path}" unless entities.is_a?(Array) && entities.size == 3
+    raise "FAQ must show exactly 3 questions and answers: #{path}" unless visible_questions.size == 3 && visible_answers.size == 3
     raise "FAQPage questions differ from the visible text: #{path}" unless entities.map { |entity| entity['name'].to_s.strip } == visible_questions
+    raise "FAQ answers must be at most 35 words: #{path}" unless visible_answers.all? { |answer| answer.split.size <= 35 }
     raise "FAQPage answers differ from the visible text: #{path}" unless entities.map { |entity| entity.dig('acceptedAnswer', 'text').to_s.strip } == visible_answers
     raise "FAQPage language differs from the page language: #{path}" unless faq_pages.first['inLanguage'] == document.at_css('html')['lang']
   end

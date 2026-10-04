@@ -35,15 +35,11 @@ submitted_by:
   linkedin: https://www.linkedin.com/in/michaelroth42/
 faq:
   - question: "Which eight steps does the post propose for responsible AI?"
-    answer: "Educate yourself and others about AI, support open initiatives that prioritise transparency, judge AI products critically for their real value, engage in ethical discussions, push for transparency in training data and models, experiment and share your own projects, encourage responsible adoption at work and build community-driven tools that serve communities rather than corporations."
+    answer: "Educate yourself and others, support open initiatives, judge AI products critically, discuss ethics, demand transparency in training data and models, experiment and share your own projects, encourage responsible adoption at work and build community-driven tools."
   - question: "What can citizen developers concretely build with Copilot Studio according to the post?"
-    answer: "They can build transparent, auditable AI assistants, well-documented workflows with clear decision logic, solutions that relieve employees through responsible automation and systems that respect governance rules as well as fairness and inclusion. What matters is that decisions stay visible and that others can understand how a solution works."
+    answer: "They can build transparent, auditable AI assistants, well-documented workflows with clear decision logic, solutions that relieve employees through responsible automation and systems that respect governance rules as well as fairness and inclusion."
   - question: "Which AI uses does the author dismiss as gimmicks?"
-    answer: "He lists five examples: email drafting as glorified autocomplete, meeting summaries as basic transcription with rules, customer service chatbots as decision trees with natural language, presentation builders as template reformatting and AI-personalised marketing as automated A/B testing. His complaint is that such uses create little real value."
-  - question: "What does the author mean by Solarpunk?"
-    answer: "For him Solarpunk is a vision of the future where technology and nature coexist harmoniously and innovation serves communities rather than just corporations. It is about sustainability, accessibility and shared knowledge. He calls it a utopian thought and admits it may sound cheesy, but says he wants to actively shape how technology, and AI in particular, influences our lives."
-  - question: "Does the post name a specific open-source AI model?"
-    answer: "No, no single model or project is named. Open source appears as a movement and an attitude. As an example of Microsoft embracing open source, the author mentions GitHub, VS Code and .NET. His call to Copilot Studio users is to share components, frameworks and good practices with colleagues and to contribute to open AI projects even in low-code environments."
+    answer: "He lists five: email drafting as glorified autocomplete, meeting summaries as basic transcription, customer chatbots as decision trees, presentation builders as template reformatting and AI-personalised marketing as automated A/B testing."
 ---
 
 ## TL;DR

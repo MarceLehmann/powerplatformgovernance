@@ -21,15 +21,11 @@ source_language_name: English
 source_published_at: '2025-03-16'
 faq:
   - question: "Wo speichert Dataverse die Adressen von Konten, Kontakten und Leads?"
-    answer: "Adressen von Konten und Kontakten liegen nicht in den Haupttabellen, sondern in einer eigenen Tabelle namens customeraddress. Leads verwenden dafür die separate Tabelle leadaddress. Die Daten erscheinen zwar nicht in der gewohnten Bedienung, zählen aber in den Speicherberechnungen des Power Platform Admin Centers mit."
+    answer: "Adressen von Konten und Kontakten liegen nicht in den Haupttabellen, sondern in einer eigenen Tabelle namens customeraddress. Leads verwenden dafür die separate Tabelle leadaddress."
   - question: "Wie viele Adressdatensätze legt Dataverse standardmässig an?"
-    answer: "Mit den Standardeinstellungen entstehen pro Konto zwei Adressdatensätze, pro Kontakt drei und pro Lead zwei, auch wenn keine Adressdaten erfasst sind. Felder wie Erstellungszeitpunkt, Änderungszeitpunkt und ändernde Person werden immer angelegt, sodass selbst diese leeren Datensätze Speicher in Dataverse belegen."
+    answer: "Mit den Standardeinstellungen entstehen pro Konto zwei Adressdatensätze, pro Kontakt drei und pro Lead zwei, auch wenn keine Adressdaten erfasst sind."
   - question: "Warum wird das bei Marketing mit vielen Leads zum Problem?"
-    answer: "Weil die leeren Adressen mit der Zahl der Leads wachsen. Bei einer Million Leads entstehen zwei Millionen leere Lead-Adressen. Sie belegen Speicher, obwohl sie keine Information enthalten. Der Beitrag beschreibt das Szenario für Organisationen, die Dataverse im Marketing mit Millionen von Leads einsetzen."
-  - question: "Welche neuen Funktionen verbessern den Umgang mit Adressdatensätzen?"
-    answer: "Es gibt zwei neue Möglichkeiten. Erstens legt Dataverse customeraddress- und leadaddress-Datensätze nur an, wenn sie tatsächlich Daten enthalten. Zweitens lassen sich customeraddress-Datensätze löschen, ohne dass der zugehörige Kontakt, das Konto oder der Lead gelöscht wird. Beides betrifft den Speicher, den leere Adressdatensätze belegen und der in den Speicherberechnungen des Power Platform Admin Centers erscheint."
-  - question: "Wie räumt man bestehende leere Adressen auf und was ist dabei zu beachten?"
-    answer: "Die erste Funktion entfernt bestehende leere Datensätze nicht. Die zweite Funktion entfernt customeraddress-Datensätze, ohne den Kontakt, das Konto oder den Lead zu löschen, was der Autor als deutlich einfacher bezeichnet. Als Umweg legt man neue Datensätze mit eingeschalteter erster Funktion an, führt sie mit den alten zusammen und entfernt die alten deaktivierten. Vor solchen Schritten verlangt er eine erzwungene Sicherung der Instanz."
+    answer: "Weil die leeren Adressen mit der Zahl der Leads wachsen. Bei einer Million Leads entstehen zwei Millionen leere Lead-Adressen."
 ---
 ## TL;DR
 

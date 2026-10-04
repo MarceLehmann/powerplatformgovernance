@@ -31,15 +31,11 @@ source_updated_at: '2026-09-30'
 source_type: article
 faq:
   - question: "Was erben Apps, die mit der Copilot Managed Runtime gebaut werden, automatisch?"
-    answer: "Sie erben die Anmeldung über Microsoft Entra und laufen auf Microsoft-gehosteter Ausführung. Mandantenrichtlinien gelten für sie, und sie erscheinen im Inventar des Microsoft-365-Admincenters. Auch Standardrichtlinien für Connectors, Freigabe und Inhaltssicherheit greifen, sodass eine neue App innerhalb einer vom Administrator definierten Grenze startet statt ausserhalb."
-  - question: "Auf welchen Wegen kann man Apps auf der Managed Runtime erstellen?"
-    answer: "Drei Wege speisen eine Laufzeit: Cowork, Copilot Studio und ein SDK- oder CLI-Ansatz mit JavaScript oder TypeScript. Weil alle drei in derselben verwalteten Umgebung landen, stehen Entwickler mit Code und Fachanwender mit Prompts unter derselben Authentifizierung, denselben Richtlinien und demselben Inventar."
+    answer: "Sie erben die Anmeldung über Microsoft Entra und laufen auf Microsoft-gehosteter Ausführung. Mandantenrichtlinien gelten für sie, und sie erscheinen im Inventar des Microsoft-365-Admincenters."
   - question: "Welche Kontrollen unterstützt die Managed Runtime für Administratoren?"
-    answer: "Bedingter Zugriff, Schutz vor Datenverlust, Connector-Einschränkungen, Freigabegrenzen und Lebenszyklusverwaltung. Laut Artikel kommen diese Kontrollen von der Plattform, sodass Administratoren Einblick in KI-gebaute Apps gewinnen, statt nur deren Erstellung verhindern zu wollen. Das zielt auf die wachsende Schatten-KI-Entwicklung, bei der Mitarbeitende ohne Wissen der IT eigene KI-Apps bauen."
+    answer: "Bedingter Zugriff, Schutz vor Datenverlust, Connector-Einschränkungen, Freigabegrenzen und Lebenszyklusverwaltung. Diese Kontrollen kommen von der Plattform, sodass Administratoren Einblick in KI-gebaute Apps gewinnen, statt nur deren Erstellung verhindern zu wollen."
   - question: "Ersetzt die Managed Runtime das Entwerfen einer Governance?"
-    answer: "Nein. Der Artikel sagt, dass von Anfang an eingebaute Governance nicht heisst, dass man Sicherheit vergessen kann, und dass eine schlecht konfigurierte Richtlinie eine schlecht konfigurierte Richtlinie bleibt. Kontrollen wie Conditional Access, DLP und Connector-Richtlinien müssen weiterhin richtig konfiguriert werden. Eines der Prinzipien von Microsoft ist ein Gleichgewicht zwischen administrativer Kontrolle und Produktivität der Entwickler."
-  - question: "Was heisst Erstellen innerhalb einer verwalteten Grenze für Schatten-KI?"
-    answer: "Es bedeutet, dass KI-gebaute Apps von Anfang an innerhalb der Tenant-Kontrollen entstehen und nicht erst nachträglich gesteuert werden. Der Artikel formuliert es so: nicht erst erstellen und danach steuern, sondern bereits innerhalb eines gesteuerten Rahmens erstellen. Bei Shadow AI rückt in den Vordergrund, zu wissen, was entsteht, wer es erstellt hat und wer es nutzen darf."
+    answer: "Nein. Der Artikel sagt, dass von Anfang an eingebaute Governance nicht heisst, dass man Sicherheit vergessen kann, und dass eine schlecht konfigurierte Richtlinie eine schlecht konfigurierte Richtlinie bleibt."
 ---
 
 ## TL;DR

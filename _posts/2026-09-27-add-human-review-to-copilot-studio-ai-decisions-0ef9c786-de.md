@@ -30,15 +30,11 @@ source_published_at: '2026-09-27'
 source_type: article
 faq:
   - question: "Wie entscheidet der Agent im Kreditbeispiel, wann ein Mensch prüfen muss?"
-    answer: "Der Agent vergleicht den angegebenen Kreditzweck mit einer Liste vorbewerteter Zwecke. Gibt es einen passenden Eintrag, liefert er genau diesen Zweck und dessen Kategorie zurück. Gibt es keinen, liefert er einen leeren Text und die Kategorie Human-Review. Ein Bedingungsblock im Flow prüft dann, ob die Kategorie Human-Review lautet, und leitet nur diese Anträge an einen Kreditsachbearbeiter weiter."
-  - question: "Welche SharePoint-Listen braucht der Flow zur Kreditprüfung?"
-    answer: "Zwei Listen. Die Antragsliste enthält den vollständigen Namen, den beantragten Betrag und den Kreditzweck. Die Zweckliste enthält neun vorbewertete Zwecke mit der Kategorie Allowed oder Flagged, etwa Weiterbildung als erlaubt und Kryptowährungshandel als markiert. Nach der Prüfung kommen drei Spalten für Entscheidung, Kennzeichen menschlicher Prüfung und Begründung dazu."
+    answer: "Der Agent vergleicht den angegebenen Kreditzweck mit einer Liste vorbewerteter Zwecke. Gibt es einen passenden Eintrag, liefert er genau diesen Zweck und dessen Kategorie zurück."
   - question: "Was erfasst die menschliche Prüfaktion und wie erreicht sie die zuständige Person?"
-    answer: "Der Flow sendet eine Outlook-Nachricht mit dem Betreff Action Required und dem Namen des Antragstellers. Sie nennt den nicht zuordenbaren Kreditzweck und bittet um eine Entscheidung mit Ja zum Genehmigen oder Nein zum Markieren. Die Person füllt zwei Felder aus, die Entscheidung und eine Begründung. Beide Eingaben setzen den Flow fort und werden danach festgehalten."
+    answer: "Der Flow sendet eine Outlook-Nachricht mit dem Betreff Action Required und dem Namen des Antragstellers."
   - question: "Wie hält der Flow Entscheidungen von Mensch und Agent in SharePoint fest?"
-    answer: "Nach einer menschlichen Prüfung setzt eine Formel das Feld Entscheidung auf Allowed bei Ja und sonst auf Flagged, das Kennzeichen menschlicher Prüfung auf Ja, und die Begründung wird übernommen. Im Else-Zweig übernimmt der Flow die Kategorie des Agenten, setzt das Kennzeichen auf Nein und lässt die Begründung leer. Beide Zweige aktualisieren denselben Antrag in der SharePoint-Liste."
-  - question: "Was passiert im Test des Autors zur menschlichen Prüfung?"
-    answer: "Der Autor reicht einen Kreditantrag ein, und der Workflow entscheidet, dass eine menschliche Prüfung nötig ist. Der Kreditsachbearbeiter erhält eine E-Mail mit einem Formular, füllt Entscheidung und Begründung aus und sendet es ab. Der Agent wartet auf diese Antwort und macht dann weiter. Zum Schluss hält der Flow die Kreditentscheidung, den Prüfstatus und die Begründung in der SharePoint-Liste fest."
+    answer: "Nach einer menschlichen Prüfung setzt eine Formel das Feld Entscheidung auf Allowed bei Ja und sonst auf Flagged, das Kennzeichen menschlicher Prüfung auf Ja, und die Begründung wird übernommen."
 ---
 
 ## TL;DR

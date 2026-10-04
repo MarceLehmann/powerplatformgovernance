@@ -17,15 +17,11 @@ permalink: "/de/posts/gov-dlp-in-practice/"
 translation_url: "/en/posts/gov-dlp-in-practice/"
 faq:
   - question: "Warum sollte die Standardgruppe in DLP auf Non-Business bleiben statt auf Blocked?"
-    answer: "Connectors der Microsoft-365-Enterprise-Lizenz und einige Kern-Connectors der Power Platform sind von einer Blockierung ausgenommen. Steht die Standardgruppe auf Blocked, landen diese ausgenommenen Connectors still in Non-Business, die vermeintlich sichere Einstellung hat also Ausnahmen, die niemand gewählt hat. Lass Non-Business als Standard und verschiebe Connectors nach Bewertung des Risikos gezielt."
+    answer: "Connectors der Microsoft-365-Enterprise-Lizenz und einige Kern-Connectors der Power Platform sind von einer Blockierung ausgenommen."
   - question: "Was leistet Connector Action Control in einer DLP-Richtlinie?"
-    answer: "Sie erlaubt einen Connector, schränkt aber ein, welche seiner Aktionen genutzt werden dürfen, etwa Lese-Aktionen erlauben und alles blockieren, was Daten verändert. Neue Aktionen, die ein Connector nach einem Update erhält, lassen sich automatisch erlauben oder automatisch blockieren, damit sich die Richtlinie nicht unbemerkt lockert. Sie ist präziser als eine pauschale Blockade."
-  - question: "Für welche Connectors gibt es Endpoint Filtering in DLP?"
-    answer: "Endpoint Filtering gibt es für sechs Connectors: HTTP, HTTP mit Microsoft Entra ID, HTTP Webhook, SQL Server, Azure Blob Storage und SMTP. Es steuert, welche konkreten Endpunkte ein Maker ansteuern darf, greift aber nur, wenn der Maker einen statischen Endpunktwert fest einträgt. Dynamische Werte sind nicht abgedeckt."
+    answer: "Sie erlaubt einen Connector, schränkt aber ein, welche seiner Aktionen genutzt werden dürfen, etwa Lese-Aktionen erlauben und alles blockieren, was Daten verändert."
   - question: "Ersetzen Advanced Connector Policies die klassischen DLP-Richtlinien schon vollständig?"
-    answer: "Noch nicht. Sie ersetzen Business, Non-Business und Blocked durch eine Default-Deny-Allowlist. Standardmässig laufen sie im Mixed Mode parallel zu klassischem DLP, wobei die restriktivere Regel gewinnt, oder im ACP-Only-Modus, sobald eine Umgebung vollständig migriert ist. Sie decken nur zertifizierte Connectors ab, Custom Connectors und HTTP bleiben bei klassischem DLP."
-  - question: "Verhindert eine DLP-Richtlinie den Zugriff auf Daten eines anderen Tenants?"
-    answer: "Nein. Tenantübergreifende Verbindungen steuert die Tenant-Isolation, eine separate Einstellung, die standardmässig aus ist, sodass solche Verbindungen nahtlos funktionieren, bis du sie einschaltest. Dann wählst du Ein-Weg- oder Zwei-Weg-Blockierung und setzt Partner-Tenants per ID oder Domain auf eine Allowlist. Du findest sie im Admin Center unter Sicherheit, Identität und Zugriff."
+    answer: "Noch nicht. Sie arbeiten mit einer Default-Deny-Allowlist und decken nur zertifizierte Connectors ab, Custom Connectors und HTTP bleiben bei klassischem DLP."
 ---
 
 ## TL;DR

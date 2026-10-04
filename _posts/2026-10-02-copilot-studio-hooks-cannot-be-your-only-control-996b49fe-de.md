@@ -31,15 +31,11 @@ source_published_at: '2026-10-02'
 source_type: article
 faq:
   - question: "Was passiert in Copilot Studio, wenn ein Hook-Workflow fehlschlägt oder eine Zeitüberschreitung hat?"
-    answer: "Der Agent macht einfach weiter. Laut Dokumentation hält ein Hook-Workflow, der scheitert, in eine Zeitüberschreitung läuft oder eine unlesbare Antwort liefert, den Agenten nicht auf. Nur ein ausdrückliches Ablehnen durch den Hook blockiert einen Toolaufruf. Darum taugt ein Hook nicht als einzige Sperre gegen unbefugte Aktionen."
-  - question: "An welchen Lebenszyklus-Ereignissen kann ein Copilot-Studio-Hook laufen?"
-    answer: "Unterstützt sind sechs Ereignisse: Sitzungsbeginn, Eingabe eines Prompts, Agentenfehler, vor einem Toolaufruf, nach einem erfolgreichen Tool und nach einem fehlgeschlagenen Tool. Vor dem Aufruf kann ein Hook die Argumente prüfen, ändern oder den Aufruf ablehnen. Danach kann er das Ergebnis anpassen oder protokollieren. Hooks befinden sich in der Preview."
+    answer: "Der Agent macht einfach weiter. Laut Dokumentation hält ein Hook-Workflow, der scheitert, in eine Zeitüberschreitung läuft oder eine unlesbare Antwort liefert, den Agenten nicht auf."
   - question: "Wo müssen Regeln durchgesetzt werden, die unbefugte Änderungen blockieren?"
-    answer: "Im zugrunde liegenden Dienst, nicht im Hook. Die Dokumentation sagt, dass Regeln gegen unbefugte Änderungen im Dienst selbst durchgesetzt bleiben sollen. Ein Hook kann Änderungsaufrufe protokollieren und solche ablehnen, die Geschäftsregeln verletzen, ist aber nur eine zusätzliche Schicht. Die Berechtigung im Dienst muss auch dann halten, wenn der Hook ausfällt."
+    answer: "Im zugrunde liegenden Dienst, nicht im Hook. Die Dokumentation sagt, dass Regeln gegen unbefugte Änderungen im Dienst selbst durchgesetzt bleiben sollen."
   - question: "Wie teste ich, ob ein Dataverse-Pilot geschützt bleibt, wenn ein Hook ausfällt?"
-    answer: "Zerstöre den Hook-Workflow absichtlich und versuche dann eine Änderung, die blockiert werden müsste. Lehnt der zugrunde liegende Dienst sie weiterhin ab, funktioniert die eigentliche Kontrolle. Der Artikel empfiehlt das für einen Pilot zusammen mit dem Protokollieren der Änderungsaufrufe im Hook und dem Ablehnen von Anfragen, die Geschäftsregeln verletzen."
-  - question: "Kann ein Copilot-Studio-Hook ändern, was ein Toolaufruf erhält oder zurückgibt?"
-    answer: "Ja. Vor der Ausführung kann ein Hook die Tool-Argumente prüfen, verändern oder den Aufruf ablehnen. Nach der Ausführung kann er das zurückgegebene Ergebnis anpassen und das Resultat protokollieren. Die Plattform startet den Hook-Workflow automatisch beim jeweiligen Ereignis, der Agent ruft ihn also nicht selbst als Tool auf."
+    answer: "Zerstöre den Hook-Workflow absichtlich und versuche dann eine Änderung, die blockiert werden müsste. Lehnt der zugrunde liegende Dienst sie weiterhin ab, funktioniert die eigentliche Kontrolle."
 ---
 
 ## TL;DR

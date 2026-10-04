@@ -30,15 +30,11 @@ source_published_at: '2026-07-16'
 source_type: article
 faq:
   - question: "Was brauche ich, um Dataverse mit VS Code und einem KI-Agenten aufzubauen?"
-    answer: "Du brauchst einen Power-Platform-Tenant mit Umgebung, Administratorzugriff auf den Tenant, ein agentisches Coding-Werkzeug, ein GitHub-Konto für die Versionsverwaltung und Visual Studio Code, das kostenlos und plattformübergreifend ist. Der Autor empfiehlt Claude Code, nennt aber auch GitHub Copilot und Codex als Alternativen. Die Umgebung selbst bleibt unverändert nötig, nur die Bedienung wandert aus dem Maker-Portal."
-  - question: "Welche Erweiterungen und Skills gehören zum Setup mit VS Code und Dataverse?"
-    answer: "Die Basis bilden drei Erweiterungen: Power Platform Tools, das die PAC-Kommandozeile installiert, Claude Code für VS Code und optional GitHub Copilot Chat, um Ergebnisse gegenzuprüfen. Dazu installierst du über Plugin-Befehle die Dataverse-Skills von Microsoft aus GitHub. Sie kapseln den Dataverse-MCP-Server, die Dataverse-CLI und die PAC-CLI und geben dem Agenten die nötigen Werkzeuge."
+    answer: "Du brauchst einen Power-Platform-Tenant mit Umgebung, Administratorzugriff auf den Tenant, ein agentisches Coding-Werkzeug, ein GitHub-Konto für die Versionsverwaltung und Visual Studio Code, das kostenlos und plattformübergreifend ist."
   - question: "Reicht ein kostenloses KI-Abonnement für die Entwicklung mit VS Code und Dataverse?"
-    answer: "Kostenlose Stufen funktionieren, die Credits sind laut Autor aber schnell aufgebraucht. Er nutzt selbst den Max-Tarif von Claude, weil er Claude Code täglich einsetzt und die Kapazität braucht. Für den Einstieg hält er den Pro-Tarif für einen vernünftigen Startpunkt, von dem aus man sich hocharbeiten kann."
+    answer: "Kostenlose Stufen funktionieren, die Credits sind laut Autor aber schnell aufgebraucht. Er nutzt selbst den Max-Tarif von Claude, weil er Claude Code täglich einsetzt und die Kapazität braucht."
   - question: "Ersetzt die Entwicklung per KI-Agent in VS Code das Dataverse-Fachwissen?"
-    answer: "Nein. Der Autor sagt ausdrücklich, dass du weiterhin verstehen musst, wie Dataverse funktioniert und wie Apps zusammenpassen, um eine gute Lösung zu bauen. Der Agent ist ein Werkzeug, kein Ersatz für Handwerk. Du bestätigst die erzeugten Befehle vor der Ausführung, und das Ergebnis hängt von der Genauigkeit deiner Eingaben ab. Verschiedene Läufe können unterschiedlich ausfallen."
-  - question: "Was erzeugt der Agent im Beispiel mit der Spesen-App in VS Code?"
-    answer: "Er legt auf Zuruf eine Dataverse-Umgebung an, richtet ein Authentifizierungsprofil ein, erstellt Lösung und Herausgeber mit dem Präfix exp und baut ein Datenmodell mit Spesenkopf und Spesenpositionen samt Statusgründen und Dateifeld für Belege. Danach lädt er konsistente Beispieldaten. Zuerst erzeugte er Dezimal- statt Währungsfelder, bemerkte das und korrigierte es selbst, nach einigen Minuten."
+    answer: "Nein. Der Autor sagt ausdrücklich, dass du weiterhin verstehen musst, wie Dataverse funktioniert und wie Apps zusammenpassen, um eine gute Lösung zu bauen."
 ---
 
 ## TL;DR

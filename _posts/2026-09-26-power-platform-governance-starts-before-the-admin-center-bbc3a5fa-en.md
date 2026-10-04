@@ -35,15 +35,11 @@ submitted_by:
   linkedin: https://www.linkedin.com/in/michaelroth42/
 faq:
   - question: "Which four questions should shape Power Platform governance before any admin setting?"
-    answer: "What do we want to enable, what do we want to protect, where do we accept risk, and where do we not. The article says settings are just the technical implementation of these decisions. Anything that exists as a default will eventually get used, and Microsoft's defaults optimize for adoption."
+    answer: "What do we want to enable, what do we want to protect, where do we accept risk, and where do we not."
   - question: "Why does the article say that leaving defaults unchanged is a decision?"
-    answer: "The article lists defaults such as tenant isolation being disabled, custom connectors working in the Default Environment and self-service purchases being enabled. It says Microsoft's defaults optimize for adoption and assume you want maximum adoption with minimal friction. In its words, not deciding is still a decision, one that leaves the platform wide open."
+    answer: "The article lists defaults such as tenant isolation being disabled, custom connectors working in the Default Environment and self-service purchases being enabled."
   - question: "What does low code lower and what does it leave unchanged?"
-    answer: "The article says low code lowers the barrier to entry but does not lower the complexity threshold. This is part of its argument that governance is not a purely technical topic, because the author describes it as a social system, not a technical one. He describes the admin role accordingly as that of a translator."
-  - question: "How should an admin act in the governance model described?"
-    answer: "As a translator between business, IT, risk and reality, not as someone acting unilaterally. Governance is described as a social system, not a technical one. According to the article, rules without communication create resistance, policies without context create confusion, and blocking without offering alternatives creates shadow IT."
-  - question: "Which topics does the announced governance series cover next?"
-    answer: "The announced series starts with the Default Environment as Part 1 and then covers maker environments, security baselines, ownership models and monitoring. Observability and risk scoring are named as further topics. Before configuring anything, the author advises writing down your answers to the four questions."
+    answer: "The article says low code lowers the barrier to entry but does not lower the complexity threshold."
 ---
 
 ## TL;DR

@@ -16,15 +16,11 @@ permalink: "/de/posts/gov-shadow-it-root-cause/"
 translation_url: "/en/posts/gov-shadow-it-root-cause/"
 faq:
   - question: "Warum kaufen Mitarbeitende Tools mit der privaten Kreditkarte, statt auf die IT zu warten?"
-    answer: "Weil der legale Weg langsamer ist als der illegale. Eine Anfrage, die sechs Wochen braucht, lässt das Geschäftsbedürfnis nicht verschwinden, sie führt dazu, dass es jemand ohne dich löst. Nicht verwaltete, unlizenzierte Tools auf Spesenabrechnungen sind keine Böswilligkeit und keine Schulungslücke, sondern ein Bedürfnis, das schneller war als der dafür vorgesehene Prozess."
+    answer: "Weil der legale Weg langsamer ist als der illegale. Eine Anfrage, die sechs Wochen braucht, lässt das Geschäftsbedürfnis nicht verschwinden, sie führt dazu, dass es jemand ohne dich löst."
   - question: "Wie hilft der Catalog in Power Platform gegen Schatten-IT?"
-    answer: "Maker können darin bereits genehmigte Komponenten finden und wiederverwenden, statt bei einer Kaufentscheidung zu starten. Ein Catalog mit echtem Inhalt konkurriert in der Geschwindigkeit mit einem nicht autorisierten Tool, was ein Richtliniendokument nie schafft. Etwas zu finden, das bereits funktioniert, wird so zur schnellen Option statt des langsamen, nicht autorisierten Kaufs."
-  - question: "Was ist ein Fusion-Team in der Low-Code-Entwicklung?"
-    answer: "Ein Fusion-Team bringt Pro-Entwickler, Maker und Admins an derselben Lösung zusammen, statt dass das Business der IT eine Spezifikation über eine Mauer reicht. Microsofts Anleitung nennt die Spannung strukturell, denn Prototyping im Alleingang erzeugt Silos und Schatten-IT. Ein Maker mit einem IT-Partner entfernt den Übergabepunkt, an dem die Lücke entsteht."
+    answer: "Maker können darin bereits genehmigte Komponenten finden und wiederverwenden, statt bei einer Kaufentscheidung zu starten."
   - question: "Ist ein schnelles Nein bei IT-Anfragen besser als ein langsames Vielleicht?"
-    answer: "Ja. Der Fehlerfall ist nicht das Nein, sondern das Fehlen einer Antwort. Eine Absage innerhalb von drei Tagen schliesst den Kreislauf, monatelanges in Prüfung lässt ihn offen, bis er sich über einen ungewollten Kanal auflöst. Microsofts Anleitung zu DLP-Ausnahmen behandelt die Antwortzeit als Teil der Richtlinie, weil jede unbeantwortete Anfrage dazu anreizt, nicht mehr zu fragen."
-  - question: "Was braucht ein schneller Anfrageprozess in der Praxis?"
-    answer: "Wenig: ein Anfrageformular, einen festen wöchentlichen Entscheidungstermin und eine verbindliche Antwort innerhalb weniger Tage. Ein Nein ist ein vollkommen akzeptables Ergebnis, solange es fristgerecht kommt. Gesucht ist nicht ein schnelleres Ja, sondern eine schnelle Antwort, denn ein stilles noch in Prüfung erzeugt genauso viel Schatten-IT wie ein ausdrückliches Nein."
+    answer: "Ja. Der Fehlerfall ist nicht das Nein, sondern das Fehlen einer Antwort."
 ---
 
 ## TL;DR

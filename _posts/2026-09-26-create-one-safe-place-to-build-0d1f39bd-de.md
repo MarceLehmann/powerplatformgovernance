@@ -36,15 +36,11 @@ submitted_by:
   linkedin: https://www.linkedin.com/in/michaelroth42/
 faq:
   - question: "Warum sollte die DLP-Richtlinie einer Maker-Umgebung der Produktion ähneln?"
-    answer: "Weil Maker sonst mit Möglichkeiten bauen, die es in der Produktion nicht gibt, und später enttäuscht werden. Sind Custom Connectors oder HTTP-Aufrufe in der Produktion eingeschränkt, sollte das auch im Maker Lab gelten. Die Richtlinie darf etwas grosszügiger sein, aber nicht dramatisch. Für Experimente mit gesperrten Connectors empfiehlt die Quelle ein separates Advanced Maker Lab mit strengerem Zugang."
+    answer: "Weil Maker sonst mit Möglichkeiten bauen, die es in der Produktion nicht gibt, und später enttäuscht werden."
   - question: "Wie sollte der Zugang zu einer Maker-Umgebung geregelt werden?"
-    answer: "Nicht automatisch für alle im Verzeichnis, sondern über Kompetenz. Die Quelle schlägt ein Lernmodul von etwa 30 Minuten vor, das erklärt, was Power Platform ist und was nicht, wie Connectors eingeschränkt sind, wofür Dataverse dient und welche Erwartungen ans Maker Lab gelten. Nach Abschluss erfolgt der Zugang über eine Sicherheitsgruppe, die das Governance-Team oder die IT verwaltet."
+    answer: "Über Kompetenz, nicht automatisch für alle im Verzeichnis. Zuerst ein Lernmodul von etwa 30 Minuten, danach der Zugang über eine Sicherheitsgruppe, die das Governance-Team oder die IT verwaltet."
   - question: "Wann lohnt es sich, ein Maker Lab in mehrere Umgebungen aufzuteilen?"
-    answer: "Standardmässig genügt ein allgemeines Maker Lab. Aufgeteilt wird erst, wenn eine von drei Bedingungen zutrifft: Fortgeschrittene Fälle brauchen Connectors, die für den allgemeinen Zugang zu riskant sind, einzelne Fachbereiche haben dauerhaft ein hohes Maker-Volumen, oder Maker bauen Model-Driven Apps mit echter Geschäftslogik oder nutzen Standardtabellen für reale Abläufe. Jede zusätzliche Umgebung erhöht den Verwaltungsaufwand."
-  - question: "Welche Umgebungseinstellungen empfiehlt die Quelle für ein Maker Lab?"
-    answer: "Vier Einstellungen: eine Sicherheitsgruppe für den Zugang, Dataverse Audit mit 30 Tagen Aufbewahrung, damit Maker lernen, dass ihre Aktionen nachvollziehbar sind, die Vorgabe, Flows und Apps standardmässig in Lösungen zu erstellen, sowie eine Kapazitätsüberwachung. Audit hält fest, wer was geändert hat, verhindert aber keine Fehler und ersetzt keine Sicherung. Lösungen, die 90 Tage unberührt blieben, werden entfernt, sobald die Verantwortlichen bestätigen, dass sie nicht mehr gebraucht werden."
-  - question: "Was sollten Maker über den Lebenszyklus ihrer Lab-Lösungen wissen?"
-    answer: "Das Maker Lab ist keine Produktionsumgebung. Apps und Flows können bei Richtlinienverstössen oder Verwaisung gelöscht werden, es gibt keine Verfügbarkeitszusage, und die Verantwortung bleibt beim Maker, sodass die Lösungen eventuell nicht mehr gepflegt werden, wenn jemand geht. Geschäftskritische Lösungen müssen in die Produktion migriert werden. Maker müssen wissen, wie sie das beantragen, und der Prozess sollte dokumentiert und leicht auffindbar sein."
+    answer: "Standardmässig genügt ein allgemeines Maker Lab. Aufgeteilt wird, wenn Fortgeschrittene riskante Connectors brauchen, ein Fachbereich dauerhaft viele Maker hat oder Maker Model-Driven Apps mit echter Geschäftslogik bauen."
 ---
 
 ## TL;DR

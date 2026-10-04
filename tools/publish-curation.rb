@@ -13,7 +13,7 @@ module CurationPublisher
   TRACKING = /\A(?:utm_.+|fbclid|gclid|msclkid)\z/i
   SOURCE_TYPES = %w[article youtube podcast].freeze
   YOUTUBE_ID = /\A[A-Za-z0-9_-]{11}\z/
-  FAQ_COUNT = 5
+  FAQ_COUNT = 3
   FAQ_FORBIDDEN = /[<>{}`*_\[\]#]/
 
   def self.text(value, maximum, optional: false)
@@ -38,7 +38,7 @@ module CurationPublisher
     value.to_s.downcase.gsub(/[^\p{L}\p{N}]/, '')
   end
 
-  # Exactly 5 plain-text question/answer pairs per language. Any violation raises ArgumentError,
+  # Exactly 3 plain-text question/answer pairs per language. Any violation raises ArgumentError,
   # which publish() turns into "skip this article, continue with the rest". known_questions is
   # the set of normalised questions that already exist in this language in the repository.
   def self.faq_items(value, known_questions = Set.new)
@@ -53,8 +53,8 @@ module CurationPublisher
       raise ArgumentError, 'FAQ text contains forbidden characters' if raw_question.match?(FAQ_FORBIDDEN) || raw_answer.match?(FAQ_FORBIDDEN)
       question = text(raw_question, 140)
       raise ArgumentError, 'FAQ question must be 15-140 characters and end with a question mark' unless question.length >= 15 && question.end_with?('?')
-      answer = text(raw_answer, 700)
-      raise ArgumentError, 'FAQ answer must be 40-80 words' unless answer.split(' ').length.between?(40, 80)
+      answer = text(raw_answer, 400)
+      raise ArgumentError, 'FAQ answer must be 8-35 words' unless answer.split(' ').length.between?(8, 35)
       identity = faq_key(question)
       raise ArgumentError, 'Duplicate FAQ question' if seen.include?(identity) || known_questions.include?(identity)
       seen << identity

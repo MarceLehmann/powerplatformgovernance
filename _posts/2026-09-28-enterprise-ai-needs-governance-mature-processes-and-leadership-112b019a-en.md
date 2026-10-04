@@ -31,16 +31,12 @@ source_author: Karl-Johan Spiik
 source_published_at: '2026-09-28'
 source_type: article
 faq:
-  - question: "How can you tell that enterprise AI has really arrived, according to Heikniemi?"
-    answer: "When the onboarding of new employees changes. If explaining how the company operates includes AI-driven parts, enterprise AI is there, and everything else he calls assistance. He considers the popular MIT figure that 95 percent of AI projects fail methodologically flawed but the pattern accurate: most initiatives were never positioned to change operations broadly."
   - question: "Which prerequisites does the keynote name for AI that transforms a business?"
-    answer: "Four pillars with human leadership as the foundation: data maturity, process maturity, governance, and AI evolution, which the world drives on its own. Data maturity means keeping the why next to the what, such as guidelines and policies. Process maturity requires digitization first, because steps that live on sticky notes or phone calls stay invisible to AI."
+    answer: "Four pillars with human leadership as the foundation: data maturity, process maturity, governance, and AI evolution, which the world drives on its own."
   - question: "Why are AI champion networks not enough in Heikniemi's view?"
-    answer: "A network of five percent engaged staff giving five percent of their time suffices, in his view, only for basic Copilot use. A help desk is not a change agent. Champions have to become change champions, because the question moves from using a tool to reinventing the work."
+    answer: "A network of five percent engaged staff giving five percent of their time suffices, in his view, only for basic Copilot use."
   - question: "Which governance challenges does the keynote highlight for AI?"
-    answer: "Access control is hard for humans and doubly so for systems created by agents. Documenting decisions with their data needs logging that many firms lack and could not query. Quality assurance gets harder because AI behaves differently on each run. AI costs should also move into business budgets, since only there can someone judge whether a thousand euros of monthly tokens is justified."
-  - question: "How does the craft agent at Zure work and what results does Heikniemi report?"
-    answer: "Users select an element in the application and describe the wanted feature in two or three sentences. A background process reads the source code and produces an implementation plan within two or three minutes, which lands in the Azure DevOps backlog with one click. A pull request follows for review. He mentions about 200 requests per week and 220 pull requests the week before, while long-term sustainability remains open."
+    answer: "Access control is hard for humans and doubly so for systems created by agents. Documenting decisions with their data needs logging that many firms lack and could not query."
 ---
 
 ## TL;DR

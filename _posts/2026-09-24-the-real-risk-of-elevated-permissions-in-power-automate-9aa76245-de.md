@@ -29,15 +29,11 @@ source_published_at: '2022-05-18'
 publisher_disclosure: Beide Publikationen werden von Marcel Lehmann herausgegeben.
 faq:
   - question: "Warum kann jemand ohne Schreibrecht auf SharePoint über einen Flow trotzdem Listeneinträge anlegen?"
-    answer: "Die Verbindung eines Flows gehört der Person, die sie eingerichtet hat, nicht der Person, die den Flow auslöst. Ein Flow mit dem Trigger PowerApps V2 führt jede Aktion mit der beim Entwurf gesetzten Verbindung aus, etwa der SharePoint-Verbindung eines Dienstkontos. Die aufrufende Person berührt die Liste nie direkt und arbeitet nur in der App."
+    answer: "Die Verbindung eines Flows gehört der Person, die sie eingerichtet hat, nicht der Person, die den Flow auslöst."
   - question: "Was ist das Hauptrisiko dieses Musters zur Rechteerhöhung?"
-    answer: "Der Flow wird zur Sicherheitsgrenze, weil er mit den Rechten des Servicekontos läuft, egal welcher Benutzer ihn auslöst. Der Endnutzer greift nie direkt auf die geschützte Ressource zu. Der Artikel rät deshalb, Eingaben im Flow zu validieren. Zudem empfiehlt er Least Privilege für das Servicekonto und Audit-Logs, besonders bei sensiblen Vorgängen."
+    answer: "Der Flow wird zur Sicherheitsgrenze, weil er mit den Rechten des Servicekontos läuft, egal welcher Benutzer ihn auslöst. Der Endnutzer greift nie direkt auf die geschützte Ressource zu."
   - question: "Wie viele Rechte soll das Dienstkonto hinter einem erhöhten Flow bekommen?"
-    answer: "Nur die Berechtigungen, die der Vorgang braucht, zum Beispiel Schreibzugriff auf eine eingeschränkte SharePoint-Liste oder Aktualisierungsrechte auf einer Dataverse-Tabelle. Der Artikel rät zu Least Privilege statt breiter Admin-Rechte. Ausserdem soll man ein Servicekonto dafür anlegen und sich damit anmelden, wenn man die SharePoint-, Dataverse- oder andere Verbindung erstellt."
-  - question: "Was ändert der Trigger PowerApps V2 gegenüber dem älteren Child-Flow-Ansatz?"
-    answer: "Früher lief ein übergeordneter Flow als aufrufender Benutzer und startete einen Child-Flow, der die erhöhten Rechte des Servicekontos hielt. Mit dem PowerApps-V2-Trigger läuft der Flow selbst mit seinen konfigurierten Verbindungen, die Eltern-Kind-Umgehung entfällt also. Laut Artikel sind die Lösungen dadurch einfacher zu lesen und zu warten."
-  - question: "Reicht der Ausführungsverlauf eines Flows als Prüfspur bei sensiblen Vorgängen?"
-    answer: "Der Artikel sagt, dass man für Compliance Audit-Logs führen soll, besonders bei sensiblen Vorgängen, weil der Ausführungsverlauf allein nicht ausreichen kann. Er verweist ausserdem auf Secure Inputs und Secure Outputs (Tipp 98), die die Zugangsdaten des Servicekontos, auf denen dieses Muster beruht, im Ausführungsverlauf maskieren können."
+    answer: "Nur die Berechtigungen, die der Vorgang braucht, zum Beispiel Schreibzugriff auf eine eingeschränkte SharePoint-Liste oder Aktualisierungsrechte auf einer Dataverse-Tabelle. Der Artikel rät zu Least Privilege statt breiter Admin-Rechte."
 ---
 ## TL;DR
 

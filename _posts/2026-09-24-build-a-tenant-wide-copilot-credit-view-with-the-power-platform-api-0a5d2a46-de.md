@@ -27,15 +27,11 @@ source_published_at: '2026-08-25'
 source_updated_at: '2026-08-26'
 faq:
   - question: "Welcher Endpunkt der Power-Platform-API liefert die Copilot-Credit-Kapazität des Tenants?"
-    answer: "Die Route für MCSMessages unter licensing und entitlements liefert Werte für berechtigt, zugewiesen, verbraucht, verfügbar und Status. Die Antwort enthält zusätzlich das Datum der letzten abgeschlossenen Nutzung und zeigt damit, wie aktuell die Verbrauchsdetails sind. Pro Agent und Tag gibt es einen zweiten Endpunkt für Ressourcen, der mit Datumsbereich, Seitengrösse und Fortsetzungstoken abgefragt wird."
-  - question: "Wie baut man mit der Ressourcen-Abfrage eine saubere tägliche Verbrauchshistorie auf?"
-    answer: "Man fragt jeweils einzelne Tage ab, damit pro Tag sauber getrennte Datensätze entstehen. Die Seitengrösse lässt sich auf 5000 setzen, grössere Ergebnisse werden per Fortsetzungstoken geholt. Umgebungsnamen stehen nicht in den Verbrauchszeilen und werden über einen separaten Endpunkt der Umgebungsverwaltung aufgelöst. Weil dieselbe Kombination mehrfach auftauchen kann, müssen Zeilen später aggregiert werden."
+    answer: "Die Route für MCSMessages unter licensing und entitlements liefert Werte für berechtigt, zugewiesen, verbraucht, verfügbar und Status."
   - question: "Warum reichen die Berichte im Admin Center für den Copilot-Credit-Verbrauch manchmal nicht?"
-    answer: "Die Standardberichte unter Licensing und Copilot Studio erlauben es nicht, Daten umzuformen, eigene Datensätze zu besitzen oder Verläufe über das Standardfenster hinaus zu halten. Dazu kommt, dass der GitHub-Copilot-Harness Credits schon beim Bauen, Testen und Auswerten von Agenten verbraucht, nicht nur im Produktivbetrieb. Die Quelle empfiehlt, mit den Admin-Center-Berichten zu starten und nur bei konkretem Bedarf selbst zu bauen."
-  - question: "Aus welchen Bausteinen besteht die Community-Lösung für Copilot-Credit-Verbrauch in Dataverse?"
-    answer: "Die Lösung in Version 2.0.0 umfasst einen täglichen Power-Automate-Flow, drei Dataverse-Tabellen für Verbrauchshistorie, Kapazitäts-Snapshots und Synchronisationsstatus, eine Nur-Lese-Sicherheitsrolle und eine Power-Apps-Code-App als Dashboard. Der erste Lauf importiert bis zu 180 Tage Historie, spätere Läufe aktualisieren die letzten sieben Tage. Alles lässt sich als einzelnes Solution-Paket importieren."
+    answer: "Die Standardberichte unter Licensing und Copilot Studio erlauben es nicht, Daten umzuformen, eigene Datensätze zu besitzen oder Verläufe über das Standardfenster hinaus zu halten."
   - question: "Welche Einschränkungen gelten für die Daten der Copilot-Credit-Verbrauchs-API?"
-    answer: "Die API kann für einen Agenten am selben Tag mehrere Zeilen liefern, wenn sich Kanal, Funktion, Modell oder Umgebung unterscheiden. Agenten mit GitHub-Copilot-Harness melden die Funktion als Process Agent und liefern keine Werte für Tool, Modell oder Wissensquelle. Einige optionale Metadaten sind in der öffentlichen Referenz nicht vollständig beschrieben, die benötigten Felder sollte man deshalb selbst testen."
+    answer: "Die API kann für einen Agenten am selben Tag mehrere Zeilen liefern, wenn sich Kanal, Funktion, Modell oder Umgebung unterscheiden."
 ---
 ## TL;DR
 

@@ -35,15 +35,11 @@ submitted_by:
   linkedin: https://www.linkedin.com/in/m365showpodcast/
 faq:
   - question: "Was ist laut dem Beitrag die Ursache von Fehlern, die sich durch Features ziehen?"
-    answer: "Als Wurzel nennt der Beitrag enge Kopplung. Wird ein Fehler behoben, taucht an anderer Stelle der nächste auf, was er als Whack-a-Mole-Problem in Low-Code-Anwendungen von Unternehmen beschreibt. Als Gegenmittel empfiehlt er, Lösungen in sauber getrennte Module mit jeweils einer einzigen Verantwortung zu zerlegen. Als Inspiration dienen die Clean-Architecture-Prinzipien von Robert Martin."
+    answer: "Als Wurzel nennt der Beitrag enge Kopplung. Wird ein Fehler behoben, taucht an anderer Stelle der nächste auf, was er als Whack-a-Mole-Problem in Low-Code-Anwendungen von Unternehmen beschreibt."
   - question: "Wie sollten E-Mails in einer modularen Power-Platform-Lösung versendet werden?"
-    answer: "Als Anti-Pattern gilt, den Outlook- oder Office-365-Connector in jeden Flow einzubauen. Besser schreibt jeder Flow in eine ausgehende Staging-Tabelle in Dataverse. Ein eigener Hintergrundprozess fragt diese E-Mail-Warteschlange ab und versendet die Nachrichten. So hängt kein Fachflow direkt vom Connector ab, und Änderungen am Versand bleiben an einer Stelle."
-  - question: "Welche vier Vorteile bringt die Isolation von Features?"
-    answer: "Der Beitrag nennt gezielte Fehlersuche, unabhängiges Testen, sicheres Umbauen und einfacheres Skalieren. Support-Teams können erkennen, welches Modul ausgefallen ist, ohne einen Workflow mit 500 Schritten durchsuchen zu müssen, und kleinere Module erlauben Tests einzelner Geschäftsregeln im Stil von Unit-Tests. Prozesse mit hohem Volumen lassen sich an Azure-Dienste auslagern, während Formulare für Nutzer reaktionsschnell bleiben."
-  - question: "Was empfiehlt der Beitrag für das Datenmodell in Dataverse?"
-    answer: "Das Datenmodell sollte normalisiert werden, statt Hunderte von benutzerdefinierten Feldern anzuhäufen. Ausserdem warnt der Beitrag davor, widersprüchliche Geschäftsregeln in eine einzige Tabelle zu pressen. Auch wenn bei Low-Code weniger Code geschrieben wird, verlangen Unternehmenslösungen im Unternehmenseinsatz weiterhin ein robustes, belastbares Datenmodell."
+    answer: "Als Anti-Pattern gilt, den Outlook- oder Office-365-Connector in jeden Flow einzubauen. Besser schreibt jeder Flow in eine ausgehende Staging-Tabelle in Dataverse."
   - question: "Wie viel Governance und welche Architektur empfiehlt der Beitrag?"
-    answer: "Organisationen pendeln oft zwischen zwei Extremen, keine Governance oder zu viel davon. Der Beitrag rät zu einer Aufsicht, die sich nach der Geschäftskritikalität und dem Risiko richtet. Architektonisch empfiehlt er einen Hybrid aus Low-Code im Frontend und Pro-Code für die Logik im Hintergrund. Strukturierte Quellcodeverwaltung sei nötig, damit die Lösung im grossen Massstab wartbar bleibt."
+    answer: "Organisationen pendeln oft zwischen zwei Extremen, keine Governance oder zu viel davon. Der Beitrag rät zu einer Aufsicht, die sich nach der Geschäftskritikalität und dem Risiko richtet."
 ---
 
 ## TL;DR

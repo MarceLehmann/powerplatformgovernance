@@ -22,6 +22,13 @@ source_language: en
 source_language_name: English
 source_author: Alex Shlega
 source_published_at: '2025-11-09'
+faq:
+  - question: "Can instructions alone keep a Copilot Studio agent on topic?"
+    answer: "Not reliably. In the example the agent rejected an unrelated question at first, then answered one after a matching custom MCP tool returned numbers."
+  - question: "What is the risk of custom MCP tools in an agent?"
+    answer: "The author infers that MCP tools may take priority over agent instructions, so a tool response can continue a conversation despite configured constraints and make behaviour unpredictable."
+  - question: "What should admins and security teams test?"
+    answer: "Test every agent instruction together with its configured tools, especially custom MCP servers, and do not treat instruction-only restrictions as sufficient control until tool calls and responses are tested."
 ---
 ## TL;DR
 

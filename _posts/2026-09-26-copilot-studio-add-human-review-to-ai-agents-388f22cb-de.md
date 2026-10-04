@@ -28,6 +28,13 @@ source_language_name: English
 source_author: Matthew Devaney
 source_published_at: '2026-09-20'
 source_type: article
+faq:
+  - question: "Wie bindet Copilot Studio einen Menschen in die Entscheidung eines Agenten ein?"
+    answer: "Der Agent sendet eine Nachricht über Teams oder E-Mail, sammelt die Antwort der Person und entscheidet damit über die nächste Aktion."
+  - question: "Wann braucht ein Agent eine menschliche Prüfstufe?"
+    answer: "Wenn Situationen unerwartet oder für autonome Entscheidungen zu riskant sind, denn die Planung kann nicht jeden Fall abdecken."
+  - question: "Wer legt fest, welche Entscheidungen Agenten nicht allein treffen dürfen?"
+    answer: "Leitung und Fachbereich legen fest, welche Entscheidungen Agenten nicht selbstständig treffen dürfen, und Security achtet auf autonome Entscheidungen, die menschliche Aufsicht erfordern."
 ---
 
 ## TL;DR

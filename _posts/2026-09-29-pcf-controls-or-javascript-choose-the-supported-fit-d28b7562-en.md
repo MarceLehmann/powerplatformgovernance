@@ -31,15 +31,11 @@ source_published_at: '2026-09-29'
 source_type: article
 faq:
   - question: "When should I choose a PCF control and when JavaScript in Dynamics 365?"
-    answer: "PCF builds custom interface components, while JavaScript usually adds client-side behaviour to model-driven app forms. Choose PCF when you want to change how data is displayed or edited, such as a slider for numbers, a calendar view or a map view. Choose JavaScript to respond to form events like load, field change or save, set values or toggle field visibility."
+    answer: "PCF builds custom interface components, while JavaScript usually adds client-side behaviour to model-driven app forms."
   - question: "Is hiding a field with JavaScript enough to protect the data?"
-    answer: "No. Hiding a field or checking its value in the browser does not secure the data. Client-side checks help guide users, but important data rules have to be enforced on the server. Access is controlled by platform security roles and permissions. This holds for PCF controls and form scripts alike."
+    answer: "No. Hiding a field or checking its value in the browser does not secure the data."
   - question: "Is Xrm.Page still recommended for new form code in Dynamics 365?"
-    answer: "No. Microsoft marks the older Xrm.Page approach as deprecated and recommends formContext for new code where applicable. Form scripts should use the supported client API and pass the execution context. The article also advises against direct DOM manipulation, because internal markup is not a stable contract and such work can break when the app changes."
-  - question: "Which apps can run PCF controls and form scripts?"
-    answer: "Form scripts apply to model-driven app forms. PCF components support both model-driven and canvas apps, although support varies by component type, target surface and configuration. Before development, confirm that your field and app are supported for the planned component, and always test in the target app with real data."
-  - question: "What should I clarify before building a PCF control or form script?"
-    answer: "Clarify the requirement and supported platform surface, the skills in your team and who owns long-term maintenance. PCF typically needs TypeScript and framework knowledge, form scripts need JavaScript and client API knowledge. Prototype the riskiest assumptions, such as mobile use or complex forms, and test accessibility, since custom controls do not get keyboard support or screen reader support automatically."
+    answer: "No. Microsoft marks the older Xrm.Page approach as deprecated and recommends formContext for new code where applicable."
 ---
 
 ## TL;DR

@@ -16,15 +16,11 @@ permalink: "/en/posts/gov-documentation-debt/"
 translation_url: "/de/posts/gov-documentation-debt/"
 faq:
   - question: "What naming pattern does Microsoft recommend for Power Platform environments?"
-    answer: "Names are limited to 100 characters, should stay short and meaningful and follow a fixed, predictable pattern. The recommended example combines lifecycle stage, region, business unit and purpose, giving names like Prod-US-Finance-Payroll. Consistent names show admins an environment's purpose without opening it. Names are visible to anyone with admin center access, so never encode anything confidential."
+    answer: "Names are limited to 100 characters, should stay short and meaningful and follow a fixed, predictable pattern. The recommended example combines lifecycle stage, region, business unit and purpose, giving names like Prod-US-Finance-Payroll."
   - question: "Why is storing app data in a personal OneDrive a risk?"
-    answer: "Personal OneDrive is a compliant, tenant-resident service, so the risk is not where the bytes sit but who the data's availability depends on. A file there is tied to one person's account. If that person goes on leave, changes roles or leaves, the team app built on it stops working. SharePoint and Dataverse are organizationally owned and do not have this failure mode."
-  - question: "What should I ask about data location when a new solution is taken in?"
-    answer: "Ask where the app's data actually lives and whether its availability depends on one specific person's account staying active. Asking at solution intake is better than an audit finding months later. A Power Apps or Power Automate solution can work perfectly for its maker while storing its data somewhere nobody else can reach."
+    answer: "The file is tied to one person's account. If that person goes on leave, changes roles or leaves, the team app built on it stops working."
   - question: "What should a maker write down on the day a solution ships?"
-    answer: "Three sentences are enough: what the solution does and for whom, what data it touches, and why it was built this way instead of another way. The reason is the detail that actually gets lost. No documentation platform or template review board is needed. Knowledge that exists only in one person's head has an expiration date nobody can predict."
-  - question: "Why does Microsoft require a description and business justification when submitting to the catalog?"
-    answer: "Other makers read the description and justification before they install a solution, because makers read your description to find out more about it. Microsoft treats this as a load-bearing part of the workflow, not an optional afterthought. Submitting a solution for others to reuse therefore builds the documentation expectation directly into the platform."
+    answer: "Three sentences are enough: what the solution does and for whom, what data it touches, and why it was built this way instead of another way."
 ---
 
 ## TL;DR

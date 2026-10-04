@@ -16,15 +16,11 @@ permalink: "/en/posts/gov-ownership-offboarding/"
 translation_url: "/de/posts/gov-ownership-offboarding/"
 faq:
   - question: "How do I find all flows created by a departed employee?"
-    answer: "Use the PowerShell cmdlet Get-AdminFlow with the CreatedBy parameter and the user's object ID to find every flow that person created, in bulk. Get-AdminFlowOwnerRole shows the current ownership and Set-AdminFlowOwnerRole assigns a new owner. In the UI, open the flow, select Share and add a new owner."
+    answer: "Use the PowerShell cmdlet Get-AdminFlow with the CreatedBy parameter and the user's object ID to find every flow that person created, in bulk."
   - question: "Why does an orphaned flow stop working?"
-    answer: "An orphaned flow is one whose owner account no longer exists or is no longer valid, and it fails because its connections were tied to that account. Microsoft maintains a dedicated support article with a UI path and PowerShell cmdlets for this, which shows that no valid owner is a routine, expected failure and not an edge case."
+    answer: "An orphaned flow is one whose owner account no longer exists or is no longer valid, and it fails because its connections were tied to that account."
   - question: "Why record a deputy for every solution when it is created?"
-    answer: "Every reassignment cmdlet still needs a human to decide who the new owner is, and a named deputy already answers that. Recording owner and deputy at creation time turns reassignment from a research project into a field someone can read. It costs nothing to set up and shortens the remediation process Microsoft had to build tooling for."
-  - question: "What does Reassign Rows in Dataverse do to business rules and workflows?"
-    answer: "Reassign Rows moves everything a departed user owned to someone else in one action, but it deactivates every activated process tied to the reassigned rows, including business rules and workflows. The new owner has to reactivate them. A named deputy who already knows the resource exists is better placed to notice and fix that."
-  - question: "How can ownership reassignment start automatically when someone leaves?"
-    answer: "Trigger the reassignment flow from a signal that already exists, an Entra ID account being disabled. Cross-reference it against the owner and deputy fields and reassign automatically. If offboarding depends on someone checking a spreadsheet or filing a ticket, it depends on a step outside the departure process, and such steps get skipped under pressure."
+    answer: "Every reassignment cmdlet still needs a human to decide who the new owner is, and a named deputy already answers that."
 ---
 
 ## TL;DR

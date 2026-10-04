@@ -32,15 +32,11 @@ source_published_at: '2026-09-13'
 source_type: article
 faq:
   - question: "Why should a Copilot Studio agent not hold the state of a long-running process?"
-    answer: "The agent is treated as a stateless worker, and the process lives in a persistent Dataverse table. The agent picks up work, does one well-scoped step, records what it did and moves the item on. This suits processes spanning weeks, such as invoices approved days after arrival, and mirrors how workflow engines like Temporal or Durable Functions externalize state."
-  - question: "Which columns does the Dataverse state table need for an invoice case?"
-    answer: "The example table has CaseId as business key, a State choice column as single source of truth, an optional SubState, AssignedAgent, an Attempts retry counter, NextActionAt, a JSON Payload, Confidence, LastError and an append-only AuditTrail. Together they let agents route work, retry safely and later explain why a case took as long as it did."
+    answer: "The agent is treated as a stateless worker, and the process lives in a persistent Dataverse table."
   - question: "What does the single-writer rule mean for the State column?"
-    answer: "Only one component, a dedicated agent flow, may write the State column, and it validates transitions against an allowed list. Everything else reads the state and proposes transitions. The companion write-before-confirm rule writes every transition before the side effect and confirms it after. If a backend posting fails, the row stays on Posting with an incremented attempt count instead of being marked Approved."
+    answer: "Only one component, a dedicated agent flow, may write the State column, and it validates transitions against an allowed list. Everything else reads the state and proposes transitions."
   - question: "How can a process wait several days without keeping a Copilot Studio session open?"
-    answer: "Scheduled sweeper flows check the NextActionAt timestamp and pick up cases that are due. An approval agent, for example, writes PendingApproval with a deadline for reminders and then stops, holding no session. The article notes that cloud flow runs are capped at 30 days and conversations time out after 30 minutes, which makes this pattern necessary."
-  - question: "What should the orchestrator do when extraction confidence is low?"
-    answer: "It moves the case to the NeedsHuman state and notifies the queue owner. Confidence scores are stored in the table and drive routing, so the automation asks for help when unsure instead of confidently posting a wrong result. NeedsHuman becomes a queryable queue, and a model-driven app over the same table can serve as the clerk workspace."
+    answer: "Scheduled sweeper flows check the NextActionAt timestamp and pick up cases that are due. An approval agent, for example, writes PendingApproval with a deadline for reminders and then stops, holding no session."
 ---
 
 ## TL;DR

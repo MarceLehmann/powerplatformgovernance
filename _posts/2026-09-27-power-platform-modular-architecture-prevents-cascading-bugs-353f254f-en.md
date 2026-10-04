@@ -35,15 +35,11 @@ submitted_by:
   linkedin: https://www.linkedin.com/in/m365showpodcast/
 faq:
   - question: "What does the post name as the cause of bugs that ripple across features?"
-    answer: "The post names tight coupling as the root. Fixing one bug makes the next one appear elsewhere, which it describes as a whack-a-mole problem in enterprise low-code applications. As a remedy it recommends splitting solutions into cleanly separated modules, each with a single responsibility. The clean architecture principles of Robert Martin serve as inspiration."
+    answer: "The post names tight coupling as the root. Fixing one bug makes the next one appear elsewhere, which it describes as a whack-a-mole problem in enterprise low-code applications."
   - question: "How should emails be sent in a modular Power Platform solution?"
-    answer: "The anti-pattern is embedding the Outlook or Office 365 connector in every flow. Better, each flow writes to an outbound staging table in Dataverse. A dedicated background process polls this email queue and sends the messages. That way no business flow depends on the connector directly, and changes to sending stay in one place."
-  - question: "Which four benefits does feature isolation bring?"
-    answer: "The post lists targeted troubleshooting, independent testing, safe refactoring and easier scaling. Support teams can pinpoint which module failed without inspecting a 500-step workflow, and smaller modules allow unit-style testing of individual business rules. High-volume processes can be offloaded to dedicated Azure services while user-facing forms stay responsive."
-  - question: "What does the post recommend for the data model in Dataverse?"
-    answer: "The data model should be normalized instead of piling up hundreds of custom fields. The post also warns against cramming conflicting business rules onto a single table. Even though low-code means less code, enterprise solutions still require robust data modeling."
+    answer: "The anti-pattern is embedding the Outlook or Office 365 connector in every flow. Better, each flow writes to an outbound staging table in Dataverse."
   - question: "How much governance and which architecture does the post recommend?"
-    answer: "Organizations often swing between two extremes, no governance or too much of it. The post advises oversight proportional to business criticality and risk. Architecturally it recommends a hybrid of low-code in the front end and pro-code for logic in the back end. Structured source control is needed so the solution stays maintainable at scale."
+    answer: "Organizations often swing between two extremes, no governance or too much of it. The post advises oversight proportional to business criticality and risk."
 ---
 
 ## TL;DR

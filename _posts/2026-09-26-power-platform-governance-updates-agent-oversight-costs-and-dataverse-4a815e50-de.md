@@ -31,16 +31,12 @@ source_published_at: '2026-09-25'
 source_updated_at: '2026-09-25'
 source_type: article
 faq:
-  - question: "Was ist Work IQ und wann beginnt die öffentliche Vorschau?"
-    answer: "Work IQ verbindet Daten aus Dynamics 365 und der Power Platform mit Copilot und Agenten, die öffentliche Vorschau startet am 30. September. Grundlage sind semantische Modelle aus ausgewählten Tabellen, Spalten, Beziehungen, Ansichten, Formularen und Fachbegriffen. Dataverse speichert die Modelle, Maker können Definitionen verfeinern und für mehrere Agenten wiederverwenden. Die Unterstützung für Finance and Operations folgt Ende Oktober."
   - question: "Was bietet Copilot Managed Runtime für Apps, die mit KI gebaut wurden?"
-    answer: "Es ist ein von Microsoft betriebenes Hosting für Anwendungen, die in Cowork, Code und Copilot Studio entstehen, und befindet sich seit dem 25. September in der öffentlichen Vorschau. Genannt werden die Anbindung der Entra-Identität, kontrollierte Datenverbindungen, Quellcodeverwaltung über Git sowie Nutzungs- und Zustandsüberwachung im Microsoft 365 Admin Center."
+    answer: "Von Microsoft betriebenes Hosting für Anwendungen aus Cowork, Code und Copilot Studio, seit dem 25. September in der öffentlichen Vorschau. Genannt werden Entra-Identität, kontrollierte Datenverbindungen und Nutzungsüberwachung."
   - question: "Welche neuen Ausgabenkontrollen bringt das Kostenmanagement in Agent 365?"
-    answer: "Es wird auf Code, Managed Runtime, Cowork und die Work-IQ-APIs ausgedehnt. Neu sind Modellzugriffskontrollen, die festlegen, welche Modellfamilien eine Gruppe nutzen darf, Ausgabenrichtlinien, die sich über die Microsoft Graph API verwalten lassen, für Nutzer sichtbarer Creditverbrauch in Copilot und ein Wertbericht, der Ausgaben mit erzielter Arbeit verknüpft. Die Unterstützung für Copilot Studio ist für Oktober geplant."
-  - question: "Was hat sich bei der Global Discovery Service REST API in Dataverse geändert?"
-    answer: "Der Support dafür ist am 21. September ausgelaufen. Wer sie noch aufruft, muss auf die Power Platform List Environments API umstellen. Der Wochenüberblick zählt das zu den administrativen Terminen. Integrationen und Skripte, die Umgebungen über die alte Schnittstelle auflisten, solltest du deshalb prüfen."
+    answer: "Neu sind Modellzugriffskontrollen, über die Microsoft Graph API verwaltbare Ausgabenrichtlinien, im Copilot sichtbarer Creditverbrauch und ein Wertbericht. Die Unterstützung für Copilot Studio ist für Oktober geplant."
   - question: "Deckt eine Microsoft-365-Copilot-Lizenz Copilot-Studio-Agenten auf dem GitHub-Copilot-Harness ab?"
-    answer: "Nein. Agenten auf dem GitHub-Copilot-Harness verbrauchen Credits beim Bauen, Testen, Auswerten und im Betrieb, und die Microsoft-365-Copilot-Lizenz deckt diese Nutzung nicht ab. Drei Roadmap-Punkte mit Ziel September 2026 versprechen mehr Kostentransparenz für Vorschau und Tests, für Agentenbewertungen und für die Überwachung pro Agent."
+    answer: "Nein. Agenten auf dem GitHub-Copilot-Harness verbrauchen Credits beim Bauen, Testen, Auswerten und im Betrieb, und die Microsoft-365-Copilot-Lizenz deckt diese Nutzung nicht ab."
 ---
 ## TL;DR
 

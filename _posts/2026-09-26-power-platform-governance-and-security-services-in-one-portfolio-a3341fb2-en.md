@@ -33,15 +33,11 @@ submitted_by:
   linkedin: https://www.linkedin.com/in/michaelroth42/
 faq:
   - question: "What does the Governance Kickstart in the Power Platform governance portfolio include?"
-    answer: "It is a two-day workshop for setting up governance in an organization, priced at EUR 3,000 according to the portfolio. It sits in the governance group next to the Health Check at the same price, the Adoption and Enablement Workshop and the four-session Admin in 4 Wochen course. The listed prices are an orientation, not a fixed quote."
+    answer: "It is a two-day workshop for setting up governance in an organization, priced at EUR 3,000 according to the portfolio."
   - question: "How are the monthly retainers in the portfolio structured?"
-    answer: "Three levels: BASIC with about 4 hours per week at EUR 4,800 per month, PRO with about 6 hours per week at EUR 7,200, and PREMIUM with about 8 hours per week at EUR 9,600. The portfolio lists them as Advisory Partner retainers. Content on the page is largely in German."
-  - question: "Which security offers does the portfolio list besides governance?"
-    answer: "A Security Quick Check at EUR 3,000, a Role and Permission Review at EUR 2,000, a Custom Connector Review at EUR 1,500, the Secure Maker Playbook as a PDF at EUR 149 and a one-day Secure by Design Workshop at EUR 1,500. The Custom Connector Review is described as an API security assessment."
-  - question: "What does the Copilot area of the portfolio cover?"
-    answer: "A Copilot Readiness Assessment at EUR 4,500, a one-day AI Enablement Workshop at EUR 1,500 and a Copilot Governance Framework at EUR 9,000. The portfolio describes the assessment as a preparation review, the workshop as a one-day introduction and the framework as guidance plus coaching."
+    answer: "Three levels: BASIC with about 4 hours per week at EUR 4,800 per month, PRO with about 6 hours at EUR 7,200 and PREMIUM with about 8 hours at EUR 9,600."
   - question: "Can the governance and security services be combined?"
-    answer: "Yes. According to the page, the services can be combined across all areas, all packages can be adapted flexibly, and the listed prices serve as orientation. It also lists a First Aid Kit combo offer of the Health Check, the Governance Kickstart and 2 hours for EUR 5,500."
+    answer: "Yes. According to the page, the services can be combined across all areas, all packages can be adapted flexibly, and the listed prices serve as orientation."
 ---
 
 ## TL;DR

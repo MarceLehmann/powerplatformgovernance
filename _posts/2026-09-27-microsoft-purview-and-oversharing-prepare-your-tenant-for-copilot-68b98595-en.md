@@ -33,15 +33,11 @@ submitted_by:
   linkedin: https://www.linkedin.com/in/m365showpodcast/
 faq:
   - question: "Why does Copilot surface files that stayed hidden for years?"
-    answer: "Copilot searches with natural language across everything a user is allowed to read, so security through obscurity ends. Deeply buried or overshared files that nobody found with keyword search become instantly retrievable. The article stresses that this is not a Copilot flaw but pre-existing governance neglect: Copilot respects permissions and exposes weak ones."
+    answer: "Copilot searches with natural language across everything a user is allowed to read, so security through obscurity ends. Deeply buried or overshared files that nobody found with keyword search become instantly retrievable."
   - question: "Which Purview features does the article call minimum requirements for Copilot?"
-    answer: "Sensitivity labels and automated classification. The article says labels dictate whether content can be indexed, summarized or referenced by Copilot agents. It adds that administrators should deploy automated labeling policies so that newly created documents containing personally identifiable information or intellectual property are classified and restricted."
+    answer: "Sensitivity labels and automated classification. The article says labels dictate whether content can be indexed, summarized or referenced by Copilot agents."
   - question: "How can I find oversharing in SharePoint, Teams and OneDrive?"
-    answer: "The article points to the oversharing reports in the advanced SharePoint administration dashboards, which identify vulnerable sites across Teams, OneDrive and SharePoint. It also recommends auditing global sharing, such as Everyone except external users and broad guest sharing, to check whether it matches real operational needs."
-  - question: "How do Power Automate DLP policies relate to Copilot readiness?"
-    answer: "Copilot can reach external services through connectors, so missing DLP policies in Power Automate can leak internal data to tools such as Jira. The article recommends explicit environment-level DLP policies, so that AI-driven workflows cannot bridge the gap between secure internal storage and unauthorized external endpoints."
-  - question: "Should old project sites be archived before a Copilot rollout?"
-    answer: "The article treats archiving as part of managing legacy content. Archiving moves inactive sites out of the active Microsoft Graph index, so they stop appearing in everyday user prompts while compliance with legal retention periods is maintained. For active sites it suggests limiting folder depth to three levels and using managed metadata and content types."
+    answer: "The article points to the oversharing reports in the advanced SharePoint administration dashboards, which identify vulnerable sites across Teams, OneDrive and SharePoint."
 ---
 
 ## TL;DR

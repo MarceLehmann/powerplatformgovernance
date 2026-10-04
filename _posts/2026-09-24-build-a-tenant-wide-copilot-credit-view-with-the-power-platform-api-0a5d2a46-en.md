@@ -27,15 +27,11 @@ source_published_at: '2026-08-25'
 source_updated_at: '2026-08-26'
 faq:
   - question: "Which Power Platform API route returns the tenant's Copilot Credit capacity?"
-    answer: "The MCSMessages route under licensing and entitlements returns entitled, allocated, consumed, available and status values. The response also includes the latest completed usage date, which shows how current the detailed consumption data is. For per-agent detail there is a second resources route that takes a date range, a page size and a continuation token."
-  - question: "How do you build a clean daily consumption history from the resources route?"
-    answer: "Request single dates so each day produces its own clean set of records. The page size can be set to 5000, and larger results are fetched with a continuation token. Environment names are not part of the consumption rows, so they are resolved through a separate environment management route. Because the same agent can appear several times per day, rows must be aggregated later."
+    answer: "The MCSMessages route under licensing and entitlements returns entitled, allocated, consumed, available and status values."
   - question: "Why can the admin center reports fall short for Copilot Credit consumption?"
-    answer: "The standard reports under Licensing and Copilot Studio do not let you reshape the data, own the records or keep trends beyond the standard window. On top of that, the GitHub Copilot harness charges credits while makers build, preview and evaluate agents, not only in production. The source advises starting with the admin center reports and building your own only for specific needs."
-  - question: "What components make up the community solution for Copilot Credit tracking in Dataverse?"
-    answer: "Version 2.0.0 contains one daily Power Automate flow, three Dataverse tables for consumption history, capacity snapshots and sync status, a read-only security role and a Power Apps Code App as dashboard. The first run imports up to 180 days of history, and later runs refresh the previous seven days. Everything can be imported as a single solution package."
+    answer: "The standard reports under Licensing and Copilot Studio do not let you reshape the data, own the records or keep trends beyond the standard window."
   - question: "What limitations apply to the data from the Copilot Credit consumption API?"
-    answer: "The API can return several rows for one agent on the same day when channel, feature, model or environment differ. GitHub Copilot harness agents report the feature as Process Agent and give no tool, model or knowledge source values. Some optional metadata is not fully described in the public reference, so you should test the fields your reporting depends on."
+    answer: "The API can return several rows for one agent on the same day when channel, feature, model or environment differ."
 ---
 ## TL;DR
 

@@ -27,15 +27,11 @@ source_published_at: '2026-09-18'
 source_type: article
 faq:
   - question: "What do I need to switch off before using the Microsoft managed certificate for Power Pages?"
-    answer: "CDN and the web application firewall must be turned off first. When they are enabled, the Microsoft managed certificate option is not greyed out, it does not appear at all. If you are searching in vain for that choice, check these two features. After that come the steps to remove the old binding, certificate and hostname."
-  - question: "In what order should I remove the binding, certificate and hostname of a Power Pages domain?"
-    answer: "First disconnect the existing binding, then delete the certificate, and finally remove the hostname. The order matters because deleting a certificate while a binding still references it fails. Only once this old setup is gone can you reconnect the custom domain with the managed certificate."
+    answer: "CDN and the web application firewall must be turned off first. When they are enabled, the Microsoft managed certificate option is not greyed out, it does not appear at all."
   - question: "Will my Power Pages site stay reachable while I switch to the managed certificate?"
-    answer: "No. During the switch the site is unreachable on its custom URL until the new binding is complete, and Microsoft warns that finishing takes several minutes. The author saw continuous downtime until it was done. For a production site, schedule the change for a period of low traffic."
-  - question: "Do I still configure DNS myself with a Microsoft managed certificate on Power Pages?"
-    answer: "Yes, DNS remains your job. At your registrar you create a CNAME record that points the hostname to the Power Pages site URL. Root domains cannot use a CNAME record, so you need a subdomain such as www. The managed certificate replaces certificate handling only, not name resolution."
+    answer: "No. During the switch the site is unreachable on its custom URL until the new binding is complete, and Microsoft warns that finishing takes several minutes."
   - question: "Is the Microsoft managed certificate for Power Pages free, and can I still use my own?"
-    answer: "It costs nothing extra, and Microsoft provisions, configures and renews it automatically. You can still manage your own certificates, because uploading one remains an option. In the admin center, when you connect a custom domain, you choose between three variants: a Microsoft managed certificate, uploading a new one or using an existing one."
+    answer: "It costs nothing extra, and Microsoft provisions, configures and renews it automatically. You can still upload your own certificate or use an existing one."
 ---
 
 ## TL;DR

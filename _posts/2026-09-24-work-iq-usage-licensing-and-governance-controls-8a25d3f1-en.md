@@ -27,15 +27,11 @@ source_author: Anders Fjordhoj
 source_published_at: '2026-08-24'
 faq:
   - question: "Do custom apps that call the Work IQ API directly consume Copilot Credits?"
-    answer: "Yes, when usage-based billing is enabled, direct Work IQ API calls from custom solutions consume Copilot Credits. A Microsoft 365 Copilot license is not required for this route. The spending policy for such calls is set in the Microsoft 365 admin center, which also covers Cowork, so cost control for custom clients starts there."
-  - question: "Is Work IQ included for declarative agents built in Agent Builder?"
-    answer: "Largely yes. Declarative agents built in Agent Builder with supported knowledge sources such as SharePoint use built-in Copilot grounding, which is included for eligible Microsoft 365 Copilot licensed users in Microsoft channels. Conditions and fair usage policies apply. Agents defined through the Microsoft 365 Agents Toolkit manifest follow the same inclusion logic."
+    answer: "Yes, when usage-based billing is enabled, direct Work IQ API calls from custom solutions consume Copilot Credits. A Microsoft 365 Copilot license is not required for this route."
   - question: "Why does the GitHub Copilot harness in Copilot Studio still cost credits for licensed users?"
-    answer: "In that harness, the unified Work IQ integration through Model Context Protocol tools consumes Copilot Credits even when the user holds a Microsoft 365 Copilot license. Native Work IQ grounding inside Microsoft 365 Copilot is covered by the license, so this is a metered exception. The standard harness does not support the unified integration at all."
+    answer: "In that harness, the unified Work IQ integration through Model Context Protocol tools consumes Copilot Credits even when the user holds a Microsoft 365 Copilot license."
   - question: "Which admin center sets Work IQ spending limits and which one handles agent limits?"
-    answer: "The Microsoft 365 admin center holds Work IQ spending policies with user or group scope, billing method, monthly and per-user limits and threshold alerts. The Power Platform admin center manages Copilot Studio environment capacity, prepaid credit allocation and monthly agent limits. The two controls run separately, so the teams behind them should share agent names, environments and intended users."
-  - question: "Do Cowork spending limits stop credit consumption at the exact threshold?"
-    answer: "Not reliably. Spending policies set boundaries but do not reserve credit, and enforcement can lag behind actual consumption, so extra tasks may still start after a threshold is reached. A Cowork policy also grants access to all users in its scope regardless of limits. Approved spending does not grant data access either, because tenant enablement and consent are separate prerequisites."
+    answer: "The Microsoft 365 admin center holds Work IQ spending policies. The Power Platform admin center manages Copilot Studio environment capacity, prepaid credits and monthly agent limits."
 ---
 ## TL;DR
 

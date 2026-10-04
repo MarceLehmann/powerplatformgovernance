@@ -32,15 +32,11 @@ source_published_at: '2026-10-02'
 source_type: article
 faq:
   - question: "How does the coding-agent workflow differ from traditional Copilot Studio development?"
-    answer: "Koskinen's comparison shows that the steps did not disappear, they moved. Low-code runs requirement, open designer, find component, modify, test. The coding-agent flow runs requirement, inspect generated solution, describe change, agent modifies, validate. The second model does not eliminate the first: it changes where the manual work happens, and validation and platform knowledge still matter."
+    answer: "According to Koskinen the steps did not disappear, they moved. The coding-agent workflow changes where the manual work happens, and validation and platform knowledge still matter."
   - question: "What does Koskinen leave to AI and what stays with people?"
-    answer: "AI can drive context, generation and testing, plus documentation lookup and schema inspection. Humans keep the requirement, challenge, review and deploy, and need to validate architecture, business logic, security, authentication and edge cases. As a warning he cites last year's Replit incident, where an agent deleted a live production database despite an explicit freeze. For committing to production, the room raised one or two hands."
-  - question: "Which tool combination does Koskinen use for Copilot Studio?"
-    answer: "His setup consists of the maker portal, Visual Studio Code with the Copilot Studio extension, GitHub Copilot and Claude Code. Skills and MCP servers add a layer of knowledge and access. The first demo topic took about 12 minutes to build with the coding agent. In a second demo the agent inferred a client's industry from the client history by itself."
+    answer: "AI can drive context, generation and testing, plus documentation lookup and schema inspection. Humans keep the requirement, challenge, review and deploy, and need to validate architecture, business logic, security, authentication and edge cases."
   - question: "What limits do coding agents currently have in Copilot Studio?"
-    answer: "Coding agents cannot yet create tool references inside topics. Power Automate flows created by agents can create their connections, whereas topics cannot, so the connection has to be created manually in the UI. In the keynote example the agent wrote to Dataverse through a Power Automate flow rather than the Dataverse MCP, and Koskinen calls such a choice a human decision."
-  - question: "How did Koskinen handle the stubborn filtering bug in the demo?"
-    answer: "The returned project history consistently showed six projects, although no error appeared. He consulted GitHub Copilot three times about the filtering, but each reported fix did not work. Claude Code, used as a second agent, did not find the root cause either, but suggested tests that eventually did: the API accepted wrong filter combinations without raising an error."
+    answer: "Coding agents cannot yet create tool references inside topics. Power Automate flows created by agents can create their connections, whereas topics cannot, so the connection has to be created manually in the UI."
 ---
 
 ## TL;DR

@@ -27,15 +27,11 @@ source_language_name: English
 publisher_disclosure: Both publications are edited by Marcel Lehmann.
 faq:
   - question: "How do I reassign a Power App when its maker has left?"
-    answer: "Use either the CoE Starter Kit admin apps, which give a graphical interface for the inventory and for ownership transfers, or the Set-AdminPowerAppOwner cmdlet from the Microsoft.PowerApps.Administration.PowerShell module. The cmdlet takes the app ID, the environment name and the object ID of the new owner."
+    answer: "Use either the CoE Starter Kit admin apps, which give a graphical interface for the inventory and for ownership transfers, or the Set-AdminPowerAppOwner cmdlet from the Microsoft.PowerApps.Administration.PowerShell module."
   - question: "What happens to the previous owner after Set-AdminPowerAppOwner runs?"
-    answer: "The previous owner becomes Can View, which keeps read access but removes ownership privileges. Data and connections of the app stay intact during the transfer. You can confirm the change afterwards in the Power Platform admin center or in the maker portal."
+    answer: "The previous owner becomes Can View, which keeps read access but removes ownership privileges. Data and connections of the app stay intact during the transfer."
   - question: "Which permissions do I need to change the owner of an app I do not own?"
-    answer: "You need Power Platform admin, environment admin or Global admin credentials. Standard maker permissions are not enough. Only administrators can perform these transfers, and the article states that this admin role is what allows ownership changes for apps you do not own."
-  - question: "Can I transfer many apps to a new owner at once?"
-    answer: "Yes. PowerShell suits bulk reassignments: put the Set-AdminPowerAppOwner command into a loop and reassign numerous apps to the new owner programmatically. Doing it one by one in the maker interface is described as inefficient and prone to omissions, which is why administrators look for an alternative when many apps are affected."
-  - question: "Why do apps become a problem when their creator leaves the company?"
-    answer: "They can become orphaned. Manual reassignment through the maker interface is slow and easy to get wrong. The article therefore ties the transfer to Center of Excellence frameworks and formal governance processes for departing staff, and points to related tips on changing flow owners and sharing flows and apps."
+    answer: "You need Power Platform admin, environment admin or Global admin credentials. Standard maker permissions are not enough."
 ---
 ## TL;DR
 

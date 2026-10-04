@@ -31,15 +31,11 @@ source_published_at: '2026-09-27'
 source_type: article
 faq:
   - question: "Welche Governance-Lücken zeigten sich nach den vielen Agent-Builder-Experimenten?"
-    answer: "Jeder konnte Agenten erstellen, und als sie im Admin Center auftauchten, waren es schon Hunderte. Gelöscht wurde kaum etwas, auch weil die Löschfunktion so versteckt liegt, dass man den Leuten zeigen muss, wo sie ist. Die Folge war ein Inventarproblem. Agent 365 verbesserte später die Sicht darauf, welche Agenten existieren, wie sie geteilt sind, wie viele Personen sie nutzen und wie viele Antworten sie gegeben haben, nicht aber die Antwortqualität."
+    answer: "Jeder konnte Agenten erstellen, und als sie im Admin Center auftauchten, waren es schon Hunderte."
   - question: "Wie funktioniert der selbst gebaute Governance-Ablauf für Agent-Builder-Agenten?"
-    answer: "Die Graph-API erkennt neue Agenten und schreibt sie in eine SharePoint-Liste. Power Automate schickt dem Besitzer eine Teams-Karte mit Fragen: Hast du die Spielregeln gelesen, hast du den Agenten geteilt, wofür dient er? Ein Agent, der 60 Tage ungenutzt bleibt, löst eine weitere Karte aus, mit der der Besitzer ihn löschen oder das Behalten begründen kann."
+    answer: "Die Graph-API erkennt neue Agenten und schreibt sie in eine SharePoint-Liste."
   - question: "Nach wie vielen Tagen ohne Nutzung werden Agenten im Beispiel gemeldet?"
-    answer: "Nach 60 Tagen Inaktivität. Dann erhält der Besitzer eine Karte mit der Wahl, den Agenten zu löschen oder zu begründen, warum er bleiben soll. Der Ablauf zielt nicht aufs Sperren, sondern darauf, Leute mit guten Ideen zu finden und weiterzuführen. Zu grosse Anwendungsfälle werden im Gespräch auf passendere Plattformen gelenkt."
-  - question: "Was war für die Qualität der Agenten wichtiger als clevere Anweisungen?"
-    answer: "Gutes Wissen. Frühe Agenten mit einem Absatz Anweisungen scheiterten laufend, und die Lösung lag oft im SharePoint-Inhalt statt in der Agentenlogik. Dazu kommt die Grenze von 8000 Zeichen für Anweisungen, bei der acht Rollen in einem Agenten unübersichtlich werden. Ausserdem folgen Agenten nicht automatisch Links, die Menschen selbstverständlich weiterlesen würden."
-  - question: "Welche Lizenz braucht der Governance-Ablauf für Agent-Builder-Agenten?"
-    answer: "Im Beispiel liefert schon eine einzige Agent-365-Lizenz in der Organisation zusätzlich den Zugriff auf die Graph-API. Auf dieser Basis baute der Referent seinen Ablauf aus Graph-API, einer SharePoint-Liste als minimalem Backend, Power Automate und adaptiven Teams-Karten. Er hielt den Aufbau bewusst klein, damit er sich wegwerfen lässt, sobald Agent 365 aufgeholt hat."
+    answer: "Nach 60 Tagen Inaktivität. Dann erhält der Besitzer eine Karte mit der Wahl, den Agenten zu löschen oder zu begründen, warum er bleiben soll."
 ---
 
 ## TL;DR

@@ -29,15 +29,11 @@ source_published_at: '2025-09-04'
 source_type: article
 faq:
   - question: "Welche Frameworks unterstützt Power Pages für Single-Page-Apps und in welchem Status?"
-    answer: "Unterstützt werden React, Angular und Vue. Zum Zeitpunkt des Beitrags war das Feature in der Preview, weshalb der Autor mit einzelnen Fehlern rechnet. Nick Doelman, Microsoft MVP, baut im Beitrag eine Hello-World-Website mit React. Er hatte nach eigener Aussage bis kurz zuvor noch nie eine React-Seite gebaut und nutzte GitHub Copilot und ChatGPT zur Hilfe."
-  - question: "Aus welchen Dateien besteht die React-App im Hello-World-Beispiel?"
-    answer: "Die App hat drei Kerndateien: index.html als Haupt-HTML-Datei, index.jsx als Einstiegspunkt für JavaScript und App.jsx als zentrale React-Komponente. Der Autor beschreibt React als JavaScript-Bibliothek für Oberflächen aus kleinen, wiederverwendbaren Komponenten. Eine Single-Page-App lädt die Seite einmal und aktualisiert danach nur Teile per JavaScript, ohne ganze Seiten neu zu laden."
-  - question: "Was sollte man mitbringen, um das Beispiel nachzubauen?"
-    answer: "Nötig sind gute Power-Pages-Kenntnisse sowie Grundwissen in HTML und JavaScript. Als Werkzeug dient Visual Studio Code mit der Erweiterung Power Platform Tools. Das Projekt wird mit dem Befehl npm run build gebaut und lokal mit npm start gestartet. Danach folgt der Upload in die Power-Pages-Umgebung über die PAC CLI."
+    answer: "Unterstützt werden React, Angular und Vue. Zum Zeitpunkt des Beitrags war das Feature in der Preview, weshalb der Autor mit einzelnen Fehlern rechnet."
   - question: "Wie lädt man die kompilierte React-Seite in Power Pages hoch?"
-    answer: "Zuerst meldet man sich mit pac auth create und der Umgebungs-ID an. Diese ID steht in den Sitzungsdetails, die man über das Zahnrad auf der Power-Pages-Startseite öffnet. Dann lädt der Befehl pac pages upload-code-site die App hoch, mit den Angaben rootpath, compiledPath und siteName. Im Beispiel heisst die Site HelloWorld."
+    answer: "Zuerst meldet man sich mit pac auth create und der Umgebungs-ID an. Diese ID steht in den Sitzungsdetails, die man über das Zahnrad auf der Power-Pages-Startseite öffnet."
   - question: "Welche Einschränkungen und Vorteile haben Code-Sites in Power Pages?"
-    answer: "Bei einer Single-Page-App lassen sich keine Seiten hinzufügen oder bearbeiten, und die Standard-Designvorlagen stehen nicht zur Verfügung. Dafür kann man Authentifizierung und Tabellenberechtigungen der Plattform einrichten. Für spätere Beiträge kündigt der Autor an, Dataverse-Datensätze über die Web API anzuzeigen und CRUD-Operationen zu zeigen."
+    answer: "Bei einer Single-Page-App lassen sich keine Seiten hinzufügen oder bearbeiten, und die Standard-Designvorlagen stehen nicht zur Verfügung. Dafür kann man Authentifizierung und Tabellenberechtigungen der Plattform einrichten."
 ---
 
 ## TL;DR

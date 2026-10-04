@@ -23,6 +23,13 @@ source_language: en
 source_language_name: English
 source_author: Alex Shlega
 source_published_at: '2025-11-08'
+faq:
+  - question: "Warum fordert ein MCP-Tool in Copilot Studio immer wieder zur Verbindung auf?"
+    answer: "Im geschilderten Fall stand Credentials to use auf End user credentials, deshalb zeigte das Tool trotz aktiver Verbindung weiterhin die Verbindungsaufforderung."
+  - question: "Was löste das Problem?"
+    answer: "Der Wechsel zu Maker-provided credentials beseitigte die Aufforderung und brachte den Test-Agenten zum Laufen. Zusätzliche Verbindungen und API-Key-Authentifizierung halfen nicht."
+  - question: "Was sollte das Security-Team vor dem Einsatz von Maker-provided credentials prüfen?"
+    answer: "Ob vom Maker bereitgestellte Anmeldedaten zu Connector und Anwendungsfall passen, denn der Agent verlangt dann keine Verbindung jedes einzelnen Benutzers mehr. Die Quelle erläutert die Zugriffsgrenzen nicht."
 ---
 ## TL;DR
 

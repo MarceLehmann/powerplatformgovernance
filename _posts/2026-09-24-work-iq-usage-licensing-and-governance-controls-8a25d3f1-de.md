@@ -26,15 +26,11 @@ source_author: Anders Fjordhoj
 source_published_at: '2026-08-24'
 faq:
   - question: "Verbrauchen eigene Anwendungen, die die Work-IQ-API direkt aufrufen, Copilot Credits?"
-    answer: "Ja, sobald nutzungsbasierte Abrechnung aktiviert ist, verbrauchen direkte Work-IQ-API-Aufrufe aus eigenen Lösungen Copilot Credits. Eine Microsoft-365-Copilot-Lizenz ist für diesen Weg nicht nötig. Die Ausgabenrichtlinie für solche Aufrufe legst du im Microsoft-365-Admincenter fest, das auch Cowork abdeckt. Dort beginnt also die Kostenkontrolle für eigene Clients."
-  - question: "Ist Work IQ in Agenten enthalten, die ich mit dem Agent Builder erstelle?"
-    answer: "Grösstenteils ja. Deklarative Agenten aus dem Agent Builder mit unterstützten Wissensquellen wie SharePoint nutzen das eingebaute Copilot-Grounding. Es ist für berechtigte Benutzer mit Microsoft-365-Copilot-Lizenz in Microsoft-Kanälen enthalten, unter dokumentierten Bedingungen und Fair-Use-Regeln. Agenten, die über das Manifest des Microsoft 365 Agents Toolkit entstehen, folgen derselben Logik."
+    answer: "Ja, sobald nutzungsbasierte Abrechnung aktiviert ist, verbrauchen direkte Work-IQ-API-Aufrufe aus eigenen Lösungen Copilot Credits. Eine Microsoft-365-Copilot-Lizenz ist für diesen Weg nicht nötig."
   - question: "Warum kostet der GitHub-Copilot-Harness in Copilot Studio trotz Lizenz weiterhin Credits?"
-    answer: "In diesem Harness verbraucht die einheitliche Work-IQ-Anbindung über Model-Context-Protocol-Tools Copilot Credits, auch wenn die Person eine Microsoft-365-Copilot-Lizenz besitzt. Das native Work-IQ-Grounding in Microsoft 365 Copilot deckt die Lizenz ab. Hier liegt also eine gemessene Ausnahme vor. Der Standard-Harness unterstützt die einheitliche Anbindung gar nicht."
+    answer: "In diesem Harness verbraucht die einheitliche Work-IQ-Anbindung über Model-Context-Protocol-Tools Copilot Credits, auch wenn die Person eine Microsoft-365-Copilot-Lizenz besitzt."
   - question: "Welches Admincenter steuert Work-IQ-Ausgaben und welches die Agentenlimits?"
-    answer: "Im Microsoft-365-Admincenter liegen die Ausgabenrichtlinien für Work IQ, mit Geltungsbereich nach Benutzer oder Gruppe, Abrechnungsmethode, Monats- und Benutzerlimits sowie Schwellenwert-Warnungen. Das Power Platform Admin Center verwaltet Umgebungskapazität, vorausbezahlte Credits und monatliche Agentenlimits von Copilot Studio. Beide laufen getrennt, daher sollten die zuständigen Teams Agenten, Umgebungen und vorgesehene Nutzer abstimmen."
-  - question: "Stoppen Cowork-Ausgabenlimits den Credit-Verbrauch genau an der Schwelle?"
-    answer: "Nicht zuverlässig. Ausgabenrichtlinien setzen Grenzen, reservieren aber kein Guthaben, und die Durchsetzung kann dem tatsächlichen Verbrauch hinterherhinken. Nach Erreichen einer Schwelle können deshalb noch weitere Aufgaben starten. Eine Cowork-Richtlinie gibt zudem allen Personen im Geltungsbereich Zugriff, egal welches Limit gesetzt ist. Freigegebene Ausgaben gewähren auch keinen Datenzugriff, denn Mandantenfreigabe und Zustimmung sind eigene Voraussetzungen."
+    answer: "Im Microsoft-365-Admincenter liegen die Ausgabenrichtlinien für Work IQ. Das Power Platform Admin Center verwaltet Umgebungskapazität, vorausbezahlte Credits und monatliche Agentenlimits von Copilot Studio."
 ---
 ## TL;DR
 

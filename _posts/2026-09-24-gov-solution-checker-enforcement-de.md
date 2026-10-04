@@ -16,15 +16,11 @@ permalink: "/de/posts/gov-solution-checker-enforcement/"
 translation_url: "/en/posts/gov-solution-checker-enforcement/"
 faq:
   - question: "Welche drei Erzwingungsstufen hat der Solution Checker in Managed Environments?"
-    answer: "Kein heisst keine automatische Validierung. Warnen prüft jeden Import einer benutzerdefinierten Lösung automatisch, lässt ihn bei kritischen Problemen trotzdem durchlaufen, weist darauf hin und schickt eine E-Mail an Power-Platform- und Dynamics-365-Service-Administratoren. Blockieren führt dieselbe Prüfung aus und bricht den Import bei einem kritischen Verstoss ab, bevor er die Umgebung berührt."
+    answer: "Kein heisst keine automatische Validierung. Warnen prüft jeden Import einer benutzerdefinierten Lösung automatisch, lässt ihn bei kritischen Problemen trotzdem durchlaufen, weist darauf hin und schickt eine E-Mail an Power-Platform- und Dynamics-365-Service-Administratoren."
   - question: "Stoppen mittlere und niedrige Solution-Checker-Befunde einen Import?"
-    answer: "Nein. Nur Regeln der Schweregrad-Stufe kritisch können eine Blockierung oder die Warnmeldung auslösen. Mittlere und niedrige Befunde erscheinen im Bericht, stoppen aber nie einen Import. Bei einem blockierten Import erhält der Maker denselben Verstossbericht und muss die Probleme beheben, bevor er es erneut versucht."
+    answer: "Nein. Nur Regeln der Schweregrad-Stufe kritisch können eine Blockierung oder die Warnmeldung auslösen."
   - question: "Welche Erzwingungsstufe passt zu Production und Developer?"
-    answer: "Microsofts Adoptionsempfehlung für Enterprise-Tenants sieht Blockieren mit E-Mails für Default, Production und Teams-Umgebungen vor, Warnen ohne E-Mails für Developer und Sandbox. In Developer und Sandbox iterieren Maker und machen gelegentlich etwas kaputt, eine harte Blockade erzeugt dort nur Reibung. In Production kostet ein kritisches Problem tatsächlich etwas."
-  - question: "Wie setze ich die Solution-Checker-Erzwingung mit PowerShell?"
-    answer: "Mit der Funktion SetManagedEnvironmentSolutionCheckerEnforcementLevel aus dem Modul Microsoft.PowerApps.Administration.PowerShell.Samples, mit Umgebungs-ID und Level block, warn oder none. Über den Parameter RuleExclusions schliesst du einzelne Regeln aus. Gehört die Umgebung zu einer Environment Group mit definierter Konfiguration, wird die Einstellung vererbt und lässt sich nicht einzeln ändern."
-  - question: "Warum genügt es nicht, Maker zu bitten, den Solution Checker selbst auszuführen?"
-    answer: "Weil das eine Gewohnheit ist und Gewohnheiten unter Termindruck als Erste wegfallen. Eine Lösung, die nie geprüft wurde, verhält sich aus Governance-Sicht wie eine, die mit kritischen Verstössen durchgekommen ist. Die Erzwingung verlegt die Prüfung auf den Import, den jede Lösung ohnehin passieren muss, und hängt damit nicht mehr davon ab, dass ein Maker daran denkt."
+    answer: "Microsofts Adoptionsempfehlung für Enterprise-Tenants sieht Blockieren mit E-Mails für Default, Production und Teams-Umgebungen vor, Warnen ohne E-Mails für Developer und Sandbox."
 ---
 
 ## TL;DR

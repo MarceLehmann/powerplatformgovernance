@@ -29,16 +29,12 @@ source_author: Anders Jensen
 source_published_at: '2026-07-12'
 source_type: article
 faq:
-  - question: "How long does it take to set up Copilot Cowork spending controls?"
-    answer: "The article puts setup at about 15 minutes, followed by 20 to 30 minutes until activation takes effect. The path in the Microsoft 365 admin center is Copilot, then Cost management, then Get started. A Microsoft 365 Copilot license is required, and Cowork usage is billed separately in Copilot Credits."
   - question: "Which admin roles are needed for Cowork billing and spending policies?"
-    answer: "A Global Administrator or Billing Administrator chooses the billing method, while an AI Administrator can create spending policies and set limits. Splitting the duties this way lets finance decide how costs are paid and lets the AI owner manage allowances, so plan which person holds which role before starting the setup."
-  - question: "Can the billing method of a Cowork spending policy be changed later?"
-    answer: "No, not directly. The choice between prepaid capacity packs and Azure pay-as-you-go cannot be changed without deleting and recreating the policy. Decide on the billing model before the pilot starts, because switching means rebuilding the policy and its limits from scratch."
+    answer: "A Global Administrator or Billing Administrator chooses the billing method, while an AI Administrator can create spending policies and set limits."
   - question: "How do I limit Cowork to a pilot group instead of the whole organization?"
-    answer: "The default scope is organization-wide. Choose Customize setup configuration, open User and group access and select Specific groups. Policies work on security groups only, since individual user assignment is announced as coming soon. Create the pilot security group first so it appears for selection."
+    answer: "The default scope is organization-wide. Choose Customize setup configuration, open User and group access and select Specific groups."
   - question: "What happens when someone reaches the credit limit?"
-    answer: "Access is lost until the first day of the next month. The article gives an example with 20,000 monthly credits, 16,000 per user and an alert at 15,000, which sends an email immediately and weekly until the first. Consumption appears under Cost management, refreshed about every 2 hours, and requests show under Credit requests."
+    answer: "Access is lost until the first day of the next month. In the article's example with 20,000 monthly credits, an alert at 15,000 sends an email immediately and weekly until the first."
 ---
 
 ## TL;DR

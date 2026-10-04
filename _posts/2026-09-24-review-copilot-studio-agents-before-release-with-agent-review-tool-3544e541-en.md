@@ -23,15 +23,11 @@ source_author: Ramakrishnan Raman
 source_published_at: '2026-08-18'
 faq:
   - question: "What is the Agent Review Tool and where do you get it?"
-    answer: "It is a review tool for Copilot Studio agents before release and part of the Copilot Agent Kit. It is available through the Microsoft Marketplace. At the time of the post on August 18, 2026, it was a preview experience. The workspace has three sections: Review, Agent map, and Cost and efficiency."
+    answer: "It is a review tool for Copilot Studio agents before release and part of the Copilot Agent Kit. It is available through the Microsoft Marketplace."
   - question: "By which four criteria does the tool judge the quality of instructions?"
-    answer: "The instruction rating follows four dimensions: Clarity, Actionability, Scope discipline and Composability. In the GitHub Copilot context the post adds that a skill must distinguish itself from all alternatives so the agent selects it reliably. The post walks through these four dimensions with a fictional retail agent and shows how the findings change after a rewrite."
+    answer: "The instruction rating follows four dimensions: Clarity, Actionability, Scope discipline and Composability."
   - question: "How did the results change in the example after the rework?"
-    answer: "The fictional ZAVA Visual Merchandiser started with 63 percent, 39 of 54 checks passed, 8 errors and 7 warnings. After the rework it showed 67 percent, 51 of 54 checks, no errors and 2 warnings. Average skill quality rose from 64 to 90 percent. Evaluation coverage stayed at 0 of 7."
-  - question: "How is the score built, and what role does AI play in it?"
-    answer: "The score rests on rule-based pillars for evaluation readiness and instructions, so it is deterministic. The evaluation pillar enters with a fixed weight of 30 percent. AI-assisted findings appear only as supporting evidence and do not change the deterministic scores."
-  - question: "What does the agent map show, and which flaw did the tool find in the example?"
-    answer: "The agent map shows the reviewed configuration as a map or list of skills, tools, knowledge sources and other components, without proving that anything ran. In the example, the display-audit skill named two capabilities, Merchandising Scorecard and Regional Escalation Agent, that the agent did not have configured. The author rewrote the skill to use only configured capabilities."
+    answer: "The fictional ZAVA Visual Merchandiser started with 63 percent, 39 of 54 checks passed, 8 errors and 7 warnings."
 ---
 ## TL;DR
 

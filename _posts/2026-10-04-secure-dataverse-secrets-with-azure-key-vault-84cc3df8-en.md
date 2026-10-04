@@ -29,6 +29,13 @@ source_language_name: English
 source_author: Jonas Rapp
 source_published_at: '2026-10-04'
 source_type: article
+faq:
+  - question: "Where should sensitive Dataverse environment variable values be stored?"
+    answer: "Sensitive values such as API keys belong in Azure Key Vault through a Secret variable, not in Text variables or directly in flows."
+  - question: "How does a cloud flow read the secret?"
+    answer: "With the Dataverse action RetrieveEnvironmentVariableSecretValue and Secure Outputs enabled, so the retrieved secret stays hidden in run history."
+  - question: "What do admins have to set up?"
+    answer: "Give the Dataverse identity the Key Vault Secrets User role and register Microsoft.PowerPlatform for the subscription. Avoid default references across environments."
 ---
 
 ## TL;DR

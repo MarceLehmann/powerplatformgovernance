@@ -16,15 +16,11 @@ permalink: "/en/posts/gov-solution-checker-enforcement/"
 translation_url: "/de/posts/gov-solution-checker-enforcement/"
 faq:
   - question: "What are the three enforcement levels for solution checker in Managed Environments?"
-    answer: "None means no automatic validation. Warn checks every custom solution import and, if critical issues are found, lets the import complete but flags it and emails Power Platform and Dynamics 365 service administrators. Block runs the same check and cancels the import before it touches the environment when a critical violation is found."
+    answer: "None means no automatic validation. Warn checks every custom solution import and, if critical issues are found, lets the import complete but flags it and emails Power Platform and Dynamics 365 service administrators."
   - question: "Do medium and low solution checker findings stop an import?"
-    answer: "No. Only critical-severity rules can trigger a block or the warning message. Medium and low findings surface in the report but never stop an import. When an import is blocked, the maker gets the same violation report and has to fix the issues before retrying."
+    answer: "No. Only critical-severity rules can trigger a block or the warning message."
   - question: "Which enforcement level should production and developer environments use?"
-    answer: "Microsoft's adoption guidance for enterprise-scale tenants suggests Block with emails for Default, Production and Teams environments, and Warn without emails for Developer and Sandbox. Makers iterate and occasionally break things in developer and sandbox, so a hard block there adds friction without safety, while a critical issue in production actually costs something."
-  - question: "How do I set solution checker enforcement with PowerShell?"
-    answer: "Use the function SetManagedEnvironmentSolutionCheckerEnforcementLevel from the Microsoft.PowerApps.Administration.PowerShell.Samples module with the environment ID and a Level of block, warn or none. The RuleExclusions parameter excludes specific rules. If the environment is in a group with a defined configuration, the settings are inherited and cannot be edited per environment."
-  - question: "Why does asking makers to run solution checker manually not work?"
-    answer: "It is a habit, and habits skip themselves under deadline pressure. A solution that never gets checked behaves, from a governance perspective, like one that passed with critical violations. Enforcement moves the check to import, the one moment every solution has to pass through anyway, so it no longer depends on a maker remembering to run it."
+    answer: "Microsoft's adoption guidance for enterprise-scale tenants suggests Block with emails for Default, Production and Teams environments, and Warn without emails for Developer and Sandbox."
 ---
 
 ## TL;DR

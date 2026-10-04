@@ -29,15 +29,11 @@ source_published_at: '2026-08-13'
 source_type: article
 faq:
   - question: "Welche zwei Hürden muss eine Web-API-Anfrage in Power Pages passieren?"
-    answer: "Die erste Hürde sind die Websiteeinstellungen pro Tabelle: Webapi/contact/enabled muss auf true stehen, denn der Standard ist False, und die zugehörige Spalteneinstellung braucht eine ausdrückliche Spaltenliste. Die zweite Hürde ist eine Tabellenberechtigung mit passender Zugriffsart: Read für GET, Create für POST, Write für PATCH und Delete für DELETE. Beide müssen offen sein."
+    answer: "Die erste Hürde sind die Websiteeinstellungen pro Tabelle: Webapi/contact/enabled muss auf true stehen, denn der Standard ist False, und die zugehörige Spalteneinstellung braucht eine ausdrückliche Spaltenliste."
   - question: "Warum ist ein Platzhalter in der Spalteneinstellung der Web API in Power Pages gefährlich?"
-    answer: "Ein Sternchen in der Spalteneinstellung veröffentlicht jede Spalte der Tabelle. Zusammen mit der Rolle Anonymous Users und einer Tabellenberechtigung mit Global Read können anonyme Anfragen vollständige Namen, E-Mail-Adressen und Datensatz-IDs abrufen, ganz ohne Anmeldung. Microsoft hat den Platzhalter abgekündigt, solche Tabellen scheitern, bis ausdrückliche Spaltennamen gesetzt sind."
-  - question: "Was bedeutet anonymer Zugriff für Tabellenberechtigungen in Power Pages?"
-    answer: "Anonym heisst Global. Für nicht angemeldete Besucher funktioniert nur der Zugriffstyp Global, denn Contact, Account, Self und Parent brauchen einen angemeldeten Kontakt als Bezug. Berechtigungen addieren sich ausserdem, nichts nimmt eine Freigabe zurück. Die weitestgehende Berechtigung gewinnt, und ein Kontakt erbt, was jede zugewiesene Rolle erlaubt."
+    answer: "Ein Sternchen in der Spalteneinstellung veröffentlicht jede Spalte der Tabelle."
   - question: "Was ist am Flag Authenticated Users Role bei eigenen Webrollen riskant?"
-    answer: "Steht es auf Yes, wird die eigene Rolle zur Standardrolle für jeden angemeldeten Benutzer, egal ob du ihn ihr zugewiesen hast. Der Artikel rät, das Flag bei allen eigenen Rollen auf No zu lassen. Nur die mitgelieferten Rollen Anonymous Users und Authenticated Users sollen diese Flags tragen."
-  - question: "Welche Werkzeuge helfen, eine Power-Pages-Site auf offengelegte Daten zu prüfen?"
-    answer: "Der Schnelltest im Power Platform Admin Center meldet, dass anonymer Dataverse-Zugriff existiert, nennt aber keine Tabellen. Der Power Pages Security Agent im Bereich Sicherheit liefert konfigurationsbezogene Ergebnisse und ist in der Vorschau. Du kannst die Site auch mit pac powerpages download laden und in VS Code analysieren. Keines ersetzt, die Tabellenberechtigungen selbst zu lesen."
+    answer: "Steht es auf Yes, wird die eigene Rolle zur Standardrolle für jeden angemeldeten Benutzer, egal ob du ihn ihr zugewiesen hast."
 ---
 
 ## TL;DR

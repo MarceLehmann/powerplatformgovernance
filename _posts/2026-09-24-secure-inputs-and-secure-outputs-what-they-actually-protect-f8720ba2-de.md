@@ -24,15 +24,11 @@ source_language_name: English
 publisher_disclosure: Beide Publikationen werden von Marcel Lehmann herausgegeben.
 faq:
   - question: "Was verbergen sichere Eingaben und sichere Ausgaben im Flow-Verlauf?"
-    answer: "Sie maskieren sensible Werte wie Passwörter, Token und persönliche Angaben im Ausführungsverlauf eines Flows. Wer die Laufhistorie öffnet, sieht an dieser Stelle nur den Hinweis, dass der Inhalt wegen der Sicherheitskonfiguration ausgeblendet ist. So bleiben vertrauliche Informationen in Protokollen vor unbefugtem Zugriff geschützt, was auch Datenschutzvorgaben unterstützt."
+    answer: "Sie maskieren sensible Werte wie Passwörter, Token und persönliche Angaben im Ausführungsverlauf eines Flows."
   - question: "Was schützen sichere Eingaben und Ausgaben in Power Automate nicht?"
-    answer: "Sie verändern nichts an der Verarbeitung. Die Daten werden weiterhin normal verarbeitet, die Maskierung betrifft nur die Anzeige im Protokoll. Der Beitrag ordnet die Einstellung deshalb als einen Teil einer breiteren Datensicherheitsstrategie ein und rät, den gesamten Kontext der Datenverarbeitung zu beachten. Verwandte Tipps behandeln das Maskieren von Trigger-Ausgaben und den Schutz der Anmeldedaten von Dienstkonten als eigene Punkte."
+    answer: "Sie verändern nichts an der Verarbeitung. Die Daten werden weiterhin normal verarbeitet, die Maskierung betrifft nur die Anzeige im Protokoll."
   - question: "Wie aktiviere ich sichere Eingaben oder Ausgaben für eine Aktion?"
-    answer: "Öffne die betroffene Aktion in deinem Flow, wechsle in den Bereich Einstellungen, schalte sichere Eingaben, sichere Ausgaben oder beides um und speichere die Änderung. Beide Optionen lassen sich unabhängig voneinander setzen, und zwar pro Aktion. So kannst du gezielt nur dort maskieren, wo wirklich sensible Werte durchlaufen."
-  - question: "Bremsen sichere Eingaben und Ausgaben die Ausführung eines Flows?"
-    answer: "Kaum. Laut Beitrag ist der Einfluss auf die Ausführungsgeschwindigkeit minimal, weil nur die Protokollierung der Daten angepasst wird und nicht ihre Verarbeitung. Die Geschwindigkeit ist also kein Grund, die Einstellung zu meiden. Beide Optionen lassen sich für jede Aktion einzeln umschalten."
-  - question: "Bei welchen Aktionen lohnt sich sichere Eingabe oder Ausgabe besonders?"
-    answer: "Aktionen, die sensible Daten wie Passwörter, Token oder persönliche Angaben verarbeiten. Im Beispiel des Beitrags wird ein Bearer-Token im Ausführungsverlauf einer Aktion maskiert, Eingaben und Ausgaben zeigen dann nur den Hinweis, dass der Inhalt ausgeblendet ist. Du kannst pro Aktion Eingaben, Ausgaben oder beides aktivieren, je nach Sicherheitsbedarf."
+    answer: "Öffne die betroffene Aktion in deinem Flow, wechsle in den Bereich Einstellungen, schalte sichere Eingaben, sichere Ausgaben oder beides um und speichere die Änderung."
 ---
 ## TL;DR
 

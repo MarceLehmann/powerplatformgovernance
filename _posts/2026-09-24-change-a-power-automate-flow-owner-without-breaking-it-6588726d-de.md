@@ -28,15 +28,11 @@ source_language_name: English
 publisher_disclosure: Beide Publikationen werden von Marcel Lehmann herausgegeben.
 faq:
   - question: "Lässt sich ein Cloud-Flow ohne Export und Import an eine neue Person übergeben?"
-    answer: "Ja, wenn der Flow lösungsfähig ist. Füge ihn in einer Umgebung mit Dataverse zu einer Lösung hinzu, öffne die Details des Flows, wähle Bearbeiten und trage den neuen Besitzer ein. Verbindungen und Laufverlauf bleiben erhalten. Flows ausserhalb von Lösungen können ihren Besitzer nicht direkt wechseln, weil der Besitzer Teil ihrer Identität ist."
+    answer: "Ja, wenn der Flow lösungsfähig ist. Füge ihn in einer Umgebung mit Dataverse zu einer Lösung hinzu, öffne die Details des Flows, wähle Bearbeiten und trage den neuen Besitzer ein."
   - question: "Bleiben der alte und der neue Besitzer beide am Flow?"
-    answer: "Ja. Der bisherige und der neue Besitzer werden Miteigentümer, deshalb geht nichts kaputt. Verbindungen und Laufverlauf bleiben in der neuen Konstellation erhalten. Der Artikel beschreibt die Änderung als Übergabe direkt am Flow, also ohne Umweg über Export und Import und ohne Ausfallzeit."
+    answer: "Ja. Der bisherige und der neue Besitzer werden Miteigentümer, deshalb geht nichts kaputt."
   - question: "Wie lange dauert es, bis die Lizenz des neuen Besitzers bei einem geplanten Flow greift?"
-    answer: "Bei geplanten oder automatischen Flows wirkt die Lizenz des neuen Besitzers nach etwa 7 Tagen. Wenn du den Flow bearbeitest und neu speicherst, gilt sie sofort. Ohne Premium-Lizenz läuft der Flow noch eine Karenzzeit weiter und wird dann abgeschaltet, der neue Besitzer braucht also die passende Lizenz für die genutzten Connectors."
-  - question: "Warum ist der übliche Weg über Export und Import schlecht, um einen Flow-Besitzer zu ändern?"
-    answer: "Der Artikel nennt ihn langsam und fehleranfällig, weil das Umgehen der Besitzergrenze mit Export, geänderten Berechtigungen und erneutem Import Aufwand macht. Der Weg über die Lösung spart diesen Aufwand. Die Änderung geschieht direkt am Flow, ohne Export-Import-Umweg und ohne Ausfall, und Verbindungen sowie Laufverlauf bleiben erhalten."
-  - question: "Wer darf den Besitzer eines Flows ändern und in welchem Portal geschieht das?"
-    answer: "Eine Änderung anstossen können nur aktuelle Besitzer, Miteigentümer oder Umgebungsadministratoren. Du arbeitest in make.powerautomate.com, in einer Umgebung mit Dataverse. Füge den bestehenden Flow einer Lösung hinzu oder lege ihn darin neu an, wähle ihn aus, klicke im Bereich Details auf Bearbeiten und trage die Person im Bereich Besitzer ein."
+    answer: "Bei geplanten oder automatischen Flows wirkt die Lizenz des neuen Besitzers nach etwa 7 Tagen. Wenn du den Flow bearbeitest und neu speicherst, gilt sie sofort."
 ---
 ## TL;DR
 

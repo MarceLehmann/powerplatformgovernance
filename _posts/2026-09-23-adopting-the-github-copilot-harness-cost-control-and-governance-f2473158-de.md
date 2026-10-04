@@ -28,15 +28,11 @@ source_published_at: '2026-08-07'
 source_updated_at: '2026-08-13'
 faq:
   - question: "Warum verbrauchen Agenten mit GitHub-Copilot-Harness schon beim Bauen Credits?"
-    answer: "Makers können Copilot Credits schon beim Erstellen, Testen in der Vorschau und Auswerten verbrauchen, noch bevor ein Agent einen formalen Produktivbetrieb erreicht. Dadurch verschiebt sich der Zeitpunkt der Kostenkontrolle nach vorn. Entwicklungsumgebungen verursachen Kosten bereits in der Experimentierphase und nicht erst, wenn Nutzer den Agenten verwenden."
+    answer: "Makers können Copilot Credits schon beim Erstellen, Testen in der Vorschau und Auswerten verbrauchen, noch bevor ein Agent einen formalen Produktivbetrieb erreicht. Dadurch verschiebt sich der Zeitpunkt der Kostenkontrolle nach vorn."
   - question: "Wie finde ich alle Harness-Agenten in meinem Tenant?"
-    answer: "Frage das Power Platform Inventory API per POST ab, filtere den Ressourcentyp der Copilot-Studio-Agenten und setze die Eigenschaft isCLIAgent auf wahr. Als Felder erhältst du Name, Anzeigename, Umgebungskennung, Besitzerkennung und das Merkmal selbst. Daraus siehst du, welche Agenten in welchen Umgebungen von wem betrieben werden und Credits verbrauchen können."
-  - question: "Wie sollte ich Umgebungen für Harness-Agenten einteilen?"
-    answer: "In zwei Typen: Maker-Entwicklung für Ausprobieren und Vorschau, wo bewusste Grenzen nötig sind, und finanzierte Produktion mit klarer Verantwortung und gewollter Finanzierung. Jeder Typ bekommt Kontrollen, die zu seinem Zweck passen. So bleiben Experimente möglich, ohne dass sie unbemerkt das Kontingent aufbrauchen, das für produktive Agenten vorgesehen ist."
+    answer: "Frage das Power Platform Inventory API per POST ab, filtere den Ressourcentyp der Copilot-Studio-Agenten und setze die Eigenschaft isCLIAgent auf wahr."
   - question: "Was bedeuten die vier Durchsetzungsregeln für Credit-Zuteilungen?"
-    answer: "Alert benachrichtigt Administratoren, wenn die Kapazität sich dem Limit nähert. TenantPool legt fest, ob eine Umgebung nicht zugeteilte Kapazität aus dem Pool beziehen darf. PayGo erlaubt Abrechnung nach Verbrauch über freigegebene Azure-Abonnements. Deny verhindert weiteren Verbrauch, sobald die Kapazität erschöpft ist. Jede Regel wird per API mit ruleType und Aktivierungsflag gesetzt."
-  - question: "Wie setze ich ein monatliches Credit-Limit für einen einzelnen Agenten?"
-    answer: "Mit einem PUT auf die Schwellenwert-Schnittstelle für die Ressource des Agenten, Version 2024-10-01. Du gibst das monatliche Limit an, ob bei Überschreitung benachrichtigt wird, ab welchem Prozentwert und ob der Verbrauch am Limit stoppt. Das Beispiel nutzt 1000 Credits, Meldung bei 80 Prozent und Stopp am Limit. Der Parameter stopResource bleibt falsch, sonst wird der Agent sofort gesperrt."
+    answer: "Alert warnt Administratoren bei nahendem Limit, TenantPool erlaubt einer Umgebung nicht zugeteilte Kapazität aus dem Pool, PayGo aktiviert Abrechnung nach Verbrauch über freigegebene Azure-Abonnements, und Deny stoppt den Verbrauch bei erschöpfter Kapazität."
 ---
 ## TL;DR
 
