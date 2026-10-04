@@ -25,6 +25,17 @@ source_author: Michael Roth
 source_language: en
 source_language_name: English
 source_published_at: '2026-02-10'
+faq:
+  - question: "Lässt sich die Standardumgebung der Power Platform auf eine Sicherheitsgruppe beschränken?"
+    answer: "Nein. In der Standardumgebung hat jede Person im Mandanten Zugriff, auch externe Gäste und B2B-Benutzer, und sie lässt sich nicht über übliche Sicherheitsgruppen verwalten. Manuelle Sicherungen sind ebenfalls nicht möglich, auf Sicherungsdaten kommst du aber über die Zusammenarbeit mit dem Microsoft-Support. Deshalb verlangt der Artikel, den Zweck der Umgebung festzulegen."
+  - question: "Was bewirkt Freigabe für alle in der Standardumgebung tatsächlich?"
+    answer: "Technisch erhalten alle Benutzerkonten im Verzeichnis Berechtigungen, darunter externe Gäste und teils Dienstkonten oder verwaltete Identitäten. Maker denken meist nur an ihre Kollegen, der echte Kreis ist viel grösser als gedacht. Der Artikel sieht in dieser unsichtbaren Ausweitung das Hauptrisiko und empfiehlt, die Freigabe für alle abzuschalten."
+  - question: "Welche Governance-Modelle nennt der Artikel für die Standardumgebung?"
+    answer: "Drei: reine persönliche Produktivität, die der Autor empfiehlt, dann geduldet aber unerwünscht als Übergangsphase für bestehende Mandanten mit erwarteter Migration, und für Maker gesperrt, wobei sie in eigene Lernumgebungen umgeleitet werden. Mischformen machen alles unberechenbar, also wähle eines und dokumentiere es. Eine Sperre braucht eine brauchbare Alternative, sonst entstehen Umgehungen."
+  - question: "Welche Lizenz-Standardeinstellungen verursachen versteckte Kosten in der Standardumgebung?"
+    answer: "Testversionen und virale Pläne, Selbstbedienungskäufe und Auto-Claim-Richtlinien. Testversionen laufen unbemerkt ab und legen darauf gebaute Lösungen lahm, Käufe erzeugen nie genehmigte Verpflichtungen, und Auto-Claim weist Premium-Lizenzen zu, sobald jemand Premium-Funktionen berührt. Eine geteilte App mit Premium-Funktionen kann so Lizenzzuweisungen für alle auslösen, die sie öffnen."
+  - question: "Was gehört in die Mindestbasis für die Standardumgebung?"
+    answer: "Freigabe für alle abschalten, Testversionen und virale Pläne reduzieren oder deaktivieren, Selbstbedienungskäufe sperren und Auto-Claim-Richtlinien ausschalten. Dazu kommen eine strenge, bewusst gewählte DLP-Richtlinie, geplante Prüfungen, die Verstösse erkennen und Verantwortliche benachrichtigen, und eine klar benannte Ausweichumgebung zum Experimentieren. Vor jeder Durchsetzung sollten Maker die Regeln und ihren Grund kennen, etwa über einen zentralen Hub."
 ---
 ## TL;DR
 

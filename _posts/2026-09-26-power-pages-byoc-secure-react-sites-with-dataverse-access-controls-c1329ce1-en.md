@@ -30,6 +30,17 @@ source_author: Nick Doelman
 source_published_at: '2026-01-02'
 source_updated_at: '2026-01-02'
 source_type: article
+faq:
+  - question: "What do I need installed before building a Power Pages code site with React?"
+    answer: "Visual Studio Code, Node.js and the Power Platform Tools extension, plus a non-production Power Platform environment. The article scaffolds the project with Vite and its React template. It names 31 January as the date when bring your own code reaches general availability. Locally, the project is built with npm run build and viewed with npm run preview."
+  - question: "Which commands upload a compiled React site to Power Pages?"
+    answer: "First authenticate with pac auth create and the environment ID. Then run pac powerpages upload-code-site with the root path, the compiled path, which is the dist folder, and the site name. Before that, the article builds the React project locally with npm run build."
+  - question: "How do I allow a React single page app to read Dataverse data?"
+    answer: "Enable each table through the site setting Webapi/tablename/enabled set to true, and list the columns by name in Webapi/tablename/fields. The article notes that wildcards are not supported, so you must specify which fields to expose. For calls, it builds a CSRF token helper that puts the token in the __RequestVerificationToken header."
+  - question: "How does the tutorial limit which records a signed-in user sees?"
+    answer: "The tutorial configures table permissions and web roles so that only authenticated users can see their own session records. Sign-in is added through Microsoft Entra External ID, with the authority URL stored as a Vite environment variable. The app reads the user state from window.Microsoft.Dynamic365.Portal.User."
+  - question: "What limits does the article mention for BYOC code sites?"
+    answer: "Local preview cannot reach Dataverse, so you test the integration after uploading the site to Power Pages. The design studio disables the pages and style workspaces for code sites. The article also says to verify AI-generated authentication code carefully, particularly the CSRF token handling and permissions logic."
 ---
 
 ## TL;DR

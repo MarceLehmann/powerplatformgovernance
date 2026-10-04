@@ -26,6 +26,17 @@ source_language: en
 source_language_name: English
 source_published_at: '2026-08-07'
 source_updated_at: '2026-08-13'
+faq:
+  - question: "Why do GitHub Copilot harness agents consume credits while still being built?"
+    answer: "Makers can consume Copilot Credits while building, previewing and evaluating agents, before those agents reach a formal production lifecycle. That moves cost control earlier. Development environments incur cost during the experimentation phase, not only once users start using the agent."
+  - question: "How do I find all harness agents in my tenant?"
+    answer: "Query the Power Platform Inventory API with a POST, filter on the Copilot Studio agent resource type and set the isCLIAgent property to true. You get the name, display name, environment ID, owner ID and the flag itself. That shows which agents run in which environments, who owns them and which ones can consume credits."
+  - question: "How should I classify environments for harness agents?"
+    answer: "Into two types: maker development for exploration and preview, where deliberate boundaries are needed, and funded production with accountable ownership and intentional funding. Each type gets controls matching its purpose. That keeps experiments possible without silently draining capacity meant for production agents."
+  - question: "What do the four enforcement rules for credit allocations mean?"
+    answer: "Alert notifies administrators as capacity nears its limit. TenantPool controls whether an environment may draw unallocated capacity from the pool. PayGo enables pay-as-you-go billing through approved Azure subscriptions. Deny blocks further consumption once capacity is exhausted. Each rule is set through the API with a ruleType and an enabled flag."
+  - question: "How do I set a monthly credit limit for a single agent?"
+    answer: "With a PUT to the threshold endpoint for the agent's resource, API version 2024-10-01. You specify the monthly limit, whether to notify when over capacity, at what percentage, and whether usage stops at the limit. The example uses 1,000 credits, a notification at 80 percent and a stop at the limit. The stopResource parameter stays false, otherwise the agent is suspended immediately."
 ---
 ## TL;DR
 

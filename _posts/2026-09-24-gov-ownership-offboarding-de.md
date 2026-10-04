@@ -14,6 +14,17 @@ image:
   alt: "Governance-Karte: Die Geister-App — zwei Namen pro Lösung, immer."
 permalink: "/de/posts/gov-ownership-offboarding/"
 translation_url: "/en/posts/gov-ownership-offboarding/"
+faq:
+  - question: "Wie finde ich alle Flows, die ein ausgeschiedener Mitarbeiter erstellt hat?"
+    answer: "Nutze das PowerShell-Cmdlet Get-AdminFlow mit dem Parameter CreatedBy und der Objekt-ID der Person, um alle ihre Flows auf einmal zu finden. Get-AdminFlowOwnerRole zeigt den aktuellen Besitz, und Set-AdminFlowOwnerRole weist einen neuen Besitzer zu. Über die Oberfläche öffnest du den Flow, wählst Teilen und fügst einen neuen Besitzer hinzu."
+  - question: "Warum scheitert ein verwaister Flow?"
+    answer: "Ein verwaister Flow ist einer, dessen Besitzerkonto nicht mehr existiert oder ungültig ist, und er scheitert, weil seine Verbindungen an dieses Konto gebunden waren. Microsoft pflegt dafür einen eigenen Support-Artikel mit Oberflächenweg und PowerShell-Cmdlets. Das zeigt, dass ein fehlender gültiger Besitzer ein routinemässiger, erwarteter Ausfall ist und kein Randfall."
+  - question: "Warum soll ich bei jeder Lösung einen Stellvertreter erfassen?"
+    answer: "Jedes Neuzuweisungs-Cmdlet braucht einen Menschen, der entscheidet, wer der neue Besitzer wird, und genau das beantwortet ein benannter Stellvertreter bereits. Besitzer und Stellvertreter bei der Erstellung zu erfassen, macht aus der Neuzuweisung eine Nachschlagefrage statt einer Recherche. Es kostet nichts in der Einrichtung und verkürzt den Behebungsprozess, für den Microsoft eigenes Tooling bauen musste."
+  - question: "Was passiert bei Zeilen neu zuweisen in Dataverse mit Geschäftsregeln und Workflows?"
+    answer: "Zeilen neu zuweisen überträgt mit einer Aktion alles, was ein ausgeschiedener Benutzer besass, an jemand anderen. Dabei werden aber alle aktivierten Prozesse deaktiviert, die an die neu zugewiesenen Zeilen gebunden sind, also auch Geschäftsregeln und Workflows. Der neue Besitzer muss sie reaktivieren. Ein Stellvertreter, der die Ressource kennt, bemerkt und behebt das zuverlässiger."
+  - question: "Wie lässt sich die Neuzuweisung beim Austritt automatisch anstossen?"
+    answer: "Löse den Neuzuweisungs-Flow von einem Signal aus, das ohnehin existiert, nämlich einem deaktivierten Entra-ID-Konto. Gleiche es mit den Feldern Besitzer und Stellvertreter ab und weise automatisch neu zu. Hängt das Offboarding davon ab, dass jemand eine Tabelle prüft oder ein Ticket erstellt, ist es von einem Schritt ausserhalb des Austrittsprozesses abhängig, und solche Schritte werden unter Druck übersprungen."
 ---
 
 ## TL;DR

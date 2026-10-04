@@ -14,6 +14,17 @@ image:
   alt: "Governance card: The Shadow Admin — grant the least, log the rest."
 permalink: "/en/posts/gov-access-control-basics/"
 translation_url: "/de/posts/gov-access-control-basics/"
+faq:
+  - question: "Which predefined security role should I assign instead of System Administrator?"
+    answer: "Assign the narrowest predefined role that covers the task, not System Administrator. In environments without a Dataverse database, Environment Admin manages the environment and can provision a database, while Environment Maker can create apps, connections and flows but has no privileges over the data inside them. Once Dataverse exists, System Administrator is the full-access role and should not be anyone's everyday assignment."
+  - question: "Why shouldn't I copy the System Administrator role to build a new role?"
+    answer: "Copied roles do not automatically pick up new privileges from product updates, so they quietly become outdated. If a group of admins needs to assign security roles to others without being full System Administrators, build a separate custom role scoped narrowly to the Security Role table instead of taking a shortcut through a broader role."
+  - question: "Why is sharing an app with a security group better than sharing with named people?"
+    answer: "A security group controls access in one place. Add someone to the group and they are in, remove them and they are out, with no cleanup on every resource where the group was used. Sharing with individuals creates one access grant per person, and each one has to be found and revoked separately when access changes, which is hardest at offboarding."
+  - question: "Does removing a person from a security group remove an app share added in their name?"
+    answer: "No. Removing someone from a security group does not touch an app share that was added by name, so that access stays in place. An individually shared app is invisible to any process built around directory group membership. If your access review checks group membership, individual shares are exactly what it misses."
+  - question: "Is an HTTP triggered flow without authentication a public endpoint?"
+    answer: "Yes. An HTTP triggered flow with no authentication is a public endpoint the moment it is saved, reachable by anyone who has or guesses the URL until someone notices. Require an explicit method instead: Microsoft Entra ID authentication on the request, an API key check inside the flow, or an API Management layer that handles authentication first. Make it a review checklist item."
 ---
 
 ## TL;DR

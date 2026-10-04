@@ -14,6 +14,17 @@ image:
   alt: "Governance-Karte: Die Anzeigetafel — zwei Kennzahlen schlagen jedes Governance-Deck."
 permalink: "/de/posts/gov-weekly-coe-rhythm/"
 translation_url: "/en/posts/gov-weekly-coe-rhythm/"
+faq:
+  - question: "Was enthält der Wochendigest der Managed Environments?"
+    answer: "Er hat drei Teile: eine Nutzungsübersicht mit der Zahl genutzter Apps und aktiver Benutzer im letzten Monat, eine Liste von Apps und Flows, die eine Weile nicht gestartet wurden, und die beliebtesten Apps und Flows nach Sitzungs- und Ausführungszahl samt Top-Makern nach Gesamtsitzungen. Du brauchst dafür keinen Power-BI-Report und keinen Datenexport."
+  - question: "Wie aktiviere ich den Wochendigest für eine Umgebung?"
+    answer: "Aktiviere zuerst die Tenant-Level-Analytics, denn Usage Insights hängen davon ab. Dann gehst du im Power Platform Admin Center zu Verwalten, Umgebungen, wählst die Umgebung, öffnest Managed Environment bearbeiten und aktivierst unter Usage Insights die Option für den wöchentlichen E-Mail-Digest. Die Einstellung gilt pro Umgebung, eine vergessene Umgebung hat keine wöchentliche Sichtbarkeit."
+  - question: "Wer erhält den Wochendigest standardmässig?"
+    answer: "Alle mit der Rolle Power Platform Administrator oder Dynamics 365 Service Administrator, nicht aber Umgebungsbesitzer oder Maker. Weitere Empfänger fügst du in den Usage-Insights-Einstellungen hinzu oder per PowerShell, indem du additionalAdminDigestEmailRecipients in den Tenant-Einstellungen mit durch Semikolon getrennten Adressen setzt. In Sovereign Clouds funktioniert der Digest nicht."
+  - question: "Was bedeutet None bei Letzter Start im Digest?"
+    answer: "Die App oder der Flow wurde noch nie gestartet, ein so direktes Signal, wie Governance-Daten es liefern können. Zeigt eine App drei Digests in Folge None, ist das keine blosse Zahl, sondern eine Entscheidung, die ansteht: archivieren, neu zuweisen oder bewusst als ruhend bestätigen."
+  - question: "Brauche ich das CoE Starter Kit, wenn ich den Wochendigest nutze?"
+    answer: "Nein, der Digest setzt kein CoE Starter Kit voraus, und genau deshalb lohnt sich die Aktivierung unabhängig davon. Ist bereits eines im Einsatz, decken dessen Power-BI-Dashboard und der Inaktivitäts-Benachrichtigungsprozess mehr ab, etwa Massenanpassung von Berechtigungen, Maker-Umfragen und ROI-Tracking. Für die meisten Tenants ersetzt der Digest einen echten Teil eines Reporting-Projekts."
 ---
 
 ## TL;DR

@@ -20,6 +20,17 @@ source_name: Powerplatform.se
 source_language: en
 source_language_name: English
 source_published_at: '2025-06-10'
+faq:
+  - question: "What are orphan customer profile lookups in Dataverse?"
+    answer: "They are lookup fields pointing to a customer profile that no longer exists. They arise when Customer Insights Data works together with Dataverse. The four COLA tables Contact, Opportunity, Lead and Account are affected. The record itself remains, but its reference leads nowhere."
+  - question: "Why do such orphan lookups appear?"
+    answer: "The trigger is often an effort to reduce licensing costs, since every 100,000 unified profiles in Customer Insights Data bring significant monthly costs. Filtering contacts, for example those without an order in the last 24 months, removes profiles. According to the author, the backstamping of the profile ID into the tables does not clean up properly afterwards."
+  - question: "Which failures do orphan lookups cause in operation?"
+    answer: "The problem shows up in integrations that do not work selectively. They read all fields of a record, change some and write everything back. If the record contains a broken link to a customer profile, the platform throws an exception on save and the integration fails."
+  - question: "How can the problem be fixed in the author's view?"
+    answer: "He names two ways. A Power Automate flow can check whether the customer profile ID is still valid. Or the integration is rebuilt so that it writes only changed fields. For finding the cases, he provides two FetchXML queries that list contacts with a profile ID set and all customer profiles. An outer left join to spot the orphans is not possible in FetchXML."
+  - question: "What should Microsoft change according to the post?"
+    answer: "The author proposes two approaches. Customer Insights Data should run a cleanup after backstamping. And Dataverse should support cascade rules such as removing the link for elastic tables, which it does not do today. That would help all lookups pointing at elastic tables, though a cleanup during deletes could affect performance."
 ---
 ## TL;DR
 

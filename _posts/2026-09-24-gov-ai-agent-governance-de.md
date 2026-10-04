@@ -14,6 +14,17 @@ image:
   alt: "Governance-Karte: Das Orakel — dein Agent ist selbstsicher, liegt er auch richtig?"
 permalink: "/de/posts/gov-ai-agent-governance/"
 translation_url: "/en/posts/gov-ai-agent-governance/"
+faq:
+  - question: "Kann ein Copilot-Studio-Agent die Evaluation bestehen und trotzdem unangemessen antworten?"
+    answer: "Ja. Die Agent-Evaluation misst Korrektheit und Performance gegen einen Testdatensatz, nicht KI-Ethik oder Sicherheitsprobleme. Ein Agent kann jeden Testfall bestehen und trotzdem eine unangemessene Antwort geben. Microsofts Migrationsanleitung sagt klar, dass die Evaluation nichts zu Sicherheit, Bias oder Ethik aussagt. Ein Freigabegate braucht darum einen separaten Responsible-AI-Review."
+  - question: "Welche Governance-Checkliste gilt vor dem Livegang eines Copilot-Studio-Agenten?"
+    answer: "Dieselbe wie für jede gut geführte App. Microsoft verlangt eine benannte, verantwortliche Führungsperson für das Agent-Portfolio, eine dokumentierte Responsible-AI-Folgenabschätzung vor der Bereitstellung, durchgesetzte Datenresidenz und Sensitivitätskennzeichnungen, einen sichtbaren Eskalationsweg zu einem Menschen und ein bei der Erstellung festgelegtes Abschaltkriterium. Geh sie vor dem Livegang durch, nicht erst nach einem Problem."
+  - question: "Wie reduziere ich selbstsicher falsche Antworten eines Copilot-Studio-Agenten?"
+    answer: "Gründe die Antworten auf vertrauenswürdige Datenquellen, die auf das beschränkt sind, was der anfragende Nutzer sehen darf. Bei Folgenreichem soll der Agent nicht auf modellgenerierte Inhalte vertrauen. Ein Agent räumt schlechte oder mehrdeutige Eingaben nicht auf, er beschleunigt sie selbstsicher. Eine ungesteuerte Wissensquelle riskiert deshalb falsche Antworten, die überzeugt vorgetragen werden."
+  - question: "Wie lange soll ein Agent Gesprächstranskripte aufbewahren?"
+    answer: "Transkripte werden standardmässig nicht für immer aufbewahrt, die Aufbewahrungsdauer ist aber eine Governance-Frage mit eigener, bewusster Antwort statt eines übernommenen Microsoft-Standards. Jedes gespeicherte Transkript ist eine Kopie dessen, was ein Nutzer dem Agenten anvertraut hat. Die Audit-Log-Aufbewahrung von Dataverse ist ein anderer Hebel, weil sie Systemänderungen betrifft und keine Gesprächsinhalte."
+  - question: "Warum ist der Wirkungsradius eines Agenten grösser als der einer normalen App?"
+    answer: "Ein Agent handelt sofort und in grossem Massstab auf Basis unvollständiger oder falscher Informationen, wo eine Person vielleicht innegehalten und nachgefragt hätte. Die Grundlagen sind dieselbe Besitz- und Zugriffsdisziplin wie bei jeder Lösung, nur steht mehr auf dem Spiel. Microsoft versteht Governance als Voraussetzung für den ROI des Agenten, nicht als aufgesetzte Steuer."
 ---
 
 ## TL;DR

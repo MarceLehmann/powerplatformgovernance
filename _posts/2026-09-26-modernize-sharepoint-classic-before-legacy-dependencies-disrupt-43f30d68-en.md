@@ -29,6 +29,17 @@ source_language_name: English
 source_author: Josiah Opiyo
 source_published_at: '2026-09-12'
 source_type: article
+faq:
+  - question: "What is the most valuable first step before retiring SharePoint Classic?"
+    answer: "A focused dependency inventory, which the author calls the single most valuable step. It should list classic pages, templates, alerts, scripts, add-ins, ACS dependencies and legacy workflows, ranked by business criticality rather than by number of sites. The inventory often shows entire site collections that can simply be retired instead of migrated."
+  - question: "Which hidden SharePoint Classic dependencies does the article warn about?"
+    answer: "Script Editor web parts added eight years ago, integrations built on ACS authentication that nobody has touched since the migration, and alerts that departments rely on because that is how they have always done it. Provider-hosted add-ins and legacy app-only access patterns will eventually fail unless they are remediated. Add-ins were considered too risky to replace."
+  - question: "How should teams replace SharePoint alerts that are being retired?"
+    answer: "Start from the business workflow instead of converting technically. Clarify which events need a notification, who has to receive it and what the escalation path is. Rules, Power Automate or another governed approach can then take over and are described as more reliable and auditable. Microsoft has published milestones for blocking new alerts and retiring the feature."
+  - question: "When can a classic SharePoint page be modernized in place and when does it need a rebuild?"
+    answer: "Straightforward classic pages can often be modernized in place. Pages with complex workflows, heavy branding or compliance-heavy functions usually need a rebuild. The author adds that modernization is a chance to reset governance, including information architecture, lifecycle management, audit readiness and access models, rather than to recreate classic patterns with modern tools."
+  - question: "Who needs to be involved in a SharePoint Classic modernization project?"
+    answer: "Modernization fails when it is treated as an IT-only task. The author lists platform owners, architects, SharePoint engineers, security and compliance teams, HR, finance and operations leaders, power users and change management. The people closest to a process usually know where dependencies hide, which makes them essential for building the inventory."
 ---
 
 ## TL;DR

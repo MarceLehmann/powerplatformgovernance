@@ -33,6 +33,17 @@ submitted_by:
   publish_credit: true
   name: Michael Roth
   linkedin: https://www.linkedin.com/in/michaelroth42/
+faq:
+  - question: "Why should the DLP policy of a maker environment resemble production?"
+    answer: "Because makers would otherwise build with capabilities that do not exist in production and be disappointed later. If custom connectors or HTTP calls are restricted in production, the same should hold in the maker lab. The policy may be slightly more permissive, but not dramatically. For experiments with blocked connectors, the source suggests a separate Advanced Maker Lab with stricter access."
+  - question: "How should access to a maker environment be granted?"
+    answer: "Through competence rather than automatically for everyone in the directory. The source proposes a learning module of roughly 30 minutes covering what Power Platform is and is not, how connectors are restricted, what Dataverse is for and what the maker lab expects. After completion, access comes through a security group that the governance team or IT manages."
+  - question: "When does it make sense to split a maker lab into several environments?"
+    answer: "One general maker lab is the default. Splitting only happens when one of three conditions holds: advanced use cases need connectors too risky for general access, individual business units show consistently high maker volume, or makers build Model-Driven Apps with real business logic or use standard tables for actual workflows. Every additional environment adds management overhead."
+  - question: "Which environment settings does the source recommend for a maker lab?"
+    answer: "Four: a security group for access, Dataverse Audit with 30 days of retention so makers learn their actions are traceable, creating flows and apps in solutions by default, and capacity monitoring. Audit records who changed what but prevents no mistakes and does not replace backups. Solutions untouched for 90 days are removed once the owner confirms they are no longer needed."
+  - question: "What should makers know about the lifecycle of their lab solutions?"
+    answer: "The maker lab is not a production environment. Apps and flows can be deleted for policy violations or abandonment, no SLA applies, and ownership stays with the maker, so if someone leaves, their solutions may not be maintained. Business-critical solutions must be migrated to production. Makers need to know how to request that, and the process should be documented and easy to find."
 ---
 
 ## TL;DR

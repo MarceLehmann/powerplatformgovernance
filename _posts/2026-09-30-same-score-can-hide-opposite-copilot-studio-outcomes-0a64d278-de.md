@@ -29,6 +29,17 @@ source_language_name: English
 source_author: Karl-Johan Spiik
 source_published_at: '2026-09-30'
 source_type: article
+faq:
+  - question: "Warum kann eine Bewertung mit gutem Ergebnis trotzdem falsche Agentenantworten durchwinken?"
+    answer: "Weil der General-Qualitätsprüfer Relevanz, Abdeckung und Verankerung in den Quellen misst, die Antwort aber nicht mit der erwarteten Antwort vergleicht. Im Beispiel lieferte der Agent bei der Frage nach offenem Feuer im Stall eine zitierte, auf eine freigegebene Quelle zurückführbare Antwort, die das Gegenteil des Erwarteten sagte. Die Bewertung liess sie trotzdem als bestanden durch."
+  - question: "Was zeigte der Vergleich zweier Testläufe mit fast gleichem Punktestand?"
+    answer: "Im ersten Lauf erreichte der Agent 7 von 20 Punkten, obwohl vier Dokumente nie hätten freigegeben werden dürfen, etwa eine überholte Richtlinie und ein ausdrücklich nicht gültiger Entwurf, und drei korrekte aktuelle Dokumente fehlten. Ein zweiter Lauf mit nur sechs freigegebenen Dokumenten kam auf etwa 6 von 20 und lehnte Entwürfe korrekt ab. Gleiche Punktzahl, entgegengesetzte Bedeutung."
+  - question: "Wie funktioniert die kuratierte Bibliothek, aus der der Agent ausschliesslich antwortet?"
+    answer: "Teams erstellen Inhalte in einer Dokumentbibliothek. Setzt eine benannte Person in einer Ja-Nein-Spalte ein Häkchen, kopiert ein Power-Automate-Flow die Datei samt Eigentümer in die kuratierte Bibliothek, beim Entfernen des Häkchens wird die Kopie gelöscht. Der Agent greift nur auf diese Bibliothek zu, Modellwissen und Websuche sind in seiner YAML-Konfiguration abgeschaltet."
+  - question: "Was prüfen die monatlichen Audits der kuratierten Bibliothek?"
+    answer: "Drei Prüfungen suchen nach veralteten Dateien, verwaisten Dateien ohne Eigentümer, der dafür einsteht, und nach ausgeschiedenen Eigentümern, deren Profilabfrage fehlschlägt. Jeder Fund erzeugt eine Adaptive Card im Governance-Kanal in Teams, die das zuständige Team nennt und eine namentlich genannte Person auffordert, das Quelldokument zu aktualisieren oder zu streichen. Die Automatisierung erzwingt die Entscheidung, trifft sie aber nicht."
+  - question: "Warum ist ein Kontrolllauf beim Testen eines Copilot-Studio-Agenten sinnvoll?"
+    answer: "Ein Kontrolllauf wiederholt die Auswertung ohne Änderung am Agenten. Bei einem Produktivagenten stieg der Punktestand so von 24 auf 31 von 43, obwohl nichts verändert wurde. Ohne diese Wiederholung wäre das Rauschen in einer Woche als Rückschritt und in der nächsten als Verbesserung gelesen worden. Die Reihenfolge lautet erst wiederholen, dann diagnostizieren, dann ändern."
 ---
 
 ## TL;DR

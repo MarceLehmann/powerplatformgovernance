@@ -15,6 +15,17 @@ image:
   alt: "Governance-Karte: Die Nachtwache — monatlich nach Zombies suchen."
 permalink: "/de/posts/gov-disabled-owner-zombie-flows/"
 translation_url: "/en/posts/gov-disabled-owner-zombie-flows/"
+faq:
+  - question: "Schaltet das Deaktivieren eines Benutzers in Entra ID dessen Flows ab?"
+    answer: "Nein. Das Deaktivieren des Kontos ist eine Identitätskontrolle und sagt Power Automate nichts über den Flow. Der Flow bleibt Ein und läuft weiter nach seinem normalen Zeitplan oder Trigger. Was scheitert, ist enger gefasst: Verbindungen, die unter dem deaktivierten Konto autorisiert wurden, lehnen Aufrufe ab, oft wochenlang unbemerkt, während der Flow im Maker-Portal weiter aktiv aussieht."
+  - question: "Was geht zuerst kaputt, wenn das Konto des Flow-Besitzers deaktiviert wird?"
+    answer: "Zuerst die Verbindungen: Jede Aktion mit einer vom deaktivierten Konto erstellten Verbindung meldet je nach Connector sofort oder beim nächsten Lauf einen Fehler. Danach kann die Lizenzierung greifen, wenn der Besitz an eine Person ohne passende Premium-Lizenz geht, mit einer Übergangsfrist von 30 Tagen. Der Flow selbst wird nie automatisch abgeschaltet."
+  - question: "Sollten geschäftskritische Flows einem Dienstprinzipal gehören?"
+    answer: "Ja, das empfiehlt Microsoft. Flows im Besitz eines Dienstprinzipals hängen an keiner einzelnen Mitarbeiterin, Austritte stören sie also nicht. Berechtigungen lassen sich enger fassen als der Alltagszugriff einer Person, und der Audit-Trail spiegelt die Automation selbst wider. So wird das Ausfallmuster strukturell unmöglich, statt sich auf Offboarding-Checklisten zu verlassen."
+  - question: "Wie läuft die Lizenzierung bei einem Flow im Besitz eines Dienstprinzipals?"
+    answer: "Einem nicht-interaktiven Dienstprinzipal wird nie direkt eine Lizenz zugewiesen. Power Automate erlaubt, einen separaten lizenzierten Mitbesitzer zu benennen, unter dessen Berechtigung der Flow läuft. Der Dienstprinzipal bleibt der eingetragene Besitzer, eine echte Person deckt die Premium-Lizenzpflicht ab. Ohne diesen Schritt wird ein solcher Flow mit Premium-Funktionen wegen Nichteinhaltung ausgesetzt."
+  - question: "Wie finde ich Flows, deren Besitzer das Unternehmen bereits verlassen haben?"
+    answer: "Mit einem monatlichen oder häufigeren Abgleich der Flow-Besitzer gegen den Verzeichnisstatus. Das Flow-Inventar im Power Platform Admin Center plus die Benutzerliste des Tenants genügen, um daraus einen eigenen geplanten Flow zu bauen. Er markiert jeden Flow mit deaktiviertem Besitzer, damit ihn jemand bewusst neu zuweist, statt dass er still verkümmert."
 ---
 
 ## TL;DR

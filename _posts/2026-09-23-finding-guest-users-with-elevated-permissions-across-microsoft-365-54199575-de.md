@@ -25,6 +25,17 @@ source_author: Josiah Opiyo
 source_language: en
 source_language_name: English
 source_published_at: '2026-08-03'
+faq:
+  - question: "Welche Berechtigungen prüft das Skript für Gastbenutzer in Microsoft 365?"
+    answer: "Es prüft drei Bereiche: Verzeichnisrollen in Microsoft Entra ID, Besitzerschaft in Teams und Administratoren von SharePoint-Websitesammlungen. Der Autor erfasst bewusst nicht jeden denkbaren Berechtigungspfad. Exchange-Berechtigungen, Azure RBAC, Besitz von Microsoft-365-Gruppen und fein granulare SharePoint-Rechte liegen deshalb ausserhalb des aktuellen Umfangs."
+  - question: "Was steht im CSV-Bericht des Skripts für Gastberechtigungen?"
+    answer: "Das Skript exportiert eine CSV-Datei mit fünf Spalten: Anzeigename, Benutzerprinzipalname, Berechtigungsart, zugewiesene Rolle und Ressource. Die Ergebnisse aus Entra ID, Teams und SharePoint stehen in einem einzigen Bericht. Laut Autor unterstützt der Bericht regelmässige Zugriffsprüfungen, Governance-Berichte, Sicherheitsuntersuchungen und Aufräumaktionen bei Berechtigungen."
+  - question: "Was brauche ich, um das Skript für Gäste mit erhöhten Rechten auszuführen?"
+    answer: "Zum Ausführen brauchst du passende administrative Berechtigungen sowie die erforderlichen PowerShell-Module für Microsoft Graph, Microsoft Teams und SharePoint Online. Das vollständige Skript liegt im Repository PnP Script Samples auf GitHub, wo eine README-Seite es beschreibt. Es sucht in Microsoft 365 nach Gastbenutzern mit erhöhten Rechten."
+  - question: "Warum behalten Gäste erhöhte Rechte, nachdem ein Projekt beendet ist?"
+    answer: "Die Berechtigungen sind auf verschiedene Verwaltungsoberflächen von Microsoft 365 verteilt, deshalb sieht sie niemand an einer Stelle. Der Autor schildert einen Gast-Berater, der Monate nach Projektende noch Besitzer eines Teams war. Das Recht war bei der Vergabe richtig, wurde aber nie entzogen. Wer Entra, Teams und SharePoint getrennt prüft, übersieht solche Altlasten leicht."
+  - question: "Wie liesse sich das Skript für Gastberechtigungen erweitern?"
+    answer: "Der Autor nennt den Besitz von Microsoft-365-Gruppen, SharePoint-Rechte jenseits der Websitesammlungs-Administration, Azure-RBAC-Zuweisungen, Anmeldeaktivität und Alter der Gastkonten, eine Risikobewertung nach Rechtestufe sowie Berichte in HTML oder Power BI. Die aktuelle Version konzentriert sich absichtlich auf wichtige Berechtigungstypen statt auf eine vollständige Erfassung."
 ---
 ## TL;DR
 

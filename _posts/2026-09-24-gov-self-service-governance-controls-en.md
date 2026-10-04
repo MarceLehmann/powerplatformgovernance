@@ -14,6 +14,17 @@ image:
   alt: "Governance card: The Impulse Buy — MSCommerce PowerShell, one policy, done."
 permalink: "/en/posts/gov-self-service-governance-controls/"
 translation_url: "/de/posts/gov-self-service-governance-controls/"
+faq:
+  - question: "How do I block self-service purchases of Microsoft products?"
+    answer: "There is no single tenant-wide switch. New Microsoft 365 and Power Platform products ship with self-service purchase enabled, and you turn it off per product with the MSCommerce PowerShell module, using Update-MSCommerceProductPolicy with the AllowSelfServicePurchase policy ID. Disabling it blocks both purchases and trials for that product."
+  - question: "What happens to a self-service subscription when the buyer leaves the company?"
+    answer: "It does not cancel itself. The subscription keeps running until someone actively cancels it or an admin requests cancellation through support. Blocking the policy going forward does not touch what is already active, so review existing purchases in the Microsoft 365 admin center under Billing, Your products before you block new ones."
+  - question: "What does quarantining a Power Apps app do?"
+    answer: "Quarantine makes the app instantly unavailable to end users while leaving it intact for the maker to keep editing and for admins to inspect. Use Set-AppAsQuarantined and reverse it with Set-AppAsUnquarantined. A user who already has the app open can keep using it for a few seconds. It covers canvas apps and code apps, not model-driven apps yet."
+  - question: "Why quarantine a problem app instead of deleting it?"
+    answer: "Deleting is permanent and loses the maker's work. With quarantine, admins still see the app in the admin center and in PowerShell, makers can still open and edit it in Power Apps Studio, and only end users who launch it are blocked. Set-AppAsUnquarantined reverses it once the problem is solved."
+  - question: "Where do I configure maker welcome content in a Managed Environment?"
+    answer: "In the Power Platform admin center under Manage, Environments, select a managed environment, choose Edit Managed Environment and enter Markdown under Maker Welcome content. You can add a Learn more URL and require makers to acknowledge a terms-of-use link, which is logged and auditable in Microsoft Purview. Group content overrides environment-level content."
 ---
 
 ## TL;DR

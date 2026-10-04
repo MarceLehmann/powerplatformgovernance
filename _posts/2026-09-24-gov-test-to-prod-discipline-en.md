@@ -14,6 +14,17 @@ image:
   alt: "Governance card: The Tightrope — boring deployments, reliable platform."
 permalink: "/en/posts/gov-test-to-prod-discipline/"
 translation_url: "/de/posts/gov-test-to-prod-discipline/"
+faq:
+  - question: "Why should only managed solutions be imported outside development?"
+    answer: "Deleting an unmanaged solution removes only its container while the customizations stay active in the environment's default solution, but removing a managed solution removes everything it contains. Microsoft's ALM guidance says every environment except development should contain only managed solutions, including test, UAT, staging and production. That is what makes a clean rollback possible."
+  - question: "Who should own flows in production?"
+    answer: "Service principals, according to a named ALM best practice. A person who owns a flow can leave the company, get their account disabled or lose access, and the flow's connections start failing without the flow announcing it. A service principal does not resign, go on leave or have its account disabled as a side effect of an HR process."
+  - question: "What is a deployment settings file in Power Platform?"
+    answer: "A JSON file holding the connection IDs and environment variable values for one target environment, generated with the pac solution create-settings command and filled in once per environment. Passed to the Import Solution task of the Power Platform Build Tools, it fills values automatically. Keep it in source control and treat sensitive values as pipeline secrets."
+  - question: "Can I edit a managed solution directly in a target environment?"
+    answer: "No. A managed solution cannot be edited directly, only through an unmanaged solution layered on top. An unmanaged solution is meant for development and is editable. Build and iterate in development as usual, and promote by importing the managed solution your pipeline produced from it, not by exporting your working copy."
+  - question: "What should I check in my non-development environments?"
+    answer: "Audit whether any environment other than development currently holds unmanaged customizations. Microsoft's guidance on moving from unmanaged to managed exists because this is a common finding, not a rare one. Unwinding an unmanaged solution in production is not a clean rollback, since its customizations are already merged into the environment."
 ---
 
 ## TL;DR

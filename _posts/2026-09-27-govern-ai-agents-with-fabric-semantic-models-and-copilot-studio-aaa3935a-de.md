@@ -32,6 +32,17 @@ submitted_by:
   publish_credit: true
   name: Mirko Peters
   linkedin: https://www.linkedin.com/in/m365showpodcast/
+faq:
+  - question: "Warum liefern reine Sprachmodelle unzuverlässige Finanzzahlen?"
+    answer: "Ein ungeerdetes KI-Modell, das eine Quartals-GuV analysieren soll, liefert oft halluzinierte Zahlen und widersprüchliche Wahrheiten. Der Artikel trennt deshalb allgemeines Schlussfolgern von deterministischer Berechnung: generative KI ist stark beim Erkunden, klassische Rechenlogik übernimmt die Mathematik, etwa über gesteuerte Logik wie semantische Power-BI-Modelle."
+  - question: "Aus welchen fünf Schichten besteht die gesteuerte Agentenarchitektur?"
+    answer: "Daten, Logik, Tools, Skills und Governance. Die Datenebene ruht auf vertrauenswürdigen Unternehmensdaten in OneLake und Delta-Tabellen. Die Logik umfasst DAX-Berechnungen, SQL-Abfragen, Python-Skripte und standardisierte KPIs. Tools lassen Agenten Daten über semantische Modelle und MCP-Server abfragen. Skills legen fest, wie Daten für Geschäftsprozesse und Personas zu deuten sind, und Governance erzwingt Berechtigungen, Sicherheitsgrenzen und automatisierte Compliance."
+  - question: "Was trägt Direct Lake zu diesem Entwurf bei?"
+    answer: "Direct Lake lässt Power BI Daten im Delta-Format aus OneLake direkt abfragen. Das beseitigt Datenduplikate und wiederholte Import-Aktualisierungen bei gleichbleibend hoher Analyseleistung. In der Architektur stützt es die semantischen Modelle, die gesteuerte Berechnungen, Beziehungen und Geschäftslogik liefern, damit KI-Agenten Finanzkennzahlen nicht halluzinieren."
+  - question: "Wo erreichen die Agenten in diesem Szenario die Anwender?"
+    answer: "Microsoft Copilot Studio und Datenagenten übersetzen die gesteuerten Erkenntnisse in Antworten im Gespräch innerhalb von Microsoft Teams. Der Artikel behandelt KI-Agenten weniger als Chatbots und mehr als digitale Mitarbeitende mit klar definierten Rollen, wobei die Governance-Ebene Berechtigungen, Sicherheitsgrenzen und automatisierte Compliance durchsetzt."
+  - question: "Welche Rolle spielen semantische Power-BI-Modelle für die Agenten?"
+    answer: "Semantische Modelle dienen als deterministische Quelle der Wahrheit und liefern gesteuerte Berechnungen, Beziehungen und Geschäftslogik, damit KI-Agenten Finanzkennzahlen nicht halluzinieren. Die Agenten schlussfolgern und erkunden, die Zahlen kommen aus dem Modell. Das löst das Problem halluzinierter Zahlen und widersprüchlicher Wahrheiten, wenn ein ungeerdetes Modell eine Quartals-GuV analysiert."
 ---
 
 ## TL;DR

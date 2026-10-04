@@ -27,6 +27,17 @@ source_language_name: English
 source_author: Adi Leibowitz
 source_published_at: '2026-09-01'
 source_updated_at: '2026-09-02'
+faq:
+  - question: "Was leistet das SharePoint-Metadatenfilter-Werkzeug in Copilot Studio?"
+    answer: "Es filtert Dokumente nach Autor, Bearbeiter, Datum, Dateityp, Ordner oder eigenen Spalten und liefert Dateinamen, URLs, Spaltenwerte, verfügbare Spalten, Trefferzahlen und gruppierte Summen. Damit beantwortet der Agent auch Inventarfragen wie wie viele Richtlinien jeder Eigentümer verwaltet oder welchen Dateien ein Landeswert fehlt, ohne einzelne Dateien zu öffnen. Es steht in Agenten mit GitHub-Copilot-Harness bereit."
+  - question: "Wie kombiniert der Agent Metadatenfilter und Inhaltssuche, um Richtlinien für Kanada zu finden?"
+    answer: "Er filtert zuerst die Bibliothek über die Spalte Country auf den Wert Canada und erhält die URLs der passenden Dateien. Diese gibt er an die SharePoint-Wissenssuche weiter, die nur in diesen Dokumenten sucht. So vermischen sich keine Regeln anderer Länder. Das funktioniert auch, wenn Canada nur in den Metadaten steht und nicht im Text der Richtlinie."
+  - question: "Muss ich für die Metadatenfilterung in Copilot Studio etwas Zusätzliches konfigurieren?"
+    answer: "Nein. Es genügt, die SharePoint-Dokumentbibliotheken als Wissensquellen hinzuzufügen, eine eigene Konfiguration des Metadatenwerkzeugs ist nicht nötig. Der Beitrag empfiehlt, mit möglichst wenig Vorgaben zu starten und strengere Schrittfolgen erst zu ergänzen, wenn Tests zeigen, dass der Agent uneinheitlich arbeitet. Klare Anweisungen und gut beschriebene Quellen genügen oft."
+  - question: "Hebelt das Metadatenfiltern in Copilot Studio die SharePoint-Berechtigungen aus?"
+    answer: "Nein. Das Filtern grenzt nur den Inhaltsumfang ein und ersetzt keine Zugriffssteuerung. Die Berechtigungsprüfung richtet sich weiterhin nach den Rechten des angemeldeten Benutzers. Der Agent sieht und nennt also nur, was dieser Benutzer auch sonst sehen dürfte. Verlass dich bei Land, Status oder Eigentümer ausserdem auf gespeicherte Metadatenwerte statt auf Dateinamen oder Fliesstext."
+  - question: "Wie stabil sind die SharePoint-Werkzeuge des GitHub-Copilot-Harness in Copilot Studio?"
+    answer: "Sie gelten als Implementierungsdetails und nicht als öffentliche Schnittstellen. Namen, Parameter und Verhalten können sich ohne Ankündigung ändern. Baue deshalb keine harte Abhängigkeit auf einzelne Werkzeugnamen. Die Idee dahinter bleibt, dass der Agent trennt, welche Dokumente gelten und was sie enthalten, und dafür keine festen Routing-Zweige pro Metadatenvariante mehr braucht."
 ---
 ## TL;DR
 

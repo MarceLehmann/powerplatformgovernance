@@ -32,6 +32,17 @@ submitted_by:
   publish_credit: true
   name: Mirko Peters
   linkedin: https://www.linkedin.com/in/m365showpodcast/
+faq:
+  - question: "Why should confidence scores be judged per field rather than per document?"
+    answer: "Scores apply field by field. In one document the supplier name may be extracted with 99 percent confidence while the invoice number reaches only 65 percent because part of the page is obscured. A single green or red light for the whole document either rejects too many valid files or lets dangerous errors through. Low-risk internal fields tolerate lower thresholds, while financial and legal data need strict inspection."
+  - question: "Does a 98 percent confidence score on an invoice total guarantee correct data?"
+    answer: "No. The score only expresses how certain the model is about reading the characters, not whether the number is valid for the business. If the extracted total does not match the line items plus tax, or the supplier is missing from the approved vendor list, high confidence means nothing. Such business rules have to be checked independently of the AI."
+  - question: "How should a Power Automate flow react to mandatory fields with low confidence?"
+    answer: "The flow compares the confidence of every mandatory field with predefined thresholds. If one falls below, it pauses automatic record creation and routes the file into a dedicated review queue. The source gives the example of a contract with a confidently extracted expiry date but an ambiguous contract owner. That keeps faulty data out of core systems and focuses human effort on genuine exceptions."
+  - question: "What should Dataverse store when documents end up in an exception queue?"
+    answer: "Dataverse acts as the single source of truth for every document in the pipeline. It holds the extracted field values with their confidence scores, the arrival timestamp, the extraction model used, the reviewer, the corrections made and where the document went after review. This stops the queue from becoming a digital parking lot, and the history supports compliance requirements."
+  - question: "What should a Power Apps review screen for uncertain extractions look like?"
+    answer: "It shows the original document or image side by side with the extracted form fields. Reviewers see which field triggered the low confidence warning, inspect the source text, enter corrections and submit the item back into the running workflow. According to the source, scattered messages, raw PDFs and manual backend updates defeat the purpose of the automation."
 ---
 
 ## TL;DR

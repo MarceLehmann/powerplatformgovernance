@@ -29,7 +29,24 @@ pages.each do |path|
   raise "Missing description: #{path}" unless document.at_css('meta[name="description"]')
   schema = document.css('script[type="application/ld+json"]')
   raise "Missing structured data: #{path}" if schema.empty?
-  schema.each { |node| JSON.parse(node.text) }
+  parsed_schema = schema.map { |node| JSON.parse(node.text) }
+  # FAQ: the visible block and the FAQPage markup come from the same include. Pages without a faq are unaffected.
+  faq_pages = parsed_schema.flat_map { |data| data.is_a?(Hash) && data['@graph'].is_a?(Array) ? data['@graph'] : [data] }.select { |data| data.is_a?(Hash) && data['@type'] == 'FAQPage' }
+  faq_blocks = document.css('section.post-faq')
+  raise "More than one FAQPage block: #{path}" if faq_pages.size > 1
+  raise "More than one visible FAQ block: #{path}" if faq_blocks.size > 1
+  raise "FAQPage markup without a visible FAQ block: #{path}" if faq_pages.size == 1 && faq_blocks.empty?
+  raise "Visible FAQ block without FAQPage markup: #{path}" if faq_pages.empty? && !faq_blocks.empty?
+  if faq_pages.size == 1
+    visible_questions = faq_blocks.first.css('h3').map { |node| node.text.strip }
+    visible_answers = faq_blocks.first.css('p').map { |node| node.text.strip }
+    entities = faq_pages.first['mainEntity']
+    raise "FAQPage must list exactly 5 questions: #{path}" unless entities.is_a?(Array) && entities.size == 5
+    raise "FAQ must show exactly 5 questions and answers: #{path}" unless visible_questions.size == 5 && visible_answers.size == 5
+    raise "FAQPage questions differ from the visible text: #{path}" unless entities.map { |entity| entity['name'].to_s.strip } == visible_questions
+    raise "FAQPage answers differ from the visible text: #{path}" unless entities.map { |entity| entity.dig('acceptedAnswer', 'text').to_s.strip } == visible_answers
+    raise "FAQPage language differs from the page language: #{path}" unless faq_pages.first['inLanguage'] == document.at_css('html')['lang']
+  end
   raise "Starter placeholder: #{path}" if document.to_html.match?(/twitter_username|example@domain\.com|Add Markdown syntax content/)
   raise "Missing Sources navigation: #{path}" unless document.at_css('#sidebar nav a[href="/sources/"]')
   raise "Categories still in navigation: #{path}" if document.at_css('#sidebar nav a[href="/categories/"]')

@@ -29,6 +29,17 @@ source_author: Tiina Rytkönen
 source_published_at: '2026-09-25'
 source_updated_at: '2026-09-25'
 source_type: article
+faq:
+  - question: "Why can a single AI provider's admin console not govern a company's whole AI estate?"
+    answer: "Each console only sees its own provider, so none can answer what one person can access across every AI system. The source describes an employee with four accounts, four IDs and four audit trails that nothing connects. Vendors cannot see inside competitors' systems and have little reason to build cross-platform views, which leaves the gap sitting between the consoles."
+  - question: "How does identity-based governance link AI accounts from different providers?"
+    answer: "It matches every AI account to one person in Entra ID. The same employee then appears once with a combined inventory of everything they can reach, instead of separately in each tool. Users, projects, sessions, settings and spend feed into existing Microsoft 365 governance, so the same policies, automation and access reviews apply. It only works where a directory exists to match against."
+  - question: "Why should companies not postpone governing their AI accounts?"
+    answer: "Audit logs are not archives, and retention is limited, varying by provider and often by plan. Starting in eighteen months shows today's estate but not how it grew, and the past you did not record is gone. Sprawl also builds every month through new accounts, projects, shared files and permissions that someone has to clean up later."
+  - question: "Does identity-based AI governance read prompts or file contents?"
+    answer: "No. Conversations, file contents and prompt text are deliberately not examined. The approach looks at four things: who owns something, who can reach it, where it has been shared outside the company and how it is classified. The reasoning in the source is that risk sits in access, and an agent is only as safe as the data it can reach."
+  - question: "How large is the governance surface of just one AI provider?"
+    answer: "Rencore's analysis of a single provider found 46 organization-level settings, 464 audit log event types and 6 actor categories. According to the source, very little of that lines up with the next provider, and all of it changes when the provider changes its API. That is why the article argues for governance anchored to the person, which stays stable when tools are replaced."
 ---
 ## TL;DR
 

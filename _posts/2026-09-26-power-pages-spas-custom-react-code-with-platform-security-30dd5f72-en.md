@@ -27,6 +27,17 @@ source_language_name: English
 source_author: Nick Doelman
 source_published_at: '2025-09-04'
 source_type: article
+faq:
+  - question: "Which frameworks does Power Pages support for single-page apps, and in what status?"
+    answer: "React, Angular and Vue are supported. At the time of the post the feature was in preview, so the author says to expect some glitches. Nick Doelman, a Microsoft MVP, builds a hello world website with React. By his own account he had never built a React site until recently and used GitHub Copilot and ChatGPT for help."
+  - question: "Which files make up the React app in the hello world example?"
+    answer: "The app has three core files: index.html as the main HTML file, index.jsx as the JavaScript entry point and App.jsx as the main React component. The author describes React as a JavaScript library for building user interfaces from small, reusable components. A single-page app loads the page once and then updates parts with JavaScript, without full page reloads."
+  - question: "What should you bring to rebuild the example?"
+    answer: "You need good Power Pages knowledge plus basic HTML and JavaScript. The tooling is Visual Studio Code with the Power Platform Tools extension. The project is built with the command npm run build and started locally with npm start. The upload into the Power Pages environment follows through the PAC CLI."
+  - question: "How do you upload the compiled React site to Power Pages?"
+    answer: "First you sign in with pac auth create and the environment ID. That ID sits in the session details, which you open via the gear icon on the Power Pages home page. Then the command pac pages upload-code-site uploads the app, with the values rootpath, compiledPath and siteName. In the example the site is called HelloWorld."
+  - question: "Which restrictions and advantages do code sites in Power Pages have?"
+    answer: "With a single-page app you cannot add or edit pages, and the default styling templates are not available. In return you can set up the platform's authentication and table permissions. For later posts the author announces displaying Dataverse records through the Web API and showing CRUD operations."
 ---
 
 ## TL;DR

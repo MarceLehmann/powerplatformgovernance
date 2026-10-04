@@ -14,6 +14,17 @@ image:
   alt: "Governance-Karte: Der Drahtseilakt — langweilige Deployments, verlässliche Plattform."
 permalink: "/de/posts/gov-test-to-prod-discipline/"
 translation_url: "/en/posts/gov-test-to-prod-discipline/"
+faq:
+  - question: "Warum sollen ausserhalb der Entwicklung nur verwaltete Lösungen importiert werden?"
+    answer: "Wird eine nicht verwaltete Lösung gelöscht, verschwindet nur ihr Container, und die Anpassungen bleiben in der Standardlösung der Umgebung aktiv. Bei einer verwalteten Lösung verschwindet alles, was sie enthält. Microsofts ALM-Empfehlung lautet deshalb, dass ausser der Entwicklung jede Umgebung nur verwaltete Lösungen enthält, also Test, UAT, Staging und Produktion. So ist ein sauberer Rollback möglich."
+  - question: "Wem sollten Flows in Produktion gehören?"
+    answer: "Dienstprinzipalen, so lautet eine benannte ALM-Best-Practice. Eine Person als Besitzerin kann das Unternehmen verlassen, ihr Konto kann deaktiviert werden oder sie verliert den Zugriff, und die Verbindungen des Flows beginnen zu scheitern, ohne dass der Flow es anzeigt. Ein Dienstprinzipal kündigt nicht und wird nicht als Nebeneffekt eines HR-Prozesses deaktiviert."
+  - question: "Was ist eine Deployment-Settings-Datei in der Power Platform?"
+    answer: "Eine JSON-Datei mit den Verbindungs-IDs und Umgebungsvariablenwerten für eine bestimmte Zielumgebung. Du erzeugst sie mit dem Befehl pac solution create-settings und füllst sie einmal pro Umgebung aus. Übergibst du sie an den Import-Solution-Task der Power Platform Build Tools, werden die Werte automatisch eingesetzt. Lege sie in die Versionsverwaltung und behandle sensible Werte als Pipeline-Secrets."
+  - question: "Kann ich eine verwaltete Lösung direkt in der Zielumgebung bearbeiten?"
+    answer: "Nein. Eine verwaltete Lösung lässt sich nicht direkt bearbeiten, nur über eine darübergelegte nicht verwaltete Lösung. Nicht verwaltet ist für die Entwicklung gedacht und bearbeitbar. Baue und iteriere in der Entwicklung wie gewohnt und bringe Änderungen nach Produktion, indem du die verwaltete Lösung importierst, die deine Pipeline daraus erzeugt hat, statt deine Arbeitskopie zu exportieren."
+  - question: "Was sollte ich in meinen Nicht-Entwicklungsumgebungen prüfen?"
+    answer: "Prüfe, ob eine Umgebung ausser der Entwicklung aktuell nicht verwaltete Anpassungen enthält. Microsofts Anleitung zur Umstellung von nicht verwaltet auf verwaltet existiert, weil das ein häufiger Befund ist und kein seltener. Eine nicht verwaltete Lösung in Produktion lässt sich nicht sauber zurückrollen, weil ihre Anpassungen bereits in die Umgebung verschmolzen sind."
 ---
 
 ## TL;DR

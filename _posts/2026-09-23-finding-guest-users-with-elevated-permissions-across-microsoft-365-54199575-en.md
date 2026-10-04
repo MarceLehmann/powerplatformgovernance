@@ -25,6 +25,17 @@ source_author: Josiah Opiyo
 source_language: en
 source_language_name: English
 source_published_at: '2026-08-03'
+faq:
+  - question: "Which permissions does the guest user script check in Microsoft 365?"
+    answer: "It checks three areas: Microsoft Entra ID directory roles, Teams ownership and SharePoint site collection administrators. The author deliberately does not enumerate every permission path, so Exchange permissions, Azure RBAC, Microsoft 365 Group ownership and granular SharePoint permissions are outside the current scope."
+  - question: "What does the CSV report from the guest permissions script contain?"
+    answer: "The script exports a CSV with five columns: Display Name, User Principal Name, Permission Type, Assigned Role and Resource. The results from Entra ID, Teams and SharePoint end up in a single report. The author says the report can support regular access reviews, governance reporting, security investigations and permission clean-up exercises."
+  - question: "What do I need to run the script that finds guests with elevated permissions?"
+    answer: "To run the script you need appropriate administrative permissions along with the required PowerShell modules for Microsoft Graph, Microsoft Teams and SharePoint Online. The full script is available in the PnP Script Samples repository on GitHub, where a README page describes it. It looks for guest users with elevated permissions across Microsoft 365."
+  - question: "Why do guests keep elevated permissions after a project has ended?"
+    answer: "Permissions are spread across different Microsoft 365 admin interfaces, so nobody sees them in one place. The author describes a guest consultant who was still a Teams owner months after the project ended. The permission was right when granted but never removed, and reviewing Entra, Teams and SharePoint separately makes such leftovers easy to miss."
+  - question: "How could the guest permission script be extended?"
+    answer: "The author lists Microsoft 365 Group ownership, SharePoint permissions beyond site collection administration, Azure RBAC assignments, guest sign-in activity and account age, risk scoring by permission level, and HTML or Power BI reporting. The current version intentionally concentrates on high-value permission types instead of a complete enumeration."
 ---
 ## TL;DR
 

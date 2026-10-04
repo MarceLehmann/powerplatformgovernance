@@ -21,6 +21,17 @@ source_name: powerplatform.se
 source_language: en
 source_language_name: English
 source_published_at: '2026-02-14'
+faq:
+  - question: "Welche fünf Verhaltensweisen bündelt der einzelne Tracking-Schalter in Customer Insights?"
+    answer: "Eine globale Einstellung schaltet fünf Dinge gemeinsam: das E-Mail-Öffnungspixel, das Verfolgen von Link-Klicks, das Web-Tracking, das Vorausfüllen von Formularen und das automatische Anhängen von UTM-Parametern. Wer sie aus Datenschutzgründen ausschaltet, deaktiviert also auch Funktionen, die ein Team behalten möchte. Der Artikel schlägt getrennte Schalter vor."
+  - question: "Wie könnte ein Datenschutzteam Klick-Tracking behalten, aber das Öffnungspixel abschalten?"
+    answer: "Heute nicht, denn der einzelne Schalter deckt beides ab. Der Autor schlägt getrennte Schalter vor, mit denen Administratoren jeden Mechanismus einzeln aktivieren oder deaktivieren können, während seltener genutzte oder erweiterte Einstellungen über OrgDBOrgSettings verwaltet würden. So könnte das Klick-Tracking an bleiben, während der Öffnungspixel aus ist. Die Idee ist als Feature Request im Dynamics-365-Ideas-Portal eingereicht."
+  - question: "Warum sind Öffnungsraten aus dem Tracking-Pixel unzuverlässig?"
+    answer: "Mailclients verfälschen das Signal. Outlook lädt Bilder nur nach Zustimmung des Nutzers herunter, daher kann eine Mail gelesen werden, ohne dass der Pixel auslöst. Apple iCloud lädt alle Bilder immer herunter, daher kann der Pixel auslösen, ohne dass jemand die Mail liest. Laut Artikel verzerren beide Clients die Öffnungsstatistik."
+  - question: "Was steuert das Tracking in Customer Insights Journeys ausser E-Mails?"
+    answer: "Derselbe einzelne Schalter steuert Website-Tracking, das Vorausfüllen von Formularen und das Anhängen von UTM-Parametern an Links, er reicht also über die E-Mail-Analyse hinaus. Kollidiert allein das Tracking per E-Mail-Pixel mit den Einwilligungsregeln einer Rechtsordnung, bleibt aktuell nur, alle fünf Verhalten abzuschalten, womit auch legitime Analysen wegfallen."
+  - question: "Wie kann ich feinere Tracking-Einstellungen in Customer Insights Journeys unterstützen?"
+    answer: "Der Autor hat den Vorschlag als Feature Request im Dynamics-365-Ideas-Portal eingereicht und verlinkt ihn, sodass Leser dafür abstimmen können. Solange es keine getrennten Schalter gibt, bleibt der globale Schalter ein Alles-oder-nichts-Entscheid für den gesamten Tenant. Ein Konflikt mit den Einwilligungsregeln in einer einzigen Rechtsordnung bedeutet derzeit, alle fünf Verhalten gemeinsam abzuschalten."
 ---
 ## TL;DR
 

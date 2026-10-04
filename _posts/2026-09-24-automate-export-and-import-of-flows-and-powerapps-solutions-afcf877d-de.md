@@ -26,6 +26,17 @@ source_author_url: https://www.powerplatformtip.com/about/
 source_language: en
 source_language_name: English
 publisher_disclosure: Beide Publikationen werden von Marcel Lehmann herausgegeben.
+faq:
+  - question: "Warum lässt sich ein gelöschter oder kaputter Power-Automate-Flow nicht einfach rückgängig machen?"
+    answer: "Power Automate hat kein eingebautes Rückgängigmachen und keine Wiederherstellung per Klick für gelöschte oder defekte Flows. Der Artikel empfiehlt deshalb, den Export und Import von Flows, Apps und Lösungen nach Zeitplan zu automatisieren, damit immer eine saubere Kopie zur Wiederherstellung bereitliegt."
+  - question: "Was muss vorhanden sein, damit Flows automatisch exportiert werden können?"
+    answer: "Flows und Apps in einer Lösung bündeln und deren Export automatisieren. Ein geplanter Cloud-Flow exportiert die Lösung oder das Flow-Paket per Timer als Zip und speichert jeden Export in SharePoint, OneDrive oder Azure Blob Storage, sodass eine versionierte Historie entsteht und nicht nur die letzte Kopie."
+  - question: "Welches Dateiformat erzeugt der automatische Export?"
+    answer: "Die Plattform exportiert Lösungen als Zip-Dateien, sowohl managed als auch unmanaged. Zum Wiederherstellen wird die gespeicherte Zip-Datei zurück in die Zielumgebung importiert, womit Flow, App oder Lösung wieder zum Leben erwachen. Für mehrere Umgebungen konfiguriert man separate Flows pro Umgebung oder nutzt Umgebungsvariablen, um mehrere Umgebungen aus einem Flow anzusteuern."
+  - question: "Wie oft soll der Sicherungs-Flow laufen?"
+    answer: "Laut Artikel sind tägliche oder wöchentliche Sicherungen in Produktionsumgebungen üblich. Er beschreibt einen geplanten Cloud-Flow, der die Lösung oder das Flow-Paket per Timer als Zip exportiert. Das Ziel ist, dass immer eine saubere Kopie zur Wiederherstellung bereitliegt, und jeder Export wird gespeichert, sodass eine versionierte Historie entsteht."
+  - question: "Wo sollen die exportierten Lösungs-Zip-Dateien gespeichert werden?"
+    answer: "In SharePoint, OneDrive oder Azure Blob Storage, wie im Artikel aufgelistet. Wenn jeder Export dort gespeichert wird, bleibt eine versionierte Historie erhalten und nicht nur die letzte Kopie. Um einen Flow, eine App oder eine Lösung wiederherzustellen, importiert man die gespeicherte Zip-Datei in die Zielumgebung."
 ---
 ## TL;DR
 

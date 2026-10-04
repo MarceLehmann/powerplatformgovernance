@@ -28,6 +28,17 @@ source_language_name: English
 source_author: Anders Jensen
 source_published_at: '2026-07-24'
 source_type: article
+faq:
+  - question: "Wo sehen Admins alle Agenten eines Microsoft-365-Tenants?"
+    answer: "Im Microsoft 365 Admin Center unter Agents auf All agents und dann auf den Reiter Registry. Dort steht jeder Agent mit Status, Plattform und Herausgeber, filterbar nach Status, Herausgebertyp, Plattform und Kanal. Ein Klick auf den Agenten öffnet ein Detailfenster mit Benutzern, Daten und Werkzeugen sowie Berechtigungen. Eine kleine Firma mit fünf Copilot-Benutzern sah in der Registry trotzdem 356 Agenten."
+  - question: "Was geschieht, wenn man einen Agenten in der Microsoft-365-Registry blockiert?"
+    answer: "Niemand in der Organisation kann den Agenten danach installieren oder nutzen, und bei Personen, die ihn schon installiert hatten, verschwindet er ebenfalls. Im Agentenfenster klickt man oben auf Block und kann vor der Bestätigung einen Grund eintragen. Der Autor rät, den Grund immer festzuhalten, damit ein Nachfolger später versteht, warum der Agent gesperrt wurde."
+  - question: "Wie beschränke ich einen Microsoft-365-Copilot-Agenten auf eine Pilotgruppe?"
+    answer: "Den Agenten in der Registry öffnen, zum Reiter Users wechseln und Available to wählen. Zur Auswahl stehen All users, No users und Specific users or groups. Für den Pilot nimmt man die dritte Option, ergänzt die Gruppen und speichert. Mit No users parkt man einen Agenten, bis eine Entscheidung steht. Neue Agenten zuerst an einen Pilot zu binden, gilt als empfohlener Weg."
+  - question: "Warum lassen sich Researcher und Analyst nicht auf ausgewählte Benutzer begrenzen?"
+    answer: "Beide Agenten werden über die Lizenz verwaltet. Sie werden für lizenzierte Benutzer automatisch installiert und folgen der Lizenz, darum ist der Reiter Users bei ihnen nur eine Anzeige ohne Eingrenzung. Der Autor zählt das zu den typischen Stolpersteinen. Schloss-Symbole in denselben Ansichten bedeuten, dass eine Funktion Agent 365 braucht, die kostenpflichtige Steuerungsebene, und sind keine Fehler."
+  - question: "Wie prüfe ich, ob Eingrenzung und Sperre von Agenten wirklich greifen?"
+    answer: "Im Agent Store von Microsoft 365 Copilot vergleicht man die Anzeige mit den getroffenen Entscheidungen. Blockierte Agenten sollten fehlen und eingegrenzte Agenten nur für die richtigen Gruppen erscheinen. Der Artikel rät, sich mit einem Konto ausserhalb der Pilotgruppe anzumelden und zu bestätigen, dass der eingegrenzte Agent dort nicht auftaucht."
 ---
 
 ## TL;DR

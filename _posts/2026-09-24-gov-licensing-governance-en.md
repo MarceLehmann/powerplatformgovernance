@@ -13,6 +13,17 @@ image:
   alt: "Governance card: The Surprise Bill — know the license before the users arrive."
 permalink: "/en/posts/gov-licensing-governance/"
 translation_url: "/de/posts/gov-licensing-governance/"
+faq:
+  - question: "Does a Microsoft 365 license cover custom Power Apps, premium flows or Copilot Studio agents?"
+    answer: "No. Some Microsoft 365 licenses include limited Power Apps, Power Automate and Dataverse use rights, but only for working with Microsoft 365 data through standard connectors. They do not entitle a user to run standalone custom apps, premium flows or Copilot Studio agents. The admin center can show a Dataverse service plan on such a license, which looks like broader access than it grants."
+  - question: "When do Microsoft 365 license limits usually become visible?"
+    answer: "At wider rollout. A solution is built and works fine for its maker, then reaches users whose Microsoft 365 license does not cover what it needs. The gap is found at rollout, not before it. Verify what a user's existing license actually entitles them to before you assume it covers a new solution."
+  - question: "How does Power Platform pay-as-you-go billing work?"
+    answer: "It links an environment to an Azure subscription, so usage above the included amounts bills through Azure meters instead of requiring capacity purchased upfront. It suits widely distributed apps with unpredictable use, or establishing real adoption numbers before committing to prepaid licenses. It is live consumption billing, not a capped subscription, so costs still need watching."
+  - question: "How do I keep pay-as-you-go costs under control?"
+    answer: "Set up Azure Cost Management alerts before rollout, and use the downloadable usage report on the billing plan page in the Power Platform admin center. The report breaks down which environments, apps and users drove the meters, a detail Azure Cost Management alone does not show. Removing an environment from the billing policy, or deleting the policy, stops further charges immediately."
+  - question: "Is the Power Apps per-app plan still available to new customers?"
+    answer: "Not through some purchasing channels. The per-app plan, a capacity-based license for running a single app in an environment, stopped being available to new customers through some channels as of January 2026, while availability for existing customers and partners varies by channel. That is why the licensing model should be reviewed on a schedule."
 ---
 
 ## TL;DR

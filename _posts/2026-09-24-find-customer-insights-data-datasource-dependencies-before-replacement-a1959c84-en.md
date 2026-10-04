@@ -20,6 +20,17 @@ source_name: Powerplatform.se
 source_language: en
 source_language_name: English
 source_published_at: '2025-05-06'
+faq:
+  - question: "Why check dependencies before replacing a Power Query datasource in Customer Insights Data?"
+    answer: "Measures and segments may still depend on the datasource, and the article warns that dependencies from things externally using the table can remain. Checking first with the API tool shows which measures and segments reference the old datasource, so you can decide whether to remove them or redirect them to the replacement Delta datasource."
+  - question: "How do I open the API list that exposes datasource dependencies?"
+    answer: "In Customer Insights Data go to Permissions and open the API tab, then choose the only available API, Customer insights v1. Search for ListAll and select ListAllMeasuresMetadata, later ListAllSegments. Click the green Try it button to run the call from the API testing tool."
+  - question: "What inputs does the Try it call need to list measures?"
+    answer: "Select implicit in the Authorization drop down and enter your instance ID, which you can grab from the URL when you use Customer Insights Data in the normal UI. Then scroll down and press Send. Afterwards use the browser search on the JSON response to find all occurrences of the datasource."
+  - question: "What are the options for a measure that still uses the old datasource?"
+    answer: "You can either remove the measure, or change all its dependencies to another datasource, a Delta one in the article, and refresh it. Then rerun the query by resending it to check that the old datasource no longer appears. The article cautions that dependencies from things externally using the table may still be left."
+  - question: "Which measures and segments does this method cover?"
+    answer: "The article uses two API calls, ListAllMeasuresMetadata for measures and ListAllSegments for segments. In the JSON output of both calls you search for the datasource. The article warns that there might still be dependencies left on the datasource, for instance from things externally using the table, so check for external consumers as well."
 ---
 ## TL;DR
 

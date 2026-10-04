@@ -14,6 +14,17 @@ image:
   alt: "Governance card: The Basement Server — the gateway everyone uses needs an owner."
 permalink: "/en/posts/gov-data-gateway-ownership/"
 translation_url: "/de/posts/gov-data-gateway-ownership/"
+faq:
+  - question: "What happens to my flows and reports if the only on-premises data gateway goes offline?"
+    answer: "Every flow, app and report that depends on on-premises data stops at once. There is no partial degradation to notice ahead of time, because it works until the moment it does not. A reboot for Windows updates, a decommissioned old server or a network change is enough to cause it. A gateway cluster with a second member removes this single point of failure."
+  - question: "How many gateways can a data gateway cluster have, and must their versions match?"
+    answer: "A cluster supports up to ten members, and all of them need to run the same gateway version, because mixed versions can cause failures that are hard to trace back to one outdated node. Cloud services always route to the primary gateway first. If it becomes unavailable, the request automatically goes to the next member."
+  - question: "Should I turn on Distribute requests across all active gateways in this cluster?"
+    answer: "It is worth turning on once you have more than two nodes. By default all traffic goes to the primary until it is down, so the second and third gateways sit idle. The setting spreads load across every active member. Decide based on your traffic pattern, and leave it off if you connect SAP through the NCo 3.1 connector."
+  - question: "Why does SAP with the NCo 3.1 connector need load balancing turned off?"
+    answer: "That connector keeps internal connection state on whichever gateway handled the first call, so bouncing between cluster members in the middle of a session breaks it. Microsoft's own SAP setup guide calls this out explicitly. Keep the distribute requests setting off for that scenario."
+  - question: "How do I add a second gateway to an existing cluster?"
+    answer: "Install the gateway on a different machine, because you can only run one standard gateway per computer. During setup choose Add to an existing cluster, select the primary gateway from the list and supply its recovery key. Store that key where your team can find it, since you also need it later to migrate, restore or take over a gateway."
 ---
 
 ## TL;DR

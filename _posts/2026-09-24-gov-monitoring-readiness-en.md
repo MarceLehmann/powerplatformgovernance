@@ -14,6 +14,17 @@ image:
   alt: "Governance card: Drilled — five minutes to stop, in writing."
 permalink: "/en/posts/gov-monitoring-readiness/"
 translation_url: "/de/posts/gov-monitoring-readiness/"
+faq:
+  - question: "What are the limits of Power Automate per-run failure alerts?"
+    answer: "They only cover failures with a known fix, they have a 28-day cooldown per flow so repeated failures do not send the same alert twice, and they must be turned on explicitly in the flow's settings. None of that matters if the email lands in an inbox nobody opens, so assign a named reader and a rotation."
+  - question: "How can admins see failed flow runs without relying on alert emails?"
+    answer: "Two options do not depend on anyone reading an email. The Monitor experience in the Power Platform admin center shows every failed run with no exclusions at the environment level, and the weekly failure digest summarizes all failures, including general ones that trigger no per-run email. Both only help if someone is assigned to look."
+  - question: "How can an admin stop a runaway cloud flow?"
+    answer: "Use the Disable action in the flow management view of the Power Platform admin center, the flow details screen in the mobile app, or the Disable-AdminFlow PowerShell cmdlet for scripted or bulk action. The Environment Admin role is needed to act. The mechanism is not the gap, knowing where it is and having tried it once before an incident is."
+  - question: "Can Dataverse auditing show changes from before I turned it on?"
+    answer: "No. Auditing only captures changes made after the environment and table settings were turned on, and has no retroactive view. Enable it at the environment level first, then for the specific tables and columns that matter, and set a retention period at the same time. Prioritize tables tied to admin actions and access changes."
+  - question: "What should be prepared before an incident forces a flow to be stopped?"
+    answer: "Three things: someone knows where the switch is, that person's role actually grants the right to use it, and a short communication template exists so the stop does not consume response time meant for containment. Without a rehearsal, stopping a flow can turn into 45 minutes of searching."
 ---
 
 ## TL;DR

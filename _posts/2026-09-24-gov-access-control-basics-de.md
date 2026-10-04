@@ -14,6 +14,17 @@ image:
   alt: "Governance-Karte: Der Schatten-Admin — gib das Minimum, protokolliere den Rest."
 permalink: "/de/posts/gov-access-control-basics/"
 translation_url: "/en/posts/gov-access-control-basics/"
+faq:
+  - question: "Welche vordefinierte Sicherheitsrolle vergebe ich statt System Administrator?"
+    answer: "Vergib die am engsten gefasste vordefinierte Rolle, die zur Aufgabe passt. Ohne Dataverse-Datenbank verwaltet der Environment Admin die Umgebung und kann eine Datenbank bereitstellen, während der Environment Maker Apps, Verbindungen und Flows erstellt, aber keine Rechte auf die Daten darin hat. Mit Dataverse ist System Administrator die Vollzugriffsrolle und gehört nicht zur alltäglichen Zuweisung."
+  - question: "Warum sollte ich die Rolle System Administrator nicht kopieren, um eine neue Rolle zu bauen?"
+    answer: "Kopierte Rollen übernehmen neue Rechte aus Produkt-Updates nicht automatisch und veralten deshalb still. Sollen Admins anderen Sicherheitsrollen zuweisen können, ohne selbst vollständige System Administrators zu sein, baust du dafür eine eigene benutzerdefinierte Rolle, die eng auf die Security-Role-Tabelle begrenzt ist, statt den Umweg über eine breitere Rolle zu nehmen."
+  - question: "Was bringt die Freigabe an eine Sicherheitsgruppe statt an einzelne Personen?"
+    answer: "Der Zugriff wird an einem einzigen Ort gesteuert. Wer zur Gruppe hinzukommt, ist drin, wer entfernt wird, ist draussen, ohne Aufräumarbeit bei jeder Ressource. Bei Einzelfreigaben entsteht dagegen pro Person eine eigene Berechtigung, die bei jedem Zugriffswechsel einzeln gefunden und entzogen werden muss. Besonders spürbar wird das beim Offboarding."
+  - question: "Entzieht das Entfernen aus einer Sicherheitsgruppe auch namentlich vergebene App-Freigaben?"
+    answer: "Nein. Eine App-Freigabe, die namentlich hinzugefügt wurde, bleibt beim Entfernen aus der Sicherheitsgruppe unberührt. Individuell freigegebene Apps sind für jeden Prozess unsichtbar, der auf die Gruppenmitgliedschaft im Verzeichnis aufbaut. Prüft dein Zugriffs-Review nur die Gruppenmitgliedschaft, übersieht es genau diese Einzelfreigaben."
+  - question: "Ist ein HTTP-getriggerter Flow ohne Authentifizierung ein öffentlicher Endpunkt?"
+    answer: "Ja, schon beim Speichern. Jeder, der die URL kennt oder errät, kann ihn aufrufen, bis es jemand bemerkt. Verlange deshalb eine ausdrückliche Methode: Microsoft-Entra-ID-Authentifizierung auf der Anfrage, eine API-Schlüsselprüfung im Flow oder eine API-Management-Schicht, die die Authentifizierung übernimmt. Mach daraus einen festen Prüfpunkt im Review."
 ---
 
 ## TL;DR

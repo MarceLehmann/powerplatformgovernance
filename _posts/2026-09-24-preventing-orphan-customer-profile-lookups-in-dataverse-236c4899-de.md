@@ -21,6 +21,17 @@ source_name: Powerplatform.se
 source_language: en
 source_language_name: English
 source_published_at: '2025-06-10'
+faq:
+  - question: "Was sind verwaiste Kundenprofil-Verknüpfungen in Dataverse?"
+    answer: "Es sind Nachschlagefelder, die auf ein Kundenprofil zeigen, das nicht mehr existiert. Sie entstehen, wenn Customer Insights Data mit Dataverse zusammenarbeitet. Betroffen sind die vier COLA-Tabellen Contact, Opportunity, Lead und Account. Der Datensatz selbst bleibt bestehen, doch sein Verweis führt ins Leere."
+  - question: "Warum entstehen solche verwaisten Verknüpfungen?"
+    answer: "Auslöser ist oft der Versuch, Lizenzkosten zu senken, denn je 100 000 vereinheitlichte Profile fallen in Customer Insights Data erhebliche monatliche Kosten an. Wer Kontakte filtert, etwa ohne Bestellung in den letzten 24 Monaten, entfernt Profile. Das Zurückschreiben der Profil-ID in die Tabellen räumt dabei nach Ansicht des Autors nicht sauber hinter sich auf."
+  - question: "Welche Fehler verursachen verwaiste Verknüpfungen im Betrieb?"
+    answer: "Das Problem zeigt sich bei Integrationen, die nicht gezielt arbeiten. Sie lesen alle Felder eines Datensatzes, ändern einige und schreiben alle wieder zurück. Enthält der Datensatz dabei eine kaputte Verknüpfung auf ein Kundenprofil, löst die Plattform beim Speichern eine Ausnahme aus und die Integration schlägt fehl."
+  - question: "Wie lässt sich das Problem aus Sicht des Autors beheben?"
+    answer: "Er nennt zwei Wege. Ein Power-Automate-Flow kann prüfen, ob die Kundenprofil-ID noch gültig ist. Oder die Integration wird so umgebaut, dass sie nur geänderte Felder schreibt. Für die Suche stellt er zwei FetchXML-Abfragen bereit, die Kontakte mit gesetzter Profil-ID und alle Kundenprofile auflisten. Ein Outer Left Join zum Aufspüren der Waisen ist in FetchXML nicht möglich."
+  - question: "Was soll Microsoft laut dem Beitrag ändern?"
+    answer: "Der Autor schlägt zwei Ansätze vor. Customer Insights Data soll nach dem Zurückschreiben eine Bereinigung ausführen. Und Dataverse soll bei Elastic Tables Kaskadenregeln wie das Entfernen der Verknüpfung unterstützen, was heute nicht der Fall ist. Das würde allen Nachschlagefeldern auf Elastic Tables helfen, doch eine Bereinigung beim Löschen könnte die Leistung belasten."
 ---
 ## TL;DR
 

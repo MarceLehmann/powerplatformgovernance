@@ -28,6 +28,17 @@ source_language_name: English
 source_author: Anders Jensen
 source_published_at: '2026-07-12'
 source_type: article
+faq:
+  - question: "Wie lange dauert die Einrichtung der Ausgabenkontrolle für Copilot Cowork?"
+    answer: "Der Artikel nennt etwa 15 Minuten für die Einrichtung, danach 20 bis 30 Minuten bis zur Aktivierung. Der Weg im Microsoft-365-Admincenter lautet Copilot, dann Kostenverwaltung, dann Erste Schritte. Nötig ist eine Microsoft-365-Copilot-Lizenz, und die Cowork-Nutzung wird getrennt in Copilot Credits abgerechnet."
+  - question: "Welche Administratorrollen braucht es für Cowork-Abrechnung und Ausgabenrichtlinien?"
+    answer: "Ein globaler Administrator oder Abrechnungsadministrator wählt die Abrechnungsmethode, während ein KI-Administrator Ausgabenrichtlinien erstellen und Limits setzen kann. Diese Aufteilung lässt die Finanzseite über die Bezahlung entscheiden und den KI-Verantwortlichen über die Kontingente. Kläre vor dem Start, wer welche Rolle hält."
+  - question: "Lässt sich die Abrechnungsmethode einer Cowork-Ausgabenrichtlinie später ändern?"
+    answer: "Nicht direkt. Die Wahl zwischen vorausbezahlten Kapazitätspaketen und Azure Pay-as-you-go lässt sich nur ändern, indem man die Richtlinie löscht und neu anlegt. Entscheide das Abrechnungsmodell deshalb vor dem Pilot, denn ein Wechsel bedeutet, Richtlinie und Limits von Grund auf neu aufzubauen."
+  - question: "Wie beschränke ich Cowork auf eine Pilotgruppe statt auf die ganze Organisation?"
+    answer: "Standardmässig gilt der Geltungsbereich für die ganze Organisation. Wähle Einrichtung anpassen, öffne Benutzer- und Gruppenzugriff und nimm Bestimmte Gruppen. Richtlinien funktionieren nur mit Sicherheitsgruppen, die Zuweisung einzelner Personen ist als demnächst verfügbar angekündigt. Lege die Pilot-Sicherheitsgruppe zuerst an, damit sie zur Auswahl steht."
+  - question: "Was passiert, wenn jemand das Credit-Limit erreicht?"
+    answer: "Der Zugriff entfällt bis zum Ersten des nächsten Monats. Das Beispiel im Artikel nennt 20000 Credits monatlich, 16000 pro Person und eine Warnung bei 15000, die sofort und danach wöchentlich bis zum Ersten per E-Mail kommt. Der Verbrauch erscheint unter Kostenverwaltung und wird etwa alle 2 Stunden aktualisiert, Anfragen stehen unter Credit-Anfragen."
 ---
 
 ## TL;DR

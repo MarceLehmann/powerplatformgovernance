@@ -26,6 +26,17 @@ source_author_url: https://www.powerplatformtip.com/about/
 source_language: en
 source_language_name: English
 publisher_disclosure: Both publications are edited by Marcel Lehmann.
+faq:
+  - question: "Why can a deleted or broken Power Automate flow not simply be undone?"
+    answer: "Power Automate has no built-in undo and no one-click restore for deleted or broken flows. The article therefore recommends automating the export and import of your flows, apps and solutions on a schedule, so a clean copy is always ready to restore from."
+  - question: "What must be in place before flows can be exported automatically?"
+    answer: "Package your flows and apps in a solution and automate its export. A scheduled cloud flow exports the solution, or flow package, as a zip on a timer and saves each export to SharePoint, OneDrive or Azure Blob Storage, so you keep a versioned history and not just the latest copy."
+  - question: "What file format does the automated export produce?"
+    answer: "The platform exports solutions as zip files, both managed and unmanaged. To restore, import the saved zip back into the target environment to bring the flow, app or solution back to life. To cover several environments, configure separate flows per environment, or use environment variables to target several environments from a single flow."
+  - question: "How often should the backup flow run?"
+    answer: "The article states that daily or weekly backups are common practice for production environments. It describes a scheduled cloud flow that exports your solution, or flow package, as a zip on a timer. The aim is that a clean copy is always ready to restore from, and each export is saved so you keep a versioned history."
+  - question: "Where should the exported solution zip files be stored?"
+    answer: "In SharePoint, OneDrive or Azure Blob Storage, as listed in the article. Saving each export there means you keep a versioned history, not just the latest copy. To bring a flow, app or solution back, import the saved zip into the target environment."
 ---
 ## TL;DR
 

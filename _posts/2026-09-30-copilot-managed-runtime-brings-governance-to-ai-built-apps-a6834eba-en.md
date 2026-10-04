@@ -29,6 +29,17 @@ source_author: Ramón Rautenstrauch
 source_published_at: '2026-09-30'
 source_updated_at: '2026-09-30'
 source_type: article
+faq:
+  - question: "What do apps built with Copilot Managed Runtime inherit automatically?"
+    answer: "They inherit Microsoft Entra authentication and run on Microsoft-hosted execution. Tenant policies apply to them and they appear in the inventory of the Microsoft 365 admin center. Default connector, sharing and content security policies are applied as well, so a new app starts inside an administrator-defined boundary instead of outside it."
+  - question: "Which paths can people use to create apps on the managed runtime?"
+    answer: "Three paths feed one runtime: Cowork, Copilot Studio and an SDK or CLI approach with JavaScript or TypeScript. Because all three land in the same governed environment, a developer using code and a business user using prompts both end up under the same authentication, policies and inventory."
+  - question: "Which controls does the managed runtime support for administrators?"
+    answer: "Conditional Access, data loss prevention, connector restrictions, sharing boundaries and lifecycle management. The article stresses that these controls come from the platform, so administrators gain visibility into AI-built apps rather than only trying to prevent their creation. That targets the growing shadow AI development problem."
+  - question: "Does the managed runtime remove the need for governance design?"
+    answer: "No. The article says that governance built in by design does not mean security can be forgotten, and that a poorly configured policy remains a poorly configured policy. Controls such as Conditional Access, DLP and connector policies still have to be configured correctly. One of Microsoft's principles is a balance between administrative control and developer productivity."
+  - question: "What does create already inside a governed boundary mean for shadow AI?"
+    answer: "It means AI-built apps are created within tenant controls from the start and not governed after the fact. The article puts it as not creating first and governing later, but creating already inside a governed boundary. For shadow AI, the priority shifts to knowing what is being created, who created it and who can use it."
 ---
 
 ## TL;DR

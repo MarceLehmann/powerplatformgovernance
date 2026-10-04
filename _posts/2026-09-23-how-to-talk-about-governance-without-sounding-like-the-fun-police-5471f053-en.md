@@ -26,6 +26,17 @@ submitted_by:
   publish_credit: true
   name: Michael Roth
   linkedin: https://www.linkedin.com/in/michaelroth42/
+faq:
+  - question: "Why does trusting makers not replace governance?"
+    answer: "Trust works between people, but a platform grows beyond personal relationships. The article points to undocumented flows, apps that break after their creator leaves, data shared externally without anyone noticing and orphaned systems. Its central claim is that governance lets trust scale, with 50 makers, 12 departments and 90 connectors as an example of what needs systematic oversight."
+  - question: "What is the governance trilemma?"
+    answer: "Security, compliance and enablement compete, and the article describes what happens when only one wins. Security alone creates a locked-down system where no one can build, enablement alone loses control, and compliance alone turns the platform into a bureaucratic obstacle course where makers stop trying. A practical balance is to allow experimentation in personal environments but require naming conventions and owner documentation in production."
+  - question: "How should I explain governance to executives?"
+    answer: "Present it as proactive prevention and translate it into risk language: data exposure, audit readiness and technical debt. The article gives every audience its own message, because executives tend to see governance as premature, makers fear losing tools and managers fear slower delivery. Continuous communication counts more than a one-time explanation."
+  - question: "What arguments work for makers and for IT admins when talking about governance?"
+    answer: "Makers hear that governance keeps their apps from breaking, ideally backed by a story such as flows halting when an owner account is deleted. IT admins hear that locking everything down drives people to unsanctioned tools, so the offer is a partnership with shared dashboards and co-designed policies."
+  - question: "Where should a governance program start according to the article?"
+    answer: "Small. Pick one policy and one conversation rather than a complete solution, and leave things a little better than you found them. Working governance becomes invisible through fit, for example naming conventions that ease handovers, environment strategies and app catalogs. For legal teams the article suggests tiers with low-risk zones and strict zones for regulated data."
 ---
 ## TL;DR
 
