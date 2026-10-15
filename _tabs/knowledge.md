@@ -32,6 +32,6 @@ Die Tabelle oben führt zu allen drei Anleitungen in beiden Sprachen.
 
 ## So nutzt du die Seiten mit KI
 
-Die Seiten zu den 25 Fragen und zu den fünf Environment-Strategien sind dafür gebaut, sie mit KI durchzuarbeiten. Kopier die Adresse der Seite in eine KI deines Vertrauens, die Webseiten lesen kann (z. B. Microsoft Copilot Chat mit Websuche), und schreib dazu: «Führ mich durch diese Seite.» Auf der Seite steht eine Anweisung für KI-Assistenten: Die KI geht die Fragen oder Kriterien Schritt für Schritt mit dir durch, bietet die Antwortmöglichkeiten von der Seite an und erstellt am Ende ein Governance-Konzept oder empfiehlt eine Environment-Strategie, mit offenen Punkten und nächsten Schritten.
+Alle drei Anleitungen sind dafür gebaut, sie mit KI durchzuarbeiten. Kopier die Adresse der Seite in eine KI deines Vertrauens, die Webseiten lesen kann (z. B. Microsoft Copilot Chat mit Websuche), und schreib dazu: «Führ mich durch diese Seite.» Auf der Seite steht eine Anweisung für KI-Assistenten: Die KI geht die Fragen oder Kriterien Schritt für Schritt mit dir durch, bietet die Antwortmöglichkeiten von der Seite an und erstellt am Ende ein Governance-Konzept, empfiehlt eine Environment-Strategie oder baut eine Rollenmatrix, mit offenen Punkten und nächsten Schritten.
 
 Ob eine KI die Seite wirklich abruft, hängt vom Werkzeug ab. Falls deine KI keine Webseiten liest: Auf beiden Seiten steht ein Prompt zum Kopieren, den du zusammen mit den Fragen oder Strategien einfügst.
