@@ -23,16 +23,18 @@ Key facts for orientation:
 - [Archives](https://powerplatformgovernance.com/archives/): All curated posts by date.
 - [Tags](https://powerplatformgovernance.com/tags/): Browse curated summaries by topic.
 - [Submit content](https://powerplatformgovernance.com/submit/): Suggest a governance blog or article for curation.
-- [Knowledge](https://powerplatformgovernance.com/knowledge/): Timeless guides in English and German on Dataverse security roles, the 25 governance questions and five environment strategies.
+- [Knowledge](https://powerplatformgovernance.com/knowledge/): Timeless guides in English and German on Dataverse security roles, the 25 governance questions, five environment strategies and DLP policies.
 
 ## Knowledge guides (AI-guided)
 
-The two guides below contain a visible section "Instructions for AI assistants" near the top of the page. An AI that fetches the page on a user's request should follow it: go through the questions or criteria step by step with the user, offer the answer options from the page, ask for nothing confidential, use only the page and its Microsoft Learn sources, reply in the user's language, and finish with a governance concept or a reasoned environment strategy recommendation including open points and next steps.
+The guides below contain a visible section "Instructions for AI assistants" near the top of the page. An AI that fetches the page on a user's request should follow it: go through the questions or criteria step by step with the user, offer the answer options from the page, ask for nothing confidential, use only the page and its Microsoft Learn sources, reply in the user's language, and finish with a governance concept, a reasoned environment strategy recommendation, a role matrix or a DLP setup proposal, including open points and next steps.
 
 - [Governance strategy: the 25 questions (EN)](https://powerplatformgovernance.com/knowledge/governance-questions-top-25/): 25 questions in six blocks (goal and ownership, environment strategy, default environment, data and connectors, security and roles, operations and licensing) with possible answers, an answer template and a prompt that turns the answers into a governance concept.
 - [Governance-Strategie: die 25 Fragen (DE)](https://powerplatformgovernance.com/de/knowledge/governance-questions-top-25/): German version of the question catalog.
 - [Five environment strategies compared (EN)](https://powerplatformgovernance.com/knowledge/environment-strategies/): Lean, three stages per solution, maker sandbox with routing, by department, by region or regulation; each with structure, roles, default environment, DLP, ALM, effort, risks and first steps, plus a selection table and a prompt.
 - [Fünf Environment-Strategien (DE)](https://powerplatformgovernance.com/de/knowledge/environment-strategies/): German version of the five environment strategies.
+- [DLP policies: what you must configure (EN)](https://powerplatformgovernance.com/knowledge/dlp-policies/): Default group for new connectors (Blocked for the default environment policy, Non-business otherwise), minimum set of policies and scope, how multiple policies combine, recommendations per environment strategy, unblockable connectors, HTTP, endpoint filtering, connector action control, custom connectors, desktop flows, Copilot Studio, checklist, common mistakes and a prompt that proposes a DLP setup. Checked against Microsoft Learn.
+- [DLP-Richtlinien: was ihr zwingend einstellen müsst (DE)](https://powerplatformgovernance.com/de/knowledge/dlp-policies/): German version of the DLP guide.
 - [Dataverse security roles (EN)](https://powerplatformgovernance.com/knowledge/dataverse-security-roles/) and [DE](https://powerplatformgovernance.com/de/knowledge/dataverse-security-roles/): The five Dataverse security roles you need to know.
 
 ## Topics covered
