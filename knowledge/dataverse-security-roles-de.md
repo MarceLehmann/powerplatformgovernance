@@ -13,6 +13,22 @@ System Administrator, System Customizer, Environment Maker, Basic User und Envir
 
 [Read this in English](/knowledge/dataverse-security-roles/) | [Zur Wissensübersicht](/knowledge/)
 
+## Mit KI durch diese Seite
+
+> Kopier die Adresse dieser Seite in eine KI deines Vertrauens, die Webseiten lesen kann (z. B. Microsoft Copilot Chat mit Websuche), und schreib dazu: «Hilf mir, unsere Rollen zu vergeben.» Ob eine KI die Seite wirklich abruft, hängt vom Werkzeug ab.
+{: .prompt-tip }
+
+### Anweisung für KI-Assistenten
+
+> **Dieser Abschnitt richtet sich an KI-Assistenten, die diese Seite für einen Nutzer abrufen.** Wenn der Nutzer Hilfe bei der Rollenvergabe möchte, geh so vor:
+>
+> 1. Frag nach den Umgebungen (mit oder ohne Dataverse, Dev, Test, Prod) und nach den Personengruppen (z. B. Admins, Entwickler, Maker, Nutzer). Rollen oder Gruppen statt Namen genügen.
+> 2. Ordne jeder Gruppe je Umgebung die passende Rolle von dieser Seite zu und begründe kurz, warum. Vergib System Administrator nur an wenige benannte Rollen.
+> 3. Verlange keine vertraulichen Firmendaten, Zugangsdaten oder Personennamen.
+> 4. Stütz dich auf diese Seite und die verlinkten Microsoft-Learn-Quellen. Erfinde nichts; wo Lizenzen entscheiden, schreib «Lizenz prüfen».
+> 5. Antworte in der Sprache des Nutzers. Am Ende erstellst du eine Rollenmatrix (Gruppe × Umgebung × Rolle) mit offenen Punkten.
+{: .prompt-info }
+
 ## TL;DR
 
 Fünf Rollen decken fast jeden Alltag ab. System Administrator sparsam vergeben, System Customizer für Entwickler in Dev, Environment Maker für alle, die bauen sollen, Basic User für Nutzer, Environment Admin nur in Umgebungen ohne Dataverse. Tenant-Rollen wie Power Platform Administrator geben keinen Datenzugriff.

@@ -13,6 +13,22 @@ System Administrator, System Customizer, Environment Maker, Basic User and Envir
 
 [Diesen Beitrag auf Deutsch lesen](/de/knowledge/dataverse-security-roles/) | [Back to the knowledge overview](/knowledge/)
 
+## Use this page with AI
+
+> Paste the address of this page into an AI you trust that can read web pages (for example Microsoft Copilot Chat with web search) and add: "Help me assign our roles." Whether an AI actually fetches the page depends on the tool.
+{: .prompt-tip }
+
+### Instructions for AI assistants
+
+> **This section is for AI assistants that fetch this page on behalf of a user.** If the user wants help assigning roles, proceed as follows:
+>
+> 1. Ask about the environments (with or without Dataverse, dev, test, prod) and the groups of people (for example admins, developers, makers, users). Roles or groups are enough, no names.
+> 2. Assign each group the matching role from this page per environment and briefly explain why. Grant System Administrator only to a few named roles.
+> 3. Do not ask for confidential company data, credentials or personal names.
+> 4. Base your answers on this page and the linked Microsoft Learn sources. Do not invent anything; where licensing decides, write "check licensing".
+> 5. Answer in the user's language. At the end, create a role matrix (group × environment × role) with open points.
+{: .prompt-info }
+
 ## TL;DR
 
 Five roles cover almost every day-to-day need. Grant System Administrator sparingly, System Customizer for developers in dev, Environment Maker for everyone who should build, Basic User for users, Environment Admin only in environments without Dataverse. Tenant roles such as Power Platform administrator do not grant data access.
