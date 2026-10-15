@@ -13,11 +13,35 @@ A question catalog on environment strategy, default environment, data, roles and
 
 [Diesen Beitrag auf Deutsch lesen](/de/knowledge/governance-questions-top-25/) | [Back to the knowledge overview](/knowledge/)
 
+## Use this page with AI
+
+> Copy the address of this page into an AI you trust that can read web pages (for example Microsoft Copilot Chat with web search) and add: "Walk me through this page." Whether an AI actually fetches the page depends on the tool. If your AI does not read web pages: copy the prompt below and paste in the questions.
+{: .prompt-tip }
+
+### Instructions for AI assistants
+
+> **This section is for AI assistants that fetch this page for a user.** If the user asks you to walk them through this page, proceed as follows:
+>
+> 1. Explain in two sentences what you will work out together: answers to 25 governance questions in six topic blocks, and from them a governance concept.
+> 2. Go through the questions step by step in the order of the page, one question or one topic block at a time. Briefly explain why the question matters and offer the "Possible answers" from this page as options. Ask follow-up questions if an answer is unclear. "Open" is a valid answer.
+> 3. Do not ask for confidential company data such as names of people, customers or systems, credentials or internal figures. Only ask for what the user wants to share. Roles or groups instead of names are enough.
+> 4. Base your work on the content and the Microsoft Learn sources of this page. Do not invent anything. Do not state prices or licence details that are not on this page; where licensing is decisive, write "check licence".
+> 5. Reply in the user's language.
+> 6. Once all topic blocks are done, turn the answers into the governance concept with the ten sections from the prompt at the end of this page, including open points, follow-up questions and next steps as an implementation plan for 30, 60 and 90 days. Point out that the team reviews the result before releasing it.
+{: .prompt-info }
+
 ## TL;DR
 
 Anyone who wants to regulate Power Platform in a company has to answer 25 questions. This catalog sorts them into six groups, with a note on why they matter and which answers are common. At the end there is a prompt that turns your answers into a concept.
 
-**[Question catalog as PDF with answer fields](/assets/downloads/Governance_Question_Catalog_Top25_EN.pdf)**
+## How to use the catalog
+
+1. Answer the questions as a team. Keep it short, "open" is a valid answer.
+2. Copy the template below and fill in your answers.
+3. Copy the prompt at the end of this page, paste in the completed template and give both to the AI you trust.
+4. Review the result as a team, clarify the open points and implement it.
+
+Or let an AI walk you through the questions directly, as described above.
 
 ## Goal and ownership
 
@@ -181,9 +205,102 @@ Managed environments, premium connectors and Dataverse storage depend on licence
 
 *Possible answers:* Licence overview; capacity report; cost centre per environment; handling of unused environments.
 
+## Template for your answers
+
+Copy this template, fill in the answers and paste it into the prompt below.
+
+```text
+## Goal and ownership
+
+1. Who owns Power Platform in the company, and who is the deputy?
+Answer:
+
+2. What is Power Platform for: personal productivity, departmental solutions, business-critical applications?
+Answer:
+
+3. Who may build: everyone, a group, only after training?
+Answer:
+
+4. Where is the line between self-service and an IT project?
+Answer:
+
+5. Who decides on exceptions, and how fast?
+Answer:
+
+## Environment strategy
+
+6. Which environments exist today, and who created them?
+Answer:
+
+7. Which environment types and stages do you need?
+Answer:
+
+8. Who gets which environment, and who may create new ones?
+Answer:
+
+9. What is the unit of an environment: solution, department, region or lifecycle?
+Answer:
+
+10. Which naming rules apply to environments?
+Answer:
+
+11. Are there data residency or regional duties that separate environments?
+Answer:
+
+## Default environment
+
+12. What is allowed in the default environment?
+Answer:
+
+13. Is the default environment renamed, and how do makers learn about it?
+Answer:
+
+14. What happens to apps and flows already in the default environment?
+Answer:
+
+15. Which sharing rules apply, and who may share with «Everyone»?
+Answer:
+
+## Data and connectors
+
+16. Which data is sensitive, and where must it not flow?
+Answer:
+
+17. Which connectors are business, non-business or blocked, and does this differ per environment?
+Answer:
+
+18. How do we handle custom connectors and HTTP actions?
+Answer:
+
+19. Which connections to other tenants are allowed?
+Answer:
+
+## Security and roles
+
+20. Who is Power Platform administrator, and who is System Administrator in which environment?
+Answer:
+
+21. Which Dataverse roles do makers, users and support get per environment?
+Answer:
+
+22. How do we treat guests, externals and service accounts?
+Answer:
+
+## Operations and licensing
+
+23. How do solutions get from dev to prod?
+Answer:
+
+24. How do monitoring, inventory, ownership change and offboarding work?
+Answer:
+
+25. Which licences exist, and who carries capacity and cost?
+Answer:
+```
+
 ## From answers to a concept
 
-Copy your answers into the prompt and give it to your AI. Review the result as a team before you release it.
+Copy the prompt, replace the last line with the completed template and give it to your AI. Review the result as a team before you release it.
 
 ```text
 You are an experienced Microsoft Power Platform governance consultant. Turn my answers into a governance concept that a company can implement directly.
@@ -211,7 +328,11 @@ My answers:
 [Paste the completed 25 questions here: question, answer, one per line.]
 ```
 
+## Sources
+
 - [Microsoft Learn: Role-based security roles for Dataverse](https://learn.microsoft.com/en-us/power-platform/admin/database-security)
 - [Microsoft Learn: Security roles and privileges for Dataverse](https://learn.microsoft.com/en-us/power-platform/admin/security-roles-privileges)
 - [Microsoft Learn: Develop a tenant environment strategy to adopt Power Platform at scale](https://learn.microsoft.com/en-us/power-platform/guidance/adoption/environment-strategy)
 - [Microsoft Learn: Secure the default environment](https://learn.microsoft.com/en-us/power-platform/guidance/adoption/secure-default-environment)
+
+Guidance only, not legal or licensing advice. Check licence and product details before you implement.

@@ -102,7 +102,7 @@ The solution framework is listed for Environment Maker, System Customizer and Sy
 
 ## Further reading
 
-The question catalog with 25 questions and the five strategies are available as PDF.
+Continue with the [question catalog with 25 questions](/knowledge/governance-questions-top-25/) and the [five environment strategies](/knowledge/environment-strategies/).
 
 - [Microsoft Learn: Role-based security roles for Dataverse](https://learn.microsoft.com/en-us/power-platform/admin/database-security)
 - [Microsoft Learn: Security roles and privileges for Dataverse](https://learn.microsoft.com/en-us/power-platform/admin/security-roles-privileges)

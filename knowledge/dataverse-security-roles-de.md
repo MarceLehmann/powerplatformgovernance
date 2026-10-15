@@ -102,7 +102,7 @@ Das Lösungs-Framework steht bei Environment Maker, System Customizer und System
 
 ## Weiterführend
 
-Der Fragenkatalog mit 25 Fragen und die fünf Strategien liegen als PDF vor.
+Weiter geht es mit dem [Fragenkatalog mit 25 Fragen](/de/knowledge/governance-questions-top-25/) und den [fünf Environment-Strategien](/de/knowledge/environment-strategies/).
 
 - [Microsoft Learn: Role-based security roles for Dataverse](https://learn.microsoft.com/en-us/power-platform/admin/database-security)
 - [Microsoft Learn: Security roles and privileges for Dataverse](https://learn.microsoft.com/en-us/power-platform/admin/security-roles-privileges)

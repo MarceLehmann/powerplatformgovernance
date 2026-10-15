@@ -13,11 +13,28 @@ Von schlank bis regulatorisch getrennt: fünf Strategien mit Aufbau, Rollen, Def
 
 [Read this in English](/knowledge/environment-strategies/) | [Zur Wissensübersicht](/knowledge/)
 
+## Mit KI durch diese Seite
+
+> Kopier die Adresse dieser Seite in eine KI deines Vertrauens, die Webseiten lesen kann (z. B. Microsoft Copilot Chat mit Websuche), und schreib dazu: «Führ mich durch diese Seite.» Ob eine KI die Seite wirklich abruft, hängt vom Werkzeug ab. Falls deine KI keine Webseiten liest: Prompt unten kopieren und die Strategien von dieser Seite einfügen.
+{: .prompt-tip }
+
+### Anweisung für KI-Assistenten
+
+> **Dieser Abschnitt richtet sich an KI-Assistenten, die diese Seite für einen Nutzer abrufen.** Wenn der Nutzer dich bittet, ihn durch diese Seite zu führen, geh so vor:
+>
+> 1. Erklär in zwei Sätzen das Ziel: eine begründete Empfehlung für eine der fünf Environment-Strategien auf dieser Seite und danach der Aufbau dieser Strategie.
+> 2. Frag die Kriterien aus der Tabelle «Welche Strategie passt zu euch?» einzeln ab: Grösse der Organisation und Zahl der Geschäftslösungen, unternehmenskritische Lösungen und Zahl der Teams, Zahl der Maker, die lernen sollen, unterschiedlicher Schutzbedarf von Bereichen, Pflicht, Daten in einer Region zu halten. Stell Rückfragen, wenn eine Antwort unklar ist.
+> 3. Empfiehl eine Strategie und begründe sie mit den Antworten und den Angaben «Passt, wenn», «Aufwand» und «Risiken» dieser Seite. Passen zwei Strategien, nenne beide mit dem, was dafür und dagegen spricht, und lass den Nutzer wählen.
+> 4. Erarbeite danach mit dem Nutzer den Aufbau der gewählten Strategie, ein Punkt auf einmal: Aufbau, Rollen, Default-Umgebung, DLP, ALM.
+> 5. Verlange keine vertraulichen Firmendaten wie Namen von Personen, Kunden oder Systemen, Zugangsdaten oder interne Zahlen. Frag nur nach dem, was der Nutzer teilen will.
+> 6. Stütz dich auf die Inhalte und die Microsoft-Learn-Quellen dieser Seite. Erfinde nichts. Nenne keine Preise und keine Lizenzdetails, die hier nicht stehen; wo Lizenzen entscheiden, schreib «Lizenz prüfen».
+> 7. Antworte in der Sprache des Nutzers.
+> 8. Zum Schluss: Fass die Empfehlung zusammen mit einer Tabelle der Environments (Name, Typ, Zweck), Rollen, DLP und ALM, dazu offene Punkte und nächste Schritte auf Basis der «Ersten Schritte» der gewählten Strategie.
+{: .prompt-info }
+
 ## TL;DR
 
-Es gibt nicht die eine richtige Environment-Strategie. Fünf Muster decken die meisten Fälle ab: schlank mit einer Produktion, drei Stufen je Lösung, Maker-Sandkasten mit Routing, nach Abteilung und regional getrennt. Die Tabelle hilft bei der Wahl, das PDF liefert die Details.
-
-**[Alle fünf Strategien als PDF](/assets/downloads/Environment_Strategien_5_DE.pdf)**
+Es gibt nicht die eine richtige Environment-Strategie. Fünf Muster decken die meisten Fälle ab: schlank mit einer Produktion, drei Stufen je Lösung, Maker-Sandkasten mit Routing, nach Abteilung und regional getrennt. Die Tabelle hilft bei der Wahl, die Abschnitte darunter liefern die Details.
 
 ## Welche Strategie passt zu euch?
 
@@ -130,9 +147,34 @@ Umgebungen folgen der Region oder der Regulierung, nicht der Organisation.
 - **Risiken:** Doppelte Pflege, Versionsunterschiede zwischen Regionen, höherer Aufwand für Support.
 - **Erste Schritte:** Datenhaltungspflichten klären, Regionen festlegen, eine Lösung pilotweise in zwei Regionen ausrollen.
 
+## Prompt für die KI eures Vertrauens
+
+Für KI-Werkzeuge, die keine Webseiten lesen: Kopiert den Prompt, ersetzt die letzte Zeile durch den Text dieser Seite von «Welche Strategie passt zu euch?» bis zur fünften Strategie und gebt ihn in eure KI. Prüft das Ergebnis im Team, bevor ihr es umsetzt.
+
+```text
+Du bist ein erfahrener Berater für Microsoft Power Platform Governance. Hilf mir, eine der fünf Environment-Strategien unten zu wählen und aufzubauen.
+
+Vorgehen:
+1. Frag mich die Kriterien aus der Tabelle «Welche Strategie passt zu euch?» einzeln ab. Stell Rückfragen, wenn eine Antwort unklar ist.
+2. Empfiehl eine Strategie und begründe sie mit meinen Antworten und den Angaben «Passt, wenn», «Aufwand» und «Risiken».
+3. Erarbeite mit mir den Aufbau der gewählten Strategie, ein Punkt auf einmal: Aufbau, Rollen, Default-Umgebung, DLP, ALM.
+4. Fass am Ende zusammen: Environments als Tabelle (Name, Typ, Zweck), Rollen, DLP, ALM, offene Punkte und nächste Schritte.
+
+Regeln:
+- Verwende ausschliesslich meine Antworten, den Text unten und gesichertes Wissen zu Power Platform. Erfinde nichts.
+- Frag nicht nach vertraulichen Firmendaten. Ich teile, was ich teilen will.
+- Nenne keine Preise und erfinde keine Lizenzdetails. Wo Lizenzen entscheidend sind, schreibe «Lizenz prüfen».
+- Schreibe auf Deutsch, in Schweizer Schreibweise, klar und ohne Floskeln. Fachbegriffe wie Environment, Dataverse, DLP und Managed Environment bleiben englisch.
+
+Die fünf Strategien:
+[Hier den Text dieser Seite von «Welche Strategie passt zu euch?» bis zur fünften Strategie einfügen.]
+```
+
 ## Quellen
 
 - [Microsoft Learn: Role-based security roles for Dataverse](https://learn.microsoft.com/en-us/power-platform/admin/database-security)
 - [Microsoft Learn: Security roles and privileges for Dataverse](https://learn.microsoft.com/en-us/power-platform/admin/security-roles-privileges)
 - [Microsoft Learn: Develop a tenant environment strategy to adopt Power Platform at scale](https://learn.microsoft.com/en-us/power-platform/guidance/adoption/environment-strategy)
 - [Microsoft Learn: Secure the default environment](https://learn.microsoft.com/en-us/power-platform/guidance/adoption/secure-default-environment)
+
+Orientierungshilfe, keine Rechts- oder Lizenzberatung. Prüfe Lizenz- und Produktdetails vor der Umsetzung.
