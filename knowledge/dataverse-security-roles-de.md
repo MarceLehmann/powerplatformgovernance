@@ -1,18 +1,17 @@
 ---
+layout: page
 title: "Dataverse-Sicherheitsrollen: die fünf, die ihr kennen müsst, und wann ihr sie braucht"
 description: "System Administrator, System Customizer, Environment Maker, Basic User und Environment Admin: was jede Rolle kann, was nicht und wann sie nötig ist."
-date: "2026-10-15T08:00:00Z"
-author: marcel_lehmann
 lang: de
 toc: true
-tags:
-  - governance
-  - security
-  - dataverse
-content_type: original_article
-permalink: "/de/posts/gov-dataverse-security-roles/"
-translation_url: "/en/posts/gov-dataverse-security-roles/"
+permalink: "/de/knowledge/dataverse-security-roles/"
+translation_url: "/knowledge/dataverse-security-roles/"
+last_reviewed: "2026-10-15"
 ---
+
+System Administrator, System Customizer, Environment Maker, Basic User und Environment Admin: was jede Rolle kann, was nicht und wann sie nötig ist.
+
+[Read this in English](/knowledge/dataverse-security-roles/) | [Zur Wissensübersicht](/knowledge/)
 
 ## TL;DR
 

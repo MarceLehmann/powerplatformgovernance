@@ -1,18 +1,17 @@
 ---
+layout: page
 title: "Governance-Strategie aufbauen: die 25 Fragen, die jede Firma klären muss"
 description: "Ein Fragenkatalog zu Environment-Strategie, Default-Umgebung, Daten, Rollen und Betrieb, mit einem Prompt, der aus euren Antworten ein Konzept macht."
-date: "2026-10-15T08:00:00Z"
-author: marcel_lehmann
 lang: de
 toc: true
-tags:
-  - governance
-  - environment-strategy
-  - checklist
-content_type: original_article
-permalink: "/de/posts/gov-top-25-governance-questions/"
-translation_url: "/en/posts/gov-top-25-governance-questions/"
+permalink: "/de/knowledge/governance-questions-top-25/"
+translation_url: "/knowledge/governance-questions-top-25/"
+last_reviewed: "2026-10-15"
 ---
+
+Ein Fragenkatalog zu Environment-Strategie, Default-Umgebung, Daten, Rollen und Betrieb, mit einem Prompt, der aus euren Antworten ein Konzept macht.
+
+[Read this in English](/knowledge/governance-questions-top-25/) | [Zur Wissensübersicht](/knowledge/)
 
 ## TL;DR
 

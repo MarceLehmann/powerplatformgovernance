@@ -1,18 +1,17 @@
 ---
+layout: page
 title: "Five environment strategies for Power Platform compared"
 description: "From lean to regulatory separation: five strategies with structure, roles, default environment, DLP, ALM, effort and risks."
-date: "2026-10-15T08:00:00Z"
-author: marcel_lehmann
 lang: en
 toc: true
-tags:
-  - governance
-  - environment-strategy
-  - alm
-content_type: original_article
-permalink: "/en/posts/gov-five-environment-strategies/"
-translation_url: "/de/posts/gov-five-environment-strategies/"
+permalink: "/knowledge/environment-strategies/"
+translation_url: "/de/knowledge/environment-strategies/"
+last_reviewed: "2026-10-15"
 ---
+
+From lean to regulatory separation: five strategies with structure, roles, default environment, DLP, ALM, effort and risks.
+
+[Diesen Beitrag auf Deutsch lesen](/de/knowledge/environment-strategies/) | [Back to the knowledge overview](/knowledge/)
 
 ## TL;DR
 

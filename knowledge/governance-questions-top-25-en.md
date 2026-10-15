@@ -1,18 +1,17 @@
 ---
+layout: page
 title: "Building a governance strategy: the 25 questions every company has to answer"
 description: "A question catalog on environment strategy, default environment, data, roles and operations, with a prompt that turns your answers into a concept."
-date: "2026-10-15T08:00:00Z"
-author: marcel_lehmann
 lang: en
 toc: true
-tags:
-  - governance
-  - environment-strategy
-  - checklist
-content_type: original_article
-permalink: "/en/posts/gov-top-25-governance-questions/"
-translation_url: "/de/posts/gov-top-25-governance-questions/"
+permalink: "/knowledge/governance-questions-top-25/"
+translation_url: "/de/knowledge/governance-questions-top-25/"
+last_reviewed: "2026-10-15"
 ---
+
+A question catalog on environment strategy, default environment, data, roles and operations, with a prompt that turns your answers into a concept.
+
+[Diesen Beitrag auf Deutsch lesen](/de/knowledge/governance-questions-top-25/) | [Back to the knowledge overview](/knowledge/)
 
 ## TL;DR
 

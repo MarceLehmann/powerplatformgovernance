@@ -1,18 +1,17 @@
 ---
+layout: page
 title: "Fünf Environment-Strategien für Power Platform im Vergleich"
 description: "Von schlank bis regulatorisch getrennt: fünf Strategien mit Aufbau, Rollen, Default-Umgebung, DLP, ALM, Aufwand und Risiken."
-date: "2026-10-15T08:00:00Z"
-author: marcel_lehmann
 lang: de
 toc: true
-tags:
-  - governance
-  - environment-strategy
-  - alm
-content_type: original_article
-permalink: "/de/posts/gov-five-environment-strategies/"
-translation_url: "/en/posts/gov-five-environment-strategies/"
+permalink: "/de/knowledge/environment-strategies/"
+translation_url: "/knowledge/environment-strategies/"
+last_reviewed: "2026-10-15"
 ---
+
+Von schlank bis regulatorisch getrennt: fünf Strategien mit Aufbau, Rollen, Default-Umgebung, DLP, ALM, Aufwand und Risiken.
+
+[Read this in English](/knowledge/environment-strategies/) | [Zur Wissensübersicht](/knowledge/)
 
 ## TL;DR
 
