@@ -11,15 +11,16 @@ Guides that do not age with the news: how roles work, what a company has to deci
 
 ## Guides
 
-| Guide | English | Deutsch |
-|---|---|---|
-| Dataverse security roles: the five you need to know | [Read](/knowledge/dataverse-security-roles/) | [Lesen](/de/knowledge/dataverse-security-roles/) |
-| Governance strategy: the 25 questions every company has to answer | [Read](/knowledge/governance-questions-top-25/) | [Lesen](/de/knowledge/governance-questions-top-25/) |
-| Five environment strategies compared | [Read](/knowledge/environment-strategies/) | [Lesen](/de/knowledge/environment-strategies/) |
+- **Dataverse security roles: the five you need to know**  
+  [English](/knowledge/dataverse-security-roles/) · [Deutsch](/de/knowledge/dataverse-security-roles/)
+- **Governance strategy: the 25 questions every company has to answer**  
+  [English](/knowledge/governance-questions-top-25/) · [Deutsch](/de/knowledge/governance-questions-top-25/)
+- **Five environment strategies compared**  
+  [English](/knowledge/environment-strategies/) · [Deutsch](/de/knowledge/environment-strategies/)
 
 ## How to use the guides with AI
 
-The pages on the 25 questions and on the five environment strategies are built to be worked through with AI. Copy the address of the page into an AI you trust that can read web pages (for example Microsoft Copilot Chat with web search) and add: "Walk me through this page." The page contains instructions for AI assistants: the AI goes through the questions or criteria step by step, offers the possible answers from the page and at the end drafts a governance concept or recommends an environment strategy, with open points and next steps.
+All three guides are built to be worked through with AI. Copy the address of the page into an AI you trust that can read web pages (for example Microsoft Copilot Chat with web search) and add: "Walk me through this page." The page contains instructions for AI assistants: the AI goes through the questions or criteria step by step, offers the possible answers from the page and at the end drafts a governance concept, recommends an environment strategy or builds a role matrix, with open points and next steps.
 
 Whether an AI actually fetches the page depends on the tool. If yours does not read web pages, each of the two pages has a prompt you can copy, together with the questions or strategies.
 
