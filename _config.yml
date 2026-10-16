@@ -62,11 +62,11 @@ webmaster_verifications:
 # Web Analytics Settings
 analytics:
   google:
-    id: G-FDJ0NBT92J
+    id:
   clarity:
-    id: ynscoepp3a
+    id:
   goatcounter:
-    id: # fill in your GoatCounter ID
+    id: powerplatformgovernance # cookieless counting, script self-hosted via _includes/analytics/goatcounter.html
   umami:
     id: # fill in your Umami ID
     domain: # fill in your Umami domain

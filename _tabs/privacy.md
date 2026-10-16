@@ -10,7 +10,7 @@ sitemap:
   changefreq: yearly
 ---
 
-**Last Updated:** September 24, 2026
+**Last Updated:** October 16, 2026
 
 ## Introduction
 
@@ -19,11 +19,15 @@ Welcome to Power Platform Governance ("we," "our," or "us"), a project of Marcel
 ## Information We Collect
 
 ### Automatically Collected Information
-When you visit our website, we automatically collect certain information via Google Analytics, including:
-- **IP address** (used to derive an approximate, non-precise location; not stored in identifiable form by us)
-- **Browser and device type**
-- **Pages visited, time spent, and navigation patterns**
-- **Referring website or search engine**
+We count page views with [GoatCounter](https://www.goatcounter.com), a privacy-friendly analytics service. GoatCounter does not set cookies, does not store your IP address or the full User-Agent header of your browser, and does not track you across websites.
+
+For each page view, GoatCounter receives the page address, the referring page, the User-Agent header, the screen width, the browser language and your IP address (needed for any network connection). It only stores aggregate counts per day or hour:
+- **Page path and referring website or search engine**
+- **Browser and operating system** (name and version only, e.g. "Firefox 139", "Windows 11")
+- **Country** (derived from the IP address, which is then discarded)
+- **Browser language and screen width**
+
+To avoid counting a reload as a new visit, a combination of site, IP address and User-Agent is kept in memory only, for at most 8 hours, and is never written to disk. The stored counts cannot be linked to each other or to an individual person.
 
 ### Information You Provide Voluntarily
 If you use the [content submission form](/submit/) to suggest an article for curation, we collect:
@@ -42,22 +46,22 @@ We use the information we collect to:
 3. **Website improvement**: Identify broken links, slow pages, or content gaps
 4. **Legal compliance**: Meet legal and regulatory requirements
 
-## Cookies and Tracking Technologies
+## Cookies
 
-We ask for your consent before loading Google Analytics. On your first visit, a banner lets you **Accept** or **Decline**:
-- **Accept**: Google Analytics loads and sets cookies to distinguish visitors and measure site usage.
-- **Decline**: Google Analytics never loads; only a small first-party cookie remembers your choice for 365 days so we don't ask again.
-
-You can change your mind at any time by clearing the `cookie_consent` cookie in your browser settings, which will show the banner again on your next visit. You can also opt out of Google Analytics entirely using the [Google Analytics Opt-out Browser Add-on](https://tools.google.com/dlpage/gaoptout).
+This website does not use cookies, and it does not use local storage or similar technologies for analytics or tracking. That is why there is no cookie banner. Apart from technical functions of the site itself (for example remembering the light/dark mode you picked), nothing is stored in your browser.
 
 ## Third-Party Services
 
 We use the following third-party services:
 
-### Google Analytics
-- Usage data is collected to understand site traffic and popular content
-- Google's [Privacy Policy](https://policies.google.com/privacy) applies to data processed by Google Analytics
-- You can opt out at any time (see "Cookies and Tracking Technologies" above)
+### GoatCounter (anonymous visitor counting)
+- **Provider**: GoatCounter.com, operated by Martin Tournoij (Ireland); data is stored on servers of Hetzner Online GmbH in Finland and Germany
+- **Purpose**: count anonymous page views so we know which articles and topics are read
+- **Legal basis**: our legitimate interest in understanding how the site is used (Art. 6(1)(f) GDPR); no personal data is stored
+- **No cookies, no IP storage, no tracking across websites**, and no data is shared with third parties
+- The script (`count.js`) is served from this website itself; only the count request goes to GoatCounter
+- GoatCounter's [Privacy Policy](https://www.goatcounter.com/help/privacy) and [GDPR notes](https://www.goatcounter.com/help/gdpr) apply
+- You can block requests to goatcounter.com with any content blocker; the site works exactly the same
 
 ### GitHub Pages
 Our website is hosted on GitHub Pages:
@@ -73,13 +77,13 @@ We implement reasonable technical and organizational measures to protect informa
 
 - **Encryption**: HTTPS encryption for all website traffic
 - **Minimal collection**: We only ask for what a content suggestion genuinely needs
-- **Third-Party Security**: We only work with reputable, widely-used service providers (Google, GitHub, LinkedIn)
+- **Third-Party Security**: We only work with reputable, widely-used service providers (GoatCounter, GitHub, LinkedIn)
 
 However, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security.
 
 ## Data Retention
 
-- **Analytics data**: Retained by Google Analytics per its standard retention settings (currently 14 months)
+- **Analytics data**: GoatCounter only stores aggregate counts (see above), which contain no personal data; the in-memory visit marker is discarded after at most 8 hours
 - **Content suggestions**: Retained as long as needed to review and, if published, attribute the curated summary; you may request deletion at any time (see "Your Rights" below)
 
 ## Your Rights (GDPR / Swiss FADP)
