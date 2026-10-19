@@ -1,11 +1,15 @@
 // Strikte Pruefung der KI-Antwort. Alles, was nicht eindeutig gueltig ist, wird zu "kein GIF" (Ablehnung mit Grund).
 // Die Belege (evidence) muessen woertlich im englischen Beitragstext stehen: das verhindert erfundene Schritte.
-import { ICON_LIST, PRODUCT_LIST } from "./prompt.mjs";
+import { ICON_LIST, ICON_ALIASES, LIMITS, PRODUCT_LIST } from "./prompt.mjs";
 
 const EMOJI = /\p{Extended_Pictographic}/u;
 const FORBIDDEN = /[–—<>{}`\\]/; // Gedankenstriche, HTML, Template- und Escape-Zeichen
 // Typische englische Woerter, die in deutschen Texten nichts verloren haben (Produkt- und Befehlsnamen sind davon nicht betroffen)
 const ENGLISH_IN_DE = /\b(the|and|with|from|then|your|into|view|add|choose|configure|discovery|dynamic|settings|create|enable|when|file|content|get|open|select|save)\b/i;
+// Original-UI-Namen in Anfuehrungszeichen ("Add Trigger") duerfen im deutschen Text englisch bleiben
+const QUOTED = /"[^"]+"|«[^»]+»|„[^“”"]+[“”"]|“[^”]+”/g;
+const withoutQuoted = (t) => t.replace(QUOTED, " ");
+const normIcon = (i) => { const k = String(i ?? "").toLowerCase().trim(); return ICON_LIST.includes(k) ? k : ICON_ALIASES[k] || i; };
 const norm = (t) => String(t).toLowerCase().replace(/[‘’“”]/g, "'").replace(/\s+/g, " ").trim();
 
 function plain(value, max, where, errors, { optional = false } = {}) {
@@ -26,8 +30,8 @@ function cleanVideo(raw, lang, sourceText, errors) {
   const where = `video.${lang}`;
   if (!raw || typeof raw !== "object") { errors.push(`${where}: fehlt`); return null; }
   const out = {
-    title: plain(raw.title, 52, `${where}.title`, errors),
-    subtitle: plain(raw.subtitle, 110, `${where}.subtitle`, errors),
+    title: plain(raw.title, LIMITS.title, `${where}.title`, errors),
+    subtitle: plain(raw.subtitle, LIMITS.subtitle, `${where}.subtitle`, errors),
     steps: [],
   };
   if (!Array.isArray(raw.steps) || raw.steps.length < 3 || raw.steps.length > 5) { errors.push(`${where}.steps: 3 bis 5 erwartet`); return out; }
@@ -35,13 +39,13 @@ function cleanVideo(raw, lang, sourceText, errors) {
   raw.steps.forEach((s, i) => {
     const w = `${where}.steps[${i}]`;
     if (!s || typeof s !== "object") { errors.push(`${w}: kein Objekt`); return; }
-    const step = { product: PRODUCT_LIST.includes(s.product) ? s.product : "generic", icon: s.icon };
+    const step = { product: PRODUCT_LIST.includes(s.product) ? s.product : "generic", icon: normIcon(s.icon) };
     if (!PRODUCT_LIST.includes(s.product)) errors.push(`${w}.product: unbekannt (${s.product})`);
-    if (!ICON_LIST.includes(s.icon)) errors.push(`${w}.icon: unbekannt (${s.icon})`);
-    if (s.productLabel) step.productLabel = plain(s.productLabel, 22, `${w}.productLabel`, errors);
-    step.title = plain(s.title, 38, `${w}.title`, errors);
+    if (!ICON_LIST.includes(step.icon)) errors.push(`${w}.icon: unbekannt (${s.icon})`);
+    if (s.productLabel) step.productLabel = plain(s.productLabel, LIMITS.productLabel, `${w}.productLabel`, errors);
+    step.title = plain(s.title, LIMITS.stepTitle, `${w}.title`, errors);
     if (!Array.isArray(s.actions) || s.actions.length < 1 || s.actions.length > 3) errors.push(`${w}.actions: 1 bis 3 erwartet`);
-    else step.actions = s.actions.map((a, j) => plain(a, 26, `${w}.actions[${j}]`, errors));
+    else step.actions = s.actions.map((a, j) => plain(a, LIMITS.action, `${w}.actions[${j}]`, errors));
     // Beleg: nur Pflicht auf der englischen Fassung, die Quote muss im Beitragstext vorkommen
     const ev = typeof s.evidence === "string" ? norm(s.evidence) : "";
     if (lang === "en") {
@@ -53,11 +57,11 @@ function cleanVideo(raw, lang, sourceText, errors) {
   });
   if (raw.punchline !== undefined) {
     if (!Array.isArray(raw.punchline) || raw.punchline.length < 1 || raw.punchline.length > 2) errors.push(`${where}.punchline: 1 bis 2 Zeilen erwartet`);
-    else out.punchline = raw.punchline.map((l, i) => plain(l, 26, `${where}.punchline[${i}]`, errors));
+    else out.punchline = raw.punchline.map((l, i) => plain(l, LIMITS.punchline, `${where}.punchline[${i}]`, errors));
   }
   if (lang === "de") {
     const texts = [out.title, out.subtitle, ...out.steps.flatMap((s) => [s.title, s.productLabel, ...(s.actions || [])]), ...(out.punchline || [])].filter(Boolean);
-    const hit = texts.find((t) => ENGLISH_IN_DE.test(t));
+    const hit = texts.find((t) => ENGLISH_IN_DE.test(withoutQuoted(t)));
     if (hit) errors.push(`${where}: englisches Wort im deutschen Text (${hit})`);
   }
   if (lang === "de" && JSON.stringify(out).includes("ß")) errors.push(`${where}: "ss" statt Eszett verwenden`);
@@ -79,7 +83,7 @@ export function validateDecision(raw, candidate) {
   const alt = {};
   for (const lang of langs) {
     video[lang] = cleanVideo(raw.video?.[lang], lang, candidate.text.en, errors);
-    alt[lang] = plain(raw.alt?.[lang], 200, `alt.${lang}`, errors);
+    alt[lang] = plain(raw.alt?.[lang], LIMITS.alt, `alt.${lang}`, errors);
   }
   if (langs.length === 2 && video.en?.steps && video.de?.steps) {
     const sig = (v) => v.steps.map((s) => `${s.product}/${s.icon}`).join("|");

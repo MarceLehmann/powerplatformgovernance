@@ -14,12 +14,31 @@ import path from "node:path";
 import { spawnSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 import YAML from "yaml";
-import { SYSTEM_PROMPT, buildUserPrompt } from "./prompt.mjs";
+import { SYSTEM_PROMPT, buildUserPrompt, buildRepairPrompt } from "./prompt.mjs";
 import { validateDecision, toRemotionProps } from "./validate.mjs";
 import { askJson } from "./llm.mjs";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const FM = /^---\r?\n([\s\S]*?)\r?\n---\r?\n?/;
+
+/**
+ * Entscheidung mit genau einer Reparaturrunde: verwirft die Validierung eine "ja"-Antwort, bekommt das Modell die Antwort
+ * plus Fehlerliste zurueck. ask(userPrompt) liefert geparstes JSON; preset (vorgegebene Antwort) wird nie repariert.
+ */
+export async function decideWithRepair(candidate, ask, preset) {
+  const raw = preset !== undefined ? preset : await ask(buildUserPrompt(candidate));
+  const decision = validateDecision(raw, candidate);
+  if (preset !== undefined || !raw?.gif || !decision.errors.length) return decision;
+  try {
+    const fixed = await ask(buildRepairPrompt(candidate, raw, decision.errors));
+    const second = validateDecision(fixed, candidate);
+    if (!second.gif) second.reason = `Nach Reparaturrunde verworfen: ${second.reason.replace(/^Antwort verworfen: /, "")}`;
+    else second.repaired = true;
+    return second;
+  } catch {
+    return decision; // Reparaturaufruf gescheitert: Ergebnis der ersten Pruefung bleibt
+  }
+}
 
 export const unescapeBody = (t) =>
   t.replace(/\\([\\`*_\[\]#])/g, "$1").replace(/&#123;/g, "{").replace(/&#125;/g, "}").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&amp;/g, "&");
@@ -159,8 +178,7 @@ export async function main(argv) {
   for (const c of candidates) {
     let decision;
     try {
-      const raw = preset ? preset[c.key] : await askJson(SYSTEM_PROMPT, buildUserPrompt(c));
-      decision = validateDecision(raw, c);
+      decision = await decideWithRepair(c, preset ? null : (user) => askJson(SYSTEM_PROMPT, user), preset ? preset[c.key] : undefined);
     } catch (e) {
       decision = { gif: false, reason: `KI-Aufruf fehlgeschlagen: ${e.message}`, errors: [e.message] };
     }

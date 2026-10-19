@@ -2,7 +2,8 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { validateDecision, toRemotionProps } from "./validate.mjs";
-import { unescapeBody, isoWeek, linkedinText, parsePost } from "./run.mjs";
+import { SYSTEM_PROMPT, LIMITS, ICON_LIST } from "./prompt.mjs";
+import { decideWithRepair, unescapeBody, isoWeek, linkedinText, parsePost } from "./run.mjs";
 import { buildInput } from "./social.mjs";
 
 const candidate = {
@@ -57,6 +58,63 @@ test("englische Woerter im deutschen Video werden verworfen", () => {
   const r = validateDecision(g, candidate);
   assert.equal(r.gif, false);
   assert.match(r.errors.join(), /englisches Wort/);
+});
+test("Icon-Aliase werden auf vorhandene Icons abgebildet", () => {
+  const g = good();
+  for (const l of ["en", "de"]) { g.video[l].steps[0].icon = "tool"; g.video[l].steps[1].icon = "flag"; g.video[l].steps[2].icon = "flow"; }
+  const r = validateDecision(g, candidate);
+  assert.equal(r.gif, true, r.errors.join("; "));
+  assert.deepEqual(r.video.en.steps.map((s) => s.icon), ["gear", "bell", "arrow"]);
+  g.video.en.steps[0].icon = "unicorn";
+  assert.match(validateDecision(g, candidate).errors.join(), /icon: unbekannt/);
+});
+test("Original-UI-Namen in Anfuehrungszeichen sind im deutschen Text erlaubt", () => {
+  const g = good();
+  g.video.de.steps[0].actions = ['"Add Trigger" waehlen'];
+  assert.equal(validateDecision(g, candidate).gif, true);
+  g.video.de.steps[0].actions = ["Add Trigger waehlen"];
+  assert.equal(validateDecision(g, candidate).gif, false);
+  g.video.de.steps[0].actions = ['"Add Trigger" and waehlen'];
+  assert.equal(validateDecision(g, candidate).gif, false);
+});
+test("Prompt nennt Limits und Icons aus der Validierung", () => {
+  assert.ok(SYSTEM_PROMPT.includes(`max ${LIMITS.action} characters`) && SYSTEM_PROMPT.includes(ICON_LIST.join(", ")));
+  assert.ok(!/max (22|26|38|110) characters/.test(SYSTEM_PROMPT));
+});
+test("Reparaturrunde: zu lange Antwort wird einmal nachgebessert", async () => {
+  const bad = good();
+  bad.video.en.steps[0].actions = ["x".repeat(LIMITS.action + 5)];
+  const prompts = [];
+  const ask = async (p) => { prompts.push(p); return prompts.length === 1 ? bad : good(); };
+  const r = await decideWithRepair(candidate, ask);
+  assert.equal(r.gif, true);
+  assert.equal(prompts.length, 2);
+  assert.match(prompts[1], /ERRORS:[\s\S]*actions\[0\]/);
+});
+test("Reparaturrunde: genau ein Versuch, danach kein GIF mit Begruendung", async () => {
+  const bad = good();
+  bad.video.en.steps[0].actions = ["x".repeat(99)];
+  let calls = 0;
+  const r = await decideWithRepair(candidate, async () => { calls++; return bad; });
+  assert.equal(calls, 2);
+  assert.equal(r.gif, false);
+  assert.match(r.reason, /Reparaturrunde verworfen/);
+  assert.ok(r.errors.length);
+});
+test("Reparaturrunde: kein Aufruf bei sauberem Nein, gueltigem Ja oder vorgegebener Antwort", async () => {
+  let calls = 0;
+  await decideWithRepair(candidate, async () => { calls++; return { gif: false, reason: "news" }; });
+  await decideWithRepair(candidate, async () => { calls++; return good(); });
+  const bad = good(); bad.video.en.title = "x".repeat(99);
+  await decideWithRepair(candidate, null, bad);
+  assert.equal(calls, 2);
+});
+test("Reparaturrunde: scheitert der zweite Aufruf, bleibt die erste Pruefung", async () => {
+  const bad = good(); bad.video.en.title = "x".repeat(99);
+  let n = 0;
+  const r = await decideWithRepair(candidate, async () => { if (n++) throw new Error("HTTP 500"); return bad; });
+  assert.equal(r.gif, false);
+  assert.ok(r.errors.length);
 });
 test("Remotion-Props enthalten keine Belege und setzen den Abschluss", () => {
   const r = validateDecision(good(), candidate);
