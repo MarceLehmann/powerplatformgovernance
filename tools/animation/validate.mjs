@@ -4,6 +4,8 @@ import { ICON_LIST, PRODUCT_LIST } from "./prompt.mjs";
 
 const EMOJI = /\p{Extended_Pictographic}/u;
 const FORBIDDEN = /[–—<>{}`\\]/; // Gedankenstriche, HTML, Template- und Escape-Zeichen
+// Typische englische Woerter, die in deutschen Texten nichts verloren haben (Produkt- und Befehlsnamen sind davon nicht betroffen)
+const ENGLISH_IN_DE = /\b(the|and|with|from|then|your|into|view|add|choose|configure|discovery|dynamic|settings|create|enable|when|file|content|get|open|select|save)\b/i;
 const norm = (t) => String(t).toLowerCase().replace(/[‘’“”]/g, "'").replace(/\s+/g, " ").trim();
 
 function plain(value, max, where, errors, { optional = false } = {}) {
@@ -52,6 +54,11 @@ function cleanVideo(raw, lang, sourceText, errors) {
   if (raw.punchline !== undefined) {
     if (!Array.isArray(raw.punchline) || raw.punchline.length < 1 || raw.punchline.length > 2) errors.push(`${where}.punchline: 1 bis 2 Zeilen erwartet`);
     else out.punchline = raw.punchline.map((l, i) => plain(l, 26, `${where}.punchline[${i}]`, errors));
+  }
+  if (lang === "de") {
+    const texts = [out.title, out.subtitle, ...out.steps.flatMap((s) => [s.title, s.productLabel, ...(s.actions || [])]), ...(out.punchline || [])].filter(Boolean);
+    const hit = texts.find((t) => ENGLISH_IN_DE.test(t));
+    if (hit) errors.push(`${where}: englisches Wort im deutschen Text (${hit})`);
   }
   if (lang === "de" && JSON.stringify(out).includes("ß")) errors.push(`${where}: "ss" statt Eszett verwenden`);
   return out;

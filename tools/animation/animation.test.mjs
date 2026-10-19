@@ -15,7 +15,7 @@ const good = () => ({
   gif: true, reason: "ordered steps", alt: { en: "Three steps.", de: "Drei Schritte." },
   video: {
     en: video([step(), step({ title: "Enable OpenAI", evidence: "enable OpenAI and save the setting" }), step({ title: "Pick the model", evidence: "the models appear in Cowork" })]),
-    de: video([step(), step({ title: "OpenAI aktivieren" }), step({ title: "Modell wählen" })]),
+    de: video([step({ title: "Einstellungen öffnen", actions: ["Einstellung"] }), step({ title: "OpenAI aktivieren", actions: ["OpenAI"] }), step({ title: "Modell wählen", actions: ["Cowork"] })]),
   },
 });
 
@@ -50,6 +50,13 @@ test("Schrittzahl 3 bis 5 und gleiche Struktur in en und de", () => {
   const h = good();
   h.video.de.steps[0].icon = "bolt";
   assert.match(validateDecision(h, candidate).errors.join(), /unterscheiden/);
+});
+test("englische Woerter im deutschen Video werden verworfen", () => {
+  const g = good();
+  g.video.de.steps[0].actions = ["Add and configure"];
+  const r = validateDecision(g, candidate);
+  assert.equal(r.gif, false);
+  assert.match(r.errors.join(), /englisches Wort/);
 });
 test("Remotion-Props enthalten keine Belege und setzen den Abschluss", () => {
   const r = validateDecision(good(), candidate);

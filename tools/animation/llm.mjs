@@ -1,7 +1,10 @@
-// Duenner LLM-Client. Standard: Azure AI Foundry / Azure OpenAI (gleiche Ressource wie die Kuratierung, Modell "model-router").
+// Duenner LLM-Client. Standard: Azure AI Foundry / Azure OpenAI (gleiche Ressource wie die Kuratierung, Deployment "gpt-54-ab" = gpt-5.4).
 // Secrets kommen nur aus Umgebungsvariablen (GitHub-Secrets), nie aus dem Code und nie ins Log.
-//   azure     (Standard): AZURE_FOUNDRY_ENDPOINT, AZURE_FOUNDRY_API_KEY, optional AZURE_FOUNDRY_DEPLOYMENT (Standard model-router)
+//   azure     (Standard): AZURE_FOUNDRY_ENDPOINT, AZURE_FOUNDRY_API_KEY, optional AZURE_FOUNDRY_DEPLOYMENT (Standard gpt-54-ab)
 //   anthropic (Alternative): ANTHROPIC_API_KEY und AUTOGIF_MODEL
+// gpt-5.x (Reasoning) nimmt kein temperature und kein max_tokens, sondern max_completion_tokens (api-version ab 2025-04-01-preview).
+//   temperature wird nur an ein Deployment namens model-router gesendet. Reasoning-Tokens zaehlen zum Limit, daher grosszuegig.
+//   model-router ist nicht mehr Standard: er hat in Tests ein Fremdmodell gewaehlt.
 // Die Antwort wird als JSON geparst; bei Fehlern gibt es einen zweiten Versuch, danach eine Ausnahme.
 
 async function post(url, headers, body) {
@@ -25,11 +28,12 @@ export async function askJson(system, user, env = process.env) {
     const endpoint = env.AZURE_FOUNDRY_ENDPOINT?.replace(/\/+$/, "");
     const key = env.AZURE_FOUNDRY_API_KEY;
     if (!endpoint || !key) throw new Error("AZURE_FOUNDRY_ENDPOINT und AZURE_FOUNDRY_API_KEY fehlen");
-    const deployment = env.AZURE_FOUNDRY_DEPLOYMENT || "model-router";
+    const deployment = env.AZURE_FOUNDRY_DEPLOYMENT || "gpt-54-ab";
     call = async () => {
-      const data = await post(`${endpoint}/openai/deployments/${deployment}/chat/completions?api-version=2024-10-21`, { "api-key": key }, {
+      const data = await post(`${endpoint}/openai/deployments/${deployment}/chat/completions?api-version=2025-04-01-preview`, { "api-key": key }, {
         messages: [{ role: "system", content: system }, { role: "user", content: user }],
-        response_format: { type: "json_object" }, temperature: 0.2, max_tokens: 2500,
+        response_format: { type: "json_object" }, max_completion_tokens: 8000,
+        ...(deployment === "model-router" ? { temperature: 0.2 } : {}),
       });
       return data.choices?.[0]?.message?.content;
     };

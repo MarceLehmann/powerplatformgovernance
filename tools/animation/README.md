@@ -15,3 +15,6 @@ Entscheidet per KI, ob zu einem neuen Beitrag ein animiertes Ablauf-GIF Sinn mac
 Workflow: `.github/workflows/auto-gif.yml` (nach "Publish Curated Articles", taeglicher Nachlauf, manuell mit `dry_run` und `decisions_file`).
 Lokal: `cd tools/animation && npm install && node --test animation.test.mjs`, dann `node run.mjs --root ../.. --site-url <domain> --dry-run` (braucht `AZURE_FOUNDRY_ENDPOINT` und `AZURE_FOUNDRY_API_KEY`) oder mit `--decisions <datei.json>` ohne KI.
 Doku fuer Betrieb und Livegang: `OUTPUT/2026-10-19_Auto-GIF_Daily_Governance.md` im Arbeitsordner von Marcel.
+
+KI-Modell: Standard ist das Azure-Deployment `gpt-54-ab` (gpt-5.4, Repo-Variable `AZURE_FOUNDRY_DEPLOYMENT`). gpt-5.x nimmt kein `temperature` und kein `max_tokens`, der Aufruf nutzt `max_completion_tokens` mit api-version `2025-04-01-preview`. `temperature` geht nur an ein Deployment `model-router`, das nicht mehr Standard ist (hat in Tests ein Fremdmodell gewaehlt).
+Sprachen: pro Beitrag ein GIF je Sprachfassung (`-en.gif`, `-de.gif`). Im deutschen Video muss der gesamte Text deutsch sein (nur Produkt- und Befehlsnamen bleiben englisch), `validate.mjs` verwirft englische Woerter.
