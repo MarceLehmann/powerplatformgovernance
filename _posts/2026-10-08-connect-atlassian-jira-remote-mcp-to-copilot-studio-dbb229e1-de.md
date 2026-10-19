@@ -42,6 +42,12 @@ faq:
   answer: Manuelle OAuth-Anmeldung kann die Zustimmung abschliessen, aber beim Erneuern
     scheitern, weil Atlassian keinen statischen Client besitzt. Dynamic discovery
     registriert ihn zur Laufzeit.
+animation:
+  src: /assets/img/animations/dbb229e11322afc7aa5b89e9-de.gif
+  poster: /assets/img/animations/dbb229e11322afc7aa5b89e9-de.poster.png
+  width: 800
+  height: 450
+  alt: "Vier Stationen: Atlassian-Voraussetzungen aktivieren, MCP-Tool mit Dynamic discovery erstellen, Verbindung aktivieren und Add and configure wählen, dann mit JQL prüfen und veröffentlichen."
 ---
 
 ## TL;DR

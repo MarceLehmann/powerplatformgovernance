@@ -1,0 +1,142 @@
+name: Auto GIF
+run-name: Auto GIF (${{ github.event_name }})
+# Entscheidet per KI, ob zu neuen Beitraegen ein Ablauf-GIF Sinn macht, rendert es (Remotion) und traegt es ins Front Matter ein.
+# Laeuft bewusst getrennt von "Publish Curated Articles": scheitert das GIF, wird der Beitrag trotzdem veroeffentlicht.
+# Geplant (2 Laeufe pro Tag) statt nach jeder Veroeffentlichung: spart Actions-Minuten, ein GIF darf Stunden spaeter erscheinen.
+on:
+  schedule:
+    - cron: "10 6,17 * * *"
+  workflow_dispatch:
+    inputs:
+      days:
+        description: "Beitraege der letzten N Tage pruefen"
+        default: "3"
+      dry_run:
+        description: "Nur entscheiden, nichts rendern oder committen"
+        type: boolean
+        default: false
+      decisions_file:
+        description: "Optional: JSON mit fertigen Entscheidungen (Test statt KI-Aufruf), Pfad im Repo"
+        default: ""
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: auto-gif
+  cancel-in-progress: false
+
+env:
+  SITE_URL: powerplatformgovernance.com
+  EXTRA_ARGS: "--flows --social --weekly-cap 2"
+  DAYS: ${{ inputs.days || '3' }}
+
+jobs:
+  gate:
+    # Guenstige Vorpruefung ohne Installation: gibt es ueberhaupt Beitraege ohne Entscheidung?
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      count: ${{ steps.count.outputs.count }}
+    steps:
+      - uses: actions/checkout@v7
+      - id: count
+        run: |
+          since=$(date -u -d "-$DAYS days" +%F)
+          count=0
+          for f in _posts/*-en.md; do
+            b=$(basename "$f"); [[ "${b:0:10}" < "$since" ]] && continue
+            grep -q '^content_type: curated_summary' "$f" || continue
+            grep -q '^animation:' "$f" && continue
+            id=$(grep -m1 '^curation_id:' "$f" | awk '{print $2}')
+            grep -q "\"$id\"" tools/animation/ledger.json 2>/dev/null && continue
+            count=$((count+1))
+          done
+          if [ -f _tabs/flows.md ]; then
+            for n in $(grep -oE '^### Starter flow [0-9]+' _tabs/flows.md | grep -oE '[0-9]+$'); do
+              grep -q "autogif:flows-$n" _tabs/flows.md && continue
+              grep -q "\"flows-$n\"" tools/animation/ledger.json 2>/dev/null && continue
+              count=$((count+1))
+            done
+          fi
+          echo "Undecided candidates: $count"
+          echo "count=$count" >> "$GITHUB_OUTPUT"
+
+  gif:
+    needs: gate
+    if: needs.gate.outputs.count != '0'
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - name: Require the authorised actor
+        if: github.event_name == 'workflow_dispatch'
+        run: test "$GITHUB_ACTOR" = 'MarceLehmann'
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: System packages for Remotion (Chromium libraries, ffmpeg)
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg libnss3 libdbus-1-3 libatk1.0-0 libgbm-dev libxrandr2 libxkbcommon-dev libxfixes3 libxcomposite1 libxdamage1 libatk-bridge2.0-0 libpango-1.0-0 libcairo2 libcups2
+          sudo apt-get install -y -qq libasound2t64 || sudo apt-get install -y -qq libasound2
+      - uses: actions/cache@v4
+        with:
+          path: tools/animation/node_modules
+          key: autogif-node-${{ hashFiles('tools/animation/package.json') }}
+      - name: Install Remotion
+        working-directory: tools/animation
+        run: npm install --no-audit --no-fund
+      - name: Unit tests (validation, no AI call)
+        working-directory: tools/animation
+        run: node --test animation.test.mjs
+      - name: Decide and render
+        env:
+          AZURE_FOUNDRY_ENDPOINT: ${{ secrets.AZURE_FOUNDRY_ENDPOINT }}
+          AZURE_FOUNDRY_API_KEY: ${{ secrets.AZURE_FOUNDRY_API_KEY }}
+          AZURE_FOUNDRY_DEPLOYMENT: ${{ vars.AZURE_FOUNDRY_DEPLOYMENT }}
+          DRY: ${{ inputs.dry_run }}
+          DECISIONS: ${{ inputs.decisions_file }}
+        run: |
+          set -euo pipefail
+          args=(--root . --site-url "$SITE_URL" --days "$DAYS" --max 5 $EXTRA_ARGS)
+          [ "$DRY" = "true" ] && args+=(--dry-run)
+          [ -n "$DECISIONS" ] && args+=(--decisions "$DECISIONS")
+          node tools/animation/run.mjs "${args[@]}"
+      - uses: ruby/setup-ruby@v1
+        if: inputs.dry_run != true
+        with:
+          ruby-version: '3.4'
+          bundler-cache: true
+      - name: Build and check the site with the new animations
+        if: inputs.dry_run != true
+        env:
+          JEKYLL_ENV: production
+        run: |
+          bundle exec jekyll build
+          bundle exec ruby tools/check-site.rb
+          bundle exec htmlproofer _site --disable-external
+      - name: Commit and deploy
+        if: inputs.dry_run != true
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          set -euo pipefail
+          git add -A -- _posts _tabs assets tools/animation
+          if git diff --cached --quiet; then echo "Nothing to commit"; exit 0; fi
+          visible=$(git diff --cached --name-only | grep -cE '^(_posts|_tabs|assets)/' || true)
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Add flow animations to new posts'
+          for attempt in 1 2 3; do
+            git push origin "HEAD:$BRANCH" && break
+            [ "$attempt" = 3 ] && exit 1
+            git pull --rebase origin "$BRANCH"
+          done
+          # Seite nur neu bauen, wenn sich sichtbar etwas geaendert hat (reine Ledger-Eintraege brauchen keinen Deploy)
+          # Deploy nur auf dem Standard-Branch: ein Test auf einem Feature-Branch darf die Seite nie veroeffentlichen
+          if [ "$visible" != "0" ] && [ "$BRANCH" = "main" ]; then gh workflow run pages-deploy.yml --ref "$BRANCH"; fi

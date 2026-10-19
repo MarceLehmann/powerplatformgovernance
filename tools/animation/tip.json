@@ -1,0 +1,73 @@
+{
+  "endCardSeconds": 4,
+  "kicker": "POWER AUTOMATE · MICROSOFT 365",
+  "title": "Mail-Anhänge in Planner?",
+  "subtitle": "Der Planner-Konnektor kann keine Dateien anhängen.",
+  "blocked": [
+    "outlook",
+    "planner"
+  ],
+  "note": "Der Workaround in 4 Schritten",
+  "loop": {
+    "label": "Apply to each",
+    "hint": "für jeden Anhang"
+  },
+  "standardLabel": "Standard",
+  "steps": [
+    {
+      "product": "outlook",
+      "icon": "mail",
+      "title": "Eine Mail kommt rein",
+      "actions": [
+        "Trigger"
+      ]
+    },
+    {
+      "product": "outlook",
+      "icon": "clip",
+      "title": "Anhänge aus der Mail auslesen",
+      "actions": [
+        "Get Attachment (V2)"
+      ],
+      "loop": true
+    },
+    {
+      "product": "sharepoint",
+      "icon": "file",
+      "title": "Jeden Anhang speichern",
+      "actions": [
+        "Create file"
+      ],
+      "loop": true
+    },
+    {
+      "product": "planner",
+      "icon": "planner",
+      "title": "Aufgabe + Link in Beschreibung",
+      "actions": [
+        "Create a task",
+        "Update task details"
+      ]
+    }
+  ],
+  "punchline": [
+    "Kein Premium.",
+    "Kein Upgrade."
+  ],
+  "punchSub": "NUR STANDARD-KONNEKTOREN",
+  "connectors": [
+    "Office 365 Outlook",
+    "SharePoint",
+    "Planner"
+  ],
+  "endUrl": "powerplatformtip.com",
+  "endLine": "Ein Power Platform Tipp von KMUpower",
+  "timing": {
+    "introOut": 3.3,
+    "steps": 4.5,
+    "stepGap": 1.15,
+    "badges": 9.0,
+    "punch": 10.6,
+    "end": 13.5
+  }
+}

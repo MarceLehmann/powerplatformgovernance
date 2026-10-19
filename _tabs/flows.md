@@ -16,6 +16,9 @@ Ten flows to start automating Power Platform administration: four inventories (e
 
 ### Starter flow 1: Environment inventory
 
+<!-- autogif:flows-1 -->
+{% include animation.html src="/assets/img/animations/flows-1-en.gif" poster="/assets/img/animations/flows-1-en.poster.png" width=800 height=450 alt="Five stages of the environment inventory flow: daily trigger, read all environments, normalise the fields, build an HTML table, post it to the admin Teams channel." %}
+
 **What it does:** Reads every environment in your tenant once a day - type, region, whether it is managed, whether it has Dataverse, when it was created - and posts an inventory table to Teams.
 
 **Who needs it:** Power Platform admins and CoE teams who want a daily, reliable answer to "how many environments do we actually have" instead of a guess.

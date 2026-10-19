@@ -41,6 +41,12 @@ faq:
     fail?
   answer: The pipeline compares passed tests with a configurable pass threshold and
     exits unsuccessfully when the rate is lower, blocking the merge.
+animation:
+  src: /assets/img/animations/eca764107e31cbaa07a73d51-en.gif
+  poster: /assets/img/animations/eca764107e31cbaa07a73d51-en.poster.png
+  width: 800
+  height: 450
+  alt: "Four stages: pack the pull request source with pac, import it into a CI environment, evaluate the draft agent, block the merge when the pass rate is below the threshold."
 ---
 
 ## TL;DR

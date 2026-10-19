@@ -42,6 +42,12 @@ faq:
   answer: Die Pipeline vergleicht bestandene Tests mit einem konfigurierbaren Schwellenwert
     und schlägt fehl, wenn die Erfolgsquote darunter liegt, wodurch der Merge blockiert
     wird.
+animation:
+  src: /assets/img/animations/eca764107e31cbaa07a73d51-de.gif
+  poster: /assets/img/animations/eca764107e31cbaa07a73d51-de.poster.png
+  width: 800
+  height: 450
+  alt: "Vier Stationen: Quellcode des Pull Requests mit pac packen, in eine CI-Umgebung importieren, den Entwurfsagent prüfen und den Merge blockieren, wenn die Erfolgsquote unter dem Schwellenwert liegt."
 ---
 
 ## TL;DR

@@ -127,6 +127,9 @@ script_includes:
   {% endif %}
 
   <div class="content">
+    {%- if page.animation %}
+      {% include animation.html src=page.animation.src poster=page.animation.poster width=page.animation.width height=page.animation.height alt=page.animation.alt %}
+    {%- endif %}
     {{ content }}
   </div>
 

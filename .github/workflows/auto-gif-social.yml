@@ -1,0 +1,48 @@
+name: Auto GIF LinkedIn
+run-name: Auto GIF LinkedIn (${{ github.event_name }})
+# Legt fuer vorgemerkte Beitraege mit Animation (tools/animation/social.json) einen Buffer-Beitrag mit dem MP4 4:5 an.
+# Standard: es wird NICHTS gesendet (Trockenlauf). Mit der Repo-Variable BUFFER_SEND=true entsteht ein Buffer-ENTWURF,
+# erst mit BUFFER_MODE=queue geht ein Beitrag in die Buffer-Warteschlange. Maximal 2 Beitraege pro Kalenderwoche
+# werden schon beim Vormerken (Auto GIF) begrenzt.
+on:
+  schedule:
+    - cron: "40 7,18 * * *" # nach den Auto-GIF-Laeufen und dem Pages-Deploy
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: auto-gif-social
+  cancel-in-progress: false
+
+jobs:
+  social:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Send pending posts to Buffer
+        env:
+          BUFFER_SEND: ${{ vars.BUFFER_SEND }}
+          BUFFER_MODE: ${{ vars.BUFFER_MODE }}
+          BUFFER_CHANNEL_ID: ${{ vars.BUFFER_CHANNEL_ID }}
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+        run: node tools/animation/social.mjs --root . --site-url powerplatformgovernance.com
+      - name: Commit the new state
+        env:
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          set -euo pipefail
+          git add -A -- tools/animation
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Record LinkedIn hand-off state [skip ci]'
+          git pull --rebase origin "$BRANCH"
+          git push origin "HEAD:$BRANCH"

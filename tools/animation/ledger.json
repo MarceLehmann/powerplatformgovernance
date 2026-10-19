@@ -1,0 +1,36 @@
+{
+  "dbb229e11322afc7aa5b89e9": {
+    "gif": true,
+    "reason": "The TL;DR lists the ordered setup stages from Atlassian prerequisites to publishing.",
+    "at": "2026-10-19",
+    "evidence": [
+      "Enable Atlassian Cloud, Rovo, Remote MCP, external app access, and product access first.",
+      "Then create the MCP tool, consent, activate the connection, select Add and configure, verify with JQL, and publish.",
+      "creating the connection alone does not attach it to the agent.",
+      "verify with JQL, and publish."
+    ]
+  },
+  "eca764107e31cbaa07a73d51": {
+    "gif": true,
+    "reason": "The post describes a four-stage CI pipeline that ends in a merge gate.",
+    "at": "2026-10-19",
+    "evidence": [
+      "packs the PR branch's src folder into an unmanaged solution",
+      "then imports it into a dedicated CI Dev environment.",
+      "The Evaluation API triggers runs against draft Copilot Studio agents",
+      "compares passed tests with a configurable pass threshold and exits unsuccessfully when the rate is lower, blocking the merge."
+    ]
+  },
+  "flows-1": {
+    "gif": true,
+    "reason": "The page lists five ordered flow steps from trigger to Teams post.",
+    "at": "2026-10-19",
+    "evidence": [
+      "Runs daily at 01:30.",
+      "Reads all environments of the tenant through the Power Platform for Admins connector, with paging.",
+      "Normalises each environment into name, type, region, managed status, Dataverse status and creation date.",
+      "Builds an HTML table with the first rows and a note on how many more exist.",
+      "Posts the inventory to the admin Teams channel (or a flow bot chat)."
+    ]
+  }
+}

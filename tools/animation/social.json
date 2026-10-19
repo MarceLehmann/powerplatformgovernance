@@ -1,0 +1,20 @@
+{
+  "dbb229e11322afc7aa5b89e9": {
+    "week": "2026-W43",
+    "status": "pending",
+    "title": "Connect Atlassian Jira Remote MCP to Copilot Studio",
+    "mp4": "/assets/img/animations/dbb229e11322afc7aa5b89e9-4x5.mp4",
+    "text": "Use Dynamic discovery, enable Atlassian prerequisites, create the environment connection, verify with JQL, and publish the agent.\n\nRead the summary 👇\nhttps://powerplatformgovernance.com/en/posts/connect-atlassian-jira-remote-mcp-to-copilot-studio-dbb229e1/\n\n#PowerPlatformGovernanceDaily",
+    "aiAssisted": true,
+    "createdAt": "2026-10-19"
+  },
+  "eca764107e31cbaa07a73d51": {
+    "week": "2026-W43",
+    "status": "pending",
+    "title": "Gate Copilot Studio agent merges with automated Azure DevOps evaluations",
+    "mp4": "/assets/img/animations/eca764107e31cbaa07a73d51-4x5.mp4",
+    "text": "Use the Copilot Studio Evaluation API and Azure DevOps to test draft agents from source and block pull requests when quality drops.\n\nRead the summary 👇\nhttps://powerplatformgovernance.com/en/posts/gate-copilot-studio-agent-merges-with-automated-azure-devops-eca76410/\n\n#PowerPlatformGovernanceDaily",
+    "aiAssisted": true,
+    "createdAt": "2026-10-19"
+  }
+}

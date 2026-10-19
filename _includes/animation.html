@@ -1,0 +1,30 @@
+{%- comment -%}
+  Animiertes Ablauf-GIF (Beilage, nie Screenshot). Wird von tools/animation/run.mjs erzeugt.
+  Aufruf im Post-Layout: {% include animation.html src=... poster=... width=... height=... alt=... %}
+  Auf der Seite /flows/ steht der Aufruf direkt unter der Ueberschrift des jeweiligen Flows.
+  GIF lazy, mit Alt-Text und Standbild fuer prefers-reduced-motion.
+{%- endcomment -%}
+{%- if include.src -%}
+  {%- assign anim_lang = page.lang | default: 'en' -%}
+  <figure class="flow-animation my-4 text-center">
+    <picture>
+      <source media="(prefers-reduced-motion: reduce)" srcset="{{ include.poster | relative_url }}">
+      <img
+        src="{{ include.src | relative_url }}"
+        alt="{{ include.alt | escape }}"
+        width="{{ include.width | default: 800 }}"
+        height="{{ include.height | default: 450 }}"
+        loading="lazy"
+        decoding="async"
+        style="max-width: 100%; height: auto; border: 1px solid var(--main-border-color, #d9e1e8); border-radius: 8px;"
+      >
+    </picture>
+    <figcaption class="small text-muted pt-2">
+      {%- if page.source_name -%}
+        {%- if anim_lang == 'de' -%}Schematische Darstellung der beschriebenen Schritte nach {{ page.source_name | escape }}, kein Screenshot.{%- else -%}Schematic view of the steps described by {{ page.source_name | escape }}, not a screenshot.{%- endif -%}
+      {%- else -%}
+        {%- if anim_lang == 'de' -%}Schematische Darstellung der folgenden Schritte.{%- else -%}Schematic view of the steps below.{%- endif -%}
+      {%- endif -%}
+    </figcaption>
+  </figure>
+{%- endif -%}
