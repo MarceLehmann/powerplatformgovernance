@@ -19,20 +19,22 @@
   },
   "7f57b3cbe68b609e605dbf3a": {
     "week": "2026-W43",
-    "status": "pending",
+    "status": "drafted",
     "title": "Copilot Studio Skills: Modular Guidance for Agents",
     "mp4": "/assets/img/animations/7f57b3cbe68b609e605dbf3a-4x5.mp4",
     "text": "Copilot Studio Skills load scenario-specific instructions and resources on demand, improving manageability while requiring precise routing descriptions and trust review.\n\nRead the summary 👇\nhttps://powerplatformgovernance.com/en/posts/copilot-studio-skills-modular-guidance-for-agents-7f57b3cb/\n\n#PowerPlatformGovernanceDaily",
     "aiAssisted": true,
-    "createdAt": "2026-10-20"
+    "createdAt": "2026-10-20",
+    "bufferPostId": "6ad71d5713b179ca365df039"
   },
   "2846036e40d3dc9cc1e5b17b": {
     "week": "2026-W43",
-    "status": "pending",
+    "status": "drafted",
     "title": "Require Microsoft authentication to protect Copilot Studio agents",
     "mp4": "/assets/img/animations/2846036e40d3dc9cc1e5b17b-4x5.mp4",
     "text": "The new environment-level control forces integrated Microsoft authentication, blocking unauthenticated Direct Line content while preserving the M365 Agents SDK path.\n\nRead the summary 👇\nhttps://powerplatformgovernance.com/en/posts/require-microsoft-authentication-to-protect-copilot-studio-agents-2846036e/\n\n#PowerPlatformGovernanceDaily",
     "aiAssisted": true,
-    "createdAt": "2026-10-20"
+    "createdAt": "2026-10-20",
+    "bufferPostId": "6ad71d58497ec56180375a2f"
   }
 }
