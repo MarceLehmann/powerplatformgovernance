@@ -1,5 +1,5 @@
 import React from "react";
-import { AbsoluteFill, Easing, Img, interpolate, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
+import { AbsoluteFill, Easing, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
 import { loadFont as loadOutfit } from "@remotion/google-fonts/Outfit";
 import { loadFont as loadInter } from "@remotion/google-fonts/Inter";
 
@@ -8,7 +8,7 @@ const inter = loadInter("normal", { weights: ["400", "500", "600", "700"], subse
 const DISPLAY = outfit.fontFamily;
 const BODY = inter.fontFamily;
 
-// KMUpower: Navy + Teal aus dem Logo, flache helle Flaeche (kein Verlauf, kein Glow)
+// Navy + Teal aus dem Logo, flache helle Flaeche (kein Verlauf, kein Glow)
 const C = {
   bg: "#F4F7F9", card: "#FFFFFF", line: "#D9E1E8", navy: "#243B4E", muted: "#52667A",
   teal: "#20BDBD", tealDark: "#0B7F85", green: "#0F7B3F", greenBg: "#E3F3EA", red: "#C4314B",
@@ -273,9 +273,8 @@ export const Tip: React.FC<TipProps> = (props) => {
   const end = (
     <AbsoluteFill style={{ background: "#FFFFFF", opacity: endP, alignItems: "center", justifyContent: "center" }}>
       <div style={{ display: "flex", flexDirection: "column", alignItems: "center", opacity: endLogo, transform: `translateY(${(1 - endLogo) * 18}px)` }}>
-        <Img src={staticFile("logo.png")} style={{ width: portrait ? 760 : 600, height: "auto", filter: "brightness(1.025) contrast(1.04)" }} />
-        <div style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: portrait ? 64 : 60, color: C.navy, marginTop: 10 }}>{props.endUrl}</div>
-        <div style={{ fontFamily: BODY, fontSize: 28, color: C.muted, marginTop: 14 }}>{props.endLine}</div>
+        <div style={{ fontFamily: BODY, fontSize: portrait ? 44 : 40, color: C.muted }}>{props.endLine}</div>
+        <div style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: portrait ? 76 : 68, color: C.navy, marginTop: 22 }}>{props.endUrl}</div>
       </div>
     </AbsoluteFill>
   );

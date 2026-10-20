@@ -180,7 +180,7 @@ export async function main(argv) {
     const renderJobs = [];
     for (const c of jobs) for (const lang of c.langs) {
       const json = path.join(tmp, `${c.key}-${lang}.json`);
-      const endLine = lang === "de" ? "Kuratiert von KMUpower" : "Curated by KMUpower";
+      const endLine = lang === "de" ? "Kuratiert von Marcel Lehmann" : "Curated by Marcel Lehmann";
       fs.writeFileSync(json, JSON.stringify(toRemotionProps(c.decision.video[lang], { endUrl, endLine })));
       renderJobs.push({ json, gif: path.join(outDir, `${c.key}-${lang}.gif`), key: c.key, lang });
       // LinkedIn: MP4 4:5 nur fuer Beitraege (nicht /flows/), englische Fassung. Welche Beitraege wirklich gepostet werden, entscheidet social.mjs (Tageslimit).

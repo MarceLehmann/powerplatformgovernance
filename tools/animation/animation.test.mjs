@@ -117,7 +117,7 @@ test("Reparaturrunde: scheitert der zweite Aufruf, bleibt die erste Pruefung", a
 });
 test("Remotion-Props enthalten keine Belege und setzen den Abschluss", () => {
   const r = validateDecision(good(), candidate);
-  const props = toRemotionProps(r.video.en, { endUrl: "example.com", endLine: "Curated by KMUpower" });
+  const props = toRemotionProps(r.video.en, { endUrl: "example.com", endLine: "Curated by Marcel Lehmann" });
   assert.equal(props.kicker, "");
   assert.ok(props.steps.every((s) => !("evidence" in s)));
   assert.equal(props.endUrl, "example.com");
