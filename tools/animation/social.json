@@ -90,5 +90,23 @@
     "note": "zurückgesetzt 20.10.2026 nach Kanalwechsel",
     "bufferPostId": "6ad77549c7c093be385b339d",
     "dueAt": "2026-10-21T07:00:00.000Z"
+  },
+  "e9595911a09f620889303ada": {
+    "status": "queued",
+    "day": "2026-10-20",
+    "kind": "image",
+    "title": "Use Cloud PC pools as a governed runtime for Computer Use",
+    "text": "Use Cloud PC pools as a governed runtime for Computer Use\n\nMicrosoft Copilot Studio Computer Use can run on Cloud PC pools, Microsoft hosted Windows 11 Cloud PCs that are Entra ID joined and Intune enrolled. This enables single sign on to internal systems, policy enforcement, security configuration and compliance controls, unlike the unmanaged hosted browser runtime.\n\nSource: The Custom Engine\n\nFull summary: https://powerplatformgovernance.com/en/posts/use-cloud-pc-pools-as-a-governed-runtime-for-computer-use-e9595911/\n\n#PowerPlatformGovernanceDaily #CopilotStudio",
+    "bufferPostId": "6ad7b805e519c58f0e12f884",
+    "dueAt": "2026-10-21T10:00:00.000Z"
+  },
+  "2f86687dce48bf8ab640fbd2": {
+    "status": "queued",
+    "day": "2026-10-20",
+    "kind": "image",
+    "title": "Govern a Generic Custom Connector Before Sharing It",
+    "text": "Govern a Generic Custom Connector Before Sharing It\n\nA Custom Connector can store an API key on one encrypted connection and expose generic actions that receive relativePath, query and body at runtime. DLP applies to the whole connector, so a connector capable of reaching any REST API should be governed before productive sharing.\n\nSource: PowerPlatformTip\n\nFull summary: https://powerplatformgovernance.com/en/posts/govern-a-generic-custom-connector-before-sharing-it-2f86687d/\n\n#PowerPlatformGovernanceDaily #CopilotStudio",
+    "bufferPostId": "6ad7b8067e4feac55ce66743",
+    "dueAt": "2026-10-21T13:00:00.000Z"
   }
 }
