@@ -126,7 +126,7 @@ export const Tip: React.FC<TipProps> = (props) => {
   const sc = props.scale ?? 1;
   const k = feed ? 0.84 : portrait ? 1.1 : 1.08 * sc;
 
-  const introIn = p(0.2, 0.6);
+  const introIn = 1; // Frame 0 zeigt Titel und Frage bereits voll (kein Einblenden aus Weiss)
   const introOut = p(T.introOut, 0.6);
   const mainTitle = p(T.introOut + 0.5, 0.8);
   const stepP = (i: number) => p(T.steps + i * T.stepGap, 0.7);
@@ -236,7 +236,6 @@ export const Tip: React.FC<TipProps> = (props) => {
     </div>
   );
 
-  const ID = props.blocked ? 0 : 1.1; // ohne Icon-Paar beginnt der Titel frueher
   const tile = portrait ? 190 : 170;
   const xP = p(1.0, 0.5);
   const dashP = p(0.8, 0.7);
@@ -263,9 +262,9 @@ export const Tip: React.FC<TipProps> = (props) => {
             {iconLabel(props.blocked[1])}
           </div>
         </div>) : null}
-        {props.kicker ? <div style={{ fontFamily: BODY, fontWeight: 600, fontSize: 24, letterSpacing: "0.1em", color: C.tealDark, marginTop: 56, opacity: p(1.2 - ID, 0.6) }}>{props.kicker}</div> : null}
-        <div style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: 104, lineHeight: 1.08, color: C.navy, marginTop: 20, maxWidth: portrait ? 900 : 1500, opacity: p(1.4 - ID, 0.7), transform: `translateY(${(1 - p(1.4 - ID, 0.7)) * 24}px)` }}>{props.title}</div>
-        <div style={{ fontFamily: BODY, fontSize: 38, lineHeight: 1.4, color: C.muted, marginTop: 26, maxWidth: portrait ? 800 : 1100, opacity: p(2.0 - ID, 0.7) }}>{props.subtitle}</div>
+        {props.kicker ? <div style={{ fontFamily: BODY, fontWeight: 600, fontSize: 24, letterSpacing: "0.1em", color: C.tealDark, marginTop: 56, opacity: 1 }}>{props.kicker}</div> : null}
+        <div style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: 104, lineHeight: 1.08, color: C.navy, marginTop: 20, maxWidth: portrait ? 900 : 1500, opacity: 1 }}>{props.title}</div>
+        <div style={{ fontFamily: BODY, fontSize: 38, lineHeight: 1.4, color: C.muted, marginTop: 26, maxWidth: portrait ? 800 : 1100, opacity: 1 }}>{props.subtitle}</div>
       </div>
     </AbsoluteFill>
   );
