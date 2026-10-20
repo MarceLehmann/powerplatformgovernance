@@ -43,6 +43,12 @@ faq:
 - question: Why are Copilot Studio maker and test-pane Snowflake connections separate?
   answer: The maker connection configures the agent, while the test pane runs as the
     end user. Both connections must succeed for end-to-end tool calls.
+animation:
+  src: /assets/img/animations/6861fb61631e88be31003eff-en.gif
+  poster: /assets/img/animations/6861fb61631e88be31003eff-en.poster.png
+  width: 800
+  height: 450
+  alt: "A four step flow shows Copilot Studio using Manual OAuth, copying the generated custom connector redirect URI to Entra, configuring DEFAULT_SECONDARY_ROLES, and testing both maker and end user connections."
 ---
 
 ## TL;DR

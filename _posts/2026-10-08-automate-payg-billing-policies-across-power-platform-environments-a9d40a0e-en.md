@@ -41,6 +41,12 @@ faq:
     unlinking?
   answer: An Azure Budget alert calls an Automation runbook, which uses managed identity
     to invoke Power Automate; the flow finds the policy and unlinks its environments.
+animation:
+  src: /assets/img/animations/a9d40a0e6e5f7a4c29d125cc-en.gif
+  poster: /assets/img/animations/a9d40a0e6e5f7a4c29d125cc-en.poster.png
+  width: 800
+  height: 450
+  alt: "A budget alert starts an Automation runbook, which uses managed identity to invoke Power Automate, and the flow finds the billing policy and unlinks its environments."
 ---
 
 ## TL;DR

@@ -41,6 +41,12 @@ faq:
 - question: How can I find Copilot Studio agents affected by the authentication policy?
   answer: Use Copilot Studio Kit inventory and filter Dataverse Agent Details by End
     User Authentication Type. Anything other than Integrated is affected.
+animation:
+  src: /assets/img/animations/2846036e40d3dc9cc1e5b17b-en.gif
+  poster: /assets/img/animations/2846036e40d3dc9cc1e5b17b-en.poster.png
+  width: 800
+  height: 450
+  alt: "Three-step sequence: in Power Platform admin center set Require Microsoft authentication, unauthenticated Direct Line clients are blocked while the M365 Agents SDK still works, then makers update non-Integrated agents."
 ---
 
 ## TL;DR

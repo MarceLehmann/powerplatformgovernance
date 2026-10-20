@@ -43,6 +43,12 @@ faq:
   answer: Das Copilot Studio Kit schreibt die Authentifizierungsart nach Dataverse.
     Filtere Agent Details nach End User Authentication Type und prüfe alle Werte ausser
     Integrated.
+animation:
+  src: /assets/img/animations/2846036e40d3dc9cc1e5b17b-de.gif
+  poster: /assets/img/animations/2846036e40d3dc9cc1e5b17b-de.poster.png
+  width: 800
+  height: 450
+  alt: "Dreistufige Abfolge: Im Power Platform Admin Center Microsoft-Anmeldung setzen, nicht authentifizierte Direct-Line-Clients werden blockiert, waehrend das M365 Agents SDK weiter funktioniert, danach aktualisieren Maker Agenten ohne Integrated."
 ---
 
 ## TL;DR

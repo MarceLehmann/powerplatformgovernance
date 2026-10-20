@@ -40,6 +40,12 @@ faq:
 - question: What risks should I review before using PowerPoint interactive slides?
   answer: Review preview compatibility, static fallback states, accessibility, one-block
     editing limits and the accuracy of illustrative scores or recommendations.
+animation:
+  src: /assets/img/animations/db10b65c504009a7f7229fdf-en.gif
+  poster: /assets/img/animations/db10b65c504009a7f7229fdf-en.poster.png
+  width: 800
+  height: 450
+  alt: "A 3 step sequence shows an admin enabling Frontier, a licensed user opening Choose skills or using @create-interactive-slides, and the feature running governance simulations."
 ---
 
 ## TL;DR

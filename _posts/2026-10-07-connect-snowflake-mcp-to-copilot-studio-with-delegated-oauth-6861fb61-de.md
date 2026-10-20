@@ -43,6 +43,12 @@ faq:
 - question: Warum benötigen Maker und Testbereich in Copilot Studio getrennte Snowflake-Verbindungen?
   answer: Die Maker-Verbindung richtet den Agenten ein, der Testbereich läuft jedoch
     als Endbenutzer. Für echte Toolaufrufe müssen beide Verbindungen erfolgreich sein.
+animation:
+  src: /assets/img/animations/6861fb61631e88be31003eff-de.gif
+  poster: /assets/img/animations/6861fb61631e88be31003eff-de.poster.png
+  width: 800
+  height: 450
+  alt: "Ein Ablauf mit vier Schritten zeigt Manual OAuth in Copilot Studio, das Eintragen der erzeugten Connector-Weiterleitungs-URI in Entra, DEFAULT_SECONDARY_ROLES und den Test von Maker- und Endbenutzerverbindungen."
 ---
 
 ## TL;DR

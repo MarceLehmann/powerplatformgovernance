@@ -40,6 +40,12 @@ faq:
 - question: Why should I review a Copilot Studio Skill before adding it?
   answer: Skills shape agent behavior and may bundle scripts, so review them for prompt
     injection, tool misuse, and content inconsistent with their stated purpose.
+animation:
+  src: /assets/img/animations/7f57b3cbe68b609e605dbf3a-en.gif
+  poster: /assets/img/animations/7f57b3cbe68b609e605dbf3a-en.poster.png
+  width: 800
+  height: 450
+  alt: "Sequence showing how Copilot Studio Skills work: the agent checks the Skill name and description against the conversation, loads the full instructions when matched, and uses bundled files and resources in the Skill."
 ---
 
 ## TL;DR

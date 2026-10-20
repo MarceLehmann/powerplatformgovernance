@@ -41,6 +41,12 @@ faq:
   answer: Skills beeinflussen das Agentenverhalten und können Skripte enthalten. Prüft
     sie daher auf Prompt Injection, Tool-Missbrauch und Inhalte ausserhalb ihres beschriebenen
     Zwecks.
+animation:
+  src: /assets/img/animations/7f57b3cbe68b609e605dbf3a-de.gif
+  poster: /assets/img/animations/7f57b3cbe68b609e605dbf3a-de.poster.png
+  width: 800
+  height: 450
+  alt: "Ablauf, wie Copilot Studio Skills funktionieren: Der Agent prueft Name und Beschreibung gegen die Unterhaltung, laedt bei Treffer die vollstaendigen Anweisungen und nutzt gebuendelte Dateien und Ressourcen im Skill."
 ---
 
 ## TL;DR

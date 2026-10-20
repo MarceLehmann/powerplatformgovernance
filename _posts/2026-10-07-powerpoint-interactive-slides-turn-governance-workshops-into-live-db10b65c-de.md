@@ -42,6 +42,12 @@ faq:
   answer: Prüfe Vorschau-Kompatibilität, statische Fallback-Zustände, Barrierefreiheit,
     die Bearbeitung als ein Inhaltsobjekt sowie die Richtigkeit beispielhafter Bewertungen
     und Empfehlungen.
+animation:
+  src: /assets/img/animations/db10b65c504009a7f7229fdf-de.gif
+  poster: /assets/img/animations/db10b65c504009a7f7229fdf-de.poster.png
+  width: 800
+  height: 450
+  alt: "Eine Abfolge mit 3 Schritten zeigt, wie ein Admin Frontier aktiviert, ein lizenzierter Benutzer \"Choose skills\" oder \"@create-interactive-slides\" nutzt und die Funktion Governance-Simulationen ausfuehrt."
 ---
 
 ## TL;DR

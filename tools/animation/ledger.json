@@ -32,5 +32,191 @@
       "Builds an HTML table with the first rows and a note on how many more exist.",
       "Posts the inventory to the admin Teams channel (or a flow bot chat)."
     ]
+  },
+  "0edb21cfdfdb934301fa8a4b": {
+    "gif": false,
+    "reason": "The post is governance and best practice guidance without a concrete 3 to 5 stage procedure explicitly described in order.",
+    "at": "2026-10-20"
+  },
+  "5ba08d5f121641fb7e6f0097": {
+    "gif": false,
+    "reason": "The post describes an eight-step process and unordered guidance points, so a correct 3 to 5 stage sequence cannot be shown without omitting or inventing steps.",
+    "at": "2026-10-20"
+  },
+  "f571a20b50974fdf8a38c528": {
+    "gif": false,
+    "reason": "The post gives unordered guidance and comparisons of integration patterns, but it does not state a concrete 3 to 5 stage procedure.",
+    "at": "2026-10-20"
+  },
+  "0367a3869e4f4e5a98ec82ff": {
+    "gif": false,
+    "reason": "The post is governance guidance and checks, not a concrete 3 to 5 stage procedure that should be shown as a flow.",
+    "at": "2026-10-20"
+  },
+  "57fd953f49be484b32598f3d": {
+    "gif": false,
+    "reason": "The post gives governance principles and control categories, not a concrete 3 to 5 stage procedure or ordered settings path.",
+    "at": "2026-10-20"
+  },
+  "49260018275a34fae44750e8": {
+    "gif": false,
+    "reason": "The post gives governance advice and contrasts Hero Links with legacy links, but it does not state a concrete 3 to 5 stage procedure to depict without inventing steps.",
+    "at": "2026-10-20"
+  },
+  "b89b9ecd08b750bfdefd9f59": {
+    "gif": false,
+    "reason": "The post gives governance guidance and ownership roles, not a concrete 3 to 5 stage procedure stated in order.",
+    "at": "2026-10-20"
+  },
+  "01b8133b73a48f4d63347975": {
+    "gif": false,
+    "reason": "The post compares deployment options and policy behaviors, but it does not present one concrete 3 to 5 stage procedure to animate without inventing steps.",
+    "at": "2026-10-20"
+  },
+  "72e99cb0ef6cea05386c9199": {
+    "gif": false,
+    "reason": "The post gives governance advice and examples, but it does not state one concrete 3 to 5 stage procedure in a defined order.",
+    "at": "2026-10-20"
+  },
+  "d64affc6c88b485ce4821eba": {
+    "gif": false,
+    "reason": "The post lists capabilities and governance uses of the Copilot Agent Kit, but it does not state a concrete 3 to 5 stage procedure or ordered sequence.",
+    "at": "2026-10-20"
+  },
+  "59c14192b65047ce92f68569": {
+    "gif": false,
+    "reason": "The post gives governance advice and testing checks, but it does not state one concrete 3 to 5 stage procedure in order.",
+    "at": "2026-10-20"
+  },
+  "a6587821ee97212cfde271be": {
+    "gif": false,
+    "reason": "This is governance news and risk guidance without a concrete 3 to 5 stage procedure stated in the post text.",
+    "at": "2026-10-20"
+  },
+  "edbcf5c71d8a851efcc13d73": {
+    "gif": false,
+    "reason": "The post gives governance guidance and product choice criteria, not a concrete 3 to 5 stage procedure stated in order.",
+    "at": "2026-10-20"
+  },
+  "a5c64ead3cf1c3155572159e": {
+    "gif": false,
+    "reason": "This post is a decision guide and comparison of integration options, not a concrete 3 to 5 stage procedure.",
+    "at": "2026-10-20"
+  },
+  "1850e057abb723eba1ca8f64": {
+    "gif": false,
+    "reason": "The post gives governance advice and recommendations, but it does not state a concrete 3 to 5 stage procedure in order.",
+    "at": "2026-10-20"
+  },
+  "0f8adcbae7fbb90a96c2c7e6": {
+    "gif": false,
+    "reason": "The post gives governance checks and feature descriptions, but it does not state one concrete 3 to 5 stage procedure in order.",
+    "at": "2026-10-20"
+  },
+  "2a02adf9043caf18b7a07a1b": {
+    "gif": false,
+    "reason": "The post is a comparison and governance guide without a concrete 3 to 5 stage procedure named in order.",
+    "at": "2026-10-20"
+  },
+  "5e6685c0e510fef814667566": {
+    "gif": false,
+    "reason": "The post explains capabilities, sources, and governance guidance, but it does not state a concrete 3 to 5 step procedure in order.",
+    "at": "2026-10-20"
+  },
+  "66fd559e7358e278a71e1236": {
+    "gif": false,
+    "reason": "The post gives governance guidance and describes what a custom view should show, but it does not state a concrete 3 to 5 step procedure.",
+    "at": "2026-10-20"
+  },
+  "flows-2": {
+    "gif": false,
+    "reason": "The post describes an 8 step flow, which exceeds the 3 to 5 stages limit for a GIF.",
+    "at": "2026-10-20"
+  },
+  "flows-3": {
+    "gif": false,
+    "reason": "The post describes an 8 step flow, which exceeds the allowed 3 to 5 distinct stages for a GIF.",
+    "at": "2026-10-20"
+  },
+  "flows-4": {
+    "gif": false,
+    "reason": "The post describes an eight step admin flow, which exceeds the 3 to 5 stage limit for a GIF.",
+    "at": "2026-10-20"
+  },
+  "flows-5": {
+    "gif": false,
+    "reason": "The post lists an 8 step process, which exceeds the 3 to 5 stage limit for a GIF.",
+    "at": "2026-10-20"
+  },
+  "flows-7": {
+    "gif": false,
+    "reason": "The post describes a 6 step admin flow, which exceeds the 3 to 5 stage limit for a GIF.",
+    "at": "2026-10-20"
+  },
+  "flows-8": {
+    "gif": false,
+    "reason": "The post describes an 8 step admin flow, which exceeds the 3 to 5 distinct stages allowed for a GIF.",
+    "at": "2026-10-20"
+  },
+  "flows-9": {
+    "gif": false,
+    "reason": "The post describes a 7 step implementation and reporting flow, which exceeds the 3 to 5 stages allowed for a GIF.",
+    "at": "2026-10-20"
+  },
+  "flows-10": {
+    "gif": false,
+    "reason": "The post describes an eight step flow, which is more than the allowed 3 to 5 stages for a GIF.",
+    "at": "2026-10-20"
+  },
+  "7f57b3cbe68b609e605dbf3a": {
+    "gif": true,
+    "reason": "The post describes a clear 3 stage sequence: the agent evaluates the Skill name and description, loads the full content on demand, and the Skill may include bundled resources.",
+    "at": "2026-10-20",
+    "evidence": [
+      "Copilot Studio evaluates the Skill name and description against the conversation",
+      "then loads the full instructions when the scenario matches",
+      "A Skill can contain SKILL.md plus optional references, assets, templates, examples, and executable scripts"
+    ]
+  },
+  "2846036e40d3dc9cc1e5b17b": {
+    "gif": true,
+    "reason": "The post gives a concrete 3 stage admin and maker sequence: set the environment control, direct effects on clients and SDK, then update affected agents.",
+    "at": "2026-10-20",
+    "evidence": [
+      "In Power Platform admin center, Security > Identity and access, Require Microsoft authentication forces Copilot Studio makers to use Authenticate with Microsoft.",
+      "Raw Direct Line clients receive an error before content is shared, while the M365 Agents SDK continues working.",
+      "Existing non-Integrated agents stop responding until makers update them."
+    ]
+  },
+  "6861fb61631e88be31003eff": {
+    "gif": true,
+    "reason": "The post gives a concrete 4 stage setup and validation sequence for connecting Snowflake MCP to Copilot Studio.",
+    "at": "2026-10-20",
+    "evidence": [
+      "Copilot Studio must use Manual OAuth because Snowflake lacks Dynamic Client Registration.",
+      "Copy it from the connector Security tab and add it to the Entra client app.",
+      "Add the generated custom connector redirect URI to Entra, configure DEFAULT_SECONDARY_ROLES, and test both maker and end-user connections.",
+      "Both connections must succeed for end-to-end tool calls."
+    ]
+  },
+  "db10b65c504009a7f7229fdf": {
+    "gif": true,
+    "reason": "The post gives a concrete 3 stage enablement and use sequence for Create interactive slides in PowerPoint Copilot.",
+    "at": "2026-10-20",
+    "evidence": [
+      "An administrator enables Frontier for the tenant or selected users",
+      "then a licensed user selects Choose skills or uses @create-interactive-slides.",
+      "Agent Launch Control varies data sensitivity, action authority, autonomy and identity, recalculating readiness, architecture, warnings and required controls."
+    ]
+  },
+  "a9d40a0e6e5f7a4c29d125cc": {
+    "gif": true,
+    "reason": "The post gives a concrete 3 stage automation chain for automatic unlinking after a budget threshold breach.",
+    "at": "2026-10-20",
+    "evidence": [
+      "An Azure Budget alert calls an Automation runbook",
+      "An Azure Budget alert calls an Automation runbook, which uses managed identity to invoke Power Automate;",
+      "the flow finds the policy and unlinks its environments."
+    ]
   }
 }
