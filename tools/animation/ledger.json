@@ -218,5 +218,61 @@
       "An Azure Budget alert calls an Automation runbook, which uses managed identity to invoke Power Automate;",
       "the flow finds the policy and unlinks its environments."
     ]
+  },
+  "2e3f29133ab449825e50bfe9": {
+    "gif": false,
+    "reason": "The post gives governance guidance and test considerations, but it does not state a concrete 3 to 5 stage procedure in order.",
+    "at": "2026-10-20"
+  },
+  "2f86687dce48bf8ab640fbd2": {
+    "gif": false,
+    "reason": "The post gives governance advice and facts about DLP scope and connector design, but it does not state a concrete 3 to 5 stage procedure.",
+    "at": "2026-10-20"
+  },
+  "5880acaf4d0985ef063cd6df": {
+    "gif": false,
+    "reason": "This post is a governance roadmap and best practice summary, not a concrete 3 to 5 stage procedure stated in order.",
+    "at": "2026-10-20"
+  },
+  "e9595911a09f620889303ada": {
+    "gif": false,
+    "reason": "The post is governance guidance and feature explanation without a concrete 3 to 5 stage procedure stated in order.",
+    "at": "2026-10-20"
+  },
+  "flows-6": {
+    "gif": false,
+    "reason": "The post describes an eight step flow, which exceeds the 3 to 5 stage limit for a GIF.",
+    "at": "2026-10-20"
+  },
+  "ff37005e9e42ea140df8f5f4": {
+    "gif": true,
+    "reason": "The post gives a concrete three stage support flow: run the debug command, get the Conversation ID, then send the ID with usage details.",
+    "at": "2026-10-20",
+    "evidence": [
+      "Type /debug conversationid in the chat; the agent displays the Conversation ID for that specific session.",
+      "Type /debug in Microsoft 365 Copilot; the declarative agent shows a debugging card that includes the Conversation ID.",
+      "Include the Conversation ID, where and when you used the agent, and what you expected compared with what happened."
+    ]
+  },
+  "cf92c4fc56714df93d079ba6": {
+    "gif": true,
+    "reason": "The post states a concrete 4 stage analysis pipeline from sending test utterances to streaming metrics in a dashboard.",
+    "at": "2026-10-20",
+    "evidence": [
+      "send test utterances to a Copilot Studio agent",
+      "capture message and event Activities",
+      "calculate latency statistics with Python DataFrames",
+      "stream metrics and planner data to a Gradio dashboard"
+    ]
+  },
+  "acc2a13dfa6884faa27bfc2e": {
+    "gif": true,
+    "reason": "The post describes a concrete 3 stage workflow for returning verbatim knowledge excerpts in Copilot Studio.",
+    "at": "2026-10-20",
+    "evidence": [
+      "It rewrites a user query with relevant conversation context before sending it to an AI Prompt.",
+      "Use Custom Search with an AI Prompt that receives the search results and instructs the agent to quote them verbatim without summarizing.",
+      "The flow can also include citations."
+    ]
   }
 }

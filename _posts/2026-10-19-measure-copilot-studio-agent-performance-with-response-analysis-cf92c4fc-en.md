@@ -39,6 +39,12 @@ faq:
     tool?
   answer: Store tokens in environment variables or secure credential stores, never
     source control, and implement proper token refresh logic.
+animation:
+  src: /assets/img/animations/cf92c4fc56714df93d079ba6-en.gif
+  poster: /assets/img/animations/cf92c4fc56714df93d079ba6-en.poster.png
+  width: 800
+  height: 450
+  alt: "A four step flow shows the Response Analysis tool sending test utterances to a Copilot Studio agent, capturing Activities, calculating latency statistics, and streaming metrics and planner data to Gradio."
 ---
 
 ## TL;DR

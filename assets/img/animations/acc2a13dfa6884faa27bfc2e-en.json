@@ -1,0 +1,41 @@
+{
+ "title": "Return verbatim knowledge excerpts",
+ "subtitle": "Use query generation, Custom Search and an AI Prompt to return exact text with citations.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "search",
+   "productLabel": "Copilot Studio",
+   "title": "Rewrite the user query with context",
+   "actions": [
+    "Generate a Search Query"
+   ],
+   "evidence": "It rewrites a user query with relevant conversation context before sending it to an AI Prompt."
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "link",
+   "productLabel": "Copilot Studio",
+   "title": "Run Custom Search on knowledge",
+   "actions": [
+    "Custom Search"
+   ],
+   "evidence": "Use Custom Search with an AI Prompt that receives the search results and instructs the agent to quote them verbatim without summarizing."
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "doc",
+   "productLabel": "Copilot Studio",
+   "title": "Quote results verbatim with citations",
+   "actions": [
+    "AI Prompt",
+    "citations"
+   ],
+   "evidence": "The flow can also include citations."
+  }
+ ],
+ "punchline": [
+  "Method 1 most consistent",
+  "Granular control"
+ ]
+}

@@ -1,0 +1,41 @@
+{
+ "title": "Conversation ID fuer Support holen",
+ "subtitle": "Fuehre den passenden Debug-Befehl aus, erfasse die ID und sende dem Support die Sitzungsdetails.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "chat",
+   "productLabel": "Copilot Studio",
+   "title": "Debug-Befehl eingeben",
+   "actions": [
+    "/debug conversationid",
+    "/debug"
+   ]
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "doc",
+   "productLabel": "Copilot Studio",
+   "title": "Conversation ID erfassen",
+   "actions": [
+    "Conversation ID",
+    "Debugging-Karte"
+   ]
+  },
+  {
+   "product": "generic",
+   "icon": "arrow",
+   "productLabel": "Support",
+   "title": "Support den Kontext senden",
+   "actions": [
+    "Conversation ID",
+    "Nutzungsort",
+    "erwartet vs tatsaechlich"
+   ]
+  }
+ ],
+ "punchline": [
+  "Support kann",
+  "die Unterhaltung finden"
+ ]
+}

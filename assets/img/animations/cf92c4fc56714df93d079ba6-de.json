@@ -1,0 +1,51 @@
+{
+ "title": "Copilot Studio Antworten analysieren",
+ "subtitle": "Tests senden, Activities erfassen, Latenz berechnen und Resultate an Gradio streamen.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "chat",
+   "productLabel": "Copilot Studio",
+   "title": "Testeingaben an den Agenten senden",
+   "actions": [
+    "M365 Agents SDK",
+    "Testeingaben"
+   ]
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "doc",
+   "productLabel": "Copilot Studio",
+   "title": "Nachrichten und Events erfassen",
+   "actions": [
+    "message Activities",
+    "event Activities"
+   ]
+  },
+  {
+   "product": "generic",
+   "icon": "table",
+   "productLabel": "Python DataFrames",
+   "title": "Latenzstatistiken berechnen",
+   "actions": [
+    "Python DataFrames",
+    "Latenzstatistiken berechnen"
+   ]
+  },
+  {
+   "product": "generic",
+   "icon": "play",
+   "productLabel": "Gradio",
+   "title": "Metriken ins Dashboard streamen",
+   "actions": [
+    "Metriken streamen",
+    "Planner-Daten",
+    "Gradio-Dashboard"
+   ]
+  }
+ ],
+ "punchline": [
+  "Latenz und Planner-Sicht",
+  "Nur eine Session"
+ ]
+}

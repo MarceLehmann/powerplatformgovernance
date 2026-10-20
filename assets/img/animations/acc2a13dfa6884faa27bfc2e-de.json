@@ -1,0 +1,38 @@
+{
+ "title": "Unveraenderte Wissensauszuege ausgeben",
+ "subtitle": "Mit Abfrageerstellung, Custom Search und AI Prompt exakten Text mit Quellenangaben ausgeben.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "search",
+   "productLabel": "Copilot Studio",
+   "title": "Benutzeranfrage mit Kontext neu schreiben",
+   "actions": [
+    "Generate a Search Query"
+   ]
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "link",
+   "productLabel": "Copilot Studio",
+   "title": "Custom Search auf Wissen ausfuehren",
+   "actions": [
+    "Custom Search"
+   ]
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "doc",
+   "productLabel": "Copilot Studio",
+   "title": "Resultate unveraendert zitieren",
+   "actions": [
+    "AI Prompt",
+    "Quellenangaben"
+   ]
+  }
+ ],
+ "punchline": [
+  "Methode 1 am konstantesten",
+  "Genaue Kontrolle"
+ ]
+}

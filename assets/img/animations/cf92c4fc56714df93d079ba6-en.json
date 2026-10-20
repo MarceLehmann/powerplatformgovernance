@@ -1,0 +1,55 @@
+{
+ "title": "Analyze Copilot Studio responses",
+ "subtitle": "Send tests, capture Activities, calculate latency, and stream results to Gradio.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "chat",
+   "productLabel": "Copilot Studio",
+   "title": "Send test utterances to the agent",
+   "actions": [
+    "M365 Agents SDK",
+    "test utterances"
+   ],
+   "evidence": "send test utterances to a Copilot Studio agent"
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "doc",
+   "productLabel": "Copilot Studio",
+   "title": "Capture message and event Activities",
+   "actions": [
+    "message Activities",
+    "event Activities"
+   ],
+   "evidence": "capture message and event Activities"
+  },
+  {
+   "product": "generic",
+   "icon": "table",
+   "productLabel": "Python DataFrames",
+   "title": "Calculate latency statistics",
+   "actions": [
+    "Python DataFrames",
+    "calculate latency statistics"
+   ],
+   "evidence": "calculate latency statistics with Python DataFrames"
+  },
+  {
+   "product": "generic",
+   "icon": "play",
+   "productLabel": "Gradio",
+   "title": "Stream metrics to the dashboard",
+   "actions": [
+    "stream metrics",
+    "planner data",
+    "Gradio dashboard"
+   ],
+   "evidence": "stream metrics and planner data to a Gradio dashboard"
+  }
+ ],
+ "punchline": [
+  "Latency and planner view",
+  "Single session only"
+ ]
+}

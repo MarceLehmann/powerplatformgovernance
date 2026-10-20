@@ -1,0 +1,44 @@
+{
+ "title": "Get a Conversation ID for support",
+ "subtitle": "Run the right debug command, capture the ID, and send support the session details.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "chat",
+   "productLabel": "Copilot Studio",
+   "title": "Enter the debug command",
+   "actions": [
+    "/debug conversationid",
+    "/debug"
+   ],
+   "evidence": "Type /debug conversationid in the chat; the agent displays the Conversation ID for that specific session."
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "doc",
+   "productLabel": "Copilot Studio",
+   "title": "Capture the Conversation ID",
+   "actions": [
+    "Conversation ID",
+    "debugging card"
+   ],
+   "evidence": "Type /debug in Microsoft 365 Copilot; the declarative agent shows a debugging card that includes the Conversation ID."
+  },
+  {
+   "product": "generic",
+   "icon": "arrow",
+   "productLabel": "Support",
+   "title": "Send support the full context",
+   "actions": [
+    "Conversation ID",
+    "usage location",
+    "expected vs actual"
+   ],
+   "evidence": "Include the Conversation ID, where and when you used the agent, and what you expected compared with what happened."
+  }
+ ],
+ "punchline": [
+  "Support can locate",
+  "the conversation"
+ ]
+}
