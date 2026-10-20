@@ -130,3 +130,48 @@ test("Front Matter wird gelesen", () => {
   assert.equal(p.fm.title, "A");
   assert.ok(!p.body.includes("{%"));
 });
+
+// --- Re-Render ---
+import fs from "node:fs";
+import os from "node:os";
+import path from "node:path";
+import { findPostCandidates, addFrontMatter, main } from "./run.mjs";
+
+function fixture() {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), "rr-"));
+  fs.mkdirSync(path.join(root, "_posts"));
+  fs.mkdirSync(path.join(root, "tools", "animation"), { recursive: true });
+  const anim = "animation:\n  src: /a.gif\n  poster: /a.png\n  width: 1\n  height: 2\n  alt: \"old\"\n";
+  const post = `---\ntitle: T\ndate: 2026-10-19 08:00:00 +0000\ncontent_type: curated_summary\ncuration_id: c1\n${anim}permalink: /x/\n---\n\nBody\n`;
+  fs.writeFileSync(path.join(root, "_posts", "2026-10-19-x-en.md"), post);
+  return { root };
+}
+test("Re-Render: nur Beitraege mit Animation, trotz Ledger; ohne Option umgekehrt", () => {
+  const { root } = fixture();
+  const now = new Date("2026-10-20T00:00:00Z");
+  assert.equal(findPostCandidates(root, { c1: { gif: true } }, 30, now, true).length, 1);
+  assert.equal(findPostCandidates(root, {}, 30, now, false).length, 0);
+  assert.equal(findPostCandidates(root, {}, 30, now, true)[0].existingAlt.en, "old");
+});
+test("addFrontMatter ersetzt einen vorhandenen animation-Block", () => {
+  const { root } = fixture();
+  const f = path.join(root, "_posts", "2026-10-19-x-en.md");
+  addFrontMatter(f, "animation:\n  src: /b.gif\n  poster: /b.png\n  width: 9\n  height: 8\n  alt: \"new\"");
+  const p = parsePost(fs.readFileSync(f, "utf8"));
+  assert.equal(p.fm.animation.src, "/b.gif");
+  assert.equal(p.fm.permalink, "/x/");
+  assert.equal((fs.readFileSync(f, "utf8").match(/^animation:/gm) || []).length, 1);
+});
+test("Re-Render mit Nein: Ledger, Social-Status und Beitrag bleiben unveraendert", async () => {
+  const { root } = fixture();
+  const led = path.join(root, "tools", "animation", "ledger.json");
+  fs.writeFileSync(led, "{}\n");
+  const postFile = path.join(root, "_posts", "2026-10-19-x-en.md");
+  const before = fs.readFileSync(postFile, "utf8");
+  const dec = path.join(root, "d.json");
+  fs.writeFileSync(dec, JSON.stringify({ c1: { gif: false, reason: "nein" } }));
+  await main(["--root", root, "--days", "3650", "--rerender", "--decisions", dec]);
+  assert.equal(fs.readFileSync(led, "utf8"), "{}\n");
+  assert.equal(fs.readFileSync(postFile, "utf8"), before);
+  assert.ok(!fs.existsSync(path.join(root, "tools", "animation", "social.json")));
+});
