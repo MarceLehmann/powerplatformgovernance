@@ -82,11 +82,13 @@
     "expiredAt": "2026-10-20"
   },
   "66fd559e7358e278a71e1236": {
-    "status": "pending",
+    "status": "queued",
     "day": "2026-10-20",
     "kind": "image",
     "title": "Give Copilot Studio owners visibility of shared environment credits",
     "text": "Give Copilot Studio owners visibility of shared environment credits\n\nCopilot Studio agent owners can see their own agent's consumption, but shared environment credit allocation and other agents' use are normally available only to admins. A custom view should show makers their eligible environments, usage against each allocation, daily consumption and per-agent billed credits.\n\nSource: Karlex Oy\n\nFull summary: https://powerplatformgovernance.com/en/posts/give-copilot-studio-owners-visibility-of-shared-environment-credits-66fd559e/\n\n#PowerPlatformGovernanceDaily #CopilotStudio #PowerAutomate",
-    "note": "zurückgesetzt 20.10.2026 nach Kanalwechsel"
+    "note": "zurückgesetzt 20.10.2026 nach Kanalwechsel",
+    "bufferPostId": "6ad77549c7c093be385b339d",
+    "dueAt": "2026-10-21T07:00:00.000Z"
   }
 }
