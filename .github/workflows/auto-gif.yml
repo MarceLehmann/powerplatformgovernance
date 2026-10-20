@@ -29,7 +29,7 @@ concurrency:
 
 env:
   SITE_URL: powerplatformgovernance.com
-  EXTRA_ARGS: "--flows --social --weekly-cap 2"
+  EXTRA_ARGS: "--flows --social"
   DAYS: ${{ inputs.days || '3' }}
 
 jobs:
@@ -92,7 +92,7 @@ jobs:
         run: npm install --no-audit --no-fund
       - name: Unit tests (validation, no AI call)
         working-directory: tools/animation
-        run: node --test animation.test.mjs
+        run: node --test
       - name: Decide and render
         env:
           AZURE_FOUNDRY_ENDPOINT: ${{ secrets.AZURE_FOUNDRY_ENDPOINT }}

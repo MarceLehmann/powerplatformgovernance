@@ -1,12 +1,16 @@
 name: Auto GIF LinkedIn
 run-name: Auto GIF LinkedIn (${{ github.event_name }})
-# Legt fuer vorgemerkte Beitraege mit Animation (tools/animation/social.json) einen Buffer-Beitrag mit dem MP4 4:5 an.
+# LinkedIn ueber Buffer: alle neuen Governance-Beitraege (curated_summary und original_article) sind Kandidaten,
+# hoechstens 3 Beitraege pro Kalendertag (Europe/Zurich), zuerst Beitraege mit Video (Auto-GIF), dann mit Bild, neueste zuerst.
 # Standard: es wird NICHTS gesendet (Trockenlauf). Mit der Repo-Variable BUFFER_SEND=true entsteht ein Buffer-ENTWURF,
-# erst mit BUFFER_MODE=queue geht ein Beitrag in die Buffer-Warteschlange. Maximal 2 Beitraege pro Kalenderwoche
-# werden schon beim Vormerken (Auto GIF) begrenzt.
+# erst mit BUFFER_MODE=queue geht ein Beitrag in die Buffer-Warteschlange (optional BUFFER_SLOTS="09:00,12:00,15:00" fuer feste Zeiten).
+# Ausloeser: nach jedem Build and Deploy (also nach Publish und Auto GIF) und geplant mehrmals taeglich.
 on:
+  workflow_run:
+    workflows: ["Build and Deploy"]
+    types: [completed]
   schedule:
-    - cron: "40 7,18 * * *" # nach den Auto-GIF-Laeufen und dem Pages-Deploy
+    - cron: "40 6,9,12,15,18 * * *"
   workflow_dispatch: {}
 
 permissions:
@@ -18,6 +22,7 @@ concurrency:
 
 jobs:
   social:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -27,11 +32,20 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - uses: actions/cache@v4
+        with:
+          path: tools/animation/node_modules
+          key: autogif-node-${{ hashFiles('tools/animation/package.json') }}
+      - name: Install dependencies (only the YAML parser is used, no scripts)
+        working-directory: tools/animation
+        run: npm install --no-audit --no-fund --ignore-scripts
       - name: Send pending posts to Buffer
         env:
           BUFFER_SEND: ${{ vars.BUFFER_SEND }}
           BUFFER_MODE: ${{ vars.BUFFER_MODE }}
           BUFFER_CHANNEL_ID: ${{ vars.BUFFER_CHANNEL_ID }}
+          BUFFER_SLOTS: ${{ vars.BUFFER_SLOTS }}
+          BUFFER_DAILY_CAP: ${{ vars.BUFFER_DAILY_CAP }}
           BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
         run: node tools/animation/social.mjs --root . --site-url powerplatformgovernance.com
       - name: Commit the new state

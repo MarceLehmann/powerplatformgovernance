@@ -3,7 +3,7 @@
 //
 //   node tools/animation/run.mjs --root <Repo> --site-url powerplatformdaily.com [--days 3] [--max 5] [--flows]
 //                                [--decisions <datei.json>] [--dry-run] [--only <key,key>] [--report <datei.json>]
-//                                [--social] [--weekly-cap 2]   LinkedIn-Beilage (MP4 4:5) vormerken, max. N Beitraege pro Kalenderwoche
+//                                [--social]   zusaetzlich das MP4 4:5 fuer LinkedIn rendern (Auswahl und Tageslimit macht social.mjs)
 //
 // --decisions: statt der KI eine Datei { "<key>": <KI-Antwort> } verwenden (Test/Rueckwirkend). Die Antworten laufen
 //              durch dieselbe Validierung wie echte KI-Antworten.
@@ -102,21 +102,6 @@ export function findFlowCandidates(root, ledger) {
 
 const q = (s) => JSON.stringify(s);
 
-/** ISO-Kalenderwoche als "2026-W43" (UTC). */
-export function isoWeek(date) {
-  const d = new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate()));
-  const day = d.getUTCDay() || 7;
-  d.setUTCDate(d.getUTCDate() + 4 - day);
-  const yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
-  return `${d.getUTCFullYear()}-W${String(Math.ceil(((d - yearStart) / 86400000 + 1) / 7)).padStart(2, "0")}`;
-}
-
-/** LinkedIn-Text: Beschreibung des Beitrags, Link, Hashtag. Keine Gedankenstriche. */
-export function linkedinText(meta, siteBase, hashtag) {
-  const clean = (t) => String(t).replace(/[–—]/g, ",").replace(/\s+/g, " ").trim();
-  return `${clean(meta.description)}\n\nRead the summary \u{1F447}\n${siteBase}${meta.permalink}\n\n${hashtag}`;
-}
-
 function addFrontMatter(file, block) {
   const raw = fs.readFileSync(file, "utf8");
   const m = raw.match(FM);
@@ -159,11 +144,6 @@ export async function main(argv) {
   const ledgerPath = path.join(root, "tools", "animation", "ledger.json");
   const ledger = fs.existsSync(ledgerPath) ? JSON.parse(fs.readFileSync(ledgerPath, "utf8")) : {};
   const preset = opt.decisions ? JSON.parse(fs.readFileSync(path.resolve(opt.decisions), "utf8")) : null;
-  const socialPath = path.join(root, "tools", "animation", "social.json");
-  const social = fs.existsSync(socialPath) ? JSON.parse(fs.readFileSync(socialPath, "utf8")) : {};
-  const cap = Number(opt.weeklyCap ?? 2);
-  const week = isoWeek(new Date());
-  let weekCount = Object.values(social).filter((s) => s.week === week).length;
   const only = opt.only ? new Set(opt.only.split(",")) : null;
   const endUrl = opt.siteUrl || "powerplatformdaily.com";
 
@@ -203,10 +183,8 @@ export async function main(argv) {
       const endLine = lang === "de" ? "Kuratiert von KMUpower" : "Curated by KMUpower";
       fs.writeFileSync(json, JSON.stringify(toRemotionProps(c.decision.video[lang], { endUrl, endLine })));
       renderJobs.push({ json, gif: path.join(outDir, `${c.key}-${lang}.gif`), key: c.key, lang });
-      // LinkedIn: nur Beitraege (nicht /flows/), nur englische Fassung, hoechstens `cap` pro Kalenderwoche
-      if (opt.social && c.kind === "post" && lang === "en" && weekCount < cap) {
-        weekCount++;
-        c.social = true;
+      // LinkedIn: MP4 4:5 nur fuer Beitraege (nicht /flows/), englische Fassung. Welche Beitraege wirklich gepostet werden, entscheidet social.mjs (Tageslimit).
+      if (opt.social && c.kind === "post" && lang === "en") {
         renderJobs.push({ json, gif: path.join(outDir, `${c.key}-4x5.mp4`), key: c.key, lang: "en", mp4: true });
       }
     }
@@ -220,10 +198,6 @@ export async function main(argv) {
         if (c.kind === "post") addFrontMatter(c.files[lang], `animation:\n  src: ${a.src}\n  poster: ${a.poster}\n  width: ${a.width}\n  height: ${a.height}\n  alt: ${q(a.alt)}`);
         else addFlowInclude(c.file, c.heading, c.key, a);
       }
-      if (c.social) {
-        const siteBase = `https://${endUrl}`;
-        social[c.key] = { week, status: "pending", title: c.title, mp4: `/assets/img/animations/${c.key}-4x5.mp4`, text: linkedinText(c.meta, siteBase, opt.hashtag || "#PowerPlatformGovernanceDaily"), aiAssisted: true, createdAt: new Date().toISOString().slice(0, 10) };
-      }
       ledger[c.key] = { gif: true, reason: c.decision.reason, at: new Date().toISOString().slice(0, 10), evidence };
     }
     fs.rmSync(tmp, { recursive: true, force: true });
@@ -232,7 +206,6 @@ export async function main(argv) {
     fs.mkdirSync(path.dirname(ledgerPath), { recursive: true });
     fs.writeFileSync(ledgerPath, JSON.stringify(ledger, null, 2) + "\n");
   }
-  if (!opt.dry && Object.keys(social).length) fs.writeFileSync(socialPath, JSON.stringify(social, null, 2) + "\n");
   if (opt.report) fs.writeFileSync(path.resolve(opt.report), JSON.stringify(report, null, 2));
   console.log(`Ergebnis: ${yes} GIF(s) von ${candidates.length} Kandidaten${opt.dry ? " (Trockenlauf)" : ""}`);
   return report;

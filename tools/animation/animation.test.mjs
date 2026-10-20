@@ -3,8 +3,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { validateDecision, toRemotionProps } from "./validate.mjs";
 import { SYSTEM_PROMPT, LIMITS, ICON_LIST } from "./prompt.mjs";
-import { decideWithRepair, unescapeBody, isoWeek, linkedinText, parsePost } from "./run.mjs";
-import { buildInput } from "./social.mjs";
+import { decideWithRepair, unescapeBody, parsePost } from "./run.mjs";
 
 const candidate = {
   langs: ["en", "de"],
@@ -130,22 +129,4 @@ test("Front Matter wird gelesen", () => {
   const p = parsePost("---\ntitle: A\nlang: en\n---\n\n## TL;DR\n\n{% include x.html %}\nText\n");
   assert.equal(p.fm.title, "A");
   assert.ok(!p.body.includes("{%"));
-});
-test("ISO-Kalenderwoche", () => {
-  assert.equal(isoWeek(new Date("2026-10-19T12:00:00Z")), "2026-W43");
-  assert.equal(isoWeek(new Date("2026-10-25T23:00:00Z")), "2026-W43");
-  assert.equal(isoWeek(new Date("2026-10-26T01:00:00Z")), "2026-W44");
-});
-test("LinkedIn-Text ohne Gedankenstriche", () => {
-  const t = linkedinText({ description: "Do A — then B.", permalink: "/en/posts/x/" }, "https://example.com", "#Tag");
-  assert.ok(!/[–—]/.test(t));
-  assert.ok(t.includes("https://example.com/en/posts/x/") && t.endsWith("#Tag"));
-});
-test("Buffer: Standard ist Entwurf, KI-Kennzeichnung gesetzt, Video als Asset", () => {
-  const entry = { text: "t", mp4: "/assets/img/animations/k-4x5.mp4", title: "T", aiAssisted: true };
-  const draft = buildInput(entry, "https://example.com", "chan", undefined);
-  assert.equal(draft.saveToDraft, true);
-  assert.equal(draft.aiAssisted, true);
-  assert.equal(draft.assets[0].video.url, "https://example.com/assets/img/animations/k-4x5.mp4");
-  assert.equal(buildInput(entry, "https://example.com", "chan", "queue").saveToDraft, undefined);
 });

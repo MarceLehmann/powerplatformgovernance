@@ -2,7 +2,7 @@
   "name": "autogif",
   "private": true,
   "scripts": {
-    "test": "node --test animation.test.mjs",
+    "test": "node --test",
     "render": "node render.mjs"
   },
   "dependencies": {
