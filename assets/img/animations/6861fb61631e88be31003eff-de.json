@@ -1,0 +1,48 @@
+{
+ "title": "Snowflake MCP OAuth einrichten",
+ "subtitle": "Manual OAuth nutzen, URI in Entra eintragen, Rollen setzen und beide Verbindungstypen testen.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "key",
+   "productLabel": "Copilot Studio",
+   "title": "Manual OAuth verwenden",
+   "actions": [
+    "Manual OAuth"
+   ]
+  },
+  {
+   "product": "generic",
+   "icon": "link",
+   "productLabel": "Entra",
+   "title": "Connector-URI eintragen",
+   "actions": [
+    "Security-Registerkarte",
+    "in Entra eintragen"
+   ]
+  },
+  {
+   "product": "generic",
+   "icon": "gear",
+   "productLabel": "Snowflake",
+   "title": "Sekundaere Rollen konfigurieren",
+   "actions": [
+    "DEFAULT_SECONDARY_ROLES"
+   ]
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "check",
+   "productLabel": "Copilot Studio",
+   "title": "Beide Verbindungstypen testen",
+   "actions": [
+    "Maker-Verbindung",
+    "Testbereich-Verbindungen"
+   ]
+  }
+ ],
+ "punchline": [
+  "Beide Verbindungen",
+  "erfolgreich"
+ ]
+}

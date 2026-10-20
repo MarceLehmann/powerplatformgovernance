@@ -1,0 +1,42 @@
+{
+ "title": "Auto unlink PAYG environments",
+ "subtitle": "When budget threshold is breached, the chain finds the policy and unlinks its environments.",
+ "steps": [
+  {
+   "product": "generic",
+   "icon": "bell",
+   "productLabel": "Azure Budget",
+   "title": "Budget alert is triggered",
+   "actions": [
+    "Azure Budget alert",
+    "threshold is breached"
+   ],
+   "evidence": "An Azure Budget alert calls an Automation runbook, which uses managed identity to invoke Power Automate; the flow finds the policy and unlinks its environments."
+  },
+  {
+   "product": "generic",
+   "icon": "gear",
+   "productLabel": "Azure Automation",
+   "title": "Runbook invokes Power Automate",
+   "actions": [
+    "Automation runbook",
+    "managed identity"
+   ],
+   "evidence": "An Azure Budget alert calls an Automation runbook, which uses managed identity to invoke Power Automate; the flow finds the policy and unlinks its environments."
+  },
+  {
+   "product": "powerautomate",
+   "icon": "bolt",
+   "productLabel": "Power Automate",
+   "title": "Flow unlinks environments",
+   "actions": [
+    "finds the policy",
+    "unlinks environments"
+   ],
+   "evidence": "the flow finds the policy and unlinks its environments."
+  }
+ ],
+ "punchline": [
+  "All environments unlinked"
+ ]
+}

@@ -47,7 +47,7 @@ animation:
   poster: /assets/img/animations/eca764107e31cbaa07a73d51-de.poster.png
   width: 800
   height: 450
-  alt: "Vier Stationen: Quellcode des Pull Requests mit pac packen, in eine CI-Umgebung importieren, den Entwurfsagent prüfen und den Merge blockieren, wenn die Erfolgsquote unter dem Schwellenwert liegt."
+  alt: "Ein Ablauf mit vier Schritten zeigt, wie EvalGateADO den PR Quellcode mit pac packt, in eine eigene CI Umgebung importiert, den Entwurfsagenten mit der Evaluation API prueft und den Azure DevOps Merge bei verfehltem Schwellenwert blockiert."
 ---
 
 ## TL;DR

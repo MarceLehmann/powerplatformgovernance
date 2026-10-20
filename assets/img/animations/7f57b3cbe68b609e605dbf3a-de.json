@@ -1,0 +1,43 @@
+{
+ "title": "Wie Copilot Studio Skills laedt",
+ "subtitle": "Copilot Studio gleicht einen Skill mit dem Szenario ab und laedt dann den vollen Inhalt bei Bedarf.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "doc",
+   "productLabel": "Copilot Studio",
+   "title": "Skill-Inhalt paketieren",
+   "actions": [
+    "SKILL.md",
+    "Referenzen",
+    "ausfuehrbare Skripte"
+   ]
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "search",
+   "productLabel": "Copilot Studio",
+   "title": "Nach Name und Beschreibung leiten",
+   "actions": [
+    "Skill-Name",
+    "Beschreibung",
+    "Unterhaltung"
+   ]
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "arrow",
+   "productLabel": "Copilot Studio",
+   "title": "Volle Anweisungen bei Bedarf laden",
+   "actions": [
+    "volle Anweisungen",
+    "Szenario passt",
+    "bei Bedarf"
+   ]
+  }
+ ],
+ "punchline": [
+  "Situative Anleitung",
+  "laedt bei Bedarf"
+ ]
+}

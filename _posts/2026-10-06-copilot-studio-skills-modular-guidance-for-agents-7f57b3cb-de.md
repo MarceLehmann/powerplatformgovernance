@@ -46,7 +46,7 @@ animation:
   poster: /assets/img/animations/7f57b3cbe68b609e605dbf3a-de.poster.png
   width: 800
   height: 450
-  alt: "Ablauf, wie Copilot Studio Skills funktionieren: Der Agent prueft Name und Beschreibung gegen die Unterhaltung, laedt bei Treffer die vollstaendigen Anweisungen und nutzt gebuendelte Dateien und Ressourcen im Skill."
+  alt: "Eine 3-Schritt-Abfolge zeigt, wie Copilot Studio Name und Beschreibung eines Skills mit dem Szenario abgleicht und dann die vollstaendigen Anweisungen bei Bedarf laedt."
 ---
 
 ## TL;DR

@@ -47,7 +47,7 @@ animation:
   poster: /assets/img/animations/a9d40a0e6e5f7a4c29d125cc-de.poster.png
   width: 800
   height: 450
-  alt: "Ein Budgetalarm startet ein Automation-Runbook, das mit verwalteter Identitaet Power Automate aufruft. Der Flow sucht die Abrechnungsrichtlinie und trennt ihre Umgebungen."
+  alt: "Die Abfolge zeigt, wie ein Azure-Budgetalarm ein Automation-Runbook aufruft und danach Power Automate die Abrechnungsrichtlinie findet und ihre Umgebungen trennt."
 ---
 
 ## TL;DR

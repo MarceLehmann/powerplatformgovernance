@@ -1,0 +1,56 @@
+{
+ "title": "Gate agent merges with evaluations",
+ "subtitle": "Pack PR source, import to CI, evaluate the draft, and block merge below the pass threshold.",
+ "steps": [
+  {
+   "product": "generic",
+   "icon": "file",
+   "productLabel": "Azure DevOps",
+   "title": "Pack the PR source",
+   "actions": [
+    "pac",
+    "src folder",
+    "unmanaged solution"
+   ],
+   "evidence": "EvalGateADO packs the PR branch's src folder into an unmanaged solution"
+  },
+  {
+   "product": "generic",
+   "icon": "arrow",
+   "productLabel": "Azure DevOps",
+   "title": "Import into CI environment",
+   "actions": [
+    "import",
+    "dedicated CI Dev environment"
+   ],
+   "evidence": "then imports it into a dedicated CI Dev environment."
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "check",
+   "productLabel": "Copilot Studio",
+   "title": "Evaluate the draft agent",
+   "actions": [
+    "Evaluation API",
+    "draft agents",
+    "metric-level results"
+   ],
+   "evidence": "The Evaluation API triggers runs against draft Copilot Studio agents, polls completion, and returns metric-level results for each test case."
+  },
+  {
+   "product": "generic",
+   "icon": "shield",
+   "productLabel": "Azure DevOps",
+   "title": "Block merge on low pass rate",
+   "actions": [
+    "configurable pass threshold",
+    "exits unsuccessfully",
+    "blocking the merge"
+   ],
+   "evidence": "The pipeline compares passed tests with a configurable pass threshold and exits unsuccessfully when the rate is lower, blocking the merge."
+  }
+ ],
+ "punchline": [
+  "Merge blocked on low quality"
+ ]
+}

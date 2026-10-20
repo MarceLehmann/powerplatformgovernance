@@ -1,0 +1,43 @@
+{
+ "title": "Require auth for Copilot Studio",
+ "subtitle": "Turn on the environment control to block unauthenticated Direct Line access.",
+ "steps": [
+  {
+   "product": "admin",
+   "icon": "shield",
+   "productLabel": "Power Platform admin",
+   "title": "Open Identity and access",
+   "actions": [
+    "Security",
+    "Identity and access"
+   ],
+   "evidence": "In Power Platform admin center, Security > Identity and access, Require Microsoft authentication"
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "key",
+   "productLabel": "Copilot Studio",
+   "title": "Require Microsoft authentication",
+   "actions": [
+    "Microsoft authentication",
+    "Authenticate with Microsoft"
+   ],
+   "evidence": "Require Microsoft authentication forces Copilot Studio makers to use Authenticate with Microsoft."
+  },
+  {
+   "product": "generic",
+   "icon": "check",
+   "productLabel": "Direct Line and SDK",
+   "title": "Direct Line blocked, SDK still works",
+   "actions": [
+    "Direct Line",
+    "M365 Agents SDK"
+   ],
+   "evidence": "Raw Direct Line clients receive an error before content is shared, while the M365 Agents SDK continues working."
+  }
+ ],
+ "punchline": [
+  "Block unauthenticated access",
+  "Keep SDK path working"
+ ]
+}

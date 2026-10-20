@@ -1,0 +1,39 @@
+{
+ "title": "PAYG Umgebungen auto trennen",
+ "subtitle": "Bei ueberschrittenem Budget findet die Kette die Richtlinie und trennt ihre Umgebungen.",
+ "steps": [
+  {
+   "product": "generic",
+   "icon": "bell",
+   "productLabel": "Azure Budget",
+   "title": "Budgetalarm wird ausgeloest",
+   "actions": [
+    "Azure-Budgetalarm",
+    "Schwellenwert ueberschritten"
+   ]
+  },
+  {
+   "product": "generic",
+   "icon": "gear",
+   "productLabel": "Azure Automation",
+   "title": "Runbook ruft Power Automate auf",
+   "actions": [
+    "Automation-Runbook",
+    "verwaltete Identitaet"
+   ]
+  },
+  {
+   "product": "powerautomate",
+   "icon": "bolt",
+   "productLabel": "Power Automate",
+   "title": "Flow trennt Umgebungen",
+   "actions": [
+    "Richtlinie finden",
+    "Umgebungen trennen"
+   ]
+  }
+ ],
+ "punchline": [
+  "Alle Umgebungen getrennt"
+ ]
+}

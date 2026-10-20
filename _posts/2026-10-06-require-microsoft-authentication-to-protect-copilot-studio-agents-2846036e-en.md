@@ -46,7 +46,7 @@ animation:
   poster: /assets/img/animations/2846036e40d3dc9cc1e5b17b-en.poster.png
   width: 800
   height: 450
-  alt: "Three-step sequence: in Power Platform admin center set Require Microsoft authentication, unauthenticated Direct Line clients are blocked while the M365 Agents SDK still works, then makers update non-Integrated agents."
+  alt: "Three steps show the admin path to Security and Identity and access, turning on Require Microsoft authentication, and the outcome where Direct Line is blocked while the M365 Agents SDK still works."
 ---
 
 ## TL;DR

@@ -48,7 +48,7 @@ animation:
   poster: /assets/img/animations/2846036e40d3dc9cc1e5b17b-de.poster.png
   width: 800
   height: 450
-  alt: "Dreistufige Abfolge: Im Power Platform Admin Center Microsoft-Anmeldung setzen, nicht authentifizierte Direct-Line-Clients werden blockiert, waehrend das M365 Agents SDK weiter funktioniert, danach aktualisieren Maker Agenten ohne Integrated."
+  alt: "Drei Schritte zeigen den Adminpfad zu Sicherheit und Identitaet und Zugriff, das Aktivieren von Microsoft-Authentifizierung erforderlich und das Ergebnis, dass Direct Line blockiert wird, waehrend das M365 Agents SDK weiter funktioniert."
 ---
 
 ## TL;DR

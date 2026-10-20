@@ -1,0 +1,46 @@
+{
+ "title": "How Copilot Studio Skills load",
+ "subtitle": "Copilot Studio matches a Skill to the scenario, then loads its full content when needed.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "doc",
+   "productLabel": "Copilot Studio",
+   "title": "Package the Skill content",
+   "actions": [
+    "SKILL.md",
+    "references",
+    "executable scripts"
+   ],
+   "evidence": "A Skill can contain SKILL.md plus optional references, assets, templates, examples, and executable scripts bundled in its folder or upload."
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "search",
+   "productLabel": "Copilot Studio",
+   "title": "Route by name and description",
+   "actions": [
+    "Skill name",
+    "description",
+    "conversation"
+   ],
+   "evidence": "Copilot Studio evaluates the Skill name and description against the conversation, then loads the full instructions when the scenario matches."
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "arrow",
+   "productLabel": "Copilot Studio",
+   "title": "Load full instructions on demand",
+   "actions": [
+    "full instructions",
+    "scenario matches",
+    "on demand"
+   ],
+   "evidence": "The agent uses each Skill's name and description to select it, then loads the full content on demand."
+  }
+ ],
+ "punchline": [
+  "Situational guidance",
+  "loaded when needed"
+ ]
+}

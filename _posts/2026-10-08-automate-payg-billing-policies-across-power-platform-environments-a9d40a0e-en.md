@@ -46,7 +46,7 @@ animation:
   poster: /assets/img/animations/a9d40a0e6e5f7a4c29d125cc-en.poster.png
   width: 800
   height: 450
-  alt: "A budget alert starts an Automation runbook, which uses managed identity to invoke Power Automate, and the flow finds the billing policy and unlinks its environments."
+  alt: "Sequence shows an Azure Budget alert calling an Automation runbook, then Power Automate finding the billing policy and unlinking its environments."
 ---
 
 ## TL;DR

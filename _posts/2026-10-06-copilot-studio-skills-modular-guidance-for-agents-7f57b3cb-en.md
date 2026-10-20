@@ -45,7 +45,7 @@ animation:
   poster: /assets/img/animations/7f57b3cbe68b609e605dbf3a-en.poster.png
   width: 800
   height: 450
-  alt: "Sequence showing how Copilot Studio Skills work: the agent checks the Skill name and description against the conversation, loads the full instructions when matched, and uses bundled files and resources in the Skill."
+  alt: "A 3 step sequence shows Copilot Studio using a Skill's name and description to match a scenario, then loading the full instructions on demand."
 ---
 
 ## TL;DR

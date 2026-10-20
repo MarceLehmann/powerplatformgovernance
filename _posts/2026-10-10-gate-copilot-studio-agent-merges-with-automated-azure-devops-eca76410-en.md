@@ -46,7 +46,7 @@ animation:
   poster: /assets/img/animations/eca764107e31cbaa07a73d51-en.poster.png
   width: 800
   height: 450
-  alt: "Four stages: pack the pull request source with pac, import it into a CI environment, evaluate the draft agent, block the merge when the pass rate is below the threshold."
+  alt: "A four step flow shows EvalGateADO packing the PR source with pac, importing it into a dedicated CI environment, running Evaluation API tests on the draft agent, and blocking the Azure DevOps merge if the pass threshold is missed."
 ---
 
 ## TL;DR

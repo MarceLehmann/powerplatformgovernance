@@ -1,0 +1,52 @@
+{
+ "title": "Agent Merges mit Tests absichern",
+ "subtitle": "PR Quellcode packen, in CI importieren, Entwurf pruefen und Merge unter Schwellenwert blockieren.",
+ "steps": [
+  {
+   "product": "generic",
+   "icon": "file",
+   "productLabel": "Azure DevOps",
+   "title": "PR Quellcode packen",
+   "actions": [
+    "pac",
+    "src Ordner",
+    "nicht verwaltete Loesung"
+   ]
+  },
+  {
+   "product": "generic",
+   "icon": "arrow",
+   "productLabel": "Azure DevOps",
+   "title": "In CI Umgebung importieren",
+   "actions": [
+    "importieren",
+    "eigene CI Dev Umgebung"
+   ]
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "check",
+   "productLabel": "Copilot Studio",
+   "title": "Entwurfsagenten pruefen",
+   "actions": [
+    "Evaluation API",
+    "Entwurfsagenten",
+    "Metrikergebnisse"
+   ]
+  },
+  {
+   "product": "generic",
+   "icon": "shield",
+   "productLabel": "Azure DevOps",
+   "title": "Merge bei tiefer Quote blockieren",
+   "actions": [
+    "konfigurierbarer Schwellenwert",
+    "schlaegt fehl",
+    "Merge blockieren"
+   ]
+  }
+ ],
+ "punchline": [
+  "Merge bei tiefer Quote"
+ ]
+}

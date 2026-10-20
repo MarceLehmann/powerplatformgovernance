@@ -48,7 +48,7 @@ animation:
   poster: /assets/img/animations/6861fb61631e88be31003eff-en.poster.png
   width: 800
   height: 450
-  alt: "A four step flow shows Copilot Studio using Manual OAuth, copying the generated custom connector redirect URI to Entra, configuring DEFAULT_SECONDARY_ROLES, and testing both maker and end user connections."
+  alt: "Four stages show the setup for Snowflake MCP in Copilot Studio: use Manual OAuth, copy the custom connector redirect URI to Entra, configure DEFAULT_SECONDARY_ROLES, then test maker and end-user connections."
 ---
 
 ## TL;DR

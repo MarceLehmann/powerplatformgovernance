@@ -1,0 +1,51 @@
+{
+ "title": "Set up Snowflake MCP OAuth",
+ "subtitle": "Use Manual OAuth, add the redirect URI, set roles, and test both connection types.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "key",
+   "productLabel": "Copilot Studio",
+   "title": "Use Manual OAuth",
+   "actions": [
+    "Manual OAuth"
+   ],
+   "evidence": "Copilot Studio must use Manual OAuth because Snowflake lacks Dynamic Client Registration."
+  },
+  {
+   "product": "generic",
+   "icon": "link",
+   "productLabel": "Entra",
+   "title": "Add connector redirect URI",
+   "actions": [
+    "Security tab",
+    "add it to Entra"
+   ],
+   "evidence": "Copy it from the connector Security tab and add it to the Entra client app."
+  },
+  {
+   "product": "generic",
+   "icon": "gear",
+   "productLabel": "Snowflake",
+   "title": "Configure secondary roles",
+   "actions": [
+    "DEFAULT_SECONDARY_ROLES"
+   ],
+   "evidence": "Add the generated custom connector redirect URI to Entra, configure DEFAULT_SECONDARY_ROLES, and test both maker and end-user connections."
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "check",
+   "productLabel": "Copilot Studio",
+   "title": "Test both connection types",
+   "actions": [
+    "maker connection",
+    "test-pane connections"
+   ],
+   "evidence": "Both connections must succeed for end-to-end tool calls."
+  }
+ ],
+ "punchline": [
+  "Both connections succeed"
+ ]
+}

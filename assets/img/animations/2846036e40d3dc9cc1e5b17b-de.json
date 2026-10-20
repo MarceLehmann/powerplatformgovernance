@@ -1,0 +1,40 @@
+{
+ "title": "Auth fuer Copilot Studio fordern",
+ "subtitle": "Aktiviere die Umgebungseinstellung, um nicht authentifizierten Direct-Line-Zugriff zu blockieren.",
+ "steps": [
+  {
+   "product": "admin",
+   "icon": "shield",
+   "productLabel": "Power Platform Admin",
+   "title": "Identitaet und Zugriff oeffnen",
+   "actions": [
+    "Sicherheit",
+    "Identitaet und Zugriff"
+   ]
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "key",
+   "productLabel": "Copilot Studio",
+   "title": "Microsoft-Authentifizierung fordern",
+   "actions": [
+    "Microsoft-Authentifizierung",
+    "Microsoft-Anmeldung"
+   ]
+  },
+  {
+   "product": "generic",
+   "icon": "check",
+   "productLabel": "Direct Line und SDK",
+   "title": "Direct Line blockiert, SDK laeuft",
+   "actions": [
+    "Direct Line",
+    "M365 Agents SDK"
+   ]
+  }
+ ],
+ "punchline": [
+  "Unauthentifizierten Zugriff",
+  "SDK-Pfad bleibt aktiv"
+ ]
+}
