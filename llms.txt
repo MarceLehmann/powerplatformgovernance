@@ -24,6 +24,7 @@ Key facts for orientation:
 - [Tags](https://powerplatformgovernance.com/tags/): Browse curated summaries by topic.
 - [Submit content](https://powerplatformgovernance.com/submit/): Suggest a governance blog or article for curation.
 - [Knowledge](https://powerplatformgovernance.com/knowledge/): Timeless guides in English and German on Dataverse security roles, the 25 governance questions, five environment strategies, DLP policies and the citizen developer guide.
+- [Wissen (DE)](https://powerplatformgovernance.com/de/knowledge/): Deutsche Übersicht der Wissensanleitungen.
 
 ## Knowledge guides (AI-guided)
 
