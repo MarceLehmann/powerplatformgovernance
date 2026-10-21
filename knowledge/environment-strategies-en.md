@@ -6,7 +6,7 @@ lang: en
 toc: true
 permalink: "/knowledge/environment-strategies/"
 translation_url: "/de/knowledge/environment-strategies/"
-last_reviewed: "2026-10-15"
+last_reviewed: "2026-10-21"
 ---
 
 From lean to regulatory separation: five strategies with structure, roles, default environment, DLP, ALM, effort and risks.
@@ -104,7 +104,7 @@ Makers automatically get a personal developer environment, rules apply through e
 - **DLP:** Rules via environment groups so every new environment is covered immediately.
 - **ALM:** Pipelines from dev through test to prod. Shared development for projects with several makers.
 - **Effort:** Setup medium, operation medium.
-- **Risks:** Developer environments without use are switched off after 90 days and removed later. Groups and routing require managed environments. Check licensing.
+- **Risks:** Developer environments are deactivated after 30 days without activity, managed ones after 60 days, and deleted 15 days after deactivation. Groups and routing require managed environments. Check licensing.
 - **First steps:** Create a security group, create a «Development» group with rules, activate routing, inform makers.
 
 ## 4. By department or business unit
@@ -176,5 +176,8 @@ The five strategies:
 - [Microsoft Learn: Security roles and privileges for Dataverse](https://learn.microsoft.com/en-us/power-platform/admin/security-roles-privileges)
 - [Microsoft Learn: Develop a tenant environment strategy to adopt Power Platform at scale](https://learn.microsoft.com/en-us/power-platform/guidance/adoption/environment-strategy)
 - [Microsoft Learn: Secure the default environment](https://learn.microsoft.com/en-us/power-platform/guidance/adoption/secure-default-environment)
+- [Microsoft Learn: Automatic environment cleanup](https://learn.microsoft.com/en-us/power-platform/admin/automatic-environment-cleanup#developer-environments)
+
+To place makers in stages, see the guide [Citizen developers in the organisation](/knowledge/citizen-developer-guide/).
 
 Guidance only, not legal or licensing advice. Check licence and product details before you implement.

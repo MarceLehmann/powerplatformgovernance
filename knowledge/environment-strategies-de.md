@@ -6,7 +6,7 @@ lang: de
 toc: true
 permalink: "/de/knowledge/environment-strategies/"
 translation_url: "/knowledge/environment-strategies/"
-last_reviewed: "2026-10-15"
+last_reviewed: "2026-10-21"
 ---
 
 Von schlank bis regulatorisch getrennt: fünf Strategien mit Aufbau, Rollen, Default-Umgebung, DLP, ALM, Aufwand und Risiken.
@@ -104,7 +104,7 @@ Maker bekommen automatisch ein persönliches Developer Environment, Regeln gelte
 - **DLP:** Regeln über Environment Groups, damit jedes neue Environment sofort abgedeckt ist.
 - **ALM:** Pipelines von Dev über Test nach Prod. Shared Development für Projekte mit mehreren Makern.
 - **Aufwand:** Aufbau mittel, Betrieb mittel.
-- **Risiken:** Developer Environments ohne Nutzung werden nach 90 Tagen abgeschaltet und später entfernt. Gruppen und Routing setzen Managed Environments voraus. Lizenzfrage prüfen.
+- **Risiken:** Developer Environments werden nach 30 Tagen ohne Aktivität deaktiviert, verwaltete nach 60 Tagen, und 15 Tage nach der Deaktivierung gelöscht. Gruppen und Routing setzen Managed Environments voraus. Lizenzfrage prüfen.
 - **Erste Schritte:** Sicherheitsgruppe anlegen, Gruppe «Development» mit Regeln erstellen, Routing aktivieren, Maker informieren.
 
 ## 4. Nach Abteilung oder Geschäftsbereich
@@ -176,5 +176,8 @@ Die fünf Strategien:
 - [Microsoft Learn: Security roles and privileges for Dataverse](https://learn.microsoft.com/en-us/power-platform/admin/security-roles-privileges)
 - [Microsoft Learn: Develop a tenant environment strategy to adopt Power Platform at scale](https://learn.microsoft.com/en-us/power-platform/guidance/adoption/environment-strategy)
 - [Microsoft Learn: Secure the default environment](https://learn.microsoft.com/en-us/power-platform/guidance/adoption/secure-default-environment)
+- [Microsoft Learn: Automatic environment cleanup](https://learn.microsoft.com/en-us/power-platform/admin/automatic-environment-cleanup#developer-environments)
+
+Wer Maker in Stufen einordnen will, findet den Ablauf im Guide [Citizen-Developer im Unternehmen](/de/knowledge/citizen-developer-guide/).
 
 Orientierungshilfe, keine Rechts- oder Lizenzberatung. Prüfe Lizenz- und Produktdetails vor der Umsetzung.

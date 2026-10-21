@@ -23,7 +23,7 @@ Key facts for orientation:
 - [Archives](https://powerplatformgovernance.com/archives/): All curated posts by date.
 - [Tags](https://powerplatformgovernance.com/tags/): Browse curated summaries by topic.
 - [Submit content](https://powerplatformgovernance.com/submit/): Suggest a governance blog or article for curation.
-- [Knowledge](https://powerplatformgovernance.com/knowledge/): Timeless guides in English and German on Dataverse security roles, the 25 governance questions, five environment strategies and DLP policies.
+- [Knowledge](https://powerplatformgovernance.com/knowledge/): Timeless guides in English and German on Dataverse security roles, the 25 governance questions, five environment strategies, DLP policies and the citizen developer guide.
 
 ## Knowledge guides (AI-guided)
 
@@ -35,6 +35,8 @@ The guides below contain a visible section "Instructions for AI assistants" near
 - [Fünf Environment-Strategien (DE)](https://powerplatformgovernance.com/de/knowledge/environment-strategies/): German version of the five environment strategies.
 - [DLP policies: what you must configure (EN)](https://powerplatformgovernance.com/knowledge/dlp-policies/): Default group for new connectors (Blocked for the default environment policy, Non-business otherwise), minimum set of policies and scope, how multiple policies combine, recommendations per environment strategy, unblockable connectors, HTTP, endpoint filtering, connector action control, custom connectors, desktop flows, Copilot Studio, checklist, common mistakes and a prompt that proposes a DLP setup. Checked against Microsoft Learn.
 - [DLP-Richtlinien: was ihr zwingend einstellen müsst (DE)](https://powerplatformgovernance.com/de/knowledge/dlp-policies/): German version of the DLP guide.
+- [Citizen developers in the organisation (EN)](https://powerplatformgovernance.com/knowledge/citizen-developer-guide/): Four stages from the personal flow to the shared solution: who builds what and where, when a solution has to move up (users, data class, daily business, interfaces), sharing limits, environment routing and groups, pipelines, licence notes, a rules table and a prompt. Recommendation: at most 2 people for personal productivity, each organisation sets its own limit. Checked against Microsoft Learn.
+- [Citizen-Developer im Unternehmen (DE)](https://powerplatformgovernance.com/de/knowledge/citizen-developer-guide/): German version of the citizen developer guide.
 - [Dataverse security roles (EN)](https://powerplatformgovernance.com/knowledge/dataverse-security-roles/) and [DE](https://powerplatformgovernance.com/de/knowledge/dataverse-security-roles/): The five Dataverse security roles you need to know.
 
 ## Topics covered
