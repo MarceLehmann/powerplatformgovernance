@@ -108,5 +108,17 @@
     "text": "Govern a Generic Custom Connector Before Sharing It\n\nA Custom Connector can store an API key on one encrypted connection and expose generic actions that receive relativePath, query and body at runtime. DLP applies to the whole connector, so a connector capable of reaching any REST API should be governed before productive sharing.\n\nSource: PowerPlatformTip\n\nFull summary: https://powerplatformgovernance.com/en/posts/govern-a-generic-custom-connector-before-sharing-it-2f86687d/\n\n#PowerPlatformGovernanceDaily #CopilotStudio",
     "bufferPostId": "6ad7b8067e4feac55ce66743",
     "dueAt": "2026-10-21T13:00:00.000Z"
+  },
+  "2e3f29133ab449825e50bfe9": {
+    "status": "expired",
+    "day": "2026-10-20",
+    "title": "Design human escalation for Copilot Studio handoffs",
+    "expiredAt": "2026-10-21"
+  },
+  "5880acaf4d0985ef063cd6df": {
+    "status": "expired",
+    "day": "2026-10-20",
+    "title": "Microsoft AI Strategy Roadmap: Five pillars for governed transformation",
+    "expiredAt": "2026-10-21"
   }
 }
