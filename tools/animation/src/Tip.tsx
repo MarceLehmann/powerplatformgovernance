@@ -1,5 +1,6 @@
 import React from "react";
 import { AbsoluteFill, Easing, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
+import QRCode from "qrcode";
 import { loadFont as loadOutfit } from "@remotion/google-fonts/Outfit";
 import { loadFont as loadInter } from "@remotion/google-fonts/Inter";
 
@@ -34,11 +35,30 @@ const prod = (name: string, label?: string) => {
   return { color: known.color, label: (label ?? (PRODUCT[name] ? known.label : name)).toUpperCase() };
 };
 
+// QR-Code fuer die Abschlusskarte (Regel 21.10.2026: Link im Video = QR-Code dazu). Navy auf Weiss, Fehlerkorrektur M, Ruhezone 4 Module.
+// Die Matrix entsteht beim Rendern (npm-Paket "qrcode"), gezeichnet wird als Inline-SVG.
+const qrHref = (u: string) => (/^https?:\/\//i.test(u) ? u : `https://${u}`);
+const QrCode: React.FC<{ url: string; size: number }> = ({ url, size }) => {
+  // @ts-ignore
+  const qr = QRCode.create(qrHref(url), { errorCorrectionLevel: "M" });
+  const n: number = qr.modules.size;
+  const Q = 4;
+  let d = "";
+  for (let r = 0; r < n; r++) for (let c = 0; c < n; c++) if (qr.modules.get(r, c)) d += `M${c + Q} ${r + Q}h1v1h-1z`;
+  return (
+    <svg width={size} height={size} viewBox={`0 0 ${n + 2 * Q} ${n + 2 * Q}`} shapeRendering="crispEdges" style={{ display: "block", background: "#FFFFFF" }}>
+      <rect width={n + 2 * Q} height={n + 2 * Q} fill="#FFFFFF" />
+      <path d={d} fill={C.navy} />
+    </svg>
+  );
+};
+
 export type Step = { product: string; productLabel?: string; icon: string; title: string; actions: string[]; loop?: boolean; badge?: string };
 export type TipProps = {
   endCardSeconds?: number; kicker?: string; title: string; subtitle: string; blocked?: [string, string];
   note?: string; loop?: { label: string; hint: string }; standardLabel?: string; steps: Step[];
-  punchline?: string[]; punchSub?: string; connectors?: string[]; endUrl: string; endLine: string;
+  punchline?: string[]; punchSub?: string; connectors?: string[]; endUrl: string; endLine: string; qrUrl?: string; // qrUrl: Ziel des QR-Codes (inkl. UTM), sonst endUrl; ohne URL kein QR
+ 
   timing?: Timing; scale?: number; // scale > 1 vergroessert Schrift und Karten im 16:9-Layout (Blog-GIFs, die klein dargestellt werden)
 };
 export type Timing = { introOut: number; steps: number; stepGap: number; badges: number; punch: number; end: number };
@@ -269,11 +289,16 @@ export const Tip: React.FC<TipProps> = (props) => {
     </AbsoluteFill>
   );
 
+  const qrTarget = (props.qrUrl || props.endUrl || "").trim();
+  const qrSize = portrait ? (feed ? 400 : 440) : 400; // 4:5: 400/1080 = 37 %, Module ca. 29 % der Bildbreite
   const end = (
     <AbsoluteFill style={{ background: "#FFFFFF", opacity: endP, alignItems: "center", justifyContent: "center" }}>
-      <div style={{ display: "flex", flexDirection: "column", alignItems: "center", opacity: endLogo, transform: `translateY(${(1 - endLogo) * 18}px)` }}>
-        <div style={{ fontFamily: BODY, fontSize: portrait ? 44 : 40, color: C.muted }}>{props.endLine}</div>
-        <div style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: portrait ? 76 : 68, color: C.navy, marginTop: 22 }}>{props.endUrl}</div>
+      <div style={{ display: "flex", flexDirection: portrait ? "column" : "row", alignItems: "center", gap: portrait ? 44 : 110, opacity: endLogo, transform: `translateY(${(1 - endLogo) * 18}px)` }}>
+        <div style={{ display: "flex", flexDirection: "column", alignItems: portrait ? "center" : "flex-start" }}>
+          <div style={{ fontFamily: BODY, fontSize: portrait ? 44 : 40, color: C.muted }}>{props.endLine}</div>
+          <div style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: portrait ? 76 : 68, color: C.navy, marginTop: 22 }}>{props.endUrl}</div>
+        </div>
+        {qrTarget ? <QrCode url={qrTarget} size={qrSize} /> : null}
       </div>
     </AbsoluteFill>
   );

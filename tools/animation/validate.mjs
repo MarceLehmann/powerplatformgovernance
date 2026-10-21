@@ -94,7 +94,7 @@ export function validateDecision(raw, candidate) {
 }
 
 /** Video-JSON fuer Remotion: Belege entfernen, Marken-Abschluss und Zeitplan automatisch. */
-export function toRemotionProps(video, { endUrl, endLine }) {
+export function toRemotionProps(video, { endUrl, endLine, qrUrl }) {
   const steps = video.steps.map(({ evidence, ...rest }) => rest);
-  return { endCardSeconds: 2, scale: 1.18, kicker: "", title: video.title, subtitle: video.subtitle, steps, ...(video.punchline ? { punchline: video.punchline } : {}), endUrl, endLine };
+  return { endCardSeconds: 2, scale: 1.18, kicker: "", title: video.title, subtitle: video.subtitle, steps, ...(video.punchline ? { punchline: video.punchline } : {}), endUrl, endLine, ...(qrUrl ? { qrUrl } : {}) };
 }

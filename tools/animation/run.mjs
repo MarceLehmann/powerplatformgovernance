@@ -202,7 +202,7 @@ export async function main(argv) {
       const endLine = lang === "de" ? "Kuratiert von Marcel Lehmann" : "Curated by Marcel Lehmann";
       fs.mkdirSync(outDir, { recursive: true });
       fs.writeFileSync(path.join(outDir, `${c.key}-${lang}.json`), JSON.stringify(c.decision.video[lang], null, 1) + "\n");
-      fs.writeFileSync(json, JSON.stringify(toRemotionProps(c.decision.video[lang], { endUrl, endLine })));
+      fs.writeFileSync(json, JSON.stringify(toRemotionProps(c.decision.video[lang], { endUrl, endLine, qrUrl: `https://${endUrl}${c.meta?.permalink || (c.kind === "section" ? "/flows/" : "/")}` })));
       renderJobs.push({ json, gif: path.join(outDir, `${c.key}-${lang}.gif`), key: c.key, lang });
       // LinkedIn: MP4 4:5 nur fuer Beitraege (nicht /flows/), englische Fassung. Welche Beitraege wirklich gepostet werden, entscheidet social.mjs (Tageslimit).
       if (opt.social && c.kind === "post" && lang === "en" && (!c.rerender || fs.existsSync(path.join(outDir, `${c.key}-4x5.mp4`)))) {

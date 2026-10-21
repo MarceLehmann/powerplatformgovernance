@@ -117,10 +117,12 @@ test("Reparaturrunde: scheitert der zweite Aufruf, bleibt die erste Pruefung", a
 });
 test("Remotion-Props enthalten keine Belege und setzen den Abschluss", () => {
   const r = validateDecision(good(), candidate);
-  const props = toRemotionProps(r.video.en, { endUrl: "example.com", endLine: "Curated by Marcel Lehmann" });
+  const props = toRemotionProps(r.video.en, { endUrl: "example.com", endLine: "Curated by Marcel Lehmann", qrUrl: "https://example.com/post/" });
   assert.equal(props.kicker, "");
   assert.ok(props.steps.every((s) => !("evidence" in s)));
   assert.equal(props.endUrl, "example.com");
+  assert.equal(props.qrUrl, "https://example.com/post/");
+  assert.equal(toRemotionProps(r.video.en, { endUrl: "example.com", endLine: "x" }).qrUrl, undefined);
 });
 test("Markdown-Escapes aus dem Publisher werden zurueckgenommen", () => {
   assert.equal(unescapeBody("Use \\_gblIsError\\_ &amp; &#123;x&#125;"), "Use _gblIsError_ & {x}");
