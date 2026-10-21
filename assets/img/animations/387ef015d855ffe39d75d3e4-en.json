@@ -1,0 +1,56 @@
+{
+ "title": "Design and deploy a Dataverse model",
+ "subtitle": "Shape the model, define rules, test it, then move changes through separate environments.",
+ "steps": [
+  {
+   "product": "dataverse",
+   "icon": "table",
+   "productLabel": "Dataverse",
+   "title": "Model around business concepts",
+   "actions": [
+    "business concepts",
+    "standard Dataverse tables"
+   ],
+   "evidence": "Build D365 CE data models around business concepts, then use standard Dataverse tables where they fit"
+  },
+  {
+   "product": "dataverse",
+   "icon": "key",
+   "productLabel": "Dataverse",
+   "title": "Define ownership and record rules",
+   "actions": [
+    "data owners",
+    "system-of-record rules",
+    "conflict handling"
+   ],
+   "evidence": "Define relationship behaviour, data owners, system-of-record rules, stable integration identifiers, and conflict handling."
+  },
+  {
+   "product": "dataverse",
+   "icon": "check",
+   "productLabel": "Dataverse",
+   "title": "Document and test the model",
+   "actions": [
+    "Document the model",
+    "test realistic queries",
+    "test updates"
+   ],
+   "evidence": "Document the model, test realistic queries and updates"
+  },
+  {
+   "product": "admin",
+   "icon": "arrow",
+   "productLabel": "Solutions",
+   "title": "Deploy across environments",
+   "actions": [
+    "solutions",
+    "development",
+    "production"
+   ],
+   "evidence": "deploy changes through solutions across development, test, and production environments."
+  }
+ ],
+ "punchline": [
+  "Maintainable D365 CE data"
+ ]
+}

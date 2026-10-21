@@ -1,0 +1,57 @@
+{
+ "title": "Foundry Agent sicher verbinden",
+ "subtitle": "Waehle den Pfad fuer externe Agenten, melde dich mit Entra ID an und sende die Endpunkt-URL.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "link",
+   "productLabel": "Copilot Studio",
+   "title": "Externe Agentverbindung oeffnen",
+   "actions": [
+    "Connect to an external agent"
+   ]
+  },
+  {
+   "product": "generic",
+   "icon": "cloud",
+   "productLabel": "Microsoft Foundry",
+   "title": "Microsoft Foundry waehlen",
+   "actions": [
+    "Microsoft Foundry"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "key",
+   "productLabel": "Microsoft Entra ID",
+   "title": "Mit Entra ID anmelden",
+   "actions": [
+    "Entra ID"
+   ]
+  },
+  {
+   "product": "generic",
+   "icon": "check",
+   "productLabel": "Foundry-Endpunkt-URL",
+   "title": "Endpunkt eingeben und senden",
+   "actions": [
+    "Foundry-Endpunkt-URL"
+   ]
+  },
+  {
+   "product": "generic",
+   "icon": "search",
+   "productLabel": "Foundry-Trace",
+   "title": "Trace-Details pruefen",
+   "actions": [
+    "Eingaben",
+    "Ausgaben",
+    "IDs"
+   ]
+  }
+ ],
+ "punchline": [
+  "Aufrufe danach pruefen",
+  "Eingaben, Ausgaben, IDs"
+ ]
+}

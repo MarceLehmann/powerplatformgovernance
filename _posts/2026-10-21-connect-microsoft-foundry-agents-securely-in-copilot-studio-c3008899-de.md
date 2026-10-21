@@ -38,6 +38,12 @@ faq:
 - question: Welche Informationen zeigt die Foundry-Traceansicht bei einem Copilot-Aufruf?
   answer: Sie zeigt empfangene Eingaben, erzeugte Ausgaben, Gesprächs- oder Korrelations-IDs
     und Abschlusszeitpunkte zur Fehlersuche.
+animation:
+  src: /assets/img/animations/c300889910a697c434c2f9f3-de.gif
+  poster: /assets/img/animations/c300889910a697c434c2f9f3-de.poster.png
+  width: 800
+  height: 450
+  alt: "Eine Abfolge mit vier Schritten zeigt, wie ein Azure AI Foundry Agent in Copilot Studio verbunden wird: externen Agenten waehlen, Microsoft Foundry auswaehlen, mit Entra ID anmelden und den Endpunkt senden, danach Trace-Details pruefen."
 ---
 
 ## TL;DR

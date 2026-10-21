@@ -1,0 +1,62 @@
+{
+ "title": "Connect Foundry agent securely",
+ "subtitle": "Choose the external agent path, sign in with Entra ID, and submit the endpoint URL.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "link",
+   "productLabel": "Copilot Studio",
+   "title": "Open external agent connection",
+   "actions": [
+    "Connect to an external agent"
+   ],
+   "evidence": "Select Connect to an external agent, choose Microsoft Foundry, authenticate through Entra ID, and enter the Foundry endpoint URL."
+  },
+  {
+   "product": "generic",
+   "icon": "cloud",
+   "productLabel": "Microsoft Foundry",
+   "title": "Choose Microsoft Foundry",
+   "actions": [
+    "Microsoft Foundry"
+   ],
+   "evidence": "Select Connect to an external agent, choose Microsoft Foundry, authenticate through Entra ID, and enter the Foundry endpoint URL."
+  },
+  {
+   "product": "admin",
+   "icon": "key",
+   "productLabel": "Microsoft Entra ID",
+   "title": "Authenticate with Entra ID",
+   "actions": [
+    "Entra ID"
+   ],
+   "evidence": "Select Connect to an external agent, choose Microsoft Foundry, authenticate through Entra ID, and enter the Foundry endpoint URL."
+  },
+  {
+   "product": "generic",
+   "icon": "check",
+   "productLabel": "Foundry endpoint URL",
+   "title": "Enter and submit endpoint",
+   "actions": [
+    "Foundry endpoint URL"
+   ],
+   "evidence": "Copilot Studio connects an Azure AI Foundry agent by using its agent name and endpoint URL"
+  },
+  {
+   "product": "generic",
+   "icon": "search",
+   "productLabel": "Foundry traces",
+   "title": "Review trace details",
+   "actions": [
+    "inputs",
+    "outputs",
+    "IDs"
+   ],
+   "evidence": "Foundry traces then expose inputs, outputs, IDs, and completion timestamps."
+  }
+ ],
+ "punchline": [
+  "Trace calls after setup",
+  "Inputs, outputs, IDs"
+ ]
+}

@@ -274,5 +274,33 @@
       "Use Custom Search with an AI Prompt that receives the search results and instructs the agent to quote them verbatim without summarizing.",
       "The flow can also include citations."
     ]
+  },
+  "b4c5acf47a3089a3d862cd8a": {
+    "gif": false,
+    "reason": "The post explains separate DLP controls and limitations, but it does not present one concrete 3 to 5 stage procedure or sequence to follow.",
+    "at": "2026-10-21"
+  },
+  "c300889910a697c434c2f9f3": {
+    "gif": true,
+    "reason": "The post gives a concrete connection flow with four named stages and a stated result in traces.",
+    "at": "2026-10-21",
+    "evidence": [
+      "Select Connect to an external agent, choose Microsoft Foundry, authenticate through Entra ID, and enter the Foundry endpoint URL.",
+      "Select Connect to an external agent, choose Microsoft Foundry, authenticate through Entra ID, and enter the Foundry endpoint URL.",
+      "Select Connect to an external agent, choose Microsoft Foundry, authenticate through Entra ID, and enter the Foundry endpoint URL.",
+      "Copilot Studio connects an Azure AI Foundry agent by using its agent name and endpoint URL",
+      "Foundry traces then expose inputs, outputs, IDs, and completion timestamps."
+    ]
+  },
+  "387ef015d855ffe39d75d3e4": {
+    "gif": true,
+    "reason": "The post gives a concrete 4 stage process for designing, documenting, testing, and deploying Dataverse customizations.",
+    "at": "2026-10-21",
+    "evidence": [
+      "Build D365 CE data models around business concepts, then use standard Dataverse tables where they fit",
+      "Define relationship behaviour, data owners, system-of-record rules, stable integration identifiers, and conflict handling.",
+      "Document the model, test realistic queries and updates",
+      "deploy changes through solutions across development, test, and production environments."
+    ]
   }
 }

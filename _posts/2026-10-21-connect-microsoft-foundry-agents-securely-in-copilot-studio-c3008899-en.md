@@ -37,6 +37,12 @@ faq:
 - question: What does the Foundry trace view show after Copilot Studio calls an agent?
   answer: It shows the received input, generated output, conversation or correlation
     IDs, and completion timestamps for debugging.
+animation:
+  src: /assets/img/animations/c300889910a697c434c2f9f3-en.gif
+  poster: /assets/img/animations/c300889910a697c434c2f9f3-en.poster.png
+  width: 800
+  height: 450
+  alt: "A four step sequence shows connecting an Azure AI Foundry agent in Copilot Studio by choosing an external agent, selecting Microsoft Foundry, signing in with Entra ID, and submitting the endpoint, then reviewing trace details."
 ---
 
 ## TL;DR

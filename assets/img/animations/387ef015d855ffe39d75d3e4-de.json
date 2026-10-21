@@ -1,0 +1,52 @@
+{
+ "title": "Dataverse-Modell entwerfen und verteilen",
+ "subtitle": "Modell formen, Regeln festlegen, testen und Aenderungen durch getrennte Umgebungen bewegen.",
+ "steps": [
+  {
+   "product": "dataverse",
+   "icon": "table",
+   "productLabel": "Dataverse",
+   "title": "Modell an Geschaeftskonzepten ausrichten",
+   "actions": [
+    "Geschaeftskonzepte",
+    "Standardtabellen von Dataverse"
+   ]
+  },
+  {
+   "product": "dataverse",
+   "icon": "key",
+   "productLabel": "Dataverse",
+   "title": "Ownership und Datensatzregeln festlegen",
+   "actions": [
+    "Datenverantwortliche",
+    "fuehrende Systeme",
+    "Konfliktregeln"
+   ]
+  },
+  {
+   "product": "dataverse",
+   "icon": "check",
+   "productLabel": "Dataverse",
+   "title": "Modell dokumentieren und testen",
+   "actions": [
+    "Modell dokumentieren",
+    "realistische Abfragen",
+    "Updates testen"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "arrow",
+   "productLabel": "Solutions",
+   "title": "Ueber Umgebungen bereitstellen",
+   "actions": [
+    "Solutions",
+    "Entwicklung",
+    "Produktion"
+   ]
+  }
+ ],
+ "punchline": [
+  "Wartbare D365 CE Daten"
+ ]
+}
