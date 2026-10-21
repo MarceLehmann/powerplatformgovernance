@@ -133,10 +133,14 @@
 	.submission-form .submission-fields { grid-template-columns: 1fr; }
 }
 
-// Handy (Marcel 15.10.2026): Tabellen brechen um statt seitlich zu scrollen.
+// Tabellen (Knowledge u. a.): Text bricht um, Tabelle nutzt die Spaltenbreite;
+// reicht der Platz nicht (Handy), scrollt der Wrapper horizontal statt abzuschneiden.
+.content .table-wrapper { overflow-x: auto; max-width: 100%; -webkit-overflow-scrolling: touch; }
+.content .table-wrapper > table { width: 100%; min-width: 0; table-layout: auto; }
+.content .table-wrapper > table th,
+.content .table-wrapper > table td { white-space: normal; overflow-wrap: anywhere; hyphens: auto; }
 @media (max-width: 576px) {
-	.content .table-wrapper { overflow-x: visible; }
-	.content .table-wrapper > table { table-layout: fixed; width: 100%; min-width: 0; font-size: .85rem; }
+	.content .table-wrapper > table { font-size: .85rem; }
 	.content .table-wrapper > table th,
-	.content .table-wrapper > table td { white-space: normal; overflow-wrap: anywhere; hyphens: auto; padding: .4rem .35rem; }
+	.content .table-wrapper > table td { min-width: 8rem; padding: .4rem .5rem; }
 }
