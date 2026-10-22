@@ -147,5 +147,14 @@
     "text": "What Purview DLP Really Controls in Copilot\n\nMicrosoft Purview DLP uses separate controls for Microsoft 365 Copilot: it can stop external web search, block sensitive prompts, exclude labeled files or emails, and reject external email sources. It does not repair permissions or inspect directly uploaded files for Sensitive Information Types through this policy location.\n\nSource: MVPTreff\n\nFull summary: https://powerplatformgovernance.com/en/posts/what-purview-dlp-really-controls-in-copilot-b4c5acf4/\n\n#PowerPlatformGovernanceDaily",
     "bufferPostId": "6ad901adceec026d4abdd299",
     "dueAt": "2026-10-22T13:00:00.000Z"
+  },
+  "ba1e9860d921c0f0cebbb1f8": {
+    "status": "queued",
+    "day": "2026-10-22",
+    "kind": "image",
+    "title": "One SDK Client for Both Copilot Studio Harnesses",
+    "text": "One SDK Client for Both Copilot Studio Harnesses\n\nThe Copilot Studio client uses the same conversation methods for standard and GitHub Copilot harnesses when given an environment ID and agent schema name. JavaScript and .NET support is available, while Python support is planned. GitHub Copilot harness support remains preview, with endpoints rolling out across regions.\n\nSource: The Custom Engine\n\nFull summary: https://powerplatformgovernance.com/en/posts/one-sdk-client-for-both-copilot-studio-harnesses-ba1e9860/\n\n#PowerPlatformGovernanceDaily #CopilotStudio",
+    "bufferPostId": "6ad9b4e8deacf5d253347f01",
+    "dueAt": "2026-10-23T07:00:00.000Z"
   }
 }
