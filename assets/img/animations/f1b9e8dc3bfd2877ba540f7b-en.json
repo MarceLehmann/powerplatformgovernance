@@ -1,0 +1,55 @@
+{
+ "title": "Copilot Studio live agent handover",
+ "subtitle": "Route a chat to a live system and return it to Copilot Studio with channel control.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "chat",
+   "productLabel": "Copilot Studio",
+   "title": "Start in Copilot Studio",
+   "actions": [
+    "Copilot Studio",
+    "handover flow"
+   ],
+   "evidence": "The Copilot Studio Handover Sample uses an M365 Agents SDK skill as a message broker"
+  },
+  {
+   "product": "generic",
+   "icon": "arrow",
+   "productLabel": "M365 Agents SDK",
+   "title": "Broker messages through a skill",
+   "actions": [
+    "Agents SDK skill",
+    "message broker"
+   ],
+   "evidence": "uses an M365 Agents SDK skill as a message broker"
+  },
+  {
+   "product": "teams",
+   "icon": "bell",
+   "productLabel": "Teams",
+   "title": "Send async live agent replies",
+   "actions": [
+    "proactive messaging",
+    "asynchronous replies"
+   ],
+   "evidence": "Teams proactive messaging for asynchronous live-agent replies"
+  },
+  {
+   "product": "generic",
+   "icon": "link",
+   "productLabel": "Live chat system",
+   "title": "Route and return the session",
+   "actions": [
+    "session mapping",
+    "route conversations",
+    "closes the live chat session"
+   ],
+   "evidence": "session mapping to route conversations to a third-party live chat system and return users to Copilot Studio."
+  }
+ ],
+ "punchline": [
+  "Return to Copilot Studio",
+  "without lost context"
+ ]
+}

@@ -1,0 +1,51 @@
+{
+ "title": "Live-Agent-Uebergabe in Copilot Studio",
+ "subtitle": "Ein Gespraech an ein Live-System leiten und mit Kanalkontrolle zu Copilot Studio zurueckbringen.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "chat",
+   "productLabel": "Copilot Studio",
+   "title": "In Copilot Studio starten",
+   "actions": [
+    "Copilot Studio",
+    "Uebergabeablauf"
+   ]
+  },
+  {
+   "product": "generic",
+   "icon": "arrow",
+   "productLabel": "M365 Agents SDK",
+   "title": "Nachrichten ueber Skill vermitteln",
+   "actions": [
+    "Agents SDK Skill",
+    "Nachrichtenbroker"
+   ]
+  },
+  {
+   "product": "teams",
+   "icon": "bell",
+   "productLabel": "Teams",
+   "title": "Asynchrone Antworten senden",
+   "actions": [
+    "Proaktivnachrichten",
+    "asynchrone Antworten"
+   ]
+  },
+  {
+   "product": "generic",
+   "icon": "link",
+   "productLabel": "Live-Chat-System",
+   "title": "Sitzung leiten und zurueckfuehren",
+   "actions": [
+    "Sitzungszuordnung",
+    "Gespraeche weiterleiten",
+    "Live-Chat-Sitzung beenden"
+   ]
+  }
+ ],
+ "punchline": [
+  "Zurueck zu Copilot Studio",
+  "ohne Kontextverlust"
+ ]
+}

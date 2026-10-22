@@ -1,0 +1,43 @@
+{
+ "title": "Bereitstellungsfehler beheben",
+ "subtitle": "Fehler erfassen, Konfiguration pruefen, dann Apps und Flows nach dem Import testen.",
+ "steps": [
+  {
+   "product": "admin",
+   "icon": "doc",
+   "productLabel": "Power Platform",
+   "title": "Fehlerdetails erfassen",
+   "actions": [
+    "fehlgeschlagene Phase",
+    "vollstaendiger Fehler",
+    "Vorgangs-ID"
+   ]
+  },
+  {
+   "product": "dataverse",
+   "icon": "search",
+   "productLabel": "Dataverse",
+   "title": "Abhaengigkeiten und Konfig pru",
+   "actions": [
+    "fehlende Abhaengigkeiten",
+    "Verbindungsreferenzen",
+    "Umgebungsvariablen"
+   ]
+  },
+  {
+   "product": "powerautomate",
+   "icon": "check",
+   "productLabel": "Power Automate",
+   "title": "Apps und Flow-Ausloeser testen",
+   "actions": [
+    "kritische Apps testen",
+    "Flow-Ausloeser",
+    "nach dem Import"
+   ]
+  }
+ ],
+ "punchline": [
+  "Import reicht nicht",
+  "Benutzeraufgaben testen"
+ ]
+}

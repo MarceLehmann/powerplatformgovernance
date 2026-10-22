@@ -41,6 +41,12 @@ faq:
 - question: What authentication setup does HandoverToLiveAgentSample require?
   answer: It requires two Azure AD app registrations, one for the skill and one for
     the Copilot Studio agent, which is auto-created during solution import.
+animation:
+  src: /assets/img/animations/f1b9e8dc3bfd2877ba540f7b-en.gif
+  poster: /assets/img/animations/f1b9e8dc3bfd2877ba540f7b-en.poster.png
+  width: 800
+  height: 450
+  alt: "A four step flow shows Copilot Studio sending through an M365 Agents SDK skill, Teams proactive messaging carrying async replies, session mapping routing to live chat, and the session closing to return to Copilot Studio."
 ---
 
 ## TL;DR

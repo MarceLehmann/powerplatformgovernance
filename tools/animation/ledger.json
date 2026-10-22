@@ -307,5 +307,36 @@
     "gif": false,
     "reason": "The post is mainly a capability and governance summary, and any setup sequence would need to be inferred rather than taken as an explicit 3 to 5 stage procedure from the text.",
     "at": "2026-10-22"
+  },
+  "91c4e609e84238d9afdf529f": {
+    "gif": false,
+    "reason": "The post explains governance concepts and outcomes, but it does not state a concrete 3 to 5 stage procedure or ordered sequence.",
+    "at": "2026-10-22"
+  },
+  "a12d28d91b5553f283a59422": {
+    "gif": false,
+    "reason": "The post is a governance and feature summary without one concrete 3 to 5 stage procedure explicitly stated in order.",
+    "at": "2026-10-22"
+  },
+  "f1b9e8dc3bfd2877ba540f7b": {
+    "gif": true,
+    "reason": "The post names a concrete 4 stage handover flow from Copilot Studio to live chat and back.",
+    "at": "2026-10-22",
+    "evidence": [
+      "The Copilot Studio Handover Sample uses an M365 Agents SDK skill as a message broker",
+      "uses an M365 Agents SDK skill as a message broker",
+      "Teams proactive messaging for asynchronous live-agent replies",
+      "session mapping to route conversations to a third-party live chat system and return users to Copilot Studio."
+    ]
+  },
+  "a5efa32cc7bab7f76d2d40c0": {
+    "gif": true,
+    "reason": "The post gives a clear 3 stage troubleshooting sequence: preserve deployment error details, validate dependencies and target configuration, then test apps and flows after import.",
+    "at": "2026-10-22",
+    "evidence": [
+      "record the failed stage, full error, operation ID, package version and target environment.",
+      "Check missing dependencies, connection references, environment variables, permissions, Dataverse readiness and DLP connector restrictions",
+      "then test critical apps and flow triggers after import."
+    ]
   }
 }

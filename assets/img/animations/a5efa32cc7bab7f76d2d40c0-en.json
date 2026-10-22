@@ -1,0 +1,46 @@
+{
+ "title": "Fix deployment failures",
+ "subtitle": "Record errors, validate configuration, then test apps and flows after import.",
+ "steps": [
+  {
+   "product": "admin",
+   "icon": "doc",
+   "productLabel": "Power Platform",
+   "title": "Capture failure details",
+   "actions": [
+    "failed stage",
+    "full error",
+    "operation ID"
+   ],
+   "evidence": "record the failed stage, full error, operation ID, package version and target environment."
+  },
+  {
+   "product": "dataverse",
+   "icon": "search",
+   "productLabel": "Dataverse",
+   "title": "Check dependencies and config",
+   "actions": [
+    "missing dependencies",
+    "connection references",
+    "environment variables"
+   ],
+   "evidence": "Check missing dependencies, connection references, environment variables, permissions, Dataverse readiness and DLP connector restrictions"
+  },
+  {
+   "product": "powerautomate",
+   "icon": "check",
+   "productLabel": "Power Automate",
+   "title": "Test apps and flow triggers",
+   "actions": [
+    "test critical apps",
+    "flow triggers",
+    "after import"
+   ],
+   "evidence": "then test critical apps and flow triggers after import."
+  }
+ ],
+ "punchline": [
+  "Import is not enough",
+  "Test user tasks"
+ ]
+}
