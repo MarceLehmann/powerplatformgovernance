@@ -302,5 +302,10 @@
       "Document the model, test realistic queries and updates",
       "deploy changes through solutions across development, test, and production environments."
     ]
+  },
+  "ba1e9860d921c0f0cebbb1f8": {
+    "gif": false,
+    "reason": "The post is mainly a capability and governance summary, and any setup sequence would need to be inferred rather than taken as an explicit 3 to 5 stage procedure from the text.",
+    "at": "2026-10-22"
   }
 }
