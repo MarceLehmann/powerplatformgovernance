@@ -156,5 +156,23 @@
     "text": "One SDK Client for Both Copilot Studio Harnesses\n\nThe Copilot Studio client uses the same conversation methods for standard and GitHub Copilot harnesses when given an environment ID and agent schema name. JavaScript and .NET support is available, while Python support is planned. GitHub Copilot harness support remains preview, with endpoints rolling out across regions.\n\nSource: The Custom Engine\n\nFull summary: https://powerplatformgovernance.com/en/posts/one-sdk-client-for-both-copilot-studio-harnesses-ba1e9860/\n\n#PowerPlatformGovernanceDaily #CopilotStudio",
     "bufferPostId": "6ad9b4e8deacf5d253347f01",
     "dueAt": "2026-10-23T07:00:00.000Z"
+  },
+  "f1b9e8dc3bfd2877ba540f7b": {
+    "status": "queued",
+    "day": "2026-10-22",
+    "kind": "video",
+    "title": "Handing Over to Live Agents Without Losing Control",
+    "text": "Handing Over to Live Agents Without Losing Control\n\nThe Copilot Studio Handover Sample uses an M365 Agents SDK skill as a message broker, Teams proactive messaging for asynchronous live-agent replies, and session mapping to route conversations to a third-party live chat system and return users to Copilot Studio.\n\nSource: The Custom Engine\n\nFull summary: https://powerplatformgovernance.com/en/posts/handing-over-to-live-agents-without-losing-control-f1b9e8dc/\n\n#PowerPlatformGovernanceDaily #CopilotStudio",
+    "bufferPostId": "6ada5b5a399af6f1f72e9a31",
+    "dueAt": "2026-10-23T10:00:00.000Z"
+  },
+  "a5efa32cc7bab7f76d2d40c0": {
+    "status": "queued",
+    "day": "2026-10-22",
+    "kind": "video",
+    "title": "Troubleshoot Power Platform deployment failures systematically",
+    "text": "Troubleshoot Power Platform deployment failures systematically\n\nFor Power Platform solution imports and pipeline deployments, record the failed stage, full error, operation ID, package version and target environment. Check missing dependencies, connection references, environment variables, permissions, Dataverse readiness and DLP connector restrictions, then test critical apps and flow triggers after import.\n\nSource: Softchief Technologies\n\nFull summary: https://powerplatformgovernance.com/en/posts/troubleshoot-power-platform-deployment-failures-systematically-a5efa32c/\n\n#PowerPlatformGovernanceDaily #Dataverse #PowerAutomate",
+    "bufferPostId": "6ada5b5b77984f39b2b28d6d",
+    "dueAt": "2026-10-23T13:00:00.000Z"
   }
 }
