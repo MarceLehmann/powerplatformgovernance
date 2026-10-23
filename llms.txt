@@ -23,7 +23,7 @@ Key facts for orientation:
 - [Archives](https://powerplatformgovernance.com/archives/): All curated posts by date.
 - [Tags](https://powerplatformgovernance.com/tags/): Browse curated summaries by topic.
 - [Submit content](https://powerplatformgovernance.com/submit/): Suggest a governance blog or article for curation.
-- [Knowledge](https://powerplatformgovernance.com/knowledge/): Timeless guides in English and German on Dataverse security roles, the 25 governance questions, five environment strategies, DLP policies and the citizen developer guide.
+- [Knowledge](https://powerplatformgovernance.com/knowledge/): Timeless guides in English and German on Dataverse security roles, the 25 governance questions, five environment strategies, DLP policies, the citizen developer guide and an AI cost comparison.
 - [Wissen (DE)](https://powerplatformgovernance.com/de/knowledge/): Deutsche Übersicht der Wissensanleitungen.
 
 ## Knowledge guides (AI-guided)
@@ -38,6 +38,8 @@ The guides below contain a visible section "Instructions for AI assistants" near
 - [DLP-Richtlinien: was ihr zwingend einstellen müsst (DE)](https://powerplatformgovernance.com/de/knowledge/dlp-policies/): German version of the DLP guide.
 - [Citizen developers in the organisation (EN)](https://powerplatformgovernance.com/knowledge/citizen-developer-guide/): Four stages from the personal flow to the shared solution: who builds what and where, when a solution has to move up (users, data class, daily business, interfaces), sharing limits, environment routing and groups, pipelines, licence notes, a rules table and a prompt. Recommendation: at most 2 people for personal productivity, each organisation sets its own limit. Checked against Microsoft Learn.
 - [Citizen-Developer im Unternehmen (DE)](https://powerplatformgovernance.com/de/knowledge/citizen-developer-guide/): German version of the citizen developer guide.
+- [AI costs compared (EN)](https://powerplatformgovernance.com/knowledge/ai-cost-comparison/): USD list prices per unit for AI Builder, Copilot Credits, Azure AI Foundry (Azure OpenAI) and Azure AI Document Intelligence, assumptions, licence status of AI Builder, how to use each from Power Automate, when each option pays off, sources with dates. Prices as of October 2026.
+- [KI-Kosten im Vergleich (DE)](https://powerplatformgovernance.com/de/knowledge/ai-cost-comparison/): German version of the AI cost comparison.
 - [Dataverse security roles (EN)](https://powerplatformgovernance.com/knowledge/dataverse-security-roles/) and [DE](https://powerplatformgovernance.com/de/knowledge/dataverse-security-roles/): The five Dataverse security roles you need to know.
 
 ## Topics covered
