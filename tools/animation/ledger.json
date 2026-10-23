@@ -338,5 +338,15 @@
       "Check missing dependencies, connection references, environment variables, permissions, Dataverse readiness and DLP connector restrictions",
       "then test critical apps and flow triggers after import."
     ]
+  },
+  "a30d51f658eea807ac7ee994": {
+    "gif": true,
+    "reason": "The post describes a concrete 3 stage governance sequence: classify connectors, scope policies by environment, then monitor enforcement.",
+    "at": "2026-10-23",
+    "evidence": [
+      "Power Platform DLP policies classify connectors as Business, Non-Business or Blocked.",
+      "Admins can use separate developer and production environments",
+      "then monitor enforcement with the CoE Starter Kit and Power Platform admin center reporting."
+    ]
   }
 }

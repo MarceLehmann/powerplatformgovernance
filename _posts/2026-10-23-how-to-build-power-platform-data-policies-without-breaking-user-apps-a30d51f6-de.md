@@ -48,6 +48,12 @@ faq:
   answer: Admins können DLP-Richtlinien auf bestimmte Umgebungen begrenzen. Entwickler-Sandboxes
     können lockerere Regeln nutzen, während Produktionsumgebungen stärkere Kontrollen
     erzwingen.
+animation:
+  src: /assets/img/animations/a30d51f658eea807ac7ee994-de.gif
+  poster: /assets/img/animations/a30d51f658eea807ac7ee994-de.poster.png
+  width: 800
+  height: 450
+  alt: "Eine Abfolge mit 3 Schritten zeigt die DLP-Richtlinieneinrichtung: Connectors klassifizieren, unterschiedliche Regeln fuer Entwickler- und Produktionsumgebungen anwenden und die Durchsetzung mit Reporting ueberwachen."
 ---
 
 ## TL;DR

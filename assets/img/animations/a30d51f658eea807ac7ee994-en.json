@@ -1,0 +1,44 @@
+{
+ "title": "Set up Power Platform DLP",
+ "subtitle": "Classify connectors, scope environments, then monitor enforcement.",
+ "steps": [
+  {
+   "product": "admin",
+   "icon": "filter",
+   "productLabel": "Admin",
+   "title": "Classify connector groups",
+   "actions": [
+    "Business",
+    "Non-Business",
+    "Blocked"
+   ],
+   "evidence": "Power Platform DLP policies classify connectors as Business, Non-Business or Blocked."
+  },
+  {
+   "product": "admin",
+   "icon": "cloud",
+   "productLabel": "Admin",
+   "title": "Scope by environment",
+   "actions": [
+    "developer environments",
+    "production environments"
+   ],
+   "evidence": "Admins can use separate developer and production environments"
+  },
+  {
+   "product": "admin",
+   "icon": "search",
+   "productLabel": "Admin",
+   "title": "Monitor policy enforcement",
+   "actions": [
+    "CoE Starter Kit",
+    "admin center reporting"
+   ],
+   "evidence": "then monitor enforcement with the CoE Starter Kit and Power Platform admin center reporting."
+  }
+ ],
+ "punchline": [
+  "Protect data",
+  "without breaking apps"
+ ]
+}

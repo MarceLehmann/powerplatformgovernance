@@ -1,0 +1,41 @@
+{
+ "title": "Power Platform DLP einrichten",
+ "subtitle": "Connectors klassifizieren, Umgebungen begrenzen, dann Durchsetzung ueberwachen.",
+ "steps": [
+  {
+   "product": "admin",
+   "icon": "filter",
+   "productLabel": "Admin",
+   "title": "Connectorgruppen klassifizieren",
+   "actions": [
+    "Business",
+    "Nicht geschaeftlich",
+    "Blockiert"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "cloud",
+   "productLabel": "Admin",
+   "title": "Nach Umgebung begrenzen",
+   "actions": [
+    "Entwicklerumgebungen",
+    "Produktionsumgebungen"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "search",
+   "productLabel": "Admin",
+   "title": "Richtliniendurchsetzung ueberwachen",
+   "actions": [
+    "CoE Starter Kit",
+    "Admin Center Berichte"
+   ]
+  }
+ ],
+ "punchline": [
+  "Daten schuetzen",
+  "ohne Apps zu beschaedigen"
+ ]
+}
