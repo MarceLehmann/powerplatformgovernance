@@ -174,5 +174,26 @@
     "text": "Troubleshoot Power Platform deployment failures systematically\n\nFor Power Platform solution imports and pipeline deployments, record the failed stage, full error, operation ID, package version and target environment. Check missing dependencies, connection references, environment variables, permissions, Dataverse readiness and DLP connector restrictions, then test critical apps and flow triggers after import.\n\nSource: Softchief Technologies\n\nFull summary: https://powerplatformgovernance.com/en/posts/troubleshoot-power-platform-deployment-failures-systematically-a5efa32c/\n\n#PowerPlatformGovernanceDaily #Dataverse #PowerAutomate",
     "bufferPostId": "6ada5b5b77984f39b2b28d6d",
     "dueAt": "2026-10-23T13:00:00.000Z"
+  },
+  "91c4e609e84238d9afdf529f": {
+    "status": "expired",
+    "day": "2026-10-22",
+    "title": "Microsoft Purview Active Glossary Terms Automate Data Governance",
+    "expiredAt": "2026-10-23"
+  },
+  "a12d28d91b5553f283a59422": {
+    "status": "expired",
+    "day": "2026-10-22",
+    "title": "OneDrive Copilot updates make document governance more important",
+    "expiredAt": "2026-10-23"
+  },
+  "a30d51f658eea807ac7ee994": {
+    "status": "queued",
+    "day": "2026-10-23",
+    "kind": "video",
+    "title": "How to Build Power Platform Data Policies Without Breaking User Apps",
+    "text": "How to Build Power Platform Data Policies Without Breaking User Apps\n\nPower Platform DLP policies classify connectors as Business, Non-Business or Blocked. Business connectors cannot share data with Non-Business connectors, while blocked connectors cause apps and flows to fail. Admins can use separate developer and production environments, then monitor enforcement with the CoE Starter Kit and Power Platform admin center reporting.\n\nSource: M365 FM Podcast\n\nFull summary: https://powerplatformgovernance.com/en/posts/how-to-build-power-platform-data-policies-without-breaking-user-apps-a30d51f6/\n\n#PowerPlatformGovernanceDaily #Dataverse",
+    "bufferPostId": "6adb0638965e70f0b5f6ca29",
+    "dueAt": "2026-10-24T07:00:00.000Z"
   }
 }
