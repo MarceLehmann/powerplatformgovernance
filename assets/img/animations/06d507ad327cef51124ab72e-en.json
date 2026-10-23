@@ -1,0 +1,64 @@
+{
+ "title": "Govern the Power Platform estate",
+ "subtitle": "Track assets, owners, connectors, access and lifecycle as one routine.",
+ "steps": [
+  {
+   "product": "admin",
+   "icon": "table",
+   "productLabel": "Admin",
+   "title": "Inventory assets across environments",
+   "actions": [
+    "Inventory assets",
+    "Across environments"
+   ],
+   "evidence": "inventory assets across environments"
+  },
+  {
+   "product": "powerapps",
+   "icon": "user",
+   "productLabel": "Power Apps",
+   "title": "Assign owners and co owners",
+   "actions": [
+    "Assign owners",
+    "Add a co-owner"
+   ],
+   "evidence": "assign owners"
+  },
+  {
+   "product": "admin",
+   "icon": "link",
+   "productLabel": "Admin",
+   "title": "Inspect connectors with DLP",
+   "actions": [
+    "Inspect connectors",
+    "DLP policies"
+   ],
+   "evidence": "inspect connectors"
+  },
+  {
+   "product": "admin",
+   "icon": "shield",
+   "productLabel": "Admin",
+   "title": "Review user and guest access",
+   "actions": [
+    "Review access",
+    "Guest access"
+   ],
+   "evidence": "review user and guest access"
+  },
+  {
+   "product": "admin",
+   "icon": "check",
+   "productLabel": "Admin",
+   "title": "Retire unused or stopped assets",
+   "actions": [
+    "Retire assets",
+    "Lifecycle reviews"
+   ],
+   "evidence": "retire unused or stopped assets"
+  }
+ ],
+ "punchline": [
+  "One routine for all three"
+ ]
+}

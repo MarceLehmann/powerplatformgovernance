@@ -44,6 +44,12 @@ faq:
   answer: Agents sollten nach 90 Tagen ohne Nutzung zurückgezogen oder gelöscht werden,
     Entwürfe ohne Veröffentlichung nach 30 Tagen. Jede Entscheidung sollte dokumentiert
     werden.
+animation:
+  src: /assets/img/animations/808b3a62f9e38817fca9ae7e-de.gif
+  poster: /assets/img/animations/808b3a62f9e38817fca9ae7e-de.poster.png
+  width: 800
+  height: 450
+  alt: "Die Abfolge zeigt die Steuerung von Copilot Agents: alle Copilot Studio und SharePoint Agents erfassen, Besitz und Status dokumentieren, Risiken bewerten und veraltete oder unveroeffentlichte Agents stilllegen."
 ---
 
 ## TL;DR

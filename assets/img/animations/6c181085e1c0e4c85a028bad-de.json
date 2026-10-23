@@ -1,0 +1,54 @@
+{
+ "title": "Schatten-KI kontrollieren",
+ "subtitle": "Ungepruefte Tools finden, Risiko bewerten, nuetzliche verwalten und regelmaessig wiederholen.",
+ "steps": [
+  {
+   "product": "admin",
+   "icon": "search",
+   "productLabel": "Entra ID",
+   "title": "Ungepruefte KI-Tools finden",
+   "actions": [
+    "Entra ID",
+    "Copilot Studio",
+    "SharePoint-Agents"
+   ]
+  },
+  {
+   "product": "generic",
+   "icon": "filter",
+   "productLabel": "KI-Tools",
+   "title": "Datenzugriff und Nutzung bewerten",
+   "actions": [
+    "Datenzugriff bewerten",
+    "Nutzer",
+    "Autonomie"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "check",
+   "productLabel": "Governance",
+   "title": "Wertvolle Tools genehmigen",
+   "actions": [
+    "Inventar",
+    "Verantwortliche",
+    "Zugriffspruefung"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "arrow",
+   "productLabel": "Governance",
+   "title": "Rest entfernen und wiederholen",
+   "actions": [
+    "Zustimmung widerrufen",
+    "entfernen",
+    "fester Zyklus"
+   ]
+  }
+ ],
+ "punchline": [
+  "Genehmigen oder entfernen",
+  "Im festen Zyklus wiederholen"
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "title": "Eine KI-Inventur aufbauen",
+ "subtitle": "Mit Mandanten und Identitaetssignalen starten, Felder erfassen und in festem Rhythmus aktualisieren.",
+ "steps": [
+  {
+   "product": "admin",
+   "icon": "search",
+   "productLabel": "Microsoft 365 Copilot",
+   "title": "Mit Copilot und Agenten beginnen",
+   "actions": [
+    "Microsoft 365 Copilot",
+    "Copilot Studio",
+    "SharePoint-Agenten"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "link",
+   "productLabel": "Entra ID",
+   "title": "Apps und externe Dienste ergaenzen",
+   "actions": [
+    "Entra ID-Anwendungen",
+    "Claude Enterprise",
+    "ChatGPT Enterprise"
+   ]
+  },
+  {
+   "product": "generic",
+   "icon": "doc",
+   "productLabel": "Inventareintrag",
+   "title": "Besitzer, Nutzer und Risiko erfassen",
+   "actions": [
+    "Besitzer",
+    "Nutzer",
+    "Datenzugriff"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "calendar",
+   "productLabel": "Pruefzyklus",
+   "title": "In festem Rhythmus aktualisieren",
+   "actions": [
+    "Inventur aktualisieren",
+    "fester Zyklus"
+   ]
+  }
+ ],
+ "punchline": [
+  "Aktuelle KI-Inventur",
+  "Fester Pruefzyklus"
+ ]
+}

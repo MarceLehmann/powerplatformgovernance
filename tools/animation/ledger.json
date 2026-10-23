@@ -348,5 +348,80 @@
       "Admins can use separate developer and production environments",
       "then monitor enforcement with the CoE Starter Kit and Power Platform admin center reporting."
     ]
+  },
+  "c568274295f98e4d75df5d68": {
+    "gif": false,
+    "reason": "The post gives governance advice and a recurring cycle, but it does not state a concrete 3 to 5 stage procedure in order.",
+    "at": "2026-10-23"
+  },
+  "bdb526f69f5f3558c6066895": {
+    "gif": false,
+    "reason": "The post gives governance advice and a best-practice list, not a concrete 3 to 5 stage procedure stated as an ordered sequence.",
+    "at": "2026-10-23"
+  },
+  "e9dbb69edd9aa308cc9cf9f3": {
+    "gif": false,
+    "reason": "The post is governance advice with monitoring checks and remediation guidance, but it does not state one concrete 3 to 5 stage procedure in a fixed order.",
+    "at": "2026-10-23"
+  },
+  "612c015446ed81b1749a3c4b": {
+    "gif": false,
+    "reason": "The post gives governance advice and a list of control activities, but it does not state one concrete 3 to 5 step procedure to animate without guessing.",
+    "at": "2026-10-23"
+  },
+  "c8032fc1c431471c03c28877": {
+    "gif": true,
+    "reason": "The post states a clear 3 stage setup flow: create the agent, connect the custom API or MCP server, and test the complete flow.",
+    "at": "2026-10-23",
+    "evidence": [
+      "Create the declarative agent",
+      "introduce the custom HTTP API",
+      "test the complete flow so the agent calls the backend logic."
+    ]
+  },
+  "6c181085e1c0e4c85a028bad": {
+    "gif": true,
+    "reason": "The post gives a clear 4 stage governance sequence: discover, assess, approve or retire, then repeat.",
+    "at": "2026-10-23",
+    "evidence": [
+      "Review Entra ID enterprise applications, Copilot Studio and SharePoint agents, and licensed AI service members to find unapproved tools.",
+      "Assess each tool's data reach, users and autonomy",
+      "approve valuable tools under inventory, ownership and access review",
+      "or revoke consent and retire them. Repeat discovery on a fixed cycle."
+    ]
+  },
+  "808b3a62f9e38817fca9ae7e": {
+    "gif": true,
+    "reason": "The post states a concrete four stage governance sequence: inventory, record details, rank risk, then retire stale agents.",
+    "at": "2026-10-23",
+    "evidence": [
+      "Inventory every Copilot Studio and SharePoint agent across all environments.",
+      "recording its builder, timing, environment, publication status, owner, sources, connectors, actions and sign-in requirement.",
+      "then rank risk by data sensitivity, action breadth and autonomy.",
+      "Ask owners to unpublish or delete agents unused for 90 days or drafts left unpublished for 30 days, and record each decision."
+    ]
+  },
+  "06d507ad327cef51124ab72e": {
+    "gif": true,
+    "reason": "The post gives a concrete 5 stage governance routine in order: inventory, assign owners, inspect connectors, review access, and retire assets.",
+    "at": "2026-10-23",
+    "evidence": [
+      "inventory assets across environments",
+      "assign owners",
+      "inspect connectors",
+      "review user and guest access",
+      "retire unused or stopped assets"
+    ]
+  },
+  "ec1e5cfc0d42dc9c9d725b7b": {
+    "gif": true,
+    "reason": "The post gives a concrete 4 stage inventory workflow from discovery to recurring refresh.",
+    "at": "2026-10-23",
+    "evidence": [
+      "Start with Microsoft 365 Copilot licences and usage, Copilot Studio and SharePoint agents",
+      "then add Entra ID enterprise applications and licensed services such as Claude Enterprise and ChatGPT Enterprise.",
+      "Record owners, users, data reach and risk, and refresh the inventory",
+      "refresh the inventory on a fixed cycle because new tools appear monthly."
+    ]
   }
 }

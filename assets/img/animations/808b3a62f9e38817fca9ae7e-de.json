@@ -1,0 +1,53 @@
+{
+ "title": "Copilot Agents steuern",
+ "subtitle": "Agents erfassen, Kerndaten dokumentieren, Risiken bewerten und veraltete oder exponierte Agents stilllegen.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "search",
+   "productLabel": "Copilot Studio",
+   "title": "Alle Agents erfassen",
+   "actions": [
+    "Alle Agents auflisten",
+    "jede Umgebung"
+   ]
+  },
+  {
+   "product": "sharepoint",
+   "icon": "doc",
+   "productLabel": "SharePoint",
+   "title": "Besitz und Status dokumentieren",
+   "actions": [
+    "Besitzer",
+    "Veroeffentlichungsstatus",
+    "Anmeldeanforderung"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "filter",
+   "productLabel": "Admin",
+   "title": "Risiko nach Faktoren bewerten",
+   "actions": [
+    "Datenempfindlichkeit",
+    "Aktionsumfang",
+    "Autonomie"
+   ]
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "check",
+   "productLabel": "Copilot Studio",
+   "title": "Veraltete Agents stilllegen",
+   "actions": [
+    "Zurueckziehen",
+    "Loeschen",
+    "Entscheidung dokumentieren"
+   ]
+  }
+ ],
+ "punchline": [
+  "Veraltete Agents stilllegen",
+  "Verantwortung sichern"
+ ]
+}

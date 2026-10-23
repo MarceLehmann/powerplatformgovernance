@@ -38,6 +38,12 @@ faq:
 - question: Unterstützt das Tutorial für deklarative Agents PAYG mit Copilot Credits?
   answer: Ja. Der Ablauf zeigt, dass die Erstellung des einfachen deklarativen Agents
     mit PAYG und Copilot Credits möglich ist.
+animation:
+  src: /assets/img/animations/c8032fc1c431471c03c28877-de.gif
+  poster: /assets/img/animations/c8032fc1c431471c03c28877-de.poster.png
+  width: 800
+  height: 450
+  alt: "Drei Schritte zeigen den Aufbau: einfachen deklarativen Agent erstellen, HTTP-API oder MCP-Server verbinden und den Ablauf testen, um Backend-Logik aufzurufen."
 ---
 
 ## TL;DR

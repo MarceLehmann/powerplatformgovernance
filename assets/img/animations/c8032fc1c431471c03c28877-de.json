@@ -1,0 +1,37 @@
+{
+ "title": "APIs mit deklarativen Agents verbinden",
+ "subtitle": "Agent erstellen, Backend-Zugriff verbinden und den Live-Ablauf testen.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "user",
+   "productLabel": "Copilot Studio",
+   "title": "Einfachen deklarativen Agent erstellen",
+   "actions": [
+    "Deklarativen Agent erstellen"
+   ]
+  },
+  {
+   "product": "generic",
+   "icon": "link",
+   "productLabel": "HTTP-API oder MCP-Server",
+   "title": "Backend-Zugriff verbinden",
+   "actions": [
+    "benutzerdefinierte HTTP-API",
+    "MCP-Server"
+   ]
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "play",
+   "productLabel": "Copilot Studio",
+   "title": "Vollstaendigen Ablauf live testen",
+   "actions": [
+    "vollstaendigen Ablauf testen"
+   ]
+  }
+ ],
+ "punchline": [
+  "Agent ruft Backend-Logik auf"
+ ]
+}

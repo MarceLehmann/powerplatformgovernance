@@ -1,0 +1,57 @@
+{
+ "title": "Govern Copilot agents",
+ "subtitle": "Inventory agents, record key details, rank risk and retire stale or exposed agents.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "search",
+   "productLabel": "Copilot Studio",
+   "title": "Inventory all agents",
+   "actions": [
+    "List every agent",
+    "every environment"
+   ],
+   "evidence": "Inventory every Copilot Studio and SharePoint agent across all environments."
+  },
+  {
+   "product": "sharepoint",
+   "icon": "doc",
+   "productLabel": "SharePoint",
+   "title": "Record owner and status details",
+   "actions": [
+    "owner",
+    "publication status",
+    "sign-in requirement"
+   ],
+   "evidence": "recording its builder, timing, environment, publication status, owner, sources, connectors, actions and sign-in requirement."
+  },
+  {
+   "product": "admin",
+   "icon": "filter",
+   "productLabel": "Admin",
+   "title": "Rank risk by exposure factors",
+   "actions": [
+    "data sensitivity",
+    "action breadth",
+    "autonomy"
+   ],
+   "evidence": "then rank risk by data sensitivity, action breadth and autonomy."
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "check",
+   "productLabel": "Copilot Studio",
+   "title": "Retire stale or unpublished agents",
+   "actions": [
+    "unpublish",
+    "delete",
+    "record each decision"
+   ],
+   "evidence": "Ask owners to unpublish or delete agents unused for 90 days or drafts left unpublished for 30 days, and record each decision."
+  }
+ ],
+ "punchline": [
+  "Retire stale agents",
+  "Keep accountability"
+ ]
+}

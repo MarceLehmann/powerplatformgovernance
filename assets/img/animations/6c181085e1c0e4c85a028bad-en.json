@@ -1,0 +1,58 @@
+{
+ "title": "Control shadow AI",
+ "subtitle": "Find unapproved tools, assess risk, govern useful ones, and repeat on a fixed cycle.",
+ "steps": [
+  {
+   "product": "admin",
+   "icon": "search",
+   "productLabel": "Entra ID",
+   "title": "Discover unapproved AI tools",
+   "actions": [
+    "Entra ID",
+    "Copilot Studio",
+    "SharePoint agents"
+   ],
+   "evidence": "Review Entra ID enterprise applications, Copilot Studio and SharePoint agents, and licensed AI service members to find unapproved tools."
+  },
+  {
+   "product": "generic",
+   "icon": "filter",
+   "productLabel": "AI tools",
+   "title": "Assess data reach and usage",
+   "actions": [
+    "assess data reach",
+    "users",
+    "autonomy"
+   ],
+   "evidence": "Assess each tool's data reach, users and autonomy"
+  },
+  {
+   "product": "admin",
+   "icon": "check",
+   "productLabel": "Governance",
+   "title": "Approve valuable tools",
+   "actions": [
+    "inventory",
+    "ownership",
+    "access review"
+   ],
+   "evidence": "approve valuable tools under inventory, ownership and access review"
+  },
+  {
+   "product": "admin",
+   "icon": "arrow",
+   "productLabel": "Governance",
+   "title": "Retire the rest and repeat",
+   "actions": [
+    "revoke consent",
+    "retire them",
+    "fixed cycle"
+   ],
+   "evidence": "or revoke consent and retire them. Repeat discovery on a fixed cycle."
+  }
+ ],
+ "punchline": [
+  "Approve or retire",
+  "Repeat on a fixed cycle"
+ ]
+}

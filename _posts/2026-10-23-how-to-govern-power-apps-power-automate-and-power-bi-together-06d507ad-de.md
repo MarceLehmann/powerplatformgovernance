@@ -43,6 +43,12 @@ faq:
   answer: Riskante Konnektoren sollten per DLP-Richtlinie eingeschränkt werden, während
     Produktions-Apps in getrennten Umgebungen mit Besitzern und Änderungssteuerung
     laufen.
+animation:
+  src: /assets/img/animations/06d507ad327cef51124ab72e-de.gif
+  poster: /assets/img/animations/06d507ad327cef51124ab72e-de.poster.png
+  width: 800
+  height: 450
+  alt: "Ein Governance-Ablauf in fuenf Schritten zeigt Erfassen ueber Umgebungen, Besitzer zuweisen, Konnektoren pruefen, Benutzer- und Gastzugriffe pruefen und ungenutzte oder gestoppte Assets stilllegen."
 ---
 
 ## TL;DR

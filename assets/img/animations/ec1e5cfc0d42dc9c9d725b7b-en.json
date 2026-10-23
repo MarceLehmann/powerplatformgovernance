@@ -1,0 +1,57 @@
+{
+ "title": "Build an AI inventory",
+ "subtitle": "Start from tenant and identity signals, record key fields, and refresh on a fixed cycle.",
+ "steps": [
+  {
+   "product": "admin",
+   "icon": "search",
+   "productLabel": "Microsoft 365 Copilot",
+   "title": "Start with Copilot and agents",
+   "actions": [
+    "Microsoft 365 Copilot",
+    "Copilot Studio",
+    "SharePoint agents"
+   ],
+   "evidence": "Start with Microsoft 365 Copilot licences and usage, Copilot Studio and SharePoint agents"
+  },
+  {
+   "product": "admin",
+   "icon": "link",
+   "productLabel": "Entra ID",
+   "title": "Add apps and external services",
+   "actions": [
+    "Entra ID applications",
+    "Claude Enterprise",
+    "ChatGPT Enterprise"
+   ],
+   "evidence": "then add Entra ID enterprise applications and licensed services such as Claude Enterprise and ChatGPT Enterprise."
+  },
+  {
+   "product": "generic",
+   "icon": "doc",
+   "productLabel": "Inventory record",
+   "title": "Record owners, users and risk",
+   "actions": [
+    "owner",
+    "users",
+    "data reach"
+   ],
+   "evidence": "Record owners, users, data reach and risk, and refresh the inventory"
+  },
+  {
+   "product": "admin",
+   "icon": "calendar",
+   "productLabel": "Review cycle",
+   "title": "Refresh on a fixed cycle",
+   "actions": [
+    "refresh the inventory",
+    "fixed cycle"
+   ],
+   "evidence": "refresh the inventory on a fixed cycle because new tools appear monthly."
+  }
+ ],
+ "punchline": [
+  "Current AI inventory",
+  "Fixed review cycle"
+ ]
+}

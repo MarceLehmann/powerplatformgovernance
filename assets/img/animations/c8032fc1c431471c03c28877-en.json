@@ -1,0 +1,40 @@
+{
+ "title": "Connect APIs to declarative agents",
+ "subtitle": "Create the agent, connect backend access, then test the live flow.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "user",
+   "productLabel": "Copilot Studio",
+   "title": "Create a plain declarative agent",
+   "actions": [
+    "Create declarative agent"
+   ],
+   "evidence": "Create the declarative agent"
+  },
+  {
+   "product": "generic",
+   "icon": "link",
+   "productLabel": "HTTP API or MCP server",
+   "title": "Connect custom backend access",
+   "actions": [
+    "custom HTTP API",
+    "MCP servers"
+   ],
+   "evidence": "introduce the custom HTTP API"
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "play",
+   "productLabel": "Copilot Studio",
+   "title": "Test the complete flow live",
+   "actions": [
+    "test the complete flow"
+   ],
+   "evidence": "test the complete flow so the agent calls the backend logic."
+  }
+ ],
+ "punchline": [
+  "Agent calls backend logic"
+ ]
+}

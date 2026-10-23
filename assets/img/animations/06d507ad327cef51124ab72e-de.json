@@ -1,0 +1,59 @@
+{
+ "title": "Power Platform Bestand steuern",
+ "subtitle": "Assets, Besitzer, Konnektoren, Zugriffe und Lebenszyklus in einer Routine verfolgen.",
+ "steps": [
+  {
+   "product": "admin",
+   "icon": "table",
+   "productLabel": "Admin",
+   "title": "Assets ueber Umgebungen erfassen",
+   "actions": [
+    "Assets erfassen",
+    "Ueber Umgebungen"
+   ]
+  },
+  {
+   "product": "powerapps",
+   "icon": "user",
+   "productLabel": "Power Apps",
+   "title": "Besitzer und Co-Owner zuweisen",
+   "actions": [
+    "Besitzer zuweisen",
+    "Co-Owner hinzufuegen"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "link",
+   "productLabel": "Admin",
+   "title": "Konnektoren mit DLP pruefen",
+   "actions": [
+    "Konnektoren pruefen",
+    "DLP policies"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "shield",
+   "productLabel": "Admin",
+   "title": "Benutzer und Gaeste pruefen",
+   "actions": [
+    "Zugriff pruefen",
+    "Gastzugriff"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "check",
+   "productLabel": "Admin",
+   "title": "Ungenutzte Assets stilllegen",
+   "actions": [
+    "Assets stilllegen",
+    "Lebenszykluspruefung"
+   ]
+  }
+ ],
+ "punchline": [
+  "Eine Routine fuer alle drei"
+ ]
+}
