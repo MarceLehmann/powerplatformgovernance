@@ -195,5 +195,23 @@
     "text": "How to Build Power Platform Data Policies Without Breaking User Apps\n\nPower Platform DLP policies classify connectors as Business, Non-Business or Blocked. Business connectors cannot share data with Non-Business connectors, while blocked connectors cause apps and flows to fail. Admins can use separate developer and production environments, then monitor enforcement with the CoE Starter Kit and Power Platform admin center reporting.\n\nSource: M365 FM Podcast\n\nFull summary: https://powerplatformgovernance.com/en/posts/how-to-build-power-platform-data-policies-without-breaking-user-apps-a30d51f6/\n\n#PowerPlatformGovernanceDaily #Dataverse",
     "bufferPostId": "6adb0638965e70f0b5f6ca29",
     "dueAt": "2026-10-24T07:00:00.000Z"
+  },
+  "c8032fc1c431471c03c28877": {
+    "status": "queued",
+    "day": "2026-10-23",
+    "kind": "video",
+    "title": "Add Custom APIs and MCP Servers to Declarative Agents",
+    "text": "Add Custom APIs and MCP Servers to Declarative Agents\n\nThe tutorial shows how to create a declarative agent for Microsoft 365 Copilot, introduce a custom HTTP API, and test the agent calling backend logic. It also covers MCP servers, with PAYG and Copilot Credits possible, although Agent builder cannot add custom APIs or MCP servers directly.\n\nSource: Microsoft Copilot Studio CAT\n\nFull summary: https://powerplatformgovernance.com/en/posts/add-custom-apis-and-mcp-servers-to-declarative-agents-c8032fc1/\n\n#PowerPlatformGovernanceDaily #CopilotStudio",
+    "bufferPostId": "6adbac830b5343d07046e6b8",
+    "dueAt": "2026-10-24T10:00:00.000Z"
+  },
+  "06d507ad327cef51124ab72e": {
+    "status": "queued",
+    "day": "2026-10-23",
+    "kind": "video",
+    "title": "How to govern Power Apps, Power Automate and Power BI together",
+    "text": "How to govern Power Apps, Power Automate and Power BI together\n\nGovern Power Apps, Power Automate and Power BI as one estate: inventory assets across environments, assign owners, inspect connectors, review user and guest access, and retire unused or stopped assets. Use DLP policies to restrict risky connectors, dedicated environments for production apps, and co-owners or owner groups for business-critical apps and flows.\n\nSource: Rencore\n\nFull summary: https://powerplatformgovernance.com/en/posts/how-to-govern-power-apps-power-automate-and-power-bi-together-06d507ad/\n\n#PowerPlatformGovernanceDaily #PowerApps",
+    "bufferPostId": "6adbac848b3d437ddc7ff44d",
+    "dueAt": "2026-10-24T13:00:00.000Z"
   }
 }
