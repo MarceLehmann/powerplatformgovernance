@@ -1,0 +1,49 @@
+{
+ "title": "Fiktive Dateien fuer Copilot vorbereiten",
+ "subtitle": "Sichere Kursdateien und eine messbare Antwortpruefung fuer Copilot einrichten.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "shield",
+   "productLabel": "Copilot Studio",
+   "title": "Personendaten und Vertrauliches entfernen",
+   "actions": [
+    "Personendaten entfernen",
+    "Vertrauliches pruefen"
+   ]
+  },
+  {
+   "product": "generic",
+   "icon": "file",
+   "productLabel": "Kursdateien",
+   "title": "Dateien als fiktiv kennzeichnen",
+   "actions": [
+    "Als fiktiv kennzeichnen"
+   ]
+  },
+  {
+   "product": "generic",
+   "icon": "check",
+   "productLabel": "Kursdateien",
+   "title": "Bekannte Fehler in Dokumente einbauen",
+   "actions": [
+    "Dokumente erstellen",
+    "Bekannte Fehler einbauen"
+   ]
+  },
+  {
+   "product": "generic",
+   "icon": "doc",
+   "productLabel": "Loesungsschluessel",
+   "title": "Kontroll-Datei und Schluessel behalten",
+   "actions": [
+    "Loesungsschluessel behalten",
+    "Kontroll-Datei einfuegen"
+   ]
+  }
+ ],
+ "punchline": [
+  "Sicherere gemeinsame Uebungen",
+  "Messbare Antwortpruefung"
+ ]
+}

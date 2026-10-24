@@ -1,0 +1,53 @@
+{
+ "title": "Prepare fictional files for Copilot",
+ "subtitle": "Set up safe course files and a measurable answer check for Copilot.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "shield",
+   "productLabel": "Copilot Studio",
+   "title": "Remove personal and confidential data",
+   "actions": [
+    "Remove personal data",
+    "Check confidential info"
+   ],
+   "evidence": "Remove personal data"
+  },
+  {
+   "product": "generic",
+   "icon": "file",
+   "productLabel": "Course files",
+   "title": "Mark files as fictional",
+   "actions": [
+    "Mark files as fictional"
+   ],
+   "evidence": "mark files as fictional"
+  },
+  {
+   "product": "generic",
+   "icon": "check",
+   "productLabel": "Course files",
+   "title": "Plant known errors in documents",
+   "actions": [
+    "Create documents",
+    "Plant known errors"
+   ],
+   "evidence": "Create documents with known planted errors, keep an answer key"
+  },
+  {
+   "product": "generic",
+   "icon": "doc",
+   "productLabel": "Answer key",
+   "title": "Keep control file and answer key",
+   "actions": [
+    "Keep an answer key",
+    "Include control file"
+   ],
+   "evidence": "include one error-free control file to check whether Copilot reports false errors"
+  }
+ ],
+ "punchline": [
+  "Safer shared exercises",
+  "Measurable answer checks"
+ ]
+}

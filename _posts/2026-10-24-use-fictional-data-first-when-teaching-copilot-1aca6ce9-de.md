@@ -41,6 +41,12 @@ faq:
   answer: Personenbezogene und vertrauliche Informationen müssen entfernt werden.
     Zusätzlich sind unterschiedliche Zugriffsrechte und der fehlende Lösungsschlüssel
     vor dem Teilen zu prüfen.
+animation:
+  src: /assets/img/animations/1aca6ce9497cf47fad6e76cf-de.gif
+  poster: /assets/img/animations/1aca6ce9497cf47fad6e76cf-de.poster.png
+  width: 800
+  height: 450
+  alt: "Eine Abfolge in vier Schritten zeigt, wie fiktive Kursdateien fuer Copilot vorbereitet werden: sensible Daten entfernen, Dateien als fiktiv kennzeichnen, bekannte Fehler einbauen und eine fehlerfreie Kontroll-Datei mit Loesungsschluessel behalten."
 ---
 
 ## TL;DR

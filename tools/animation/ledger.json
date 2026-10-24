@@ -469,5 +469,16 @@
       "requiring deeper reviews for agents handling regulated data or autonomous actions",
       "Apply least privilege to agent identities and audit existing SharePoint permissions"
     ]
+  },
+  "1aca6ce9497cf47fad6e76cf": {
+    "gif": true,
+    "reason": "The post gives a concrete preparation sequence for course files: remove data, mark files as fictional, plant errors, and keep a control file with an answer key.",
+    "at": "2026-10-24",
+    "evidence": [
+      "Remove personal data",
+      "mark files as fictional",
+      "Create documents with known planted errors, keep an answer key",
+      "include one error-free control file to check whether Copilot reports false errors"
+    ]
   }
 }
