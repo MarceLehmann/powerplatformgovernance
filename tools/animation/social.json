@@ -282,5 +282,14 @@
     "text": "Shadow AI Governance: Control Unauthorized Copilot Pilots\n\nMicrosoft 365 Copilot, Power Platform agents, Power Automate flows and Azure AI applications should be inventoried with their data sources, business owners, users and action capabilities. A CoE intake process can route low-risk ideas quickly while requiring deeper reviews for agents handling regulated data or autonomous actions. Existing Microsoft 365 permissions must also be audited.\n\nSource: M365.fm\n\nFull summary: https://powerplatformgovernance.com/en/posts/shadow-ai-governance-control-unauthorized-copilot-pilots-f85378f2/\n\n#PowerPlatformGovernanceDaily #CopilotStudio",
     "bufferPostId": "6adc56b4e4be8a4d8645aa46",
     "dueAt": "2026-10-25T08:00:00.000Z"
+  },
+  "1aca6ce9497cf47fad6e76cf": {
+    "status": "queued",
+    "day": "2026-10-24",
+    "kind": "video",
+    "title": "Use fictional data first when teaching Copilot",
+    "text": "Use fictional data first when teaching Copilot\n\nUse a fictional municipality or company for Copilot courses, based on the customer’s templates and tasks. Remove personal data, mark files as fictional, plant known errors, and keep an error-free control file so participants can test Copilot against an answer key without exposing real cases.\n\nSource: andersjensen.org\n\nFull summary: https://powerplatformgovernance.com/en/posts/use-fictional-data-first-when-teaching-copilot-1aca6ce9/\n\n#PowerPlatformGovernanceDaily #CopilotStudio",
+    "bufferPostId": "6adcfd4c6887a2efc1cf0573",
+    "dueAt": "2026-10-25T11:00:00.000Z"
   }
 }
