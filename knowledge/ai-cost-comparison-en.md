@@ -139,6 +139,10 @@ Assessment by KMUpower, not a statement by Microsoft. Unit prices exclude setup,
 7. [Azure OpenAI connector](https://learn.microsoft.com/en-us/connectors/azureopenai/), accessed 23.10.2026.
 8. [Azure AI Document Intelligence (form recognizer) connector](https://learn.microsoft.com/en-us/connectors/formrecognizer/), accessed 23.10.2026.
 
+### Related tips (PowerPlatformTip)
+
+- [#PowerPlatformTip 143: Reduce AI Costs with Thumbnail-First Document Processing](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-143-reduce-ai-costs/)
+
 ## Frequently asked questions
 
 ### Can you still buy the AI Builder add-on as a new customer?
