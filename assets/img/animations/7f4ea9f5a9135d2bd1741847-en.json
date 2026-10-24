@@ -1,0 +1,53 @@
+{
+ "title": "Set up SSO for Custom Connectors",
+ "subtitle": "Configure registrations, authorization and OAuth so users authenticate without the connection manager.",
+ "steps": [
+  {
+   "product": "admin",
+   "icon": "key",
+   "productLabel": "Entra ID",
+   "title": "Configure both app registrations",
+   "actions": [
+    "server app registrations",
+    "connector app registrations"
+   ],
+   "evidence": "Configure the server and connector app registrations, permissions, Azure API Connections authorization and connector OAuth settings."
+  },
+  {
+   "product": "admin",
+   "icon": "shield",
+   "productLabel": "Entra ID",
+   "title": "Add delegated permissions",
+   "actions": [
+    "delegated permissions"
+   ],
+   "evidence": "Configure the server and connector app registrations, permissions, Azure API Connections authorization and connector OAuth settings."
+  },
+  {
+   "product": "generic",
+   "icon": "link",
+   "productLabel": "Azure API Connections",
+   "title": "Authorize Azure API Connections",
+   "actions": [
+    "Azure API Connections",
+    "authorized client"
+   ],
+   "evidence": "The Azure API Connections service may not have been added as an authorized client, causing background connection creation to fail for another user."
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "check",
+   "productLabel": "Copilot Studio",
+   "title": "Set connector OAuth and first consent",
+   "actions": [
+    "connector OAuth settings",
+    "approve consent once"
+   ],
+   "evidence": "Users still approve consent once, after which the connection is created and authenticated in the background."
+  }
+ ],
+ "punchline": [
+  "Connection created",
+  "authenticated in background"
+ ]
+}

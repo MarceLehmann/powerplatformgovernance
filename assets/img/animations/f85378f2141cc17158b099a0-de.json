@@ -1,0 +1,51 @@
+{
+ "title": "Shadow AI Copilots steuern",
+ "subtitle": "Agenten erfassen, durch CoE-Aufnahme leiten, Hochrisikofaelle pruefen und Rechte kontrollieren.",
+ "steps": [
+  {
+   "product": "generic",
+   "icon": "doc",
+   "productLabel": "Microsoft 365 Copilot",
+   "title": "Jede KI-Loesung inventarisieren",
+   "actions": [
+    "Datenquelle erfassen",
+    "Geschaeftsverantwortlicher",
+    "Zielnutzer"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "filter",
+   "productLabel": "Admin",
+   "title": "Ideen durch CoE-Aufnahme leiten",
+   "actions": [
+    "CoE-Aufnahmeprozess",
+    "Risikoarme Ideen leiten"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "shield",
+   "productLabel": "Admin",
+   "title": "Agenten mit hohem Impact pruefen",
+   "actions": [
+    "Vertiefte Pruefung",
+    "Regulierte Daten",
+    "Autonome Aktionen"
+   ]
+  },
+  {
+   "product": "sharepoint",
+   "icon": "key",
+   "productLabel": "SharePoint",
+   "title": "Berechtigungen und Zugriff pruefen",
+   "actions": [
+    "Least Privilege",
+    "Berechtigungen pruefen"
+   ]
+  }
+ ],
+ "punchline": [
+  "Shadow-AI-Risiken steuern"
+ ]
+}

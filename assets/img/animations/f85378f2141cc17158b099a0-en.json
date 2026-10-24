@@ -1,0 +1,55 @@
+{
+ "title": "Govern shadow AI copilots",
+ "subtitle": "Inventory agents, route intake, review high risk cases and audit permissions.",
+ "steps": [
+  {
+   "product": "generic",
+   "icon": "doc",
+   "productLabel": "Microsoft 365 Copilot",
+   "title": "Inventory each AI solution",
+   "actions": [
+    "Record data source",
+    "Business owner",
+    "Intended users"
+   ],
+   "evidence": "Record each solution's data source, business owner, intended users and ability to trigger automated actions"
+  },
+  {
+   "product": "admin",
+   "icon": "filter",
+   "productLabel": "Admin",
+   "title": "Route ideas through CoE intake",
+   "actions": [
+    "CoE intake process",
+    "Route low-risk ideas"
+   ],
+   "evidence": "A CoE intake process can route low-risk ideas quickly while requiring deeper reviews"
+  },
+  {
+   "product": "admin",
+   "icon": "shield",
+   "productLabel": "Admin",
+   "title": "Review high impact agents",
+   "actions": [
+    "Deeper review",
+    "Regulated data",
+    "Autonomous actions"
+   ],
+   "evidence": "requiring deeper reviews for agents handling regulated data or autonomous actions"
+  },
+  {
+   "product": "sharepoint",
+   "icon": "key",
+   "productLabel": "SharePoint",
+   "title": "Audit permissions and access",
+   "actions": [
+    "Least privilege",
+    "Audit permissions"
+   ],
+   "evidence": "Apply least privilege to agent identities and audit existing SharePoint permissions"
+  }
+ ],
+ "punchline": [
+  "Control shadow AI risk"
+ ]
+}

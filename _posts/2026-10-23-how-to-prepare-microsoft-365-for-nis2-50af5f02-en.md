@@ -42,6 +42,12 @@ faq:
   answer: Microsoft Purview provides the tenant audit log for changes and incidents.
     Retain it long enough to cover reporting duties and monitor redirects, privileged
     app permissions and risky sign-ins.
+animation:
+  src: /assets/img/animations/50af5f02348052659d00295a-en.gif
+  poster: /assets/img/animations/50af5f02348052659d00295a-en.poster.png
+  width: 800
+  height: 450
+  alt: "A five step flow shows NIS2 readiness in Microsoft 365 by mapping duties to controls, assigning owners, setting baselines, scheduling reviews, and packaging audit evidence and reports."
 ---
 
 ## TL;DR

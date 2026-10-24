@@ -42,6 +42,12 @@ faq:
   answer: Der Wizard erstellt im Hintergrund einen Custom Connector. Schliessen Sie
     zuerst die Authentifizierung im Wizard ab und ändern Sie danach die Sicherheitsinformationen
     des Connectors.
+animation:
+  src: /assets/img/animations/7f4ea9f5a9135d2bd1741847-de.gif
+  poster: /assets/img/animations/7f4ea9f5a9135d2bd1741847-de.poster.png
+  width: 800
+  height: 450
+  alt: "Eine Abfolge in vier Schritten zeigt App-Registrierungen, delegierte Berechtigungen, die Autorisierung von Azure API Connections und Connector OAuth mit erster Zustimmung."
 ---
 
 ## TL;DR

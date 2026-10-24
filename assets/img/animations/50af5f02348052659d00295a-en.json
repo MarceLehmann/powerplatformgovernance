@@ -1,0 +1,63 @@
+{
+ "title": "Prepare Microsoft 365 for NIS2",
+ "subtitle": "Map duties to controls, set baselines, review ownership and package evidence.",
+ "steps": [
+  {
+   "product": "generic",
+   "icon": "link",
+   "productLabel": "Microsoft 365",
+   "title": "Map duties to Microsoft 365 controls",
+   "actions": [
+    "Map Article 21 duties"
+   ],
+   "evidence": "Map NIS2 duties to Microsoft 365 controls"
+  },
+  {
+   "product": "generic",
+   "icon": "user",
+   "productLabel": "Microsoft 365",
+   "title": "Assign each control an owner",
+   "actions": [
+    "Assign each control an owner"
+   ],
+   "evidence": "Assign each control an owner."
+  },
+  {
+   "product": "admin",
+   "icon": "shield",
+   "productLabel": "Admin",
+   "title": "Set the access baseline",
+   "actions": [
+    "administrator MFA",
+    "guest access",
+    "mailbox forwarding"
+   ],
+   "evidence": "The baseline should define the correct state, including administrator MFA, no external mailbox redirects"
+  },
+  {
+   "product": "admin",
+   "icon": "calendar",
+   "productLabel": "Admin",
+   "title": "Schedule reviews and reports",
+   "actions": [
+    "schedule reviews",
+    "reports"
+   ],
+   "evidence": "then schedule reviews and reports to detect drift."
+  },
+  {
+   "product": "generic",
+   "icon": "doc",
+   "productLabel": "Microsoft Purview",
+   "title": "Package audit evidence",
+   "actions": [
+    "tenant audit log",
+    "monitor risky sign-ins"
+   ],
+   "evidence": "package audit evidence."
+  }
+ ],
+ "punchline": [
+  "Each duty links to proof"
+ ]
+}

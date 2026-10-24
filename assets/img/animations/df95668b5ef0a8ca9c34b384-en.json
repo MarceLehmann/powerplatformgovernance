@@ -1,0 +1,66 @@
+{
+ "title": "Prepare Microsoft 365 for Copilot",
+ "subtitle": "Measure risk, reduce access, label content, retire stale items and validate a pilot.",
+ "steps": [
+  {
+   "product": "admin",
+   "icon": "search",
+   "productLabel": "Microsoft 365 Admin",
+   "title": "Measure sharing exposure",
+   "actions": [
+    "external sharing",
+    "broken inheritance",
+    "missing owners"
+   ],
+   "evidence": "measure sharing exposure across SharePoint, OneDrive and Teams"
+  },
+  {
+   "product": "sharepoint",
+   "icon": "link",
+   "productLabel": "SharePoint",
+   "title": "Remove broad access",
+   "actions": [
+    "remove broad access",
+    "broad links",
+    "inactive guests"
+   ],
+   "evidence": "remove broad access, label sensitive sites, retire stale content"
+  },
+  {
+   "product": "sharepoint",
+   "icon": "shield",
+   "productLabel": "SharePoint",
+   "title": "Label sensitive sites",
+   "actions": [
+    "label sensitive sites",
+    "unlabelled sensitive sites"
+   ],
+   "evidence": "fix broad links, inactive guests and unlabelled sensitive sites"
+  },
+  {
+   "product": "sharepoint",
+   "icon": "file",
+   "productLabel": "SharePoint",
+   "title": "Retire stale content",
+   "actions": [
+    "retire stale content"
+   ],
+   "evidence": "remove broad access, label sensitive sites, retire stale content"
+  },
+  {
+   "product": "teams",
+   "icon": "check",
+   "productLabel": "Teams",
+   "title": "Validate a pilot group's access",
+   "actions": [
+    "validate a pilot group",
+    "check actual user access",
+    "expand the rollout"
+   ],
+   "evidence": "validate a pilot group's access before expanding the rollout"
+  }
+ ],
+ "punchline": [
+  "Expand when stable"
+ ]
+}

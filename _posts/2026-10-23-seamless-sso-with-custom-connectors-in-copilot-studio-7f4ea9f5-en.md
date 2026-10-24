@@ -40,6 +40,12 @@ faq:
 - question: What does the MCP Onboarding Wizard create for Copilot Studio authentication?
   answer: The wizard creates a Custom Connector in the background. Complete its initial
     authentication, then update the connector security information.
+animation:
+  src: /assets/img/animations/7f4ea9f5a9135d2bd1741847-en.gif
+  poster: /assets/img/animations/7f4ea9f5a9135d2bd1741847-en.poster.png
+  width: 800
+  height: 450
+  alt: "A four step sequence shows app registrations, delegated permissions, Azure API Connections authorization, and connector OAuth with first consent for background authentication."
 ---
 
 ## TL;DR

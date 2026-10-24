@@ -1,0 +1,61 @@
+{
+ "title": "Microsoft 365 fuer Copilot vorbereiten",
+ "subtitle": "Risiko messen, Zugriffe senken, Inhalte kennzeichnen, Altes bereinigen und Pilot pruefen.",
+ "steps": [
+  {
+   "product": "admin",
+   "icon": "search",
+   "productLabel": "Microsoft 365 Admin",
+   "title": "Freigabeexponierung messen",
+   "actions": [
+    "externe Freigaben",
+    "unterbrochene Vererbung",
+    "fehlende Besitzer"
+   ]
+  },
+  {
+   "product": "sharepoint",
+   "icon": "link",
+   "productLabel": "SharePoint",
+   "title": "Breite Zugriffe entfernen",
+   "actions": [
+    "breite Zugriffe entfernen",
+    "breite Links",
+    "inaktive Gaeste"
+   ]
+  },
+  {
+   "product": "sharepoint",
+   "icon": "shield",
+   "productLabel": "SharePoint",
+   "title": "Sensible Sites kennzeichnen",
+   "actions": [
+    "sensible Sites kennzeichnen",
+    "nicht gekennzeichnete Sites"
+   ]
+  },
+  {
+   "product": "sharepoint",
+   "icon": "file",
+   "productLabel": "SharePoint",
+   "title": "Veraltete Inhalte bereinigen",
+   "actions": [
+    "veraltete Inhalte bereinigen"
+   ]
+  },
+  {
+   "product": "teams",
+   "icon": "check",
+   "productLabel": "Teams",
+   "title": "Zugriff der Pilotgruppe pruefen",
+   "actions": [
+    "Pilotgruppe validieren",
+    "tatsaechlichen Zugriff pruefen",
+    "Rollout erweitern"
+   ]
+  }
+ ],
+ "punchline": [
+  "Erweitern bei Stabilitaet"
+ ]
+}

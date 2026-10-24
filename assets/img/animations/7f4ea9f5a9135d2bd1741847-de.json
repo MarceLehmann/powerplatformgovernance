@@ -1,0 +1,49 @@
+{
+ "title": "SSO fuer Custom Connectors einrichten",
+ "subtitle": "Konfigurieren Sie Registrierungen, Autorisierung und OAuth, damit Nutzer ohne Connection Manager authentifiziert werden.",
+ "steps": [
+  {
+   "product": "admin",
+   "icon": "key",
+   "productLabel": "Entra ID",
+   "title": "Beide App-Registrierungen konfigurieren",
+   "actions": [
+    "Server-App-Registrierungen",
+    "Connector-App-Registrierungen"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "shield",
+   "productLabel": "Entra ID",
+   "title": "Delegierte Berechtigungen hinzufuegen",
+   "actions": [
+    "delegated permissions"
+   ]
+  },
+  {
+   "product": "generic",
+   "icon": "link",
+   "productLabel": "Azure API Connections",
+   "title": "Azure API Connections autorisieren",
+   "actions": [
+    "Azure API Connections",
+    "autorisierter Client"
+   ]
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "check",
+   "productLabel": "Copilot Studio",
+   "title": "Connector OAuth und Zustimmung",
+   "actions": [
+    "Connector OAuth-Einstellungen",
+    "Zustimmung einmal bestaetigen"
+   ]
+  }
+ ],
+ "punchline": [
+  "Verbindung erstellt",
+  "im Hintergrund authentifiziert"
+ ]
+}

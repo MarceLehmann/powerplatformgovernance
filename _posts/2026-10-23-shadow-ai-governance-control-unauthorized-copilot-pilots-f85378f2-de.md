@@ -45,6 +45,12 @@ faq:
   answer: Copilot folgt bestehenden Nutzerberechtigungen und kann Inhalte aus breit
     zugänglichen SharePoint-Bereichen schneller sichtbar machen, als Menschen sie
     üblicherweise manuell entdecken.
+animation:
+  src: /assets/img/animations/f85378f2141cc17158b099a0-de.gif
+  poster: /assets/img/animations/f85378f2141cc17158b099a0-de.poster.png
+  width: 800
+  height: 450
+  alt: "Die Abfolge zeigt die Steuerung unautorisierter Copilot-Piloten: Loesungen inventarisieren, durch die CoE-Aufnahme leiten, vertiefte Pruefung und Least Privilege anwenden und SharePoint-Berechtigungen pruefen."
 ---
 
 ## TL;DR

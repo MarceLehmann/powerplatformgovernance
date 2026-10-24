@@ -423,5 +423,51 @@
       "Record owners, users, data reach and risk, and refresh the inventory",
       "refresh the inventory on a fixed cycle because new tools appear monthly."
     ]
+  },
+  "df95668b5ef0a8ca9c34b384": {
+    "gif": true,
+    "reason": "The post gives a concrete 5 stage preparation sequence before expanding a Copilot rollout.",
+    "at": "2026-10-24",
+    "evidence": [
+      "measure sharing exposure across SharePoint, OneDrive and Teams",
+      "remove broad access, label sensitive sites, retire stale content",
+      "fix broad links, inactive guests and unlabelled sensitive sites",
+      "remove broad access, label sensitive sites, retire stale content",
+      "validate a pilot group's access before expanding the rollout"
+    ]
+  },
+  "50af5f02348052659d00295a": {
+    "gif": true,
+    "reason": "The post describes a concrete 5 stage readiness sequence: map duties, assign owners, set baselines, schedule reviews, and package audit evidence.",
+    "at": "2026-10-24",
+    "evidence": [
+      "Map NIS2 duties to Microsoft 365 controls",
+      "Assign each control an owner.",
+      "The baseline should define the correct state, including administrator MFA, no external mailbox redirects",
+      "then schedule reviews and reports to detect drift.",
+      "package audit evidence."
+    ]
+  },
+  "7f4ea9f5a9135d2bd1741847": {
+    "gif": true,
+    "reason": "The post states a concrete 4 stage setup path for SSO configuration and first use.",
+    "at": "2026-10-24",
+    "evidence": [
+      "Configure the server and connector app registrations, permissions, Azure API Connections authorization and connector OAuth settings.",
+      "Configure the server and connector app registrations, permissions, Azure API Connections authorization and connector OAuth settings.",
+      "The Azure API Connections service may not have been added as an authorized client, causing background connection creation to fail for another user.",
+      "Users still approve consent once, after which the connection is created and authenticated in the background."
+    ]
+  },
+  "f85378f2141cc17158b099a0": {
+    "gif": true,
+    "reason": "The post describes a concrete governance sequence: inventory solutions, route them through CoE intake, apply deeper review and least privilege, then audit permissions.",
+    "at": "2026-10-24",
+    "evidence": [
+      "Record each solution's data source, business owner, intended users and ability to trigger automated actions",
+      "A CoE intake process can route low-risk ideas quickly while requiring deeper reviews",
+      "requiring deeper reviews for agents handling regulated data or autonomous actions",
+      "Apply least privilege to agent identities and audit existing SharePoint permissions"
+    ]
   }
 }

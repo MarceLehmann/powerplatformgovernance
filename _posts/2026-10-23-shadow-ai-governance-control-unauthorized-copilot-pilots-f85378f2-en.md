@@ -44,6 +44,12 @@ faq:
 - question: How does Microsoft 365 Copilot reveal SharePoint oversharing?
   answer: Copilot follows existing user permissions and can surface content from broadly
     accessible SharePoint locations faster than people typically discover it manually.
+animation:
+  src: /assets/img/animations/f85378f2141cc17158b099a0-en.gif
+  poster: /assets/img/animations/f85378f2141cc17158b099a0-en.poster.png
+  width: 800
+  height: 450
+  alt: "Sequence shows governing unauthorized Copilot pilots by inventorying solutions, routing them through CoE intake, applying deeper review and least privilege, and auditing SharePoint permissions."
 ---
 
 ## TL;DR

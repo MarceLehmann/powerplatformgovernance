@@ -43,6 +43,12 @@ faq:
   answer: Eine Pilotgruppe wird anhand des tatsächlichen Zugriffs ausgewählter Benutzer
     und definierter Schwellenwerte geprüft. Die Erweiterung folgt erst bei stabilem
     Ergebnis.
+animation:
+  src: /assets/img/animations/df95668b5ef0a8ca9c34b384-de.gif
+  poster: /assets/img/animations/df95668b5ef0a8ca9c34b384-de.poster.png
+  width: 800
+  height: 450
+  alt: "Eine Abfolge mit fünf Schritten zeigt die Vorbereitung von Microsoft 365 fuer Copilot: Exponierung messen, breite Zugriffe beheben, sensible Sites kennzeichnen, veraltete Inhalte bereinigen und einen Pilot pruefen."
 ---
 
 ## TL;DR

@@ -1,0 +1,58 @@
+{
+ "title": "Microsoft 365 auf NIS2 vorbereiten",
+ "subtitle": "Pflichten Kontrollen zuordnen, Baselines setzen, Verantwortliche pruefen und Nachweise buendeln.",
+ "steps": [
+  {
+   "product": "generic",
+   "icon": "link",
+   "productLabel": "Microsoft 365",
+   "title": "Pflichten Kontrollen zuordnen",
+   "actions": [
+    "Artikel 21 zuordnen"
+   ]
+  },
+  {
+   "product": "generic",
+   "icon": "user",
+   "productLabel": "Microsoft 365",
+   "title": "Jeder Kontrolle Verantwortung zuweisen",
+   "actions": [
+    "Verantwortung zuweisen"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "shield",
+   "productLabel": "Admin",
+   "title": "Zugriffsbaseline festlegen",
+   "actions": [
+    "Administrator MFA",
+    "Gastzugriff",
+    "Mailweiterleitungen"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "calendar",
+   "productLabel": "Admin",
+   "title": "Pruefungen und Berichte planen",
+   "actions": [
+    "Pruefungen planen",
+    "Berichte"
+   ]
+  },
+  {
+   "product": "generic",
+   "icon": "doc",
+   "productLabel": "Microsoft Purview",
+   "title": "Auditnachweise buendeln",
+   "actions": [
+    "Tenant Audit Log",
+    "riskante Anmeldungen"
+   ]
+  }
+ ],
+ "punchline": [
+  "Jede Pflicht hat einen Beleg"
+ ]
+}
