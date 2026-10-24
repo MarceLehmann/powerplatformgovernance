@@ -4,7 +4,9 @@ import { readFileSync } from 'node:fs';
 import vm from 'node:vm';
 
 const source = readFileSync(new URL('../assets/js/submission.js', import.meta.url), 'utf8');
-function browser(fetch, endpoint = 'https://intake.example.org/submit', fields = {}, direct = false) {
+function browser(fetch, endpoint = 'https://intake.example.org/submit', fields = {}, direct = false, elapsedMs = 5000) {
+  let clockCalls = 0;
+  const clock = { now: () => (clockCalls++ === 0 ? 0 : elapsedMs) };
   const listeners = {};
   const button = { disabled: true };
   const status = { textContent: '' };
@@ -19,7 +21,7 @@ function browser(fetch, endpoint = 'https://intake.example.org/submit', fields =
   const values = { content_url: 'https://powerplatformtip.com/feed.xml', submitter_name: 'Private name', ...fields };
   vm.runInNewContext(source, {
     document: { querySelector: selector => selector === '[data-submission-form]' ? form : status },
-    URL, AbortController, setTimeout, clearTimeout, fetch,
+    URL, AbortController, setTimeout, clearTimeout, fetch, Date: clock,
     FormData: class { get(name) { return values[name] ?? null; } },
   });
   return { button, status, attributes, submit: () => listeners.submit({ preventDefault() {} }), resets: () => resets };
@@ -98,4 +100,13 @@ test('signed intake callback requires explicit direct mode and valid callback sh
   for (const invalid of [endpoint.replace('/triggers/manual/paths/invoke', '/other'), endpoint.replace('api.powerplatform.com', 'api.powerplatform.com.evil.org'), endpoint + '&sig=duplicate', endpoint + '&extra=true', endpoint.replace('sig=nonsecret-test-value-only', 'sig=short')]) {
     assert.equal(browser(accepted, invalid, {}, true).button.disabled, true);
   }
+});
+test('filled honeypot or sending within 3 seconds never reaches the intake', async () => {
+  const bot = browser(() => { throw new Error('Should not fetch'); }, undefined, { website: 'https://spam.example' });
+  await bot.submit();
+  assert.match(bot.status.textContent, /submitted for review/);
+  const fast = browser(() => { throw new Error('Should not fetch'); }, undefined, {}, false, 1000);
+  await fast.submit();
+  assert.equal(fast.resets(), 0);
+  assert.match(fast.status.textContent, /very fast/);
 });

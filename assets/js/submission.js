@@ -7,6 +7,10 @@
   const endpoint = form.getAttribute('action').trim();
   let configured = false;
   let sending = false;
+  // Spam protection before sending: hidden website field must stay empty and the form needs
+  // at least 3 seconds between loading and sending. The intake flow checks again (website maxLength 0).
+  const loadedAt = Date.now();
+  const minFillMs = 3000;
   try {
     const url = new URL(endpoint);
     const flowHost = /(?:^|\.)(?:logic\.azure\.com|api\.powerplatform\.com|flow\.microsoft\.com)$/i.test(url.hostname);
@@ -33,6 +37,15 @@
     }
     if (!form.reportValidity()) return;
     const values = new FormData(form);
+    if (String(values.get('website') || '').trim() !== '') {
+      form.reset();
+      status.textContent = 'Your suggestion has been submitted for review. Nothing has been published.';
+      return;
+    }
+    if (Date.now() - loadedAt < minFillMs) {
+      status.textContent = 'That was very fast. Please send the form again in a few seconds. Your entries are unchanged.';
+      return;
+    }
     const payload = { content_url: values.get('content_url').trim(), website: values.get('website') || '' };
     if (values.get('publish_credit') === 'yes') {
       payload.publish_credit = 'yes';
