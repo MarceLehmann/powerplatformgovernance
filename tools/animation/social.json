@@ -213,5 +213,74 @@
     "text": "How to govern Power Apps, Power Automate and Power BI together\n\nGovern Power Apps, Power Automate and Power BI as one estate: inventory assets across environments, assign owners, inspect connectors, review user and guest access, and retire unused or stopped assets. Use DLP policies to restrict risky connectors, dedicated environments for production apps, and co-owners or owner groups for business-critical apps and flows.\n\nSource: Rencore\n\nFull summary: https://powerplatformgovernance.com/en/posts/how-to-govern-power-apps-power-automate-and-power-bi-together-06d507ad/\n\n#PowerPlatformGovernanceDaily #PowerApps",
     "bufferPostId": "6adbac848b3d437ddc7ff44d",
     "dueAt": "2026-10-24T13:00:00.000Z"
+  },
+  "c568274295f98e4d75df5d68": {
+    "status": "expired",
+    "day": "2026-10-23",
+    "title": "Build EU AI Act evidence across Copilot Studio and other AI tools",
+    "expiredAt": "2026-10-24"
+  },
+  "6c181085e1c0e4c85a028bad": {
+    "status": "expired",
+    "day": "2026-10-23",
+    "title": "How to control shadow AI across your organization",
+    "expiredAt": "2026-10-24"
+  },
+  "bdb526f69f5f3558c6066895": {
+    "status": "expired",
+    "day": "2026-10-23",
+    "title": "How to govern AI tools beyond Microsoft Copilot",
+    "expiredAt": "2026-10-24"
+  },
+  "808b3a62f9e38817fca9ae7e": {
+    "status": "expired",
+    "day": "2026-10-23",
+    "title": "How to govern Microsoft Copilot agents",
+    "expiredAt": "2026-10-24"
+  },
+  "ec1e5cfc0d42dc9c9d725b7b": {
+    "status": "expired",
+    "day": "2026-10-23",
+    "title": "How to inventory AI tools, agents and assistants across your organization",
+    "expiredAt": "2026-10-24"
+  },
+  "e9dbb69edd9aa308cc9cf9f3": {
+    "status": "expired",
+    "day": "2026-10-23",
+    "title": "How to monitor DLP exposure across Microsoft 365 and Power Platform",
+    "expiredAt": "2026-10-24"
+  },
+  "df95668b5ef0a8ca9c34b384": {
+    "status": "expired",
+    "day": "2026-10-23",
+    "title": "How to prepare Microsoft 365 for a Copilot rollout",
+    "expiredAt": "2026-10-24"
+  },
+  "50af5f02348052659d00295a": {
+    "status": "expired",
+    "day": "2026-10-23",
+    "title": "How to prepare Microsoft 365 for NIS2",
+    "expiredAt": "2026-10-24"
+  },
+  "612c015446ed81b1749a3c4b": {
+    "status": "expired",
+    "day": "2026-10-23",
+    "title": "How to produce DORA audit evidence in Microsoft 365",
+    "expiredAt": "2026-10-24"
+  },
+  "7f4ea9f5a9135d2bd1741847": {
+    "status": "expired",
+    "day": "2026-10-23",
+    "title": "Seamless SSO with Custom Connectors in Copilot Studio",
+    "expiredAt": "2026-10-24"
+  },
+  "f85378f2141cc17158b099a0": {
+    "status": "queued",
+    "day": "2026-10-24",
+    "kind": "video",
+    "title": "Shadow AI Governance: Control Unauthorized Copilot Pilots",
+    "text": "Shadow AI Governance: Control Unauthorized Copilot Pilots\n\nMicrosoft 365 Copilot, Power Platform agents, Power Automate flows and Azure AI applications should be inventoried with their data sources, business owners, users and action capabilities. A CoE intake process can route low-risk ideas quickly while requiring deeper reviews for agents handling regulated data or autonomous actions. Existing Microsoft 365 permissions must also be audited.\n\nSource: M365.fm\n\nFull summary: https://powerplatformgovernance.com/en/posts/shadow-ai-governance-control-unauthorized-copilot-pilots-f85378f2/\n\n#PowerPlatformGovernanceDaily #CopilotStudio",
+    "bufferPostId": "6adc56b4e4be8a4d8645aa46",
+    "dueAt": "2026-10-25T08:00:00.000Z"
   }
 }
