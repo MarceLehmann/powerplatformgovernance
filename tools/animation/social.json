@@ -300,5 +300,23 @@
     "text": "Secure Copilot Studio agents with architecture and DLP\n\nA Copilot Studio job application agent resisted most CV prompt injections, but a polite request exposed a tool-instruction summary in one of two runs and rapid requests still consumed credits. Send applicant data one way to Dataverse through an agent flow, limit tool calls in flows, use high moderation, and allowlist trusted connectors in DLP.\n\nSource: Karl-Johan Spiik, Microsoft MVP\n\nFull summary: https://powerplatformgovernance.com/en/posts/secure-copilot-studio-agents-with-architecture-and-dlp-41467ec3/\n\n#PowerPlatformGovernanceDaily #CopilotStudio #Dataverse",
     "bufferPostId": "6adda83f0b5343d070bc2171",
     "dueAt": "2026-10-25T14:00:00.000Z"
+  },
+  "e9673d7c084b125524396184": {
+    "status": "queued",
+    "day": "2026-10-25",
+    "kind": "video",
+    "title": "Deploy Copilot Studio Agents in Teams Without Stale Sessions",
+    "text": "Deploy Copilot Studio Agents in Teams Without Stale Sessions\n\nCopilot Studio agents in Teams retain conversation state, so configure The user is inactive for awhile to clear variables and history, prompt users to say hello after a reset, document /debug clearstate, expose query rewrites with OnKnowledgeRequested, and publish with Force newest version when updates must take effect.\n\nSource: The Custom Engine\n\nFull summary: https://powerplatformgovernance.com/en/posts/deploy-copilot-studio-agents-in-teams-without-stale-sessions-e9673d7c/\n\n#PowerPlatformGovernanceDaily #CopilotStudio",
+    "bufferPostId": "6ade4eed3d5b27036be8d3cc",
+    "dueAt": "2026-10-26T08:00:00.000Z"
+  },
+  "d8fd9c46ff1dd7146b320135": {
+    "status": "queued",
+    "day": "2026-10-25",
+    "kind": "video",
+    "title": "Bring Microsoft 365 capabilities into Copilot Studio with Agent 365 MCP servers",
+    "text": "Bring Microsoft 365 capabilities into Copilot Studio with Agent 365 MCP servers\n\nCopilot Studio agents can use Agent 365 MCP servers for user-scoped Microsoft 365 Search, SharePoint, OneDrive, Outlook, Word, Dataverse and other workloads. The capability requires a Frontier-enrolled tenant and a full Microsoft 365 Copilot license, while administrators may need to enable Frontier features in the Microsoft Admin Center.\n\nSource: The Custom Engine\n\nFull summary: https://powerplatformgovernance.com/en/posts/bring-microsoft-365-capabilities-into-copilot-studio-with-agent-365-d8fd9c46/\n\n#PowerPlatformGovernanceDaily #CopilotStudio #Dataverse",
+    "bufferPostId": "6ade4eefe4be8a4d86bfe310",
+    "dueAt": "2026-10-26T11:00:00.000Z"
   }
 }
