@@ -44,6 +44,12 @@ faq:
 - question: Welche Copilot Studio-Tools erstellen mit Agent 365 eine Briefing-Aufgabe?
   answer: Copilot Search recherchiert Inhalte, Word erstellt das Briefing, Outlook
     Mail versendet es und Outlook Calendar plant die Besprechung zur Prüfung.
+animation:
+  src: /assets/img/animations/d8fd9c46ff1dd7146b320135-de.gif
+  poster: /assets/img/animations/d8fd9c46ff1dd7146b320135-de.poster.png
+  width: 800
+  height: 450
+  alt: "Ein Ablauf mit vier Schritten zeigt, wie Copilot Search Inhalte recherchiert, Word ein Briefing erstellt, Outlook Mail es versendet und Outlook Calendar ein Review-Meeting plant."
 ---
 
 ## TL;DR

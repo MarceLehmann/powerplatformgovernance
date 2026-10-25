@@ -1,0 +1,46 @@
+{
+ "title": "Briefing mit Agent 365 erstellen",
+ "subtitle": "Inhalte recherchieren, Briefing erstellen, senden und danach ein Review-Meeting planen.",
+ "steps": [
+  {
+   "product": "generic",
+   "icon": "search",
+   "productLabel": "Copilot Search",
+   "title": "Quellinhalte recherchieren",
+   "actions": [
+    "Copilot Search"
+   ]
+  },
+  {
+   "product": "generic",
+   "icon": "doc",
+   "productLabel": "Word",
+   "title": "Das Briefing erstellen",
+   "actions": [
+    "Word"
+   ]
+  },
+  {
+   "product": "outlook",
+   "icon": "mail",
+   "productLabel": "Outlook Mail",
+   "title": "Briefing per E-Mail senden",
+   "actions": [
+    "Outlook Mail"
+   ]
+  },
+  {
+   "product": "outlook",
+   "icon": "calendar",
+   "productLabel": "Outlook Calendar",
+   "title": "Review-Meeting planen",
+   "actions": [
+    "Outlook Calendar"
+   ]
+  }
+ ],
+ "punchline": [
+  "Briefing gesendet",
+  "Review-Meeting geplant"
+ ]
+}

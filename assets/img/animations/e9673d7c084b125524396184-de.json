@@ -1,0 +1,47 @@
+{
+ "title": "Inaktivitaets Reset einrichten",
+ "subtitle": "Alten Teams Sitzungszustand in einem Copilot Studio Agenten loeschen.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "bell",
+   "productLabel": "Copilot Studio",
+   "title": "Inaktivitaets Trigger hinzufuegen",
+   "actions": [
+    "Inaktivitaets Trigger"
+   ]
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "gear",
+   "productLabel": "Copilot Studio",
+   "title": "Zeitlimit festlegen",
+   "actions": [
+    "Zeitlimit festlegen"
+   ]
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "filter",
+   "productLabel": "Copilot Studio",
+   "title": "Zustandsdaten loeschen",
+   "actions": [
+    "Variablen loeschen",
+    "Gespraechsverlauf"
+   ]
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "check",
+   "productLabel": "Copilot Studio",
+   "title": "Unterhaltung beenden",
+   "actions": [
+    "beenden",
+    "Unterhaltung aufloesen"
+   ]
+  }
+ ],
+ "punchline": [
+  "Alter Kontext ist geloescht"
+ ]
+}

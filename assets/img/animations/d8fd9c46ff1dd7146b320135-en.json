@@ -1,0 +1,50 @@
+{
+ "title": "Create a briefing with Agent 365",
+ "subtitle": "Research content, draft a briefing, send it, then schedule a review meeting.",
+ "steps": [
+  {
+   "product": "generic",
+   "icon": "search",
+   "productLabel": "Copilot Search",
+   "title": "Research the source content",
+   "actions": [
+    "Copilot Search"
+   ],
+   "evidence": "Copilot Search can research content, Word can create a briefing, Outlook Mail can send it, and Outlook Calendar can schedule a review meeting."
+  },
+  {
+   "product": "generic",
+   "icon": "doc",
+   "productLabel": "Word",
+   "title": "Create the briefing",
+   "actions": [
+    "Word"
+   ],
+   "evidence": "Copilot Search can research content, Word can create a briefing, Outlook Mail can send it, and Outlook Calendar can schedule a review meeting."
+  },
+  {
+   "product": "outlook",
+   "icon": "mail",
+   "productLabel": "Outlook Mail",
+   "title": "Send the briefing by email",
+   "actions": [
+    "Outlook Mail"
+   ],
+   "evidence": "Copilot Search can research content, Word can create a briefing, Outlook Mail can send it, and Outlook Calendar can schedule a review meeting."
+  },
+  {
+   "product": "outlook",
+   "icon": "calendar",
+   "productLabel": "Outlook Calendar",
+   "title": "Schedule a review meeting",
+   "actions": [
+    "Outlook Calendar"
+   ],
+   "evidence": "Copilot Search can research content, Word can create a briefing, Outlook Mail can send it, and Outlook Calendar can schedule a review meeting."
+  }
+ ],
+ "punchline": [
+  "Briefing sent",
+  "Review meeting booked"
+ ]
+}

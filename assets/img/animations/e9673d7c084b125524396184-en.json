@@ -1,0 +1,51 @@
+{
+ "title": "Set up an inactivity reset",
+ "subtitle": "Clear stale Teams session state in a Copilot Studio agent.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "bell",
+   "productLabel": "Copilot Studio",
+   "title": "Add the inactivity trigger",
+   "actions": [
+    "inactive trigger"
+   ],
+   "evidence": "Use The user is inactive for awhile, set its timeout, clear variables and conversation history, then end and resolve the conversation."
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "gear",
+   "productLabel": "Copilot Studio",
+   "title": "Set the timeout",
+   "actions": [
+    "set its timeout"
+   ],
+   "evidence": "Use The user is inactive for awhile, set its timeout, clear variables and conversation history, then end and resolve the conversation."
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "filter",
+   "productLabel": "Copilot Studio",
+   "title": "Clear state data",
+   "actions": [
+    "clear variables",
+    "conversation history"
+   ],
+   "evidence": "Use The user is inactive for awhile, set its timeout, clear variables and conversation history, then end and resolve the conversation."
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "check",
+   "productLabel": "Copilot Studio",
+   "title": "End the conversation",
+   "actions": [
+    "end",
+    "resolve the conversation"
+   ],
+   "evidence": "Use The user is inactive for awhile, set its timeout, clear variables and conversation history, then end and resolve the conversation."
+  }
+ ],
+ "punchline": [
+  "Stale context is cleared"
+ ]
+}

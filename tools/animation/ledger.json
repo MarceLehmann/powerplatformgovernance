@@ -491,5 +491,37 @@
       "Add rules in the generative answers node and agent generative AI settings, then set moderation to high.",
       "allowlist trusted connectors in DLP"
     ]
+  },
+  "30afcdb1dbe6c5a969dd11e3": {
+    "gif": false,
+    "reason": "The post gives preference and setup facts, but it does not state one concrete 3 to 5 stage procedure to animate without inventing steps.",
+    "at": "2026-10-25"
+  },
+  "2b05bc6d33d2982e6c80e425": {
+    "gif": false,
+    "reason": "This post classifies environment types and gives governance advice, but it does not describe a concrete 3 to 5 stage procedure or ordered workflow.",
+    "at": "2026-10-25"
+  },
+  "d8fd9c46ff1dd7146b320135": {
+    "gif": true,
+    "reason": "The post names a concrete four stage automation sequence for creating and sending a briefing.",
+    "at": "2026-10-25",
+    "evidence": [
+      "Copilot Search can research content, Word can create a briefing, Outlook Mail can send it, and Outlook Calendar can schedule a review meeting.",
+      "Copilot Search can research content, Word can create a briefing, Outlook Mail can send it, and Outlook Calendar can schedule a review meeting.",
+      "Copilot Search can research content, Word can create a briefing, Outlook Mail can send it, and Outlook Calendar can schedule a review meeting.",
+      "Copilot Search can research content, Word can create a briefing, Outlook Mail can send it, and Outlook Calendar can schedule a review meeting."
+    ]
+  },
+  "e9673d7c084b125524396184": {
+    "gif": true,
+    "reason": "The post gives a concrete 4 stage setup path for configuring an inactivity reset in a Copilot Studio agent.",
+    "at": "2026-10-25",
+    "evidence": [
+      "Use The user is inactive for awhile, set its timeout, clear variables and conversation history, then end and resolve the conversation.",
+      "Use The user is inactive for awhile, set its timeout, clear variables and conversation history, then end and resolve the conversation.",
+      "Use The user is inactive for awhile, set its timeout, clear variables and conversation history, then end and resolve the conversation.",
+      "Use The user is inactive for awhile, set its timeout, clear variables and conversation history, then end and resolve the conversation."
+    ]
   }
 }
