@@ -291,5 +291,14 @@
     "text": "Use fictional data first when teaching Copilot\n\nUse a fictional municipality or company for Copilot courses, based on the customer’s templates and tasks. Remove personal data, mark files as fictional, plant known errors, and keep an error-free control file so participants can test Copilot against an answer key without exposing real cases.\n\nSource: andersjensen.org\n\nFull summary: https://powerplatformgovernance.com/en/posts/use-fictional-data-first-when-teaching-copilot-1aca6ce9/\n\n#PowerPlatformGovernanceDaily #CopilotStudio",
     "bufferPostId": "6adcfd4c6887a2efc1cf0573",
     "dueAt": "2026-10-25T11:00:00.000Z"
+  },
+  "41467ec334df3b58ecd0467f": {
+    "status": "queued",
+    "day": "2026-10-25",
+    "kind": "video",
+    "title": "Secure Copilot Studio agents with architecture and DLP",
+    "text": "Secure Copilot Studio agents with architecture and DLP\n\nA Copilot Studio job application agent resisted most CV prompt injections, but a polite request exposed a tool-instruction summary in one of two runs and rapid requests still consumed credits. Send applicant data one way to Dataverse through an agent flow, limit tool calls in flows, use high moderation, and allowlist trusted connectors in DLP.\n\nSource: Karl-Johan Spiik, Microsoft MVP\n\nFull summary: https://powerplatformgovernance.com/en/posts/secure-copilot-studio-agents-with-architecture-and-dlp-41467ec3/\n\n#PowerPlatformGovernanceDaily #CopilotStudio #Dataverse",
+    "bufferPostId": "6adda83f0b5343d070bc2171",
+    "dueAt": "2026-10-25T14:00:00.000Z"
   }
 }
