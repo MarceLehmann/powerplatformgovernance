@@ -1,0 +1,54 @@
+{
+ "title": "Secure Copilot Studio agents",
+ "subtitle": "Reduce agent risk with one way flows, moderation and DLP allowlists.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "arrow",
+   "productLabel": "Copilot Studio",
+   "title": "Send applicant data one way",
+   "actions": [
+    "agent flow",
+    "Dataverse"
+   ],
+   "evidence": "Send applicant data one way to Dataverse through an agent flow"
+  },
+  {
+   "product": "powerautomate",
+   "icon": "bolt",
+   "productLabel": "Power Automate",
+   "title": "Limit tool calls in flows",
+   "actions": [
+    "limit tool calls",
+    "flows"
+   ],
+   "evidence": "limit tool calls in flows"
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "shield",
+   "productLabel": "Copilot Studio",
+   "title": "Set moderation to high",
+   "actions": [
+    "generative answers node",
+    "agent generative AI settings",
+    "moderation to high"
+   ],
+   "evidence": "Add rules in the generative answers node and agent generative AI settings, then set moderation to high."
+  },
+  {
+   "product": "admin",
+   "icon": "check",
+   "productLabel": "DLP",
+   "title": "Allowlist trusted connectors",
+   "actions": [
+    "DLP allowlists",
+    "trusted connectors"
+   ],
+   "evidence": "allowlist trusted connectors in DLP"
+  }
+ ],
+ "punchline": [
+  "Reduce agent risk"
+ ]
+}

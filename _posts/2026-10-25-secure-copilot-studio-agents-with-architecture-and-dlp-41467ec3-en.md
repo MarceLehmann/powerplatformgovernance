@@ -43,6 +43,12 @@ faq:
   answer: An allowlist limits agents to trusted connectors. A connector that can read
     or act, such as an environment deletion action, can create serious risk when exposed
     to an agent.
+animation:
+  src: /assets/img/animations/41467ec334df3b58ecd0467f-en.gif
+  poster: /assets/img/animations/41467ec334df3b58ecd0467f-en.poster.png
+  width: 800
+  height: 450
+  alt: "A four step flow shows securing a Copilot Studio agent by sending applicant data one way to Dataverse, limiting tool calls, setting moderation to high, and allowlisting trusted connectors in DLP."
 ---
 
 ## TL;DR

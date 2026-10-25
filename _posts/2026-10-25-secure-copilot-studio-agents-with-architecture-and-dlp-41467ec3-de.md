@@ -44,6 +44,12 @@ faq:
   answer: Eine Positivliste beschränkt Agents auf vertrauenswürdige Connectoren. Ein
     Connector mit Lese- oder Aktionsrechten, etwa zum Löschen von Umgebungen, kann
     über einen Agent ein hohes Risiko schaffen.
+animation:
+  src: /assets/img/animations/41467ec334df3b58ecd0467f-de.gif
+  poster: /assets/img/animations/41467ec334df3b58ecd0467f-de.poster.png
+  width: 800
+  height: 450
+  alt: "Ein Ablauf mit vier Schritten zeigt die Absicherung eines Copilot Studio Agents: Bewerberdaten einseitig an Dataverse senden, Tool-Aufrufe begrenzen, Moderation auf hoch setzen und vertrauenswuerdige Connectoren in DLP zulassen."
 ---
 
 ## TL;DR

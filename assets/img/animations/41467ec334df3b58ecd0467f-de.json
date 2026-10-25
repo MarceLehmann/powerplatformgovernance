@@ -1,0 +1,50 @@
+{
+ "title": "Copilot Studio Agents absichern",
+ "subtitle": "Agent-Risiken mit Einweg-Flows, Moderation und DLP-Positivlisten senken.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "arrow",
+   "productLabel": "Copilot Studio",
+   "title": "Bewerberdaten einseitig senden",
+   "actions": [
+    "Agent-Flow",
+    "Dataverse"
+   ]
+  },
+  {
+   "product": "powerautomate",
+   "icon": "bolt",
+   "productLabel": "Power Automate",
+   "title": "Tool-Aufrufe in Flows begrenzen",
+   "actions": [
+    "Tool-Aufrufe begrenzen",
+    "Flows"
+   ]
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "shield",
+   "productLabel": "Copilot Studio",
+   "title": "Moderation auf hoch setzen",
+   "actions": [
+    "Antwortknoten",
+    "generative KI-Einstellungen",
+    "Moderation auf hoch"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "check",
+   "productLabel": "DLP",
+   "title": "Vertrauenswuerdige Connectoren",
+   "actions": [
+    "DLP-Positivlisten",
+    "vertrauenswuerdige Connectoren"
+   ]
+  }
+ ],
+ "punchline": [
+  "Agent-Risiken senken"
+ ]
+}
