@@ -318,5 +318,26 @@
     "text": "Bring Microsoft 365 capabilities into Copilot Studio with Agent 365 MCP servers\n\nCopilot Studio agents can use Agent 365 MCP servers for user-scoped Microsoft 365 Search, SharePoint, OneDrive, Outlook, Word, Dataverse and other workloads. The capability requires a Frontier-enrolled tenant and a full Microsoft 365 Copilot license, while administrators may need to enable Frontier features in the Microsoft Admin Center.\n\nSource: The Custom Engine\n\nFull summary: https://powerplatformgovernance.com/en/posts/bring-microsoft-365-capabilities-into-copilot-studio-with-agent-365-d8fd9c46/\n\n#PowerPlatformGovernanceDaily #CopilotStudio #Dataverse",
     "bufferPostId": "6ade4eefe4be8a4d86bfe310",
     "dueAt": "2026-10-26T11:00:00.000Z"
+  },
+  "30afcdb1dbe6c5a969dd11e3": {
+    "status": "expired",
+    "day": "2026-10-25",
+    "title": "Copilot Studio: Prefer Authenticate with Microsoft over manual OAuth",
+    "expiredAt": "2026-10-26"
+  },
+  "2b05bc6d33d2982e6c80e425": {
+    "status": "expired",
+    "day": "2026-10-25",
+    "title": "Power Platform Environment Types: Default, Sandbox, Developer and Production",
+    "expiredAt": "2026-10-26"
+  },
+  "ffd0ae84bd915457fd071d74": {
+    "status": "queued",
+    "day": "2026-10-26",
+    "kind": "image",
+    "title": "Copilot Studio and Microsoft Foundry: Choosing an Agent Path with Unified Governance",
+    "text": "Copilot Studio and Microsoft Foundry: Choosing an Agent Path with Unified Governance\n\nCopilot Studio is the low-code starting point for business makers building Microsoft 365 assistants with standard connectors. Microsoft Foundry supports developers needing custom code, specialized models, MCP integrations, multi-agent orchestration and scalable hosting. Both platforms can use shared identity, access controls, DLP policies and monitoring.\n\nSource: M365 FM Podcast\n\nFull summary: https://powerplatformgovernance.com/en/posts/copilot-studio-and-microsoft-foundry-choosing-an-agent-path-with-ffd0ae84/\n\n#PowerPlatformGovernanceDaily #CopilotStudio",
+    "bufferPostId": "6adefd9d44e0f3cdcac676bc",
+    "dueAt": "2026-10-26T14:00:00.000Z"
   }
 }
