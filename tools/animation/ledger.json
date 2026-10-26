@@ -528,5 +528,15 @@
     "gif": false,
     "reason": "The post is a platform choice and governance comparison without a concrete 3 to 5 stage procedure stated in order.",
     "at": "2026-10-26"
+  },
+  "00ae39411bda15e98868c05b": {
+    "gif": false,
+    "reason": "This post is an announcement describing features and governance considerations, not a concrete 3 to 5 step procedure stated in order.",
+    "at": "2026-10-26"
+  },
+  "1ed55cd3fd10a3d4fd2aa6bb": {
+    "gif": false,
+    "reason": "The post gives security guidance and replacement options, but it does not state a concrete 3 to 5 stage procedure to show as a flow.",
+    "at": "2026-10-26"
   }
 }
