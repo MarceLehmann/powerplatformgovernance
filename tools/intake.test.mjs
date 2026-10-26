@@ -11,6 +11,9 @@ test('intake accepts only form fields and explicit opt-in', () => {
   const url = new RegExp(intakeSchema.properties.content_url.pattern);
   for (const value of ['https://powerplatformtip.com/feed.xml', 'https://learn.microsoft.com/en-us/power-platform/admin/']) assert.ok(url.test(value));
   for (const value of ['http://example.com/', 'https://127.0.0.1/', 'https://localhost/', 'https://user:secret@example.com/', 'https://example.com:123/', 'https://example.com/\nfoo']) assert.equal(url.test(value), false, value);
+  for (const value of ['https://www.youtube.com/@m365-show', 'https://medium.com/@author/post']) assert.ok(url.test(value), value);
+  const hostCheck = intakeDefinition().actions.Validate.actions.Validate_host.inputs.content.content_url_valid;
+  assert.match(hostCheck, /substring\(outputs\('Content_URL'\), 8\), '\/'\)\), '\?'\)\), '@'/, 'userinfo check limited to authority');
   const linkedin = new RegExp(intakeSchema.properties.submitter_linkedin.pattern);
   assert.ok(linkedin.test('https://www.linkedin.com/in/marcelehmann/'));
   assert.equal(linkedin.test('https://linkedin.com.evil.org/in/person'), false);
