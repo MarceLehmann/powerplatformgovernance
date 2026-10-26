@@ -523,5 +523,10 @@
       "Use The user is inactive for awhile, set its timeout, clear variables and conversation history, then end and resolve the conversation.",
       "Use The user is inactive for awhile, set its timeout, clear variables and conversation history, then end and resolve the conversation."
     ]
+  },
+  "ffd0ae84bd915457fd071d74": {
+    "gif": false,
+    "reason": "The post is a platform choice and governance comparison without a concrete 3 to 5 stage procedure stated in order.",
+    "at": "2026-10-26"
   }
 }
