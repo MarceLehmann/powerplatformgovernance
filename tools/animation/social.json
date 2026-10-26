@@ -339,5 +339,23 @@
     "text": "Copilot Studio and Microsoft Foundry: Choosing an Agent Path with Unified Governance\n\nCopilot Studio is the low-code starting point for business makers building Microsoft 365 assistants with standard connectors. Microsoft Foundry supports developers needing custom code, specialized models, MCP integrations, multi-agent orchestration and scalable hosting. Both platforms can use shared identity, access controls, DLP policies and monitoring.\n\nSource: M365 FM Podcast\n\nFull summary: https://powerplatformgovernance.com/en/posts/copilot-studio-and-microsoft-foundry-choosing-an-agent-path-with-ffd0ae84/\n\n#PowerPlatformGovernanceDaily #CopilotStudio",
     "bufferPostId": "6adefd9d44e0f3cdcac676bc",
     "dueAt": "2026-10-26T14:00:00.000Z"
+  },
+  "00ae39411bda15e98868c05b": {
+    "status": "queued",
+    "day": "2026-10-26",
+    "kind": "image",
+    "title": "Microsoft announces new controls for agent security and digital sovereignty",
+    "text": "Microsoft announces new controls for agent security and digital sovereignty\n\nAgent 365, included in Microsoft 365 E7, assesses individual agent risk using identity, data, device, cloud, network and activity signals. Dynamic Agent Permissions and Adaptive Conditional Access adjust access, while Project Perception continuously monitors agents. Availability, rollout, regions and licensing remain unspecified for most announced features.\n\nSource: MVPTreff\n\nFull summary: https://powerplatformgovernance.com/en/posts/microsoft-announces-new-controls-for-agent-security-and-digital-00ae3941/\n\n#PowerPlatformGovernanceDaily",
+    "bufferPostId": "6adf989a2adafdbae18c0c54",
+    "dueAt": "2026-10-27T08:00:00.000Z"
+  },
+  "1ed55cd3fd10a3d4fd2aa6bb": {
+    "status": "queued",
+    "day": "2026-10-26",
+    "kind": "image",
+    "title": "Why SMS MFA Is No Longer Secure for Microsoft 365",
+    "text": "Why SMS MFA Is No Longer Secure for Microsoft 365\n\nSMS MFA uses the public telecom network, exposing Microsoft 365 sign-ins to SIM swapping and adversary-in-the-middle phishing. The guidance recommends moving users to Microsoft Authenticator with number matching, passkeys or FIDO2 security keys, while keeping two valid verification methods and tested recovery paths during rollout.\n\nSource: M365 FM Podcast\n\nFull summary: https://powerplatformgovernance.com/en/posts/why-sms-mfa-is-no-longer-secure-for-microsoft-365-1ed55cd3/\n\n#PowerPlatformGovernanceDaily",
+    "bufferPostId": "6adf989b2adafdbae18c0caf",
+    "dueAt": "2026-10-27T11:00:00.000Z"
   }
 }
