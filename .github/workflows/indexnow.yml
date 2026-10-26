@@ -9,16 +9,11 @@ name: IndexNow Ping
 # fuer Google bleiben sitemap.xml und interne Verlinkung die massgeblichen Signale.
 
 on:
-  push:
-    branches:
-      - main
-    paths-ignore:
-      - .gitignore
-      - README.md
-      - LICENSE
+  # Entscheid 21 (26.10.2026): Pruef-Workflow nur noch woechentlich Montag 05:00 UTC
+  # plus manuell, nicht mehr bei jedem Push/Deploy (Actions-Minuten sparen).
   schedule:
-    - cron: '0 3 * * *' # daily at 03:00 UTC, catches auto-published curation posts
-  workflow_dispatch: {}
+    - cron: '0 5 * * 1'
+  workflow_dispatch:
 
 permissions:
   contents: read

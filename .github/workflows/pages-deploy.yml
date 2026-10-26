@@ -4,10 +4,20 @@ on:
     branches:
       - main
       - master
+    # Entscheid 22 (26.10.2026): kein Deploy bei reinen Notizen, Doku und Pruef-Workflows.
     paths-ignore:
       - .gitignore
       - README.md
       - LICENSE
+      - 'README_CUSTOM.md'
+      - '*_architektur_*.md'
+      - 'docs/**'
+      - '.devcontainer/**'
+      - '.vscode/**'
+      - '.github/workflows/indexnow.yml'
+      - '.github/workflows/daily-digest.yml'
+      - '.github/workflows/auto-gif.yml'
+      - '.github/workflows/auto-gif-social.yml'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -17,9 +27,9 @@ permissions:
   pages: write
   id-token: write
 
-# Allow one concurrent deployment
+# Entscheid 22 (26.10.2026): pro Branch nur der neueste Lauf, aeltere werden abgebrochen.
 concurrency:
-  group: "pages"
+  group: pages-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
