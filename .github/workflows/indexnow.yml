@@ -9,10 +9,9 @@ name: IndexNow Ping
 # fuer Google bleiben sitemap.xml und interne Verlinkung die massgeblichen Signale.
 
 on:
-  # Entscheid 21 (26.10.2026): Pruef-Workflow nur noch woechentlich Montag 05:00 UTC
-  # plus manuell, nicht mehr bei jedem Push/Deploy (Actions-Minuten sparen).
+  # Marcel 26.10.2026: taeglich (neue kuratierte Artikel), kein Push-Ausloeser mehr.
   schedule:
-    - cron: '0 5 * * 1'
+    - cron: '20 3 * * *'
   workflow_dispatch:
 
 permissions:
