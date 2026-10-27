@@ -375,5 +375,14 @@
     "text": "Design Industrial IoT Data Contracts Before Power BI Ingestion\n\nIndustrial IoT data contracts should define stable asset references, measurement points, data types, engineering units, quality statuses, delivery patterns and timestamp meanings before Power BI ingestion. They must also distinguish nulls from failed reads, detect stale cached values, label bounded estimates, and version changes so historical production analysis remains consistent.\n\nSource: M365 FM Podcast\n\nFull summary: https://powerplatformgovernance.com/en/posts/design-industrial-iot-data-contracts-before-power-bi-ingestion-a78069ad/\n\n#PowerPlatformGovernanceDaily",
     "bufferPostId": "6ae04c8bab50f19da36362dc",
     "dueAt": "2026-10-28T08:00:00.000Z"
+  },
+  "de53ecdff734e0f3f760cd98": {
+    "status": "queued",
+    "day": "2026-10-27",
+    "kind": "video",
+    "title": "Trigger Copilot Studio Agents Securely with Cloud Flows or Direct HTTP",
+    "text": "Trigger Copilot Studio Agents Securely with Cloud Flows or Direct HTTP\n\nCopilot Studio agents can be triggered through a Power Automate Cloud Flow or four Direct Line REST calls. Configure the agent with No Authentication, copy the Web channel security secret, activate Require secured access, and protect the secret with Azure Key Vault or another secure store.\n\nSource: The Custom Engine\n\nFull summary: https://powerplatformgovernance.com/en/posts/trigger-copilot-studio-agents-securely-with-cloud-flows-or-direct-http-de53ecdf/\n\n#PowerPlatformGovernanceDaily #PowerAutomate #CopilotStudio",
+    "bufferPostId": "6ae0f113327423179f368568",
+    "dueAt": "2026-10-28T11:00:00.000Z"
   }
 }
