@@ -538,5 +538,15 @@
     "gif": false,
     "reason": "The post gives security guidance and replacement options, but it does not state a concrete 3 to 5 stage procedure to show as a flow.",
     "at": "2026-10-26"
+  },
+  "fd71fdc6371e2566227b9bc8": {
+    "gif": false,
+    "reason": "The post compares attended and unattended Power Automate Desktop flows and lists requirements, but it does not describe a concrete 3 to 5 stage procedure.",
+    "at": "2026-10-27"
+  },
+  "a78069ad0761a52048c4e2c3": {
+    "gif": false,
+    "reason": "The post gives governance guidance and definitions, not a concrete 3 to 5 stage procedure stated in order.",
+    "at": "2026-10-27"
   }
 }
