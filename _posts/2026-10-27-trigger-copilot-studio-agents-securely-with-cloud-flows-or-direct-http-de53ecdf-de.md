@@ -39,6 +39,12 @@ faq:
 - question: Wie schützt man das Direct-Line-Geheimnis in einer Python-Integration?
   answer: Speichert das Geheimnis in Umgebungsvariablen oder Azure Key Vault, schützt
     den Endpunkt, rotiert Geheimnisse und ergänzt Wiederholungen sowie Zeitüberschreitungen.
+animation:
+  src: /assets/img/animations/de53ecdff734e0f3f760cd98-de.gif
+  poster: /assets/img/animations/de53ecdff734e0f3f760cd98-de.poster.png
+  width: 800
+  height: 450
+  alt: "Die Abfolge zeigt die Sicherheitskonfiguration des Copilot Studio Agent und danach das Erzeugen eines Direct-Line-Token, das Starten einer Unterhaltung, das Senden einer Nachricht und das Lesen der Aktivitaeten."
 ---
 
 ## TL;DR

@@ -40,6 +40,12 @@ faq:
 - question: How can teams protect the Direct Line secret in a Python integration?
   answer: Store the secret in environment variables or Azure Key Vault, protect the
     endpoint with access control, rotate secrets, and add retries and timeouts.
+animation:
+  src: /assets/img/animations/de53ecdff734e0f3f760cd98-en.gif
+  poster: /assets/img/animations/de53ecdff734e0f3f760cd98-en.poster.png
+  width: 800
+  height: 450
+  alt: "The sequence shows configuring the Copilot Studio agent security, then generating a Direct Line token, starting a conversation, posting a message, and reading activities."
 ---
 
 ## TL;DR

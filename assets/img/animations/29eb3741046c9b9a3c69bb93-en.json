@@ -1,0 +1,52 @@
+{
+ "title": "Add a custom header to MCP connector",
+ "subtitle": "Define the header in YAML, refresh each agent, then set the input value.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "code",
+   "productLabel": "Copilot Studio",
+   "title": "Edit OpenAPI YAML for /mcp",
+   "actions": [
+    "OpenAPI YAML",
+    "/mcp POST endpoint"
+   ],
+   "evidence": "define them in the OpenAPI YAML under the /mcp POST endpoint"
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "gear",
+   "productLabel": "Copilot Studio",
+   "title": "Update the connector",
+   "actions": [
+    "update the connector"
+   ],
+   "evidence": "update the connector"
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "arrow",
+   "productLabel": "Copilot Studio",
+   "title": "Remove and re add in each agent",
+   "actions": [
+    "remove",
+    "re-add"
+   ],
+   "evidence": "remove and re-add it in each agent"
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "key",
+   "productLabel": "Copilot Studio",
+   "title": "Set the header input value",
+   "actions": [
+    "Inputs section",
+    "PowerFX expression"
+   ],
+   "evidence": "configure the header input with a value or PowerFX expression"
+  }
+ ],
+ "punchline": [
+  "Header works in each agent"
+ ]
+}

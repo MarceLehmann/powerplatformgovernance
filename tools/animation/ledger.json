@@ -548,5 +548,50 @@
     "gif": false,
     "reason": "The post gives governance guidance and definitions, not a concrete 3 to 5 stage procedure stated in order.",
     "at": "2026-10-27"
+  },
+  "195253340c60e0768f39116e": {
+    "gif": false,
+    "reason": "The post gives guidance and testing advice, but it does not state a concrete 3 to 5 stage procedure in ordered steps.",
+    "at": "2026-10-27"
+  },
+  "77229e75ec9bfec0ed2cbbb2": {
+    "gif": false,
+    "reason": "The post gives governance recommendations and controls, not a concrete 3 to 5 stage procedure explicitly described in order.",
+    "at": "2026-10-27"
+  },
+  "29eb3741046c9b9a3c69bb93": {
+    "gif": true,
+    "reason": "The post gives a clear four stage procedure to add and apply a custom header to an MCP connector.",
+    "at": "2026-10-27",
+    "evidence": [
+      "define them in the OpenAPI YAML under the /mcp POST endpoint",
+      "update the connector",
+      "remove and re-add it in each agent",
+      "configure the header input with a value or PowerFX expression"
+    ]
+  },
+  "c08577a9ab636843d28f9cd9": {
+    "gif": true,
+    "reason": "The post states a concrete staged rollout for DLP policies using scoping, sensitive information types, simulation mode, policy tips, tuning and measurement.",
+    "at": "2026-10-27",
+    "evidence": [
+      "Use scoping, sensitive information types, simulation mode, policy tips and tuning to roll out Microsoft Purview DLP policies",
+      "sensitive information types identify the data conditions used when designing Microsoft Purview DLP policies",
+      "Simulation mode lets administrators test a Microsoft Purview DLP policy before enforcement",
+      "use simulation mode before enforcement to avoid policies that block everything or catch nothing.",
+      "measure whether the policy actually reduces risk rather than assuming deployment equals protection."
+    ]
+  },
+  "de53ecdff734e0f3f760cd98": {
+    "gif": true,
+    "reason": "The post gives a concrete four step Direct Line request sequence and a four step agent security setup.",
+    "at": "2026-10-27",
+    "evidence": [
+      "Publish the agent, select No Authentication in Security, copy the Web channel security secret, and activate Require secured access.",
+      "Generate a Direct Line token, start a conversation, post a text message, and retrieve conversation activities with the token.",
+      "Generate a Direct Line token, start a conversation, post a text message, and retrieve conversation activities with the token.",
+      "Generate a Direct Line token, start a conversation, post a text message, and retrieve conversation activities with the token.",
+      "Generate a Direct Line token, start a conversation, post a text message, and retrieve conversation activities with the token."
+    ]
   }
 }

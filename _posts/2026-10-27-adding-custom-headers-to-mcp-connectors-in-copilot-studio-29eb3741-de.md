@@ -43,6 +43,12 @@ faq:
     im Oktober 2025?
   answer: Das dokumentierte Problem vom Oktober 2025 besagt, dass X-präfixierte Header
     nicht funktionieren. Verwende bis zur Behebung Namen ohne X-Präfix.
+animation:
+  src: /assets/img/animations/29eb3741046c9b9a3c69bb93-de.gif
+  poster: /assets/img/animations/29eb3741046c9b9a3c69bb93-de.poster.png
+  width: 800
+  height: 450
+  alt: "Eine Abfolge mit vier Schritten zeigt das Bearbeiten des OpenAPI-YAML unter dem POST-Endpunkt /mcp, das Aktualisieren des Connectors, das Entfernen und erneute Hinzufuegen in jedem Agenten und danach das Setzen des Header-Eingabewerts."
 ---
 
 ## TL;DR

@@ -1,0 +1,63 @@
+{
+ "title": "Roll out Purview DLP in stages",
+ "subtitle": "Use scoping, testing and tuning before enforcement and measure whether risk goes down.",
+ "steps": [
+  {
+   "product": "admin",
+   "icon": "shield",
+   "productLabel": "Microsoft Purview",
+   "title": "Scope the DLP policy",
+   "actions": [
+    "Scope policies",
+    "DLP policies"
+   ],
+   "evidence": "Use scoping, sensitive information types, simulation mode, policy tips and tuning to roll out Microsoft Purview DLP policies"
+  },
+  {
+   "product": "admin",
+   "icon": "filter",
+   "productLabel": "Microsoft Purview",
+   "title": "Choose sensitive info types",
+   "actions": [
+    "Sensitive information types"
+   ],
+   "evidence": "sensitive information types identify the data conditions used when designing Microsoft Purview DLP policies"
+  },
+  {
+   "product": "admin",
+   "icon": "play",
+   "productLabel": "Microsoft Purview",
+   "title": "Test in simulation mode",
+   "actions": [
+    "Simulation mode",
+    "Before enforcement"
+   ],
+   "evidence": "Simulation mode lets administrators test a Microsoft Purview DLP policy before enforcement"
+  },
+  {
+   "product": "admin",
+   "icon": "bell",
+   "productLabel": "Microsoft Purview",
+   "title": "Roll out tips and tune detection",
+   "actions": [
+    "Policy tips",
+    "Tuning"
+   ],
+   "evidence": "use simulation mode before enforcement to avoid policies that block everything or catch nothing."
+  },
+  {
+   "product": "admin",
+   "icon": "check",
+   "productLabel": "Microsoft Purview",
+   "title": "Measure risk reduction",
+   "actions": [
+    "Measure risk reduction"
+   ],
+   "evidence": "measure whether the policy actually reduces risk rather than assuming deployment equals protection."
+  }
+ ],
+ "punchline": [
+  "Avoid block all",
+  "Avoid catch nothing"
+ ]
+}

@@ -46,6 +46,12 @@ faq:
   answer: Microsoft Purview DLP-Richtlinien sollten schrittweise ausgerollt werden,
     mit Scoping, Richtlinienhinweisen, Simulationsmodus und Feinabstimmung sowie einer
     Messung der Risikoreduzierung.
+animation:
+  src: /assets/img/animations/c08577a9ab636843d28f9cd9-de.gif
+  poster: /assets/img/animations/c08577a9ab636843d28f9cd9-de.poster.png
+  width: 800
+  height: 450
+  alt: "Die Animation zeigt einen schrittweisen Microsoft Purview DLP-Rollout: Richtlinie eingrenzen, vertrauliche Informationstypen waehlen, im Simulationsmodus testen, Richtlinienhinweise und Feinabstimmung ausrollen, dann Risikoreduzierung messen."
 ---
 
 ## TL;DR

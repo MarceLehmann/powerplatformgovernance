@@ -1,0 +1,61 @@
+{
+ "title": "Set up and call a Copilot Studio agent",
+ "subtitle": "Configure security, then use the four Direct Line requests to send and read messages.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "gear",
+   "productLabel": "Copilot Studio",
+   "title": "Configure agent security",
+   "actions": [
+    "Publish the agent",
+    "No Authentication",
+    "Require secured access"
+   ],
+   "evidence": "Publish the agent, select No Authentication in Security, copy the Web channel security secret, and activate Require secured access."
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "key",
+   "productLabel": "Copilot Studio",
+   "title": "Generate a Direct Line token",
+   "actions": [
+    "Generate token"
+   ],
+   "evidence": "Generate a Direct Line token, start a conversation, post a text message, and retrieve conversation activities with the token."
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "chat",
+   "productLabel": "Copilot Studio",
+   "title": "Start a conversation",
+   "actions": [
+    "Start conversation"
+   ],
+   "evidence": "Generate a Direct Line token, start a conversation, post a text message, and retrieve conversation activities with the token."
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "mail",
+   "productLabel": "Copilot Studio",
+   "title": "Post a text message",
+   "actions": [
+    "Post a text message"
+   ],
+   "evidence": "Generate a Direct Line token, start a conversation, post a text message, and retrieve conversation activities with the token."
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "doc",
+   "productLabel": "Copilot Studio",
+   "title": "Retrieve conversation activities",
+   "actions": [
+    "Retrieve activities"
+   ],
+   "evidence": "Generate a Direct Line token, start a conversation, post a text message, and retrieve conversation activities with the token."
+  }
+ ],
+ "punchline": [
+  "Send and read responses"
+ ]
+}

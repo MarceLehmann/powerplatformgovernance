@@ -43,6 +43,12 @@ faq:
 - question: How should Microsoft Purview DLP policies be rolled out?
   answer: Microsoft Purview DLP policies should be rolled out in stages, using scoping,
     policy tips, simulation mode and tuning while measuring risk reduction.
+animation:
+  src: /assets/img/animations/c08577a9ab636843d28f9cd9-en.gif
+  poster: /assets/img/animations/c08577a9ab636843d28f9cd9-en.poster.png
+  width: 800
+  height: 450
+  alt: "Animated flow shows a staged Microsoft Purview DLP rollout: scope the policy, choose sensitive information types, test in simulation mode, roll out policy tips and tuning, then measure risk reduction."
 ---
 
 ## TL;DR

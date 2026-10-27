@@ -1,0 +1,48 @@
+{
+ "title": "Benutzerdefinierten Header hinzufuegen",
+ "subtitle": "Header im YAML definieren, jeden Agenten aktualisieren und dann den Eingabewert setzen.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "code",
+   "productLabel": "Copilot Studio",
+   "title": "OpenAPI-YAML fuer /mcp bearbeiten",
+   "actions": [
+    "OpenAPI-YAML",
+    "/mcp POST-Endpunkt"
+   ]
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "gear",
+   "productLabel": "Copilot Studio",
+   "title": "Connector aktualisieren",
+   "actions": [
+    "Connector aktualisieren"
+   ]
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "arrow",
+   "productLabel": "Copilot Studio",
+   "title": "In jedem Agenten neu hinzufuegen",
+   "actions": [
+    "entfernen",
+    "erneut hinzufuegen"
+   ]
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "key",
+   "productLabel": "Copilot Studio",
+   "title": "Header-Eingabewert setzen",
+   "actions": [
+    "Bereich Inputs",
+    "PowerFX-Ausdruck"
+   ]
+  }
+ ],
+ "punchline": [
+  "Header funktioniert je Agent"
+ ]
+}

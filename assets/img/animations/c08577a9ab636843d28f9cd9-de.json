@@ -1,0 +1,58 @@
+{
+ "title": "Purview DLP schrittweise ausrollen",
+ "subtitle": "Scoping, Tests und Feinabstimmung vor der Durchsetzung nutzen und Risikoreduzierung messen.",
+ "steps": [
+  {
+   "product": "admin",
+   "icon": "shield",
+   "productLabel": "Microsoft Purview",
+   "title": "DLP-Richtlinie eingrenzen",
+   "actions": [
+    "Richtlinien eingrenzen",
+    "DLP-Richtlinien"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "filter",
+   "productLabel": "Microsoft Purview",
+   "title": "Vertrauliche Typen waehlen",
+   "actions": [
+    "Vertrauliche Informationstypen"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "play",
+   "productLabel": "Microsoft Purview",
+   "title": "Im Simulationsmodus testen",
+   "actions": [
+    "Simulationsmodus",
+    "Vor Durchsetzung"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "bell",
+   "productLabel": "Microsoft Purview",
+   "title": "Hinweise ausrollen und abstimmen",
+   "actions": [
+    "Richtlinienhinweise",
+    "Feinabstimmung"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "check",
+   "productLabel": "Microsoft Purview",
+   "title": "Risikoreduzierung messen",
+   "actions": [
+    "Risikoreduzierung messen"
+   ]
+  }
+ ],
+ "punchline": [
+  "Nicht alles blockieren",
+  "Nicht nichts erkennen"
+ ]
+}

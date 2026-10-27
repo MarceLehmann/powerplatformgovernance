@@ -1,0 +1,56 @@
+{
+ "title": "Copilot Studio Agent einrichten und aufrufen",
+ "subtitle": "Zuerst Sicherheit konfigurieren, dann die vier Direct-Line-Aufrufe fuer Nachricht und Antwort nutzen.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "gear",
+   "productLabel": "Copilot Studio",
+   "title": "Agent-Sicherheit konfigurieren",
+   "actions": [
+    "Agent veroeffentlichen",
+    "No Authentication",
+    "Require secured access"
+   ]
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "key",
+   "productLabel": "Copilot Studio",
+   "title": "Direct-Line-Token erzeugen",
+   "actions": [
+    "Token erzeugen"
+   ]
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "chat",
+   "productLabel": "Copilot Studio",
+   "title": "Unterhaltung starten",
+   "actions": [
+    "Unterhaltung starten"
+   ]
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "mail",
+   "productLabel": "Copilot Studio",
+   "title": "Textnachricht senden",
+   "actions": [
+    "Textnachricht senden"
+   ]
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "doc",
+   "productLabel": "Copilot Studio",
+   "title": "Unterhaltungsaktivitaeten abrufen",
+   "actions": [
+    "Aktivitaeten abrufen"
+   ]
+  }
+ ],
+ "punchline": [
+  "Antworten senden und lesen"
+ ]
+}
