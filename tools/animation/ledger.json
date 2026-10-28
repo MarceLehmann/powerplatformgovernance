@@ -593,5 +593,15 @@
       "Generate a Direct Line token, start a conversation, post a text message, and retrieve conversation activities with the token.",
       "Generate a Direct Line token, start a conversation, post a text message, and retrieve conversation activities with the token."
     ]
+  },
+  "356a3aea7be9827e5478628a": {
+    "gif": false,
+    "reason": "This post is a comparison and decision guide about attended versus unattended automation, not a concrete 3 to 5 stage procedure named in order.",
+    "at": "2026-10-28"
+  },
+  "c1e9d6ae10cf33aadba179ee": {
+    "gif": false,
+    "reason": "The post is a comparison and governance guidance piece, not a concrete 3 to 5 stage procedure stated in order.",
+    "at": "2026-10-28"
   }
 }
