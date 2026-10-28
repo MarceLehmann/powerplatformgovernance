@@ -1,0 +1,45 @@
+{
+ "title": "Handle connector consent in Agents SDK",
+ "subtitle": "Detect the consent card, show its details, then return Allow or Cancel.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "search",
+   "productLabel": "Copilot Studio",
+   "title": "Detect the consent card",
+   "actions": [
+    "TextBlock",
+    "Connect to continue",
+    "Action.Submit"
+   ],
+   "evidence": "Check for a TextBlock containing Connect to continue and Action.Submit buttons titled Allow and Cancel."
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "shield",
+   "productLabel": "Copilot Studio",
+   "title": "Present security details and choice",
+   "actions": [
+    "Allow",
+    "Cancel",
+    "consent Adaptive Card"
+   ],
+   "evidence": "Detect consent Adaptive Cards, present their security details, and return the user's Allow or Cancel choice through the Agents SDK."
+  },
+  {
+   "product": "generic",
+   "icon": "arrow",
+   "productLabel": "Agents SDK",
+   "title": "Return the selected action",
+   "actions": [
+    "message activity",
+    "channelData.postBack",
+    "shouldAwaitUserInput"
+   ],
+   "evidence": "Send a message activity with channelData.postBack set to true and value containing the selected action, id submit, and shouldAwaitUserInput true."
+  }
+ ],
+ "punchline": [
+  "Consent choice returned"
+ ]
+}

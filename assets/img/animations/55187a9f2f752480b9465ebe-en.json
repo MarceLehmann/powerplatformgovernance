@@ -1,0 +1,46 @@
+{
+ "title": "Rebuild flows and access after migration",
+ "subtitle": "After a tenant move, reconnect flow steps and remap permissions in the destination tenant.",
+ "steps": [
+  {
+   "product": "powerautomate",
+   "icon": "bolt",
+   "productLabel": "Power Automate",
+   "title": "Old tenant references break",
+   "actions": [
+    "connection references",
+    "old tenant",
+    "migration"
+   ],
+   "evidence": "Power Automate connection references point to the old tenant and break after migration."
+  },
+  {
+   "product": "powerautomate",
+   "icon": "key",
+   "productLabel": "Power Automate",
+   "title": "Sign in again to each flow step",
+   "actions": [
+    "sign in again",
+    "reconnect each trigger",
+    "reconnect each action"
+   ],
+   "evidence": "Developers must sign in again and reconnect each trigger and action."
+  },
+  {
+   "product": "admin",
+   "icon": "shield",
+   "productLabel": "Admin",
+   "title": "Remap destination permissions",
+   "actions": [
+    "map destination permissions",
+    "rebuild access",
+    "destination environment"
+   ],
+   "evidence": "Administrators must deliberately map and rebuild access in the destination environment."
+  }
+ ],
+ "punchline": [
+  "Flows work again",
+  "Access is rebuilt"
+ ]
+}

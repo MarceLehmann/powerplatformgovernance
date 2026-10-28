@@ -603,5 +603,36 @@
     "gif": false,
     "reason": "The post is a comparison and governance guidance piece, not a concrete 3 to 5 stage procedure stated in order.",
     "at": "2026-10-28"
+  },
+  "1d40539e59571a0fded3e376": {
+    "gif": true,
+    "reason": "The post gives a clear 4 stage procedure: create the topic in code view, define the trigger, call the search endpoint, then map results into System.SearchResults.",
+    "at": "2026-10-28",
+    "evidence": [
+      "Create a topic, switch to code view, and define the OnKnowledgeRequested trigger in YAML.",
+      "Create a topic, switch to code view, and define the OnKnowledgeRequested trigger in YAML.",
+      "Use the OnKnowledgeRequested trigger to call a search endpoint, transform results, and provide Copilot Studio with usable knowledge snippets.",
+      "System.SearchResults must receive Content, ContentLocation and Title fields."
+    ]
+  },
+  "8c60f0d48a86607f01fd8c05": {
+    "gif": true,
+    "reason": "The post gives a concrete 3 stage flow: detect the consent card, present its details, then send the user's choice back.",
+    "at": "2026-10-28",
+    "evidence": [
+      "Check for a TextBlock containing Connect to continue and Action.Submit buttons titled Allow and Cancel.",
+      "Detect consent Adaptive Cards, present their security details, and return the user's Allow or Cancel choice through the Agents SDK.",
+      "Send a message activity with channelData.postBack set to true and value containing the selected action, id submit, and shouldAwaitUserInput true."
+    ]
+  },
+  "55187a9f2f752480b9465ebe": {
+    "gif": true,
+    "reason": "The post describes a concrete 3 stage recovery sequence after tenant migration: broken references, re-authenticate flows, then rebuild permissions.",
+    "at": "2026-10-28",
+    "evidence": [
+      "Power Automate connection references point to the old tenant and break after migration.",
+      "Developers must sign in again and reconnect each trigger and action.",
+      "Administrators must deliberately map and rebuild access in the destination environment."
+    ]
   }
 }

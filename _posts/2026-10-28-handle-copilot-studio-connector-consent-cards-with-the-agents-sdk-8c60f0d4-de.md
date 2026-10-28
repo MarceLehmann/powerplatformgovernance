@@ -44,6 +44,12 @@ faq:
   answer: Native Connectoren mit Entra ID-Authentifizierung können die Karte anzeigen.
     Custom Connectoren und andere Connectoren verwenden stattdessen den aufwendigeren
     Verbindungsmanager.
+animation:
+  src: /assets/img/animations/8c60f0d48a86607f01fd8c05-de.gif
+  poster: /assets/img/animations/8c60f0d48a86607f01fd8c05-de.poster.png
+  width: 800
+  height: 450
+  alt: "Eine Abfolge in 3 Schritten zeigt das Erkennen einer Copilot Studio Einwilligungskarte, das Anzeigen der Sicherheitsdetails mit Allow oder Cancel und das Zuruecksenden der Auswahl als Message Activity mit postBack true."
 ---
 
 ## TL;DR

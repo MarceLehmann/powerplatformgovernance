@@ -43,6 +43,12 @@ faq:
   answer: Connectors that natively support Entra ID authentication can show it, while
     custom connectors and other connectors use the more disruptive connection manager
     experience.
+animation:
+  src: /assets/img/animations/8c60f0d48a86607f01fd8c05-en.gif
+  poster: /assets/img/animations/8c60f0d48a86607f01fd8c05-en.poster.png
+  width: 800
+  height: 450
+  alt: "A 3 step sequence shows detecting a Copilot Studio consent card, presenting its security details with Allow or Cancel, and returning the selected action as a message activity with postBack true."
 ---
 
 ## TL;DR

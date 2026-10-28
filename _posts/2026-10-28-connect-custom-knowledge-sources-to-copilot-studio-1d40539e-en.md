@@ -37,6 +37,12 @@ faq:
 - question: How many custom knowledge snippets can Copilot Studio use?
   answer: Copilot Studio uses up to 15 snippets across all knowledge topics combined.
     Return or rank the strongest results before assigning them to System.SearchResults.
+animation:
+  src: /assets/img/animations/1d40539e59571a0fded3e376-en.gif
+  poster: /assets/img/animations/1d40539e59571a0fded3e376-en.poster.png
+  width: 800
+  height: 450
+  alt: "A four step flow shows creating a Copilot Studio topic in code view, defining the OnKnowledgeRequested trigger in YAML, calling a search endpoint, and mapping results into System.SearchResults."
 ---
 
 ## TL;DR

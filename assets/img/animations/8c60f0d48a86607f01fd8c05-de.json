@@ -1,0 +1,42 @@
+{
+ "title": "Connector-Einwilligung im Agents SDK",
+ "subtitle": "Einwilligungskarte erkennen, Details anzeigen und Allow oder Cancel zuruecksenden.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "search",
+   "productLabel": "Copilot Studio",
+   "title": "Einwilligungskarte erkennen",
+   "actions": [
+    "TextBlock",
+    "Connect to continue",
+    "Action.Submit"
+   ]
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "shield",
+   "productLabel": "Copilot Studio",
+   "title": "Sicherheitsdetails und Auswahl zeigen",
+   "actions": [
+    "Allow",
+    "Cancel",
+    "Consent Adaptive Card"
+   ]
+  },
+  {
+   "product": "generic",
+   "icon": "arrow",
+   "productLabel": "Agents SDK",
+   "title": "Ausgewaehlte Aktion zuruecksenden",
+   "actions": [
+    "Message Activity",
+    "channelData.postBack",
+    "shouldAwaitUserInput"
+   ]
+  }
+ ],
+ "punchline": [
+  "Einwilligung zurueckgesendet"
+ ]
+}

@@ -39,6 +39,12 @@ faq:
   answer: Copilot Studio verwendet höchstens 15 Auszüge über alle Wissensthemen zusammen.
     Die stärksten Ergebnisse sollten vor der Zuweisung an System.SearchResults sortiert
     werden.
+animation:
+  src: /assets/img/animations/1d40539e59571a0fded3e376-de.gif
+  poster: /assets/img/animations/1d40539e59571a0fded3e376-de.poster.png
+  width: 800
+  height: 450
+  alt: "Ein Ablauf mit vier Schritten zeigt: Thema in Copilot Studio in der Codeansicht erstellen, den Trigger OnKnowledgeRequested in YAML definieren, eine Suchschnittstelle aufrufen und Ergebnisse in System.SearchResults abbilden."
 ---
 
 ## TL;DR

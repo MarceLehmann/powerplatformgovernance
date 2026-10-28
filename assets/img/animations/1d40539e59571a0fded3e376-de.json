@@ -1,0 +1,50 @@
+{
+ "title": "Benutzerwissen in Copilot verbinden",
+ "subtitle": "Trigger erstellen, Suche aufrufen und Ergebnisse in die Pflichtfelder abbilden.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "doc",
+   "productLabel": "Copilot Studio",
+   "title": "Benutzerdefiniertes Wissensthema erstellen",
+   "actions": [
+    "Thema erstellen",
+    "Codeansicht"
+   ]
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "code",
+   "productLabel": "Copilot Studio",
+   "title": "OnKnowledgeRequested definieren",
+   "actions": [
+    "OnKnowledgeRequested",
+    "YAML"
+   ]
+  },
+  {
+   "product": "generic",
+   "icon": "search",
+   "productLabel": "Suchschnittstelle",
+   "title": "Suchschnittstelle aufrufen",
+   "actions": [
+    "System.SearchQuery",
+    "System.KeywordSearchQuery"
+   ]
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "table",
+   "productLabel": "Copilot Studio",
+   "title": "Ergebnisse auf Pflichtfelder abbilden",
+   "actions": [
+    "System.SearchResults",
+    "Inhalt",
+    "Inhaltsort"
+   ]
+  }
+ ],
+ "punchline": [
+  "Verwertbare Wissensauszuege"
+ ]
+}

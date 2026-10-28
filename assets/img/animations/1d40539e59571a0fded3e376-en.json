@@ -1,0 +1,54 @@
+{
+ "title": "Connect custom knowledge in Copilot",
+ "subtitle": "Create the trigger, call search, then map results into the required fields.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "doc",
+   "productLabel": "Copilot Studio",
+   "title": "Create a custom knowledge topic",
+   "actions": [
+    "Create a topic",
+    "code view"
+   ],
+   "evidence": "Create a topic, switch to code view, and define the OnKnowledgeRequested trigger in YAML."
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "code",
+   "productLabel": "Copilot Studio",
+   "title": "Define OnKnowledgeRequested",
+   "actions": [
+    "OnKnowledgeRequested",
+    "YAML"
+   ],
+   "evidence": "Create a topic, switch to code view, and define the OnKnowledgeRequested trigger in YAML."
+  },
+  {
+   "product": "generic",
+   "icon": "search",
+   "productLabel": "search endpoint",
+   "title": "Call the search endpoint",
+   "actions": [
+    "System.SearchQuery",
+    "System.KeywordSearchQuery"
+   ],
+   "evidence": "Use the OnKnowledgeRequested trigger to call a search endpoint, transform results, and provide Copilot Studio with usable knowledge snippets."
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "table",
+   "productLabel": "Copilot Studio",
+   "title": "Map results to required fields",
+   "actions": [
+    "System.SearchResults",
+    "Content",
+    "ContentLocation"
+   ],
+   "evidence": "System.SearchResults must receive Content, ContentLocation and Title fields."
+  }
+ ],
+ "punchline": [
+  "Usable knowledge snippets"
+ ]
+}

@@ -1,0 +1,43 @@
+{
+ "title": "Flows und Zugriffe nach Migration",
+ "subtitle": "Nach dem Tenantwechsel Flow-Schritte neu verbinden und Berechtigungen im Zieltenant neu zuordnen.",
+ "steps": [
+  {
+   "product": "powerautomate",
+   "icon": "bolt",
+   "productLabel": "Power Automate",
+   "title": "Alte Tenant-Verweise brechen",
+   "actions": [
+    "Verbindungsreferenzen",
+    "alter Tenant",
+    "Migration"
+   ]
+  },
+  {
+   "product": "powerautomate",
+   "icon": "key",
+   "productLabel": "Power Automate",
+   "title": "Jeden Flow-Schritt neu anmelden",
+   "actions": [
+    "neu anmelden",
+    "jeden Trigger verbinden",
+    "jede Aktion verbinden"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "shield",
+   "productLabel": "Admin",
+   "title": "Zielberechtigungen neu zuordnen",
+   "actions": [
+    "Zielberechtigungen zuordnen",
+    "Zugriff neu aufbauen",
+    "Zielumgebung"
+   ]
+  }
+ ],
+ "punchline": [
+  "Flows laufen wieder",
+  "Zugriff ist neu aufgebaut"
+ ]
+}
