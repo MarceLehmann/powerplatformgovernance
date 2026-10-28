@@ -384,5 +384,44 @@
     "text": "Trigger Copilot Studio Agents Securely with Cloud Flows or Direct HTTP\n\nCopilot Studio agents can be triggered through a Power Automate Cloud Flow or four Direct Line REST calls. Configure the agent with No Authentication, copy the Web channel security secret, activate Require secured access, and protect the secret with Azure Key Vault or another secure store.\n\nSource: The Custom Engine\n\nFull summary: https://powerplatformgovernance.com/en/posts/trigger-copilot-studio-agents-securely-with-cloud-flows-or-direct-http-de53ecdf/\n\n#PowerPlatformGovernanceDaily #PowerAutomate #CopilotStudio",
     "bufferPostId": "6ae0f113327423179f368568",
     "dueAt": "2026-10-28T11:00:00.000Z"
+  },
+  "29eb3741046c9b9a3c69bb93": {
+    "status": "expired",
+    "day": "2026-10-27",
+    "title": "Adding Custom Headers to MCP Connectors in Copilot Studio",
+    "expiredAt": "2026-10-28"
+  },
+  "195253340c60e0768f39116e": {
+    "status": "expired",
+    "day": "2026-10-27",
+    "title": "Build More Accurate Custom Sensitive Information Types in Microsoft Purview",
+    "expiredAt": "2026-10-28"
+  },
+  "c08577a9ab636843d28f9cd9": {
+    "status": "expired",
+    "day": "2026-10-27",
+    "title": "Design Microsoft Purview DLP policies that actually work",
+    "expiredAt": "2026-10-28"
+  },
+  "356a3aea7be9827e5478628a": {
+    "status": "expired",
+    "day": "2026-10-27",
+    "title": "Power Automate Desktop: Attended vs Unattended Automation",
+    "expiredAt": "2026-10-28"
+  },
+  "77229e75ec9bfec0ed2cbbb2": {
+    "status": "expired",
+    "day": "2026-10-27",
+    "title": "Preventing Agent Sprawl in Microsoft 365",
+    "expiredAt": "2026-10-28"
+  },
+  "c1e9d6ae10cf33aadba179ee": {
+    "status": "queued",
+    "day": "2026-10-28",
+    "kind": "image",
+    "title": "PCF or Canvas Components? Choose the Right Power Apps Extension",
+    "text": "PCF or Canvas Components? Choose the Right Power Apps Extension\n\nCanvas components deliver fast no-code UI inside canvas apps but cannot use advanced third-party JavaScript, complex SVG, or high-density editable grids. PCF controls use TypeScript, HTML, CSS, Power Platform CLI, and manifest-defined inputs and outputs, can span model-driven apps, canvas apps, and Power Pages, but require ownership, repository, build, and Dataverse solution deployment.\n\nSource: M365 FM Podcast\n\nFull summary: https://powerplatformgovernance.com/en/posts/pcf-or-canvas-components-choose-the-right-power-apps-extension-c1e9d6ae/\n\n#PowerPlatformGovernanceDaily #PowerApps #Dataverse",
+    "bufferPostId": "6ae19ae01d62943dedc9bace",
+    "dueAt": "2026-10-28T14:00:00.000Z"
   }
 }
