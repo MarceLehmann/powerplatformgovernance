@@ -1,0 +1,55 @@
+{
+ "title": "Move Power Apps logic to Azure",
+ "subtitle": "Migrate heavy logic in stages while keeping Power Apps as the frontend.",
+ "steps": [
+  {
+   "product": "powerapps",
+   "icon": "search",
+   "productLabel": "Power Apps",
+   "title": "Audit the current solution",
+   "actions": [
+    "Audit the app",
+    "data",
+    "integration pain points"
+   ],
+   "evidence": "Audit the current solution, extract backend logic first, build Azure APIs, then replace existing data connections one at a time"
+  },
+  {
+   "product": "generic",
+   "icon": "arrow",
+   "productLabel": "Azure",
+   "title": "Extract backend logic first",
+   "actions": [
+    "extract backend logic"
+   ],
+   "evidence": "Audit the current solution, extract backend logic first, build Azure APIs, then replace existing data connections one at a time"
+  },
+  {
+   "product": "generic",
+   "icon": "code",
+   "productLabel": "Azure",
+   "title": "Build Azure APIs",
+   "actions": [
+    "Azure Functions",
+    "App Service",
+    "build Azure APIs"
+   ],
+   "evidence": "Audit the current solution, extract backend logic first, build Azure APIs, then replace existing data connections one at a time"
+  },
+  {
+   "product": "powerapps",
+   "icon": "link",
+   "productLabel": "Power Apps",
+   "title": "Replace data connections gradually",
+   "actions": [
+    "replace data connections",
+    "one at a time"
+   ],
+   "evidence": "Audit the current solution, extract backend logic first, build Azure APIs, then replace existing data connections one at a time"
+  }
+ ],
+ "punchline": [
+  "Keep the frontend",
+  "Reduce disruption"
+ ]
+}

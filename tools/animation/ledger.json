@@ -634,5 +634,26 @@
       "Developers must sign in again and reconnect each trigger and action.",
       "Administrators must deliberately map and rebuild access in the destination environment."
     ]
+  },
+  "9de367f18963c3486b5ecef4": {
+    "gif": false,
+    "reason": "The post is a pricing and governance summary with limits and advice, not a concrete 3 to 5 stage procedure stated in order.",
+    "at": "2026-10-29"
+  },
+  "44aacb42189acb815db4576e": {
+    "gif": false,
+    "reason": "The post explains storage and governance considerations, but it does not state a concrete 3 to 5 stage procedure or ordered path.",
+    "at": "2026-10-29"
+  },
+  "7584d6c72002bf04c28dfd63": {
+    "gif": true,
+    "reason": "The post gives a clear four stage migration sequence for moving Power Apps logic to Azure.",
+    "at": "2026-10-29",
+    "evidence": [
+      "Audit the current solution, extract backend logic first, build Azure APIs, then replace existing data connections one at a time",
+      "Audit the current solution, extract backend logic first, build Azure APIs, then replace existing data connections one at a time",
+      "Audit the current solution, extract backend logic first, build Azure APIs, then replace existing data connections one at a time",
+      "Audit the current solution, extract backend logic first, build Azure APIs, then replace existing data connections one at a time"
+    ]
   }
 }

@@ -1,0 +1,51 @@
+{
+ "title": "Power Apps Logik zu Azure verlagern",
+ "subtitle": "Schwere Logik schrittweise migrieren und Power Apps als Oberfläche behalten.",
+ "steps": [
+  {
+   "product": "powerapps",
+   "icon": "search",
+   "productLabel": "Power Apps",
+   "title": "Aktuelle Lösung prüfen",
+   "actions": [
+    "App prüfen",
+    "Daten",
+    "Integrationsprobleme"
+   ]
+  },
+  {
+   "product": "generic",
+   "icon": "arrow",
+   "productLabel": "Azure",
+   "title": "Backend-Logik zuerst auslagern",
+   "actions": [
+    "Backend-Logik auslagern"
+   ]
+  },
+  {
+   "product": "generic",
+   "icon": "code",
+   "productLabel": "Azure",
+   "title": "Azure-APIs bauen",
+   "actions": [
+    "Azure Functions",
+    "App Service",
+    "Azure-APIs bauen"
+   ]
+  },
+  {
+   "product": "powerapps",
+   "icon": "link",
+   "productLabel": "Power Apps",
+   "title": "Datenverbindungen schrittweise ersetzen",
+   "actions": [
+    "Datenverbindungen ersetzen",
+    "einzeln"
+   ]
+  }
+ ],
+ "punchline": [
+  "Oberfläche behalten",
+  "Unterbrechungen senken"
+ ]
+}

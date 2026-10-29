@@ -41,6 +41,12 @@ faq:
 - question: What is the recommended sequence for migrating Power Apps logic to Azure?
   answer: Audit the current solution, extract backend logic first, build Azure APIs,
     then replace existing data connections one at a time to reduce disruption.
+animation:
+  src: /assets/img/animations/7584d6c72002bf04c28dfd63-en.gif
+  poster: /assets/img/animations/7584d6c72002bf04c28dfd63-en.poster.png
+  width: 800
+  height: 450
+  alt: "A four step flow shows auditing the current Power Apps solution, extracting backend logic, building Azure APIs, and replacing data connections one at a time."
 ---
 
 ## TL;DR

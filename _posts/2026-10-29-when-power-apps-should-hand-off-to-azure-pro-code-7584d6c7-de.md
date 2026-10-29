@@ -43,6 +43,12 @@ faq:
   answer: Die Lösung prüfen, zuerst die Backend-Logik auslagern, Azure-APIs bauen
     und danach die bestehenden Datenverbindungen einzeln ersetzen, um Unterbrechungen
     zu reduzieren.
+animation:
+  src: /assets/img/animations/7584d6c72002bf04c28dfd63-de.gif
+  poster: /assets/img/animations/7584d6c72002bf04c28dfd63-de.poster.png
+  width: 800
+  height: 450
+  alt: "Ein Ablauf mit vier Schritten zeigt das Prüfen der aktuellen Power-Apps-Lösung, das Auslagern der Backend-Logik, das Bauen von Azure-APIs und das schrittweise Ersetzen von Datenverbindungen."
 ---
 
 ## TL;DR
