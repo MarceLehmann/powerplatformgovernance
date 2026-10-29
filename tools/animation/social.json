@@ -441,5 +441,38 @@
     "text": "Connect custom knowledge sources to Copilot Studio\n\nCopilot Studio custom knowledge topics use the OnKnowledgeRequested trigger, currently configured in YAML code view. Query variables provide rewritten semantic or keyword searches, while System.SearchResults must receive Content, ContentLocation and Title fields. Copilot Studio uses up to 15 snippets across all knowledge topics, so results should be ranked or limited.\n\nSource: The Custom Engine\n\nFull summary: https://powerplatformgovernance.com/en/posts/connect-custom-knowledge-sources-to-copilot-studio-1d40539e/\n\n#PowerPlatformGovernanceDaily #CopilotStudio",
     "bufferPostId": "6ae2426cad4a74e89cef78bc",
     "dueAt": "2026-10-29T11:00:00.000Z"
+  },
+  "55187a9f2f752480b9465ebe": {
+    "status": "expired",
+    "day": "2026-10-28",
+    "title": "Tenant Migration Can Break Power Platform Connections and Permissions",
+    "expiredAt": "2026-10-29"
+  },
+  "7584d6c72002bf04c28dfd63": {
+    "status": "queued",
+    "day": "2026-10-29",
+    "kind": "video",
+    "title": "When Power Apps Should Hand Off to Azure Pro-Code",
+    "text": "When Power Apps Should Hand Off to Azure Pro-Code\n\nPower Apps can struggle with non-delegable queries across tens of thousands of records, complex transactions, asynchronous queues and real-time websockets. The guidance recommends moving heavy logic to Azure Functions or App Service, exposing secure endpoints through custom connectors or API Management, and migrating incrementally while retaining the Power Apps frontend.\n\nSource: M365 FM Podcast\n\nFull summary: https://powerplatformgovernance.com/en/posts/when-power-apps-should-hand-off-to-azure-pro-code-7584d6c7/\n\n#PowerPlatformGovernanceDaily #PowerApps",
+    "bufferPostId": "6ae2ec662467e67f12836c06",
+    "dueAt": "2026-10-29T14:00:00.000Z"
+  },
+  "9de367f18963c3486b5ecef4": {
+    "status": "queued",
+    "day": "2026-10-29",
+    "kind": "image",
+    "title": "Copilot Studio credits, billing models and capacity limits",
+    "text": "Copilot Studio credits, billing models and capacity limits\n\nCopilot Studio uses pooled organizational credits: scripted answers cost 1, AI-generated responses 2, actions 5, and internal-data grounding 10. A grounded generated response costs 12 credits. Capacity packs provide 25,000 credits for $200 monthly, while pay-as-you-go costs 1 cent per credit. Custom agents are disabled after usage reaches 125% of prepaid capacity.\n\nSource: M365 FM Podcast\n\nFull summary: https://powerplatformgovernance.com/en/posts/copilot-studio-credits-billing-models-and-capacity-limits-9de367f1/\n\n#PowerPlatformGovernanceDaily #CopilotStudio",
+    "bufferPostId": "6ae2ec678d517922b234fd39",
+    "dueAt": "2026-10-30T08:00:00.000Z"
+  },
+  "44aacb42189acb815db4576e": {
+    "status": "queued",
+    "day": "2026-10-29",
+    "kind": "image",
+    "title": "Dataflows Gen1 vs Gen2: Storage, staging and Fabric capacity choices",
+    "text": "Dataflows Gen1 vs Gen2: Storage, staging and Fabric capacity choices\n\nDataflows Gen1 stores transformed data within internal Power BI storage, while Dataflows Gen2 writes Delta Parquet tables to a Fabric Lakehouse through OneLake. Gen2 staging and transformation work consumes Fabric Capacity Units, so repeated processing or peak-hour refreshes can throttle other workloads and affect report rendering.\n\nSource: M365 FM Podcast\n\nFull summary: https://powerplatformgovernance.com/en/posts/dataflows-gen1-vs-gen2-storage-staging-and-fabric-capacity-choices-44aacb42/\n\n#PowerPlatformGovernanceDaily",
+    "bufferPostId": "6ae2ec688d517922b234fd77",
+    "dueAt": "2026-10-30T11:00:00.000Z"
   }
 }
