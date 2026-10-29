@@ -1,0 +1,52 @@
+{
+ "title": "Hybrid flow to legacy system entry",
+ "subtitle": "Cloud steps validate and approve data before desktop automation enters it in a legacy system.",
+ "steps": [
+  {
+   "product": "powerautomate",
+   "icon": "bolt",
+   "productLabel": "Power Automate",
+   "title": "Capture the event",
+   "actions": [
+    "capture an event"
+   ],
+   "evidence": "A cloud flow can capture an event, validate data and route approvals, then pass transaction data to a desktop flow for legacy-system entry."
+  },
+  {
+   "product": "powerautomate",
+   "icon": "check",
+   "productLabel": "Power Automate",
+   "title": "Validate the data",
+   "actions": [
+    "validate data"
+   ],
+   "evidence": "A cloud flow can capture an event, validate data and route approvals, then pass transaction data to a desktop flow for legacy-system entry."
+  },
+  {
+   "product": "powerautomate",
+   "icon": "arrow",
+   "productLabel": "Power Automate",
+   "title": "Route approvals in the cloud",
+   "actions": [
+    "route approvals"
+   ],
+   "evidence": "A cloud flow can capture an event, validate data and route approvals, then pass transaction data to a desktop flow for legacy-system entry."
+  },
+  {
+   "product": "powerautomate",
+   "icon": "play",
+   "productLabel": "Power Automate",
+   "title": "Pass data for legacy entry",
+   "actions": [
+    "pass transaction data",
+    "desktop flow",
+    "legacy-system entry"
+   ],
+   "evidence": "A cloud flow can capture an event, validate data and route approvals, then pass transaction data to a desktop flow for legacy-system entry."
+  }
+ ],
+ "punchline": [
+  "Cloud checks first",
+  "Legacy entry after"
+ ]
+}

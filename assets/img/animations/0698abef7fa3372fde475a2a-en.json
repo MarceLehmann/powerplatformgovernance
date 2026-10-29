@@ -1,0 +1,44 @@
+{
+ "title": "Provision per app users before login",
+ "subtitle": "Use a group trigger and Force Sync user before first sign in.",
+ "steps": [
+  {
+   "product": "admin",
+   "icon": "user",
+   "productLabel": "Power Platform Admin",
+   "title": "User joins security group",
+   "actions": [
+    "security-group trigger",
+    "environment security group"
+   ],
+   "evidence": "Trigger a flow when a user joins the environment security group"
+  },
+  {
+   "product": "powerautomate",
+   "icon": "bolt",
+   "productLabel": "Power Automate",
+   "title": "Run Force Sync user in the flow",
+   "actions": [
+    "Force Sync user",
+    "environment ID",
+    "Entra object ID"
+   ],
+   "evidence": "then call Force Sync user with the environment ID and Entra object ID"
+  },
+  {
+   "product": "dataverse",
+   "icon": "db",
+   "productLabel": "Dataverse",
+   "title": "User is provisioned before sign in",
+   "actions": [
+    "SystemUser record",
+    "first sign-in"
+   ],
+   "evidence": "before first sign-in"
+  }
+ ],
+ "punchline": [
+  "User exists in Dataverse",
+  "before first sign in"
+ ]
+}

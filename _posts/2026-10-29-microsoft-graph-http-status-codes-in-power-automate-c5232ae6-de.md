@@ -44,6 +44,12 @@ faq:
   answer: Idempotenzschlüssel oder eine gezielte Fehlerbehandlung schützen POST Wiederholungen.
     Nicht idempotente Anfragen können sonst doppelte E-Mails, Datenbankzeilen oder
     Bestellungen erzeugen.
+animation:
+  src: /assets/img/animations/c5232ae6008d52c592ca5007-de.gif
+  poster: /assets/img/animations/c5232ae6008d52c592ca5007-de.poster.png
+  width: 800
+  height: 450
+  alt: "Ein Ablauf mit vier Schritten zeigt, wie Power Automate Microsoft Graph Antworten behandelt: 401 Authentifizierungsfehler pruifen, 403 Berechtigungsfehler pruifen, bei 429 auf retry-after warten und POST oder PATCH Wiederholungen absichern."
 ---
 
 ## TL;DR

@@ -1,0 +1,41 @@
+{
+ "title": "Per-App-Benutzer vor Login anlegen",
+ "subtitle": "Gruppen-Trigger und Force Sync user vor der ersten Anmeldung nutzen.",
+ "steps": [
+  {
+   "product": "admin",
+   "icon": "user",
+   "productLabel": "Power Platform Admin",
+   "title": "Benutzer tritt Sicherheitsgruppe bei",
+   "actions": [
+    "Sicherheitsgruppen-Trigger",
+    "Umgebungssicherheitsgruppe"
+   ]
+  },
+  {
+   "product": "powerautomate",
+   "icon": "bolt",
+   "productLabel": "Power Automate",
+   "title": "Force Sync user im Flow ausfuehren",
+   "actions": [
+    "Force Sync user",
+    "Umgebungs-ID",
+    "Entra-Objekt-ID"
+   ]
+  },
+  {
+   "product": "dataverse",
+   "icon": "db",
+   "productLabel": "Dataverse",
+   "title": "Benutzer vor Login provisioniert",
+   "actions": [
+    "SystemUser-Eintrag",
+    "erste Anmeldung"
+   ]
+  }
+ ],
+ "punchline": [
+  "Benutzer ist in Dataverse",
+  "vor der ersten Anmeldung"
+ ]
+}

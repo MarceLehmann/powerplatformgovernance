@@ -1,0 +1,57 @@
+{
+ "title": "Handle Graph status codes in flows",
+ "subtitle": "Check auth, permissions, throttling, then protect unsafe retries.",
+ "steps": [
+  {
+   "product": "powerautomate",
+   "icon": "shield",
+   "productLabel": "Power Automate",
+   "title": "Check 401 authentication failures",
+   "actions": [
+    "401",
+    "sign-in",
+    "token validity"
+   ],
+   "evidence": "Diagnose 401 through sign-in or token validity"
+  },
+  {
+   "product": "admin",
+   "icon": "key",
+   "productLabel": "Entra ID",
+   "title": "Check 403 permission failures",
+   "actions": [
+    "403",
+    "Entra ID permissions"
+   ],
+   "evidence": "403 through Entra ID permissions"
+  },
+  {
+   "product": "powerautomate",
+   "icon": "bell",
+   "productLabel": "Power Automate",
+   "title": "Wait after 429 throttling",
+   "actions": [
+    "429",
+    "retry-after",
+    "wait"
+   ],
+   "evidence": "read the retry-after header and wait before sending the request again"
+  },
+  {
+   "product": "powerautomate",
+   "icon": "check",
+   "productLabel": "Power Automate",
+   "title": "Protect POST or PATCH retries",
+   "actions": [
+    "POST",
+    "PATCH",
+    "idempotency keys"
+   ],
+   "evidence": "protect non-idempotent POST or PATCH retries with idempotency keys or error handling"
+  }
+ ],
+ "punchline": [
+  "Fewer duplicate records",
+  "Safer flow retries"
+ ]
+}

@@ -655,5 +655,52 @@
       "Audit the current solution, extract backend logic first, build Azure APIs, then replace existing data connections one at a time",
       "Audit the current solution, extract backend logic first, build Azure APIs, then replace existing data connections one at a time"
     ]
+  },
+  "1ef72f92d4eb41917157a9d7": {
+    "gif": false,
+    "reason": "The post gives relational modeling guidance and best practices, not a concrete 3 to 5 stage procedure or ordered workflow.",
+    "at": "2026-10-29"
+  },
+  "7b957908fa26a7ebcd3c9011": {
+    "gif": false,
+    "reason": "The post explains governance concepts and monitoring points, but it does not state a concrete 3 to 5 stage procedure or ordered sequence.",
+    "at": "2026-10-29"
+  },
+  "d879b2cd9a04f40595abfbac": {
+    "gif": false,
+    "reason": "The post describes a high level process with more than five stages and no concrete 3 to 5 step procedure tied to specific actions or settings.",
+    "at": "2026-10-29"
+  },
+  "c5232ae6008d52c592ca5007": {
+    "gif": true,
+    "reason": "The post names a concrete 4 stage handling sequence for Graph responses in Power Automate: diagnose 401, diagnose 403, wait on 429, then protect unsafe POST or PATCH retries.",
+    "at": "2026-10-29",
+    "evidence": [
+      "Diagnose 401 through sign-in or token validity",
+      "403 through Entra ID permissions",
+      "read the retry-after header and wait before sending the request again",
+      "protect non-idempotent POST or PATCH retries with idempotency keys or error handling"
+    ]
+  },
+  "659f8f6b48c0bcbf15d1ae94": {
+    "gif": true,
+    "reason": "The post names a concrete 4 stage hybrid workflow from event capture to legacy system entry.",
+    "at": "2026-10-29",
+    "evidence": [
+      "A cloud flow can capture an event, validate data and route approvals, then pass transaction data to a desktop flow for legacy-system entry.",
+      "A cloud flow can capture an event, validate data and route approvals, then pass transaction data to a desktop flow for legacy-system entry.",
+      "A cloud flow can capture an event, validate data and route approvals, then pass transaction data to a desktop flow for legacy-system entry.",
+      "A cloud flow can capture an event, validate data and route approvals, then pass transaction data to a desktop flow for legacy-system entry."
+    ]
+  },
+  "0698abef7fa3372fde475a2a": {
+    "gif": true,
+    "reason": "The post gives a concrete 3 stage automation sequence: trigger on security-group join, call Force Sync user, then the user exists in Dataverse before first sign-in.",
+    "at": "2026-10-29",
+    "evidence": [
+      "Trigger a flow when a user joins the environment security group",
+      "then call Force Sync user with the environment ID and Entra object ID",
+      "before first sign-in"
+    ]
   }
 }

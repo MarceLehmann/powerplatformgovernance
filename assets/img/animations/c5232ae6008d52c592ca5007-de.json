@@ -1,0 +1,53 @@
+{
+ "title": "Graph Statuscodes in Flows behandeln",
+ "subtitle": "Auth, Berechtigungen und Drosselung pruifen, dann unsichere Wiederholungen absichern.",
+ "steps": [
+  {
+   "product": "powerautomate",
+   "icon": "shield",
+   "productLabel": "Power Automate",
+   "title": "401 Authentifizierung pruifen",
+   "actions": [
+    "401",
+    "Anmeldung",
+    "Token-Gultigkeit"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "key",
+   "productLabel": "Entra ID",
+   "title": "403 Berechtigungen pruifen",
+   "actions": [
+    "403",
+    "Entra ID Berechtigungen"
+   ]
+  },
+  {
+   "product": "powerautomate",
+   "icon": "bell",
+   "productLabel": "Power Automate",
+   "title": "Nach 429 Drosselung warten",
+   "actions": [
+    "429",
+    "retry-after",
+    "warten"
+   ]
+  },
+  {
+   "product": "powerautomate",
+   "icon": "check",
+   "productLabel": "Power Automate",
+   "title": "POST oder PATCH absichern",
+   "actions": [
+    "POST",
+    "PATCH",
+    "Idempotenzschlussel"
+   ]
+  }
+ ],
+ "punchline": [
+  "Weniger doppelte Daten",
+  "Sicherere Wiederholungen"
+ ]
+}

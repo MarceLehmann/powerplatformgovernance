@@ -1,0 +1,48 @@
+{
+ "title": "Hybrider Ablauf zur Legacy-Eingabe",
+ "subtitle": "Cloud-Schritte pruefen und genehmigen Daten, bevor Desktop-Automation sie in ein altes System eingibt.",
+ "steps": [
+  {
+   "product": "powerautomate",
+   "icon": "bolt",
+   "productLabel": "Power Automate",
+   "title": "Ereignis erfassen",
+   "actions": [
+    "Ereignis erfassen"
+   ]
+  },
+  {
+   "product": "powerautomate",
+   "icon": "check",
+   "productLabel": "Power Automate",
+   "title": "Daten pruefen",
+   "actions": [
+    "Daten pruefen"
+   ]
+  },
+  {
+   "product": "powerautomate",
+   "icon": "arrow",
+   "productLabel": "Power Automate",
+   "title": "Genehmigungen steuern",
+   "actions": [
+    "Genehmigungen steuern"
+   ]
+  },
+  {
+   "product": "powerautomate",
+   "icon": "play",
+   "productLabel": "Power Automate",
+   "title": "Daten zur Legacy-Eingabe uebergeben",
+   "actions": [
+    "Transaktionsdaten uebergeben",
+    "Desktop-Flow",
+    "Legacy-Eingabe"
+   ]
+  }
+ ],
+ "punchline": [
+  "Cloud-Pruefung zuerst",
+  "Dann Legacy-Eingabe"
+ ]
+}

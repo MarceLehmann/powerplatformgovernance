@@ -42,6 +42,12 @@ faq:
 - question: How can a Power Automate cloud flow hand work to a desktop flow?
   answer: A cloud flow can capture an event, validate data and route approvals, then
     pass transaction data to a desktop flow for legacy-system entry.
+animation:
+  src: /assets/img/animations/659f8f6b48c0bcbf15d1ae94-en.gif
+  poster: /assets/img/animations/659f8f6b48c0bcbf15d1ae94-en.poster.png
+  width: 800
+  height: 450
+  alt: "A hybrid Power Automate sequence captures an event, validates data, routes approvals in the cloud, and then passes transaction data to a desktop flow for entry into a legacy system."
 ---
 
 ## TL;DR
