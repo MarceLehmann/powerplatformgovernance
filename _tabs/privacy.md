@@ -10,7 +10,7 @@ sitemap:
   changefreq: yearly
 ---
 
-**Last Updated:** October 16, 2026
+**Last Updated:** October 30, 2026
 
 ## Introduction
 
@@ -34,6 +34,8 @@ If you use the [content submission form](/submit/) to suggest an article for cur
 - **The suggested article/blog/RSS URL** (required)
 - **Your name and LinkedIn profile URL** (optional, only if you choose to add them)
 - A hidden anti-spam field that legitimate visitors never fill in; submissions where it is filled in are discarded automatically
+
+Suggestions (from the form or from AI assistants via our MCP interface) are received by our own submission service on Microsoft Azure (region Switzerland North). To stop spam, it limits how many suggestions can be sent per hour. For this, your IP address is used only at the moment of sending: it is turned into a one-way hash that changes every day, and only that hash and a counter are stored. Your IP address itself is never stored. The service also checks once that the suggested link is reachable.
 
 We only publish your name and LinkedIn profile alongside a curated summary if you explicitly tick the "I agree to have my name and LinkedIn profile published with this suggestion" checkbox. If you leave it unticked, your name and profile are used only to credit/contact you privately about the suggestion and are never shown on the site.
 
@@ -63,6 +65,12 @@ We use the following third-party services:
 - GoatCounter's [Privacy Policy](https://www.goatcounter.com/help/privacy) and [GDPR notes](https://www.goatcounter.com/help/gdpr) apply
 - You can block requests to goatcounter.com with any content blocker; the site works exactly the same
 
+### Microsoft Azure (submission service, form only)
+- **Provider**: Microsoft (Azure Functions and Azure Storage, region Switzerland North)
+- **Purpose**: receive content suggestions, check them for spam and pass them on for review
+- **Data**: the suggested URL, optional name and LinkedIn profile, and a daily changing hash of your IP address for the spam limit (no IP address in clear text)
+- Microsoft's [Privacy Statement](https://privacy.microsoft.com/privacystatement) applies
+
 ### GitHub Pages
 Our website is hosted on GitHub Pages:
 - GitHub's [Privacy Policy](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement) applies
@@ -77,7 +85,7 @@ We implement reasonable technical and organizational measures to protect informa
 
 - **Encryption**: HTTPS encryption for all website traffic
 - **Minimal collection**: We only ask for what a content suggestion genuinely needs
-- **Third-Party Security**: We only work with reputable, widely-used service providers (GoatCounter, GitHub, LinkedIn)
+- **Third-Party Security**: We only work with reputable, widely-used service providers (GoatCounter, GitHub, Microsoft Azure, LinkedIn)
 
 However, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security.
 
