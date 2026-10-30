@@ -1,0 +1,52 @@
+{
+ "title": "Reset overshared Hero Links",
+ "subtitle": "Find Anyone Hero Links, reset them, and export old and new details to CSV.",
+ "steps": [
+  {
+   "product": "sharepoint",
+   "icon": "search",
+   "productLabel": "SharePoint",
+   "title": "Check items with unique permissions",
+   "actions": [
+    "unique permissions"
+   ],
+   "evidence": "The script checks items with unique permissions"
+  },
+  {
+   "product": "sharepoint",
+   "icon": "link",
+   "productLabel": "SharePoint",
+   "title": "Identify Anyone main links",
+   "actions": [
+    "Anyone",
+    "main links"
+   ],
+   "evidence": "identifies main links whose audience is Anyone"
+  },
+  {
+   "product": "sharepoint",
+   "icon": "arrow",
+   "productLabel": "SharePoint",
+   "title": "Reset the current Hero Link",
+   "actions": [
+    "Reset link option"
+   ],
+   "evidence": "Use SharePoint's Reset link option for the file or folder."
+  },
+  {
+   "product": "generic",
+   "icon": "file",
+   "productLabel": "PnP.PowerShell",
+   "title": "Export old and new details",
+   "actions": [
+    "exports",
+    "CSV"
+   ],
+   "evidence": "exports old and new details to CSV"
+  }
+ ],
+ "punchline": [
+  "Old URL invalidated",
+  "Link only users lose access"
+ ]
+}

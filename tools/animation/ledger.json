@@ -702,5 +702,26 @@
       "then call Force Sync user with the environment ID and Entra object ID",
       "before first sign-in"
     ]
+  },
+  "41b6902fe7ccee545be2b2c6": {
+    "gif": false,
+    "reason": "The post gives governance advice and requirements, but it does not state a concrete 3 to 5 stage procedure in order.",
+    "at": "2026-10-30"
+  },
+  "ec0b5ed5960d71114037f84c": {
+    "gif": false,
+    "reason": "The post is an explanatory overview of SSO concepts, protocols and risks, not a concrete 3 to 5 stage procedure explicitly described in order.",
+    "at": "2026-10-30"
+  },
+  "f29ccc06144994bfb3b724fb": {
+    "gif": true,
+    "reason": "The post gives a concrete 4 stage script sequence for resetting Anyone Hero Links and exporting results.",
+    "at": "2026-10-30",
+    "evidence": [
+      "The script checks items with unique permissions",
+      "identifies main links whose audience is Anyone",
+      "Use SharePoint's Reset link option for the file or folder.",
+      "exports old and new details to CSV"
+    ]
   }
 }

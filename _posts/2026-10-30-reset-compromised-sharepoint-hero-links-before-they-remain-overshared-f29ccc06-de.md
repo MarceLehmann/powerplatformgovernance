@@ -39,6 +39,12 @@ faq:
   answer: Das Skript prüft Elemente mit eindeutigen Berechtigungen, erkennt Hauptlinks
     mit der Zielgruppe Anyone, setzt sie zurück und exportiert alte sowie neue Details
     als CSV.
+animation:
+  src: /assets/img/animations/f29ccc06144994bfb3b724fb-de.gif
+  poster: /assets/img/animations/f29ccc06144994bfb3b724fb-de.poster.png
+  width: 800
+  height: 450
+  alt: "Ein Ablauf mit vier Schritten zeigt, wie ein Skript Elemente mit eindeutigen Berechtigungen prueft, Anyone Hauptlinks findet, den Link zuruecksetzt und alte sowie neue Details als CSV exportiert."
 ---
 
 ## TL;DR

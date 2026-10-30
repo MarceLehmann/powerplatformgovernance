@@ -1,0 +1,48 @@
+{
+ "title": "Zu weit geteilte Hero Links resetten",
+ "subtitle": "Anyone Hero Links finden, zuruecksetzen und alte sowie neue Details als CSV exportieren.",
+ "steps": [
+  {
+   "product": "sharepoint",
+   "icon": "search",
+   "productLabel": "SharePoint",
+   "title": "Elemente mit eindeutigen Rechten pruefen",
+   "actions": [
+    "eindeutige Berechtigungen"
+   ]
+  },
+  {
+   "product": "sharepoint",
+   "icon": "link",
+   "productLabel": "SharePoint",
+   "title": "Anyone Hauptlinks erkennen",
+   "actions": [
+    "Anyone",
+    "Hauptlinks"
+   ]
+  },
+  {
+   "product": "sharepoint",
+   "icon": "arrow",
+   "productLabel": "SharePoint",
+   "title": "Aktuellen Hero Link zuruecksetzen",
+   "actions": [
+    "Link zuruecksetzen"
+   ]
+  },
+  {
+   "product": "generic",
+   "icon": "file",
+   "productLabel": "PnP.PowerShell",
+   "title": "Alte und neue Details exportieren",
+   "actions": [
+    "exportiert",
+    "CSV"
+   ]
+  }
+ ],
+ "punchline": [
+  "Alte URL ungueltig",
+  "Link Nutzer verlieren Zugriff"
+ ]
+}
