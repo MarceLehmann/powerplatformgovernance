@@ -510,5 +510,32 @@
     "day": "2026-10-29",
     "title": "Quality Nonconformance Workflows With Power Platform",
     "expiredAt": "2026-10-30"
+  },
+  "f29ccc06144994bfb3b724fb": {
+    "status": "queued",
+    "day": "2026-10-30",
+    "kind": "video",
+    "title": "Reset compromised SharePoint Hero Links before they remain overshared",
+    "text": "Reset compromised SharePoint Hero Links before they remain overshared\n\nSharePoint Hero Links cannot be deleted like traditional sharing links. The Reset link option invalidates the current URL, creates a new link for Only people added, and removes access for people who relied only on the old link. A PnP.PowerShell script finds unique-permission items with Anyone links and exports old and new details to CSV.\n\nSource: Blog about anything related to my learnings\n\nFull summary: https://powerplatformgovernance.com/en/posts/reset-compromised-sharepoint-hero-links-before-they-remain-overshared-f29ccc06/\n\n#PowerPlatformGovernanceDaily",
+    "bufferPostId": "6ae4e580260ad0ee5bc2edab",
+    "dueAt": "2026-10-31T08:00:00.000Z"
+  },
+  "41b6902fe7ccee545be2b2c6": {
+    "status": "queued",
+    "day": "2026-10-30",
+    "kind": "image",
+    "title": "Govern SharePoint Custom Forms with a Dedicated Power Platform Environment",
+    "text": "Govern SharePoint Custom Forms with a Dedicated Power Platform Environment\n\nPower Apps custom SharePoint forms are stored in the default environment unless admins assign a dedicated environment with Set-AdminPowerAppSharePointFormEnvironment. The environment must be production, have Dataverse storage enabled, and enable Dynamics 365 apps so admins can install the SharePoint Custom Form Maker role.\n\nSource: MichaelRoth42 Blog\n\nFull summary: https://powerplatformgovernance.com/en/posts/govern-sharepoint-custom-forms-with-a-dedicated-power-platform-41b6902f/\n\n#PowerPlatformGovernanceDaily #PowerApps",
+    "bufferPostId": "6ae4e58110a950f1373b4735",
+    "dueAt": "2026-10-31T11:00:00.000Z"
+  },
+  "ec0b5ed5960d71114037f84c": {
+    "status": "queued",
+    "day": "2026-10-30",
+    "kind": "image",
+    "title": "Microsoft Entra SSO explained: tokens, protocols and security risks",
+    "text": "Microsoft Entra SSO explained: tokens, protocols and security risks\n\nMicrosoft Entra SSO replaces repeated application passwords with one identity flow. The episode explains the two parties involved in sign-in, signed tokens that prove identity, the roles of SAML and OpenID Connect, and the security risks created when access is concentrated in one login.\n\nSource: M365.FM\n\nFull summary: https://powerplatformgovernance.com/en/posts/microsoft-entra-sso-explained-tokens-protocols-and-security-risks-ec0b5ed5/\n\n#PowerPlatformGovernanceDaily",
+    "bufferPostId": "6ae4e58298505e7f522b1e8b",
+    "dueAt": "2026-10-31T14:00:00.000Z"
   }
 }
