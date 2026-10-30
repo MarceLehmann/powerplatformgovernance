@@ -1,6 +1,6 @@
 // Aufruf: node render-gif.mjs <video.json> <ausgabe.gif|ausgabe.mp4> [<video2.json> <ausgabe2.gif> ...]
 // Endet die Ausgabe auf .mp4, entsteht stattdessen ein MP4 im Format 4:5 (LinkedIn).
-// Rendert pro Paar ein 16:9-GIF fuer den Blog (Endlosschleife, max. GIF_MAX_KB, Standard 1500) plus <ausgabe>.poster.png
+// Rendert pro Paar ein 16:9-GIF fuer den Blog (Endlosschleife, max. GIF_MAX_KB, Standard 900: Ahrefs meldet Bilder ab 1 MB) plus <ausgabe>.poster.png
 // (letztes Bild vor der Abschlusskarte, fuer prefers-reduced-motion). Ein Bundle fuer alle Paare.
 import path from "node:path";
 import fs from "node:fs";
@@ -13,15 +13,15 @@ if (args.length < 2 || args.length % 2) {
   console.error("Usage: node render-gif.mjs <video.json> <out.gif> [...]");
   process.exit(2);
 }
-const MAX = (Number(process.env.GIF_MAX_KB) || 1500) * 1024;
+const MAX = (Number(process.env.GIF_MAX_KB) || 900) * 1024;
 const serveUrl = await bundle({ entryPoint: path.resolve("src/index.ts"), publicDir: path.resolve("public") });
 
 // Stufen: Breite/fps reduzieren, bis das GIF unter der Grenze liegt
-const STAGES = [[800, 12], [720, 12], [720, 10], [640, 10], [560, 8]];
+const STAGES = [[800, 12, 64], [800, 12, 48], [720, 12, 48], [720, 10, 48], [640, 10, 48], [560, 8, 48]];
 function makeGif(mp4, out) {
   let last = 0;
-  for (const [w, fps] of STAGES) {
-    const vf = `fps=${fps},scale=${w}:-1:flags=lanczos,split[a][b];[a]palettegen=max_colors=64:stats_mode=diff[p];[b][p]paletteuse=dither=none:diff_mode=rectangle`;
+  for (const [w, fps, colors] of STAGES) {
+    const vf = `fps=${fps},scale=${w}:-1:flags=lanczos,split[a][b];[a]palettegen=max_colors=${colors}:stats_mode=diff[p];[b][p]paletteuse=dither=none:diff_mode=rectangle`;
     execFileSync("ffmpeg", ["-loglevel", "error", "-y", "-i", mp4, "-vf", vf, "-loop", "0", out]);
     last = fs.statSync(out).size;
     console.log(`   GIF ${w}px ${fps}fps: ${(last / 1024).toFixed(0)} KB`);
