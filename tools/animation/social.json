@@ -474,5 +474,41 @@
     "text": "Dataflows Gen1 vs Gen2: Storage, staging and Fabric capacity choices\n\nDataflows Gen1 stores transformed data within internal Power BI storage, while Dataflows Gen2 writes Delta Parquet tables to a Fabric Lakehouse through OneLake. Gen2 staging and transformation work consumes Fabric Capacity Units, so repeated processing or peak-hour refreshes can throttle other workloads and affect report rendering.\n\nSource: M365 FM Podcast\n\nFull summary: https://powerplatformgovernance.com/en/posts/dataflows-gen1-vs-gen2-storage-staging-and-fabric-capacity-choices-44aacb42/\n\n#PowerPlatformGovernanceDaily",
     "bufferPostId": "6ae2ec688d517922b234fd77",
     "dueAt": "2026-10-30T11:00:00.000Z"
+  },
+  "1ef72f92d4eb41917157a9d7": {
+    "status": "expired",
+    "day": "2026-10-29",
+    "title": "Dataverse relational architecture for quality nonconformance apps",
+    "expiredAt": "2026-10-30"
+  },
+  "7b957908fa26a7ebcd3c9011": {
+    "status": "expired",
+    "day": "2026-10-29",
+    "title": "Microsoft Fabric Capacity Governance: F SKUs, Bursting and Debt",
+    "expiredAt": "2026-10-30"
+  },
+  "c5232ae6008d52c592ca5007": {
+    "status": "expired",
+    "day": "2026-10-29",
+    "title": "Microsoft Graph HTTP Status Codes in Power Automate",
+    "expiredAt": "2026-10-30"
+  },
+  "659f8f6b48c0bcbf15d1ae94": {
+    "status": "expired",
+    "day": "2026-10-29",
+    "title": "Power Automate Cloud Flows vs Desktop Flows: Choosing the Right Fit",
+    "expiredAt": "2026-10-30"
+  },
+  "0698abef7fa3372fde475a2a": {
+    "status": "expired",
+    "day": "2026-10-29",
+    "title": "Provision Per-App Users in Dataverse Before Their First Login",
+    "expiredAt": "2026-10-30"
+  },
+  "d879b2cd9a04f40595abfbac": {
+    "status": "expired",
+    "day": "2026-10-29",
+    "title": "Quality Nonconformance Workflows With Power Platform",
+    "expiredAt": "2026-10-30"
   }
 }
