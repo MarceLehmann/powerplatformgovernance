@@ -42,6 +42,10 @@ The guides below contain a visible section "Instructions for AI assistants" near
 - [KI-Kosten im Vergleich (DE)](https://powerplatformgovernance.com/de/knowledge/ai-cost-comparison/): German version of the AI cost comparison.
 - [Dataverse security roles (EN)](https://powerplatformgovernance.com/knowledge/dataverse-security-roles/) and [DE](https://powerplatformgovernance.com/de/knowledge/dataverse-security-roles/): The five Dataverse security roles you need to know.
 
+## MCP server (read-only)
+
+- [MCP endpoint](https://func-mcp-kmupower.azurewebsites.net/governance/mcp): Remote Model Context Protocol server (Streamable HTTP, no sign-in, read-only) for all curated governance entries in English and German, with canonical URL and the original source. Tools: search_news, get_news, latest_news, list_tags. Always cite the canonical URL returned by the tools.
+
 ## Topics covered
 
 - Governance, ownership and platform strategy
