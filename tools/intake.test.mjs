@@ -50,3 +50,16 @@ test('webhook can only create pending disabled records and cannot fetch content'
   assert.equal(actions.get('Storage_failed').inputs.statusCode, 503);
   assert.match(actions.get('Find_existing').inputs.parameters.$filter, /replace.*%27%27/);
 });
+test('secret header: intake checks the key before anything else and stores nothing without it', () => {
+  const flow = intakeDefinition();
+  const validate = flow.actions.Validate.actions;
+  assert.deepEqual(validate.Check_key.runAfter, {});
+  assert.deepEqual(validate.Validate_payload.runAfter, { Check_key: ['Succeeded'] });
+  assert.match(validate.Check_key.inputs.content.key_ok, /x-kmupower-key/);
+  assert.match(validate.Check_key.inputs.content.key_ok, /not\(empty\(parameters\(/);
+  assert.deepEqual(validate.Check_key.inputs.schema.properties.key_ok.enum, [true]);
+  assert.equal(JSON.stringify(flow).includes('sig='), false, 'no trigger signature or key value in the definition');
+  assert.equal(flow.parameters['KMUpower Submit Key (new_kmusubmitkey)'].defaultValue, '');
+  assert.deepEqual(flow.actions.Invalid_request.runAfter, { Validate: ['Failed', 'TimedOut'] });
+  assert.equal(intakeDefinition({ requireKey: false }).actions.Validate.actions.Check_key, undefined);
+});

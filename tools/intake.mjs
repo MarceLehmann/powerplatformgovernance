@@ -27,19 +27,25 @@ const dataverse = (operationId, parameters, runAfter = {}) => ({
   },
 });
 
-export function intakeDefinition() {
+// Geheimer Header (30.10.2026): Nur die KMUpower-Schnittstelle (Azure Function) kennt den Wert. Er liegt als Umgebungsvariable
+// new_kmusubmitkey, nicht im Repo und nicht in der Flow-Definition. Wird erst beim Umschalten der Formulare aktiviert (siehe Betriebsdoku).
+export const submitKeyParameter = 'KMUpower Submit Key (new_kmusubmitkey)';
+export const keyCheckExpression = `@and(not(empty(parameters('${submitKeyParameter}'))), equals(coalesce(triggerOutputs()?['headers']?['x-kmupower-key'], triggerOutputs()?['headers']?['X-Kmupower-Key'], ''), parameters('${submitKeyParameter}')))`;
+
+export function intakeDefinition({ requireKey = true } = {}) {
   const payloadSchema = { ...intakeSchema, properties: Object.fromEntries(Object.entries(intakeSchema.properties).map(([name, { pattern, ...schema }]) => [name, schema])) };
   return {
     $schema: 'https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#',
     contentVersion: '1.0.0.0',
-    parameters: { $authentication: { type: 'SecureObject', defaultValue: {} }, $connections: { type: 'Object', defaultValue: {} } },
+    parameters: { $authentication: { type: 'SecureObject', defaultValue: {} }, $connections: { type: 'Object', defaultValue: {} }, ...(requireKey ? { [submitKeyParameter]: { type: 'String', defaultValue: '', metadata: { schemaName: 'new_kmusubmitkey' } } } : {}) },
     triggers: {
       manual: { type: 'Request', kind: 'Http', inputs: { method: 'POST', schema: {} }, runtimeConfiguration: { secureData: { properties: ['outputs'] } } },
     },
     actions: {
       Validate: {
         type: 'Scope', runAfter: {}, actions: {
-          Validate_payload: { type: 'ParseJson', runAfter: {}, inputs: { content: '@triggerBody()', schema: payloadSchema }, runtimeConfiguration: secureInput },
+          ...(requireKey ? { Check_key: { type: 'ParseJson', runAfter: {}, inputs: { content: { key_ok: keyCheckExpression }, schema: { type: 'object', required: ['key_ok'], properties: { key_ok: { type: 'boolean', enum: [true] } } } }, runtimeConfiguration: secureInput } } : {}),
+          Validate_payload: { type: 'ParseJson', runAfter: requireKey ? after('Check_key') : {}, inputs: { content: '@triggerBody()', schema: payloadSchema }, runtimeConfiguration: secureInput },
           Content_URL: { type: 'Compose', inputs: "@first(split(body('Validate_payload')?['content_url'], '#'))", runAfter: after('Validate_payload'), runtimeConfiguration: secureInput },
           Validate_host: {
             type: 'ParseJson', runAfter: after('Content_URL'), runtimeConfiguration: secureInput,
@@ -75,7 +81,7 @@ export function intakeDefinition() {
                 'item/new_publishcredit': "@equals(body('Validate_payload')?['publish_credit'], 'yes')",
                 'item/new_submittername': "@if(equals(body('Validate_payload')?['publish_credit'], 'yes'), trim(coalesce(body('Validate_payload')?['submitter_name'], '')), '')",
                 'item/new_submitterlinkedin': "@if(equals(body('Validate_payload')?['publish_credit'], 'yes'), coalesce(body('Validate_payload')?['submitter_linkedin'], ''), '')",
-                'item/new_lastmessage': 'Website submission received. The AI Foundry quality gate will fetch and assess it within a few minutes and autonomously approve or reject it; no content was fetched by this webhook.',
+                'item/new_lastmessage': 'Website submission received. The AI Foundry quality gate will fetch and assess it within a few minutes; submissions from unknown websites or unclear cases are held for manual review. No content was fetched by this webhook.',
               }),
             },
           },
