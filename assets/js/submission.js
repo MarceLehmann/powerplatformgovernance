@@ -46,7 +46,7 @@
       status.textContent = 'That was very fast. Please send the form again in a few seconds. Your entries are unchanged.';
       return;
     }
-    const payload = { content_url: values.get('content_url').trim(), website: values.get('website') || '' };
+    const payload = { content_url: values.get('content_url').trim(), website: values.get('website') || '', form_started: loadedAt };
     if (values.get('publish_credit') === 'yes') {
       payload.publish_credit = 'yes';
       payload.submitter_name = (values.get('submitter_name') || '').trim();

@@ -64,3 +64,7 @@ After manual approval:
 7. Record a successful publication under `refs/tags/curation-results/<request_id>`. The flow reads this receipt through the authenticated GitHub connector, including for private repositories; only then does it confirm progress in Dataverse.
 
 The site remains static. Power Automate is the intake and moderation backend; GitHub is the publication source.
+
+## Update 30.10.2026: Einreichungen laufen ueber die KMUpower-Schnittstelle
+
+Das Formular sendet nicht mehr direkt an den signierten Power-Automate-Trigger, sondern an `https://func-mcp-kmupower.azurewebsites.net/<daily|governance>/submit` (Azure Function, Switzerland North). Die Function prueft Pflichtfelder, Laengen und Formate wie der Flow, den Honeypot (`website`), die Ausfuellzeit (`form_started`, mindestens 3 Sekunden), erlaubte Herkunft (Origin), ein Rate-Limit (3 pro Stunde und IP, 30 pro Tag je Seite, IP nur als Tages-Hash) und den Link (nur oeffentliche IP-Adressen, ein HEAD ohne Inhaltsabruf, tote Links werden abgelehnt). Danach ruft sie den Flow mit dem geheimen Header `x-kmupower-key` auf. Die Trigger-Adresse liegt ausschliesslich als App-Setting der Function. Das Gate im RSS-Flow gibt nur noch frei, wenn die Domain bereits als freigegebene Quelle bekannt ist und das Modell sicher (Konfidenz mindestens 85, keine Injection-Anzeichen, genug Text) zustimmt; unsichere Faelle bleiben als `Quarantine:` in der Warteschlange zur manuellen Pruefung. Die Build-Variable fuer die Webhook-Adresse entfaellt.

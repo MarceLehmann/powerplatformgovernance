@@ -1,4 +1,4 @@
-# Callback supplied by GOVERNANCE_SUBMISSION_ENDPOINT during the Pages build.
-# Direct public intake approved on 2026-09-18; the rendered URL is public.
-endpoint: ""
-direct_webhook: true
+# Einreichungen gehen an die KMUpower-Schnittstelle (Azure Function): Pruefung, Rate-Limit, dann der Flow.
+# Die Adresse des Power-Automate-Triggers steht nicht mehr im Seitencode. Eine Build-Variable GOVERNANCE_SUBMISSION_ENDPOINT hat Vorrang vor diesem Wert (nicht setzen).
+endpoint: "https://func-mcp-kmupower.azurewebsites.net/governance/submit"
+direct_webhook: false

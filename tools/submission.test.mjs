@@ -33,7 +33,7 @@ test('submission sends JSON, omits private credit and confirms only accepted sto
   const page = browser(async (url, options) => { request = options; return accepted(); });
   assert.equal(page.button.disabled, false);
   await page.submit();
-  assert.deepEqual(JSON.parse(request.body), { content_url: 'https://powerplatformtip.com/feed.xml', website: '' });
+  assert.deepEqual(JSON.parse(request.body), { content_url: 'https://powerplatformtip.com/feed.xml', website: '', form_started: 0 });
   assert.equal(request.credentials, 'omit');
   assert.equal(page.resets(), 1);
   assert.match(page.status.textContent, /submitted for review/);
