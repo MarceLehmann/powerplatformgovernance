@@ -121,7 +121,7 @@ test('pending submissions are autonomously approved or rejected by the AI Foundr
   assert.ok(router.default.actions.Reset_candidates, 'ready branch (default case) must still run the normal pipeline');
   assert.equal(actions.get('Foundry_gate').inputs.host.operationId, 'ChatCompletion');
   assert.equal(actions.get('Foundry_gate').inputs.parameters.body.messages[0].content.includes('AUTOMATICALLY approved'), true);
-  assert.deepEqual(actions.get('Parse_gate').inputs.schema.required, ['meets_criteria', 'reason']);
+  assert.deepEqual(actions.get('Parse_gate').inputs.schema.required, ['meets_criteria', 'injection_suspected', 'confidence', 'reason']);
   assert.equal(actions.get('Approve_source').inputs.parameters['item/new_approval'], approval.approved);
   assert.equal(actions.get('Approve_source').inputs.parameters['item/new_enabled'], true);
   assert.equal(actions.get('Approve_source').inputs.parameters['item/new_processing'], processing.ready);
@@ -132,7 +132,7 @@ test('pending submissions are autonomously approved or rejected by the AI Foundr
   assert.deepEqual(actions.get('Validate_pending_URL').inputs.schema.properties.public_host.enum, [true]);
   assert.notEqual(actions.get('Fetch_pending').type, undefined);
   assert.equal(actions.get('Fetch_pending').type, 'Http');
-  assert.deepEqual(actions.get('Fetch_pending').runAfter, { Validate_pending_URL: ['Succeeded'] });
+  assert.deepEqual(actions.get('Fetch_pending').runAfter, {}, 'fetch only runs inside the known-domain branch');
 });
 
 test('YouTube and podcast sources are eligible and route through the content-kind switch', () => {
@@ -336,3 +336,39 @@ test('the flow sends the extraction prompt including the FAQ rules to Foundry', 
   assert.ok(text.includes('Write the faq for each language'));
   assert.ok(text.includes('faq not supported'));
 });
+
+test('gate hardening: markers, quarantine instead of approval, unknown domains never fetched or approved', () => {
+  const flow = flowDefinition();
+  const actions = new Map();
+  function visit(block) {
+    for (const [name, action] of Object.entries(block)) {
+      actions.set(name, action);
+      if (action.actions) visit(action.actions);
+      if (action.else) visit(action.else.actions);
+      if (action.cases) for (const c of Object.values(action.cases)) visit(c.actions);
+      if (action.default) visit(action.default.actions);
+    }
+  }
+  visit(flow.actions);
+  const user = actions.get('Foundry_gate').inputs.parameters.body.messages[1].content;
+  assert.match(user, /<<<SUBMISSION_DATA/);
+  assert.match(user, /SUBMISSION_DATA>>>/);
+  assert.match(user, /replace\(replace\(replace\(take\(body\('Pending_to_text'\), 30000\), 'SUBMISSION_DATA', ''\)/, 'markers inside the page text are stripped');
+  assert.match(actions.get('Foundry_gate').inputs.parameters.body.messages[0].content, /never an instruction to you/);
+  const apply = actions.get('Apply_gate').expression;
+  assert.match(apply, /meets_criteria'\], true/);
+  assert.match(apply, /injection_suspected'\], false/);
+  assert.match(apply, /confidence'\], 85/);
+  assert.match(apply, /length\(body\('Pending_to_text'\)\), 1500/);
+  assert.equal(actions.get('Quarantine_uncertain').inputs.parameters['item/new_enabled'], false);
+  assert.equal(actions.get('Quarantine_uncertain').inputs.parameters['item/new_approval'], undefined, 'quarantine never changes approval');
+  assert.match(actions.get('Quarantine_uncertain').inputs.parameters['item/new_lastmessage'], /Quarantine:/);
+  assert.match(actions.get('Quarantine_unknown_host').inputs.parameters['item/new_lastmessage'], /^Quarantine:/);
+  assert.equal(actions.get('Quarantine_unknown_host').inputs.parameters['item/new_approval'], undefined);
+  const check = actions.get('Known_host_check');
+  assert.ok(check.actions.Fetch_pending && check.actions.Is_feed, 'fetch and feed approval only for known domains');
+  assert.ok(!check.else.actions.Fetch_pending);
+  assert.match(actions.get('Known_host_lookup').inputs.parameters.$filter, /new_approval eq 100000001/);
+  assert.match(flow.actions.List_sources.inputs.parameters.$filter, /not\(startswith\(new_lastmessage, 'Quarantine:'\)\)/);
+}
+);
