@@ -537,5 +537,14 @@
     "text": "Microsoft Entra SSO explained: tokens, protocols and security risks\n\nMicrosoft Entra SSO replaces repeated application passwords with one identity flow. The episode explains the two parties involved in sign-in, signed tokens that prove identity, the roles of SAML and OpenID Connect, and the security risks created when access is concentrated in one login.\n\nSource: M365.FM\n\nFull summary: https://powerplatformgovernance.com/en/posts/microsoft-entra-sso-explained-tokens-protocols-and-security-risks-ec0b5ed5/\n\n#PowerPlatformGovernanceDaily",
     "bufferPostId": "6ae4e58298505e7f522b1e8b",
     "dueAt": "2026-10-31T14:00:00.000Z"
+  },
+  "c506dc40e9f21e5cb929686a": {
+    "status": "queued",
+    "day": "2026-10-31",
+    "kind": "image",
+    "title": "The Dataverse Security Model Explained for Architects",
+    "text": "The Dataverse Security Model Explained for Architects\n\nDataverse security combines environments, security roles, business units, teams, record ownership and column-level rules. Architects should design least-privilege access by default and avoid role sprawl so the security model remains understandable as the Power Platform estate grows.\n\nSource: M365.FM | Microsoft 365, Azure Cloud, Power Platform & AI\n\nFull summary: https://powerplatformgovernance.com/en/posts/the-dataverse-security-model-explained-for-architects-c506dc40/\n\n#PowerPlatformGovernanceDaily #Dataverse #PowerApps",
+    "bufferPostId": "6ae6370fab019b90871bb659",
+    "dueAt": "2026-11-01T08:00:00.000Z"
   }
 }
