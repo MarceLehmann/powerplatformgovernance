@@ -723,5 +723,10 @@
       "Use SharePoint's Reset link option for the file or folder.",
       "exports old and new details to CSV"
     ]
+  },
+  "c506dc40e9f21e5cb929686a": {
+    "gif": false,
+    "reason": "The post explains Dataverse security concepts and governance advice, but it does not state a concrete 3 to 5 stage procedure or ordered sequence.",
+    "at": "2026-10-31"
   }
 }
