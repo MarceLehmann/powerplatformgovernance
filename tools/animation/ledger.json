@@ -728,5 +728,20 @@
     "gif": false,
     "reason": "The post explains Dataverse security concepts and governance advice, but it does not state a concrete 3 to 5 stage procedure or ordered sequence.",
     "at": "2026-10-31"
+  },
+  "0b946bfed2b376e0bfe6a874": {
+    "gif": false,
+    "reason": "This post compares authentication options and gives governance advice, but it does not describe a single concrete 3 to 5 stage procedure to follow.",
+    "at": "2026-11-01"
+  },
+  "9445012805a69dcca34b9979": {
+    "gif": false,
+    "reason": "The post is mainly a retirement and governance announcement, and the migration and replacement path are not described as a concrete 3 to 5 step sequence.",
+    "at": "2026-11-01"
+  },
+  "a8dc8493476e8ac899449ff9": {
+    "gif": false,
+    "reason": "The post gives governance guidance and components to review, but it does not state a concrete 3 to 5 stage procedure in order.",
+    "at": "2026-11-01"
   }
 }
