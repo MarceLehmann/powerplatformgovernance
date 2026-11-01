@@ -1,0 +1,20 @@
+{%- comment -%}Hinweis auf die Offers-Seite am Ende eines Artikels. Aufruf: include offers-hint.html topic="default|coe|checks|report|owner"{%- endcomment -%}
+{%- if page.lang == 'de' -%}
+{%- case include.topic -%}
+{%- when 'default' -%}{%- assign hint = 'Für die Default-Umgebung gibt es ein fertiges Flow-Paket, das erfasst, Besitzer informiert und nur mit deiner Freigabe löscht.' -%}
+{%- when 'coe' -%}{%- assign hint = 'Als Ersatz für Teile des CoE Starter Kits gibt es die AdminHelper-Flows, das Starter Kit ist gratis.' -%}
+{%- when 'checks' -%}{%- assign hint = 'Diese Prüfungen laufen auch fertig als AdminHelper-Flows, das Starter Kit ist gratis.' -%}
+{%- when 'report' -%}{%- assign hint = 'Mehr Berichte per Mail gibt es mit den AdminHelper-Flows, das Starter Kit ist gratis.' -%}
+{%- else -%}{%- assign hint = 'Besitzerwechsel für verwaiste Apps und Flows sind im AdminHelper-Paket Voll enthalten.' -%}
+{%- endcase -%}
+<p><em>{{ hint }} <a href="/offers/">Angebote ansehen (auf Englisch)</a></em></p>
+{%- else -%}
+{%- case include.topic -%}
+{%- when 'default' -%}{%- assign hint = 'A ready-made flow package for the Default environment registers what is there, notifies owners and deletes only with your approval.' -%}
+{%- when 'coe' -%}{%- assign hint = 'The AdminHelper flows replace parts of the CoE Starter Kit. The Starter Kit is free.' -%}
+{%- when 'checks' -%}{%- assign hint = 'These checks also come ready-made as AdminHelper flows. The Starter Kit is free.' -%}
+{%- when 'report' -%}{%- assign hint = 'More reports by e-mail come with the AdminHelper flows. The Starter Kit is free.' -%}
+{%- else -%}{%- assign hint = 'Owner reassignment for orphaned apps and flows is part of the AdminHelper Full package.' -%}
+{%- endcase -%}
+<p><em>{{ hint }} <a href="/offers/">See offers</a></em></p>
+{%- endif -%}

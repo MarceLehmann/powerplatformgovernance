@@ -42,3 +42,5 @@ The CoE Starter Kit's monthly releases stopped in February 2026 and Microsoft co
 - Admins/CoE: list which of the Starter Kit's now-unfilled gaps — shadow IT detection, ownership-transfer workflows, cross-tenant visibility, DLP-violation alerting — governance actually depends on today, since that list is the real migration plan, not a single replacement tool.
 - Security/Compliance: flag the DLP-violation alerting gap specifically, since PPAC shows policy state, not who has actually broken a policy.
 - Leadership/Business: treat the missing formal deprecation notice or deadline as no reason to wait, since Microsoft has already confirmed no new features are coming.
+
+{% include offers-hint.html topic="coe" %}

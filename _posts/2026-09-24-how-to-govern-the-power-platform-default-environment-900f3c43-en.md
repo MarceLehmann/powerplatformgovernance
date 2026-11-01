@@ -44,3 +44,5 @@ Pick exactly one model for the Default Environment — personal productivity onl
 - Admins/CoE: audit which of the three models is actually in force today — a tenant running all three depending on who you ask is the real finding, not a question of picking the "best" one.
 - Security/Compliance: confirm sharing-with-everyone is off and auto-claim policies aren't handing out premium licences without a decision point, since both ship as permissive defaults nobody revisits.
 - Makers: need a named alternative environment to build in before the Default Environment gets locked down, or you'll route around the policy the day it lands.
+
+{% include offers-hint.html topic="default" %}

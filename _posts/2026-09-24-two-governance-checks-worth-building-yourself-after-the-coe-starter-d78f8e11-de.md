@@ -41,3 +41,5 @@ Nach dem Wegfall des CoE Starter Kits lohnt es sich, zwei konkrete Governance-L�
 - Admins/CoE: beide Prüfungen allein mit Power Automate und den Admin-Connectors bauen, ganz ohne separates Governance-Produkt — angefangen mit einer Abhängigkeitskontrolle vor jeder Stilllegung.
 - Maker: profitieren direkt vom Scan auf inaktive Besitzer — der Flow einer ausgeschiedenen Kollegin wird an eine feste Admin-Adresse weitergeleitet, statt beim nächsten Lauf still zu scheitern.
 - Security/Compliance: sich gezielt für die Stilllegungsprüfung einsetzen, denn eine Site oder Umgebung ohne Prüfung abhängiger Flows, Reports oder Agents zu entfernen ist genau die Art Lücke, die zu einem ungeplanten Ausfall führt.
+
+{% include offers-hint.html topic="checks" %}

@@ -46,3 +46,5 @@ Die Lücke in den meisten Organisationen ist nicht ein fehlender Neuzuweisungsme
 - Admins/CoE: bei der Solution-Erstellung sowohl einen Besitzer als auch einen benannten Stellvertreter verlangen, nicht als optionales Feld, das später ausgefüllt wird — es ist das eine Metadatenfeld, das Microsofts eigene Behebung verwaister Flows zu etwas macht, das selten laufen muss.
 - Maker: einen Stellvertreter benennen, der die Ressource tatsächlich übernehmen könnte, nicht wer gerade frei war, als das Formular fragte — Microsoft liefert eigenes Bulk-PowerShell-Tooling genau deshalb, weil "kein gültiger Besitzer" häufig genug ist, um es zu brauchen.
 - Leadership/Business: die Neuzuweisung des Besitzes an dasselbe Konto-deaktiviert-Ereignis binden, das der Offboarding-Prozess von HR ohnehin schon auslöst, statt an einen separaten Governance-Review, der sich jeden Austritt eigenständig merken muss.
+
+{% include offers-hint.html topic="owner" %}

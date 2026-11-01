@@ -54,3 +54,5 @@ Getting the digest delivered is the easy part — the actual governance habit is
 - Admins/CoE: turn on the weekly digest for every managed environment individually rather than assuming a tenant-wide default — it's opt-in per environment, so a partial rollout creates exactly the blind spot in whichever environment nobody remembered.
 - Leadership/Business: two of this digest's own numbers — active users and inactive resources — already are the honest, recurring report a governance dashboard project sets out to build; that project doesn't have to happen before measurement starts, since this already measures it.
 - Makers: an app the digest shows with "None" under Last launch is doing the same job, reputationally, as no app at all, just less visibly — review your own resources before someone else's report does it for you.
+
+{% include offers-hint.html topic="report" %}

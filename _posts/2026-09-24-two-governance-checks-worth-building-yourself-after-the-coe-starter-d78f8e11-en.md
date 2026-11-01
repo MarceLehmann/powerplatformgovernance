@@ -41,3 +41,5 @@ With the CoE Starter Kit gone, two concrete governance gaps are worth plugging y
 - Admins/CoE: build both checks with Power Automate and the admin connectors alone, no separate governance product required, starting with a dependency lookup before decommissioning anything.
 - Makers: benefit directly from the inactive-owner scan — a departed colleague's flow gets rerouted to a designated admin instead of failing silently the next time it runs.
 - Security/Compliance: push for the decommissioning check specifically, since removing a site or environment without checking dependent flows, reports, or agents is exactly the kind of gap that turns into an unplanned outage.
+
+{% include offers-hint.html topic="checks" %}

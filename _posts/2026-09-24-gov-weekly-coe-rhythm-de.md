@@ -54,3 +54,5 @@ Den Digest zugestellt zu bekommen ist der leichte Teil — die eigentliche Gover
 - Admins/CoE: den Wochendigest für jede Managed Environment einzeln aktivieren, statt einen tenantweiten Standard anzunehmen — er ist pro Umgebung Opt-in, ein teilweises Rollout erzeugt also genau in der vergessenen Umgebung einen blinden Fleck.
 - Leadership/Business: zwei der eigenen Kennzahlen dieses Digests — aktive Nutzer und inaktive Ressourcen — sind bereits der ehrliche, wiederkehrende Bericht, den ein Governance-Dashboard-Projekt bauen soll; dieses Projekt muss nicht erst stattfinden, bevor gemessen wird, denn hier wird bereits gemessen.
 - Maker: eine App, die der Digest mit "None" unter Letzter Start zeigt, wirkt in der Aussenwirkung wie gar keine App, nur weniger sichtbar — die eigenen Ressourcen prüfen, bevor es der Bericht von jemand anderem tut.
+
+{% include offers-hint.html topic="report" %}

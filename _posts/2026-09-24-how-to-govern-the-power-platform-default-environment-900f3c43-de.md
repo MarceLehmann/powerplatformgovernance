@@ -44,3 +44,5 @@ Genau ein Modell für die Default Environment wählen — nur persönliche Produ
 - Admins/CoE: prüfen, welches der drei Modelle aktuell tatsächlich gilt — ein Tenant, der je nach Nachfrage alle drei gleichzeitig fährt, ist der eigentliche Befund, nicht die Frage nach dem "besten" Modell.
 - Security/Compliance: kontrollieren, ob Teilen mit "Jeder" deaktiviert ist und Auto-Claim-Richtlinien keine Premium-Lizenzen ohne Entscheidungspunkt vergeben, da beides gängige, nie überprüfte Standardeinstellungen sind.
 - Maker: brauchen eine benannte Alternativumgebung zum Bauen, bevor die Default Environment gesperrt wird — sonst umgehen sie die Richtlinie genau an dem Tag, an dem sie greift.
+
+{% include offers-hint.html topic="default" %}

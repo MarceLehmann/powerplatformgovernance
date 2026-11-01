@@ -46,3 +46,5 @@ The gap in most orgs isn't a lack of a reassignment mechanism — it's that noth
 - Admins/CoE: require both an owner and a named deputy at solution creation, not as an optional field filled in later — it's the one piece of metadata that turns Microsoft's own orphaned-flow remediation into something that rarely needs to run.
 - Makers: name a deputy who could actually take over the resource, not whoever happened to be free when the form asked — Microsoft ships bulk PowerShell tooling for this specifically because "no valid owner" is common enough to need it.
 - Leadership/Business: tie ownership reassignment to the same account-disabled event HR's offboarding process already triggers, rather than a separate governance review that has to independently remember every departure.
+
+{% include offers-hint.html topic="owner" %}
