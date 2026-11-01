@@ -12,7 +12,7 @@ Das AdminHelper-Starter-Set besteht aus zehn Power-Automate-Flows, die deinen Te
 
 [This page in English](/flows/)
 
-Das Starter-Set ist gratis. Du bekommst es per E-Mail über [kmupower.com](https://kmupower.com/vorlagen#adminhelper). Wenn du mehr willst, findest du die [Angebote (auf Englisch)](/offers/): Standard (35 Flows, CHF 49), Voll (51 Flows, CHF 99) und das Default-Paket (CHF 49). Jedes bezahlte Paket gibt es auch mit Einrichtung per Fernzugriff (CHF 449, CHF 899 und CHF 449).
+Das Starter-Set ist gratis. Du bekommst es per E-Mail über [kmupower.com](https://kmupower.com/vorlagen#adminhelper). Wenn du mehr willst, findest du die [Angebote (auf Englisch)](/offers/): Standard (35 Flows, CHF 49), Voll (51 Flows, CHF 99) und das Default-Paket (CHF 79). Jedes bezahlte Paket gibt es auch mit Einrichtung per Fernzugriff (CHF 449, CHF 899 und CHF 479).
 
 ## Deine ersten 10 Flows
 
