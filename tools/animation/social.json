@@ -546,5 +546,32 @@
     "text": "The Dataverse Security Model Explained for Architects\n\nDataverse security combines environments, security roles, business units, teams, record ownership and column-level rules. Architects should design least-privilege access by default and avoid role sprawl so the security model remains understandable as the Power Platform estate grows.\n\nSource: M365.FM | Microsoft 365, Azure Cloud, Power Platform & AI\n\nFull summary: https://powerplatformgovernance.com/en/posts/the-dataverse-security-model-explained-for-architects-c506dc40/\n\n#PowerPlatformGovernanceDaily #Dataverse #PowerApps",
     "bufferPostId": "6ae6370fab019b90871bb659",
     "dueAt": "2026-11-01T08:00:00.000Z"
+  },
+  "0b946bfed2b376e0bfe6a874": {
+    "status": "queued",
+    "day": "2026-11-01",
+    "kind": "image",
+    "title": "Choose secure Power Platform pipeline authentication",
+    "text": "Choose secure Power Platform pipeline authentication\n\nPower Platform Build Tools service connections support client secrets, Azure Managed Identity and workload identity federation. Federation uses a short-lived Azure DevOps token and needs a federated credential plus a Dataverse application user. Managed identity requires a self-hosted Azure agent, while client secrets require expiry management.\n\nSource: Practical AI, Copilot & Modern Development Insights\n\nFull summary: https://powerplatformgovernance.com/en/posts/choose-secure-power-platform-pipeline-authentication-0b946bfe/\n\n#PowerPlatformGovernanceDaily #Dataverse",
+    "bufferPostId": "6ae7887f026a1294e5587674",
+    "dueAt": "2026-11-02T08:00:00.000Z"
+  },
+  "a8dc8493476e8ac899449ff9": {
+    "status": "queued",
+    "day": "2026-11-01",
+    "kind": "image",
+    "title": "SharePoint Information Architecture That Survives Copilot",
+    "text": "SharePoint Information Architecture That Survives Copilot\n\nSharePoint Online sites, hubs, content types, metadata, navigation and permissions determine what Copilot can find and see. Structure this information architecture so content remains findable, governable and safe to surface. The episode targets SharePoint architects, information managers, Microsoft 365 admins and Copilot rollout teams.\n\nSource: M365.FM | Microsoft 365, Azure Cloud, Power Platform & AI\n\nFull summary: https://powerplatformgovernance.com/en/posts/sharepoint-information-architecture-that-survives-copilot-a8dc8493/\n\n#PowerPlatformGovernanceDaily",
+    "bufferPostId": "6ae7887f026a1294e55876a0",
+    "dueAt": "2026-11-02T11:00:00.000Z"
+  },
+  "9445012805a69dcca34b9979": {
+    "status": "queued",
+    "day": "2026-11-01",
+    "kind": "image",
+    "title": "Microsoft retires App Builder and consolidates AI app building",
+    "text": "Microsoft retires App Builder and consolidates AI app building\n\nMicrosoft retires the App Builder agent and vibe.powerapps.com on November 30. Apps worth keeping can move through an in-product migration tool. Chat-based building shifts to Copilot Cowork and Copilot Studio, with personal developer environments, DLP and an admin inventory, but the replacement remains preview-based and Managed Runtime licensing is enforced after 20 operations.\n\nSource: Bright Ideas Agency\n\nFull summary: https://powerplatformgovernance.com/en/posts/microsoft-retires-app-builder-and-consolidates-ai-app-building-94450128/\n\n#PowerPlatformGovernanceDaily #CopilotStudio",
+    "bufferPostId": "6ae78880b7d22b897a082ef7",
+    "dueAt": "2026-11-02T14:00:00.000Z"
   }
 }
