@@ -43,6 +43,12 @@ faq:
 - question: Welche Rolle spielen automatische Bezeichnungen beim Rollout von Microsoft-Purview-Sensitivitätsbezeichnungen?
   answer: Automatische Bezeichnungen sind ein Rollout-Baustein neben Taxonomie, Standardwerten
     und Kommunikation und strukturieren den Weg zur Produktion.
+animation:
+  src: /assets/img/animations/3594bfc8f931ea57a95e0423-de.gif
+  poster: /assets/img/animations/3594bfc8f931ea57a95e0423-de.poster.png
+  width: 720
+  height: 405
+  alt: "Ein Rollout in fuenf Schritten zeigt kleine Bezeichnungstaxonomie, definiertes Standardverhalten, Nutzerkommunikation, automatische Bezeichnung und Akzeptanzmessung vor der Ausweitung ueber den Pilot hinaus."
 ---
 
 ## TL;DR

@@ -1,0 +1,57 @@
+{
+ "title": "Purview Labels vom Pilot zur Produktion",
+ "subtitle": "Bezeichnungsgrundlagen festlegen, im Pilot testen und vor breitem Rollout Akzeptanz messen.",
+ "steps": [
+  {
+   "product": "admin",
+   "icon": "table",
+   "productLabel": "Microsoft Purview",
+   "title": "Bezeichnungsmenge klein halten",
+   "actions": [
+    "kleine Bezeichnungsmenge",
+    "Bezeichnungstaxonomie"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "gear",
+   "productLabel": "Microsoft Purview",
+   "title": "Standardverhalten definieren",
+   "actions": [
+    "Standardverhalten"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "chat",
+   "productLabel": "Microsoft Purview",
+   "title": "Nutzerkommunikation abstimmen",
+   "actions": [
+    "Nutzerkommunikation"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "filter",
+   "productLabel": "Microsoft Purview",
+   "title": "Automatische Bezeichnung planen",
+   "actions": [
+    "automatische Bezeichnung"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "check",
+   "productLabel": "Microsoft Purview",
+   "title": "Akzeptanz messen, dann erweitern",
+   "actions": [
+    "Akzeptanz messen",
+    "Pilotgruppe"
+   ]
+  }
+ ],
+ "punchline": [
+  "Zuerst Pilot",
+  "Dann Rollout erweitern"
+ ]
+}

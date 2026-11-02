@@ -1,0 +1,42 @@
+{
+ "title": "Copilot Studio hook event flow",
+ "subtitle": "Hooks run workflows on conversation start, tool selection, and errors.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "chat",
+   "productLabel": "Copilot Studio",
+   "title": "Conversation starts",
+   "actions": [
+    "conversation starts",
+    "run workflows"
+   ],
+   "evidence": "conversation starts, tool selection, or errors occur"
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "gear",
+   "productLabel": "Copilot Studio",
+   "title": "Agent selects a tool",
+   "actions": [
+    "tool selection",
+    "run workflows"
+   ],
+   "evidence": "conversation starts, tool selection, or errors occur"
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "bell",
+   "productLabel": "Copilot Studio",
+   "title": "Error occurs",
+   "actions": [
+    "errors",
+    "run workflows"
+   ],
+   "evidence": "conversation starts, tool selection, or errors occur"
+  }
+ ],
+ "punchline": [
+  "More predictable behavior"
+ ]
+}

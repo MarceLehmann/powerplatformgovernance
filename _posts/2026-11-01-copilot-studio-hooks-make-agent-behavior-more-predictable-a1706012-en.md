@@ -35,6 +35,12 @@ faq:
 - question: Which Copilot Studio events can use hooks?
   answer: Hooks can respond to conversation starts, an agent selecting a tool, or
     an error occurring.
+animation:
+  src: /assets/img/animations/a1706012bda0afd261f6b630-en.gif
+  poster: /assets/img/animations/a1706012bda0afd261f6b630-en.poster.png
+  width: 800
+  height: 450
+  alt: "A 3 step flow shows Copilot Studio hooks running workflows for conversation start, tool selection, and error events to improve predictability."
 ---
 
 ## TL;DR

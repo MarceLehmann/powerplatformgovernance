@@ -1,0 +1,39 @@
+{
+ "title": "Copilot Studio Hook Ereignisfluss",
+ "subtitle": "Hooks starten Workflows bei Gespraechsbeginn, Toolauswahl und Fehlern.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "chat",
+   "productLabel": "Copilot Studio",
+   "title": "Gespraech beginnt",
+   "actions": [
+    "Gespraechsbeginn",
+    "Workflows starten"
+   ]
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "gear",
+   "productLabel": "Copilot Studio",
+   "title": "Agent waehlt ein Tool",
+   "actions": [
+    "Toolauswahl",
+    "Workflows starten"
+   ]
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "bell",
+   "productLabel": "Copilot Studio",
+   "title": "Fehler tritt auf",
+   "actions": [
+    "Fehler",
+    "Workflows starten"
+   ]
+  }
+ ],
+ "punchline": [
+  "Vorhersehbareres Verhalten"
+ ]
+}

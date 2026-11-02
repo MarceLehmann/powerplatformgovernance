@@ -743,5 +743,32 @@
     "gif": false,
     "reason": "The post gives governance guidance and components to review, but it does not state a concrete 3 to 5 stage procedure in order.",
     "at": "2026-11-01"
+  },
+  "10c3874618a3a5a0453de162": {
+    "gif": false,
+    "reason": "The post explains a concept and governance advice about gateway availability, but it does not state a concrete 3 to 5 stage procedure or ordered path.",
+    "at": "2026-11-02"
+  },
+  "a1706012bda0afd261f6b630": {
+    "gif": true,
+    "reason": "The post names a concrete 3 stage event sequence that hooks can respond to: conversation start, tool selection, and errors.",
+    "at": "2026-11-02",
+    "evidence": [
+      "conversation starts, tool selection, or errors occur",
+      "conversation starts, tool selection, or errors occur",
+      "conversation starts, tool selection, or errors occur"
+    ]
+  },
+  "3594bfc8f931ea57a95e0423": {
+    "gif": true,
+    "reason": "The post describes a concrete rollout path from pilot to production in five named stages.",
+    "at": "2026-11-02",
+    "evidence": [
+      "Keep the sensitivity-label set small",
+      "define default behavior",
+      "Coordinate user communication",
+      "plan auto-labeling",
+      "measure adoption before expanding beyond the pilot"
+    ]
   }
 }

@@ -1,0 +1,62 @@
+{
+ "title": "Purview labels from pilot to production",
+ "subtitle": "Set label basics, pilot them, then measure adoption before wider rollout.",
+ "steps": [
+  {
+   "product": "admin",
+   "icon": "table",
+   "productLabel": "Microsoft Purview",
+   "title": "Keep the label set small",
+   "actions": [
+    "small label set",
+    "label taxonomy"
+   ],
+   "evidence": "Keep the sensitivity-label set small"
+  },
+  {
+   "product": "admin",
+   "icon": "gear",
+   "productLabel": "Microsoft Purview",
+   "title": "Define default behavior",
+   "actions": [
+    "default behavior"
+   ],
+   "evidence": "define default behavior"
+  },
+  {
+   "product": "admin",
+   "icon": "chat",
+   "productLabel": "Microsoft Purview",
+   "title": "Coordinate user communication",
+   "actions": [
+    "user communication"
+   ],
+   "evidence": "Coordinate user communication"
+  },
+  {
+   "product": "admin",
+   "icon": "filter",
+   "productLabel": "Microsoft Purview",
+   "title": "Plan auto-labeling",
+   "actions": [
+    "auto-labeling"
+   ],
+   "evidence": "plan auto-labeling"
+  },
+  {
+   "product": "admin",
+   "icon": "check",
+   "productLabel": "Microsoft Purview",
+   "title": "Measure adoption then expand",
+   "actions": [
+    "measure adoption",
+    "pilot group"
+   ],
+   "evidence": "measure adoption before expanding beyond the pilot"
+  }
+ ],
+ "punchline": [
+  "Pilot first",
+  "Then expand rollout"
+ ]
+}
