@@ -579,5 +579,23 @@
     "day": "2026-11-01",
     "title": "Copilot Studio hooks make agent behavior more predictable",
     "expiredAt": "2026-11-02"
+  },
+  "3594bfc8f931ea57a95e0423": {
+    "status": "queued",
+    "day": "2026-11-02",
+    "kind": "video",
+    "title": "Sensitivity Labels Rollout Playbook: From Pilot to Production",
+    "text": "Sensitivity Labels Rollout Playbook: From Pilot to Production\n\nMicrosoft Purview sensitivity label rollouts should use a small taxonomy, deliberate default behavior, clear user communication, auto-labeling, and adoption measurement. Start with a pilot group, reduce user frustration, then extend the design to the whole organization.\n\nSource: m365 FM\n\nFull summary: https://powerplatformgovernance.com/en/posts/sensitivity-labels-rollout-playbook-from-pilot-to-production-3594bfc8/\n\n#PowerPlatformGovernanceDaily",
+    "bufferPostId": "6ae832c81a965d64fbf3a1d9",
+    "dueAt": "2026-11-03T08:00:00.000Z"
+  },
+  "10c3874618a3a5a0453de162": {
+    "status": "queued",
+    "day": "2026-11-02",
+    "kind": "image",
+    "title": "Power BI Gateways: Why Sleeping Machines Stop Reports Updating",
+    "text": "Power BI Gateways: Why Sleeping Machines Stop Reports Updating\n\nPower BI gateways connect cloud reports to data sources that cannot send data directly to the cloud. A gateway machine must remain available: if it sleeps, reports can stop updating. The episode covers the data round trip, three gateway kinds, placement in Microsoft 365 and Azure, planning limits, and common troubleshooting mistakes.\n\nSource: M365.FM\n\nFull summary: https://powerplatformgovernance.com/en/posts/power-bi-gateways-why-sleeping-machines-stop-reports-updating-10c38746/\n\n#PowerPlatformGovernanceDaily",
+    "bufferPostId": "6ae832c976279ec7eb995612",
+    "dueAt": "2026-11-03T11:00:00.000Z"
   }
 }
