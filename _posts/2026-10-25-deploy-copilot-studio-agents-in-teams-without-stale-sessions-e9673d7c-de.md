@@ -42,8 +42,8 @@ faq:
   answer: Die nächste Nachricht verwendet die zuletzt veröffentlichte Version, allerdings
     kann das Erzwingen einer Aktualisierung eine laufende Unterhaltung unterbrechen.
 animation:
-  src: /assets/img/animations/e9673d7c084b125524396184-de.gif
-  poster: /assets/img/animations/e9673d7c084b125524396184-de.poster.png
+  video: /assets/img/animations/e9673d7c084b125524396184-de.mp4
+  poster: /assets/img/animations/e9673d7c084b125524396184-de.poster.webp
   width: 800
   height: 450
   alt: "Ein Ablauf mit vier Schritten zeigt \"The user is inactive for awhile\", das Festlegen der Zeit, das Loeschen von Variablen und Verlauf und danach das Beenden der Unterhaltung."

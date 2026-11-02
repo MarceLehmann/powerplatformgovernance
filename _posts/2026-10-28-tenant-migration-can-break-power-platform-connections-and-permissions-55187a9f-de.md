@@ -47,8 +47,8 @@ faq:
   answer: Native Tools verarbeiten Kernbereiche wie Postfächer und grundlegende OneDrive-Inhalte.
     Komplexe Teams-Chatverläufe benötigen in der Regel spezialisierte Drittanbieter-Lösungen.
 animation:
-  src: /assets/img/animations/55187a9f2f752480b9465ebe-de.gif
-  poster: /assets/img/animations/55187a9f2f752480b9465ebe-de.poster.png
+  video: /assets/img/animations/55187a9f2f752480b9465ebe-de.mp4
+  poster: /assets/img/animations/55187a9f2f752480b9465ebe-de.poster.webp
   width: 800
   height: 450
   alt: "Die Animation zeigt, wie ein Tenantwechsel alte Power Automate Verweise bricht, dann jeden Trigger und jede Aktion neu authentifiziert werden und danach Berechtigungen fuer Teams und SharePoint neu zugeordnet werden."

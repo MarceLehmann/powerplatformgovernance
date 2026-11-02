@@ -48,8 +48,8 @@ faq:
     sandboxes can use relaxed rules, while production environments enforce stronger
     controls.
 animation:
-  src: /assets/img/animations/a30d51f658eea807ac7ee994-en.gif
-  poster: /assets/img/animations/a30d51f658eea807ac7ee994-en.poster.png
+  video: /assets/img/animations/a30d51f658eea807ac7ee994-en.mp4
+  poster: /assets/img/animations/a30d51f658eea807ac7ee994-en.poster.webp
   width: 800
   height: 450
   alt: "A 3 step sequence shows DLP policy setup by classifying connectors, applying different rules to developer and production environments, and monitoring enforcement with reporting tools."

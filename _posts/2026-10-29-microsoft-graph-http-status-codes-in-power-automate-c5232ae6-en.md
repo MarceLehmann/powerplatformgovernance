@@ -42,8 +42,8 @@ faq:
   answer: Use idempotency keys or error handling for POST retries. Repeated non-idempotent
     requests can create duplicate emails, database rows, or orders.
 animation:
-  src: /assets/img/animations/c5232ae6008d52c592ca5007-en.gif
-  poster: /assets/img/animations/c5232ae6008d52c592ca5007-en.poster.png
+  video: /assets/img/animations/c5232ae6008d52c592ca5007-en.mp4
+  poster: /assets/img/animations/c5232ae6008d52c592ca5007-en.poster.webp
   width: 800
   height: 450
   alt: "A four step flow shows Power Automate handling Microsoft Graph responses by checking 401 auth failures, checking 403 permission failures, waiting on retry-after for 429, and protecting POST or PATCH retries."

@@ -44,8 +44,8 @@ faq:
   answer: Die Maker-Verbindung richtet den Agenten ein, der Testbereich läuft jedoch
     als Endbenutzer. Für echte Toolaufrufe müssen beide Verbindungen erfolgreich sein.
 animation:
-  src: /assets/img/animations/6861fb61631e88be31003eff-de.gif
-  poster: /assets/img/animations/6861fb61631e88be31003eff-de.poster.png
+  video: /assets/img/animations/6861fb61631e88be31003eff-de.mp4
+  poster: /assets/img/animations/6861fb61631e88be31003eff-de.poster.webp
   width: 800
   height: 450
   alt: "Vier Schritte zeigen die Einrichtung von Snowflake MCP in Copilot Studio: Manual OAuth verwenden, die Connector-Weiterleitungs-URI nach Entra uebernehmen, DEFAULT_SECONDARY_ROLES konfigurieren und dann Maker- und Endbenutzerverbindungen testen."

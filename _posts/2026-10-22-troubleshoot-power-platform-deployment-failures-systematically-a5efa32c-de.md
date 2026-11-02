@@ -47,8 +47,8 @@ faq:
     konfigurierten Auslöser haben oder erforderlichen Zugriff und Lizenzen vermissen.
     Prüfen Sie den ersten fehlgeschlagenen Schritt im Ausführungsverlauf.
 animation:
-  src: /assets/img/animations/a5efa32cc7bab7f76d2d40c0-de.gif
-  poster: /assets/img/animations/a5efa32cc7bab7f76d2d40c0-de.poster.png
+  video: /assets/img/animations/a5efa32cc7bab7f76d2d40c0-de.mp4
+  poster: /assets/img/animations/a5efa32cc7bab7f76d2d40c0-de.poster.webp
   width: 800
   height: 450
   alt: "Eine 3-Schritt-Abfolge zeigt die Fehlerbehebung bei einer Power Platform-Bereitstellung: Fehlerdetails erfassen, Abhaengigkeiten und Zielkonfiguration pruefen, dann kritische Apps und Flow-Ausloeser nach dem Import testen."

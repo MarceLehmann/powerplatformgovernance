@@ -41,8 +41,8 @@ faq:
   answer: Include the Conversation ID, where and when you used the agent, and what
     you expected compared with what happened.
 animation:
-  src: /assets/img/animations/ff37005e9e42ea140df8f5f4-en.gif
-  poster: /assets/img/animations/ff37005e9e42ea140df8f5f4-en.poster.png
+  video: /assets/img/animations/ff37005e9e42ea140df8f5f4-en.mp4
+  poster: /assets/img/animations/ff37005e9e42ea140df8f5f4-en.poster.webp
   width: 800
   height: 450
   alt: "Sequence shows entering the debug command in chat, receiving the Conversation ID or debugging card, and sending the ID with location, time, and expected versus actual behaviour to support."

@@ -42,8 +42,8 @@ faq:
   answer: Sende die Conversation ID, Ort und Zeitpunkt der Nutzung sowie den erwarteten
     und den tatsächlich eingetretenen Ablauf.
 animation:
-  src: /assets/img/animations/ff37005e9e42ea140df8f5f4-de.gif
-  poster: /assets/img/animations/ff37005e9e42ea140df8f5f4-de.poster.png
+  video: /assets/img/animations/ff37005e9e42ea140df8f5f4-de.mp4
+  poster: /assets/img/animations/ff37005e9e42ea140df8f5f4-de.poster.webp
   width: 800
   height: 450
   alt: "Die Abfolge zeigt den Debug-Befehl im Chat, den Erhalt der Conversation ID oder Debugging-Karte und das Senden der ID mit Ort, Zeitpunkt sowie erwartetem und tatsaechlichem Verhalten an den Support."

@@ -44,8 +44,8 @@ faq:
   answer: Erstellen und testen Sie Anpassungen in getrennten Umgebungen, transportieren
     Sie Komponenten mit Solutions und prüfen Sie Abhängigkeiten vor der Bereitstellung.
 animation:
-  src: /assets/img/animations/387ef015d855ffe39d75d3e4-de.gif
-  poster: /assets/img/animations/387ef015d855ffe39d75d3e4-de.poster.png
+  video: /assets/img/animations/387ef015d855ffe39d75d3e4-de.mp4
+  poster: /assets/img/animations/387ef015d855ffe39d75d3e4-de.poster.webp
   width: 800
   height: 450
   alt: "Eine Abfolge mit vier Schritten zeigt das Entwerfen des Dataverse-Modells rund um Geschaeftskonzepte, das Festlegen von Ownership und Regeln, das Dokumentieren und Testen sowie das Verteilen von Aenderungen per Solutions ueber getrennte Umgebungen."

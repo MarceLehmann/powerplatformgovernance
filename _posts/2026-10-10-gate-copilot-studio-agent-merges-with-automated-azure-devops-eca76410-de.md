@@ -43,8 +43,8 @@ faq:
     und schlägt fehl, wenn die Erfolgsquote darunter liegt, wodurch der Merge blockiert
     wird.
 animation:
-  src: /assets/img/animations/eca764107e31cbaa07a73d51-de.gif
-  poster: /assets/img/animations/eca764107e31cbaa07a73d51-de.poster.png
+  video: /assets/img/animations/eca764107e31cbaa07a73d51-de.mp4
+  poster: /assets/img/animations/eca764107e31cbaa07a73d51-de.poster.webp
   width: 800
   height: 450
   alt: "Ein Ablauf mit vier Schritten zeigt, wie EvalGateADO den PR Quellcode mit pac packt, in eine eigene CI Umgebung importiert, den Entwurfsagenten mit der Evaluation API prueft und den Azure DevOps Merge bei verfehltem Schwellenwert blockiert."

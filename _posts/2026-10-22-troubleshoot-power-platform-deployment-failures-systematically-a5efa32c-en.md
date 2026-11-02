@@ -45,8 +45,8 @@ faq:
     trigger, or lack required access or licensing. Check run history from its first
     failed action.
 animation:
-  src: /assets/img/animations/a5efa32cc7bab7f76d2d40c0-en.gif
-  poster: /assets/img/animations/a5efa32cc7bab7f76d2d40c0-en.poster.png
+  video: /assets/img/animations/a5efa32cc7bab7f76d2d40c0-en.mp4
+  poster: /assets/img/animations/a5efa32cc7bab7f76d2d40c0-en.poster.webp
   width: 800
   height: 450
   alt: "A 3 step sequence shows troubleshooting a Power Platform deployment by recording failure details, checking dependencies and target configuration, then testing critical apps and flow triggers after import."

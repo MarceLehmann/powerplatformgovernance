@@ -41,8 +41,8 @@ faq:
     still require a team-based or direct security-role assignment.
 publisher_disclosure: Both publications are edited by Marcel Lehmann.
 animation:
-  src: /assets/img/animations/0698abef7fa3372fde475a2a-en.gif
-  poster: /assets/img/animations/0698abef7fa3372fde475a2a-en.poster.png
+  video: /assets/img/animations/0698abef7fa3372fde475a2a-en.mp4
+  poster: /assets/img/animations/0698abef7fa3372fde475a2a-en.poster.webp
   width: 800
   height: 450
   alt: "Sequence shows a user joining the environment security group, a Power Automate flow calling Force Sync user with environment and Entra IDs, and the user appearing in Dataverse before first sign-in."

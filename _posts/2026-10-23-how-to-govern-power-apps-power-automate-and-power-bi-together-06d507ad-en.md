@@ -41,8 +41,8 @@ faq:
   answer: Restrict risky connectors with a DLP policy, while using dedicated environments
     for production apps with owners and change control.
 animation:
-  src: /assets/img/animations/06d507ad327cef51124ab72e-en.gif
-  poster: /assets/img/animations/06d507ad327cef51124ab72e-en.poster.png
+  video: /assets/img/animations/06d507ad327cef51124ab72e-en.mp4
+  poster: /assets/img/animations/06d507ad327cef51124ab72e-en.poster.webp
   width: 800
   height: 450
   alt: "A five step governance flow shows inventory across environments, assign owners, inspect connectors, review user and guest access, then retire unused or stopped assets."

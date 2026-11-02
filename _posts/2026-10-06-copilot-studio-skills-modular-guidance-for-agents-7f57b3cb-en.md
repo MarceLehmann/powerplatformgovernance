@@ -41,8 +41,8 @@ faq:
   answer: Skills shape agent behavior and may bundle scripts, so review them for prompt
     injection, tool misuse, and content inconsistent with their stated purpose.
 animation:
-  src: /assets/img/animations/7f57b3cbe68b609e605dbf3a-en.gif
-  poster: /assets/img/animations/7f57b3cbe68b609e605dbf3a-en.poster.png
+  video: /assets/img/animations/7f57b3cbe68b609e605dbf3a-en.mp4
+  poster: /assets/img/animations/7f57b3cbe68b609e605dbf3a-en.poster.webp
   width: 800
   height: 450
   alt: "A 3 step sequence shows Copilot Studio using a Skill's name and description to match a scenario, then loading the full instructions on demand."

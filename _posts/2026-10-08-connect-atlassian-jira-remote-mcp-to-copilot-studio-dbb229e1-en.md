@@ -43,8 +43,8 @@ faq:
   answer: Manual OAuth can pass consent but fail during refresh because Atlassian
     has no static client. Dynamic discovery handles the runtime registration.
 animation:
-  src: /assets/img/animations/dbb229e11322afc7aa5b89e9-en.gif
-  poster: /assets/img/animations/dbb229e11322afc7aa5b89e9-en.poster.png
+  video: /assets/img/animations/dbb229e11322afc7aa5b89e9-en.mp4
+  poster: /assets/img/animations/dbb229e11322afc7aa5b89e9-en.poster.webp
   width: 800
   height: 450
   alt: "Four stages: enable the Atlassian prerequisites, create the MCP tool with Dynamic discovery, activate the connection and select Add and configure, then verify with JQL and publish."

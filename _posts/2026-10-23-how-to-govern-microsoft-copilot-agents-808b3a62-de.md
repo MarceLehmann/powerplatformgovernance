@@ -45,8 +45,8 @@ faq:
     Entwürfe ohne Veröffentlichung nach 30 Tagen. Jede Entscheidung sollte dokumentiert
     werden.
 animation:
-  src: /assets/img/animations/808b3a62f9e38817fca9ae7e-de.gif
-  poster: /assets/img/animations/808b3a62f9e38817fca9ae7e-de.poster.png
+  video: /assets/img/animations/808b3a62f9e38817fca9ae7e-de.mp4
+  poster: /assets/img/animations/808b3a62f9e38817fca9ae7e-de.poster.webp
   width: 800
   height: 450
   alt: "Die Abfolge zeigt die Steuerung von Copilot Agents: alle Copilot Studio und SharePoint Agents erfassen, Besitz und Status dokumentieren, Risiken bewerten und veraltete oder unveroeffentlichte Agents stilllegen."

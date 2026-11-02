@@ -43,8 +43,8 @@ faq:
     scheitern, weil Atlassian keinen statischen Client besitzt. Dynamic discovery
     registriert ihn zur Laufzeit.
 animation:
-  src: /assets/img/animations/dbb229e11322afc7aa5b89e9-de.gif
-  poster: /assets/img/animations/dbb229e11322afc7aa5b89e9-de.poster.png
+  video: /assets/img/animations/dbb229e11322afc7aa5b89e9-de.mp4
+  poster: /assets/img/animations/dbb229e11322afc7aa5b89e9-de.poster.webp
   width: 800
   height: 450
   alt: "Vier Stationen: Atlassian-Voraussetzungen aktivieren, MCP-Tool mit Dynamic discovery erstellen, Verbindung aktivieren und Add and configure wählen, dann mit JQL prüfen und veröffentlichen."

@@ -1,24 +1,36 @@
 {%- comment -%}
-  Animiertes Ablauf-GIF (Beilage, nie Screenshot). Wird von tools/animation/run.mjs erzeugt.
-  Aufruf im Post-Layout: {% include animation.html src=... poster=... width=... height=... alt=... %}
+  Animierter Ablauf (Beilage, nie Screenshot). Wird von tools/animation/run.mjs erzeugt.
+  Aufruf im Post-Layout: {% include animation.html video=... poster=... width=... height=... alt=... %}
   Auf der Seite /flows/ steht der Aufruf direkt unter der Ueberschrift des jeweiligen Flows.
-  GIF lazy, mit Alt-Text und Standbild fuer prefers-reduced-motion.
+  MP4 (autoplay, stumm, Schleife, inline), Poster zuerst (fetchpriority high, LCP), Video erst nach dem Poster
+  (preload="metadata"), aria-label wie der Alt-Text, Poster als Fallback-Bild. Bei prefers-reduced-motion
+  bleibt das Poster stehen (kein Autoplay). Kein GIF mehr.
 {%- endcomment -%}
-{%- if include.src -%}
+{%- if include.video -%}
   {%- assign anim_lang = page.lang | default: 'en' -%}
+  <link rel="preload" as="image" href="{{ include.poster | relative_url }}" fetchpriority="high">
   <figure class="flow-animation my-4 text-center">
-    <picture>
-      <source media="(prefers-reduced-motion: reduce)" srcset="{{ include.poster | relative_url }}">
+    <video
+      autoplay muted loop playsinline
+      preload="metadata"
+      poster="{{ include.poster | relative_url }}"
+      width="{{ include.width | default: 800 }}"
+      height="{{ include.height | default: 450 }}"
+      aria-label="{{ include.alt | escape }}"
+      style="max-width: 100%; height: auto; border: 1px solid var(--main-border-color, #d9e1e8); border-radius: 8px;"
+    >
+      <source src="{{ include.video | relative_url }}" type="video/mp4">
       <img
-        src="{{ include.src | relative_url }}"
+        src="{{ include.poster | relative_url }}"
         alt="{{ include.alt | escape }}"
         width="{{ include.width | default: 800 }}"
         height="{{ include.height | default: 450 }}"
         loading="lazy"
         decoding="async"
-        style="max-width: 100%; height: auto; border: 1px solid var(--main-border-color, #d9e1e8); border-radius: 8px;"
+        style="max-width: 100%; height: auto;"
       >
-    </picture>
+    </video>
+    <script>(function(){var v=document.currentScript.previousElementSibling;if(v&&window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){v.removeAttribute('autoplay');v.pause();}})();</script>
     <figcaption class="small text-muted pt-2">
       {%- if page.source_name -%}
         {%- if anim_lang == 'de' -%}Schematische Darstellung der beschriebenen Schritte nach {{ page.source_name | escape }}, kein Screenshot.{%- else -%}Schematic view of the steps described by {{ page.source_name | escape }}, not a screenshot.{%- endif -%}

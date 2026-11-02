@@ -42,8 +42,8 @@ faq:
     Berechtigungen benötigen zusätzlich eine Teamzuweisung oder direkte Sicherheitsrollenzuweisung.
 publisher_disclosure: Beide Publikationen werden von Marcel Lehmann herausgegeben.
 animation:
-  src: /assets/img/animations/0698abef7fa3372fde475a2a-de.gif
-  poster: /assets/img/animations/0698abef7fa3372fde475a2a-de.poster.png
+  video: /assets/img/animations/0698abef7fa3372fde475a2a-de.mp4
+  poster: /assets/img/animations/0698abef7fa3372fde475a2a-de.poster.webp
   width: 800
   height: 450
   alt: "Die Abfolge zeigt den Beitritt eines Benutzers zur Umgebungssicherheitsgruppe, einen Power-Automate-Flow mit Force Sync user und den Benutzer in Dataverse vor der ersten Anmeldung."

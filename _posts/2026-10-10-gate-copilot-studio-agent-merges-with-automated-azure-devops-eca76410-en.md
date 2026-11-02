@@ -42,8 +42,8 @@ faq:
   answer: The pipeline compares passed tests with a configurable pass threshold and
     exits unsuccessfully when the rate is lower, blocking the merge.
 animation:
-  src: /assets/img/animations/eca764107e31cbaa07a73d51-en.gif
-  poster: /assets/img/animations/eca764107e31cbaa07a73d51-en.poster.png
+  video: /assets/img/animations/eca764107e31cbaa07a73d51-en.mp4
+  poster: /assets/img/animations/eca764107e31cbaa07a73d51-en.poster.webp
   width: 800
   height: 450
   alt: "A four step flow shows EvalGateADO packing the PR source with pac, importing it into a dedicated CI environment, running Evaluation API tests on the draft agent, and blocking the Azure DevOps merge if the pass threshold is missed."

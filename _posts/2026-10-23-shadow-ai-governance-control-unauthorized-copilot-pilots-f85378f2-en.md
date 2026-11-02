@@ -45,8 +45,8 @@ faq:
   answer: Copilot follows existing user permissions and can surface content from broadly
     accessible SharePoint locations faster than people typically discover it manually.
 animation:
-  src: /assets/img/animations/f85378f2141cc17158b099a0-en.gif
-  poster: /assets/img/animations/f85378f2141cc17158b099a0-en.poster.png
+  video: /assets/img/animations/f85378f2141cc17158b099a0-en.mp4
+  poster: /assets/img/animations/f85378f2141cc17158b099a0-en.poster.webp
   width: 800
   height: 450
   alt: "Sequence shows governing unauthorized Copilot pilots by inventorying solutions, routing them through CoE intake, applying deeper review and least privilege, and auditing SharePoint permissions."

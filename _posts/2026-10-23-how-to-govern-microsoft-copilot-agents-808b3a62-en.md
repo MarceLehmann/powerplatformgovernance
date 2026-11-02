@@ -41,8 +41,8 @@ faq:
   answer: Ask owners to unpublish or delete agents unused for 90 days or drafts left
     unpublished for 30 days, and record each decision.
 animation:
-  src: /assets/img/animations/808b3a62f9e38817fca9ae7e-en.gif
-  poster: /assets/img/animations/808b3a62f9e38817fca9ae7e-en.poster.png
+  video: /assets/img/animations/808b3a62f9e38817fca9ae7e-en.mp4
+  poster: /assets/img/animations/808b3a62f9e38817fca9ae7e-en.poster.webp
   width: 800
   height: 450
   alt: "Sequence shows governing Copilot agents by inventorying all Copilot Studio and SharePoint agents, recording ownership and status details, ranking risk, and retiring stale or unpublished agents."

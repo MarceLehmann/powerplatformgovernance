@@ -42,8 +42,8 @@ faq:
   answer: Validate a pilot group by checking what sample users can reach and whether
     readiness thresholds hold. Expand when the access picture is stable.
 animation:
-  src: /assets/img/animations/df95668b5ef0a8ca9c34b384-en.gif
-  poster: /assets/img/animations/df95668b5ef0a8ca9c34b384-en.poster.png
+  video: /assets/img/animations/df95668b5ef0a8ca9c34b384-en.mp4
+  poster: /assets/img/animations/df95668b5ef0a8ca9c34b384-en.poster.webp
   width: 800
   height: 450
   alt: "A five step sequence shows preparing Microsoft 365 for Copilot by measuring exposure, fixing broad access, labelling sensitive sites, retiring stale content, and validating a pilot before expansion."

@@ -42,8 +42,8 @@ faq:
     sie daher auf Prompt Injection, Tool-Missbrauch und Inhalte ausserhalb ihres beschriebenen
     Zwecks.
 animation:
-  src: /assets/img/animations/7f57b3cbe68b609e605dbf3a-de.gif
-  poster: /assets/img/animations/7f57b3cbe68b609e605dbf3a-de.poster.png
+  video: /assets/img/animations/7f57b3cbe68b609e605dbf3a-de.mp4
+  poster: /assets/img/animations/7f57b3cbe68b609e605dbf3a-de.poster.webp
   width: 800
   height: 450
   alt: "Eine 3-Schritt-Abfolge zeigt, wie Copilot Studio Name und Beschreibung eines Skills mit dem Szenario abgleicht und dann die vollstaendigen Anweisungen bei Bedarf laedt."

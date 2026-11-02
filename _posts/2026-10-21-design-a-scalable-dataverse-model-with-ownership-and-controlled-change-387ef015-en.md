@@ -43,8 +43,8 @@ faq:
   answer: Build and test customizations in separate environments, use solutions to
     transport components, and review dependencies before deployment.
 animation:
-  src: /assets/img/animations/387ef015d855ffe39d75d3e4-en.gif
-  poster: /assets/img/animations/387ef015d855ffe39d75d3e4-en.poster.png
+  video: /assets/img/animations/387ef015d855ffe39d75d3e4-en.mp4
+  poster: /assets/img/animations/387ef015d855ffe39d75d3e4-en.poster.webp
   width: 800
   height: 450
   alt: "A four step sequence shows designing the Dataverse model around business concepts, defining ownership and rules, documenting and testing it, then deploying changes through solutions across separate environments."

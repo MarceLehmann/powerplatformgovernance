@@ -44,8 +44,8 @@ faq:
   answer: Copilot Search can research content, Word can create a briefing, Outlook
     Mail can send it, and Outlook Calendar can schedule a review meeting.
 animation:
-  src: /assets/img/animations/d8fd9c46ff1dd7146b320135-en.gif
-  poster: /assets/img/animations/d8fd9c46ff1dd7146b320135-en.poster.png
+  video: /assets/img/animations/d8fd9c46ff1dd7146b320135-en.mp4
+  poster: /assets/img/animations/d8fd9c46ff1dd7146b320135-en.poster.webp
   width: 800
   height: 450
   alt: "A four step flow shows Copilot Search researching content, Word creating a briefing, Outlook Mail sending it, and Outlook Calendar scheduling a review meeting."

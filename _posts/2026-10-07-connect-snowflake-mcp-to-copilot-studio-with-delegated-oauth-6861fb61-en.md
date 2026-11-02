@@ -44,8 +44,8 @@ faq:
   answer: The maker connection configures the agent, while the test pane runs as the
     end user. Both connections must succeed for end-to-end tool calls.
 animation:
-  src: /assets/img/animations/6861fb61631e88be31003eff-en.gif
-  poster: /assets/img/animations/6861fb61631e88be31003eff-en.poster.png
+  video: /assets/img/animations/6861fb61631e88be31003eff-en.mp4
+  poster: /assets/img/animations/6861fb61631e88be31003eff-en.poster.webp
   width: 800
   height: 450
   alt: "Four stages show the setup for Snowflake MCP in Copilot Studio: use Manual OAuth, copy the custom connector redirect URI to Entra, configure DEFAULT_SECONDARY_ROLES, then test maker and end-user connections."

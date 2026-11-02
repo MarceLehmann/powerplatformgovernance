@@ -39,8 +39,8 @@ faq:
   answer: The company should remove personal and confidential information, then consider
     access differences and the absence of an answer key before sharing real files.
 animation:
-  src: /assets/img/animations/1aca6ce9497cf47fad6e76cf-en.gif
-  poster: /assets/img/animations/1aca6ce9497cf47fad6e76cf-en.poster.png
+  video: /assets/img/animations/1aca6ce9497cf47fad6e76cf-en.mp4
+  poster: /assets/img/animations/1aca6ce9497cf47fad6e76cf-en.poster.webp
   width: 800
   height: 450
   alt: "A four step sequence shows how to prepare fictional course files for Copilot by removing sensitive data, marking files as fictional, adding known errors, and keeping an error free control file with an answer key."
