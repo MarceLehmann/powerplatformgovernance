@@ -597,5 +597,14 @@
     "text": "Power BI Gateways: Why Sleeping Machines Stop Reports Updating\n\nPower BI gateways connect cloud reports to data sources that cannot send data directly to the cloud. A gateway machine must remain available: if it sleeps, reports can stop updating. The episode covers the data round trip, three gateway kinds, placement in Microsoft 365 and Azure, planning limits, and common troubleshooting mistakes.\n\nSource: M365.FM\n\nFull summary: https://powerplatformgovernance.com/en/posts/power-bi-gateways-why-sleeping-machines-stop-reports-updating-10c38746/\n\n#PowerPlatformGovernanceDaily",
     "bufferPostId": "6ae832c976279ec7eb995612",
     "dueAt": "2026-11-03T11:00:00.000Z"
+  },
+  "8c4cceeefeaf363f4814ae31": {
+    "status": "queued",
+    "day": "2026-11-02",
+    "kind": "image",
+    "title": "Power Automate governance for managing cloud flows at enterprise scale",
+    "text": "Power Automate governance for managing cloud flows at enterprise scale\n\nPower Automate governance should be designed early because cloud flows are easy to create and forget. Enterprise-scale management covers environments, DLP policies, ownership, connectors, monitoring and lifecycle, helping admins and CoE teams maintain visibility of automation risk, ownership and cost while supporting citizen automation.\n\nSource: M365.FM\n\nFull summary: https://powerplatformgovernance.com/en/posts/power-automate-governance-for-managing-cloud-flows-at-enterprise-scale-8c4cceee/\n\n#PowerPlatformGovernanceDaily #PowerAutomate",
+    "bufferPostId": "6ae8da204e55e026087b7187",
+    "dueAt": "2026-11-03T14:00:00.000Z"
   }
 }
