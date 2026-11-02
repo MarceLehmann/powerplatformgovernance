@@ -139,8 +139,16 @@
 .content .table-wrapper > table { width: 100%; min-width: 0; table-layout: auto; }
 .content .table-wrapper > table th,
 .content .table-wrapper > table td { white-space: normal; overflow-wrap: anywhere; hyphens: auto; }
-@media (max-width: 576px) {
-	.content .table-wrapper > table { font-size: .85rem; }
-	.content .table-wrapper > table th,
-	.content .table-wrapper > table td { min-width: 8rem; padding: .4rem .5rem; }
+// Unter 640 px werden Tabellen als gestapelte Zeilen gezeigt (Spaltenname aus data-label, siehe footer.html).
+@media (max-width: 640px) {
+	.content .table-wrapper { overflow-x: visible; }
+	.content .table-wrapper > table,
+	.content .table-wrapper > table tbody,
+	.content .table-wrapper > table tr,
+	.content .table-wrapper > table td { display: block; width: 100%; }
+	.content .table-wrapper > table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+	.content .table-wrapper > table tr { padding: .6rem 0; border-bottom: 1px solid var(--main-border-color, #ddd); }
+	.content .table-wrapper > table td { border: 0; padding: .15rem 0; font-size: .9rem; }
+	.content .table-wrapper > table td:first-child { font-weight: 600; font-size: 1rem; }
+	.content .table-wrapper > table td[data-label]:not(:first-child)::before { content: attr(data-label) ": "; color: var(--text-muted-color, #777); }
 }

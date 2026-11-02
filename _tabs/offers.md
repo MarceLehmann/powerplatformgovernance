@@ -34,6 +34,8 @@ After the first run you have:
 
 Good fit if you want to know how things look before you pay anything. The flows change no environments, apps, flows or agents. The only thing they write is a snapshot file into your own SharePoint library.
 
+<p><a class="btn btn-primary" href="https://kmupower.com/vorlagen#adminhelper-starter">Get the free Starter Kit on kmupower.com</a></p>
+
 ### Standard: CHF 49 (CHF 449 with setup)
 
 *35 flows, standard connectors only.* **You see what is going on, and you clean up.**
@@ -47,6 +49,8 @@ After the first run you have:
 - an emergency stop for the flow that runs out of control
 
 Good fit if you run the platform alone or in a small team and want order without checking by hand every week.
+
+<p><a class="btn btn-primary" href="https://kmupower.com/vorlagen#adminhelper-standard">Buy Standard on kmupower.com</a></p>
 
 ### Full: CHF 99 (CHF 899 with setup)
 
@@ -62,6 +66,8 @@ After the first run you have:
 
 Limit: the other 35 flows use standard connectors only, and you can leave the 16 Premium flows switched off. Good fit if you manage several environments or have to reassign owners when people leave.
 
+<p><a class="btn btn-primary" href="https://kmupower.com/vorlagen#adminhelper-voll">Buy Full on kmupower.com</a></p>
+
 ### Default environment package: CHF 79 (CHF 479 with setup)
 
 *6 flows, standard connectors only.* **The Default environment, where everyone builds, gets cleaned up, and nothing is deleted without your approval.**
@@ -75,6 +81,8 @@ After the first run you have:
 - a weekly report every Monday
 
 Limit: this is not a backup. The archive records name, owner and date, not the app itself. The package never deletes agents. Good fit if your people build in the Default environment and you want to bring order into it without a ban and without chaos.
+
+<p><a class="btn btn-primary" href="https://kmupower.com/vorlagen#adminhelper-default">Buy Default package on kmupower.com</a></p>
 
 ### Compared
 
