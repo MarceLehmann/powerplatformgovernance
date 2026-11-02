@@ -10,19 +10,19 @@ description: "AdminHelper flow packages for Power Platform admins (free Starter 
 
 This site collects what is worth reading about Power Platform governance. If you would rather have the checks running than read about them, there are two ways to get help from me: ready-made flows, or a person who sets things up with you.
 
-## AdminHelper: sleep better while everyone builds in your Power Platform
+## AdminHelper: an overview of your Power Platform, even when many people build in it
 
-Over time Microsoft 365 fills up with dozens of apps, flows and Copilot Studio agents. Nobody knows who built what, what has lost its owner and what is shared too openly. AdminHelper is a set of ready-made Power Automate flows that look this up for you and send the results by e-mail.
+Over time Microsoft 365 collects apps, flows and Copilot Studio agents. It is often unclear who built what, what has lost its owner and what is shared too openly. AdminHelper is a set of ready-made Power Automate flows that check this for you and send the results by e-mail.
 
-- **The result:** an overview instead of a gut feeling. You find the leftovers, meaning apps and flows without an owner, and you see what is shared too openly.
-- **The start:** the import itself takes about 15 minutes. Anything that changes something runs as a dry run first and only reports what it would do.
-- **The effort:** after the import there is nothing to operate. The reports arrive as e-mail.
+- **The result:** an overview instead of a gut feeling. You see apps and flows without an owner and what is shared too openly.
+- **The start:** the import takes about 15 minutes. Then you switch the flows on one by one, read-only ones first. Anything that changes something runs as a dry run first and only reports what it would do.
+- **The effort:** once the flows are on, there is nothing to operate. The reports arrive as e-mail, you read them and decide.
 
-Start with the free Starter Kit. If you want more, pick Standard or Full, and there is a separate package for the Default environment.
+Start with the free Starter Kit. If you want more: Standard (CHF 49), Full (CHF 99) or, for the Default environment, the Default package (CHF 79). With setup they cost CHF 449, CHF 899 and CHF 479.
 
 ### Starter Kit: free
 
-*10 flows, standard connectors only.* **You see for the first time what is really in your Power Platform.**
+*10 flows, standard connectors only.* You get the list of all environments, apps, flows and Copilot agents by e-mail. The flows change nothing in your platform.
 
 After the first run you have:
 
@@ -38,7 +38,7 @@ Good fit if you want to know how things look before you pay anything. The flows 
 
 ### Standard: CHF 49 (CHF 449 with setup)
 
-*35 flows, standard connectors only.* **You see what is going on, and you clean up.**
+*35 flows, standard connectors only.* You get reports on sharing, connections and agents, and you clean up inactive apps and old flows once you have checked the report.
 
 After the first run you have:
 
@@ -54,7 +54,7 @@ Good fit if you run the platform alone or in a small team and want order without
 
 ### Full: CHF 99 (CHF 899 with setup)
 
-*51 flows, 16 of them need a Premium licence.* **You keep owners, roles and solutions in view, even when people leave the company.**
+*51 flows, 16 of them need a Premium licence.* You keep owners, roles and selected solutions in view, even when people leave the company: orphaned apps and flows get new owners, selected solutions are backed up daily.
 
 After the first run you have:
 
@@ -70,7 +70,7 @@ Limit: the other 35 flows use standard connectors only, and you can leave the 16
 
 ### Default environment package: CHF 79 (CHF 479 with setup)
 
-*6 flows, standard connectors only.* **The Default environment, where everyone builds, gets cleaned up, and nothing is deleted without your approval.**
+*6 flows, standard connectors only.* The Default environment gets ordered: owners receive a mail with a deadline, after the deadline items are locked (reversible), and nothing is deleted without your approval.
 
 After the first run you have:
 
@@ -80,7 +80,7 @@ After the first run you have:
 - deletion only with your approval, with the key facts saved in an archive first
 - a weekly report every Monday
 
-Limit: this is not a backup. The archive records name, owner and date, not the app itself. The package never deletes agents. Good fit if your people build in the Default environment and you want to bring order into it without a ban and without chaos.
+Limit: this is not a backup. The archive records name, owner and date, not the app itself. The package never deletes agents. Good fit if your people build in the Default environment and you want to bring order into it without banning the Default environment.
 
 <p><a class="btn btn-primary" href="https://kmupower.com/vorlagen#adminhelper-default">Buy Default package on kmupower.com</a></p>
 
@@ -89,7 +89,7 @@ Limit: this is not a backup. The archive records name, owner and date, not the a
 | | Starter Kit | Standard | Full | Default package |
 |---|---|---|---|---|
 | Price, install yourself | Free | CHF 49 | CHF 99 | CHF 79 |
-| Price, with setup | by effort | CHF 449 | CHF 899 | CHF 479 |
+| Price, with setup | by effort, CHF 200 per hour | CHF 449 | CHF 899 | CHF 479 |
 | Flows | 10 | 35 | 51 | 6 |
 | Connectors | standard only | standard only | 16 flows Premium | standard only |
 | Overview of apps, flows, agents | yes | yes | yes | Default environment only |
@@ -97,18 +97,20 @@ Limit: this is not a backup. The archive records name, owner and date, not the a
 | Clean-up (dry run first) | no | yes | yes | yes, deletion only with approval |
 | New owners for orphaned objects | no | no | yes | no |
 
-### Your risk is small
+The flow counts do not include the setup flows: F00 and F51 come on top for the Starter Kit, F51 for Standard and Full.
+
+### How you limit the risk
 
 - The Starter Kit costs nothing, so you see what the flows find in your tenant first.
-- Flows that change something run as a dry run first and only report.
-- Setup on request: I import and configure everything remotely with you, and you get 30 days of support.
-- Errors in the flows are fixed at no extra charge.
+- Flows that change something run as a dry run first and only report what they would do.
+- With setup, I import and configure everything remotely with you. After that you get 30 days of support for errors in the flows and questions about using them.
+- Errors in the flows are fixed at no extra charge. Import help, licence questions and changes to your processes are billed at CHF 200 per hour.
 
-**Your next step:** get the free Starter Kit, look at what is in your platform, then decide.
+Your next step: get the free Starter Kit, look at what is in your platform, then decide.
 
 <p><a class="btn btn-primary" href="https://kmupower.com/vorlagen#adminhelper-starter">Get the free Starter Kit</a> <a class="btn btn-secondary" href="https://kmupower.com/vorlagen#adminhelper">See all packages</a></p>
 
-How delivery works: after payment you receive an e-mail with the solution (zip) and the guide (PDF) attached. There is no download link. Microsoft licences are not included. You need an account with the Power Platform administrator role and a mailbox for the reports. New to importing a solution? The [video guide](/import/) shows every step.
+How delivery works for paid packages: after payment you receive an e-mail with the solution (zip) and the guide (PDF) attached. There is no download link. Microsoft licences are not included. You need an account with the Power Platform administrator role and a mailbox for the reports. New to importing a solution? The [video guide](/import/) shows every step.
 
 ## Governance consulting
 
