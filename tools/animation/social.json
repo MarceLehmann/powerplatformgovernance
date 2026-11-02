@@ -573,5 +573,11 @@
     "text": "Microsoft retires App Builder and consolidates AI app building\n\nMicrosoft retires the App Builder agent and vibe.powerapps.com on November 30. Apps worth keeping can move through an in-product migration tool. Chat-based building shifts to Copilot Cowork and Copilot Studio, with personal developer environments, DLP and an admin inventory, but the replacement remains preview-based and Managed Runtime licensing is enforced after 20 operations.\n\nSource: Bright Ideas Agency\n\nFull summary: https://powerplatformgovernance.com/en/posts/microsoft-retires-app-builder-and-consolidates-ai-app-building-94450128/\n\n#PowerPlatformGovernanceDaily #CopilotStudio",
     "bufferPostId": "6ae78880b7d22b897a082ef7",
     "dueAt": "2026-11-02T14:00:00.000Z"
+  },
+  "a1706012bda0afd261f6b630": {
+    "status": "expired",
+    "day": "2026-11-01",
+    "title": "Copilot Studio hooks make agent behavior more predictable",
+    "expiredAt": "2026-11-02"
   }
 }
