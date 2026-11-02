@@ -43,8 +43,8 @@ faq:
     eine verwaltete Identität für Power Automate, wo die Richtlinie gesucht und ihre
     Umgebungen getrennt werden.
 animation:
-  src: /assets/img/animations/a9d40a0e6e5f7a4c29d125cc-de.gif
-  poster: /assets/img/animations/a9d40a0e6e5f7a4c29d125cc-de.poster.png
+  video: /assets/img/animations/a9d40a0e6e5f7a4c29d125cc-de.mp4
+  poster: /assets/img/animations/a9d40a0e6e5f7a4c29d125cc-de.poster.webp
   width: 800
   height: 450
   alt: "Die Abfolge zeigt, wie ein Azure-Budgetalarm ein Automation-Runbook aufruft und danach Power Automate die Abrechnungsrichtlinie findet und ihre Umgebungen trennt."

@@ -45,8 +45,8 @@ faq:
   answer: Auto-labeling is one rollout element to plan alongside taxonomy, defaults
     and communication, helping structure the move toward production.
 animation:
-  src: /assets/img/animations/3594bfc8f931ea57a95e0423-en.gif
-  poster: /assets/img/animations/3594bfc8f931ea57a95e0423-en.poster.png
+  video: /assets/img/animations/3594bfc8f931ea57a95e0423-en.mp4
+  poster: /assets/img/animations/3594bfc8f931ea57a95e0423-en.poster.webp
   width: 800
   height: 450
   alt: "A five step rollout path shows a small label taxonomy, defined default behavior, user communication, auto-labeling, and adoption measurement before expanding beyond the pilot."

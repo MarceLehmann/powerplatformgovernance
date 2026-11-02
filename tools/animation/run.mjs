@@ -2,6 +2,7 @@
 // Ablauf-GIF Sinn macht, rendert es (Remotion) und traegt es ins Front Matter ein. Committen macht der Workflow.
 //
 //   node tools/animation/run.mjs --root <Repo> --site-url powerplatformdaily.com [--days 3] [--max 5] [--flows]
+// Ergebnis je Sprache: MP4 (Website) + Poster (WebP) aus einem Remotion-Render (render-gif.mjs); kein GIF mehr. Fuer LinkedIn zusaetzlich das MP4 4:5.
 //                                [--decisions <datei.json>] [--dry-run] [--only <key,key>] [--report <datei.json>]
 //                                [--social]   zusaetzlich das MP4 4:5 fuer LinkedIn rendern (Auswahl und Tageslimit macht social.mjs)
 //
@@ -125,7 +126,7 @@ export function addFrontMatter(file, block) {
 function addFlowInclude(file, heading, key, a) {
   const raw = fs.readFileSync(file, "utf8");
   const alt = a.alt.replace(/"/g, "'");
-  const include = `<!-- autogif:${key} -->\n{% include animation.html src="${a.src}" poster="${a.poster}" width=${a.width} height=${a.height} alt="${alt}" %}`;
+  const include = `<!-- autogif:${key} -->\n{% include animation.html video="${a.video}" poster="${a.poster}" width=${a.width} height=${a.height} alt="${alt}" %}`;
   const idx = raw.indexOf(heading);
   if (idx < 0) throw new Error(`Ueberschrift nicht gefunden: ${heading}`);
   const end = idx + heading.length;
@@ -203,7 +204,7 @@ export async function main(argv) {
       fs.mkdirSync(outDir, { recursive: true });
       fs.writeFileSync(path.join(outDir, `${c.key}-${lang}.json`), JSON.stringify(c.decision.video[lang], null, 1) + "\n");
       fs.writeFileSync(json, JSON.stringify(toRemotionProps(c.decision.video[lang], { endUrl, endLine, qrUrl: `https://${endUrl}${c.meta?.permalink || (c.kind === "section" ? "/flows/" : "/")}` })));
-      renderJobs.push({ json, gif: path.join(outDir, `${c.key}-${lang}.gif`), key: c.key, lang });
+      renderJobs.push({ json, gif: path.join(outDir, `${c.key}-${lang}.mp4`), key: c.key, lang });
       // LinkedIn: MP4 4:5 nur fuer Beitraege (nicht /flows/), englische Fassung. Welche Beitraege wirklich gepostet werden, entscheidet social.mjs (Tageslimit).
       if (opt.social && c.kind === "post" && lang === "en" && (!c.rerender || fs.existsSync(path.join(outDir, `${c.key}-4x5.mp4`)))) {
         renderJobs.push({ json, gif: path.join(outDir, `${c.key}-4x5.mp4`), key: c.key, lang: "en", mp4: true });
@@ -215,8 +216,9 @@ export async function main(argv) {
       const evidence = c.decision.video.en.steps.map((s) => s.evidence);
       for (const lang of c.langs) {
         const j = renderJobs.find((x) => x.key === c.key && x.lang === lang && !x.mp4);
-        const a = { src: `/assets/img/animations/${c.key}-${lang}.gif`, poster: `/assets/img/animations/${c.key}-${lang}.poster.png`, width: j.result.width, height: j.result.height, alt: c.decision.alt[lang] };
-        if (c.kind === "post") addFrontMatter(c.files[lang], `animation:\n  src: ${a.src}\n  poster: ${a.poster}\n  width: ${a.width}\n  height: ${a.height}\n  alt: ${q(a.alt)}`);
+        // Website: MP4 mit Poster (WebP), kein GIF mehr
+        const a = { video: `/assets/img/animations/${c.key}-${lang}.mp4`, poster: `/assets/img/animations/${c.key}-${lang}.poster.webp`, width: j.result.width, height: j.result.height, alt: c.decision.alt[lang] };
+        if (c.kind === "post") addFrontMatter(c.files[lang], `animation:\n  video: ${a.video}\n  poster: ${a.poster}\n  width: ${a.width}\n  height: ${a.height}\n  alt: ${q(a.alt)}`);
         else addFlowInclude(c.file, c.heading, c.key, a);
       }
       if (!c.rerender) ledger[c.key] = { gif: true, reason: c.decision.reason, at: new Date().toISOString().slice(0, 10), evidence };

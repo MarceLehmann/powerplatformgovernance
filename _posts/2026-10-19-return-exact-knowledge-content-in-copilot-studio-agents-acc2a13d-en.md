@@ -42,8 +42,8 @@ faq:
     testing. It also offered the most granular control over search, query generation,
     and prompting.
 animation:
-  src: /assets/img/animations/acc2a13dfa6884faa27bfc2e-en.gif
-  poster: /assets/img/animations/acc2a13dfa6884faa27bfc2e-en.poster.png
+  video: /assets/img/animations/acc2a13dfa6884faa27bfc2e-en.mp4
+  poster: /assets/img/animations/acc2a13dfa6884faa27bfc2e-en.poster.webp
   width: 800
   height: 450
   alt: "A 3 step Copilot Studio flow rewrites the user query with context, runs Custom Search, then sends results to an AI Prompt that returns verbatim excerpts with citations."

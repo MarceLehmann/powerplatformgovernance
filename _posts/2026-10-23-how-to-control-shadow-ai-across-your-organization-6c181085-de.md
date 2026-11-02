@@ -42,8 +42,8 @@ faq:
     und dadurch die Sichtbarkeit verringern; nützliche Tools sollten kontrolliert
     genehmigt werden.
 animation:
-  src: /assets/img/animations/6c181085e1c0e4c85a028bad-de.gif
-  poster: /assets/img/animations/6c181085e1c0e4c85a028bad-de.poster.png
+  video: /assets/img/animations/6c181085e1c0e4c85a028bad-de.mp4
+  poster: /assets/img/animations/6c181085e1c0e4c85a028bad-de.poster.webp
   width: 800
   height: 450
   alt: "Ein Ablauf mit vier Schritten zeigt, wie Schatten-KI kontrolliert wird: Tools in Entra ID, Copilot Studio, SharePoint und Diensten finden, bewerten, genehmigen oder entfernen und die Suche regelmaessig wiederholen."

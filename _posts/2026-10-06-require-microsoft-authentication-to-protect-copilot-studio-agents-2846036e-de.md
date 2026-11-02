@@ -44,8 +44,8 @@ faq:
     Filtere Agent Details nach End User Authentication Type und prüfe alle Werte ausser
     Integrated.
 animation:
-  src: /assets/img/animations/2846036e40d3dc9cc1e5b17b-de.gif
-  poster: /assets/img/animations/2846036e40d3dc9cc1e5b17b-de.poster.png
+  video: /assets/img/animations/2846036e40d3dc9cc1e5b17b-de.mp4
+  poster: /assets/img/animations/2846036e40d3dc9cc1e5b17b-de.poster.webp
   width: 800
   height: 450
   alt: "Drei Schritte zeigen den Adminpfad zu Sicherheit und Identitaet und Zugriff, das Aktivieren von Microsoft-Authentifizierung erforderlich und das Ergebnis, dass Direct Line blockiert wird, waehrend das M365 Agents SDK weiter funktioniert."

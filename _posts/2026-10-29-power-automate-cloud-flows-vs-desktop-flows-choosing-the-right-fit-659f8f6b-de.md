@@ -44,8 +44,8 @@ faq:
   answer: Ein Cloud-Flow erfasst ein Ereignis, prüft Daten und steuert Genehmigungen.
     Danach kann er Transaktionsdaten für die Eingabe in ein älteres System übergeben.
 animation:
-  src: /assets/img/animations/659f8f6b48c0bcbf15d1ae94-de.gif
-  poster: /assets/img/animations/659f8f6b48c0bcbf15d1ae94-de.poster.png
+  video: /assets/img/animations/659f8f6b48c0bcbf15d1ae94-de.mp4
+  poster: /assets/img/animations/659f8f6b48c0bcbf15d1ae94-de.poster.webp
   width: 800
   height: 450
   alt: "Eine hybride Power Automate Abfolge erfasst ein Ereignis, prueft Daten, steuert Genehmigungen in der Cloud und uebergibt dann Transaktionsdaten an einen Desktop-Flow fuer die Eingabe in ein aelteres System."

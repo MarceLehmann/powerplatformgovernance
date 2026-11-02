@@ -44,8 +44,8 @@ faq:
     Unternehmensdaten lesen, ohne dass jemand dafür verantwortlich ist. Sie sollten
     zuerst untersucht werden.
 animation:
-  src: /assets/img/animations/ec1e5cfc0d42dc9c9d725b7b-de.gif
-  poster: /assets/img/animations/ec1e5cfc0d42dc9c9d725b7b-de.poster.png
+  video: /assets/img/animations/ec1e5cfc0d42dc9c9d725b7b-de.mp4
+  poster: /assets/img/animations/ec1e5cfc0d42dc9c9d725b7b-de.poster.webp
   width: 800
   height: 450
   alt: "Ein Ablauf mit vier Schritten zeigt den Aufbau einer KI-Inventur: mit Microsoft 365 Copilot, Copilot Studio und SharePoint-Agenten beginnen, Entra ID-Apps und externe KI-Dienste ergaenzen, Felder erfassen und regelmaessig aktualisieren."

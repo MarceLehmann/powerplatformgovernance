@@ -44,8 +44,8 @@ faq:
     Produktions-Apps in getrennten Umgebungen mit Besitzern und Änderungssteuerung
     laufen.
 animation:
-  src: /assets/img/animations/06d507ad327cef51124ab72e-de.gif
-  poster: /assets/img/animations/06d507ad327cef51124ab72e-de.poster.png
+  video: /assets/img/animations/06d507ad327cef51124ab72e-de.mp4
+  poster: /assets/img/animations/06d507ad327cef51124ab72e-de.poster.webp
   width: 800
   height: 450
   alt: "Ein Governance-Ablauf in fuenf Schritten zeigt Erfassen ueber Umgebungen, Besitzer zuweisen, Konnektoren pruefen, Benutzer- und Gastzugriffe pruefen und ungenutzte oder gestoppte Assets stilllegen."

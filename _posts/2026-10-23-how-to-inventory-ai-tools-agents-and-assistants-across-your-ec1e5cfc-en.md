@@ -42,8 +42,8 @@ faq:
   answer: Ownerless applications with Microsoft Graph permissions can read company
     data without anyone accountable for them. They are the first entries to investigate.
 animation:
-  src: /assets/img/animations/ec1e5cfc0d42dc9c9d725b7b-en.gif
-  poster: /assets/img/animations/ec1e5cfc0d42dc9c9d725b7b-en.poster.png
+  video: /assets/img/animations/ec1e5cfc0d42dc9c9d725b7b-en.mp4
+  poster: /assets/img/animations/ec1e5cfc0d42dc9c9d725b7b-en.poster.webp
   width: 800
   height: 450
   alt: "A four step flow shows how to build an AI inventory by starting with Microsoft 365 Copilot, Copilot Studio and SharePoint agents, adding Entra ID apps and external AI services, recording key fields, and refreshing on a fixed cycle."

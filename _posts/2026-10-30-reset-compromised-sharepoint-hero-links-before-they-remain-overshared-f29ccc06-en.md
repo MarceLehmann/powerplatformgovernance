@@ -35,8 +35,8 @@ faq:
   answer: The script checks items with unique permissions, identifies main links whose
     audience is Anyone, resets them, and exports old and new details to CSV.
 animation:
-  src: /assets/img/animations/f29ccc06144994bfb3b724fb-en.gif
-  poster: /assets/img/animations/f29ccc06144994bfb3b724fb-en.poster.png
+  video: /assets/img/animations/f29ccc06144994bfb3b724fb-en.mp4
+  poster: /assets/img/animations/f29ccc06144994bfb3b724fb-en.poster.webp
   width: 800
   height: 450
   alt: "A four step flow shows a script checking items with unique permissions, finding Anyone main links, resetting the link, and exporting old and new details to CSV."

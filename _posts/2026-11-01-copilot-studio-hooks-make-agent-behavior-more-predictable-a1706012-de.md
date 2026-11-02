@@ -36,8 +36,8 @@ faq:
   answer: Copilot Studio Hooks können auf Gesprächsstarts, die Auswahl eines Tools
     durch den Agenten und auftretende Fehler reagieren.
 animation:
-  src: /assets/img/animations/a1706012bda0afd261f6b630-de.gif
-  poster: /assets/img/animations/a1706012bda0afd261f6b630-de.poster.png
+  video: /assets/img/animations/a1706012bda0afd261f6b630-de.mp4
+  poster: /assets/img/animations/a1706012bda0afd261f6b630-de.poster.webp
   width: 800
   height: 450
   alt: "Ein Ablauf mit 3 Schritten zeigt, wie Copilot Studio Hooks Workflows bei Gespraechsbeginn, Toolauswahl und Fehlern ausfuehren, um die Vorhersehbarkeit zu verbessern."

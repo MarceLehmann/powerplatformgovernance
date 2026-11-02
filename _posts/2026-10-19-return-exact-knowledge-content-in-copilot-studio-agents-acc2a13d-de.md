@@ -44,8 +44,8 @@ faq:
     konsistentesten. Die Methode bot ausserdem die genaueste Kontrolle über Suche,
     Abfrageerstellung und Prompting.
 animation:
-  src: /assets/img/animations/acc2a13dfa6884faa27bfc2e-de.gif
-  poster: /assets/img/animations/acc2a13dfa6884faa27bfc2e-de.poster.png
+  video: /assets/img/animations/acc2a13dfa6884faa27bfc2e-de.mp4
+  poster: /assets/img/animations/acc2a13dfa6884faa27bfc2e-de.poster.webp
   width: 800
   height: 450
   alt: "Ein 3 stufiger Ablauf in Copilot Studio schreibt die Benutzeranfrage mit Kontext neu, fuehrt Custom Search aus und sendet Resultate an einen AI Prompt fuer unveraenderte Auszuege mit Quellenangaben."

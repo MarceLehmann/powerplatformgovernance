@@ -23,7 +23,7 @@ The starter set is free. You get it by e-mail on [kmupower.com](https://kmupower
 ### Starter flow 1: F01 Environment inventory
 
 <!-- autogif:flows-1 -->
-{% include animation.html src="/assets/img/animations/flows-1-en.gif" poster="/assets/img/animations/flows-1-en.poster.png" width=800 height=450 alt="Five stages of the environment inventory flow: daily trigger, read all environments, normalise the fields, build an HTML table, send it to the admin." %}
+{% include animation.html video="/assets/img/animations/flows-1-en.mp4" poster="/assets/img/animations/flows-1-en.poster.webp" width=800 height=450 alt="Five stages of the environment inventory flow: daily trigger, read all environments, normalise the fields, build an HTML table, send it to the admin." %}
 
 **What it does:** Reads every environment of your tenant once a day (type, region, managed status, Dataverse, creation date) and sends the inventory to the admin team.
 

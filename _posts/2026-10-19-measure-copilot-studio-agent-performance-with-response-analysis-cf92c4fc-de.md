@@ -40,8 +40,8 @@ faq:
   answer: Zugriffstoken gehören in Umgebungsvariablen oder sichere Speicher, niemals
     in die Quellcodeverwaltung; ausserdem ist eine Token-Erneuerung erforderlich.
 animation:
-  src: /assets/img/animations/cf92c4fc56714df93d079ba6-de.gif
-  poster: /assets/img/animations/cf92c4fc56714df93d079ba6-de.poster.png
+  video: /assets/img/animations/cf92c4fc56714df93d079ba6-de.mp4
+  poster: /assets/img/animations/cf92c4fc56714df93d079ba6-de.poster.webp
   width: 800
   height: 450
   alt: "Ein Ablauf mit vier Schritten zeigt, wie das Response Analysis Tool Testeingaben an einen Copilot Studio Agenten sendet, Activities erfasst, Latenzstatistiken berechnet und Metriken sowie Planner-Daten an Gradio streamt."

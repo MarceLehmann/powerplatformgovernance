@@ -44,8 +44,8 @@ faq:
     content, but complex Teams chat histories generally require specialized third-party
     migration solutions.
 animation:
-  src: /assets/img/animations/55187a9f2f752480b9465ebe-en.gif
-  poster: /assets/img/animations/55187a9f2f752480b9465ebe-en.poster.png
+  video: /assets/img/animations/55187a9f2f752480b9465ebe-en.mp4
+  poster: /assets/img/animations/55187a9f2f752480b9465ebe-en.poster.webp
   width: 800
   height: 450
   alt: "The animation shows tenant migration breaking old Power Automate references, then developers re-authenticating each trigger and action, and finally admins remapping destination permissions for Teams and SharePoint."

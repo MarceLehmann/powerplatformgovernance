@@ -37,8 +37,8 @@ faq:
   answer: Yes. The walkthrough says creating the plain declarative agent is possible
     with PAYG and Copilot Credits.
 animation:
-  src: /assets/img/animations/c8032fc1c431471c03c28877-en.gif
-  poster: /assets/img/animations/c8032fc1c431471c03c28877-en.poster.png
+  video: /assets/img/animations/c8032fc1c431471c03c28877-en.mp4
+  poster: /assets/img/animations/c8032fc1c431471c03c28877-en.poster.webp
   width: 800
   height: 450
   alt: "Three steps show a declarative agent setup: create a plain Microsoft 365 Copilot declarative agent, connect a custom HTTP API or MCP server, then test the live flow to call backend logic."

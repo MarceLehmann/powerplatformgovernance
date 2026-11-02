@@ -41,8 +41,8 @@ faq:
   answer: A blanket ban can move usage to personal devices and accounts, reducing
     visibility; useful tools should instead be approved under controlled conditions.
 animation:
-  src: /assets/img/animations/6c181085e1c0e4c85a028bad-en.gif
-  poster: /assets/img/animations/6c181085e1c0e4c85a028bad-en.poster.png
+  video: /assets/img/animations/6c181085e1c0e4c85a028bad-en.mp4
+  poster: /assets/img/animations/6c181085e1c0e4c85a028bad-en.poster.webp
   width: 800
   height: 450
   alt: "A four step flow shows how to control shadow AI: discover tools across Entra ID, Copilot Studio, SharePoint and licensed services, assess data reach and users, approve or retire them, then repeat on a fixed cycle."

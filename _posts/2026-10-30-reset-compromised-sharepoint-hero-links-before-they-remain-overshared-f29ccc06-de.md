@@ -40,8 +40,8 @@ faq:
     mit der Zielgruppe Anyone, setzt sie zurück und exportiert alte sowie neue Details
     als CSV.
 animation:
-  src: /assets/img/animations/f29ccc06144994bfb3b724fb-de.gif
-  poster: /assets/img/animations/f29ccc06144994bfb3b724fb-de.poster.png
+  video: /assets/img/animations/f29ccc06144994bfb3b724fb-de.mp4
+  poster: /assets/img/animations/f29ccc06144994bfb3b724fb-de.poster.webp
   width: 800
   height: 450
   alt: "Ein Ablauf mit vier Schritten zeigt, wie ein Skript Elemente mit eindeutigen Berechtigungen prueft, Anyone Hauptlinks findet, den Link zuruecksetzt und alte sowie neue Details als CSV exportiert."

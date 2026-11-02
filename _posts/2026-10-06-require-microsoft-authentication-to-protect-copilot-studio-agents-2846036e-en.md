@@ -42,8 +42,8 @@ faq:
   answer: Use Copilot Studio Kit inventory and filter Dataverse Agent Details by End
     User Authentication Type. Anything other than Integrated is affected.
 animation:
-  src: /assets/img/animations/2846036e40d3dc9cc1e5b17b-en.gif
-  poster: /assets/img/animations/2846036e40d3dc9cc1e5b17b-en.poster.png
+  video: /assets/img/animations/2846036e40d3dc9cc1e5b17b-en.mp4
+  poster: /assets/img/animations/2846036e40d3dc9cc1e5b17b-en.poster.webp
   width: 800
   height: 450
   alt: "Three steps show the admin path to Security and Identity and access, turning on Require Microsoft authentication, and the outcome where Direct Line is blocked while the M365 Agents SDK still works."

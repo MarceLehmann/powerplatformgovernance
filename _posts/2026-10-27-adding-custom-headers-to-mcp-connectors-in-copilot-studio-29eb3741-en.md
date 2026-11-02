@@ -41,8 +41,8 @@ faq:
   answer: The documented October 2025 issue says X-prefixed headers are not working,
     so use names without the X-prefix until the issue is resolved.
 animation:
-  src: /assets/img/animations/29eb3741046c9b9a3c69bb93-en.gif
-  poster: /assets/img/animations/29eb3741046c9b9a3c69bb93-en.poster.png
+  video: /assets/img/animations/29eb3741046c9b9a3c69bb93-en.mp4
+  poster: /assets/img/animations/29eb3741046c9b9a3c69bb93-en.poster.webp
   width: 800
   height: 450
   alt: "A four step sequence shows editing the OpenAPI YAML under the /mcp POST endpoint, updating the connector, removing and re adding it in each agent, and then setting the header input value."

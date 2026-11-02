@@ -43,8 +43,8 @@ faq:
   answer: It makes the next user message use the latest published version, but forcing
     an update can interrupt an ongoing conversation.
 animation:
-  src: /assets/img/animations/e9673d7c084b125524396184-en.gif
-  poster: /assets/img/animations/e9673d7c084b125524396184-en.poster.png
+  video: /assets/img/animations/e9673d7c084b125524396184-en.mp4
+  poster: /assets/img/animations/e9673d7c084b125524396184-en.poster.webp
   width: 800
   height: 450
   alt: "A four step flow shows configuring The user is inactive for awhile, setting a timeout, clearing variables and conversation history, then ending the conversation."

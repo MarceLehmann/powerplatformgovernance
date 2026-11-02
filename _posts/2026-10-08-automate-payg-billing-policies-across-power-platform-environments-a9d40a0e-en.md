@@ -42,8 +42,8 @@ faq:
   answer: An Azure Budget alert calls an Automation runbook, which uses managed identity
     to invoke Power Automate; the flow finds the policy and unlinks its environments.
 animation:
-  src: /assets/img/animations/a9d40a0e6e5f7a4c29d125cc-en.gif
-  poster: /assets/img/animations/a9d40a0e6e5f7a4c29d125cc-en.poster.png
+  video: /assets/img/animations/a9d40a0e6e5f7a4c29d125cc-en.mp4
+  poster: /assets/img/animations/a9d40a0e6e5f7a4c29d125cc-en.poster.webp
   width: 800
   height: 450
   alt: "Sequence shows an Azure Budget alert calling an Automation runbook, then Power Automate finding the billing policy and unlinking its environments."

@@ -43,8 +43,8 @@ faq:
     im Tenant. Es sollte lange genug aufbewahrt werden, um Meldepflichten abzudecken,
     und relevante Risiken müssen überwacht werden.
 animation:
-  src: /assets/img/animations/50af5f02348052659d00295a-de.gif
-  poster: /assets/img/animations/50af5f02348052659d00295a-de.poster.png
+  video: /assets/img/animations/50af5f02348052659d00295a-de.mp4
+  poster: /assets/img/animations/50af5f02348052659d00295a-de.poster.webp
   width: 800
   height: 450
   alt: "Ein Ablauf mit fuenf Schritten zeigt die NIS2-Bereitschaft in Microsoft 365: Pflichten Kontrollen zuordnen, Verantwortliche festlegen, Baselines setzen, Pruefungen planen und Auditnachweise mit Berichten buendeln."
