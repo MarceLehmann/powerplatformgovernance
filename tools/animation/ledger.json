@@ -770,5 +770,10 @@
       "plan auto-labeling",
       "measure adoption before expanding beyond the pilot"
     ]
+  },
+  "8c4cceeefeaf363f4814ae31": {
+    "gif": false,
+    "reason": "The post is governance guidance listing topics like environments, DLP policies, ownership, connectors, monitoring and lifecycle, but it does not describe a concrete 3 to 5 stage procedure.",
+    "at": "2026-11-02"
   }
 }
