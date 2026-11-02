@@ -5,7 +5,7 @@ description: "Video and written steps: save the zip file, import the solution in
 permalink: /import/
 ---
 
-You bought a template or an AdminHelper package and received the e-mail with the zip file. The video shows in about a minute and a quarter how to import it into Power Apps. The example is the Absence template. The basic steps are the same for the other templates, and anything beyond that is in the guide attached to the e-mail.
+You bought a template or an AdminHelper package and received the e-mail with the zip file. The video shows in about a minute and a quarter how to import it into Power Apps. The example is the Absence Plus template. The basic steps are the same for the other templates, and anything beyond that is in the guide attached to the e-mail.
 
 <video controls preload="none" poster="/assets/img/import/import-video-en-poster.jpg" style="width:100%;height:auto;aspect-ratio:16/9" aria-label="How to import a template into Power Apps">
   <source src="/assets/img/import/import-video-en.mp4" type="video/mp4">
