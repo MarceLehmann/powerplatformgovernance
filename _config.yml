@@ -168,6 +168,7 @@ pwa:
 # enough that the homepage stays a single page for the foreseeable archive size;
 # revisit with a real per-language collection split if the archive outgrows this.
 paginate: 300
+paginate_path: "/page:num/" # Slash am Ende: Links zeigen direkt auf das Ziel, keine 301-Weiterleitung
 
 # The base URL of your site
 baseurl: ""

@@ -74,6 +74,21 @@
     {% assign seo_tags = seo_tags | replace: old_meta_clip, new_meta_clip %}
   {% endif %}
 
+  {%- comment -%}
+    Meta-Description: laengere Texte werden an der Wortgrenze auf etwa 155 Zeichen gekuerzt
+    (meta description und die kombinierte og/twitter-Description). Die Seiteninhalte bleiben unveraendert.
+  {%- endcomment -%}
+  {%- assign d_marker = '<meta name="description" content="' -%}
+  {%- assign d_parts = seo_tags | split: d_marker -%}
+  {%- if d_parts.size > 1 -%}
+    {%- assign d_tail = d_parts[1] | split: '" />' -%}
+    {%- assign d_orig = d_tail[0] -%}
+    {%- if d_orig.size > 155 -%}
+      {%- capture d_new -%}{% include seo-trim.html text=d_orig max=155 %}{%- endcapture -%}
+      {%- assign seo_tags = seo_tags | replace: d_orig, d_new -%}
+    {%- endif -%}
+  {%- endif -%}
+
   {{ seo_tags }}
 
   {%- if page.redirect_to -%}
@@ -102,9 +117,17 @@
           {{- page.title -}}
         {%- endif -%}
       {%- endcapture -%}
-      {{- title | append: ' | ' -}}
+      {%- assign title = title | strip | strip_newlines -%}
+      {%- assign title_full = title | append: ' | ' | append: site.title -%}
+      {%- if title_full.size <= 60 -%}
+        {{- title_full -}}
+      {%- else -%}
+        {%- comment -%} zu lang: ohne Seitenname, bei Bedarf an der Wortgrenze auf 60 Zeichen gekuerzt {%- endcomment -%}
+        {%- include seo-trim.html text=title max=60 -%}
+      {%- endif -%}
+    {%- else -%}
+      {{- site.title -}}
     {%- endunless -%}
-    {{- site.title -}}
   </title>
 
   {% include_cached favicons.html %}

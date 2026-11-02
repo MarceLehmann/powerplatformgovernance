@@ -1,0 +1,26 @@
+{%- comment -%}
+  Kuerzt einen Text an der Wortgrenze auf hoechstens include.max Zeichen und haengt "…" an.
+  Parameter: text, max. Nur die Ausgabe im Head, die Inhalte der Seiten bleiben unveraendert.
+  Kuerzere Texte werden unveraendert (nur gestrippt) ausgegeben.
+{%- endcomment -%}
+{%- assign _st = include.text | strip_newlines | strip -%}
+{%- if _st.size <= include.max -%}
+  {{- _st -}}
+{%- else -%}
+  {%- assign _lim = include.max | minus: 1 -%}
+  {%- assign _cut = _st | slice: 0, _lim -%}
+  {%- assign _next = _st | slice: _lim, 1 -%}
+  {%- if _next != ' ' -%}
+    {%- assign _words = _cut | split: ' ' -%}
+    {%- if _words.size > 1 -%}{%- assign _words = _words | pop -%}{%- endif -%}
+    {%- assign _cut = _words | join: ' ' -%}
+  {%- endif -%}
+  {%- for _i in (1..4) -%}
+    {%- assign _last = _cut | slice: -1, 1 -%}
+    {%- if _last == ',' or _last == ';' or _last == ':' or _last == '-' or _last == '|' or _last == '(' or _last == ' ' or _last == '/' -%}
+      {%- assign _n = _cut.size | minus: 1 -%}
+      {%- assign _cut = _cut | slice: 0, _n -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {{- _cut -}}…
+{%- endif -%}
