@@ -1,14 +1,14 @@
 ---
 layout: page
-title: "Wissen ohne Verfallsdatum"
-description: "Anleitungen für Power-Platform-Governance, die nicht mit den Nachrichten altern: Dataverse-Sicherheitsrollen, die 25 Fragen für eine Governance-Strategie, fünf Environment-Strategien, DLP-Richtlinien und der Citizen-Developer-Guide."
+title: "Governance-Wissen, regelmässig geprüft"
+description: "Anleitungen für Power-Platform-Governance, die unabhängig von Tagesnachrichten gelten: Dataverse-Sicherheitsrollen, die 25 Fragen für eine Governance-Strategie, fünf Environment-Strategien, DLP-Richtlinien und der Citizen-Developer-Guide."
 lang: de
 permalink: "/de/knowledge/"
 translation_url: "/knowledge/"
 last_reviewed: "2026-10-23"
 ---
 
-Anleitungen, die nicht mit den Nachrichten altern: wie Rollen funktionieren, was ein Unternehmen entscheiden muss, welche Environment-Muster es gibt und welche DLP-Einstellungen zwingend sind. Jede Anleitung ist eine eigene Seite, auf Deutsch und Englisch. Zuletzt geprüft am 23.10.2026.
+Anleitungen, die weniger schnell veralten als Nachrichten: wie Rollen funktionieren, was ein Unternehmen entscheiden muss, welche Environment-Muster es gibt und welche DLP-Einstellungen zwingend sind. Jede Anleitung ist eine eigene Seite, auf Deutsch und Englisch. Zuletzt geprüft am 23.10.2026.
 
 [Read this overview in English](/knowledge/)
 

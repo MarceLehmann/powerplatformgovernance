@@ -9,7 +9,7 @@ translation_url: "/de/knowledge/"
 description: "Timeless guides for Power Platform governance: Dataverse security roles, the 25 questions for a governance strategy, five environment strategies, DLP policies and the citizen developer guide. In English and German."
 ---
 
-Guides that do not age with the news: how roles work, what a company has to decide, which environment patterns exist and which DLP settings are mandatory. Each guide is a separate page, available in English and German. Last reviewed on 23.10.2026.
+Guides that stay relevant longer than news: how roles work, what a company has to decide, which environment patterns exist and which DLP settings are mandatory. Each guide is a separate page, available in English and German. Reviewed regularly, last on 23.10.2026.
 
 [Diese Übersicht auf Deutsch](/de/knowledge/)
 
@@ -30,6 +30,6 @@ Guides that do not age with the news: how roles work, what a company has to deci
 
 ## How to use the guides with AI
 
-The first five guides are built to be worked through with AI. Copy the address of the page into an AI you trust that can read web pages (for example Microsoft Copilot Chat with web search) and add: "Walk me through this page." The page contains instructions for AI assistants: the AI goes through the questions or criteria step by step, offers the possible answers from the page and at the end drafts a governance concept, recommends an environment strategy, builds a role matrix or proposes a DLP setup, with open points and next steps.
+The first five guides are built to be worked through with AI. Copy the address of the page into an AI you trust that can read web pages (for example Microsoft Copilot Chat with web search) and add: "Walk me through this page." The page contains instructions for AI assistants: the AI goes through the questions or criteria step by step, offers the possible answers from the page and at the end can draft a governance concept, recommend an environment strategy, build a role matrix or propose a DLP setup, with open points and next steps.
 
 Whether an AI actually fetches the page depends on the tool. If yours does not read web pages, each of these guides has a prompt you can copy, together with the text of the page. The cost comparison is a reference with tables and sources and has no guided walk-through.

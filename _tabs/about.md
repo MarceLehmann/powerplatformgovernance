@@ -10,7 +10,7 @@ Power Platform Governance brings useful governance articles from different blogs
 
 ## Why this exists
 
-I built this for myself as much as for anyone else. There are excellent Power Platform governance blogs scattered all over the web, and I was tired of checking a dozen feeds by hand to stay current. This site watches them for me and surfaces what's actually worth reading, in one place.
+I built this for myself as much as for anyone else. There are excellent Power Platform governance blogs scattered all over the web, and I was tired of checking a dozen feeds by hand to stay current. This site watches them for me and shows the articles that match its governance criteria, in one place.
 
 ## What we cover
 
