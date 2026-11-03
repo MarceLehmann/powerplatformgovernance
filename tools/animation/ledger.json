@@ -780,5 +780,15 @@
     "gif": false,
     "reason": "The post gives governance guidance and comparisons between harness types, but it does not state a concrete 3 to 5 stage procedure or ordered path.",
     "at": "2026-11-03"
+  },
+  "60e0f55ce6245854c39dc3c7": {
+    "gif": false,
+    "reason": "The post gives governance guidance and feature views, but it does not state a concrete 3 to 5 step procedure or ordered sequence.",
+    "at": "2026-11-03"
+  },
+  "42a32165b9652dee1bf7a98a": {
+    "gif": false,
+    "reason": "The post gives governance advice and test considerations, but it does not state one concrete 3 to 5 stage procedure in a fixed order.",
+    "at": "2026-11-03"
   }
 }
