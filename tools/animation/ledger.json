@@ -775,5 +775,10 @@
     "gif": false,
     "reason": "The post is governance guidance listing topics like environments, DLP policies, ownership, connectors, monitoring and lifecycle, but it does not describe a concrete 3 to 5 stage procedure.",
     "at": "2026-11-02"
+  },
+  "b0fd668e07c2fb65146d602a": {
+    "gif": false,
+    "reason": "The post gives governance guidance and comparisons between harness types, but it does not state a concrete 3 to 5 stage procedure or ordered path.",
+    "at": "2026-11-03"
   }
 }
