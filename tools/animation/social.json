@@ -615,5 +615,23 @@
     "text": "Choose Copilot Studio harnesses by identity, predictability and cost\n\nCopilot Chat, Agent Builder and Cowork run on an individual user's identity, while Copilot Studio harnesses create organisation agents with separate publishing, DLP and ALM. Use the standard harness for deterministic workflows and the Microsoft Copilot harness for reasoning-heavy exceptions. Autonomous and recurrence-triggered flows consume Copilot Credits.\n\nSource: Karlex\n\nFull summary: https://powerplatformgovernance.com/en/posts/choose-copilot-studio-harnesses-by-identity-predictability-and-cost-b0fd668e/\n\n#PowerPlatformGovernanceDaily #CopilotStudio",
     "bufferPostId": "6ae982c16896a4441f664b7c",
     "dueAt": "2026-11-04T08:00:00.000Z"
+  },
+  "60e0f55ce6245854c39dc3c7": {
+    "status": "queued",
+    "day": "2026-11-03",
+    "kind": "image",
+    "title": "Agent 365 Admin Center: Registry, Ownership and Risk Visibility",
+    "text": "Agent 365 Admin Center: Registry, Ownership and Risk Visibility\n\nThe Agent 365 admin center brings AI agent oversight into an agent registry, with one list for every agent. Its dashboard shows usage, risk, and an agent map, while admins can review what they can do to agents. The episode also covers common mistakes, limits, and links to Microsoft 365 and Azure.\n\nSource: M365.FM\n\nFull summary: https://powerplatformgovernance.com/en/posts/agent-365-admin-center-registry-ownership-and-risk-visibility-60e0f55c/\n\n#PowerPlatformGovernanceDaily",
+    "bufferPostId": "6aea2bbbb9b964f04f2ffbc7",
+    "dueAt": "2026-11-04T11:00:00.000Z"
+  },
+  "42a32165b9652dee1bf7a98a": {
+    "status": "queued",
+    "day": "2026-11-03",
+    "kind": "image",
+    "title": "Dynamics 365 CE duplicate detection rules for real customer data",
+    "text": "Dynamics 365 CE duplicate detection rules for real customer data\n\nConfigure Dynamics 365 CE duplicate detection from real customer-data patterns, using focused per-table criteria and testing every entry route. Publish rules before use, remember that only five can be published for one base record type at a time, and assign people to review, merge, or correct flagged records. Use Dataverse alternate keys when strict uniqueness is required.\n\nSource: Softchief Technologies\n\nFull summary: https://powerplatformgovernance.com/en/posts/dynamics-365-ce-duplicate-detection-rules-for-real-customer-data-42a32165/\n\n#PowerPlatformGovernanceDaily #Dataverse",
+    "bufferPostId": "6aea2bbb81bf336f271ef26f",
+    "dueAt": "2026-11-04T14:00:00.000Z"
   }
 }
