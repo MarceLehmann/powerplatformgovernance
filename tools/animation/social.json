@@ -606,5 +606,14 @@
     "text": "Power Automate governance for managing cloud flows at enterprise scale\n\nPower Automate governance should be designed early because cloud flows are easy to create and forget. Enterprise-scale management covers environments, DLP policies, ownership, connectors, monitoring and lifecycle, helping admins and CoE teams maintain visibility of automation risk, ownership and cost while supporting citizen automation.\n\nSource: M365.FM\n\nFull summary: https://powerplatformgovernance.com/en/posts/power-automate-governance-for-managing-cloud-flows-at-enterprise-scale-8c4cceee/\n\n#PowerPlatformGovernanceDaily #PowerAutomate",
     "bufferPostId": "6ae8da204e55e026087b7187",
     "dueAt": "2026-11-03T14:00:00.000Z"
+  },
+  "b0fd668e07c2fb65146d602a": {
+    "status": "queued",
+    "day": "2026-11-03",
+    "kind": "image",
+    "title": "Choose Copilot Studio harnesses by identity, predictability and cost",
+    "text": "Choose Copilot Studio harnesses by identity, predictability and cost\n\nCopilot Chat, Agent Builder and Cowork run on an individual user's identity, while Copilot Studio harnesses create organisation agents with separate publishing, DLP and ALM. Use the standard harness for deterministic workflows and the Microsoft Copilot harness for reasoning-heavy exceptions. Autonomous and recurrence-triggered flows consume Copilot Credits.\n\nSource: Karlex\n\nFull summary: https://powerplatformgovernance.com/en/posts/choose-copilot-studio-harnesses-by-identity-predictability-and-cost-b0fd668e/\n\n#PowerPlatformGovernanceDaily #CopilotStudio",
+    "bufferPostId": "6ae982c16896a4441f664b7c",
+    "dueAt": "2026-11-04T08:00:00.000Z"
   }
 }
