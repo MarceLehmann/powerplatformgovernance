@@ -89,6 +89,17 @@
     {%- endif -%}
   {%- endif -%}
 
+  {%- comment -%}
+    Tag-Seiten (jekyll-archives, layout tag) hatten dieselbe Description wie die Startseite (OpenSpider 05.11.2026).
+    Eigene Description je Tag, ohne Seiteninhalt zu aendern.
+  {%- endcomment -%}
+  {%- if page.layout == 'tag' and d_parts.size > 1 -%}
+    {%- assign tag_n = page.posts | where_exp: 'item', "item.lang == nil or item.lang == 'en'" | size -%}
+    {%- capture tag_desc -%}Power Platform governance summaries tagged {{ page.title | escape }}: {{ tag_n }} curated {% if tag_n == 1 %}article{% else %}articles{% endif %} with source credit and a direct link to the original.{%- endcapture -%}
+    {%- assign d_tail2 = d_parts[1] | split: '" />' -%}
+    {%- assign seo_tags = seo_tags | replace: d_tail2[0], tag_desc -%}
+  {%- endif -%}
+
   {{ seo_tags }}
 
   {%- if page.redirect_to -%}
@@ -112,7 +123,7 @@
       {%- capture title -%}
         {%- if page.collection == 'tabs' -%}
           {%- assign tab_key = page.title | downcase -%}
-          {{- site.data.locales[include.lang].tabs[tab_key] -}}
+          {%- assign tab_t = site.data.locales[include.lang].tabs[tab_key] -%}{{- tab_t | default: page.title -}}
         {%- else -%}
           {{- page.title -}}
         {%- endif -%}
