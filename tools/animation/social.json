@@ -633,5 +633,35 @@
     "text": "Dynamics 365 CE duplicate detection rules for real customer data\n\nConfigure Dynamics 365 CE duplicate detection from real customer-data patterns, using focused per-table criteria and testing every entry route. Publish rules before use, remember that only five can be published for one base record type at a time, and assign people to review, merge, or correct flagged records. Use Dataverse alternate keys when strict uniqueness is required.\n\nSource: Softchief Technologies\n\nFull summary: https://powerplatformgovernance.com/en/posts/dynamics-365-ce-duplicate-detection-rules-for-real-customer-data-42a32165/\n\n#PowerPlatformGovernanceDaily #Dataverse",
     "bufferPostId": "6aea2bbb81bf336f271ef26f",
     "dueAt": "2026-11-04T14:00:00.000Z"
+  },
+  "f42e43db8ccb419bc20050f5": {
+    "status": "expired",
+    "day": "2026-11-04",
+    "title": "Choose the right Dataverse extension for transaction risk",
+    "expiredAt": "2026-11-05"
+  },
+  "508d13e1510b19a0ba515697": {
+    "status": "expired",
+    "day": "2026-11-04",
+    "title": "Keep Dynamics 365 CE record edits from disrupting business process flows",
+    "expiredAt": "2026-11-05"
+  },
+  "739bda4ae8b5aa9aa3dfadd0": {
+    "status": "expired",
+    "day": "2026-11-04",
+    "title": "Microsoft Agent 365 puts identity and ownership at the heart of agent governance",
+    "expiredAt": "2026-11-05"
+  },
+  "5b684a191e24d06c05bfe137": {
+    "status": "expired",
+    "day": "2026-11-04",
+    "title": "Reclaim Dataverse File Capacity Without Deleting Email History",
+    "expiredAt": "2026-11-05"
+  },
+  "a2b511d8f729b276b67e508e": {
+    "status": "expired",
+    "day": "2026-11-04",
+    "title": "SharePoint Knowledge Bases Close Copilot's Context Gap",
+    "expiredAt": "2026-11-05"
   }
 }
