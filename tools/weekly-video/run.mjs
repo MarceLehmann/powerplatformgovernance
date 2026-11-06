@@ -9,6 +9,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { rewriteRelevance } from './rewrite.mjs';
 import {
   weekWindow, isoWeekOf, planShort, buildShortAudio, readPosts, selectPosts, buildScript, speak, wordsFromAlignment, toSrt, topicLabels, dateLabel, rangeLabel, ss,
 } from './lib.mjs';
@@ -48,7 +49,10 @@ sel.picked.forEach((x, i) => console.log(`  ${i + 1}. ${x.en.day} ${x.id.slice(0
 const scripts = {};
 let total = 0;
 for (const lang of langs) {
-  scripts[lang] = buildScript({ picked: sel.picked, lang, site, week: kw, maxChars });
+  // Relevanz-Saetze umschreiben (LLM, mit Rueckfall auf den Originalsatz)
+  const orig = buildScript({ picked: sel.picked, lang, site, week: kw, maxChars }).segs.filter(s => s.kind === 'item');
+  const whyMap = await rewriteRelevance({ lang, items: orig.map(s => ({ id: s.id, title: s.title, why: s.origWhy })) });
+  scripts[lang] = buildScript({ picked: sel.picked, lang, site, week: kw, maxChars, whyMap });
   total += scripts[lang].chars;
   console.log(`\n[${lang}] ${scripts[lang].chars} Zeichen\n${scripts[lang].text}`);
 }
@@ -98,7 +102,7 @@ for (const lang of langs) {
     audio: audioName, durationSec, accent: site.accent, siteName: site.name, domain: site.domain,
     qrUrl: `https://${site.domain}/?utm_source=wochenvideo&utm_medium=video`,
     labels: {
-      why: T.why, kicker: T.kicker, week: T.week.replace('{kw}', kw), range: rangeLabel(win.from, win.to, lang, T.months), aiNotice: T.aiNotice,
+      why: '', kicker: T.kicker, week: T.week.replace('{kw}', kw), range: rangeLabel(win.from, win.to, lang, T.months), aiNotice: T.aiNotice,
       outroLine: T.outroLine, source: T.source,
       footer: lang === 'de' ? 'Stimme und Untertitel sind KI-generiert. Zusammenfassungen nach Quelle.' : 'Voice and subtitles are AI-generated. Summaries follow their sources.',
     },

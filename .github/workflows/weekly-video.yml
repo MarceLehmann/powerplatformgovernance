@@ -29,6 +29,7 @@ on:
 
 permissions:
   contents: read
+  models: read # GitHub Models fuer das Umschreiben der Relevanz-Saetze (kein neues Secret)
 
 concurrency:
   group: weekly-video
@@ -77,6 +78,7 @@ jobs:
         working-directory: tools/weekly-video
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          GITHUB_TOKEN: ${{ github.token }}
           WEEK: ${{ inputs.week }}
           DRY: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run || 'false' }}
         run: |
