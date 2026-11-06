@@ -663,5 +663,17 @@
     "day": "2026-11-04",
     "title": "SharePoint Knowledge Bases Close Copilot's Context Gap",
     "expiredAt": "2026-11-05"
+  },
+  "c92e1d0711ad90f9bfe24867": {
+    "status": "expired",
+    "day": "2026-11-05",
+    "title": "Troubleshoot missing Dynamics 365 CE synchronized emails",
+    "expiredAt": "2026-11-06"
+  },
+  "8443b63591781a1fe4689d07": {
+    "status": "expired",
+    "day": "2026-11-05",
+    "title": "Unmanaged Developer Environments Are Being Removed",
+    "expiredAt": "2026-11-06"
   }
 }
