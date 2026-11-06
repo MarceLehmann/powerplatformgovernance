@@ -6,10 +6,10 @@
   "voiceName": "Marcel_PRO",
   "voiceId": "yuotdYn2QZ7nWTzLl3Tj",
   "model": "eleven_flash_v2_5",
-  "topCount": 10,
+  "topCount": 5,
   "tldrSentence": false,
-  "shortMaxSec": 88,
-  "maxCharsPerVideo": 1200,
+  "shortMaxSec": 90,
+  "maxCharsPerVideo": 1500,
   "tagWeights": {
     "security": 3,
     "governance": 3,
@@ -62,7 +62,7 @@
         "Zehn"
       ],
       "source": "Quelle",
-      "outro": "Alle Beiträge mit Quellen findest du auf {domain}. Stimme und Untertitel sind KI-generiert.",
+      "outro": "Alle Beiträge auf {domain}. Stimme und Untertitel sind KI-generiert.",
       "kicker": "Wochenrückblick",
       "week": "Kalenderwoche {kw}",
       "aiNotice": "KI-Stimme",
@@ -80,7 +80,8 @@
         "Oktober",
         "November",
         "Dezember"
-      ]
+      ],
+      "why": "Relevant:"
     },
     "en": {
       "intro": "{name}, week {kw}. The top {n} of the week.",
@@ -97,7 +98,7 @@
         "Ten"
       ],
       "source": "Source",
-      "outro": "Find all posts with their sources at {domain}. Voice and subtitles are AI-generated.",
+      "outro": "All posts at {domain}. Voice and subtitles are AI-generated.",
       "kicker": "Weekly recap",
       "week": "Week {kw}",
       "aiNotice": "AI voice",
@@ -115,7 +116,8 @@
         "October",
         "November",
         "December"
-      ]
+      ],
+      "why": "Why it matters:"
     }
   },
   "youtube": {

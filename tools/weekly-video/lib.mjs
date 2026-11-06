@@ -1,5 +1,5 @@
 // Gemeinsame Funktionen: Woche, Beitraege lesen, Auswahl, Sprechtext, ElevenLabs, Untertitel.
-// Regel: Der Sprechtext besteht NUR aus Titel, erstem TL;DR-Satz (falls er ins Zeichenbudget passt) und Quellenname.
+// Regel: Der Sprechtext besteht NUR aus Titel, Relevanz-Satz (aus "Warum das wichtig ist"), optional erstem TL;DR-Satz und Quellenname.
 // Nichts wird umformuliert, bewertet oder ergaenzt (kuratierte Inhalte bleiben unveraendert).
 import fs from 'node:fs';
 import path from 'node:path';
@@ -72,6 +72,26 @@ export function tldrSentences(p) {
   const src = clean(tl ? tl[1] : '') || clean(p.description);
   return sentences(src).map(ss);
 }
+// Relevanz-Satz ("wieso relevant"): kommt aus dem Abschnitt "Warum das wichtig ist" / "Why it matters" des Beitrags (Aufzaehlung nach Zielgruppe).
+// Reihenfolge: Admins/IT, dann Leadership/Business, dann Makers, dann erster Punkt. Nichts wird erfunden oder umformuliert:
+// nur Beschriftung entfernen, Gedankenstriche durch Komma ersetzen und bei Laenge den Teil vor ", weil" / ", because" nehmen.
+export function relevanceSentence(p, maxLen = 100) {
+  const m = p.body.match(/##\s*(?:Warum das wichtig ist|Why it matters|Bedeutung für Governance|Governance takeaway)\s*\n+([\s\S]*?)(?:\n##\s|\n\{%|$)/i);
+  if (!m) return '';
+  const bullets = m[1].split('\n').map(l => l.trim()).filter(l => /^[-*]\s/.test(l)).map(l => clean(l.replace(/^[-*]\s+/, '')));
+  const order = [/^Admins?\b/i, /^Leadership/i, /^Makers?\b/i, /^Security/i];
+  const ranked = [...order.map(re => bullets.find(x => re.test(x))).filter(Boolean), ...bullets];
+  const tidy = x => {
+    let t = x.replace(/^[^:]{2,30}:\s*/, '').replace(/\s+[–—-]\s+/g, ', ');
+    if (t.length > maxLen) { const cut = t.search(/,\s+(weil|da|because|since)\b/i); if (cut > 20) t = t.slice(0, cut); }
+    return ss(t).replace(/[.!?]+$/, '');
+  };
+  const cands = [...new Set(ranked)].map(tidy);
+  const fit = cands.find(t => t.length <= maxLen);
+  if (fit) return fit;
+  return [...cands].sort((a, b) => a.length - b.length)[0] || '';
+}
+
 // Quellenname: bei nicht-lateinischer Schrift (Japanisch etc.) liest die Stimme ihn falsch, dann nehmen wir die Domain
 export function sourceLabel(p) {
   if (p.source && !/[^\u0000-ɏ‐-‧]/.test(p.source)) return p.source;
@@ -124,9 +144,9 @@ export function buildScript({ picked, lang, site, week, maxChars }) {
   const outro = fill(T.outro, { domain: site.domain });
   const items = picked.map((x, i) => {
     const p = x[lang]; const sents = tldrSentences(p);
-    return { id: x.id, post: p, ordinal: T.ordinals[i] || String(i + 1), title: ss(clean(p.title)).replace(/[.!?]+$/, ''), source: sourceLabel(p), sents, keep: site.tldrSentence !== false && sents.length ? 1 : 0 };
+    return { id: x.id, post: p, ordinal: T.ordinals[i] || String(i + 1), title: ss(clean(p.title)).replace(/[.!?]+$/, ''), source: sourceLabel(p), why: relevanceSentence(p), sents, keep: site.tldrSentence !== false && sents.length ? 1 : 0 };
   });
-  const itemText = it => `${it.ordinal}. ${it.title}.${it.keep ? ' ' + it.sents[0] : ''} ${T.source}: ${it.source}.`;
+  const itemText = it => `${it.ordinal}. ${it.title}.${it.why ? ' ' + T.why + ' ' + it.why + '.' : ''}${it.keep ? ' ' + it.sents[0] : ''} ${T.source}: ${it.source}.`;
   const total = () => intro.length + outro.length + items.reduce((a, it) => a + itemText(it).length, 0) + items.length + 1;
   // erst nur Beitraege mit kurzem TL;DR-Satz behalten: so lange den laengsten Satz streichen, bis das Budget passt
   while (total() > maxChars) {
@@ -134,7 +154,7 @@ export function buildScript({ picked, lang, site, week, maxChars }) {
     if (!cand) throw new Error(`Sprechtext ${lang} hat ${total()} Zeichen (Budget ${maxChars}), auch ohne TL;DR-Saetze`);
     cand.keep = 0;
   }
-  const segs = [{ kind: 'intro', text: intro }, ...items.map(it => ({ kind: 'item', id: it.id, text: itemText(it), title: it.title, source: it.source, hasSentence: !!it.keep, post: it.post })), { kind: 'outro', text: outro }];
+  const segs = [{ kind: 'intro', text: intro }, ...items.map(it => ({ kind: 'item', id: it.id, text: itemText(it), title: it.title, why: it.why, source: it.source, hasSentence: !!it.keep, post: it.post })), { kind: 'outro', text: outro }];
   let text = '';
   for (const s of segs) { if (text) text += ' '; s.charStart = text.length; text += s.text; }
   return { text, segs, chars: text.length };
@@ -190,7 +210,7 @@ export function topicLabels(picked, site, n = 3) {
 // Gleiche Tonspur wie das lange Video (kein neuer ElevenLabs-Aufruf). Reihenfolge der Mittel:
 // 1. Zweiten Satz der Einleitung weglassen  2. Pausen auf 0,2 s kuerzen  3. Tempo bis maxTempo
 // 4. Reicht das nicht, letzte Beitraege weglassen (mindestens minItems bleiben). Wortzeiten werden mitgerechnet.
-export function planShort({ words, segs, maxSec = 88, tail = 0.9, maxTempo = 1.12, gapKeep = 0.1, minItems = 3 }) {
+export function planShort({ words, segs, maxSec = 88, tail = 0.9, maxTempo = 1.15, gapKeep = 0.1, minItems = 3 }) {
   const introSeg = segs.find(s => s.kind === 'intro');
   const itemSegs = segs.filter(s => s.kind === 'item');
   const outroSeg = segs.find(s => s.kind === 'outro');

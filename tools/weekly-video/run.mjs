@@ -28,7 +28,7 @@ const langs = opt('--lang', 'de,en').split(',');
 const maxChars = +opt('--max-chars', site.maxCharsPerVideo);
 const budget = +opt('--budget', 2800);
 const formats = opt('--formats', '16x9,4x5,9x16').split(',');
-const shortMax = +opt('--short-max', site.shortMaxSec || 88);
+const shortMax = +opt('--short-max', site.shortMaxSec);
 const dry = flag('--dry-run');
 const outDir = path.resolve(here, opt('--out', 'out'), `${win.year}-W${String(win.week).padStart(2, '0')}`);
 const kw = String(win.week);
@@ -91,14 +91,14 @@ for (const lang of langs) {
     const st = startOf(seg);
     const en = i + 1 < itemSegs.length ? startOf(itemSegs[i + 1]) : startOf(outroSeg);
     const x = sel.picked[i];
-    return { nr: i + 1, start: st, end: en, title: seg.title, source: seg.source, tags: x.en.tags.map(t => site.tagLabels[t] || t), day: x.en.day };
+    return { nr: i + 1, start: st, end: en, title: seg.title, why: seg.why || '', source: seg.source, tags: x.en.tags.map(t => site.tagLabels[t] || t), day: x.en.day };
   });
   const durationSec = Math.ceil((dur + 1.6) * 30) / 30;
   props[lang] = {
     audio: audioName, durationSec, accent: site.accent, siteName: site.name, domain: site.domain,
     qrUrl: `https://${site.domain}/?utm_source=wochenvideo&utm_medium=video`,
     labels: {
-      kicker: T.kicker, week: T.week.replace('{kw}', kw), range: rangeLabel(win.from, win.to, lang, T.months), aiNotice: T.aiNotice,
+      why: T.why, kicker: T.kicker, week: T.week.replace('{kw}', kw), range: rangeLabel(win.from, win.to, lang, T.months), aiNotice: T.aiNotice,
       outroLine: T.outroLine, source: T.source,
       footer: lang === 'de' ? 'Stimme und Untertitel sind KI-generiert. Zusammenfassungen nach Quelle.' : 'Voice and subtitles are AI-generated. Summaries follow their sources.',
     },
@@ -121,7 +121,7 @@ for (const lang of langs) {
     const sItemSegs = itemSegs.slice(0, plan.keep);
     const sItems = sItemSegs.map((seg, i) => {
       const x = sel.picked[i];
-      return { nr: i + 1, start: sStart(seg), end: i + 1 < sItemSegs.length ? sStart(sItemSegs[i + 1]) : sStart(outroSeg), title: seg.title, source: seg.source, tags: x.en.tags.map(t => site.tagLabels[t] || t), day: x.en.day };
+      return { nr: i + 1, start: sStart(seg), end: i + 1 < sItemSegs.length ? sStart(sItemSegs[i + 1]) : sStart(outroSeg), title: seg.title, why: seg.why || '', source: seg.source, tags: x.en.tags.map(t => site.tagLabels[t] || t), day: x.en.day };
     });
     const sDur = Math.ceil((plan.duration + 0.9) * 30) / 30;
     shortProps[lang] = { ...props[lang], audio: shortAudio, durationSec: sDur, introEnd: sItems[0].start, outroStart: sStart(outroSeg), items: sItems, words: sw.map(w => ({ t: w.t, s: w.s, e: w.e })) };
