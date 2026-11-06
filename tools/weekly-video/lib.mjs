@@ -137,16 +137,19 @@ export function selectPosts(posts, { from, to, site, topIds = [], max = site.top
 }
 
 // ---------- Sprechtext ----------
+// Umgeschriebener Satz (rewrite.mjs) ist eigenstaendig, der Originalsatz bekommt die Beschriftung T.why davor.
+// origWhy = Originalsatz fuer die Anzeige und fuer Pruefungen
+const whyParts = (rewritten, orig, T) => (rewritten ? { why: rewritten, origWhy: orig } : { why: orig ? `${T.why} ${orig}` : '', origWhy: orig });
 const fill = (t, v) => t.replace(/\{(\w+)\}/g, (_, k) => v[k]);
-export function buildScript({ picked, lang, site, week, maxChars }) {
+export function buildScript({ picked, lang, site, week, maxChars, whyMap = new Map() }) {
   const T = site.text[lang];
   const intro = fill(T.intro, { name: site.name, kw: week, n: picked.length });
   const outro = fill(T.outro, { domain: site.domain });
   const items = picked.map((x, i) => {
     const p = x[lang]; const sents = tldrSentences(p);
-    return { id: x.id, post: p, ordinal: T.ordinals[i] || String(i + 1), title: ss(clean(p.title)).replace(/[.!?]+$/, ''), source: sourceLabel(p), why: relevanceSentence(p), sents, keep: site.tldrSentence !== false && sents.length ? 1 : 0 };
+    return { id: x.id, post: p, ordinal: T.ordinals[i] || String(i + 1), title: ss(clean(p.title)).replace(/[.!?]+$/, ''), source: sourceLabel(p), ...whyParts(whyMap.get(x.id), relevanceSentence(p), T), sents, keep: site.tldrSentence !== false && sents.length ? 1 : 0 };
   });
-  const itemText = it => `${it.ordinal}. ${it.title}.${it.why ? ' ' + T.why + ' ' + it.why + '.' : ''}${it.keep ? ' ' + it.sents[0] : ''} ${T.source}: ${it.source}.`;
+  const itemText = it => `${it.ordinal}. ${it.title}.${it.why ? ' ' + it.why + '.' : ''}${it.keep ? ' ' + it.sents[0] : ''} ${T.source}: ${it.source}.`;
   const total = () => intro.length + outro.length + items.reduce((a, it) => a + itemText(it).length, 0) + items.length + 1;
   // erst nur Beitraege mit kurzem TL;DR-Satz behalten: so lange den laengsten Satz streichen, bis das Budget passt
   while (total() > maxChars) {
@@ -154,7 +157,7 @@ export function buildScript({ picked, lang, site, week, maxChars }) {
     if (!cand) throw new Error(`Sprechtext ${lang} hat ${total()} Zeichen (Budget ${maxChars}), auch ohne TL;DR-Saetze`);
     cand.keep = 0;
   }
-  const segs = [{ kind: 'intro', text: intro }, ...items.map(it => ({ kind: 'item', id: it.id, text: itemText(it), title: it.title, why: it.why, source: it.source, hasSentence: !!it.keep, post: it.post })), { kind: 'outro', text: outro }];
+  const segs = [{ kind: 'intro', text: intro }, ...items.map(it => ({ kind: 'item', id: it.id, text: itemText(it), title: it.title, why: it.why, origWhy: it.origWhy, source: it.source, hasSentence: !!it.keep, post: it.post })), { kind: 'outro', text: outro }];
   let text = '';
   for (const s of segs) { if (text) text += ' '; s.charStart = text.length; text += s.text; }
   return { text, segs, chars: text.length };
