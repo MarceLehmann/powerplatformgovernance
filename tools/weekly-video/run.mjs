@@ -3,7 +3,7 @@
 // Aufruf (im Ordner tools/weekly-video, nach npm install):
 //   node run.mjs --week 2026-W45 --lang de,en --dry-run     Auswahl, Texte und Zeichen pruefen (kein API-Aufruf)
 //   node run.mjs --week 2026-W45 --lang de,en               erzeugen (braucht ELEVENLABS_API_KEY als Umgebungsvariable)
-// Optionen: --root <Repo-Root> (Standard ../..), --out <Ordner> (Standard out), --budget <Zeichen gesamt> (Standard 2000 je Seite),
+// Optionen: --root <Repo-Root> (Standard ../..), --out <Ordner> (Standard out), --budget <Zeichen gesamt> (Standard 2800 je Seite),
 //           --max-chars <Zeichen je Video> (Standard aus site.json), --formats 16x9,4x5, --no-render, --week-to <YYYY-MM-DD> (Fenster kuerzen)
 // Ergebnis in <out>/<Jahr>-W<KW>/: <site>_<Jahr>-KW<KW>_<lang>_<format>.mp4, .srt, _youtube.md, _linkedin.md, manifest.json, auswahl.md
 import fs from 'node:fs';
@@ -26,9 +26,9 @@ const win = weekWindow(wk);
 if (opt('--week-to')) win.to = opt('--week-to');
 const langs = opt('--lang', 'de,en').split(',');
 const maxChars = +opt('--max-chars', site.maxCharsPerVideo);
-const budget = +opt('--budget', 2000);
+const budget = +opt('--budget', 2800);
 const formats = opt('--formats', '16x9,4x5,9x16').split(',');
-const shortMax = +opt('--short-max', 59.5);
+const shortMax = +opt('--short-max', site.shortMaxSec || 88);
 const dry = flag('--dry-run');
 const outDir = path.resolve(here, opt('--out', 'out'), `${win.year}-W${String(win.week).padStart(2, '0')}`);
 const kw = String(win.week);
@@ -38,9 +38,10 @@ let topIds = [];
 const topFile = path.join(root, 'tools/audio/top-articles.json');
 if (fs.existsSync(topFile)) { try { topIds = JSON.parse(fs.readFileSync(topFile, 'utf8')).ranking.slice(0, 20).map(x => x.id); } catch { /* optional */ } }
 const posts = readPosts(root);
-const sel = selectPosts(posts, { from: win.from, to: win.to, site, topIds, max: 5 });
+const sel = selectPosts(posts, { from: win.from, to: win.to, site, topIds, max: site.topCount });
 console.log(`${site.name} ${wk} (${win.from} bis ${win.to}): Kandidaten ${sel.poolSize}, gewaehlt ${sel.picked.length}`);
-if (sel.picked.length < 3) { console.log('Weniger als 3 Beitraege mit DE und EN in dieser Woche, kein Video.'); process.exit(0); }
+const minPosts = Math.min(3, site.topCount);
+if (sel.picked.length < minPosts) { console.log('Weniger als 3 Beitraege mit DE und EN in dieser Woche, kein Video.'); process.exit(0); }
 sel.picked.forEach((x, i) => console.log(`  ${i + 1}. ${x.en.day} ${x.id.slice(0, 8)} Wert ${x.score} (${x.why.join(', ')}) | ${x.en.source} | ${x.en.title}`));
 
 // ---------- Sprechtexte ----------
@@ -164,7 +165,7 @@ function selectionDoc(sel, win, site) {
 }
 function youtubeDoc({ lang, site, sel, win, kw, items, props, T }) {
   const tags = topicLabels(sel.picked, site, 3);
-  let title = site.youtube[lang].title.replace('{kw}', kw).replace('{year}', win.year).replace('{name}', site.name).replace('{tags}', tags.join(', '));
+  let title = site.youtube[lang].title.replace('{n}', String(sel.picked.length)).replace('{kw}', kw).replace('{year}', win.year).replace('{name}', site.name).replace('{tags}', tags.join(', '));
   if (title.length > 100) title = title.replace(', ' + tags[2], '');
   const mmss = s => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, '0')}`;
   const marks = [0, ...items.map(i => i.start), props.outroStart, props.durationSec];
@@ -175,8 +176,8 @@ function youtubeDoc({ lang, site, sel, win, kw, items, props, T }) {
     return `${i + 1}. ${ss(p.title)}\n   ${lang === 'de' ? 'Zusammenfassung' : 'Summary'}: https://${site.domain}${p.permalink}\n   ${T.source}: ${p.source} ${p.sourceUrl}`;
   }).join('\n');
   const intro = lang === 'de'
-    ? `Fünf Beiträge der Kalenderwoche ${kw} von ${site.name}: ${tags.join(', ')}. Jeder Beitrag ist eine Kurzfassung mit Quelle.`
-    : `Five posts from week ${kw} on ${site.name}: ${tags.join(', ')}. Each post is a short summary with its source.`;
+    ? `Die Top ${sel.picked.length} der Kalenderwoche ${kw} von ${site.name}: ${tags.join(', ')}. Jeder Beitrag ist eine Kurzfassung mit Quelle.`
+    : `The top ${sel.picked.length} of week ${kw} on ${site.name}: ${tags.join(', ')}. Each post is a short summary with its source.`;
   const notice = lang === 'de'
     ? 'Hinweis: Stimme (KI-Klon der Stimme von Marcel Lehmann) und Untertitel sind KI-generiert. Die Beiträge fassen fremde Artikel zusammen, die Originale stehen oben bei jeder Quelle.'
     : 'Note: The voice (an AI clone of Marcel Lehmann\'s voice) and the subtitles are AI-generated. The posts summarise third-party articles; the originals are linked above with each source.';
@@ -184,8 +185,8 @@ function youtubeDoc({ lang, site, sel, win, kw, items, props, T }) {
 }
 function linkedinDoc({ lang, site, sel, kw }) {
   const lead = lang === 'de'
-    ? `Fünf Beiträge, die ich diese Woche auf ${site.name} gesammelt habe (Kalenderwoche ${kw}).`
-    : `Five posts I collected on ${site.name} this week (week ${kw}).`;
+    ? `Die Top ${sel.picked.length}, die ich diese Woche auf ${site.name} gesammelt habe (Kalenderwoche ${kw}).`
+    : `The top ${sel.picked.length} I collected on ${site.name} this week (week ${kw}).`;
   const list = sel.picked.map(x => `→ ${ss(x[lang].title)} (${lang === 'de' ? 'Quelle' : 'Source'}: ${x[lang].source})`).join('\n');
   const tail = lang === 'de' ? 'Stimme und Untertitel im Video sind KI-generiert. Alle Links im ersten Kommentar.' : 'The voice and subtitles in the video are AI-generated. All links in the first comment.';
   const links = sel.picked.map(x => `${ss(x[lang].title)}: https://${site.domain}${x[lang].permalink}`).join('\n');
@@ -195,11 +196,11 @@ function linkedinDoc({ lang, site, sel, kw }) {
 function shortDoc({ lang, site, sel, win, kw, plan, T }) {
   const shown = sel.picked.slice(0, plan.keep);
   const tags = topicLabels(shown, site, 3);
-  let title = site.youtube[lang].title.replace('{kw}', kw).replace('{year}', win.year).replace('{name}', site.name).replace('{tags}', tags.join(', '));
+  let title = site.youtube[lang].title.replace('{n}', String(shown.length)).replace('{kw}', kw).replace('{year}', win.year).replace('{name}', site.name).replace('{tags}', tags.join(', '));
   if (title.length > 100) title = title.replace(', ' + tags[2], '');
   const intro = lang === 'de'
-    ? `Die wichtigsten Power-Platform-News der Kalenderwoche ${kw} in unter einer Minute: ${tags.join(', ')}. ${shown.length} Beiträge, jeder mit Quelle.`
-    : `The key Power Platform news of week ${kw} in under a minute: ${tags.join(', ')}. ${shown.length} posts, each with its source.`;
+    ? `Die wichtigsten Power-Platform-News der Kalenderwoche ${kw} in unter 90 Sekunden: ${tags.join(', ')}. Die Top ${shown.length}, jeder Beitrag mit Quelle.`
+    : `The key Power Platform news of week ${kw} in under 90 seconds: ${tags.join(', ')}. The top ${shown.length}, each post with its source.`;
   const srcs = shown.map((x, i) => {
     const p = x[lang];
     return `${i + 1}. ${ss(p.title)}\n   ${lang === 'de' ? 'Zusammenfassung' : 'Summary'}: https://${site.domain}${p.permalink}\n   ${T.source}: ${p.source} ${p.sourceUrl}`;

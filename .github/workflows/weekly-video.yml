@@ -1,11 +1,11 @@
 name: Weekly Video
 run-name: Weekly Video (${{ github.event_name }})
-# Wochen-Short Deutsch und Englisch (9:16, hoechstens 60 Sekunden): Auswahl der fuenf Beitraege der Woche, Ton mit Marcels ElevenLabs-Stimme,
+# Wochen-Short Deutsch und Englisch (9:16, Ziel unter 90 Sekunden, YouTube erlaubt bis 3 Minuten): Auswahl der Top 10 der Woche (site.json topCount), Ton mit Marcels ElevenLabs-Stimme Marcel_PRO (eleven_flash_v2_5),
 # Video mit Remotion, Untertitel, Hinweis "KI-Stimme", QR. Danach Planung ueber Buffer auf YouTube: DE auf "Marcel Lehmann", EN auf "PowerPlatformTip",
 # fester Slot in Europe/Zurich (siehe tools/weekly-video/publish.json).
 #
 # STATUS: AN. Laeuft jeden Sonntag 08:00 UTC (09:00 oder 10:00 Schweizer Zeit), damit der Slot am selben Abend bzw. Montagmorgen sicher in der Zukunft liegt.
-# Kosten: nur vorhandene Abos. ElevenLabs rund 1'900 Zeichen je Seite und Woche (Budget-Deckel 2'000 im Lauf).
+# Kosten: nur vorhandene Abos. ElevenLabs rund 1.200 Zeichen je Video, bis 2.400 je Seite und Woche (Budget-Deckel 2.800 im Lauf).
 #
 # Noetige Repo-Secrets: ELEVENLABS_API_KEY, BUFFER_API_KEY_PPTIP (Buffer-Konto mit den drei YouTube-Kanaelen),
 # LINKEDIN_ASSETS_TOKEN (Schreibrecht auf MarceLehmann/linkedin-assets: Buffer holt das Video von der Pages-URL dieses Repos).
@@ -81,7 +81,7 @@ jobs:
           DRY: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run || 'false' }}
         run: |
           set -euo pipefail
-          args=(--root ../.. --lang de,en --budget 2000 --formats 9x16)
+          args=(--root ../.. --lang de,en --budget 2800 --formats 9x16)
           [ -n "$WEEK" ] && args+=(--week "$WEEK")
           [ "$DRY" = "true" ] && args+=(--dry-run)
           node run.mjs "${args[@]}"

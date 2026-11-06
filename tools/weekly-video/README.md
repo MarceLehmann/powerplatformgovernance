@@ -1,15 +1,15 @@
 # Wochenvideo (Deutsch und Englisch)
 
-Ein Video je Woche und Sprache: die fünf Beiträge der Woche, gesprochen mit Marcels geklonter ElevenLabs-Stimme, mit Untertiteln, Quellenangabe, QR-Code und dem Hinweis "KI-Stimme". Es entstehen 9:16 (YouTube Short, höchstens 60 Sekunden, geplant über Buffer), auf Wunsch zusätzlich 16:9 und 4:5.
+Ein Video je Woche und Sprache: die Top 10 der Woche (Anzahl: `topCount` in `site.json`; gibt es weniger Beiträge, entsprechend weniger, mindestens 3), gesprochen mit Marcels Profi-Stimme Marcel_PRO (ElevenLabs), mit Untertiteln, Quellenangabe, QR-Code und dem Hinweis "KI-Stimme". Es entstehen 9:16 (YouTube Short, Ziel unter 90 Sekunden, `shortMaxSec` 88, YouTube erlaubt bis 3 Minuten, geplant über Buffer), auf Wunsch zusätzlich 16:9 und 4:5.
 
 Status: Die Automatik (`.github/workflows/weekly-video.yml`) läuft jeden Sonntag 08:00 UTC und plant die beiden Shorts (DE, EN) bei Buffer ein. Slots in `publish.json` (Europe/Zurich): Daily Sonntag 18:00, Governance Montag 07:00. DE geht auf den Kanal "Marcel Lehmann", EN auf "PowerPlatformTip".
 
 ## Ablauf
 1. **Auswahl** (`lib.mjs`, `selectPosts`): kuratierte Beiträge (`content_type: curated_summary`), die in der Woche (Montag bis Sonntag) erschienen sind und in Deutsch und Englisch vorliegen.
-2. **Sprechtext** (`buildScript`): nur Titel, erster Satz der TL;DR (nur wenn er ins Zeichenbudget passt) und Quellenname. Nichts wird umformuliert, bewertet oder ergänzt (kuratierte Inhalte bleiben unverändert). Quellen mit nicht-lateinischem Namen werden mit der Domain genannt, `ß` wird `ss`.
-3. **Ton** (`speak`): ElevenLabs `with-timestamps`, Stimme `3wglDJufK4dcFGrgeITn`, Modell `eleven_multilingual_v2`. Die Zeichen-Zeitstempel liefern Szenenwechsel und Untertitel, es braucht kein Whisper. Gleicher Text und gleiche Stimme kommen aus dem Cache (`out/_audio-cache`), ein erneuter Render kostet keine Zeichen.
-4. **Video** (`run.mjs`, `src/Week.tsx`, Remotion): Intro, fünf Beitragsszenen, Schlussbild mit QR. Untertitel Wort für Wort, Badge "KI-Stimme" in jeder Szene.
-5. **Short 9:16** (`planShort`, `buildShortAudio`): gleiche Tonspur wie das lange Video, kein neuer ElevenLabs-Aufruf. Damit sie in 59,5 Sekunden passt: zweiten Einleitungssatz weglassen, Pausen auf 0,2 s kürzen, Tempo bis 1,12, sonst die letzten Beiträge weglassen (mindestens 3). Wortzeiten werden mitgerechnet, Untertitel und Szenen stimmen. Layout mit Abstand zu Rand und YouTube-Oberfläche.
+2. **Sprechtext** (`buildScript`): nur Titel und Quellenname (TL;DR-Satz nur wenn `tldrSentence` nicht false ist, aktuell aus, damit 10 Punkte knapp bleiben). Nichts wird umformuliert, bewertet oder ergänzt (kuratierte Inhalte bleiben unverändert). Quellen mit nicht-lateinischem Namen werden mit der Domain genannt, `ß` wird `ss`.
+3. **Ton** (`speak`): ElevenLabs `with-timestamps`, Stimme Marcel_PRO (`voiceId` in `site.json`, yuotdYn2QZ7nWTzLl3Tj), Modell `eleven_flash_v2_5` (Marcel 06.11.2026: immer diese Stimme und dieses Modell; beides nur in `site.json`). Die Zeichen-Zeitstempel liefern Szenenwechsel und Untertitel, es braucht kein Whisper. Gleicher Text und gleiche Stimme kommen aus dem Cache (`out/_audio-cache`), ein erneuter Render kostet keine Zeichen.
+4. **Video** (`run.mjs`, `src/Week.tsx`, Remotion): Intro, Beitragsszenen (bis zu 10), Schlussbild mit QR. Untertitel Wort für Wort, Badge "KI-Stimme" in jeder Szene.
+5. **Short 9:16** (`planShort`, `buildShortAudio`): gleiche Tonspur wie das lange Video, kein neuer ElevenLabs-Aufruf. Damit sie in 88 Sekunden passt: zweiten Einleitungssatz weglassen, Pausen auf 0,2 s kürzen, Tempo bis 1,12, sonst die letzten Beiträge weglassen (mindestens 3). Wortzeiten werden mitgerechnet, Untertitel und Szenen stimmen. Layout mit Abstand zu Rand und YouTube-Oberfläche.
 6. **Plan bei Buffer** (`publish.mjs`): Video per GitHub-API nach `linkedin-assets/wochenvideo/<site>/<Jahr>-W<KW>/` (Pages-URL, Buffer holt von dort), Post mit festem Slot, `isAiGenerated: true`, Kanal per Name gefunden. Gleicher Titel schon in Buffer: übersprungen.
 7. **Texte**: `_short_youtube.md` und `_youtube.md` (Titel mit Suchbegriffen, Beschreibung mit Kapiteln und Quellen, Hinweis auf synthetische Stimme), `_linkedin.md` (Posttext mit persönlichem Satz von Marcel, Links im ersten Kommentar), `.srt`, `_sprechtext.txt`, `auswahl.md`, `manifest.json`.
 
@@ -20,10 +20,10 @@ Je Beitrag ein Wert aus:
 - Quelle aktuell: +2, wenn die Quelle in den 14 Tagen vor Wochenende erschienen oder aktualisiert wurde.
 - Top-Ranking: +2, wenn der Beitrag in `tools/audio/top-articles.json` steht (GoatCounter plus Search Console).
 
-Dann wird gierig gewählt: beste Wertung zuerst, danach Vielfalt (gleiche Quelle: -2 je bereits gewähltem Beitrag, gleiches Hauptthema: -1). Bei Gleichstand gewinnt der neuere Beitrag. Höchstens 5, mindestens 3, sonst kein Video. Angezeigt wird chronologisch, nicht als Rangliste.
+Dann wird gierig gewählt: beste Wertung zuerst, danach Vielfalt (gleiche Quelle: -2 je bereits gewähltem Beitrag, gleiches Hauptthema: -1). Bei Gleichstand gewinnt der neuere Beitrag. Höchstens `topCount` (10), mindestens 3, sonst kein Video. Angezeigt wird chronologisch, nicht als Rangliste.
 
 ## Zeichenbudget
-Ziel: unter 4'000 Zeichen pro Woche für alle vier Videos. Je Video höchstens `maxCharsPerVideo` (1'000): zu lange TL;DR-Sätze werden gestrichen, bis es passt (erst die längsten). Der Lauf bricht ab, wenn `--budget` (Standard 2'000 je Seite) überschritten wäre. Der API-Key liest keine Kontostände (`user_read` fehlt), das Budget führt deshalb dieses Skript: `manifest.json` nennt die verbrauchten Zeichen.
+Ziel: unter 5'000 Zeichen pro Woche für alle vier Videos (rund 1'200 je Video bei 10 Punkten). Je Video höchstens `maxCharsPerVideo` (1'200): zu lange TL;DR-Sätze werden gestrichen, bis es passt (erst die längsten). Der Lauf bricht ab, wenn `--budget` (Standard 2'800 je Seite) überschritten wäre. Der API-Key liest keine Kontostände (`user_read` fehlt), das Budget führt deshalb dieses Skript: `manifest.json` nennt die verbrauchten Zeichen.
 
 ## Betrieb
 ```

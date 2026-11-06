@@ -80,7 +80,7 @@ export function sourceLabel(p) {
 
 // ---------- Auswahl ----------
 // Formale Kriterien, keine inhaltliche Wertung. Jeder Schritt steht in README.md.
-export function selectPosts(posts, { from, to, site, topIds = [], max = 5 }) {
+export function selectPosts(posts, { from, to, site, topIds = [], max = site.topCount || 5 }) {
   const byId = new Map();
   for (const p of posts) {
     if (p.day < from || p.day > to) continue;
@@ -120,11 +120,11 @@ export function selectPosts(posts, { from, to, site, topIds = [], max = 5 }) {
 const fill = (t, v) => t.replace(/\{(\w+)\}/g, (_, k) => v[k]);
 export function buildScript({ picked, lang, site, week, maxChars }) {
   const T = site.text[lang];
-  const intro = fill(T.intro, { name: site.name, kw: week });
+  const intro = fill(T.intro, { name: site.name, kw: week, n: picked.length });
   const outro = fill(T.outro, { domain: site.domain });
   const items = picked.map((x, i) => {
     const p = x[lang]; const sents = tldrSentences(p);
-    return { id: x.id, post: p, ordinal: T.ordinals[i] || String(i + 1), title: ss(clean(p.title)).replace(/[.!?]+$/, ''), source: sourceLabel(p), sents, keep: sents.length ? 1 : 0 };
+    return { id: x.id, post: p, ordinal: T.ordinals[i] || String(i + 1), title: ss(clean(p.title)).replace(/[.!?]+$/, ''), source: sourceLabel(p), sents, keep: site.tldrSentence !== false && sents.length ? 1 : 0 };
   });
   const itemText = it => `${it.ordinal}. ${it.title}.${it.keep ? ' ' + it.sents[0] : ''} ${T.source}: ${it.source}.`;
   const total = () => intro.length + outro.length + items.reduce((a, it) => a + itemText(it).length, 0) + items.length + 1;
@@ -186,11 +186,11 @@ export function topicLabels(picked, site, n = 3) {
   return Object.entries(cnt).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).slice(0, n).map(([t]) => site.tagLabels[t] || t.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()));
 }
 
-// ---------- Short (9:16, hoechstens 60 Sekunden) ----------
+// ---------- Short (9:16, hoechstens site.shortMaxSec Sekunden, YouTube erlaubt bis 3 Minuten) ----------
 // Gleiche Tonspur wie das lange Video (kein neuer ElevenLabs-Aufruf). Reihenfolge der Mittel:
 // 1. Zweiten Satz der Einleitung weglassen  2. Pausen auf 0,2 s kuerzen  3. Tempo bis maxTempo
 // 4. Reicht das nicht, letzte Beitraege weglassen (mindestens minItems bleiben). Wortzeiten werden mitgerechnet.
-export function planShort({ words, segs, maxSec = 60, tail = 0.9, maxTempo = 1.12, gapKeep = 0.1, minItems = 3 }) {
+export function planShort({ words, segs, maxSec = 88, tail = 0.9, maxTempo = 1.12, gapKeep = 0.1, minItems = 3 }) {
   const introSeg = segs.find(s => s.kind === 'intro');
   const itemSegs = segs.filter(s => s.kind === 'item');
   const outroSeg = segs.find(s => s.kind === 'outro');

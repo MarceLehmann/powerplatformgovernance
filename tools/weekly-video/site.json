@@ -3,9 +3,13 @@
   "name": "Power Platform Governance",
   "domain": "powerplatformgovernance.com",
   "accent": "#0F6CBD",
-  "voiceId": "3wglDJufK4dcFGrgeITn",
-  "model": "eleven_multilingual_v2",
-  "maxCharsPerVideo": 1000,
+  "voiceName": "Marcel_PRO",
+  "voiceId": "yuotdYn2QZ7nWTzLl3Tj",
+  "model": "eleven_flash_v2_5",
+  "topCount": 10,
+  "tldrSentence": false,
+  "shortMaxSec": 88,
+  "maxCharsPerVideo": 1200,
   "tagWeights": {
     "security": 3,
     "governance": 3,
@@ -44,13 +48,18 @@
   },
   "text": {
     "de": {
-      "intro": "{name}, Kalenderwoche {kw}. Fünf Beiträge der Woche, zusammengefasst nach Quelle.",
+      "intro": "{name}, Kalenderwoche {kw}. Die Top {n} der Woche.",
       "ordinals": [
         "Eins",
         "Zwei",
         "Drei",
         "Vier",
-        "Fünf"
+        "Fünf",
+        "Sechs",
+        "Sieben",
+        "Acht",
+        "Neun",
+        "Zehn"
       ],
       "source": "Quelle",
       "outro": "Alle Beiträge mit Quellen findest du auf {domain}. Stimme und Untertitel sind KI-generiert.",
@@ -74,13 +83,18 @@
       ]
     },
     "en": {
-      "intro": "{name}, week {kw}. Five posts of the week, summarised from their sources.",
+      "intro": "{name}, week {kw}. The top {n} of the week.",
       "ordinals": [
         "One",
         "Two",
         "Three",
         "Four",
-        "Five"
+        "Five",
+        "Six",
+        "Seven",
+        "Eight",
+        "Nine",
+        "Ten"
       ],
       "source": "Source",
       "outro": "Find all posts with their sources at {domain}. Voice and subtitles are AI-generated.",
@@ -106,10 +120,10 @@
   },
   "youtube": {
     "de": {
-      "title": "Power Platform News KW {kw}/{year}: {tags} | {name}"
+      "title": "Top {n} Power Platform News KW {kw}/{year}: {tags} | {name}"
     },
     "en": {
-      "title": "Power Platform News Week {kw}, {year}: {tags} | {name}"
+      "title": "Top {n} Power Platform News Week {kw}, {year}: {tags} | {name}"
     }
   },
   "tagCap": 6
