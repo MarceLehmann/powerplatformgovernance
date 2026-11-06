@@ -1,7 +1,7 @@
 // Tests ohne API-Aufruf: node --test rewrite.test.mjs
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { validateRewrite, rewriteRelevance, providerRequest, ANTHROPIC_MODEL } from './rewrite.mjs';
+import { validateRewrite, rewriteRelevance, providerRequest, ANTHROPIC_MODEL, prompt, EN_EXAMPLE, LEAD, MAX_WORDS } from './rewrite.mjs';
 import { buildScript } from './lib.mjs';
 
 test('Pruefregeln: gueltig, zu lang, ß, Gedankenstrich, Sie-Form, mehrere Saetze', () => {
@@ -69,4 +69,14 @@ test('Anthropic-Antwort wird gelesen, Fehler fallen auf das Original zurueck ohn
   const m2 = await rewriteRelevance({ items, lang: 'de', env: envGh, log: x => logs.push(x), fetchFn: async () => ({ ok: false, status: 401, text: async () => 'bad key test-key' }) });
   assert.equal(m2.size, 0);
   assert.ok(logs.length === 1 && !logs.join().includes('test-key'));
+});
+
+test('EN-Prompt: harte Wortgrenze, Beispiel besteht die Pruefregel, Obergrenze liegt unter MAX_WORDS', () => {
+  const p = prompt([{ title: 'T', why: 'W' }], 'en');
+  assert.ok(p.includes(LEAD.en));
+  assert.match(p, /AT MOST 12 words/);
+  assert.match(p, /at most 16 words/);
+  assert.ok(p.includes(EN_EXAMPLE));
+  assert.equal(validateRewrite(EN_EXAMPLE, 'en'), null);
+  assert.ok(EN_EXAMPLE.split(/\s+/).length <= 16 && 16 <= MAX_WORDS);
 });

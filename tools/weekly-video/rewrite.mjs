@@ -32,10 +32,12 @@ export function validateRewrite(text, lang, maxWords = MAX_WORDS) {
   return null;
 }
 
-function prompt(items, lang) {
+export const EN_EXAMPLE = 'For you, that means: you can test the new gallery layout on a separate screen.';
+
+export function prompt(items, lang) {
   const rules = lang === 'de'
     ? `Schreibe zu jedem Beitrag EINEN Relevanz-Satz auf Deutsch (Schweizer Schreibweise: "ss" statt "ß"). Regeln: Du-Form, nie "Sie". Beginne mit "${LEAD.de}" und sage dann in höchstens 14 Wörtern, was das für KMU, Admins oder Maker bedeutet. Sachlich, ohne Hype, keine Gedankenstriche (Bindestriche in Wörtern wie Power-Automate-Flow bleiben), echte Umlaute (ä, ö, ü), nie ae/oe/ue. Keine Aufforderung und keine Pflicht: Beschreibe die Folge oder den Nutzen (z. B. "Du kannst ...", "Bei dir ändert sich ..."), vermeide "du musst" und "du solltest". Nach dem Doppelpunkt beginnt der Satz mit grossem Anfangsbuchstaben. Verwende nur Fakten aus dem Titel und dem Originalsatz, erfinde nichts dazu. Genau ein Satz, Punkt am Ende.`
-    : `Write ONE relevance sentence in English for each post. Rules: speak to the reader as "you". Start with "${LEAD.en}" and then say in at most 14 words what this means for SMEs, admins or makers. Factual, no hype, no dashes (hyphens inside words like Power-Automate-Flow are fine), no imperative instructions (turn "Place the gallery ..." into a statement). Use only facts from the title and the original sentence, add nothing new. Exactly one sentence, ending with a period.`;
+    : `Write ONE relevance sentence in English for each post. Rules: speak to the reader as "you". Start with "${LEAD.en}" and then say in AT MOST 12 words what this means for SMEs, admins or makers. HARD LIMIT: the whole sentence including the lead is at most 16 words; count the words before you answer and shorten anything longer (sentences of 20 or more words are discarded). Use one main clause, no subordinate clauses, no "which", "so that" or "because". Example: original "Admins can now place the gallery control on a separate screen to test the new layout before it goes live for all users" becomes "${EN_EXAMPLE}". Factual, no hype, no dashes (hyphens inside words like Power-Automate-Flow are fine), no imperative instructions (turn "Place the gallery ..." into a statement). Use only facts from the title and the original sentence, add nothing new. Exactly one sentence, ending with a period.`;
   const list = items.map((x, i) => `${i + 1}. Titel: ${x.title}\n   Originalsatz: ${x.why}`).join('\n');
   return `${rules}\n\nAntworte nur mit einem JSON-Array von Strings, ein String je Beitrag, gleiche Reihenfolge, ohne weiteren Text.\n\n${list}`;
 }
