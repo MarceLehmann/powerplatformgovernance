@@ -1,0 +1,285 @@
+{
+ "methode": "Rang nach GoatCounter-Aufrufen plus GSC-Klicks (nur /de/posts/), bei Gleichstand nach GSC-Impressionen. GoatCounter ab 2026-08-01, GSC letzte 90 Tage, Stand 2026-11-05.",
+ "ranking": [
+  {
+   "id": "0367a386",
+   "path": "/de/posts/sharepoint-html-pages-need-governance-before-wider-adoption-0367a386",
+   "views": 2,
+   "clicks": 2,
+   "impressions": 31
+  },
+  {
+   "id": "8495a2a3",
+   "path": "/de/posts/deploy-copilot-studio-agents-to-microsoft-365-copilot-without-per-8495a2a3",
+   "views": 1,
+   "clicks": 1,
+   "impressions": 33
+  },
+  {
+   "id": "307adb54",
+   "path": "/de/posts/how-to-remove-managed-environment-status-with-powershell-307adb54",
+   "views": 1,
+   "clicks": 1,
+   "impressions": 4
+  },
+  {
+   "id": "72e99cb0",
+   "path": "/de/posts/from-traditional-crm-to-agentic-crm-what-is-changing-72e99cb0",
+   "views": 1,
+   "clicks": 1,
+   "impressions": 2
+  },
+  {
+   "id": "7c6e881e",
+   "path": "/de/posts/bulk-file-testing-for-copilot-studio-agents-7c6e881e",
+   "views": 1,
+   "clicks": 1,
+   "impressions": 1
+  },
+  {
+   "id": "dbb229e1",
+   "path": "/de/posts/connect-atlassian-jira-remote-mcp-to-copilot-studio-dbb229e1",
+   "views": 1,
+   "clicks": 0,
+   "impressions": 29
+  },
+  {
+   "id": "cdee9c2c",
+   "path": "/de/posts/create-private-teams-channels-from-power-automate-cdee9c2c/",
+   "views": 0,
+   "clicks": 1,
+   "impressions": 13
+  },
+  {
+   "id": "5242b99d",
+   "path": "/de/posts/the-coe-starter-kit-is-gone-what-the-power-platform-admin-center-5242b99d",
+   "views": 1,
+   "clicks": 0,
+   "impressions": 6
+  },
+  {
+   "id": "fd71fdc6",
+   "path": "/de/posts/attended-vs-unattended-power-automate-desktop-automation-fd71fdc6",
+   "views": 1,
+   "clicks": 0,
+   "impressions": 4
+  },
+  {
+   "id": "fdc89633",
+   "path": "/de/posts/secure-human-in-the-loop-workflows-with-a-copilot-studio-custom-fdc89633/",
+   "views": 0,
+   "clicks": 1,
+   "impressions": 4
+  },
+  {
+   "id": "b89b9ecd",
+   "path": "/de/posts/business-skills-give-agents-reusable-rules-and-clear-boundaries-b89b9ecd/",
+   "views": 0,
+   "clicks": 1,
+   "impressions": 3
+  },
+  {
+   "id": "3594bfc8",
+   "path": "/de/posts/sensitivity-labels-rollout-playbook-from-pilot-to-production-3594bfc8",
+   "views": 1,
+   "clicks": 0,
+   "impressions": 0
+  },
+  {
+   "id": "00ae3941",
+   "path": "/de/posts/microsoft-announces-new-controls-for-agent-security-and-digital-00ae3941",
+   "views": 1,
+   "clicks": 0,
+   "impressions": 0
+  },
+  {
+   "id": "a78069ad",
+   "path": "/de/posts/design-industrial-iot-data-contracts-before-power-bi-ingestion-a78069ad",
+   "views": 1,
+   "clicks": 0,
+   "impressions": 0
+  },
+  {
+   "id": "0ef9c786",
+   "path": "/de/posts/add-human-review-to-copilot-studio-ai-decisions-0ef9c786",
+   "views": 1,
+   "clicks": 0,
+   "impressions": 0
+  },
+  {
+   "id": "d64affc6",
+   "path": "/de/posts/copilot-agent-kit-brings-inventory-and-governance-to-ai-agents-d64affc6/",
+   "views": 0,
+   "clicks": 0,
+   "impressions": 55
+  },
+  {
+   "id": "afcf877d",
+   "path": "/de/posts/automate-export-and-import-of-flows-and-powerapps-solutions-afcf877d/",
+   "views": 0,
+   "clicks": 0,
+   "impressions": 53
+  },
+  {
+   "id": "7b922a1f",
+   "path": "/de/posts/copilot-studio-credits-licence-exemptions-costs-and-deadlines-7b922a1f/",
+   "views": 0,
+   "clicks": 0,
+   "impressions": 46
+  },
+  {
+   "id": "50af5f02",
+   "path": "/de/posts/how-to-prepare-microsoft-365-for-nis2-50af5f02/",
+   "views": 0,
+   "clicks": 0,
+   "impressions": 42
+  },
+  {
+   "id": "98665edf",
+   "path": "/de/posts/mcp-connectoren-in-copilot-studio-richtig-f-r-alm-vorbereiten-98665edf/",
+   "views": 0,
+   "clicks": 0,
+   "impressions": 35
+  },
+  {
+   "id": "2a02adf9",
+   "path": "/de/posts/mcp-servers-or-connectors-in-copilot-studio-a-maker-s-guide-2a02adf9/",
+   "views": 0,
+   "clicks": 0,
+   "impressions": 26
+  },
+  {
+   "id": "d8fd9c46",
+   "path": "/de/posts/bring-microsoft-365-capabilities-into-copilot-studio-with-agent-365-d8fd9c46/",
+   "views": 0,
+   "clicks": 0,
+   "impressions": 20
+  },
+  {
+   "id": "af997403",
+   "path": "/de/posts/control-copilot-cowork-access-with-pilot-groups-and-credit-limits-af997403/",
+   "views": 0,
+   "clicks": 0,
+   "impressions": 19
+  },
+  {
+   "id": "01b8133b",
+   "path": "/de/posts/deploy-copilot-studio-agents-to-teams-with-governed-alm-01b8133b/",
+   "views": 0,
+   "clicks": 0,
+   "impressions": 19
+  },
+  {
+   "id": "8a25d3f1",
+   "path": "/de/posts/work-iq-usage-licensing-and-governance-controls-8a25d3f1/",
+   "views": 0,
+   "clicks": 0,
+   "impressions": 19
+  },
+  {
+   "id": "feb7d4f4",
+   "path": "/de/posts/govern-copilot-studio-agents-that-build-power-platform-resources-feb7d4f4/",
+   "views": 0,
+   "clicks": 0,
+   "impressions": 15
+  },
+  {
+   "id": "750a4520",
+   "path": "/de/posts/build-and-review-copilot-studio-agents-from-yaml-with-skills-for-750a4520/",
+   "views": 0,
+   "clicks": 0,
+   "impressions": 14
+  },
+  {
+   "id": "804543b4",
+   "path": "/de/posts/choosing-dataverse-retrieval-patterns-for-copilot-studio-agents-804543b4/",
+   "views": 0,
+   "clicks": 0,
+   "impressions": 12
+  },
+  {
+   "id": "0f8adcba",
+   "path": "/de/posts/govern-microsoft-copilot-for-legal-work-and-third-party-plugins-0f8adcba/",
+   "views": 0,
+   "clicks": 0,
+   "impressions": 12
+  },
+  {
+   "id": "ec0b5ed5",
+   "path": "/de/posts/microsoft-entra-sso-explained-tokens-protocols-and-security-risks-ec0b5ed5/",
+   "views": 0,
+   "clicks": 0,
+   "impressions": 10
+  },
+  {
+   "id": "2851e93f",
+   "path": "/de/posts/teams-android-sign-in-failures-caused-by-conditional-access-2851e93f/",
+   "views": 0,
+   "clicks": 0,
+   "impressions": 10
+  },
+  {
+   "id": "db39a123",
+   "path": "/de/posts/copilot-studio-kit-governance-inventory-and-testing-at-scale-db39a123/",
+   "views": 0,
+   "clicks": 0,
+   "impressions": 9
+  },
+  {
+   "id": "c08577a9",
+   "path": "/de/posts/design-microsoft-purview-dlp-policies-that-actually-work-c08577a9/",
+   "views": 0,
+   "clicks": 0,
+   "impressions": 9
+  },
+  {
+   "id": "9ab9c12e",
+   "path": "/de/posts/export-a-power-automate-flow-when-the-export-option-is-missing-9ab9c12e/",
+   "views": 0,
+   "clicks": 0,
+   "impressions": 9
+  },
+  {
+   "id": "6588726d",
+   "path": "/de/posts/change-a-power-automate-flow-owner-without-breaking-it-6588726d/",
+   "views": 0,
+   "clicks": 0,
+   "impressions": 8
+  },
+  {
+   "id": "5118fada",
+   "path": "/de/posts/choose-copilot-studio-s-harness-before-building-5118fada/",
+   "views": 0,
+   "clicks": 0,
+   "impressions": 8
+  },
+  {
+   "id": "356a3aea",
+   "path": "/de/posts/power-automate-desktop-attended-vs-unattended-automation-356a3aea/",
+   "views": 0,
+   "clicks": 0,
+   "impressions": 8
+  },
+  {
+   "id": "67cd922d",
+   "path": "/de/posts/secure-power-pages-by-checking-permissions-and-web-api-gates-67cd922d/",
+   "views": 0,
+   "clicks": 0,
+   "impressions": 8
+  },
+  {
+   "id": "5e6685c0",
+   "path": "/de/posts/use-dynamic-knowledge-urls-to-scope-copilot-studio-agents-5e6685c0/",
+   "views": 0,
+   "clicks": 0,
+   "impressions": 8
+  },
+  {
+   "id": "c3008899",
+   "path": "/de/posts/connect-microsoft-foundry-agents-securely-in-copilot-studio-c3008899/",
+   "views": 0,
+   "clicks": 0,
+   "impressions": 7
+  }
+ ]
+}

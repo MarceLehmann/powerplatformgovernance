@@ -1,0 +1,34 @@
+{%- comment -%}
+  Knopf "Ton an": Kurzfassung (20 bis 30 s) mit Marcels Stimme, nur Deutsch, nur wenn tools/audio/make-audio.mjs
+  eine Tonspur erzeugt hat (_data/audio.yml, Schluessel curation_id). Browser blockieren Autoplay mit Ton,
+  deshalb startet der Ton erst nach Klick. Die gleiche Kurzfassung steht als TL;DR im Text (Textalternative).
+  Die Animation darueber (stumm, Schleife) wird beim Start von vorn abgespielt, damit Bild und Ton zusammenpassen.
+  Audio laedt erst nach Klick (preload none), kein Einfluss auf LCP.
+{%- endcomment -%}
+{%- assign audio_entry = site.data.audio[page.curation_id] -%}
+{%- if audio_entry and page.lang == 'de' -%}
+  <div class="audio-brief my-3 d-flex align-items-center flex-wrap gap-2">
+    <button type="button" class="btn btn-outline-primary btn-sm audio-brief-btn" aria-pressed="false" data-on="Ton aus" data-off="Ton an">
+      <i class="fas fa-volume-high me-1" aria-hidden="true"></i><span class="audio-brief-label">Ton an</span>
+    </button>
+    <span class="small text-muted">Kurzfassung in ca. {{ audio_entry.seconds }} Sekunden, gesprochen von Marcel Lehmann (KI-Stimme, geklont).</span>
+    <audio class="audio-brief-player" preload="none" src="{{ audio_entry.file | relative_url }}"></audio>
+  </div>
+  <script>
+  (function () {
+    var box = document.currentScript.previousElementSibling;
+    var btn = box.querySelector('.audio-brief-btn'), label = box.querySelector('.audio-brief-label'), audio = box.querySelector('audio');
+    function reset() { btn.setAttribute('aria-pressed', 'false'); label.textContent = btn.dataset.off; }
+    btn.addEventListener('click', function () {
+      if (!audio.paused) { audio.pause(); reset(); return; }
+      var vid = document.querySelector('.flow-animation video');
+      if (vid) { try { vid.currentTime = 0; vid.play(); } catch (e) {} }
+      audio.currentTime = 0;
+      audio.play().then(function () {
+        btn.setAttribute('aria-pressed', 'true'); label.textContent = btn.dataset.on;
+      }).catch(reset);
+    });
+    audio.addEventListener('ended', reset);
+  })();
+  </script>
+{%- endif -%}

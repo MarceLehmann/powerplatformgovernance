@@ -130,6 +130,7 @@ script_includes:
     {%- if page.animation %}
       {% include animation.html video=page.animation.video poster=page.animation.poster width=page.animation.width height=page.animation.height alt=page.animation.alt %}
     {%- endif %}
+    {% include audio-button.html %}
     {{ content }}
   </div>
 
