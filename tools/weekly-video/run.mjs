@@ -10,7 +10,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
-  weekWindow, isoWeekOf, readPosts, selectPosts, buildScript, speak, wordsFromAlignment, toSrt, topicLabels, dateLabel, rangeLabel, ss,
+  weekWindow, isoWeekOf, planShort, buildShortAudio, readPosts, selectPosts, buildScript, speak, wordsFromAlignment, toSrt, topicLabels, dateLabel, rangeLabel, ss,
 } from './lib.mjs';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
@@ -27,7 +27,8 @@ if (opt('--week-to')) win.to = opt('--week-to');
 const langs = opt('--lang', 'de,en').split(',');
 const maxChars = +opt('--max-chars', site.maxCharsPerVideo);
 const budget = +opt('--budget', 2000);
-const formats = opt('--formats', '16x9,4x5').split(',');
+const formats = opt('--formats', '16x9,4x5,9x16').split(',');
+const shortMax = +opt('--short-max', 59.5);
 const dry = flag('--dry-run');
 const outDir = path.resolve(here, opt('--out', 'out'), `${win.year}-W${String(win.week).padStart(2, '0')}`);
 const kw = String(win.week);
@@ -77,7 +78,7 @@ for (const lang of langs) {
 console.log(`ElevenLabs-Zeichen in diesem Lauf: ${used}`);
 
 // ---------- Szenenzeiten, Untertitel, Texte ----------
-const props = {};
+const props = {}, shortProps = {}, shortInfo = {};
 for (const lang of langs) {
   const { words, dur, audioName } = results[lang];
   const T = site.text[lang];
@@ -107,6 +108,27 @@ for (const lang of langs) {
   fs.writeFileSync(path.join(outDir, `${base}_youtube.md`), youtubeDoc({ lang, site, sel, win, kw, items, props: props[lang], T }));
   fs.writeFileSync(path.join(outDir, `${base}_linkedin.md`), linkedinDoc({ lang, site, sel, kw }));
   fs.writeFileSync(path.join(outDir, `${base}_sprechtext.txt`), s.text + '\n');
+
+  // ---------- Short 9:16 (hoechstens shortMax Sekunden, gleiche Tonspur) ----------
+  if (formats.includes('9x16')) {
+    const plan = planShort({ words, segs: s.segs, maxSec: shortMax });
+    const shortAudio = `${base}_short.mp3`;
+    buildShortAudio({ src: results[lang].sp.mp3, plan, out: path.join(pub, shortAudio) });
+    fs.copyFileSync(path.join(pub, shortAudio), path.join(outDir, shortAudio));
+    const sw = plan.words;
+    const sStart = seg => (sw.find(w => w.i0 >= seg.charStart) || sw[0]).s;
+    const sItemSegs = itemSegs.slice(0, plan.keep);
+    const sItems = sItemSegs.map((seg, i) => {
+      const x = sel.picked[i];
+      return { nr: i + 1, start: sStart(seg), end: i + 1 < sItemSegs.length ? sStart(sItemSegs[i + 1]) : sStart(outroSeg), title: seg.title, source: seg.source, tags: x.en.tags.map(t => site.tagLabels[t] || t), day: x.en.day };
+    });
+    const sDur = Math.ceil((plan.duration + 0.9) * 30) / 30;
+    shortProps[lang] = { ...props[lang], audio: shortAudio, durationSec: sDur, introEnd: sItems[0].start, outroStart: sStart(outroSeg), items: sItems, words: sw.map(w => ({ t: w.t, s: w.s, e: w.e })) };
+    shortInfo[lang] = { seconds: sDur, tempo: +plan.tempo.toFixed(3), items: plan.keep, dropped: plan.dropped, introShortened: plan.introCut, over: plan.over };
+    console.log(`Short ${lang}: ${sDur.toFixed(1)} s, Tempo ${plan.tempo.toFixed(2)}, ${plan.keep} von ${itemSegs.length} Beitraegen${plan.over ? ', ACHTUNG: laenger als ' + shortMax + ' s' : ''}`);
+    fs.writeFileSync(path.join(outDir, `${base}_short.srt`), toSrt(sw));
+    fs.writeFileSync(path.join(outDir, `${base}_short_youtube.md`), shortDoc({ lang, site, sel, win, kw, plan, T }));
+  }
 }
 
 // ---------- Rendern ----------
@@ -116,10 +138,11 @@ if (!flag('--no-render')) {
   const serveUrl = await bundle({ entryPoint: path.join(here, 'src/index.ts'), publicDir: pub });
   for (const lang of langs) {
     for (const f of formats) {
-      const id = f === '16x9' ? 'Week16x9' : 'Week4x5';
-      const composition = await selectComposition({ serveUrl, id, inputProps: props[lang] });
+      const id = { '16x9': 'Week16x9', '4x5': 'Week4x5', '9x16': 'Short9x16' }[f];
+      const pr = f === '9x16' ? shortProps[lang] : props[lang];
+      const composition = await selectComposition({ serveUrl, id, inputProps: pr });
       const outputLocation = path.join(outDir, `${site.id}_${win.year}-KW${kw}_${lang}_${f}.mp4`);
-      await renderMedia({ composition, serveUrl, codec: 'h264', audioCodec: 'aac', audioBitrate: '192k', outputLocation, inputProps: props[lang], crf: 20, pixelFormat: 'yuv420p',
+      await renderMedia({ composition, serveUrl, codec: 'h264', audioCodec: 'aac', audioBitrate: '192k', outputLocation, inputProps: pr, crf: 20, pixelFormat: 'yuv420p',
         onProgress: ({ progress }) => process.stdout.write(`\r${lang} ${f} ${(progress * 100).toFixed(0)}%   `) });
       console.log(`\n-> ${outputLocation}`);
     }
@@ -128,7 +151,7 @@ if (!flag('--no-render')) {
 fs.rmSync(pub, { recursive: true, force: true });
 fs.writeFileSync(path.join(outDir, 'manifest.json'), JSON.stringify({
   site: site.id, week: wk, window: win, generatedAt: now.toISOString(), elevenlabsChars: used,
-  chars: Object.fromEntries(langs.map(l => [l, scripts[l].chars])), seconds: Object.fromEntries(langs.map(l => [l, props[l].durationSec])),
+  short: shortInfo, chars: Object.fromEntries(langs.map(l => [l, scripts[l].chars])), seconds: Object.fromEntries(langs.map(l => [l, props[l].durationSec])),
   picked: sel.picked.map(x => ({ id: x.id, day: x.en.day, source: x.en.source, titleEn: x.en.title, titleDe: x.de.title, score: x.score, why: x.why, urlDe: `https://${site.domain}${x.de.permalink}`, urlEn: `https://${site.domain}${x.en.permalink}`, sourceUrl: x.en.sourceUrl })),
   files: fs.readdirSync(outDir).filter(f => f.endsWith('.mp4')),
 }, null, 2));
@@ -167,4 +190,24 @@ function linkedinDoc({ lang, site, sel, kw }) {
   const tail = lang === 'de' ? 'Stimme und Untertitel im Video sind KI-generiert. Alle Links im ersten Kommentar.' : 'The voice and subtitles in the video are AI-generated. All links in the first comment.';
   const links = sel.picked.map(x => `${ss(x[lang].title)}: https://${site.domain}${x[lang].permalink}`).join('\n');
   return `# LinkedIn ${site.name} ${lang.toUpperCase()} KW${kw}\n\nPosttext (erster Satz = persönlicher Satz von Marcel, vor Freigabe prüfen oder ersetzen):\n${lead}\n\n${list}\n\n${tail}\n\nErster Kommentar:\n${site.domain}: https://${site.domain}/?utm_source=linkedin&utm_medium=wochenvideo\n${links}\n`;
+}
+
+function shortDoc({ lang, site, sel, win, kw, plan, T }) {
+  const shown = sel.picked.slice(0, plan.keep);
+  const tags = topicLabels(shown, site, 3);
+  let title = site.youtube[lang].title.replace('{kw}', kw).replace('{year}', win.year).replace('{name}', site.name).replace('{tags}', tags.join(', '));
+  if (title.length > 100) title = title.replace(', ' + tags[2], '');
+  const intro = lang === 'de'
+    ? `Die wichtigsten Power-Platform-News der Kalenderwoche ${kw} in unter einer Minute: ${tags.join(', ')}. ${shown.length} Beiträge, jeder mit Quelle.`
+    : `The key Power Platform news of week ${kw} in under a minute: ${tags.join(', ')}. ${shown.length} posts, each with its source.`;
+  const srcs = shown.map((x, i) => {
+    const p = x[lang];
+    return `${i + 1}. ${ss(p.title)}\n   ${lang === 'de' ? 'Zusammenfassung' : 'Summary'}: https://${site.domain}${p.permalink}\n   ${T.source}: ${p.source} ${p.sourceUrl}`;
+  }).join('\n');
+  const notice = lang === 'de'
+    ? 'Hinweis: Stimme (KI-Klon der Stimme von Marcel Lehmann) und Untertitel sind KI-generiert. Die Beiträge fassen fremde Artikel zusammen, die Originale stehen bei jeder Quelle.'
+    : "Note: The voice (an AI clone of Marcel Lehmann's voice) and the subtitles are AI-generated. The posts summarise third-party articles; the originals are linked with each source.";
+  const hash = ['#Shorts', '#PowerPlatform', ...tags.map(t => '#' + t.replace(/[^A-Za-z0-9]/g, ''))].join(' ');
+  const description = `${intro}\n\n${srcs}\n\n${notice}\n${lang === 'de' ? 'Alle Beiträge' : 'All posts'}: https://${site.domain}\n\n${hash}`;
+  return `# YouTube Short ${site.name} ${lang.toUpperCase()} KW${kw}\n\nTitel (${title.length} Zeichen):\n${title}\n\nBeschreibung:\n${description}\n`;
 }

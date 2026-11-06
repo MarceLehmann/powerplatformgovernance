@@ -57,7 +57,7 @@ function makePhrases(words: WWord[]) {
   return out;
 }
 
-const Captions: React.FC<{ phrases: WWord[][]; t: number; portrait: boolean; accent: string }> = ({ phrases, t, portrait, accent }) => {
+const Captions: React.FC<{ phrases: WWord[][]; t: number; portrait: boolean; accent: string; tall: boolean }> = ({ phrases, t, portrait, accent, tall }) => {
   let idx = -1;
   for (let i = 0; i < phrases.length; i++) if (t >= phrases[i][0].s - 0.05) idx = i;
   if (idx < 0) return null;
@@ -66,7 +66,7 @@ const Captions: React.FC<{ phrases: WWord[][]; t: number; portrait: boolean; acc
   const holdUntil = Math.min(ph[ph.length - 1].e + 0.6, next ? next[0].s : 1e9);
   if (t > holdUntil) return null;
   return (
-    <div style={{ position: "absolute", left: portrait ? 56 : 120, right: portrait ? 56 : 120, bottom: portrait ? 90 : 70, minHeight: portrait ? 190 : 130, display: "flex", alignItems: "center", justifyContent: "center",
+    <div style={{ position: "absolute", left: portrait ? 56 : 120, right: portrait ? 56 : 120, bottom: tall ? 430 : portrait ? 90 : 70, minHeight: portrait ? 190 : 130, display: "flex", alignItems: "center", justifyContent: "center",
       background: C.card, border: `2px solid ${C.line}`, borderRadius: 24, padding: portrait ? "26px 34px" : "22px 44px", boxSizing: "border-box", textAlign: "center",
       fontFamily: BODY, fontWeight: 600, fontSize: portrait ? 50 : 50, lineHeight: 1.25 }}>
       <div>
@@ -87,6 +87,8 @@ export const Week: React.FC<WeekProps> = (p) => {
   const { fps, width, height } = useVideoConfig();
   const t = frame / fps;
   const portrait = height > width;
+  const tall = height > 1600; // 9:16 (Short): Inhalt nach unten, weg vom oberen Rand und von der YouTube-Oberflaeche
+  const dy = tall ? 190 : 0;
   const phrases = useMemo(() => makePhrases(p.words), [p.words]);
   const fadeOut = interpolate(t, [p.durationSec - 0.5, p.durationSec], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   const cur = p.items.find((it) => t >= it.start && t < it.end);
@@ -99,24 +101,24 @@ export const Week: React.FC<WeekProps> = (p) => {
       {p.audio ? <Audio src={staticFile(p.audio)} /> : null}
 
       {/* Kopfzeile */}
-      <div style={{ position: "absolute", left: pad, right: pad, top: portrait ? 50 : 48, display: "flex", justifyContent: "space-between", alignItems: "center", fontFamily: BODY, fontWeight: 700 }}>
+      <div style={{ position: "absolute", left: pad, right: pad, top: (portrait ? 50 : 48) + (tall ? 130 : 0), display: "flex", justifyContent: "space-between", alignItems: "center", fontFamily: BODY, fontWeight: 700 }}>
         <div style={{ fontSize: portrait ? 28 : 30, color: C.navy, letterSpacing: "0.02em" }}>{p.siteName}</div>
         <div style={{ fontSize: portrait ? 24 : 26, color: C.muted, border: `2px solid ${C.line}`, borderRadius: 999, padding: "6px 20px", background: C.card }}>{p.labels.aiNotice}</div>
       </div>
       <div style={{ position: "absolute", left: 0, top: 0, height: 8, width: `${(t / p.durationSec) * 100}%`, background: p.accent }} />
 
       {inIntro ? (
-        <div style={{ position: "absolute", left: pad, right: pad, top: portrait ? 330 : 250, opacity: ease(t, 0.1, 0.5), transform: `translateY(${(1 - ease(t, 0.1, 0.5)) * 24}px)` }}>
+        <div style={{ position: "absolute", left: pad, right: pad, top: (portrait ? 330 : 250) + dy + (tall ? 60 : 0), opacity: ease(t, 0.1, 0.5), transform: `translateY(${(1 - ease(t, 0.1, 0.5)) * 24}px)` }}>
           <div style={{ fontFamily: BODY, fontWeight: 700, fontSize: portrait ? 34 : 36, color: p.accent, letterSpacing: "0.14em", textTransform: "uppercase" }}>{p.labels.kicker}</div>
           <div style={{ fontFamily: DISPLAY, fontWeight: 800, fontSize: portrait ? 150 : 170, lineHeight: 1.02, color: C.navy, marginTop: 20 }}>{p.labels.week}</div>
           <div style={{ fontFamily: BODY, fontWeight: 600, fontSize: portrait ? 38 : 40, color: C.muted, marginTop: 28 }}>{p.labels.range}</div>
         </div>
       ) : null}
 
-      {cur ? <ItemScene key={cur.nr} it={cur} t={t} p={p} portrait={portrait} pad={pad} total={p.items.length} /> : null}
+      {cur ? <ItemScene key={cur.nr} it={cur} t={t} p={p} portrait={portrait} pad={pad} total={p.items.length} dy={dy} /> : null}
 
       {inOutro ? (
-        <div style={{ position: "absolute", left: pad, right: pad, top: portrait ? 300 : 220, display: "flex", flexDirection: portrait ? "column" : "row", alignItems: portrait ? "flex-start" : "center", gap: portrait ? 40 : 80,
+        <div style={{ position: "absolute", left: pad, right: pad, top: (portrait ? 300 : 220) + dy, display: "flex", flexDirection: portrait ? "column" : "row", alignItems: portrait ? "flex-start" : "center", gap: portrait ? 40 : 80,
           opacity: ease(t, p.outroStart, 0.5) }}>
           <Qr url={p.qrUrl} size={portrait ? 360 : 420} />
           <div>
@@ -127,17 +129,17 @@ export const Week: React.FC<WeekProps> = (p) => {
         </div>
       ) : null}
 
-      <Captions phrases={phrases} t={t} portrait={portrait} accent={p.accent} />
+      <Captions phrases={phrases} t={t} portrait={portrait} accent={p.accent} tall={tall} />
     </AbsoluteFill>
   );
 };
 
-const ItemScene: React.FC<{ it: WItem; t: number; p: WeekProps; portrait: boolean; pad: number; total: number }> = ({ it, t, p, portrait, pad, total }) => {
+const ItemScene: React.FC<{ it: WItem; t: number; p: WeekProps; portrait: boolean; pad: number; total: number; dy: number }> = ({ it, t, p, portrait, pad, total, dy }) => {
   const a = ease(t, it.start + 0.05, 0.45);
   const tagA = ease(t, it.start + 0.4, 0.4);
   const titleSize = it.title.length > 95 ? (portrait ? 54 : 62) : it.title.length > 70 ? (portrait ? 62 : 72) : (portrait ? 72 : 84);
   return (
-    <div style={{ position: "absolute", left: pad, right: pad, top: portrait ? 190 : 170, opacity: a, transform: `translateY(${(1 - a) * 28}px)` }}>
+    <div style={{ position: "absolute", left: pad, right: pad, top: (portrait ? 190 : 170) + dy, opacity: a, transform: `translateY(${(1 - a) * 28}px)` }}>
       <div style={{ display: "flex", alignItems: "baseline", gap: 24 }}>
         <div style={{ fontFamily: DISPLAY, fontWeight: 800, fontSize: portrait ? 190 : 210, lineHeight: 0.9, color: p.accent }}>{it.nr}</div>
         <div style={{ fontFamily: BODY, fontWeight: 700, fontSize: 30, color: C.muted }}>/ {total}</div>

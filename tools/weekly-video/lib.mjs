@@ -4,6 +4,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
+import { spawnSync } from 'node:child_process';
 import YAML from 'yaml';
 
 // ---------- Woche ----------
@@ -183,4 +184,52 @@ export function topicLabels(picked, site, n = 3) {
   const cnt = {};
   picked.forEach(x => x.en.tags.forEach(t => { cnt[t] = (cnt[t] || 0) + 1; }));
   return Object.entries(cnt).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).slice(0, n).map(([t]) => site.tagLabels[t] || t.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()));
+}
+
+// ---------- Short (9:16, hoechstens 60 Sekunden) ----------
+// Gleiche Tonspur wie das lange Video (kein neuer ElevenLabs-Aufruf). Reihenfolge der Mittel:
+// 1. Zweiten Satz der Einleitung weglassen  2. Pausen auf 0,2 s kuerzen  3. Tempo bis maxTempo
+// 4. Reicht das nicht, letzte Beitraege weglassen (mindestens minItems bleiben). Wortzeiten werden mitgerechnet.
+export function planShort({ words, segs, maxSec = 60, tail = 0.9, maxTempo = 1.12, gapKeep = 0.1, minItems = 3 }) {
+  const introSeg = segs.find(s => s.kind === 'intro');
+  const itemSegs = segs.filter(s => s.kind === 'item');
+  const outroSeg = segs.find(s => s.kind === 'outro');
+  const dot = introSeg.text.search(/[.!?]\s/);
+  const introCut = dot >= 0 ? [introSeg.charStart + dot + 1, itemSegs[0].charStart] : null;
+  const all = words.map((w, idx) => ({ ...w, idx }));
+  let keep = itemSegs.length;
+  for (;;) {
+    const removed = [introCut, keep < itemSegs.length ? [itemSegs[keep].charStart, outroSeg.charStart] : null].filter(Boolean);
+    const kept = all.filter(w => !removed.some(([a, b]) => w.i0 >= a && w.i0 < b));
+    const gapAfter = w => (all[w.idx + 1] ? all[w.idx + 1].s - w.e : 0.3);
+    const gapBefore = w => (all[w.idx - 1] ? w.s - all[w.idx - 1].e : 0.3);
+    const pieces = [];
+    let a = Math.max(0, kept[0].s - Math.min(0.1, gapBefore(kept[0]) / 2));
+    for (let i = 1; i < kept.length; i++) {
+      const p = kept[i - 1], n = kept[i];
+      if (n.idx === p.idx + 1 && n.s - p.e <= 0.3) continue;
+      pieces.push([a, p.e + Math.min(gapKeep, gapAfter(p) / 2)]);
+      a = n.s - Math.min(gapKeep, gapBefore(n) / 2);
+    }
+    const last = kept[kept.length - 1];
+    pieces.push([a, last.e + Math.min(0.15, gapAfter(last) / 2)]);
+    const raw = pieces.reduce((s, [x, y]) => s + (y - x), 0);
+    const tempo = Math.max(1, raw / (maxSec - tail));
+    if (tempo <= maxTempo || keep <= minItems) {
+      const offs = []; let o = 0;
+      for (const [x, y] of pieces) { offs.push(o); o += y - x; }
+      const map = t => { const k = pieces.findIndex(([x, y]) => t >= x - 1e-6 && t <= y + 1e-6); return (offs[k] + t - pieces[k][0]) / tempo; };
+      const mapped = kept.map(w => ({ t: w.t, i0: w.i0, s: map(w.s), e: map(w.e) }));
+      const duration = raw / tempo;
+      return { pieces, tempo, duration, words: mapped, keep, dropped: itemSegs.length - keep, introCut: !!introCut, over: duration + tail > maxSec + 0.05 };
+    }
+    keep--;
+  }
+}
+
+export function buildShortAudio({ src, plan, out }) {
+  const parts = plan.pieces.map(([a, b], i) => `[0:a]atrim=start=${a.toFixed(3)}:end=${b.toFixed(3)},asetpts=PTS-STARTPTS[a${i}]`);
+  const cat = plan.pieces.map((_, i) => `[a${i}]`).join('') + `concat=n=${plan.pieces.length}:v=0:a=1` + (plan.tempo > 1.001 ? `,atempo=${plan.tempo.toFixed(4)}` : '') + '[o]';
+  const r = spawnSync('ffmpeg', ['-y', '-v', 'error', '-i', src, '-filter_complex', [...parts, cat].join(';'), '-map', '[o]', '-c:a', 'libmp3lame', '-b:a', '192k', out], { encoding: 'utf8' });
+  if (r.status !== 0) throw new Error('ffmpeg: ' + (r.stderr || r.error));
 }

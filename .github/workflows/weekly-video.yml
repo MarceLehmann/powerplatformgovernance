@@ -1,17 +1,18 @@
 name: Weekly Video
 run-name: Weekly Video (${{ github.event_name }})
-# Wochenvideo Deutsch und Englisch: Auswahl der fuenf Beitraege der Woche, Ton mit Marcels ElevenLabs-Stimme, Video mit Remotion
-# (16:9 fuer YouTube, 4:5 fuer LinkedIn), Untertitel, Texte. Ergebnis als Download (Artifact), NICHTS wird veroeffentlicht.
+# Wochen-Short Deutsch und Englisch (9:16, hoechstens 60 Sekunden): Auswahl der fuenf Beitraege der Woche, Ton mit Marcels ElevenLabs-Stimme,
+# Video mit Remotion, Untertitel, Hinweis "KI-Stimme", QR. Danach Planung ueber Buffer auf YouTube: DE auf "Marcel Lehmann", EN auf "PowerPlatformTip",
+# fester Slot in Europe/Zurich (siehe tools/weekly-video/publish.json).
 #
-# STATUS: AUS. Nur manuell startbar (workflow_dispatch). Der Zeitplan unten bleibt auskommentiert, bis Marcel nach dem ersten Video freigibt.
-# Zum Einschalten: die zwei Zeilen unter "schedule" einkommentieren (Sonntag 17:00 UTC = 18:00 Winterzeit, 19:00 Sommerzeit).
+# STATUS: AN. Laeuft jeden Sonntag 08:00 UTC (09:00 oder 10:00 Schweizer Zeit), damit der Slot am selben Abend bzw. Montagmorgen sicher in der Zukunft liegt.
 # Kosten: nur vorhandene Abos. ElevenLabs rund 1'900 Zeichen je Seite und Woche (Budget-Deckel 2'000 im Lauf).
 #
-# Noetig vor dem ersten Lauf: Repo-Secret ELEVENLABS_API_KEY (Marcel setzt es selbst). Fuer Buffer-Ideen zusaetzlich Secret BUFFER_API_KEY
-# und Variable BUFFER_ORG_ID; ohne beides laeuft der Buffer-Schritt nicht.
+# Noetige Repo-Secrets: ELEVENLABS_API_KEY, BUFFER_API_KEY_PPTIP (Buffer-Konto mit den drei YouTube-Kanaelen),
+# LINKEDIN_ASSETS_TOKEN (Schreibrecht auf MarceLehmann/linkedin-assets: Buffer holt das Video von der Pages-URL dieses Repos).
+# Manueller Start: dry_run = true zeigt nur Auswahl und Texte, publish = true plant zusaetzlich bei Buffer ein.
 on:
-  # schedule:
-  #   - cron: "0 17 * * 0"
+  schedule:
+    - cron: "0 8 * * 0"
   workflow_dispatch:
     inputs:
       week:
@@ -21,8 +22,8 @@ on:
         description: "Nur Auswahl, Texte und Zeichenzahl zeigen (kein Ton, kein Video, kein Verbrauch)"
         type: boolean
         default: true
-      buffer_ideas:
-        description: "Danach Buffer-Ideen anlegen (Entwurf ohne Datum, kein Posting)"
+      publish:
+        description: "Nach dem Rendern bei Buffer einplanen (YouTube DE und EN)"
         type: boolean
         default: false
 
@@ -59,7 +60,7 @@ jobs:
         run: npm install --no-audit --no-fund
       - name: Unit tests (no API call)
         working-directory: tools/weekly-video
-        run: node --test weekly-video.test.mjs
+        run: node --test
       - name: Select, speak and render
         working-directory: tools/weekly-video
         env:
@@ -68,12 +69,12 @@ jobs:
           DRY: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run || 'false' }}
         run: |
           set -euo pipefail
-          args=(--root ../.. --lang de,en --budget 2000)
+          args=(--root ../.. --lang de,en --budget 2000 --formats 9x16)
           [ -n "$WEEK" ] && args+=(--week "$WEEK")
           [ "$DRY" = "true" ] && args+=(--dry-run)
           node run.mjs "${args[@]}"
       - name: Keep the result for download
-        if: inputs.dry_run != true
+        if: github.event_name == 'schedule' || inputs.dry_run != true
         uses: actions/upload-artifact@v4
         with:
           name: weekly-video
@@ -84,13 +85,14 @@ jobs:
             tools/weekly-video/out/*/*.txt
             tools/weekly-video/out/*/manifest.json
           retention-days: 14
-      - name: Buffer ideas (draft without date, no posting)
-        if: inputs.dry_run != true && inputs.buffer_ideas == true
+      - name: Schedule on YouTube via Buffer
+        if: github.event_name == 'schedule' || (inputs.dry_run != true && inputs.publish == true)
         working-directory: tools/weekly-video
         env:
-          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
-          BUFFER_ORG_ID: ${{ vars.BUFFER_ORG_ID }}
+          BUFFER_API_KEY_PPTIP: ${{ secrets.BUFFER_API_KEY_PPTIP }}
+          GH_TOKEN: ${{ secrets.LINKEDIN_ASSETS_TOKEN }}
         run: |
           set -euo pipefail
-          dir=$(ls -d out/*/ | grep -v _audio-cache | sort | tail -1)
-          node buffer.mjs --dir "$dir" --org "$BUFFER_ORG_ID" --apply
+          dir=$(ls -d out/20*-W*/ 2>/dev/null | sort | tail -1 || true)
+          if [ -z "$dir" ]; then echo "Kein Video diese Woche (weniger als 3 Beitraege), nichts zu planen."; exit 0; fi
+          node publish.mjs --dir "$dir" --apply

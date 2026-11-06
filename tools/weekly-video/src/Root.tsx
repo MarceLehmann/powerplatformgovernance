@@ -14,5 +14,6 @@ export const Root: React.FC = () => (
   <>
     <Composition id="Week16x9" component={Week} width={1920} height={1080} fps={FPS} durationInFrames={300} defaultProps={defaults} calculateMetadata={calc} />
     <Composition id="Week4x5" component={Week} width={1080} height={1350} fps={FPS} durationInFrames={300} defaultProps={defaults} calculateMetadata={calc} />
+    <Composition id="Short9x16" component={Week} width={1080} height={1920} fps={FPS} durationInFrames={300} defaultProps={defaults} calculateMetadata={calc} />
   </>
 );

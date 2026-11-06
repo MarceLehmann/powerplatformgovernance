@@ -1,0 +1,25 @@
+{
+  "timezone": "Europe/Zurich",
+  "hostRepo": "MarceLehmann/linkedin-assets",
+  "channels": {
+    "de": {
+      "nameStartsWith": "Marcel Lehmann"
+    },
+    "en": {
+      "name": "PowerPlatformTip"
+    }
+  },
+  "slots": {
+    "daily": {
+      "weekday": 0,
+      "time": "18:00"
+    },
+    "governance": {
+      "weekday": 1,
+      "time": "07:00"
+    }
+  },
+  "hostPath": "wochenvideo",
+  "hostBranch": "main",
+  "hostPagesBase": "https://marcelehmann.github.io/linkedin-assets"
+}
