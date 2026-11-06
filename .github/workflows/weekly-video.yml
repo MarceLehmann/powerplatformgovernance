@@ -8,6 +8,7 @@ run-name: Weekly Video (${{ github.event_name }})
 # Kosten: nur vorhandene Abos. ElevenLabs rund 950 Zeichen je Video (bei 10 Punkten 1.200), bis 2.000 je Seite und Woche (Budget-Deckel 2.800 im Lauf).
 #
 # Noetige Repo-Secrets: ELEVENLABS_API_KEY, BUFFER_API_KEY_PPTIP (Buffer-Konto mit den drei YouTube-Kanaelen),
+# ANTHROPIC_API_KEY (Umschreiben der Relevanz-Saetze, ohne Schluessel bleibt der Originalsatz),
 # LINKEDIN_ASSETS_TOKEN (Schreibrecht auf MarceLehmann/linkedin-assets: Buffer holt das Video von der Pages-URL dieses Repos).
 # Manueller Start: dry_run = true zeigt nur Auswahl und Texte, publish = true plant zusaetzlich bei Buffer ein.
 on:
@@ -29,7 +30,6 @@ on:
 
 permissions:
   contents: read
-  models: read # GitHub Models fuer das Umschreiben der Relevanz-Saetze (kein neues Secret)
 
 concurrency:
   group: weekly-video
@@ -78,7 +78,7 @@ jobs:
         working-directory: tools/weekly-video
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
-          GITHUB_TOKEN: ${{ github.token }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }} # Relevanz-Saetze umschreiben (claude-haiku-5-5)
           WEEK: ${{ inputs.week }}
           DRY: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run || 'false' }}
         run: |
