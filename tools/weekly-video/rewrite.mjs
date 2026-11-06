@@ -8,7 +8,7 @@ import { spawnSync } from 'node:child_process';
 
 export const GH_MODELS_URL = 'https://models.github.ai/inference/chat/completions';
 export const GH_MODEL = 'openai/gpt-4.1-mini';
-export const MAX_WORDS = 24; // ca. 18 Woerter Inhalt plus Einleitung "Fuer dich heisst das:"
+export const MAX_WORDS = 20; // ca. 14 Woerter Inhalt plus Einleitung "Fuer dich heisst das:" (Short bleibt so unter 90 s)
 export const LEAD = { de: 'Für dich heisst das:', en: 'For you, that means:' };
 
 // Pruefregeln: gueltig ist nur ein einzelner, kurzer Satz in Du-Form ohne Gedankenstrich und ohne ß.
@@ -32,8 +32,8 @@ export function validateRewrite(text, lang, maxWords = MAX_WORDS) {
 
 function prompt(items, lang) {
   const rules = lang === 'de'
-    ? `Schreibe zu jedem Beitrag EINEN Relevanz-Satz auf Deutsch (Schweizer Schreibweise: "ss" statt "ß"). Regeln: Du-Form, nie "Sie". Beginne mit "${LEAD.de}" und sage dann in höchstens 18 Wörtern, was das für KMU, Admins oder Maker bedeutet. Sachlich, ohne Hype, keine Gedankenstriche (Bindestriche in Wörtern wie Power-Automate-Flow bleiben), echte Umlaute (ä, ö, ü), nie ae/oe/ue. Keine Aufforderung und keine Pflicht: Beschreibe die Folge oder den Nutzen (z. B. "Du kannst ...", "Bei dir ändert sich ..."), vermeide "du musst" und "du solltest". Nach dem Doppelpunkt beginnt der Satz mit grossem Anfangsbuchstaben. Verwende nur Fakten aus dem Titel und dem Originalsatz, erfinde nichts dazu. Genau ein Satz, Punkt am Ende.`
-    : `Write ONE relevance sentence in English for each post. Rules: speak to the reader as "you". Start with "${LEAD.en}" and then say in at most 18 words what this means for SMEs, admins or makers. Factual, no hype, no dashes (hyphens inside words like Power-Automate-Flow are fine), no imperative instructions (turn "Place the gallery ..." into a statement). Use only facts from the title and the original sentence, add nothing new. Exactly one sentence, ending with a period.`;
+    ? `Schreibe zu jedem Beitrag EINEN Relevanz-Satz auf Deutsch (Schweizer Schreibweise: "ss" statt "ß"). Regeln: Du-Form, nie "Sie". Beginne mit "${LEAD.de}" und sage dann in höchstens 14 Wörtern, was das für KMU, Admins oder Maker bedeutet. Sachlich, ohne Hype, keine Gedankenstriche (Bindestriche in Wörtern wie Power-Automate-Flow bleiben), echte Umlaute (ä, ö, ü), nie ae/oe/ue. Keine Aufforderung und keine Pflicht: Beschreibe die Folge oder den Nutzen (z. B. "Du kannst ...", "Bei dir ändert sich ..."), vermeide "du musst" und "du solltest". Nach dem Doppelpunkt beginnt der Satz mit grossem Anfangsbuchstaben. Verwende nur Fakten aus dem Titel und dem Originalsatz, erfinde nichts dazu. Genau ein Satz, Punkt am Ende.`
+    : `Write ONE relevance sentence in English for each post. Rules: speak to the reader as "you". Start with "${LEAD.en}" and then say in at most 14 words what this means for SMEs, admins or makers. Factual, no hype, no dashes (hyphens inside words like Power-Automate-Flow are fine), no imperative instructions (turn "Place the gallery ..." into a statement). Use only facts from the title and the original sentence, add nothing new. Exactly one sentence, ending with a period.`;
   const list = items.map((x, i) => `${i + 1}. Titel: ${x.title}\n   Originalsatz: ${x.why}`).join('\n');
   return `${rules}\n\nAntworte nur mit einem JSON-Array von Strings, ein String je Beitrag, gleiche Reihenfolge, ohne weiteren Text.\n\n${list}`;
 }
