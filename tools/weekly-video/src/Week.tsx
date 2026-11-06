@@ -15,7 +15,7 @@ const BODY = inter.fontFamily;
 const C = { bg: "#F4F7F9", card: "#FFFFFF", line: "#D9E1E8", navy: "#243B4E", muted: "#52667A" };
 
 export type WWord = { t: string; s: number; e: number };
-export type WItem = { nr: number; start: number; end: number; title: string; source: string; tags: string[]; day: string };
+export type WItem = { nr: number; start: number; end: number; title: string; why?: string; source: string; tags: string[]; day: string };
 export type WeekProps = {
   audio: string;
   durationSec: number;
@@ -23,7 +23,7 @@ export type WeekProps = {
   siteName: string;
   domain: string;
   qrUrl: string;
-  labels: { kicker: string; week: string; range: string; aiNotice: string; outroLine: string; source: string; footer: string };
+  labels: { why?: string; kicker: string; week: string; range: string; aiNotice: string; outroLine: string; source: string; footer: string };
   introEnd: number;
   outroStart: number;
   items: WItem[];
@@ -145,6 +145,7 @@ const ItemScene: React.FC<{ it: WItem; t: number; p: WeekProps; portrait: boolea
         <div style={{ fontFamily: BODY, fontWeight: 700, fontSize: 30, color: C.muted }}>/ {total}</div>
       </div>
       <div style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: titleSize, lineHeight: 1.1, color: C.navy, marginTop: portrait ? 26 : 22, maxWidth: portrait ? 970 : 1500 }}>{it.title}</div>
+      {it.why ? <div style={{ opacity: tagA, marginTop: portrait ? 26 : 22, fontFamily: BODY, fontWeight: 600, fontSize: portrait ? 38 : 40, lineHeight: 1.25, color: C.navy, maxWidth: portrait ? 970 : 1500, borderLeft: `8px solid ${p.accent}`, paddingLeft: 24 }}>{p.labels.why} {it.why}</div> : null}
       <div style={{ opacity: tagA, marginTop: portrait ? 30 : 28 }}>
         <div style={{ fontFamily: BODY, fontWeight: 600, fontSize: portrait ? 32 : 34, color: C.muted, marginBottom: 18 }}>{p.labels.source}: {it.source}</div>
         <div>{it.tags.slice(0, 3).map((tg) => <Chip key={tg} text={tg} accent={p.accent} portrait={portrait} />)}</div>
