@@ -37,3 +37,6 @@ __pycache__/
 # in git.
 /tools/render-assets/fonts/
 /tools/pending-cards.json
+
+# Wochenvideo: erzeugte Videos und Ton-Cache gehoeren nicht ins Git
+/tools/weekly-video/out/

@@ -1,0 +1,110 @@
+name: Weekly Video
+run-name: Weekly Video (${{ github.event_name }})
+# Wochen-Short Deutsch und Englisch (9:16, hoechstens 60 Sekunden): Auswahl der fuenf Beitraege der Woche, Ton mit Marcels ElevenLabs-Stimme,
+# Video mit Remotion, Untertitel, Hinweis "KI-Stimme", QR. Danach Planung ueber Buffer auf YouTube: DE auf "Marcel Lehmann", EN auf "PowerPlatformTip",
+# fester Slot in Europe/Zurich (siehe tools/weekly-video/publish.json).
+#
+# STATUS: AN. Laeuft jeden Sonntag 08:00 UTC (09:00 oder 10:00 Schweizer Zeit), damit der Slot am selben Abend bzw. Montagmorgen sicher in der Zukunft liegt.
+# Kosten: nur vorhandene Abos. ElevenLabs rund 1'900 Zeichen je Seite und Woche (Budget-Deckel 2'000 im Lauf).
+#
+# Noetige Repo-Secrets: ELEVENLABS_API_KEY, BUFFER_API_KEY_PPTIP (Buffer-Konto mit den drei YouTube-Kanaelen),
+# LINKEDIN_ASSETS_TOKEN (Schreibrecht auf MarceLehmann/linkedin-assets: Buffer holt das Video von der Pages-URL dieses Repos).
+# Manueller Start: dry_run = true zeigt nur Auswahl und Texte, publish = true plant zusaetzlich bei Buffer ein.
+on:
+  schedule:
+    - cron: "0 8 * * 0"
+  workflow_dispatch:
+    inputs:
+      week:
+        description: "Woche im Format 2026-W45 (leer = aktuelle Woche)"
+        default: ""
+      dry_run:
+        description: "Nur Auswahl, Texte und Zeichenzahl zeigen (kein Ton, kein Video, kein Verbrauch)"
+        type: boolean
+        default: true
+      publish:
+        description: "Nach dem Rendern bei Buffer einplanen (YouTube DE und EN)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: weekly-video
+  cancel-in-progress: false
+
+jobs:
+  video:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Require the authorised actor
+        if: github.event_name == 'workflow_dispatch'
+        run: test "$GITHUB_ACTOR" = 'MarceLehmann'
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: System packages for Remotion (Chromium libraries, ffmpeg)
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg libnss3 libdbus-1-3 libatk1.0-0 libgbm-dev libxrandr2 libxkbcommon-dev libxfixes3 libxcomposite1 libxdamage1 libatk-bridge2.0-0 libpango-1.0-0 libcairo2 libcups2
+          sudo apt-get install -y -qq libasound2t64 || sudo apt-get install -y -qq libasound2
+      - uses: actions/cache@v4
+        with:
+          path: tools/weekly-video/node_modules
+          key: weekly-video-node-${{ hashFiles('tools/weekly-video/package.json') }}
+      - name: Install Remotion
+        working-directory: tools/weekly-video
+        run: npm install --no-audit --no-fund
+      - name: Unit tests (no API call)
+        working-directory: tools/weekly-video
+        run: node --test
+      - name: Already scheduled this week?
+        id: chk
+        working-directory: tools/weekly-video
+        env:
+          BUFFER_API_KEY_PPTIP: ${{ secrets.BUFFER_API_KEY_PPTIP }}
+          WEEK: ${{ inputs.week }}
+        run: |
+          set -euo pipefail
+          args=()
+          if [ -n "$WEEK" ]; then args+=(--week "$WEEK"); fi
+          node posted.mjs "${args[@]}" | tail -1 >> "$GITHUB_OUTPUT"
+      - name: Select, speak and render
+        if: steps.chk.outputs.posted != 'true'
+        working-directory: tools/weekly-video
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          WEEK: ${{ inputs.week }}
+          DRY: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run || 'false' }}
+        run: |
+          set -euo pipefail
+          args=(--root ../.. --lang de,en --budget 2000 --formats 9x16)
+          [ -n "$WEEK" ] && args+=(--week "$WEEK")
+          [ "$DRY" = "true" ] && args+=(--dry-run)
+          node run.mjs "${args[@]}"
+      - name: Keep the result for download
+        if: steps.chk.outputs.posted != 'true' && (github.event_name == 'schedule' || inputs.dry_run != true)
+        uses: actions/upload-artifact@v4
+        with:
+          name: weekly-video
+          path: |
+            tools/weekly-video/out/*/*.mp4
+            tools/weekly-video/out/*/*.srt
+            tools/weekly-video/out/*/*.md
+            tools/weekly-video/out/*/*.txt
+            tools/weekly-video/out/*/manifest.json
+          retention-days: 14
+      - name: Schedule on YouTube via Buffer
+        if: steps.chk.outputs.posted != 'true' && (github.event_name == 'schedule' || (inputs.dry_run != true && inputs.publish == true))
+        working-directory: tools/weekly-video
+        env:
+          BUFFER_API_KEY_PPTIP: ${{ secrets.BUFFER_API_KEY_PPTIP }}
+          GH_TOKEN: ${{ secrets.LINKEDIN_ASSETS_TOKEN }}
+        run: |
+          set -euo pipefail
+          dir=$(ls -d out/20*-W*/ 2>/dev/null | sort | tail -1 || true)
+          if [ -z "$dir" ]; then echo "Kein Video diese Woche (weniger als 3 Beitraege), nichts zu planen."; exit 0; fi
+          node publish.mjs --dir "$dir" --apply

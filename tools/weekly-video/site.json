@@ -1,0 +1,116 @@
+{
+  "id": "governance",
+  "name": "Power Platform Governance",
+  "domain": "powerplatformgovernance.com",
+  "accent": "#0F6CBD",
+  "voiceId": "3wglDJufK4dcFGrgeITn",
+  "model": "eleven_multilingual_v2",
+  "maxCharsPerVideo": 1000,
+  "tagWeights": {
+    "security": 3,
+    "governance": 3,
+    "dlp": 3,
+    "compliance": 2,
+    "ownership": 2,
+    "environments": 2,
+    "alm": 2,
+    "coe": 2,
+    "copilot-studio": 2,
+    "power-automate": 1,
+    "dataverse": 1,
+    "admin": 2,
+    "licensing": 1
+  },
+  "tagLabels": {
+    "copilot-studio": "Copilot Studio",
+    "power-automate": "Power Automate",
+    "power-apps": "Power Apps",
+    "dataverse": "Dataverse",
+    "power-bi": "Power BI",
+    "ai-builder": "AI Builder",
+    "fabric": "Fabric",
+    "connectors": "Connectors",
+    "roadmap": "Roadmap",
+    "licensing": "Licensing",
+    "admin": "Admin",
+    "governance": "Governance",
+    "security": "Security",
+    "dlp": "DLP",
+    "alm": "ALM",
+    "environments": "Environments",
+    "ownership": "Ownership",
+    "coe": "CoE",
+    "compliance": "Compliance"
+  },
+  "text": {
+    "de": {
+      "intro": "{name}, Kalenderwoche {kw}. Fünf Beiträge der Woche, zusammengefasst nach Quelle.",
+      "ordinals": [
+        "Eins",
+        "Zwei",
+        "Drei",
+        "Vier",
+        "Fünf"
+      ],
+      "source": "Quelle",
+      "outro": "Alle Beiträge mit Quellen findest du auf {domain}. Stimme und Untertitel sind KI-generiert.",
+      "kicker": "Wochenrückblick",
+      "week": "Kalenderwoche {kw}",
+      "aiNotice": "KI-Stimme",
+      "outroLine": "Alle Beiträge mit Quelle",
+      "months": [
+        "Januar",
+        "Februar",
+        "März",
+        "April",
+        "Mai",
+        "Juni",
+        "Juli",
+        "August",
+        "September",
+        "Oktober",
+        "November",
+        "Dezember"
+      ]
+    },
+    "en": {
+      "intro": "{name}, week {kw}. Five posts of the week, summarised from their sources.",
+      "ordinals": [
+        "One",
+        "Two",
+        "Three",
+        "Four",
+        "Five"
+      ],
+      "source": "Source",
+      "outro": "Find all posts with their sources at {domain}. Voice and subtitles are AI-generated.",
+      "kicker": "Weekly recap",
+      "week": "Week {kw}",
+      "aiNotice": "AI voice",
+      "outroLine": "All posts with sources",
+      "months": [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+      ]
+    }
+  },
+  "youtube": {
+    "de": {
+      "title": "Power Platform News KW {kw}/{year}: {tags} | {name}"
+    },
+    "en": {
+      "title": "Power Platform News Week {kw}, {year}: {tags} | {name}"
+    }
+  },
+  "tagCap": 6
+}
