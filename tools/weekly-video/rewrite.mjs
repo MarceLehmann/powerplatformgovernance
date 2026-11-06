@@ -1,13 +1,15 @@
 // Relevanz-Saetze vor dem Vertonen umschreiben (ein LLM-Schritt, mit zwingendem Rueckfall auf den Originalsatz).
 // Quellen der Saetze sind oeffentliche News-Zusammenfassungen, keine Kundendaten.
 // Anbieter (Reihenfolge):
-//   1. Azure AI Foundry per az-Token (nur lokal): REWRITE_FOUNDRY_ENDPOINT (+ optional REWRITE_FOUNDRY_SUBSCRIPTION), nie mit Schluessel
-//   2. GitHub Models mit GITHUB_TOKEN (GitHub Action: Workflow-Permission "models: read", kein neues Secret)
+//   1. Anthropic Messages API, wenn ANTHROPIC_API_KEY gesetzt ist (GitHub Action: Repo-Secret), Modell claude-haiku-5-5
+//   2. Azure AI Foundry per az-Token (nur lokal): REWRITE_FOUNDRY_ENDPOINT (+ optional REWRITE_FOUNDRY_SUBSCRIPTION), nie mit Schluessel
+//   3. sonst Originalsatz (GitHub Models ist eingestellt)
+// Der Schluessel wird nie ausgegeben oder geloggt.
 // REWRITE_DISABLE=1 schaltet den Schritt aus, dann bleibt der Originalsatz.
 import { spawnSync } from 'node:child_process';
 
-export const GH_MODELS_URL = 'https://models.github.ai/inference/chat/completions';
-export const GH_MODEL = 'openai/gpt-4.1-mini';
+export const ANTHROPIC_URL = 'https://api.anthropic.com/v1/messages';
+export const ANTHROPIC_MODEL = 'claude-haiku-5-5';
 export const MAX_WORDS = 20; // ca. 14 Woerter Inhalt plus Einleitung "Fuer dich heisst das:" (Short bleibt so unter 90 s)
 export const LEAD = { de: 'Für dich heisst das:', en: 'For you, that means:' };
 
@@ -49,12 +51,13 @@ function azToken(subscription) {
 // Liefert { name, url, headers, body } je nach Anbieter oder null, wenn keiner konfiguriert ist
 export function providerRequest(messages, env = process.env, getToken = azToken) {
   if (env.REWRITE_DISABLE === '1') return null;
+  if (env.ANTHROPIC_API_KEY) {
+    return { name: 'anthropic', url: ANTHROPIC_URL, headers: { 'x-api-key': env.ANTHROPIC_API_KEY, 'anthropic-version': '2023-06-01', 'Content-Type': 'application/json' }, body: { model: env.REWRITE_MODEL || ANTHROPIC_MODEL, max_tokens: 4000, thinking: { type: 'disabled' }, messages } };
+  }
   if (env.REWRITE_FOUNDRY_ENDPOINT) {
     const tok = getToken(env.REWRITE_FOUNDRY_SUBSCRIPTION);
     return { name: 'foundry', url: env.REWRITE_FOUNDRY_ENDPOINT, headers: { Authorization: `Bearer ${tok}`, 'Content-Type': 'application/json' }, body: { messages, max_completion_tokens: 1200 } };
   }
-  const gh = env.GITHUB_MODELS_TOKEN || env.GITHUB_TOKEN;
-  if (gh) return { name: 'github-models', url: GH_MODELS_URL, headers: { Authorization: `Bearer ${gh}`, Accept: 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28', 'Content-Type': 'application/json' }, body: { model: env.REWRITE_MODEL || GH_MODEL, messages, temperature: 0.3, max_tokens: 1200 } };
   return null;
 }
 
@@ -75,9 +78,16 @@ export async function rewriteRelevance({ items, lang, env = process.env, fetchFn
     const req = providerRequest([{ role: 'user', content: prompt(todo, lang) }], env, getToken);
     if (!req) { log(`[rewrite ${lang}] kein LLM konfiguriert, Originalsaetze bleiben`); return out; }
     const r = await fetchFn(req.url, { method: 'POST', headers: req.headers, body: JSON.stringify(req.body), signal: AbortSignal.timeout(60000) });
-    if (!r.ok) throw new Error(`${req.name} HTTP ${r.status}: ${(await r.text()).slice(0, 160)}`);
+    if (!r.ok) {
+      const key = env.ANTHROPIC_API_KEY;
+      let body = (await r.text()).slice(0, 160);
+      if (key) body = body.split(key).join('***');
+      throw new Error(`${req.name} HTTP ${r.status}: ${body}`);
+    }
     const j = await r.json();
-    const arr = parseArray(j.choices?.[0]?.message?.content);
+    const content = req.name === 'anthropic' ? (j.content || []).filter(c => c.type === 'text').map(c => c.text).join('') : j.choices?.[0]?.message?.content;
+    let arr;
+    try { arr = parseArray(content); } catch (e) { throw new Error(`${e.message} (${req.name}, stop_reason=${j.stop_reason}, Bloecke=${(j.content || []).map(c => c.type).join(',')}, Anfang: ${String(content || '').slice(0, 120).replace(/\s+/g, ' ')})`); }
     todo.forEach((x, i) => {
       const t = typeof arr[i] === 'string' ? arr[i].trim() : arr[i];
       const bad = arr.length === todo.length ? validateRewrite(t, lang) : 'Anzahl passt nicht';
