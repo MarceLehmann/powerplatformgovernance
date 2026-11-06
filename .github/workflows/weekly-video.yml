@@ -61,7 +61,19 @@ jobs:
       - name: Unit tests (no API call)
         working-directory: tools/weekly-video
         run: node --test
+      - name: Already scheduled this week?
+        id: chk
+        working-directory: tools/weekly-video
+        env:
+          BUFFER_API_KEY_PPTIP: ${{ secrets.BUFFER_API_KEY_PPTIP }}
+          WEEK: ${{ inputs.week }}
+        run: |
+          set -euo pipefail
+          args=()
+          if [ -n "$WEEK" ]; then args+=(--week "$WEEK"); fi
+          node posted.mjs "${args[@]}" | tail -1 >> "$GITHUB_OUTPUT"
       - name: Select, speak and render
+        if: steps.chk.outputs.posted != 'true'
         working-directory: tools/weekly-video
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
@@ -74,7 +86,7 @@ jobs:
           [ "$DRY" = "true" ] && args+=(--dry-run)
           node run.mjs "${args[@]}"
       - name: Keep the result for download
-        if: github.event_name == 'schedule' || inputs.dry_run != true
+        if: steps.chk.outputs.posted != 'true' && (github.event_name == 'schedule' || inputs.dry_run != true)
         uses: actions/upload-artifact@v4
         with:
           name: weekly-video
@@ -86,7 +98,7 @@ jobs:
             tools/weekly-video/out/*/manifest.json
           retention-days: 14
       - name: Schedule on YouTube via Buffer
-        if: github.event_name == 'schedule' || (inputs.dry_run != true && inputs.publish == true)
+        if: steps.chk.outputs.posted != 'true' && (github.event_name == 'schedule' || (inputs.dry_run != true && inputs.publish == true))
         working-directory: tools/weekly-video
         env:
           BUFFER_API_KEY_PPTIP: ${{ secrets.BUFFER_API_KEY_PPTIP }}
