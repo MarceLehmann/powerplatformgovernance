@@ -675,5 +675,35 @@
     "day": "2026-11-05",
     "title": "Unmanaged Developer Environments Are Being Removed",
     "expiredAt": "2026-11-06"
+  },
+  "815d50c8a68416d83250f50b": {
+    "status": "expired",
+    "day": "2026-11-06",
+    "title": "Claude models in Microsoft Copilot are coming to the EU Data Boundary",
+    "expiredAt": "2026-11-07"
+  },
+  "c2a1de6ccae89bda8da44d54": {
+    "status": "expired",
+    "day": "2026-11-06",
+    "title": "Guardrails for AI-assisted PnP PowerShell administration",
+    "expiredAt": "2026-11-07"
+  },
+  "971950f1045c761bad301992": {
+    "status": "expired",
+    "day": "2026-11-06",
+    "title": "Microsoft Graph PowerShell SDK: the new route for admin scripts",
+    "expiredAt": "2026-11-07"
+  },
+  "fb3ce86bc68922e9d90b9ae6": {
+    "status": "expired",
+    "day": "2026-11-06",
+    "title": "Power Platform Skills need guardrails before makers get unrestricted agent access",
+    "expiredAt": "2026-11-07"
+  },
+  "bda5cc3a5958f1c8b29dfd74": {
+    "status": "expired",
+    "day": "2026-11-06",
+    "title": "Test Dataverse security roles with real release scenarios",
+    "expiredAt": "2026-11-07"
   }
 }
