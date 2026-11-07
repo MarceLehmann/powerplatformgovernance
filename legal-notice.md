@@ -1,8 +1,6 @@
 ---
 layout: page
 title: Legal notice
-icon: fas fa-scale-balanced
-order: 8
 permalink: /legal-notice/
 lang: en
 translation_url: "/impressum/"
@@ -17,10 +15,10 @@ sitemap:
 KMUpower  
 Marcel Lehmann  
 Weidstrasse 1  
-8320 Fehraltorf  
+CH-8320 Fehraltorf  
 Switzerland
 
-Legal form: sole proprietorship (trade name KMUpower)  
+Legal form: sole proprietorship  
 UID: CHE-296.591.945  
 Registered in the UID register since: 01.01.2023
 

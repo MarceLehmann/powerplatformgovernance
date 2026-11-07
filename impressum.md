@@ -15,10 +15,10 @@ sitemap:
 KMUpower  
 Marcel Lehmann  
 Weidstrasse 1  
-8320 Fehraltorf  
+CH-8320 Fehraltorf  
 Schweiz
 
-Rechtsform: Einzelfirma (Handelsname KMUpower)  
+Rechtsform: Einzelfirma  
 UID: CHE-296.591.945  
 Im UID-Register erfasst seit: 01.01.2023
 
