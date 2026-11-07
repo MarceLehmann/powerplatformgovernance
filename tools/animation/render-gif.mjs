@@ -41,9 +41,9 @@ for (let i = 0; i < args.length; i += 2) {
     // LinkedIn-Beilage: MP4 4:5 (1080x1350, ohne Ton), das gleiche Video wie das Blog-GIF
     const portrait = await selectComposition({ serveUrl, id: "Tip4x5", inputProps: props, browserExecutable });
     await renderMedia({ composition: portrait, serveUrl, codec: "h264", outputLocation: outPath, inputProps: props, crf: 20, pixelFormat: "yuv420p", browserExecutable });
-    const bytes = fs.statSync(gifPath).size;
-    console.log("RESULT	" + JSON.stringify({ file: gifPath, width: 1080, height: 1350, bytes, seconds: portrait.durationInFrames / portrait.fps }));
-    console.log(`-> ${gifPath} ${(bytes / 1024).toFixed(0)} KB (MP4 4:5)`);
+    const bytes = fs.statSync(outPath).size;
+    console.log("RESULT	" + JSON.stringify({ file: outPath, width: 1080, height: 1350, bytes, seconds: portrait.durationInFrames / portrait.fps }));
+    console.log(`-> ${outPath} ${(bytes / 1024).toFixed(0)} KB (MP4 4:5)`);
     continue;
   }
   const composition = await selectComposition({ serveUrl, id: "Tip16x9", inputProps: props, browserExecutable });
