@@ -43,7 +43,7 @@ faq:
 
 ## TL;DR
 
-Power BI Premium stellte gemeinsame Kapazität bereit, damit viele Personen denselben Bericht öffnen konnten, mit den Größen P1 bis P5. Die Folge erklärt Power BI in Fabric, das Ende von Premium, getrennte Käufe für Kapazität und Lizenzen sowie die Bedeutung der F64-Grenze für Anzeigekosten.
+Power BI Premium stellte gemeinsame Kapazität bereit, damit viele Personen denselben Bericht öffnen konnten, mit den Grössen P1 bis P5. Die Folge erklärt Power BI in Fabric, das Ende von Premium, getrennte Käufe für Kapazität und Lizenzen sowie die Bedeutung der F64-Grenze für Anzeigekosten.
 
 {% include curated-attribution.html %}
 
