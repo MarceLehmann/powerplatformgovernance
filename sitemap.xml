@@ -13,7 +13,7 @@ sitemap: false
 <url>
 <loc>{{ site.url }}/</loc>
 </url>
-{%- assign excluded_paths = "/archives/|/tags/|/categories/|/privacy/|/submit/|/404" | split: "|" -%}
+{%- assign excluded_paths = "/archives/|/tags/|/categories/|/privacy/|/legal-notice/|/impressum/|/submit/|/404" | split: "|" -%}
 {%- assign listed_pages = site.tabs | concat: site.pages -%}
 {%- for item in listed_pages -%}
 {%- assign skip = false -%}

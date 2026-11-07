@@ -270,13 +270,16 @@
       {% endif %}
 
       {% assign id = snippet | split: '"' | first %}
-      {% assign anchor = '<a href="#'
-        | append: id
-        | append: '" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>'
-      %}
-
       {% assign left = snippet | split: mark_end | first %}
       {% assign right = snippet | slice: left.size, snippet.size %}
+      {% assign anchor_label = left | split: '">' | slice: 1, 99 | join: '">' | strip_html | escape %}
+      {% assign anchor = '<a href="#'
+        | append: id
+        | append: '" class="anchor text-muted" aria-label="#'
+        | append: ' '
+        | append: anchor_label
+        | append: '"><i class="fas fa-hashtag" aria-hidden="true"></i></a>'
+      %}
       {% assign left = left | replace_first: '">', '"><span class="me-2">' | append: '</span>' %}
 
       {% assign _new_content = _new_content | append: mark_start | append: left | append: anchor | append: right %}
