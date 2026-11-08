@@ -28,6 +28,7 @@ Suggest an article, blog, YouTube video or podcast episode about Power Platform 
     </div>
     <p class="submission-consent"><label><input name="publish_credit" type="checkbox" value="yes"> I agree to have my name and LinkedIn profile published with this suggestion.</label></p>
   </details>
+  <p class="submission-privacy">If you add your name or LinkedIn profile, it is used only to review your suggestion and, if you agree above, to credit you. See the <a href="{{ '/privacy/' | relative_url }}">privacy policy</a>.</p>
 
   <div class="visually-hidden" aria-hidden="true">
     <label for="submission-website">Website</label>
