@@ -89,7 +89,7 @@ Limit: this is not a backup. The archive records name, owner and date, not the a
 | | Starter Kit | Standard | Full | Default package |
 |---|---|---|---|---|
 | Price, install yourself | Free | CHF 49 | CHF 99 | CHF 79 |
-| Price, with setup | by effort, CHF 200 per hour | CHF 449 | CHF 899 | CHF 479 |
+| Price, with setup | by effort, CHF 225 per hour | CHF 449 | CHF 899 | CHF 479 |
 | Flows | 10 | 35 | 51 | 6 |
 | Connectors | standard only | standard only | 16 flows Premium | standard only |
 | Overview of apps, flows, agents | yes | yes | yes | Default environment only |
@@ -103,8 +103,8 @@ The flow counts do not include the setup flows: F00 and F51 come on top for the 
 
 - The Starter Kit costs nothing, so you see what the flows find in your tenant first.
 - Flows that change something run as a dry run first and only report what they would do.
-- With setup, I import and configure everything remotely with you. After that you get 30 days of support for errors in the flows and questions about using them.
-- Errors in the flows are fixed at no extra charge. Import help, licence questions and changes to your processes are billed at CHF 200 per hour.
+- With setup, I import and configure everything remotely with you.
+- Errors in the flows are fixed at no extra charge: report them within 30 days of delivery and I fix them within 5 working days ([full conditions](https://kmupower.com/vorlagen/bedingungen), in German). Import help, licence questions and changes to your processes are billed at CHF 225 per hour.
 
 Your next step: get the free Starter Kit, look at what is in your platform, then decide.
 
@@ -121,7 +121,7 @@ Sometimes the problem is not a missing flow but a missing decision: which model 
 - Hands-on setup of policies, environment strategy or the AdminHelper flows
 - Workshops for your admin team, remote
 
-Work is billed by the hour at CHF 200, after a short call to define the scope.
+Work is billed by the hour at CHF 225, after a short call to define the scope.
 
 <p><a class="btn btn-primary" href="https://kmupower.com/vorlagen#adminhelper">See packages and request help on kmupower.com</a></p>
 
