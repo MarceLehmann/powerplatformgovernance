@@ -107,7 +107,7 @@ layout: default
           {% assign alt = post.image.alt | xml_escape | default: 'Preview Image' %}
 
           <div class="col-md-5">
-            <img src="{{ src }}" alt="{{ alt }}" {{ lqip_attr }}>
+            <img src="{{ src }}" alt="{{ alt }}" width="{{ post.image.width | default: 1080 }}" height="{{ post.image.height | default: 1350 }}" {{ lqip_attr }}>
           </div>
 
           {% assign card_body_col = '7' %}
