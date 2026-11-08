@@ -45,7 +45,7 @@ The set of decisions and controls around who can build what, where, with which d
 
 ### Do I need Premium licensing for basic governance?
 
-No. Core controls (environment strategy, DLP policies, security roles) are available on a standard Power Apps/Power Automate license. Premium connectors and Dataverse become relevant for specific controls (for example, auditing Dataverse security roles), not for governance as a whole.
+No. Environment strategy and DLP policies are set by admins in the Power Platform admin center and need no Premium licence for your makers. Security roles apply in environments with Dataverse. Premium connectors, Dataverse and Managed Environments (which need licences with Premium use rights) become relevant for specific controls, not for governance as a whole.
 
 ### What's the difference between governance and a Center of Excellence (CoE)?
 
