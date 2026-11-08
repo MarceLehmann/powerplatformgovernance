@@ -104,7 +104,7 @@ The flow counts do not include the setup flows: F00 and F51 come on top for the 
 - The Starter Kit costs nothing, so you see what the flows find in your tenant first.
 - Flows that change something run as a dry run first and only report what they would do.
 - With setup, I import and configure everything remotely with you.
-- Errors in the flows are fixed at no extra charge: report them within 30 days of delivery and I fix them within 5 working days. Import help, licence questions and changes to your processes are billed at CHF 225 per hour.
+- Errors in the flows are fixed at no extra charge: report them within 30 days of delivery and I fix them within 5 working days ([full conditions](https://kmupower.com/vorlagen/bedingungen), in German). Import help, licence questions and changes to your processes are billed at CHF 225 per hour.
 
 Your next step: get the free Starter Kit, look at what is in your platform, then decide.
 
