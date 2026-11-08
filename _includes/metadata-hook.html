@@ -29,7 +29,7 @@
       "name": "Marcel Lehmann",
       "url": "https://powerplatformgovernance.com/about/",
       "jobTitle": "Power Platform Consultant & Trainer",
-      "award": "Microsoft MVP (Business Applications) - Power Apps and Power Automate, since 2023",
+      "award": "Microsoft MVP (Business Applications): Power Apps and Power Automate, since 2023",
       "worksFor": { "@id": "https://powerplatformgovernance.com/#organization" },
       "sameAs": [
         "https://www.linkedin.com/in/marcelehmann/",
@@ -95,12 +95,12 @@
     {
       "@type": "Question",
       "name": "What is Power Platform governance, in practice?",
-      "acceptedAnswer": { "@type": "Answer", "text": "The set of decisions and controls around who can build what, where, with which data and connectors - environment strategy, Data Loss Prevention (DLP) policies, ALM and ownership of what gets built. It's less about restricting makers and more about making sure the platform stays manageable as adoption grows." }
+      "acceptedAnswer": { "@type": "Answer", "text": "The set of decisions and controls around who can build what, where, with which data and connectors: environment strategy, Data Loss Prevention (DLP) policies, ALM and ownership of what gets built. It's less about restricting makers and more about making sure the platform stays manageable as adoption grows." }
     },
     {
       "@type": "Question",
       "name": "Do I need Premium licensing for basic governance?",
-      "acceptedAnswer": { "@type": "Answer", "text": "No. Core controls - environment strategy, DLP policies, security roles - are available on a standard Power Apps/Power Automate license. Premium connectors and Dataverse become relevant for specific controls, not for governance as a whole." }
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Core controls (environment strategy, DLP policies, security roles) are available on a standard Power Apps/Power Automate license. Premium connectors and Dataverse become relevant for specific controls, not for governance as a whole." }
     },
     {
       "@type": "Question",
@@ -144,3 +144,22 @@
 </script>
 {%- endif -%}
 
+{%- unless page.url == '/' or page.url == '/about/' or page.layout == 'post' -%}
+{%- comment -%}
+  Tab- und Listenseiten (FAQ, Archiv, Datenschutz, Tags, ...): jekyll-seo-tag gaebe dort
+  BlogPosting ohne author und image aus. Stattdessen eine WebPage mit Verweis auf die
+  Organisation (dieselbe @id wie bei den Beitraegen).
+{%- endcomment -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": {{ page.title | default: site.title | jsonify }},
+  "description": {{ page.description | default: site.description | jsonify }},
+  "url": {{ page.url | absolute_url | jsonify }},
+  "inLanguage": {{ page.lang | default: site.lang | jsonify }},
+  "isPartOf": { "@type": "WebSite", "name": {{ site.title | jsonify }}, "url": "https://powerplatformgovernance.com/" },
+  "publisher": { "@id": "https://powerplatformgovernance.com/#organization" }
+}
+</script>
+{%- endunless -%}
