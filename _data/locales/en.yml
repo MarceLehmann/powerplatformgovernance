@@ -10,3 +10,11 @@ tabs:
 
 skip_link: Skip to main content
 back_to_top: Back to top
+
+copyright:
+  license:
+    template: Summary by KMUpower, licensed under :LICENSE_NAME. Rights to the original article remain with its author.
+  brief: Some rights reserved.
+  verbose: >-
+    The summaries on this site are written by KMUpower and licensed under Creative Commons Attribution 4.0 (CC BY 4.0).
+    The original articles and their rights remain with their authors.

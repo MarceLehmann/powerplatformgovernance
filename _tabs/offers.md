@@ -123,7 +123,7 @@ Sometimes the problem is not a missing flow but a missing decision: which model 
 
 Work is billed by the hour at CHF 225, after a short call to define the scope.
 
-<p><a class="btn btn-primary" href="https://kmupower.com/vorlagen#adminhelper">See packages and request help on kmupower.com</a></p>
+<p><a class="btn btn-primary" href="https://outlook.office.com/book/termin@kmupower.com/">Book an intro call</a></p>
 
 ## Good to know
 

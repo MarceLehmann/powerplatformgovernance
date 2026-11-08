@@ -10,11 +10,15 @@ sitemap:
   changefreq: yearly
 ---
 
-**Last Updated:** October 30, 2026
+**Last Updated:** November 8, 2026
 
 ## Introduction
 
 Welcome to Power Platform Governance ("we," "our," or "us"), a project of Marcel Lehmann / KMUpower. This Privacy Policy explains how we collect, use, disclose and safeguard information when you visit [powerplatformgovernance.com](https://powerplatformgovernance.com).
+
+## Controller
+
+The controller for the processing described here is Marcel Lehmann, sole proprietorship (Einzelfirma) trading as "KMUpower", Weidstrasse 1, 8320 Fehraltorf, Switzerland, registered in the Swiss UID register since January 1, 2023 under UID CHE-296.591.945. Contact: [info@kmupower.com](mailto:info@kmupower.com). Further operator details are in the [Legal Notice](/legal-notice/).
 
 ## Information We Collect
 
@@ -30,6 +34,8 @@ For each page view, GoatCounter receives the page address, the referring page, t
 To avoid counting a reload as a new visit, a combination of site, IP address and User-Agent is kept in memory only, for at most 8 hours, and is never written to disk. The stored counts cannot be linked to each other or to an individual person.
 
 ### Information You Provide Voluntarily
+If you write to [info@kmupower.com](mailto:info@kmupower.com), we process your e-mail address and the content of your message to answer you. E-mail is handled with Microsoft 365 (Microsoft) as our processor. Legal basis: our legitimate interest in answering enquiries and, where your message concerns a contract, the performance of it (Art. 6(1)(f) and (b) GDPR).
+
 If you use the [content submission form](/submit/) to suggest an article for curation, we collect:
 - **The suggested article/blog/RSS URL** (required)
 - **Your name and LinkedIn profile URL** (optional, only if you choose to add them)
@@ -37,7 +43,7 @@ If you use the [content submission form](/submit/) to suggest an article for cur
 
 Suggestions (from the form or from AI assistants via our MCP interface) are received by our own submission service on Microsoft Azure (region Switzerland North). To stop spam, it limits how many suggestions can be sent per hour. For this, your IP address is used only at the moment of sending: it is turned into a one-way hash that changes every day, and only that hash and a counter are stored. Your IP address itself is never stored. The service also checks once that the suggested link is reachable.
 
-We only publish your name and LinkedIn profile alongside a curated summary if you explicitly tick the "I agree to have my name and LinkedIn profile published with this suggestion" checkbox. If you leave it unticked, your name and profile are used only to credit/contact you privately about the suggestion and are never shown on the site.
+The legal basis for processing a suggestion is our legitimate interest in curating the site and protecting the form against spam (Art. 6(1)(f) GDPR). Publishing your name and LinkedIn profile is based on your consent (Art. 6(1)(a) GDPR). We only publish your name and LinkedIn profile alongside a curated summary if you explicitly tick the "I agree to have my name and LinkedIn profile published with this suggestion" checkbox. If you leave it unticked, your name and profile are used only to credit/contact you privately about the suggestion and are never shown on the site.
 
 ## How We Use Your Information
 
@@ -69,12 +75,17 @@ We use the following third-party services:
 - **Provider**: Microsoft (Azure Functions and Azure Storage, region Switzerland North)
 - **Purpose**: receive content suggestions, check them for spam and pass them on for review
 - **Data**: the suggested URL, optional name and LinkedIn profile, and a daily changing hash of your IP address for the spam limit (no IP address in clear text)
+- **Location and transfer**: the data is stored in Switzerland North. Microsoft is based in the USA and, according to its privacy statement, is certified under the EU-U.S. Data Privacy Framework and the Swiss-U.S. Data Privacy Framework; where needed, Standard Contractual Clauses apply as a fallback. Microsoft acts as our processor.
+- **Legal basis**: legitimate interest in receiving and checking suggestions (Art. 6(1)(f) GDPR); consent for the optional publication of your name and profile (Art. 6(1)(a) GDPR)
 - Microsoft's [Privacy Statement](https://privacy.microsoft.com/privacystatement) applies
 
 ### GitHub Pages
 Our website is hosted on GitHub Pages:
 - GitHub's [Privacy Policy](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement) applies
-- Server logs may be collected by GitHub/Fastly (our CDN) for security and performance purposes
+- **Provider**: GitHub, Inc., USA, which delivers the site through the content delivery network of Fastly, Inc., USA
+- **Data**: when you open a page, technical access data such as your IP address, the requested page, date and time, and browser information is processed by GitHub and Fastly in their server logs for security and performance purposes. We do not receive these logs and cannot see your IP address.
+- **Legal basis**: our legitimate interest in a secure and reliable website (Art. 6(1)(f) GDPR)
+- **Transfer to the USA**: according to its privacy statement, GitHub is certified under the EU-U.S. Data Privacy Framework and the Swiss-U.S. Data Privacy Framework; where needed, Standard Contractual Clauses apply as a fallback. Retention of these logs is set by GitHub and Fastly.
 
 ### LinkedIn (optional, submission form only)
 If you choose to add a LinkedIn profile URL to a content suggestion and opt in to publication, that URL is displayed on the resulting page as a clickable link. We do not otherwise integrate with or receive data from LinkedIn.
@@ -93,6 +104,8 @@ However, no method of transmission over the internet is 100% secure, and we cann
 
 - **Analytics data**: GoatCounter only stores aggregate counts (see above), which contain no personal data; the in-memory visit marker is discarded after at most 8 hours
 - **Content suggestions**: Retained as long as needed to review and, if published, attribute the curated summary; you may request deletion at any time (see "Your Rights" below)
+- **E-mail correspondence**: Kept as long as needed for the purpose, then deleted. Statutory retention duties (for example 10 years for accounting records, Art. 958f Swiss Code of Obligations) remain reserved.
+- **Server logs at GitHub/Fastly**: Retention is set by these providers, not by us
 
 ## Your Rights (GDPR / Swiss FADP)
 
@@ -101,8 +114,11 @@ Depending on where you live, you may have the following rights regarding your pe
 1. **Right to Access**: Request a copy of the personal data we hold about you
 2. **Right to Rectification**: Correct inaccurate or incomplete data
 3. **Right to Erasure**: Request deletion of your personal data (e.g. removing your name/LinkedIn credit from a published post)
-4. **Right to Object**: Object to processing of your personal data
-5. **Right to Withdraw Consent**: Withdraw your earlier consent to publish your name/LinkedIn credit at any time
+4. **Right to Restriction**: Request that we restrict the processing of your personal data
+5. **Right to Object**: Object to processing based on our legitimate interests
+6. **Right to Data Portability**: Receive the data you provided to us in a common, machine-readable format, or have it transferred to another controller
+7. **Right to Withdraw Consent**: Withdraw your earlier consent to publish your name/LinkedIn credit at any time, with effect for the future
+8. **Right to Lodge a Complaint**: With the Swiss Federal Data Protection and Information Commissioner ([FDPIC/EDÖB](https://www.edoeb.admin.ch)) or with a supervisory authority in your EU/EEA country of residence
 
 To exercise these rights, contact us at: [info@kmupower.com](mailto:info@kmupower.com)
 
@@ -120,7 +136,7 @@ Every curated summary links to its original source on another website. We are no
 
 ## Contact Us
 
-If you have questions about this Privacy Policy or our privacy practices, please contact:
+If you have questions about this Privacy Policy or want to exercise your rights, contact:
 
 **Marcel Lehmann**
 Email: [info@kmupower.com](mailto:info@kmupower.com)
