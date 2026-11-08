@@ -714,5 +714,17 @@
     "text": "Power Platform AI updates need environment, capacity and approval checks\n\nCopilot Studio workflows can call Copilot Chat or Cowork, extract structured data and support multiple authors, but capacity exhaustion can block new runs. Check each environment's assigned capacity and AI Builder contract dates, and compare SharePoint form output with flow-generated documents because conditional field visibility does not carry over.\n\nSource: Flow Alt Delete\n\nFull summary: https://powerplatformgovernance.com/en/posts/power-platform-ai-updates-need-environment-capacity-and-approval-656f99a9/\n\n#PowerPlatformGovernanceDaily #CopilotStudio #PowerAutomate",
     "bufferPostId": "6aef717a9214322f680cfac7",
     "dueAt": "2026-11-08T08:00:00.000Z"
+  },
+  "83a7b166bb345da8be7b5478": {
+    "status": "expired",
+    "day": "2026-11-07",
+    "title": "Customer Insights Journeys triggers: choosing between interaction and Dataverse records",
+    "expiredAt": "2026-11-08"
+  },
+  "8deeaa38cc78626c72df375b": {
+    "status": "expired",
+    "day": "2026-11-07",
+    "title": "Fabric vs Power BI Premium: Capacity, Licences and the Transition",
+    "expiredAt": "2026-11-08"
   }
 }
