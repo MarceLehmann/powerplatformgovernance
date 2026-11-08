@@ -20,6 +20,8 @@ Welcome to Power Platform Governance ("we," "our," or "us"), a project of Marcel
 
 The controller for the processing described here is Marcel Lehmann, sole proprietorship (Einzelfirma) trading as "KMUpower", Weidstrasse 1, 8320 Fehraltorf, Switzerland, registered in the Swiss UID register since January 1, 2023 under UID CHE-296.591.945. Contact: [info@kmupower.com](mailto:info@kmupower.com). Further operator details are in the [Legal Notice](/legal-notice/).
 
+**EU representative:** we have not appointed a representative in the EU under Art. 27 GDPR. We process data of people in the EU only occasionally, not on a large scale and without special categories of personal data; the risk to the people concerned is likely to be low (Art. 27(2)(a) GDPR). If our business in the EU grows, we will reassess this.
+
 ## Information We Collect
 
 ### Automatically Collected Information
