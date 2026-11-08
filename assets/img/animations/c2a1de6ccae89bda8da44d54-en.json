@@ -1,0 +1,44 @@
+{
+ "title": "Guard AI-assisted admin commands",
+ "subtitle": "Check the environment, confirm connection, then protect execution.",
+ "steps": [
+  {
+   "product": "generic",
+   "icon": "check",
+   "productLabel": "PnP PowerShell",
+   "title": "Run the pre-flight check",
+   "actions": [
+    "PowerShell",
+    "PnP module",
+    "connection state"
+   ],
+   "evidence": "A pre-flight check verifies PowerShell, the PnP module and connection state"
+  },
+  {
+   "product": "generic",
+   "icon": "link",
+   "productLabel": "PnP PowerShell",
+   "title": "Confirm the live connection",
+   "actions": [
+    "Get-PnPWeb"
+   ],
+   "evidence": "before Get-PnPWeb confirms the live connection."
+  },
+  {
+   "product": "generic",
+   "icon": "shield",
+   "productLabel": "MCP Server",
+   "title": "Protect tool execution",
+   "actions": [
+    "read-only mode",
+    "approval",
+    "confirmations"
+   ],
+   "evidence": "read-only mode, destructive-command confirmations, timeouts and approval protect execution."
+  }
+ ],
+ "punchline": [
+  "Verify first",
+  "Protect execution"
+ ]
+}
