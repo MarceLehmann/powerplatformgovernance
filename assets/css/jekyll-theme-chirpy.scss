@@ -12,14 +12,20 @@
 ';
 
 @mixin governance-light {
+	--highlight-lineno-color: #666666;
+	--site-subtitle-color: #5c5c5c;
 	--link-color: #146c43;
 	--toc-highlight: #146c43;
 	--sidebar-bg: #f1f6f3;
-	--sidebar-active-color: #146c43;
+	--sidebar-active-color: #0f5132;
 	--sidebar-hover-bg: #e4eee8;
+	--sidebar-muted-color: #565d63;
 }
 
 @mixin governance-dark {
+	--site-subtitle-color: #b0b0b0;
+	--sidebar-muted-color: #b0b0b0;
+	--highlight-lineno-color: #a6a6a6;
 	--link-color: #80cfaa;
 	--toc-highlight: #80cfaa;
 	--sidebar-bg: #1c2420;
@@ -34,6 +40,29 @@
 }
 
 #sidebar #avatar:empty { display: none; }
+
+// Gesamtpruefung Runde 3: Kontrast der Outline-Knoepfe ("Read this in English", "Ton an") mindestens 4.5:1
+.btn.btn-outline-primary:not(:hover):not(:focus):not(:active) {
+	--bs-btn-color: var(--link-color);
+	--bs-btn-border-color: var(--link-color);
+}
+
+// Skip-Link: nur bei Tastaturfokus sichtbar
+.skip-link {
+	position: absolute;
+	left: 0.5rem;
+	top: -4rem;
+	z-index: 2000;
+	padding: 0.6rem 1rem;
+	border-radius: 0.375rem;
+	background: var(--link-color);
+	color: var(--main-bg);
+	font-weight: 600;
+	text-decoration: none;
+	&:focus { top: 0.5rem; color: var(--main-bg); outline: 2px solid var(--main-bg); outline-offset: 2px; }
+}
+#main-content:focus { outline: none; }
+
 
 // Chirpy's bundled Bootstrap subset does not include the `.visually-hidden`
 // utility, so the submission form's honeypot field (which relies on it to

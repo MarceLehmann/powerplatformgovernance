@@ -53,6 +53,12 @@
   </p>
 </footer>
 
+<p class="text-muted" style="margin: 0 0 0.75rem 0; text-align: center; font-size: 0.85rem;">
+  <a href="{{ '/privacy/' | relative_url }}">{% if include.lang == 'de' %}Datenschutz{% else %}Privacy Policy{% endif %}</a>
+  &middot;
+  {% if include.lang == 'de' %}<a href="{{ '/impressum/' | relative_url }}">Impressum</a>{% else %}<a href="{{ '/legal-notice/' | relative_url }}">Legal notice</a>{% endif %}
+</p>
+
 <p
   class="text-muted"
   style="margin: 0 0 1.5rem 0; text-align: center; font-size: 0.75rem; line-height: 1.5;"
