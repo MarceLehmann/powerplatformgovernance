@@ -726,5 +726,14 @@
     "day": "2026-11-07",
     "title": "Fabric vs Power BI Premium: Capacity, Licences and the Transition",
     "expiredAt": "2026-11-08"
+  },
+  "7bfbae7b2fb0b14c91bc32c5": {
+    "status": "queued",
+    "day": "2026-11-08",
+    "kind": "image",
+    "title": "Copilot Studio Agents Need Clear Security Boundaries",
+    "text": "Copilot Studio Agents Need Clear Security Boundaries\n\nCopilot Studio agents connect AI to data and actions, so admins and makers should set security boundaries, review data access and connectors, verify authentication and sharing, and assess what each agent can reach to reduce data exposure while keeping makers productive and safe.\n\nSource: m365 FM\n\nFull summary: https://powerplatformgovernance.com/en/posts/copilot-studio-agents-need-clear-security-boundaries-7bfbae7b/\n\n#PowerPlatformGovernanceDaily #CopilotStudio",
+    "bufferPostId": "6af06e96229bf05dafb01ef2",
+    "dueAt": "2026-11-08T14:00:00.000Z"
   }
 }
