@@ -4,7 +4,7 @@ title: Privacy Policy
 icon: fas fa-user-shield
 order: 7
 permalink: /privacy/
-description: "Privacy Policy for Power Platform Governance - how we collect, use and protect your data."
+description: "Privacy Policy for Power Platform Governance: how we collect, use and protect your data."
 sitemap:
   priority: 0.3
   changefreq: yearly

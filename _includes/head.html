@@ -31,7 +31,7 @@
     own structured data - tools/check-site.rb requires at least one JSON-LD
     block per page and we don't have a hand-built replacement for those.
   {%- endcomment -%}
-  {%- if page.url == '/' or page.url == '/about/' or page.layout == 'post' -%}
+  {%- if true -%}
     {%- assign seo_ld_split = seo_tags | split: '<script type="application/ld+json">' -%}
     {%- if seo_ld_split.size > 1 -%}
       {%- assign seo_ld_tail = seo_ld_split[1] | split: '</script>' -%}

@@ -41,11 +41,11 @@ Either it hasn't been suggested yet, or it didn't pass the relevance check for t
 
 ### What is Power Platform governance, in practice?
 
-The set of decisions and controls around who can build what, where, with which data and connectors - environment strategy, Data Loss Prevention (DLP) policies, ALM and ownership of what gets built. It's less about restricting makers and more about making sure the platform stays manageable as adoption grows.
+The set of decisions and controls around who can build what, where, with which data and connectors: environment strategy, Data Loss Prevention (DLP) policies, ALM and ownership of what gets built. It's less about restricting makers and more about making sure the platform stays manageable as adoption grows.
 
 ### Do I need Premium licensing for basic governance?
 
-No. Core controls - environment strategy, DLP policies, security roles - are available on a standard Power Apps/Power Automate license. Premium connectors and Dataverse become relevant for specific controls (for example, auditing Dataverse security roles), not for governance as a whole.
+No. Core controls (environment strategy, DLP policies, security roles) are available on a standard Power Apps/Power Automate license. Premium connectors and Dataverse become relevant for specific controls (for example, auditing Dataverse security roles), not for governance as a whole.
 
 ### What's the difference between governance and a Center of Excellence (CoE)?
 
