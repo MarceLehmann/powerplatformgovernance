@@ -45,6 +45,12 @@ faq:
   answer: Ein funktionierender Workflow beweist keine angemessene Zugriffsbeschränkung.
     Es muss geprüft werden, dass Personen ohne passendes Profil gesicherte Felder
     nicht lesen können.
+animation:
+  video: /assets/img/animations/bda5cc3a5958f1c8b29dfd74-de.mp4
+  poster: /assets/img/animations/bda5cc3a5958f1c8b29dfd74-de.poster.webp
+  width: 800
+  height: 450
+  alt: "Ein Ablauf in vier Schritten zeigt das Testen von Dataverse-Sicherheitsrollen in UAT mit Nicht-Admin-Konten, kontrollierten Datensaetzen, erfolgreichen Workflows und verweigerten Zugriffen vor dem Release."
 ---
 
 ## TL;DR

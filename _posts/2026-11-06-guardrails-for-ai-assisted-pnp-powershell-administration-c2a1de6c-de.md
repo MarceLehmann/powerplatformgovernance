@@ -38,6 +38,12 @@ faq:
     zurück?
   answer: Der Server blendet Mandanten-IDs, Anwendungs-IDs und Zertifikat-Thumbprints
     aus Antworten aus, auch bei Konfigurationsdateien.
+animation:
+  video: /assets/img/animations/c2a1de6ccae89bda8da44d54-de.mp4
+  poster: /assets/img/animations/c2a1de6ccae89bda8da44d54-de.poster.webp
+  width: 800
+  height: 450
+  alt: "Die Sequenz zeigt zuerst einen Preflight fuer PowerShell, PnP-Modul und Verbindungsstatus, dann bestaetigt \"Get-PnPWeb\" die Live-Verbindung, danach schuetzen Genehmigungen, Bestaetigungen und Timeouts die Toolausfuehrung."
 ---
 
 ## TL;DR

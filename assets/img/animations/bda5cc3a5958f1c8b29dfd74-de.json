@@ -1,0 +1,50 @@
+{
+ "title": "Dataverse-Zugriff vor Release testen",
+ "subtitle": "Nicht-Admin-Zugriff in UAT mit erlaubten und verweigerten Workflow-Checks pruefen.",
+ "steps": [
+  {
+   "product": "dataverse",
+   "icon": "user",
+   "productLabel": "Dataverse",
+   "title": "Nicht-Admin-Personas in UAT nutzen",
+   "actions": [
+    "Nicht-Admin-Konten",
+    "kontrollierte UAT-Umgebung"
+   ]
+  },
+  {
+   "product": "dataverse",
+   "icon": "db",
+   "productLabel": "Dataverse",
+   "title": "Kontrollierte Datensaetze einrichten",
+   "actions": [
+    "kontrollierte Datensaetze"
+   ]
+  },
+  {
+   "product": "dataverse",
+   "icon": "check",
+   "productLabel": "Dataverse",
+   "title": "Erforderliche Aufgaben ausfuehren",
+   "actions": [
+    "reale Workflows",
+    "erfolgreiche Workflows"
+   ]
+  },
+  {
+   "product": "dataverse",
+   "icon": "shield",
+   "productLabel": "Dataverse",
+   "title": "Gesperrten Zugriff bestaetigen",
+   "actions": [
+    "verweigerter Zugriff",
+    "Spaltensicherheit",
+    "App-Zugriff"
+   ]
+  }
+ ],
+ "punchline": [
+  "Erforderliche Aufgaben ok",
+  "Gesperrter Zugriff bleibt zu"
+ ]
+}

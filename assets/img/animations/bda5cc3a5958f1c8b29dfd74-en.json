@@ -1,0 +1,54 @@
+{
+ "title": "Test Dataverse access before release",
+ "subtitle": "Validate non-admin access in UAT with allowed and denied workflow checks.",
+ "steps": [
+  {
+   "product": "dataverse",
+   "icon": "user",
+   "productLabel": "Dataverse",
+   "title": "Use non-admin personas in UAT",
+   "actions": [
+    "non-admin accounts",
+    "controlled UAT environment"
+   ],
+   "evidence": "Use representative non-admin accounts in a controlled UAT environment to complete end-to-end business tasks."
+  },
+  {
+   "product": "dataverse",
+   "icon": "db",
+   "productLabel": "Dataverse",
+   "title": "Set up controlled records",
+   "actions": [
+    "controlled records"
+   ],
+   "evidence": "Test Dynamics 365 CE security roles in UAT with representative non-admin accounts, controlled records and real workflows."
+  },
+  {
+   "product": "dataverse",
+   "icon": "check",
+   "productLabel": "Dataverse",
+   "title": "Run required business tasks",
+   "actions": [
+    "real workflows",
+    "successful workflows"
+   ],
+   "evidence": "Verify that required tasks succeed"
+  },
+  {
+   "product": "dataverse",
+   "icon": "shield",
+   "productLabel": "Dataverse",
+   "title": "Confirm blocked access stays blocked",
+   "actions": [
+    "denied access",
+    "column-level security",
+    "app access"
+   ],
+   "evidence": "and prohibited records, fields and actions remain blocked."
+  }
+ ],
+ "punchline": [
+  "Required tasks succeed",
+  "Blocked access stays blocked"
+ ]
+}

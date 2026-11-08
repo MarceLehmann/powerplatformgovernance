@@ -1,0 +1,41 @@
+{
+ "title": "Leitplanken fuer KI-Adminbefehle",
+ "subtitle": "Umgebung pruefen, Verbindung bestaetigen, dann Ausfuehrung schuetzen.",
+ "steps": [
+  {
+   "product": "generic",
+   "icon": "check",
+   "productLabel": "PnP PowerShell",
+   "title": "Preflight ausfuehren",
+   "actions": [
+    "PowerShell",
+    "PnP-Modul",
+    "Verbindungsstatus"
+   ]
+  },
+  {
+   "product": "generic",
+   "icon": "link",
+   "productLabel": "PnP PowerShell",
+   "title": "Live-Verbindung bestaetigen",
+   "actions": [
+    "\"Get-PnPWeb\""
+   ]
+  },
+  {
+   "product": "generic",
+   "icon": "shield",
+   "productLabel": "MCP Server",
+   "title": "Toolausfuehrung schuetzen",
+   "actions": [
+    "Read-only-Modus",
+    "Genehmigung",
+    "Bestaetigungen"
+   ]
+  }
+ ],
+ "punchline": [
+  "Zuerst pruefen",
+  "Ausfuehrung schuetzen"
+ ]
+}

@@ -38,6 +38,12 @@ faq:
   answer: It withholds tenant identifiers, application identifiers and certificate
     thumbprints from responses, including when configuration files supply connection
     details.
+animation:
+  video: /assets/img/animations/c2a1de6ccae89bda8da44d54-en.mp4
+  poster: /assets/img/animations/c2a1de6ccae89bda8da44d54-en.poster.webp
+  width: 800
+  height: 450
+  alt: "Sequence shows a pre-flight check for PowerShell, PnP module and connection state, then Get-PnPWeb confirms the live connection, then approvals, confirmations and timeouts protect tool execution."
 ---
 
 ## TL;DR

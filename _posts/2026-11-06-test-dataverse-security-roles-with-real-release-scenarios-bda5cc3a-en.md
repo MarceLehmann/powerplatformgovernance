@@ -41,6 +41,12 @@ faq:
 - question: Why test denied outcomes for Dataverse column security profiles?
   answer: A passing workflow does not prove access is appropriately limited. Verify
     that users without the relevant profile cannot read secured fields.
+animation:
+  video: /assets/img/animations/bda5cc3a5958f1c8b29dfd74-en.mp4
+  poster: /assets/img/animations/bda5cc3a5958f1c8b29dfd74-en.poster.webp
+  width: 800
+  height: 450
+  alt: "A four step flow shows testing Dataverse security roles in UAT with non-admin accounts, controlled records, successful workflows and denied access checks before release."
 ---
 
 ## TL;DR

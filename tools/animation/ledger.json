@@ -790,5 +790,61 @@
     "gif": false,
     "reason": "The post gives governance advice and test considerations, but it does not state one concrete 3 to 5 stage procedure in a fixed order.",
     "at": "2026-11-03"
+  },
+  "815d50c8a68416d83250f50b": {
+    "gif": false,
+    "reason": "This is a news and governance post describing an upcoming change and cautions, not a concrete 3 to 5 stage procedure stated in the text.",
+    "at": "2026-11-08"
+  },
+  "971950f1045c761bad301992": {
+    "gif": false,
+    "reason": "The post is a summary of capabilities and governance advice, not a concrete 3 to 5 stage procedure named in order.",
+    "at": "2026-11-08"
+  },
+  "fb3ce86bc68922e9d90b9ae6": {
+    "gif": false,
+    "reason": "This is governance and risk guidance about a setting, not a concrete 3 to 5 stage procedure stated in the post text.",
+    "at": "2026-11-08"
+  },
+  "7bfbae7b2fb0b14c91bc32c5": {
+    "gif": false,
+    "reason": "The post gives governance review points rather than a concrete 3 to 5 stage procedure, so any sequence would have to be inferred.",
+    "at": "2026-11-08"
+  },
+  "83a7b166bb345da8be7b5478": {
+    "gif": false,
+    "reason": "The post compares two trigger approaches and gives guidance, but it does not describe one concrete 3 to 5 stage procedure to follow.",
+    "at": "2026-11-08"
+  },
+  "8deeaa38cc78626c72df375b": {
+    "gif": false,
+    "reason": "This post is governance and transition guidance without a concrete 3 to 5 stage procedure stated in the text.",
+    "at": "2026-11-08"
+  },
+  "656f99a948f9738eafa5b744": {
+    "gif": false,
+    "reason": "The post is a governance roundup with checks and cautions, not a single concrete 3 to 5 stage procedure explicitly named in order.",
+    "at": "2026-11-08"
+  },
+  "c2a1de6ccae89bda8da44d54": {
+    "gif": true,
+    "reason": "The post describes a concrete 3 stage verification and protection sequence: pre-flight check, live connection check, then guarded execution.",
+    "at": "2026-11-08",
+    "evidence": [
+      "A pre-flight check verifies PowerShell, the PnP module and connection state",
+      "before Get-PnPWeb confirms the live connection.",
+      "read-only mode, destructive-command confirmations, timeouts and approval protect execution."
+    ]
+  },
+  "bda5cc3a5958f1c8b29dfd74": {
+    "gif": true,
+    "reason": "The post gives a concrete 4 stage test sequence for validating Dataverse security roles before release.",
+    "at": "2026-11-08",
+    "evidence": [
+      "Use representative non-admin accounts in a controlled UAT environment to complete end-to-end business tasks.",
+      "Test Dynamics 365 CE security roles in UAT with representative non-admin accounts, controlled records and real workflows.",
+      "Verify that required tasks succeed",
+      "and prohibited records, fields and actions remain blocked."
+    ]
   }
 }
