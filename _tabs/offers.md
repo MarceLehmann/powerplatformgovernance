@@ -16,7 +16,7 @@ Over time Microsoft 365 collects apps, flows and Copilot Studio agents. It is of
 
 - **The result:** an overview instead of a gut feeling. You see apps and flows without an owner and what is shared too openly.
 - **The start:** the import takes about 15 minutes. Then you switch the flows on one by one, read-only ones first. Anything that changes something runs as a dry run first and only reports what it would do.
-- **The effort:** once the flows are on, there is nothing to operate. The reports arrive as e-mail, you read them and decide.
+- **The effort:** once the flows are on, the reports arrive by e-mail without further work. You read them and decide. Now and then check that the flows still run; Standard and Full send a daily overview of failed flows.
 
 Start with the free Starter Kit. If you want more: Standard (CHF 49), Full (CHF 99) or, for the Default environment, the Default package (CHF 79). With setup they cost CHF 449, CHF 899 and CHF 479.
 
@@ -123,7 +123,7 @@ Sometimes the problem is not a missing flow but a missing decision: which model 
 
 Work is billed by the hour at CHF 225, after a short call to define the scope.
 
-<p><a class="btn btn-primary" href="https://kmupower.com/vorlagen#adminhelper">See packages and request help on kmupower.com</a></p>
+<p><a class="btn btn-primary" href="https://outlook.office.com/book/termin@kmupower.com/">Book an intro call</a></p>
 
 ## Good to know
 

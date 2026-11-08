@@ -8,7 +8,7 @@ translation_url: "/flows/"
 toc: true
 ---
 
-Das AdminHelper-Starter-Set besteht aus zehn Power-Automate-Flows, die deinen Tenant ansehen und per E-Mail berichten: vier Inventare (Umgebungen, Apps, Cloud-Flows, Copilot-Studio-Agents), eine tägliche Liste neu angelegter Umgebungen, ein DLP-Schnappschuss mit Änderungsprotokoll, ein wöchentlicher Bericht über Connectors, die DLP nicht blockieren kann, eine Liste der von der Plattform suspendierten Flows, eine Kapazitätswarnung und eine Prüfung auf Agents ohne Authentifizierung. Dazu kommen zwei Hilfsflows: F00 prüft deine Konfiguration, F51 bereitet die Ablageordner vor. Alle zehn laufen mit der Standard-Lizenz und lesen nur aus deinem Tenant. Geschrieben wird einzig die tägliche DLP-Schnappschuss-Datei in deine eigene SharePoint-Bibliothek.
+Das AdminHelper-Starter-Set besteht aus zehn Power-Automate-Flows, die deinen Tenant ansehen und per E-Mail berichten: vier Inventare (Umgebungen, Apps, Cloud-Flows, Copilot-Studio-Agents), eine tägliche Liste neu angelegter Umgebungen, ein DLP-Schnappschuss mit Änderungsprotokoll, ein wöchentlicher Bericht über Connectors, die DLP nicht blockieren kann, eine Liste der von der Plattform suspendierten Flows, eine Kapazitätswarnung und eine Prüfung auf Agents ohne Authentifizierung. Dazu kommen zwei Hilfsflows: F00 prüft deine Konfiguration, F51 bereitet die Ablageordner vor. Alle zehn laufen mit der Standard-Lizenz und ändern nichts in deinem Tenant. Geschrieben wird einzig die tägliche DLP-Schnappschuss-Datei in deine eigene SharePoint-Bibliothek.
 
 [This page in English](/flows/)
 

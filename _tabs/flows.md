@@ -10,7 +10,7 @@ toc: true
 description: "The ten AdminHelper starter flows for Power Platform admins: inventories for environments, apps, flows and Copilot Studio agents, DLP snapshots, unblockable connectors, capacity and agent authentication. Standard licence only, read-only, free by e-mail."
 ---
 
-The AdminHelper starter set consists of ten Power Automate flows that look at your tenant and report by e-mail: four inventories (environments, apps, cloud flows, Copilot Studio agents), a daily list of newly created environments, a DLP policy snapshot with change log, a weekly report on connectors that DLP cannot block, a list of flows the platform has suspended, a capacity warning and a check for agents without authentication. Two helper flows come with them: F00 checks your configuration and F51 prepares the storage folders. All ten work with the Standard licence and only read from your tenant. The only thing they write is a daily DLP snapshot file into your own SharePoint library.
+The AdminHelper starter set consists of ten Power Automate flows that look at your tenant and report by e-mail: four inventories (environments, apps, cloud flows, Copilot Studio agents), a daily list of newly created environments, a DLP policy snapshot with change log, a weekly report on connectors that DLP cannot block, a list of flows the platform has suspended, a capacity warning and a check for agents without authentication. Two helper flows come with them: F00 checks your configuration and F51 prepares the storage folders. All ten work with the Standard licence and change nothing in your tenant. The only thing they write is a daily DLP snapshot file into your own SharePoint library.
 
 [Diese Seite auf Deutsch](/de/flows/)
 
