@@ -1,4 +1,4 @@
-# Power Platform Governance – robots.txt
+# Power Platform Governance: robots.txt
 
 User-agent: *
 Allow: /
