@@ -744,5 +744,23 @@
     "text": "Four security levels for agentic Power Platform development\n\nClaude Code can work through four access levels for Power Platform development: a service principal, a developer account limited to dev, local Copilot Studio YAML files, or a separate tenant. Levels 3 and 4 keep customer connections with a human, while customer logins expire after 30 minutes of inactivity and at 17:00.\n\nSource: Karlex\n\nFull summary: https://powerplatformgovernance.com/en/posts/four-security-levels-for-agentic-power-platform-development-e75efea9/\n\n#PowerPlatformGovernanceDaily #CopilotStudio",
     "bufferPostId": "6af16d9ccac9d7525f732e06",
     "dueAt": "2026-11-09T08:00:00.000Z"
+  },
+  "13f11d816c30069aedcf48cf": {
+    "status": "queued",
+    "day": "2026-11-09",
+    "kind": "video",
+    "title": "Power Apps Offline Mode, Simply Explained",
+    "text": "Power Apps Offline Mode, Simply Explained\n\nPower Apps offline mode requires a specific enabling choice, then lets an app keep working without internet. The episode explains why apps go dark when signal drops, what happens when connectivity returns, what a real offline app looks like, and which limitations and mistakes makers need to understand.\n\nSource: M365.FM | Microsoft 365, Azure Cloud, Power Platform & AI\n\nFull summary: https://powerplatformgovernance.com/en/posts/power-apps-offline-mode-simply-explained-13f11d81/\n\n#PowerPlatformGovernanceDaily #PowerApps",
+    "bufferPostId": "6af2147b29d3f56e691a2041",
+    "dueAt": "2026-11-10T08:00:00.000Z"
+  },
+  "7e7f0fea3b6bf324e42e09b1": {
+    "status": "queued",
+    "day": "2026-11-09",
+    "kind": "video",
+    "title": "SharePoint agents retire in March 2027: migration paths and ownership actions",
+    "text": "SharePoint agents retire in March 2027: migration paths and ownership actions\n\nExisting SharePoint and OneDrive .agent agents continue working until the end of March 2027, then stop during a rollout through mid-April. From mid-November, Create an agent opens Agent Builder instead. Owners can use the SharePoint builder Upgrade button or a Copilot in SharePoint skill to convert agents manually, one agent at a time.\n\nSource: Bright Ideas Agency\n\nFull summary: https://powerplatformgovernance.com/en/posts/sharepoint-agents-retire-in-march-2027-migration-paths-and-ownership-7e7f0fea/\n\n#PowerPlatformGovernanceDaily #CopilotStudio",
+    "bufferPostId": "6af2147ca16d1f1c1e92985f",
+    "dueAt": "2026-11-10T11:00:00.000Z"
   }
 }
