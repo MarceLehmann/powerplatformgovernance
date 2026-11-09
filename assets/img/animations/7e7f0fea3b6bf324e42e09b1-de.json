@@ -1,0 +1,41 @@
+{
+ "title": "Bestehende SharePoint-Agents migrieren",
+ "subtitle": "Jeden .agent-Agent pruefen und dann manuell einen von zwei Microsoft-Pfaden nutzen.",
+ "steps": [
+  {
+   "product": "sharepoint",
+   "icon": "search",
+   "productLabel": "SharePoint",
+   "title": "Jeden bestehenden .agent-Agent pruefen",
+   "actions": [
+    "Jeden .agent-Agent pruefen"
+   ]
+  },
+  {
+   "product": "sharepoint",
+   "icon": "arrow",
+   "productLabel": "SharePoint",
+   "title": "Pfad im SharePoint-Builder nutzen",
+   "actions": [
+    "Upgrade-Button",
+    "SharePoint-Builder",
+    ".agent-Datei umwandeln"
+   ]
+  },
+  {
+   "product": "sharepoint",
+   "icon": "check",
+   "productLabel": "SharePoint",
+   "title": "Oder Copilot in SharePoint nutzen",
+   "actions": [
+    "Copilot in SharePoint-Funktion",
+    "Agents manuell umstellen",
+    "pro Agent einzeln"
+   ]
+  }
+ ],
+ "punchline": [
+  "Manuelle Umstellung",
+  "Pro Agent einzeln"
+ ]
+}

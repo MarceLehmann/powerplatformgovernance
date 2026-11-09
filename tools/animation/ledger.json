@@ -851,5 +851,26 @@
     "gif": false,
     "reason": "This post describes a four level security model and governance advice, not one concrete 3 to 5 stage procedure to follow.",
     "at": "2026-11-09"
+  },
+  "13f11d816c30069aedcf48cf": {
+    "gif": true,
+    "reason": "The post describes a concrete 4 stage sequence from enabling offline mode to offline use, reconnection and limits.",
+    "at": "2026-11-09",
+    "evidence": [
+      "Power Apps offline mode requires a specific enabling choice",
+      "then lets an app keep working without internet",
+      "what happens after reconnection",
+      "which limitations and mistakes makers need to understand"
+    ]
+  },
+  "7e7f0fea3b6bf324e42e09b1": {
+    "gif": true,
+    "reason": "The post gives a concrete 3 stage migration sequence from reviewing existing .agent agents to choosing one of two manual conversion paths.",
+    "at": "2026-11-09",
+    "evidence": [
+      "Review each existing .agent agent and upgrade only those still used",
+      "Use the Upgrade button in the SharePoint builder to convert the .agent file into a new skill.",
+      "a Copilot in SharePoint skill to convert agents manually, one agent at a time."
+    ]
   }
 }

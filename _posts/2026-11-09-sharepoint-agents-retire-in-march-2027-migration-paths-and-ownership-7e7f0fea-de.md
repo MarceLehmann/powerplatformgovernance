@@ -37,6 +37,12 @@ faq:
 - question: Was öffnet Create an agent ab Mitte November in SharePoint oder OneDrive?
   answer: Ab Mitte November öffnet Create an agent den Agent Builder und erstellt
     einen normalen Agent-Builder-Agent statt einer .agent-Datei.
+animation:
+  video: /assets/img/animations/7e7f0fea3b6bf324e42e09b1-de.mp4
+  poster: /assets/img/animations/7e7f0fea3b6bf324e42e09b1-de.poster.webp
+  width: 800
+  height: 450
+  alt: "Ein Ablauf mit drei Schritten zeigt, wie Verantwortliche jeden bestehenden .agent-Agent pruefen und ihn dann mit dem Upgrade-Button im SharePoint-Builder oder mit einer Copilot-in-SharePoint-Funktion manuell pro Agent umstellen."
 ---
 
 ## TL;DR

@@ -37,6 +37,12 @@ faq:
 - question: What opens when users select Create an agent in SharePoint or OneDrive?
   answer: From mid-November, Create an agent opens Agent Builder and creates a normal
     Agent Builder agent instead of a .agent file.
+animation:
+  video: /assets/img/animations/7e7f0fea3b6bf324e42e09b1-en.mp4
+  poster: /assets/img/animations/7e7f0fea3b6bf324e42e09b1-en.poster.webp
+  width: 800
+  height: 450
+  alt: "A three step flow shows owners review each existing .agent agent, then convert it with the SharePoint builder Upgrade button or with a Copilot in SharePoint skill, one agent at a time."
 ---
 
 ## TL;DR

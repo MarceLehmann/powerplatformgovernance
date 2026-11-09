@@ -1,0 +1,50 @@
+{
+ "title": "Power Apps Offline-Modus Ablauf",
+ "subtitle": "Offline-Nutzung aktivieren, ohne Internet arbeiten, neu verbinden, dann Grenzen pruefen.",
+ "steps": [
+  {
+   "product": "powerapps",
+   "icon": "gear",
+   "productLabel": "Power Apps",
+   "title": "Offline-Auswahl aktivieren",
+   "actions": [
+    "Offline-Auswahl",
+    "Power Apps"
+   ]
+  },
+  {
+   "product": "powerapps",
+   "icon": "cloud",
+   "productLabel": "Power Apps",
+   "title": "App offline weiter nutzen",
+   "actions": [
+    "ohne Internet",
+    "Offline-Nutzung"
+   ]
+  },
+  {
+   "product": "powerapps",
+   "icon": "link",
+   "productLabel": "Power Apps",
+   "title": "Signal und Neuverbindung behandeln",
+   "actions": [
+    "Verbindung kehrt zurueck",
+    "Wiederverbinden"
+   ]
+  },
+  {
+   "product": "powerapps",
+   "icon": "check",
+   "productLabel": "Power Apps",
+   "title": "Grenzen und Fehler pruefen",
+   "actions": [
+    "Offline-Grenzen",
+    "haeufige Fehler"
+   ]
+  }
+ ],
+ "punchline": [
+  "App arbeitet offline",
+  "Grenzen kennen"
+ ]
+}

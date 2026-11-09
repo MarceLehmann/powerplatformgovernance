@@ -39,6 +39,12 @@ faq:
 - question: Welche Grenzen hat der Offline-Modus von Power Apps?
   answer: Die Folge beschreibt, was der Offline-Modus nicht kann und welche Fehler
     häufig auftreten. Diese Grenzen zeigen, wann die Offline-Nutzung ungeeignet ist.
+animation:
+  video: /assets/img/animations/13f11d816c30069aedcf48cf-de.mp4
+  poster: /assets/img/animations/13f11d816c30069aedcf48cf-de.poster.webp
+  width: 800
+  height: 450
+  alt: "Die Abfolge zeigt die Aktivierung der Offline-Auswahl in Power Apps, das Arbeiten ohne Internet, das Wiederverbinden bei Rueckkehr des Signals und die Pruefung von Grenzen und Fehlern."
 ---
 
 ## TL;DR

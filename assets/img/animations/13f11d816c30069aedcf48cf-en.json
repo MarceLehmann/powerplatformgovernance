@@ -1,0 +1,54 @@
+{
+ "title": "Power Apps offline mode flow",
+ "subtitle": "Enable offline use, work without internet, reconnect, then review limits.",
+ "steps": [
+  {
+   "product": "powerapps",
+   "icon": "gear",
+   "productLabel": "Power Apps",
+   "title": "Enable the offline choice",
+   "actions": [
+    "offline-enabling choice",
+    "Power Apps"
+   ],
+   "evidence": "Power Apps offline mode requires a specific enabling choice"
+  },
+  {
+   "product": "powerapps",
+   "icon": "cloud",
+   "productLabel": "Power Apps",
+   "title": "Keep the app working offline",
+   "actions": [
+    "without internet",
+    "offline use"
+   ],
+   "evidence": "then lets an app keep working without internet"
+  },
+  {
+   "product": "powerapps",
+   "icon": "link",
+   "productLabel": "Power Apps",
+   "title": "Handle signal and reconnection",
+   "actions": [
+    "connectivity returns",
+    "reconnection behavior"
+   ],
+   "evidence": "what happens after reconnection"
+  },
+  {
+   "product": "powerapps",
+   "icon": "check",
+   "productLabel": "Power Apps",
+   "title": "Review limits and mistakes",
+   "actions": [
+    "offline limitations",
+    "common mistakes"
+   ],
+   "evidence": "which limitations and mistakes makers need to understand"
+  }
+ ],
+ "punchline": [
+  "App works offline",
+  "Know the limits"
+ ]
+}

@@ -40,6 +40,12 @@ faq:
 - question: What are the limitations of Power Apps offline mode?
   answer: The episode covers what offline mode cannot do and the mistakes that catch
     people out. These limits define where offline use is unsuitable.
+animation:
+  video: /assets/img/animations/13f11d816c30069aedcf48cf-en.mp4
+  poster: /assets/img/animations/13f11d816c30069aedcf48cf-en.poster.webp
+  width: 800
+  height: 450
+  alt: "Sequence shows enabling the offline choice in Power Apps, working without internet, reconnecting when signal returns, and checking offline limits and mistakes."
 ---
 
 ## TL;DR

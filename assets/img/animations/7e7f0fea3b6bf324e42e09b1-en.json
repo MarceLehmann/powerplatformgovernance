@@ -1,0 +1,44 @@
+{
+ "title": "Migrate existing SharePoint agents",
+ "subtitle": "Review each .agent agent, then convert it manually with one of two Microsoft paths.",
+ "steps": [
+  {
+   "product": "sharepoint",
+   "icon": "search",
+   "productLabel": "SharePoint",
+   "title": "Review each existing .agent agent",
+   "actions": [
+    "Review each .agent agent"
+   ],
+   "evidence": "Review each existing .agent agent and upgrade only those still used"
+  },
+  {
+   "product": "sharepoint",
+   "icon": "arrow",
+   "productLabel": "SharePoint",
+   "title": "Use the SharePoint builder path",
+   "actions": [
+    "Upgrade button",
+    "SharePoint builder",
+    "convert the .agent file"
+   ],
+   "evidence": "Use the Upgrade button in the SharePoint builder to convert the .agent file into a new skill."
+  },
+  {
+   "product": "sharepoint",
+   "icon": "check",
+   "productLabel": "SharePoint",
+   "title": "Or use a Copilot in SharePoint skill",
+   "actions": [
+    "Copilot in SharePoint skill",
+    "convert agents manually",
+    "one agent at a time"
+   ],
+   "evidence": "a Copilot in SharePoint skill to convert agents manually, one agent at a time."
+  }
+ ],
+ "punchline": [
+  "Manual conversion",
+  "One agent at a time"
+ ]
+}
