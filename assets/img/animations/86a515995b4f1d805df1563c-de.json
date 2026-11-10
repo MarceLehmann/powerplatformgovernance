@@ -1,0 +1,59 @@
+{
+ "title": "Power Platform Uebergabe",
+ "subtitle": "Erfassen, zuweisen, dokumentieren, uebertragen und testen vor dem Entzug des Zugriffs.",
+ "steps": [
+  {
+   "product": "powerapps",
+   "icon": "search",
+   "productLabel": "Power Apps",
+   "title": "Assets in Umgebungen erfassen",
+   "actions": [
+    "Apps",
+    "Flows",
+    "Loesungen"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "user",
+   "productLabel": "Admin",
+   "title": "Fachliche und technische Owner benennen",
+   "actions": [
+    "Verantwortliche benennen"
+   ]
+  },
+  {
+   "product": "generic",
+   "icon": "link",
+   "productLabel": "Verbindungen",
+   "title": "Verbindungen und Support dokumentieren",
+   "actions": [
+    "Verbindungen dokumentieren",
+    "Supportverfahren"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "key",
+   "productLabel": "Admin",
+   "title": "Zugriff sicher uebertragen",
+   "actions": [
+    "Zugriff uebertragen"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "check",
+   "productLabel": "Admin",
+   "title": "Support unter neuer Verantwortung testen",
+   "actions": [
+    "Benutzerablaeufe",
+    "geplante Vorgaenge",
+    "Ueberwachung"
+   ]
+  }
+ ],
+ "punchline": [
+  "Support laeuft nach Uebergabe"
+ ]
+}

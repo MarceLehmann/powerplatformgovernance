@@ -42,6 +42,12 @@ faq:
   answer: Run representative user journeys, scheduled operations, integrations, error
     handling, monitoring, and recovery tasks under the replacement support arrangement
     before revoking access.
+animation:
+  video: /assets/img/animations/86a515995b4f1d805df1563c-en.mp4
+  poster: /assets/img/animations/86a515995b4f1d805df1563c-en.poster.webp
+  width: 800
+  height: 450
+  alt: "Sequence shows a Power Platform ownership handover: inventory assets across environments, assign owners, document connections and support, transfer access safely, then test operations before access is removed."
 ---
 
 ## TL;DR

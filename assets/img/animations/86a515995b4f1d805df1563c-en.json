@@ -1,0 +1,64 @@
+{
+ "title": "Power Platform ownership handover",
+ "subtitle": "Inventory, reassign, document, transfer and test before access is removed.",
+ "steps": [
+  {
+   "product": "powerapps",
+   "icon": "search",
+   "productLabel": "Power Apps",
+   "title": "Inventory assets across environments",
+   "actions": [
+    "apps",
+    "flows",
+    "solutions"
+   ],
+   "evidence": "inventory Power Platform apps, flows, solutions and dependencies across environments."
+  },
+  {
+   "product": "admin",
+   "icon": "user",
+   "productLabel": "Admin",
+   "title": "Assign business and technical owners",
+   "actions": [
+    "Assign owners"
+   ],
+   "evidence": "Assign business and technical owners, document connections and support procedures"
+  },
+  {
+   "product": "generic",
+   "icon": "link",
+   "productLabel": "Connections",
+   "title": "Document connections and support",
+   "actions": [
+    "document connections",
+    "support procedures"
+   ],
+   "evidence": "document connections and support procedures, transfer access safely"
+  },
+  {
+   "product": "admin",
+   "icon": "key",
+   "productLabel": "Admin",
+   "title": "Transfer access safely",
+   "actions": [
+    "transfer access"
+   ],
+   "evidence": "transfer access safely, then test user journeys, scheduled operations, monitoring and recovery"
+  },
+  {
+   "product": "admin",
+   "icon": "check",
+   "productLabel": "Admin",
+   "title": "Test support under new ownership",
+   "actions": [
+    "user journeys",
+    "scheduled operations",
+    "monitoring"
+   ],
+   "evidence": "then test user journeys, scheduled operations, monitoring and recovery under the new support arrangement."
+  }
+ ],
+ "punchline": [
+  "Support works after handover"
+ ]
+}

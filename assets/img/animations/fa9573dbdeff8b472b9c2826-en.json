@@ -1,0 +1,46 @@
+{
+ "title": "Handle Fabric Link storage issue",
+ "subtitle": "Enable Fabric Link, review storage, then recreate the link without annotation.",
+ "steps": [
+  {
+   "product": "fabric",
+   "icon": "link",
+   "productLabel": "Fabric",
+   "title": "Enable Fabric Link for annotation",
+   "actions": [
+    "Enable Fabric Link",
+    "annotation table",
+    "Notes"
+   ],
+   "evidence": "Enabling Fabric Link for the Dataverse annotation table, displayed as Notes, created an annotation-analytics table"
+  },
+  {
+   "product": "admin",
+   "icon": "search",
+   "productLabel": "Power Platform Admin",
+   "title": "Check storage in Admin Center",
+   "actions": [
+    "Licensing",
+    "Dataverse",
+    "storage consumption"
+   ],
+   "evidence": "Check storage consumption in the Power Platform Admin Center under Licensing, Dataverse."
+  },
+  {
+   "product": "fabric",
+   "icon": "arrow",
+   "productLabel": "Fabric",
+   "title": "Recreate link without annotation",
+   "actions": [
+    "deleted",
+    "recreated",
+    "without annotation"
+   ],
+   "evidence": "The annotation table could not be removed individually, so the entire Fabric Link was deleted and recreated without annotation."
+  }
+ ],
+ "punchline": [
+  "180 GB from 3 GB source",
+  "Recreate without annotation"
+ ]
+}

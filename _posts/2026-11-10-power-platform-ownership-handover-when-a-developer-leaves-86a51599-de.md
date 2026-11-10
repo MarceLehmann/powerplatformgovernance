@@ -45,6 +45,12 @@ faq:
   answer: Testen Sie typische Benutzerabläufe, geplante Vorgänge, Integrationen, Fehlerbehandlung,
     Überwachung und Wiederherstellung unter der neuen Supportregelung, bevor Sie den
     Zugriff entziehen.
+animation:
+  video: /assets/img/animations/86a515995b4f1d805df1563c-de.mp4
+  poster: /assets/img/animations/86a515995b4f1d805df1563c-de.poster.webp
+  width: 800
+  height: 450
+  alt: "Die Abfolge zeigt eine Power Platform Uebergabe: Assets in Umgebungen erfassen, Verantwortliche benennen, Verbindungen und Support dokumentieren, Zugriffe sicher uebertragen und dann Vorgaenge testen."
 ---
 
 ## TL;DR

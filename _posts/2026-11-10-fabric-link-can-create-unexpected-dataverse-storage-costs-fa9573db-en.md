@@ -36,6 +36,12 @@ faq:
 - question: How can I remove the annotation table from a Dataverse Fabric Link?
   answer: The annotation table could not be removed individually, so the entire Fabric
     Link was deleted and recreated without annotation.
+animation:
+  video: /assets/img/animations/fa9573dbdeff8b472b9c2826-en.mp4
+  poster: /assets/img/animations/fa9573dbdeff8b472b9c2826-en.poster.webp
+  width: 800
+  height: 450
+  alt: "Sequence shows enabling Fabric Link for annotation, checking storage in Power Platform Admin Center under Licensing and Dataverse, and recreating the Fabric Link without annotation."
 ---
 
 ## TL;DR

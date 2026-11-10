@@ -1,0 +1,43 @@
+{
+ "title": "Fabric Link Speicherproblem beheben",
+ "subtitle": "Fabric Link aktivieren, Speicher pruefen und den Link ohne annotation neu erstellen.",
+ "steps": [
+  {
+   "product": "fabric",
+   "icon": "link",
+   "productLabel": "Fabric",
+   "title": "Fabric Link fuer annotation aktivieren",
+   "actions": [
+    "Fabric Link aktivieren",
+    "annotation-Tabelle",
+    "Notes"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "search",
+   "productLabel": "Power Platform Admin",
+   "title": "Speicher im Admin Center pruefen",
+   "actions": [
+    "Lizenzierung",
+    "Dataverse",
+    "Speicherverbrauch"
+   ]
+  },
+  {
+   "product": "fabric",
+   "icon": "arrow",
+   "productLabel": "Fabric",
+   "title": "Link ohne annotation neu erstellen",
+   "actions": [
+    "geloescht",
+    "neu erstellt",
+    "ohne annotation"
+   ]
+  }
+ ],
+ "punchline": [
+  "180 GB aus 3 GB Quelle",
+  "Ohne annotation neu erstellen"
+ ]
+}

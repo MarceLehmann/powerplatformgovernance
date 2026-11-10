@@ -872,5 +872,27 @@
       "Use the Upgrade button in the SharePoint builder to convert the .agent file into a new skill.",
       "a Copilot in SharePoint skill to convert agents manually, one agent at a time."
     ]
+  },
+  "fa9573dbdeff8b472b9c2826": {
+    "gif": true,
+    "reason": "The post describes a concrete 3 stage sequence: enable Fabric Link, check storage in Admin Center, then recreate the link without annotation.",
+    "at": "2026-11-10",
+    "evidence": [
+      "Enabling Fabric Link for the Dataverse annotation table, displayed as Notes, created an annotation-analytics table",
+      "Check storage consumption in the Power Platform Admin Center under Licensing, Dataverse.",
+      "The annotation table could not be removed individually, so the entire Fabric Link was deleted and recreated without annotation."
+    ]
+  },
+  "86a515995b4f1d805df1563c": {
+    "gif": true,
+    "reason": "The post gives a clear 5 stage handover sequence before removing a developer's access.",
+    "at": "2026-11-10",
+    "evidence": [
+      "inventory Power Platform apps, flows, solutions and dependencies across environments.",
+      "Assign business and technical owners, document connections and support procedures",
+      "document connections and support procedures, transfer access safely",
+      "transfer access safely, then test user journeys, scheduled operations, monitoring and recovery",
+      "then test user journeys, scheduled operations, monitoring and recovery under the new support arrangement."
+    ]
   }
 }
