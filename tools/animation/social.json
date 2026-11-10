@@ -762,5 +762,23 @@
     "text": "SharePoint agents retire in March 2027: migration paths and ownership actions\n\nExisting SharePoint and OneDrive .agent agents continue working until the end of March 2027, then stop during a rollout through mid-April. From mid-November, Create an agent opens Agent Builder instead. Owners can use the SharePoint builder Upgrade button or a Copilot in SharePoint skill to convert agents manually, one agent at a time.\n\nSource: Bright Ideas Agency\n\nFull summary: https://powerplatformgovernance.com/en/posts/sharepoint-agents-retire-in-march-2027-migration-paths-and-ownership-7e7f0fea/\n\n#PowerPlatformGovernanceDaily #CopilotStudio",
     "bufferPostId": "6af2147ca16d1f1c1e92985f",
     "dueAt": "2026-11-10T11:00:00.000Z"
+  },
+  "fa9573dbdeff8b472b9c2826": {
+    "status": "queued",
+    "day": "2026-11-10",
+    "kind": "video",
+    "title": "Fabric Link can create unexpected Dataverse storage costs",
+    "text": "Fabric Link can create unexpected Dataverse storage costs\n\nEnabling Fabric Link for the Dataverse annotation table, displayed as Notes, created an annotation-analytics table using 180 GB of database storage. The source table was 3 GB, while the reported database list price was $40 per GB monthly. Removing the table was impossible, so the entire Fabric Link had to be recreated.\n\nSource: powerplatform.se\n\nFull summary: https://powerplatformgovernance.com/en/posts/fabric-link-can-create-unexpected-dataverse-storage-costs-fa9573db/\n\n#PowerPlatformGovernanceDaily #Dataverse",
+    "bufferPostId": "6af3660efcc41cfe14cc006a",
+    "dueAt": "2026-11-11T08:00:00.000Z"
+  },
+  "86a515995b4f1d805df1563c": {
+    "status": "queued",
+    "day": "2026-11-10",
+    "kind": "video",
+    "title": "Power Platform ownership handover when a developer leaves",
+    "text": "Power Platform ownership handover when a developer leaves\n\nBefore removing a departing developer's access, inventory Power Platform apps, flows, solutions and dependencies across environments. Assign business and technical owners, document connections and support procedures, transfer access safely, then test user journeys, scheduled operations, monitoring and recovery under the new support arrangement.\n\nSource: Softchief Technologies\n\nFull summary: https://powerplatformgovernance.com/en/posts/power-platform-ownership-handover-when-a-developer-leaves-86a51599/\n\n#PowerPlatformGovernanceDaily",
+    "bufferPostId": "6af3660ffcc41cfe14cc00a7",
+    "dueAt": "2026-11-11T11:00:00.000Z"
   }
 }
