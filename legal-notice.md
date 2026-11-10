@@ -18,9 +18,10 @@ Weidstrasse 1
 CH-8320 Fehraltorf  
 Switzerland
 
-Legal form: sole proprietorship  
+Legal form: sole proprietorship (Einzelfirma) of Marcel Lehmann, trading as KMUpower  
 UID: CHE-296.591.945  
-Registered in the UID register since: 01.01.2023
+Registered in the UID register since: 01.01.2023  
+VAT: not registered for Swiss VAT (Einzelfirma, nicht MWST-pflichtig)
 
 ## Contact
 
