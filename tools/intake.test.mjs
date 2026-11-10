@@ -44,7 +44,7 @@ test('webhook can only create pending disabled records and cannot fetch content'
   assert.equal(create['item/new_enabled'], false);
   assert.equal(create['item/new_processing'], processing.review);
   assert.match(create['item/new_submittername'], /publish_credit.*'yes'/);
-  assert.deepEqual([...actions.values()].filter(action => action.type === 'OpenApiConnection').map(action => action.inputs.host.operationId), ['ListRecords', 'CreateRecord']);
+  assert.deepEqual([...actions.values()].filter(action => action.type === 'OpenApiConnection').map(action => action.inputs.host.operationId), ['ListRecords', 'CreateRecord', 'UpdateRecord']);
   assert.deepEqual(actions.get('Accepted').runAfter, { Store: ['Succeeded'] });
   assert.equal(actions.get('Invalid_request').inputs.statusCode, 400);
   assert.equal(actions.get('Storage_failed').inputs.statusCode, 503);
