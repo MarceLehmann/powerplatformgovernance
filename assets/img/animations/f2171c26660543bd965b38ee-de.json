@@ -1,0 +1,50 @@
+{
+ "title": "Dataverse-Benutzereinstellungen aendern",
+ "subtitle": "Persoenliche Zeitzonen und Formate aendern oder gesammelt korrigieren.",
+ "steps": [
+  {
+   "product": "powerapps",
+   "icon": "gear",
+   "productLabel": "Power Apps",
+   "title": "Personalisierung oeffnen",
+   "actions": [
+    "Personalisierungseinstellungen",
+    "modellgesteuerte App"
+   ]
+  },
+  {
+   "product": "dataverse",
+   "icon": "calendar",
+   "productLabel": "Dataverse",
+   "title": "Time Zone auf General aendern",
+   "actions": [
+    "Time Zone",
+    "General"
+   ]
+  },
+  {
+   "product": "dataverse",
+   "icon": "table",
+   "productLabel": "Dataverse",
+   "title": "Current Format aendern",
+   "actions": [
+    "Current Format",
+    "Formats"
+   ]
+  },
+  {
+   "product": "generic",
+   "icon": "user",
+   "productLabel": "XrmToolBox",
+   "title": "Benutzer laden und gesammelt aendern",
+   "actions": [
+    "Benutzer laden",
+    "Werte pruefen",
+    "Zeitzone aendern"
+   ]
+  }
+ ],
+ "punchline": [
+  "Einstellungen je Umgebung"
+ ]
+}

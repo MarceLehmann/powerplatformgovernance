@@ -894,5 +894,46 @@
       "transfer access safely, then test user journeys, scheduled operations, monitoring and recovery",
       "then test user journeys, scheduled operations, monitoring and recovery under the new support arrangement."
     ]
+  },
+  "6ccdd650c89686f2bd576f82": {
+    "gif": false,
+    "reason": "This post is a feature announcement and governance summary, not a concrete 3 to 5 step procedure stated in order.",
+    "at": "2026-11-11"
+  },
+  "3fff14a49dd8aad928ba2e16": {
+    "gif": false,
+    "reason": "The post is governance and security analysis without a concrete 3 to 5 stage procedure stated in the text.",
+    "at": "2026-11-11"
+  },
+  "8a1916d785d4e1ad43ce6e79": {
+    "gif": false,
+    "reason": "This post is governance advice about outdated licensing information and does not state a concrete 3 to 5 stage procedure from the text.",
+    "at": "2026-11-11"
+  },
+  "29adf0fab7cd8ecb6d17d303": {
+    "gif": false,
+    "reason": "The post is an explanatory overview of concepts, selection, limits, costs and control, and it does not state a concrete 3 to 5 stage procedure.",
+    "at": "2026-11-11"
+  },
+  "fa5be6390a75c180da653873": {
+    "gif": false,
+    "reason": "This post is a governance summary and feature overview without a concrete 3 to 5 stage procedure explicitly described in order.",
+    "at": "2026-11-11"
+  },
+  "9f919231402d464edbc53ecd": {
+    "gif": false,
+    "reason": "This post is a governance digest with unordered takeaways, not a concrete 3 to 5 stage procedure stated in the text.",
+    "at": "2026-11-11"
+  },
+  "f2171c26660543bd965b38ee": {
+    "gif": true,
+    "reason": "The post gives a concrete 4 step settings and bulk update sequence in the FAQ.",
+    "at": "2026-11-11",
+    "evidence": [
+      "Open Personalization settings in a model-driven app",
+      "then change Time Zone on General",
+      "and Current Format on Formats",
+      "can load users, inspect their values, and modify time zone, format, and other settings for selected users in bulk."
+    ]
   }
 }

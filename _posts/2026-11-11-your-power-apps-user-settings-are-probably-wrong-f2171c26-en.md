@@ -40,6 +40,12 @@ faq:
 - question: When should I use Date Only or Time-Zone Independent Dataverse columns?
   answer: Use these column behaviors to avoid certain date and time conversion problems.
     They do not let end users configure their own personal settings.
+animation:
+  video: /assets/img/animations/f2171c26660543bd965b38ee-en.mp4
+  poster: /assets/img/animations/f2171c26660543bd965b38ee-en.poster.webp
+  width: 800
+  height: 450
+  alt: "The sequence shows opening Personalization settings in a model driven app, changing Time Zone on General, changing Current Format on Formats, and using XrmToolBox to load users and update settings in bulk."
 ---
 
 ## TL;DR

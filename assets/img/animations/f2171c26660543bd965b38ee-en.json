@@ -1,0 +1,54 @@
+{
+ "title": "Change Dataverse user settings",
+ "subtitle": "Update personal time zone and format settings, or correct them in bulk.",
+ "steps": [
+  {
+   "product": "powerapps",
+   "icon": "gear",
+   "productLabel": "Power Apps",
+   "title": "Open Personalization settings",
+   "actions": [
+    "Personalization settings",
+    "model-driven app"
+   ],
+   "evidence": "Open Personalization settings in a model-driven app"
+  },
+  {
+   "product": "dataverse",
+   "icon": "calendar",
+   "productLabel": "Dataverse",
+   "title": "Change Time Zone on General",
+   "actions": [
+    "Time Zone",
+    "General"
+   ],
+   "evidence": "then change Time Zone on General"
+  },
+  {
+   "product": "dataverse",
+   "icon": "table",
+   "productLabel": "Dataverse",
+   "title": "Change Current Format",
+   "actions": [
+    "Current Format",
+    "Formats"
+   ],
+   "evidence": "and Current Format on Formats"
+  },
+  {
+   "product": "generic",
+   "icon": "user",
+   "productLabel": "XrmToolBox",
+   "title": "Load users and update in bulk",
+   "actions": [
+    "load users",
+    "inspect values",
+    "modify time zone"
+   ],
+   "evidence": "can load users, inspect their values, and modify time zone, format, and other settings for selected users in bulk."
+  }
+ ],
+ "punchline": [
+  "Settings are per environment"
+ ]
+}

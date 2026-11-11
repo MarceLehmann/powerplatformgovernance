@@ -44,6 +44,12 @@ faq:
     verwenden?
   answer: Diese Spaltenverhalten vermeiden bestimmte Probleme bei Datums- und Zeitumrechnungen.
     Endbenutzer können damit ihre persönlichen Einstellungen jedoch nicht selbst konfigurieren.
+animation:
+  video: /assets/img/animations/f2171c26660543bd965b38ee-de.mp4
+  poster: /assets/img/animations/f2171c26660543bd965b38ee-de.poster.webp
+  width: 800
+  height: 450
+  alt: "Die Abfolge zeigt das Oeffnen der Personalisierungseinstellungen in einer modellgesteuerten App, das Aendern von Time Zone auf General, das Aendern von Current Format auf Formats und die Massenaktualisierung mit XrmToolBox."
 ---
 
 ## TL;DR
