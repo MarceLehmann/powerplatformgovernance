@@ -780,5 +780,32 @@
     "text": "Power Platform ownership handover when a developer leaves\n\nBefore removing a departing developer's access, inventory Power Platform apps, flows, solutions and dependencies across environments. Assign business and technical owners, document connections and support procedures, transfer access safely, then test user journeys, scheduled operations, monitoring and recovery under the new support arrangement.\n\nSource: Softchief Technologies\n\nFull summary: https://powerplatformgovernance.com/en/posts/power-platform-ownership-handover-when-a-developer-leaves-86a51599/\n\n#PowerPlatformGovernanceDaily",
     "bufferPostId": "6af3660ffcc41cfe14cc00a7",
     "dueAt": "2026-11-11T11:00:00.000Z"
+  },
+  "f2171c26660543bd965b38ee": {
+    "status": "queued",
+    "day": "2026-11-11",
+    "kind": "video",
+    "title": "Your Power Apps user settings are probably wrong",
+    "text": "Your Power Apps user settings are probably wrong\n\nDataverse user settings control time zones and number, currency, date and time formats for each user in each environment. Model-driven Power Apps expose these settings through Personalization settings, while the Power Platform Admin Center cannot change them for another user. XrmToolBox can inspect and update settings, including in bulk.\n\nSource: Jukka Niiranen Blog\n\nFull summary: https://powerplatformgovernance.com/en/posts/your-power-apps-user-settings-are-probably-wrong-f2171c26/\n\n#PowerPlatformGovernanceDaily #Dataverse #PowerApps",
+    "bufferPostId": "6af4b76380cc5d8ca320cb99",
+    "dueAt": "2026-11-12T08:00:00.000Z"
+  },
+  "3fff14a49dd8aad928ba2e16": {
+    "status": "queued",
+    "day": "2026-11-11",
+    "kind": "image",
+    "title": "Dataverse for Teams still lacks a formal ALM story",
+    "text": "Dataverse for Teams still lacks a formal ALM story\n\nDataverse for Teams environments were being created in high numbers, yet the available solution management tools were described as temporary workarounds. Two years after general availability, the source says the platform still lacked a formal ALM approach for managing apps and environments, while the Dataverse for Teams edition of the CoE Starter Kit was deprecated.\n\nSource: Jukka Niiranen Blog\n\nFull summary: https://powerplatformgovernance.com/en/posts/dataverse-for-teams-still-lacks-a-formal-alm-story-3fff14a4/\n\n#PowerPlatformGovernanceDaily",
+    "bufferPostId": "6af4b7640113073f856ece8d",
+    "dueAt": "2026-11-12T11:00:00.000Z"
+  },
+  "fa5be6390a75c180da653873": {
+    "status": "queued",
+    "day": "2026-11-11",
+    "kind": "image",
+    "title": "Power Platform 2023 Release Wave 1: Five Features and Governance Gaps",
+    "text": "Power Platform 2023 Release Wave 1: Five Features and Governance Gaps\n\nThe 2023 Release Wave 1 plan introduces manual assignment of the System Administrator role and personal environments with Dataverse. Personal environments do not expire, do not require tenant administrator provisioning, and can be disabled by admins. Because makers can use premium capabilities independently, organizations should apply governance and DLP policies.\n\nSource: Jukka Niiranen Blog\n\nFull summary: https://powerplatformgovernance.com/en/posts/power-platform-2023-release-wave-1-five-features-and-governance-gaps-fa5be639/\n\n#PowerPlatformGovernanceDaily #Dataverse #PowerApps",
+    "bufferPostId": "6af4b764a77244ffce8ca2f2",
+    "dueAt": "2026-11-12T14:00:00.000Z"
   }
 }
