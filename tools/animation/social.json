@@ -807,5 +807,29 @@
     "text": "Power Platform 2023 Release Wave 1: Five Features and Governance Gaps\n\nThe 2023 Release Wave 1 plan introduces manual assignment of the System Administrator role and personal environments with Dataverse. Personal environments do not expire, do not require tenant administrator provisioning, and can be disabled by admins. Because makers can use premium capabilities independently, organizations should apply governance and DLP policies.\n\nSource: Jukka Niiranen Blog\n\nFull summary: https://powerplatformgovernance.com/en/posts/power-platform-2023-release-wave-1-five-features-and-governance-gaps-fa5be639/\n\n#PowerPlatformGovernanceDaily #Dataverse #PowerApps",
     "bufferPostId": "6af4b764a77244ffce8ca2f2",
     "dueAt": "2026-11-12T14:00:00.000Z"
+  },
+  "6ccdd650c89686f2bd576f82": {
+    "status": "expired",
+    "day": "2026-11-11",
+    "title": "Copilot Chat Agents Get Deterministic Flows with Copilot Studio Topics",
+    "expiredAt": "2026-11-12"
+  },
+  "8a1916d785d4e1ad43ce6e79": {
+    "status": "expired",
+    "day": "2026-11-11",
+    "title": "Do not trust outdated Power Apps licensing details in the Microsoft 365 admin center",
+    "expiredAt": "2026-11-12"
+  },
+  "29adf0fab7cd8ecb6d17d303": {
+    "status": "expired",
+    "day": "2026-11-11",
+    "title": "Microsoft 365 Copilot Studio Plugins Explained",
+    "expiredAt": "2026-11-12"
+  },
+  "9f919231402d464edbc53ecd": {
+    "status": "expired",
+    "day": "2026-11-11",
+    "title": "Thinking Quarterly Q4/22: Power Platform governance and security digest",
+    "expiredAt": "2026-11-12"
   }
 }
