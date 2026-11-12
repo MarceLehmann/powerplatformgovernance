@@ -935,5 +935,10 @@
       "and Current Format on Formats",
       "can load users, inspect their values, and modify time zone, format, and other settings for selected users in bulk."
     ]
+  },
+  "b8340a72d13c387acb7c3f8d": {
+    "gif": false,
+    "reason": "The post explains concepts and effects of Intune compliance but does not state a concrete 3 to 5 stage procedure or ordered path.",
+    "at": "2026-11-12"
   }
 }
