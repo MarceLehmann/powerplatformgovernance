@@ -831,5 +831,14 @@
     "day": "2026-11-11",
     "title": "Thinking Quarterly Q4/22: Power Platform governance and security digest",
     "expiredAt": "2026-11-12"
+  },
+  "b8340a72d13c387acb7c3f8d": {
+    "status": "queued",
+    "day": "2026-11-12",
+    "kind": "image",
+    "title": "Microsoft Intune Compliance Policies Explained",
+    "text": "Microsoft Intune Compliance Policies Explained\n\nMicrosoft Intune compliance policies evaluate device conditions and report compliance. The episode explains the two parts of Intune compliance, what a policy can inspect, what happens after failure, why the policy itself does not block anyone, and where compliance fits within Microsoft 365 and Azure.\n\nSource: M365.FM\n\nFull summary: https://powerplatformgovernance.com/en/posts/microsoft-intune-compliance-policies-explained-b8340a72/\n\n#PowerPlatformGovernanceDaily",
+    "bufferPostId": "6af5b4abc9355d63325843ab",
+    "dueAt": "2026-11-13T08:00:00.000Z"
   }
 }
