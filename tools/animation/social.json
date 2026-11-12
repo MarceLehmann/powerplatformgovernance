@@ -840,5 +840,23 @@
     "text": "Microsoft Intune Compliance Policies Explained\n\nMicrosoft Intune compliance policies evaluate device conditions and report compliance. The episode explains the two parts of Intune compliance, what a policy can inspect, what happens after failure, why the policy itself does not block anyone, and where compliance fits within Microsoft 365 and Azure.\n\nSource: M365.FM\n\nFull summary: https://powerplatformgovernance.com/en/posts/microsoft-intune-compliance-policies-explained-b8340a72/\n\n#PowerPlatformGovernanceDaily",
     "bufferPostId": "6af5b4abc9355d63325843ab",
     "dueAt": "2026-11-13T08:00:00.000Z"
+  },
+  "bab92f970138bc5b9901e259": {
+    "status": "queued",
+    "day": "2026-11-12",
+    "kind": "video",
+    "title": "How to clean up inactive SharePoint sites",
+    "text": "How to clean up inactive SharePoint sites\n\nUse the SharePoint admin center and activity reports to sort sites by last activity and storage, define an inactivity rule such as 90 days for team sites, ask owners, check retention and legal holds, move sites to read-only, then archive or delete with approval and a recorded decision.\n\nSource: Rencore\n\nFull summary: https://powerplatformgovernance.com/en/posts/how-to-clean-up-inactive-sharepoint-sites-bab92f97/\n\n#PowerPlatformGovernanceDaily",
+    "bufferPostId": "6af6090db50c5271d1cccea5",
+    "dueAt": "2026-11-13T11:00:00.000Z"
+  },
+  "4bdfa89ca609bb24cf037f07": {
+    "status": "queued",
+    "day": "2026-11-12",
+    "kind": "video",
+    "title": "Govern Power BI workspaces: owners, external sharing, quarterly cleanup",
+    "text": "Govern Power BI workspaces: owners, external sharing, quarterly cleanup\n\nPower BI self-service grows faster than oversight. Five steps fix it: list every workspace with admins, members, reports and datasets; assign two admins from the business team per workspace; find workspaces shared with external users, confirm access and restrict external sharing in tenant settings; retire reports, dashboards and datasets unused for 90 days; repeat quarterly and record every confirmation for audits.\n\nSource: Rencore Blog\n\nFull summary: https://powerplatformgovernance.com/en/posts/govern-power-bi-workspaces-owners-external-sharing-quarterly-cleanup-4bdfa89c/\n\n#PowerPlatformGovernanceDaily",
+    "bufferPostId": "6af6090ef8af1d04bbd4e981",
+    "dueAt": "2026-11-13T14:00:00.000Z"
   }
 }
