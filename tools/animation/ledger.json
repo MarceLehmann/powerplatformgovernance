@@ -940,5 +940,73 @@
     "gif": false,
     "reason": "The post explains concepts and effects of Intune compliance but does not state a concrete 3 to 5 stage procedure or ordered path.",
     "at": "2026-11-12"
+  },
+  "c85b1c4df1d652c42594997f": {
+    "gif": false,
+    "reason": "The post gives governance checks and advice, but it does not state one concrete 3 to 5 stage procedure in order.",
+    "at": "2026-11-12"
+  },
+  "4076a8e156bd5a2da11bad8c": {
+    "gif": false,
+    "reason": "The post presents governance advice and a five-step readiness checklist, but it does not state a concrete 3 to 5 stage procedure in order with named actions for each step.",
+    "at": "2026-11-12"
+  },
+  "c4ba9c3f9a7ebd12ade35b6f": {
+    "gif": true,
+    "reason": "The post gives a concrete 4 stage procedure to fetch versions, sort them, compare the newest two, and record field changes.",
+    "at": "2026-11-12",
+    "evidence": [
+      "Use Power Automate Send an HTTP request to SharePoint with a GET request to the item's /versions endpoint.",
+      "Sort versions by VersionId, compare the two newest entries for selected internal column names, and record old and new values.",
+      "Sort versions by VersionId, compare the two newest entries for selected internal column names, and record old and new values.",
+      "Sort versions by VersionId, compare the two newest entries for selected internal column names, and record old and new values."
+    ]
+  },
+  "eb83d43284ae938f96e7e1c7": {
+    "gif": true,
+    "reason": "The post describes a concrete five step path from rule definition to policy enforcement and evidence logging.",
+    "at": "2026-11-12",
+    "evidence": [
+      "Turn each governance rule for Teams, sites and groups into a policy checked on every scan",
+      "then attach a response: notify the owner, request approval, or fix.",
+      "put approvals before archive or delete",
+      "run new policies notify-only for one cycle",
+      "keep the log as evidence"
+    ]
+  },
+  "b585c5eff365704bda9d9fbf": {
+    "gif": true,
+    "reason": "The post gives a concrete setup and access sequence for calling a harness agent from Copilot Studio.",
+    "at": "2026-11-12",
+    "evidence": [
+      "Add it as a Model Context Protocol tool with Manual OAuth, the delegated permission MCS.InvokeAsMCP, a client secret and a redirect URI.",
+      "The setup needs an app registration with the delegated permission MCS.InvokeAsMCP or MCS.InvokeAsA2A, a client secret, a redirect URI and Manual OAuth.",
+      "On-behalf-of sign-in lets users consent once in the conversation",
+      "Share the custom connector with Can view, share the called agent with the user, and assign a security role such as Basic User in a non-default environment."
+    ]
+  },
+  "4bdfa89ca609bb24cf037f07": {
+    "gif": true,
+    "reason": "The post gives an explicit five-step governance routine that can be shown as a sequence.",
+    "at": "2026-11-12",
+    "evidence": [
+      "list every workspace with admins, members, reports and datasets;",
+      "assign two admins from the business team per workspace;",
+      "find workspaces shared with external users, confirm access and restrict external sharing in tenant settings;",
+      "retire reports, dashboards and datasets unused for 90 days;",
+      "repeat quarterly and record every confirmation for audits."
+    ]
+  },
+  "bab92f970138bc5b9901e259": {
+    "gif": true,
+    "reason": "The post states a concrete five step cleanup process from identifying inactive sites to recording the final decision.",
+    "at": "2026-11-12",
+    "evidence": [
+      "Use the SharePoint admin center and activity reports to sort sites by last activity and storage",
+      "define an inactivity rule such as 90 days for team sites",
+      "ask owners, check retention",
+      "Check retention policies, legal holds and linked Teams first.",
+      "Set the site read-only and archive it before deletion, with approval recorded."
+    ]
   }
 }

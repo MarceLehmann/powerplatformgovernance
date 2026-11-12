@@ -44,6 +44,12 @@ faq:
   answer: Objektive, wiederkehrende Regeln mit eindeutigem Ergebnis, etwa Arbeitsbereiche
     ohne Owner oder Teams, die sechs Monate inaktiv sind. Einzelfallentscheidungen
     wie das Löschen von Inhalten bleiben hinter einer Freigabe.
+animation:
+  video: /assets/img/animations/eb83d43284ae938f96e7e1c7-de.mp4
+  poster: /assets/img/animations/eb83d43284ae938f96e7e1c7-de.poster.webp
+  width: 800
+  height: 450
+  alt: "Ein Ablauf mit fuenf Schritten zeigt, wie aus einer Governance-Regel eine gepruefte Richtlinie wird, dann eine Antwort erhaelt, vor Archivieren oder Loeschen eine Freigabe einbaut, einen Zyklus nur meldet und das Protokoll als Nachweis behaelt."
 ---
 
 ## TL;DR

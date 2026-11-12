@@ -44,6 +44,12 @@ faq:
   answer: Start with objective, repetitive rules with a clear yes or no answer, such
     as workspaces without an owner or teams inactive for six months. Leave judgement
     calls like deletion behind an approval.
+animation:
+  video: /assets/img/animations/eb83d43284ae938f96e7e1c7-en.mp4
+  poster: /assets/img/animations/eb83d43284ae938f96e7e1c7-en.poster.webp
+  width: 800
+  height: 450
+  alt: "A five step flow shows a governance rule becoming a scanned policy, adding a response, inserting approval before archive or delete, running notify only for one cycle, and keeping the log as evidence."
 ---
 
 ## TL;DR

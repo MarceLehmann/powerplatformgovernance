@@ -1,0 +1,54 @@
+{
+ "title": "Audit SharePoint field changes",
+ "subtitle": "Fetch versions, compare the newest two, and record before and after values.",
+ "steps": [
+  {
+   "product": "powerautomate",
+   "icon": "bolt",
+   "productLabel": "Power Automate",
+   "title": "Call the SharePoint versions endpoint",
+   "actions": [
+    "Send an HTTP request",
+    "GET request",
+    "/versions endpoint"
+   ],
+   "evidence": "Use Power Automate Send an HTTP request to SharePoint with a GET request to the item's /versions endpoint."
+  },
+  {
+   "product": "sharepoint",
+   "icon": "table",
+   "productLabel": "SharePoint",
+   "title": "Sort returned versions",
+   "actions": [
+    "Sort versions",
+    "VersionId"
+   ],
+   "evidence": "Sort versions by VersionId, compare the two newest entries for selected internal column names, and record old and new values."
+  },
+  {
+   "product": "sharepoint",
+   "icon": "filter",
+   "productLabel": "SharePoint",
+   "title": "Compare the two newest entries",
+   "actions": [
+    "compare",
+    "selected internal column names"
+   ],
+   "evidence": "Sort versions by VersionId, compare the two newest entries for selected internal column names, and record old and new values."
+  },
+  {
+   "product": "powerautomate",
+   "icon": "doc",
+   "productLabel": "Power Automate",
+   "title": "Record old and new values",
+   "actions": [
+    "record old values",
+    "record new values"
+   ],
+   "evidence": "Sort versions by VersionId, compare the two newest entries for selected internal column names, and record old and new values."
+  }
+ ],
+ "punchline": [
+  "Field level audit trail"
+ ]
+}

@@ -1,0 +1,63 @@
+{
+ "title": "Inaktive SharePoint-Websites aufraeumen",
+ "subtitle": "Inaktive Websites finden, Besitz klaeren, Compliance pruefen und sicher archivieren oder loeschen.",
+ "steps": [
+  {
+   "product": "sharepoint",
+   "icon": "search",
+   "productLabel": "SharePoint",
+   "title": "Inaktive Websites finden",
+   "actions": [
+    "SharePoint Admin Center",
+    "Aktivitaetsberichte",
+    "nach letzter Aktivitaet"
+   ]
+  },
+  {
+   "product": "sharepoint",
+   "icon": "filter",
+   "productLabel": "SharePoint",
+   "title": "Inaktivitaetsregel festlegen",
+   "actions": [
+    "90 Tage",
+    "Teamwebsites",
+    "Regel je Website-Typ"
+   ]
+  },
+  {
+   "product": "sharepoint",
+   "icon": "user",
+   "productLabel": "SharePoint",
+   "title": "Besitzer befragen",
+   "actions": [
+    "Besitzer fragen"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "shield",
+   "productLabel": "Admin",
+   "title": "Aufbewahrung und Sperren pruefen",
+   "actions": [
+    "Aufbewahrung pruefen",
+    "rechtliche Sperren",
+    "verknuepfte Teams"
+   ]
+  },
+  {
+   "product": "sharepoint",
+   "icon": "file",
+   "productLabel": "SharePoint",
+   "title": "Schreibgeschuetzt, dann archivieren",
+   "actions": [
+    "schreibgeschuetzt",
+    "archivieren",
+    "mit Freigabe loeschen"
+   ]
+  }
+ ],
+ "punchline": [
+  "Entscheid dokumentiert",
+  "Sicherer aufraeumen"
+ ]
+}

@@ -46,6 +46,12 @@ faq:
   answer: Nein. Jedes Protokoll braucht eigene Zustimmungen, also MCS.InvokeAsMCP
     und MCS.InvokeAsA2A getrennt, und für den On-behalf-of Tokenaustausch ist Admin
     Zustimmung nötig.
+animation:
+  video: /assets/img/animations/b585c5eff365704bda9d9fbf-de.mp4
+  poster: /assets/img/animations/b585c5eff365704bda9d9fbf-de.poster.webp
+  width: 800
+  height: 450
+  alt: "Abfolge, wie ein Copilot Studio Agent einen veroeffentlichten Harness Agent aufruft: MCP oder A2A mit manuellem OAuth hinzufuegen, App Details setzen, mit On-behalf-of Zustimmung anmelden, dann Connector und Agent freigeben."
 ---
 
 ## TL;DR

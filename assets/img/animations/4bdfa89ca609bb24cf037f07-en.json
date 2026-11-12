@@ -1,0 +1,69 @@
+{
+ "title": "Power BI workspace cleanup cycle",
+ "subtitle": "Review ownership, external access, stale content and audit records each quarter.",
+ "steps": [
+  {
+   "product": "powerbi",
+   "icon": "table",
+   "productLabel": "Power BI",
+   "title": "Inventory every workspace",
+   "actions": [
+    "list workspaces",
+    "admins",
+    "members"
+   ],
+   "evidence": "list every workspace with admins, members, reports and datasets;"
+  },
+  {
+   "product": "powerbi",
+   "icon": "user",
+   "productLabel": "Power BI",
+   "title": "Assign two business admins",
+   "actions": [
+    "assign two admins",
+    "business team"
+   ],
+   "evidence": "assign two admins from the business team per workspace;"
+  },
+  {
+   "product": "admin",
+   "icon": "shield",
+   "productLabel": "Admin",
+   "title": "Confirm external sharing",
+   "actions": [
+    "confirm access",
+    "restrict external sharing",
+    "tenant settings"
+   ],
+   "evidence": "find workspaces shared with external users, confirm access and restrict external sharing in tenant settings;"
+  },
+  {
+   "product": "powerbi",
+   "icon": "check",
+   "productLabel": "Power BI",
+   "title": "Retire unused reports",
+   "actions": [
+    "retire reports",
+    "dashboards",
+    "datasets"
+   ],
+   "evidence": "retire reports, dashboards and datasets unused for 90 days;"
+  },
+  {
+   "product": "generic",
+   "icon": "doc",
+   "productLabel": "Audit records",
+   "title": "Repeat quarterly and record proof",
+   "actions": [
+    "repeat quarterly",
+    "record confirmations",
+    "audit evidence"
+   ],
+   "evidence": "repeat quarterly and record every confirmation for audits."
+  }
+ ],
+ "punchline": [
+  "Quarterly governance cycle",
+  "Audit evidence kept"
+ ]
+}

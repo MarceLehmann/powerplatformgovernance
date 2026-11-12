@@ -38,6 +38,12 @@ faq:
 - question: What checks belong before deleting an inactive SharePoint site?
   answer: Check retention policies, legal holds and linked Teams first. Set the site
     read-only and archive it before deletion, with approval recorded.
+animation:
+  video: /assets/img/animations/bab92f970138bc5b9901e259-en.mp4
+  poster: /assets/img/animations/bab92f970138bc5b9901e259-en.poster.webp
+  width: 800
+  height: 450
+  alt: "Five stages show how to clean up inactive SharePoint sites: identify inactive sites in admin reports, set an inactivity rule, ask owners, check retention and legal holds, then set read only and archive or delete with approval."
 ---
 
 ## TL;DR

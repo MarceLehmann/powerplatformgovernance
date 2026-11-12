@@ -43,6 +43,12 @@ faq:
   answer: Berichte, Dashboards und Datasets, die 90 Tage niemand geöffnet hat, werden
     ihrem Owner zur Ausmusterung gemeldet; die Quartalsbereinigung erfasst auch ungenutzte
     Pro- oder Premium-Per-User-Lizenzen.
+animation:
+  video: /assets/img/animations/4bdfa89ca609bb24cf037f07-de.mp4
+  poster: /assets/img/animations/4bdfa89ca609bb24cf037f07-de.poster.webp
+  width: 800
+  height: 450
+  alt: "Ein Power BI Governance-Zyklus in fünf Schritten: Workspaces inventarisieren, zwei Admins aus dem Fachteam benennen, externe Freigaben prüfen, ungenutzte Inhalte nach 90 Tagen ausmustern und quartalsweise mit Nachweisen wiederholen."
 ---
 
 ## TL;DR

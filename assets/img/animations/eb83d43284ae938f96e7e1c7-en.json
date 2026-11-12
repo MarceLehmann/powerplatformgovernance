@@ -1,0 +1,67 @@
+{
+ "title": "From rule to enforced policy",
+ "subtitle": "Turn a governance rule into a checked policy with response, approval, a safe rollout, and audit evidence.",
+ "steps": [
+  {
+   "product": "admin",
+   "icon": "doc",
+   "productLabel": "Microsoft 365",
+   "title": "Turn the rule into a policy",
+   "actions": [
+    "policy",
+    "checked on every scan"
+   ],
+   "evidence": "Turn each governance rule for Teams, sites and groups into a policy checked on every scan"
+  },
+  {
+   "product": "powerautomate",
+   "icon": "bolt",
+   "productLabel": "Power Automate",
+   "title": "Attach the response",
+   "actions": [
+    "notify",
+    "request approval",
+    "fix"
+   ],
+   "evidence": "then attach a response: notify the owner, request approval, or fix."
+  },
+  {
+   "product": "admin",
+   "icon": "check",
+   "productLabel": "Microsoft 365",
+   "title": "Add approval before risky actions",
+   "actions": [
+    "approval",
+    "archive",
+    "delete"
+   ],
+   "evidence": "put approvals before archive or delete"
+  },
+  {
+   "product": "admin",
+   "icon": "bell",
+   "productLabel": "Microsoft 365",
+   "title": "Start notify only for one cycle",
+   "actions": [
+    "notify-only",
+    "one cycle"
+   ],
+   "evidence": "run new policies notify-only for one cycle"
+  },
+  {
+   "product": "admin",
+   "icon": "file",
+   "productLabel": "Microsoft 365",
+   "title": "Keep the log as evidence",
+   "actions": [
+    "log",
+    "evidence"
+   ],
+   "evidence": "keep the log as evidence"
+  }
+ ],
+ "punchline": [
+  "Trusted automation",
+  "Audit evidence kept"
+ ]
+}

@@ -1,0 +1,50 @@
+{
+ "title": "SharePoint-Feldaenderungen pruefen",
+ "subtitle": "Versionen abrufen, die neuesten zwei vergleichen und alte sowie neue Werte speichern.",
+ "steps": [
+  {
+   "product": "powerautomate",
+   "icon": "bolt",
+   "productLabel": "Power Automate",
+   "title": "SharePoint-Versionen aufrufen",
+   "actions": [
+    "Send an HTTP request",
+    "Abrufen-Anfrage",
+    "Endpunkt /versions"
+   ]
+  },
+  {
+   "product": "sharepoint",
+   "icon": "table",
+   "productLabel": "SharePoint",
+   "title": "Zurueckgegebene Versionen sortieren",
+   "actions": [
+    "Versionen sortieren",
+    "VersionId"
+   ]
+  },
+  {
+   "product": "sharepoint",
+   "icon": "filter",
+   "productLabel": "SharePoint",
+   "title": "Die zwei neuesten Eintraege vergleichen",
+   "actions": [
+    "vergleichen",
+    "interne Spaltennamen"
+   ]
+  },
+  {
+   "product": "powerautomate",
+   "icon": "doc",
+   "productLabel": "Power Automate",
+   "title": "Alte und neue Werte speichern",
+   "actions": [
+    "alte Werte speichern",
+    "neue Werte speichern"
+   ]
+  }
+ ],
+ "punchline": [
+  "Pruefspur auf Feldebene"
+ ]
+}

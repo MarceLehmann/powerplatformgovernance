@@ -40,6 +40,12 @@ faq:
   answer: Die Versionsverwaltung muss für Liste oder Bibliothek aktiviert sein, weil
     /versions die historischen Einträge für den Vergleich alter und neuer Werte liefert.
 publisher_disclosure: Beide Publikationen werden von Marcel Lehmann herausgegeben.
+animation:
+  video: /assets/img/animations/c4ba9c3f9a7ebd12ade35b6f-de.mp4
+  poster: /assets/img/animations/c4ba9c3f9a7ebd12ade35b6f-de.poster.webp
+  width: 800
+  height: 450
+  alt: "Ein 4-Schritt-Ablauf zeigt, wie Power Automate den SharePoint-Endpunkt /versions aufruft, Versionen nach VersionId sortiert, die zwei neuesten Eintraege vergleicht und alte sowie neue Feldwerte speichert."
 ---
 
 ## TL;DR

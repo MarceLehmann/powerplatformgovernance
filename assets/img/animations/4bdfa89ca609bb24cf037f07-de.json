@@ -1,0 +1,64 @@
+{
+ "title": "Power BI Workspace Bereinigung",
+ "subtitle": "Owner, externe Zugriffe, alte Inhalte und Nachweise pro Quartal pruefen.",
+ "steps": [
+  {
+   "product": "powerbi",
+   "icon": "table",
+   "productLabel": "Power BI",
+   "title": "Jeden Workspace inventarisieren",
+   "actions": [
+    "Workspaces listen",
+    "Admins",
+    "Mitglieder"
+   ]
+  },
+  {
+   "product": "powerbi",
+   "icon": "user",
+   "productLabel": "Power BI",
+   "title": "Zwei Admins aus Fachteam benennen",
+   "actions": [
+    "zwei Admins benennen",
+    "Fachteam"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "shield",
+   "productLabel": "Admin",
+   "title": "Externe Freigabe bestaetigen",
+   "actions": [
+    "Zugriff bestaetigen",
+    "externe Freigabe einschr.",
+    "Tenanteinstellungen"
+   ]
+  },
+  {
+   "product": "powerbi",
+   "icon": "check",
+   "productLabel": "Power BI",
+   "title": "Ungenutzte Berichte ausmustern",
+   "actions": [
+    "Berichte ausmustern",
+    "Dashboards",
+    "Datasets"
+   ]
+  },
+  {
+   "product": "generic",
+   "icon": "doc",
+   "productLabel": "Audit Nachweise",
+   "title": "Quartalsweise mit Nachweis",
+   "actions": [
+    "quartalsweise",
+    "Bestaetigungen erfassen",
+    "Audit Nachweis"
+   ]
+  }
+ ],
+ "punchline": [
+  "Governance Zyklus",
+  "Audit Nachweise gesichert"
+ ]
+}

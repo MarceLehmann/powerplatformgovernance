@@ -39,6 +39,12 @@ faq:
   answer: Prüfen Sie Aufbewahrungsrichtlinien, rechtliche Sperren und verknüpfte Teams.
     Schalten Sie die Website zuerst schreibgeschützt und archivieren Sie sie vor dem
     Löschen.
+animation:
+  video: /assets/img/animations/bab92f970138bc5b9901e259-de.mp4
+  poster: /assets/img/animations/bab92f970138bc5b9901e259-de.poster.webp
+  width: 800
+  height: 450
+  alt: "Fuenf Schritte zeigen das Aufraeumen inaktiver SharePoint-Websites: inaktive Websites finden, Regel festlegen, Besitzer fragen, Aufbewahrung und Sperren pruefen, dann schreibgeschuetzt setzen und mit Freigabe archivieren oder loeschen."
 ---
 
 ## TL;DR

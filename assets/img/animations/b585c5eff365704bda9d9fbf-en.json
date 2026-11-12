@@ -1,0 +1,57 @@
+{
+ "title": "Set up harness agent calls",
+ "subtitle": "Configure MCP or A2A, sign in, then grant access so users can get answers.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "link",
+   "productLabel": "Copilot Studio",
+   "title": "Add MCP or A2A to the agent",
+   "actions": [
+    "Model Context Protocol tool",
+    "A2A agent",
+    "Manual OAuth"
+   ],
+   "evidence": "Add it as a Model Context Protocol tool with Manual OAuth, the delegated permission MCS.InvokeAsMCP, a client secret and a redirect URI."
+  },
+  {
+   "product": "admin",
+   "icon": "key",
+   "productLabel": "Microsoft Entra",
+   "title": "Set app permission and app details",
+   "actions": [
+    "MCS.InvokeAsMCP",
+    "MCS.InvokeAsA2A",
+    "client secret"
+   ],
+   "evidence": "The setup needs an app registration with the delegated permission MCS.InvokeAsMCP or MCS.InvokeAsA2A, a client secret, a redirect URI and Manual OAuth."
+  },
+  {
+   "product": "admin",
+   "icon": "user",
+   "productLabel": "Microsoft Entra",
+   "title": "Sign in with on-behalf-of consent",
+   "actions": [
+    "Entra sign-in",
+    "on-behalf-of authentication",
+    "admin consent"
+   ],
+   "evidence": "On-behalf-of sign-in lets users consent once in the conversation"
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "shield",
+   "productLabel": "Copilot Studio",
+   "title": "Share and assign security role",
+   "actions": [
+    "Can view",
+    "Basic User",
+    "security role"
+   ],
+   "evidence": "Share the custom connector with Can view, share the called agent with the user, and assign a security role such as Basic User in a non-default environment."
+  }
+ ],
+ "punchline": [
+  "Users can get answers"
+ ]
+}

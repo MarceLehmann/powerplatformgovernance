@@ -45,6 +45,12 @@ faq:
   answer: No. User or admin consent is granted per protocol, so MCS.InvokeAsMCP and
     MCS.InvokeAsA2A each need their own consent, and admin consent is required for
     the on-behalf-of token swap.
+animation:
+  video: /assets/img/animations/b585c5eff365704bda9d9fbf-en.mp4
+  poster: /assets/img/animations/b585c5eff365704bda9d9fbf-en.poster.webp
+  width: 800
+  height: 450
+  alt: "Sequence showing how a Copilot Studio agent calls a published harness agent: add MCP or A2A with Manual OAuth, set delegated permission and app details, sign in with on-behalf-of consent, then share connector and agent and assign a security role."
 ---
 
 ## TL;DR

@@ -39,6 +39,12 @@ faq:
   answer: Versioning must be enabled on the list or library because the /versions
     collection supplies the historical entries required for a before and after comparison.
 publisher_disclosure: Both publications are edited by Marcel Lehmann.
+animation:
+  video: /assets/img/animations/c4ba9c3f9a7ebd12ade35b6f-en.mp4
+  poster: /assets/img/animations/c4ba9c3f9a7ebd12ade35b6f-en.poster.webp
+  width: 800
+  height: 450
+  alt: "A 4 step flow shows Power Automate calling the SharePoint /versions endpoint, sorting versions by VersionId, comparing the two newest entries, and recording old and new field values."
 ---
 
 ## TL;DR

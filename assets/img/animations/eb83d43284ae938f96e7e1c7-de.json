@@ -1,0 +1,62 @@
+{
+ "title": "Von Regel zu Richtlinie",
+ "subtitle": "Eine Governance-Regel wird zur geprueften Richtlinie mit Antwort, Freigabe, sicherem Start und Nachweis.",
+ "steps": [
+  {
+   "product": "admin",
+   "icon": "doc",
+   "productLabel": "Microsoft 365",
+   "title": "Regel in Richtlinie umwandeln",
+   "actions": [
+    "Richtlinie",
+    "bei jedem Scan geprueft"
+   ]
+  },
+  {
+   "product": "powerautomate",
+   "icon": "bolt",
+   "productLabel": "Power Automate",
+   "title": "Antwort anhaengen",
+   "actions": [
+    "benachrichtigen",
+    "Freigabe anfordern",
+    "korrigieren"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "check",
+   "productLabel": "Microsoft 365",
+   "title": "Freigabe vor riskanten Aktionen",
+   "actions": [
+    "Freigabe",
+    "archivieren",
+    "loeschen"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "bell",
+   "productLabel": "Microsoft 365",
+   "title": "Einen Zyklus nur melden",
+   "actions": [
+    "nur benachrichtigen",
+    "ein Zyklus"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "file",
+   "productLabel": "Microsoft 365",
+   "title": "Protokoll als Nachweis behalten",
+   "actions": [
+    "Protokoll",
+    "Nachweis"
+   ]
+  }
+ ],
+ "punchline": [
+  "Vertrauenswuerdige",
+  "Automatisierung"
+ ]
+}

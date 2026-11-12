@@ -1,0 +1,53 @@
+{
+ "title": "Harness Agent Aufrufe einrichten",
+ "subtitle": "MCP oder A2A konfigurieren, anmelden und dann Zugriff geben, damit Nutzer Antworten erhalten.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "link",
+   "productLabel": "Copilot Studio",
+   "title": "MCP oder A2A zum Agenten hinzufuegen",
+   "actions": [
+    "MCP Werkzeug",
+    "A2A Agent",
+    "manuelles OAuth"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "key",
+   "productLabel": "Microsoft Entra",
+   "title": "App Berechtigung und Details setzen",
+   "actions": [
+    "MCS.InvokeAsMCP",
+    "MCS.InvokeAsA2A",
+    "Client Secret"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "user",
+   "productLabel": "Microsoft Entra",
+   "title": "Mit On-behalf-of Zustimmung anmelden",
+   "actions": [
+    "Entra Anmeldung",
+    "On-behalf-of Anmeldung",
+    "Admin Zustimmung"
+   ]
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "shield",
+   "productLabel": "Copilot Studio",
+   "title": "Freigeben und Sicherheitsrolle zuweisen",
+   "actions": [
+    "Anzeigen",
+    "Basic User",
+    "Sicherheitsrolle"
+   ]
+  }
+ ],
+ "punchline": [
+  "Nutzer erhalten Antworten"
+ ]
+}

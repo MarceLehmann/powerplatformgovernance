@@ -43,6 +43,12 @@ faq:
   answer: Reports, dashboards and datasets that nobody has opened in 90 days should
     be flagged to their owner for retirement, and quarterly cleanups also catch unused
     Pro or Premium Per User licenses.
+animation:
+  video: /assets/img/animations/4bdfa89ca609bb24cf037f07-en.mp4
+  poster: /assets/img/animations/4bdfa89ca609bb24cf037f07-en.poster.webp
+  width: 800
+  height: 450
+  alt: "A five-step Power BI governance cycle: inventory workspaces, assign two business admins, review external sharing, retire unused content after 90 days, and repeat quarterly with audit records."
 ---
 
 ## TL;DR
