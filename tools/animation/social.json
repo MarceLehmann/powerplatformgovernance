@@ -930,5 +930,32 @@
     "day": "2026-11-12",
     "title": "Stop unmanaged Microsoft 365 workspaces driving up storage and licence costs",
     "expiredAt": "2026-11-13"
+  },
+  "67f00ca4591eb4657393f2a5": {
+    "status": "queued",
+    "day": "2026-11-13",
+    "kind": "video",
+    "title": "Power Pages record access for external users across multiple customer accounts",
+    "text": "Power Pages record access for external users across multiple customer accounts\n\nPower Pages grants external users access to Dataverse records only through the relationship selected on each table permission. Account scope covers the account linked to the signed-in contact, not every separate membership. Write the access rule first, map contact-to-account paths, assign focused web roles with only needed operations, and test allowed and denied access, including direct URLs and Web API requests, before launch.\n\nSource: Softchief Technologies\n\nFull summary: https://powerplatformgovernance.com/en/posts/power-pages-record-access-for-external-users-across-multiple-customer-67f00ca4/\n\n#PowerPlatformGovernanceDaily #Dataverse",
+    "bufferPostId": "6af75a6494400d1f24acf5b1",
+    "dueAt": "2026-11-14T08:00:00.000Z"
+  },
+  "e86335935b78e723b0c6dc1d": {
+    "status": "queued",
+    "day": "2026-11-13",
+    "kind": "image",
+    "title": "Many AI assistants, one foundation: what the Exchange outage revealed about shared AI dependencies",
+    "text": "Many AI assistants, one foundation: what the Exchange outage revealed about shared AI dependencies\n\nDuring the 16-hour Exchange Online outage of 12 November 2026, Microsoft 365 Copilot was listed as affected, and connectors other assistants use for mail and files were reportedly affected too. Claude and ChatGPT reach the same SharePoint sites, mailboxes and Entra ID identities as Copilot, so three assistants mean one shared dependency. Gartner: 26% versus 3% Copilot value, 80% lack agent governance controls.\n\nSource: Rencore Blog\n\nFull summary: https://powerplatformgovernance.com/en/posts/many-ai-assistants-one-foundation-what-the-exchange-outage-revealed-e8633593/\n\n#PowerPlatformGovernanceDaily",
+    "bufferPostId": "6af75a656fe3cfaf4aafd3d5",
+    "dueAt": "2026-11-14T11:00:00.000Z"
+  },
+  "f0d076abf0d8b900394ce5d7": {
+    "status": "queued",
+    "day": "2026-11-13",
+    "kind": "image",
+    "title": "Dataverse Security Roles Simply Explained: Who Can See, Change and Print Your Data",
+    "text": "Dataverse Security Roles Simply Explained: Who Can See, Change and Print Your Data\n\nDataverse protects business data with security roles, not passwords or firewalls. A security role works like a job description for data, deciding what each person can see, change and print. Permissions reach as far as five access levels define, business units mirror departments, and teams grant group access. Dataverse sits inside Microsoft 365, Azure and the Power Platform.\n\nSource: M365.FM Simply Explained (Spreaker)\n\nFull summary: https://powerplatformgovernance.com/en/posts/dataverse-security-roles-simply-explained-who-can-see-change-and-f0d076ab/\n\n#PowerPlatformGovernanceDaily #Dataverse",
+    "bufferPostId": "6af75a667d320dbe3ec61ca1",
+    "dueAt": "2026-11-14T14:00:00.000Z"
   }
 }
