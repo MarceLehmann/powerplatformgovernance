@@ -43,6 +43,12 @@ faq:
   answer: Der erste messbare Effekt kommt, wenn der erste Prüfzyklus abgeschlossen
     und die Aufbewahrungsfristen abgelaufen sind, denn gelöschte Inhalte liegen wochenlang
     im Papierkorb.
+animation:
+  video: /assets/img/animations/36c77773584f80dc1b344e10-de.mp4
+  poster: /assets/img/animations/36c77773584f80dc1b344e10-de.poster.webp
+  width: 800
+  height: 450
+  alt: "Eine Abfolge mit fuenf Schritten zeigt, wie Kosten fuer unmanaged Microsoft 365 Workspaces sinken: inventarisieren, Besitzer zuweisen, Inaktivitaet definieren, ueber Behalten oder Archivieren entscheiden und Einsparungen berichten."
 ---
 
 ## TL;DR

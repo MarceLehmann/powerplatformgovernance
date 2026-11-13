@@ -41,6 +41,12 @@ faq:
     flow stuck?
   answer: A quick response can arrive before the wait action starts, leaving the flow
     stuck. Keep the actions close together or test this pattern carefully.
+animation:
+  video: /assets/img/animations/762dfffcf908fe278b9e4b27-en.mp4
+  poster: /assets/img/animations/762dfffcf908fe278b9e4b27-en.poster.webp
+  width: 800
+  height: 450
+  alt: "A four step flow shows resolving the manager with Get manager (V2), validating the recipient, storing request and approval references, and monitoring pending approvals with flow history."
 ---
 
 ## TL;DR

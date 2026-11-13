@@ -1,0 +1,65 @@
+{
+ "title": "Kosten fuer unmanaged Workspaces senken",
+ "subtitle": "Folgen Sie der Routine mit fuenf Schritten zum Ausmustern ungenutzter Microsoft 365 Workspaces.",
+ "steps": [
+  {
+   "product": "admin",
+   "icon": "search",
+   "productLabel": "M365 Admin",
+   "title": "Alle Workspaces inventarisieren",
+   "actions": [
+    "Besitzer",
+    "letzte Aktivitaet",
+    "Speicher"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "user",
+   "productLabel": "M365 Admin",
+   "title": "Fehlende Besitzer zuweisen",
+   "actions": [
+    "Besitzer zuweisen",
+    "besitzerlos",
+    "ein Besitzer"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "filter",
+   "productLabel": "M365 Admin",
+   "title": "Regeln fuer Inaktivitaet festlegen",
+   "actions": [
+    "Inaktivitaet definieren",
+    "sechs Monate",
+    "ohne Aenderung"
+   ]
+  },
+  {
+   "product": "teams",
+   "icon": "check",
+   "productLabel": "Teams",
+   "title": "Behalten oder archivieren lassen",
+   "actions": [
+    "behalten",
+    "archivieren",
+    "Besitzerentscheid"
+   ]
+  },
+  {
+   "product": "generic",
+   "icon": "doc",
+   "productLabel": "Finance",
+   "title": "Eingesparten Speicher berichten",
+   "actions": [
+    "berichten",
+    "eingesparter Speicher",
+    "Finance"
+   ]
+  }
+ ],
+ "punchline": [
+  "Einsparungen kommen",
+  "nach Aufbewahrungsfristen"
+ ]
+}

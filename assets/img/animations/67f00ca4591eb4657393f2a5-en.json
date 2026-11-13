@@ -1,0 +1,52 @@
+{
+ "title": "Secure external record access",
+ "subtitle": "Set table permissions so users reach only approved records.",
+ "steps": [
+  {
+   "product": "generic",
+   "icon": "doc",
+   "productLabel": "Power Pages",
+   "title": "Write the access rule first",
+   "actions": [
+    "access rule"
+   ],
+   "evidence": "Write the access rule first, map contact-to-account paths, assign focused web roles with only needed operations"
+  },
+  {
+   "product": "dataverse",
+   "icon": "link",
+   "productLabel": "Dataverse",
+   "title": "Map contact to account paths",
+   "actions": [
+    "contact-to-account paths"
+   ],
+   "evidence": "map contact-to-account paths, assign focused web roles with only needed operations, and test allowed and denied access"
+  },
+  {
+   "product": "generic",
+   "icon": "user",
+   "productLabel": "Power Pages",
+   "title": "Assign focused web roles",
+   "actions": [
+    "web roles",
+    "needed operations"
+   ],
+   "evidence": "assign focused web roles with only needed operations, and test allowed and denied access, including direct URLs"
+  },
+  {
+   "product": "generic",
+   "icon": "check",
+   "productLabel": "Power Pages",
+   "title": "Test allowed and denied access",
+   "actions": [
+    "direct URLs",
+    "Web API requests"
+   ],
+   "evidence": "test allowed and denied access, including direct URLs and Web API requests, before launch."
+  }
+ ],
+ "punchline": [
+  "Only approved records",
+  "before launch"
+ ]
+}

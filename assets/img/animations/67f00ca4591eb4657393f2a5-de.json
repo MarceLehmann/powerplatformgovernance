@@ -1,0 +1,48 @@
+{
+ "title": "Externen Datensatzzugriff sichern",
+ "subtitle": "Tabellenberechtigungen so setzen, dass Nutzer nur freigegebene Datensaetze erreichen.",
+ "steps": [
+  {
+   "product": "generic",
+   "icon": "doc",
+   "productLabel": "Power Pages",
+   "title": "Zugriffsregel zuerst festlegen",
+   "actions": [
+    "Zugriffsregel"
+   ]
+  },
+  {
+   "product": "dataverse",
+   "icon": "link",
+   "productLabel": "Dataverse",
+   "title": "Kontakt Konto Pfade pruefen",
+   "actions": [
+    "Kontakt Konto Pfade"
+   ]
+  },
+  {
+   "product": "generic",
+   "icon": "user",
+   "productLabel": "Power Pages",
+   "title": "Fokussierte Webrollen zuweisen",
+   "actions": [
+    "Webrollen",
+    "noetige Operationen"
+   ]
+  },
+  {
+   "product": "generic",
+   "icon": "check",
+   "productLabel": "Power Pages",
+   "title": "Erlaubt und verweigert testen",
+   "actions": [
+    "direkte URLs",
+    "Web-API"
+   ]
+  }
+ ],
+ "punchline": [
+  "Nur freigegebene Datensaetze",
+  "vor dem Launch"
+ ]
+}

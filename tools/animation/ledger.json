@@ -1066,5 +1066,49 @@
       "revoke sessions, reclaim licenses",
       "then verify a week later"
     ]
+  },
+  "f0d076abf0d8b900394ce5d7": {
+    "gif": false,
+    "reason": "The post explains Dataverse security concepts and governance advice, but it does not state a concrete 3 to 5 stage procedure or ordered path.",
+    "at": "2026-11-13"
+  },
+  "e86335935b78e723b0c6dc1d": {
+    "gif": false,
+    "reason": "The post is governance advice and an outage summary, not a concrete 3 to 5 stage procedure stated in the text.",
+    "at": "2026-11-13"
+  },
+  "762dfffcf908fe278b9e4b27": {
+    "gif": true,
+    "reason": "The post states a concrete 4 stage handling sequence for approvals when managers change.",
+    "at": "2026-11-13",
+    "evidence": [
+      "Use Get manager (V2), validate the returned email, UPN or Entra ID",
+      "validate the returned email, UPN or Entra ID, provide a named fallback",
+      "store request and approval references separately",
+      "monitor pending work alongside flow history."
+    ]
+  },
+  "36c77773584f80dc1b344e10": {
+    "gif": true,
+    "reason": "The post gives a concrete five step routine: inventory, assign owners, define inactivity, archive, then report savings.",
+    "at": "2026-11-13",
+    "evidence": [
+      "inventory every workspace with owner and last activity",
+      "assign owners where none exist",
+      "define inactivity, for example six months without change",
+      "ask owners to keep or archive",
+      "then report retired storage to finance"
+    ]
+  },
+  "67f00ca4591eb4657393f2a5": {
+    "gif": true,
+    "reason": "The post gives a clear 4 stage procedure: define the rule, map relationships, assign web roles, and test access before launch.",
+    "at": "2026-11-13",
+    "evidence": [
+      "Write the access rule first, map contact-to-account paths, assign focused web roles with only needed operations",
+      "map contact-to-account paths, assign focused web roles with only needed operations, and test allowed and denied access",
+      "assign focused web roles with only needed operations, and test allowed and denied access, including direct URLs",
+      "test allowed and denied access, including direct URLs and Web API requests, before launch."
+    ]
   }
 }

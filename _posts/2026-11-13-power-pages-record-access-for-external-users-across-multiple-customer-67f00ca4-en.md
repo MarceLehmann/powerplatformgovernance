@@ -40,6 +40,12 @@ faq:
 - question: How do I test Power Pages access for a user with multiple account memberships?
   answer: Use test contacts with one account, several memberships and none, then verify
     allowed tasks and attempt to open an unrelated record by direct URL.
+animation:
+  video: /assets/img/animations/67f00ca4591eb4657393f2a5-en.mp4
+  poster: /assets/img/animations/67f00ca4591eb4657393f2a5-en.poster.webp
+  width: 800
+  height: 450
+  alt: "A 4 step flow shows how to secure Power Pages record access: write the access rule, map contact to account paths, assign focused web roles, and test allowed and denied access including direct URLs and Web API."
 ---
 
 ## TL;DR

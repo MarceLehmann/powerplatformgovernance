@@ -1,0 +1,70 @@
+{
+ "title": "Reduce unmanaged workspace costs",
+ "subtitle": "Follow the five step routine to retire unused Microsoft 365 workspaces.",
+ "steps": [
+  {
+   "product": "admin",
+   "icon": "search",
+   "productLabel": "Microsoft 365 admin",
+   "title": "Inventory every workspace",
+   "actions": [
+    "owner",
+    "last activity",
+    "storage"
+   ],
+   "evidence": "inventory every workspace with owner and last activity"
+  },
+  {
+   "product": "admin",
+   "icon": "user",
+   "productLabel": "Microsoft 365 admin",
+   "title": "Assign owners where missing",
+   "actions": [
+    "assign owners",
+    "ownerless",
+    "single-owner"
+   ],
+   "evidence": "assign owners where none exist"
+  },
+  {
+   "product": "admin",
+   "icon": "filter",
+   "productLabel": "Microsoft 365 admin",
+   "title": "Define inactivity rules",
+   "actions": [
+    "define inactivity",
+    "six months",
+    "without change"
+   ],
+   "evidence": "define inactivity, for example six months without change"
+  },
+  {
+   "product": "teams",
+   "icon": "check",
+   "productLabel": "Teams",
+   "title": "Ask owners to keep or archive",
+   "actions": [
+    "keep",
+    "archive",
+    "owner decision"
+   ],
+   "evidence": "ask owners to keep or archive"
+  },
+  {
+   "product": "generic",
+   "icon": "doc",
+   "productLabel": "Finance",
+   "title": "Report retired storage",
+   "actions": [
+    "report",
+    "retired storage",
+    "finance"
+   ],
+   "evidence": "then report retired storage to finance"
+  }
+ ],
+ "punchline": [
+  "Savings arrive in steps",
+  "after retention periods"
+ ]
+}

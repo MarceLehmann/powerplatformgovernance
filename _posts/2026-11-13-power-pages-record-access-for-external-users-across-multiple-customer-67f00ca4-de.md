@@ -41,6 +41,12 @@ faq:
 - question: Wie teste ich den Power Pages-Zugriff für Kontakte mit mehreren Kontomitgliedschaften?
   answer: Testen Sie Kontakte mit einem Konto, mehreren Mitgliedschaften und ohne
     Mitgliedschaft und versuchen Sie, fremde Datensätze über die direkte URL zu öffnen.
+animation:
+  video: /assets/img/animations/67f00ca4591eb4657393f2a5-de.mp4
+  poster: /assets/img/animations/67f00ca4591eb4657393f2a5-de.poster.webp
+  width: 800
+  height: 450
+  alt: "Ein Ablauf mit 4 Schritten zeigt, wie Sie den Datensatzzugriff in Power Pages absichern: Zugriffsregel festlegen, Kontakt Konto Pfade pruefen, Webrollen zuweisen und Zugriff mit direkten URLs und Web-API testen."
 ---
 
 ## TL;DR

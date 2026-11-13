@@ -1,0 +1,50 @@
+{
+ "title": "Genehmigungen bei Managerwechsel",
+ "subtitle": "Manager ermitteln, Routing pruefen, Daten speichern und offene Vorgaenge ueberwachen.",
+ "steps": [
+  {
+   "product": "powerautomate",
+   "icon": "user",
+   "productLabel": "Power Automate",
+   "title": "Aktuellen Manager ermitteln",
+   "actions": [
+    "\"Get manager (V2)\""
+   ]
+  },
+  {
+   "product": "powerautomate",
+   "icon": "check",
+   "productLabel": "Power Automate",
+   "title": "Empfaenger oder Fallback pruefen",
+   "actions": [
+    "E Mail pruefen",
+    "UPN pruefen",
+    "benannter Fallback"
+   ]
+  },
+  {
+   "product": "powerautomate",
+   "icon": "db",
+   "productLabel": "Power Automate",
+   "title": "Antrag und Referenzen speichern",
+   "actions": [
+    "Antragsdaten speichern",
+    "Genehmigungsreferenzen"
+   ]
+  },
+  {
+   "product": "powerautomate",
+   "icon": "search",
+   "productLabel": "Power Automate",
+   "title": "Offene Vorgaenge ueberwachen",
+   "actions": [
+    "offene Vorgaenge",
+    "Flowhistorie"
+   ]
+  }
+ ],
+ "punchline": [
+  "Weniger verlorene",
+  "Genehmigungen"
+ ]
+}

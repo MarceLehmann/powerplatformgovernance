@@ -41,6 +41,12 @@ faq:
 - question: How long until archiving Teams and SharePoint sites shows savings?
   answer: Expect the first measurable effect after the first review cycle closes and
     retention periods pass, since deleted content sits in recycle bins for weeks.
+animation:
+  video: /assets/img/animations/36c77773584f80dc1b344e10-en.mp4
+  poster: /assets/img/animations/36c77773584f80dc1b344e10-en.poster.webp
+  width: 800
+  height: 450
+  alt: "A five step sequence shows how to reduce unmanaged Microsoft 365 workspace costs: inventory workspaces, assign owners, define inactivity, ask owners to keep or archive, and report retired storage."
 ---
 
 ## TL;DR

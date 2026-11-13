@@ -1,0 +1,54 @@
+{
+ "title": "Handle approvals after manager changes",
+ "subtitle": "Resolve the manager, validate routing, keep records and watch pending work.",
+ "steps": [
+  {
+   "product": "powerautomate",
+   "icon": "user",
+   "productLabel": "Power Automate",
+   "title": "Resolve the current manager",
+   "actions": [
+    "Get manager (V2)"
+   ],
+   "evidence": "Use Get manager (V2), validate the returned email, UPN or Entra ID"
+  },
+  {
+   "product": "powerautomate",
+   "icon": "check",
+   "productLabel": "Power Automate",
+   "title": "Validate approver or use fallback",
+   "actions": [
+    "validate email",
+    "validate UPN",
+    "named fallback"
+   ],
+   "evidence": "validate the returned email, UPN or Entra ID, provide a named fallback"
+  },
+  {
+   "product": "powerautomate",
+   "icon": "db",
+   "productLabel": "Power Automate",
+   "title": "Store request and approval refs",
+   "actions": [
+    "store request records",
+    "approval references"
+   ],
+   "evidence": "store request and approval references separately"
+  },
+  {
+   "product": "powerautomate",
+   "icon": "search",
+   "productLabel": "Power Automate",
+   "title": "Monitor pending work",
+   "actions": [
+    "monitor pending work",
+    "flow history"
+   ],
+   "evidence": "monitor pending work alongside flow history."
+  }
+ ],
+ "punchline": [
+  "Fewer lost approvals",
+  "Traceable decisions"
+ ]
+}

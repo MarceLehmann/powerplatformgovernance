@@ -41,6 +41,12 @@ faq:
   answer: Eine schnelle Antwort kann eintreffen, bevor die Wait Aktion startet, wodurch
     der Flow hängen bleibt. Die Aktionen sollten eng zusammenliegen oder sorgfältig
     getestet werden.
+animation:
+  video: /assets/img/animations/762dfffcf908fe278b9e4b27-de.mp4
+  poster: /assets/img/animations/762dfffcf908fe278b9e4b27-de.poster.webp
+  width: 800
+  height: 450
+  alt: "Ein Ablauf mit vier Schritten zeigt das Ermitteln des Managers mit \"Get manager (V2)\", das Pruefen des Empfaengers, das Speichern von Antrag und Genehmigungsreferenzen und das Ueberwachen offener Genehmigungen mit der Flowhistorie."
 ---
 
 ## TL;DR
