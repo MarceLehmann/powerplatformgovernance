@@ -39,6 +39,12 @@ faq:
 - question: When should a SharePoint agent be retired?
   answer: Retire agents connected to stale sites, including sites nobody has opened
     in 90 days, after the owner decides whether to keep or archive them.
+animation:
+  video: /assets/img/animations/91751c3cfdf761847f63decc-en.mp4
+  poster: /assets/img/animations/91751c3cfdf761847f63decc-en.poster.webp
+  width: 800
+  height: 450
+  alt: "A four step flow shows governing SharePoint agents by inventorying each agent, assigning an owner, reviewing site risks, and retiring agents tied to stale sites."
 ---
 
 ## TL;DR

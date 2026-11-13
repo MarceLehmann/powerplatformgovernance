@@ -40,6 +40,12 @@ faq:
   answer: Quarterly reviews confirm that owners remain responsible and members are
     appropriate, while unanswered requests are escalated and confirmations retained
     as evidence.
+animation:
+  video: /assets/img/animations/1b850ba2fb5e70f5c1548469-en.mp4
+  poster: /assets/img/animations/1b850ba2fb5e70f5c1548469-en.poster.webp
+  width: 800
+  height: 450
+  alt: "A five step workflow maps Microsoft 365 workspaces, flags ownership gaps, assigns active owners during leaver changes, prioritises risky workspaces, and confirms ownership quarterly."
 ---
 
 ## TL;DR

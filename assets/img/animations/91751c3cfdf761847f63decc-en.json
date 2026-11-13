@@ -1,0 +1,55 @@
+{
+ "title": "Govern SharePoint agents",
+ "subtitle": "Inventory agents, assign owners, review site risks, then retire stale agents.",
+ "steps": [
+  {
+   "product": "sharepoint",
+   "icon": "table",
+   "productLabel": "SharePoint",
+   "title": "Inventory each agent and its sources",
+   "actions": [
+    "scheduled inventory",
+    "knowledge sources",
+    "file count"
+   ],
+   "evidence": "Maintain one scheduled inventory containing each agent, its SharePoint site, knowledge sources and file count"
+  },
+  {
+   "product": "admin",
+   "icon": "user",
+   "productLabel": "Admin",
+   "title": "Assign a named owner",
+   "actions": [
+    "assign owners"
+   ],
+   "evidence": "assign an owner"
+  },
+  {
+   "product": "sharepoint",
+   "icon": "shield",
+   "productLabel": "SharePoint",
+   "title": "Review site access and labels",
+   "actions": [
+    "sensitivity labels",
+    "external sharing",
+    "edit rights"
+   ],
+   "evidence": "Check sensitivity labels, external sharing, edit rights, external site ownership and broken inheritance"
+  },
+  {
+   "product": "sharepoint",
+   "icon": "check",
+   "productLabel": "SharePoint",
+   "title": "Retire agents on stale sites",
+   "actions": [
+    "retire agents",
+    "90 days",
+    "keep or archive"
+   ],
+   "evidence": "Retire agents connected to stale sites, including sites nobody has opened in 90 days, after the owner decides whether to keep or archive them."
+  }
+ ],
+ "punchline": [
+  "Reduce data risk"
+ ]
+}

@@ -1,0 +1,56 @@
+{
+ "title": "Measure Microsoft 365 adoption",
+ "subtitle": "Define usage, capture a baseline, compare cost, then review trends regularly.",
+ "steps": [
+  {
+   "product": "admin",
+   "icon": "check",
+   "productLabel": "Microsoft 365 admin",
+   "title": "Define active use",
+   "actions": [
+    "activity in last 30 days",
+    "active days per month"
+   ],
+   "evidence": "Define active use consistently, such as activity in the last 30 days plus Copilot active days per month."
+  },
+  {
+   "product": "teams",
+   "icon": "calendar",
+   "productLabel": "Teams",
+   "title": "Record a pre change baseline",
+   "actions": [
+    "Teams",
+    "SharePoint",
+    "Microsoft 365 groups"
+   ],
+   "evidence": "Record a pre-change baseline for Teams, SharePoint, Microsoft 365 groups and Copilot"
+  },
+  {
+   "product": "admin",
+   "icon": "table",
+   "productLabel": "Microsoft 365 admin",
+   "title": "Compare usage and licence cost",
+   "actions": [
+    "licensed users",
+    "active users",
+    "licence cost"
+   ],
+   "evidence": "then compare licensed users, active users and licence cost by department."
+  },
+  {
+   "product": "admin",
+   "icon": "search",
+   "productLabel": "Microsoft 365 admin",
+   "title": "Review trends on a set cycle",
+   "actions": [
+    "monthly",
+    "quarterly"
+   ],
+   "evidence": "Review trends monthly or quarterly."
+  }
+ ],
+ "punchline": [
+  "Spot idle seats",
+  "Target training"
+ ]
+}

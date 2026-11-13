@@ -37,6 +37,12 @@ faq:
     überwachen?
   answer: Berichten Sie standardmässig nach Abteilung und Dienst und prüfen Sie Einzelpersonen
     nur, wenn eine Entscheidung wie die Rücknahme eines ungenutzten Sitzes dies erfordert.
+animation:
+  video: /assets/img/animations/b7706fa9969b51e06bcb19f3-de.mp4
+  poster: /assets/img/animations/b7706fa9969b51e06bcb19f3-de.poster.webp
+  width: 800
+  height: 450
+  alt: "Eine Abfolge mit vier Schritten zeigt, wie Adoption gemessen wird: aktive Nutzung definieren, vor dem Rollout eine Ausgangsbasis erfassen, lizenzierte und aktive Nutzer mit Lizenzkosten nach Abteilung vergleichen und Trends regelmaessig pruefen."
 ---
 
 ## TL;DR

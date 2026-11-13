@@ -1,0 +1,66 @@
+{
+ "title": "Offboard users before disabling",
+ "subtitle": "Start from HR, transfer ownership, move files, reclaim licenses, then verify.",
+ "steps": [
+  {
+   "product": "admin",
+   "icon": "calendar",
+   "productLabel": "Microsoft 365 Admin",
+   "title": "Trigger from the HR leaving date",
+   "actions": [
+    "HR leaving date",
+    "Trigger offboarding"
+   ],
+   "evidence": "Trigger offboarding from the HR leaving date"
+  },
+  {
+   "product": "teams",
+   "icon": "user",
+   "productLabel": "Teams",
+   "title": "Hand over owned workspaces and apps",
+   "actions": [
+    "add a new owner",
+    "Team",
+    "site"
+   ],
+   "evidence": "add a new owner to every Team, site, group, app and flow"
+  },
+  {
+   "product": "generic",
+   "icon": "file",
+   "productLabel": "OneDrive",
+   "title": "Move needed OneDrive content",
+   "actions": [
+    "move needed files",
+    "team site"
+   ],
+   "evidence": "move needed files to a team site first"
+  },
+  {
+   "product": "admin",
+   "icon": "key",
+   "productLabel": "Microsoft 365 Admin",
+   "title": "Revoke sessions and reclaim licenses",
+   "actions": [
+    "Revoke sessions",
+    "reclaim licenses"
+   ],
+   "evidence": "revoke sessions, reclaim licenses"
+  },
+  {
+   "product": "admin",
+   "icon": "check",
+   "productLabel": "Microsoft 365 Admin",
+   "title": "Verify a week later",
+   "actions": [
+    "verify",
+    "check a week later"
+   ],
+   "evidence": "then verify a week later"
+  }
+ ],
+ "punchline": [
+  "Nothing left disabled",
+  "No extra licence cost"
+ ]
+}

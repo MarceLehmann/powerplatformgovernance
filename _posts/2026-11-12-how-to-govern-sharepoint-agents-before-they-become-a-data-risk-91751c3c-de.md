@@ -42,6 +42,12 @@ faq:
   answer: Stilllegt Agenten auf veralteten Websites, auch auf Websites ohne Öffnung
     seit 90 Tagen, nachdem der Verantwortliche über Behalten oder Archivieren entschieden
     hat.
+animation:
+  video: /assets/img/animations/91751c3cfdf761847f63decc-de.mp4
+  poster: /assets/img/animations/91751c3cfdf761847f63decc-de.poster.webp
+  width: 800
+  height: 450
+  alt: "Ein Vier-Schritt-Ablauf zeigt die Steuerung von SharePoint-Agenten: Agenten erfassen, Verantwortliche benennen, Website-Risiken pruefen und Agenten bei veralteten Websites stilllegen."
 ---
 
 ## TL;DR

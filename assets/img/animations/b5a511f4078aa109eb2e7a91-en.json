@@ -1,0 +1,67 @@
+{
+ "title": "Reassign ownerless apps and flows",
+ "subtitle": "Export assets, check owners, reassign key items, retire the rest, then repeat.",
+ "steps": [
+  {
+   "product": "admin",
+   "icon": "file",
+   "productLabel": "Admin",
+   "title": "Export apps and flows by environment",
+   "actions": [
+    "Export assets",
+    "owners",
+    "last modified dates"
+   ],
+   "evidence": "Export Power Apps and Power Automate flows from every environment with owners, co-owners, creators and last modified dates."
+  },
+  {
+   "product": "admin",
+   "icon": "search",
+   "productLabel": "Admin",
+   "title": "Compare owners with Entra ID status",
+   "actions": [
+    "Compare owners",
+    "active users",
+    "disabled users"
+   ],
+   "evidence": "Compare owners with active and disabled Entra ID users"
+  },
+  {
+   "product": "powerapps",
+   "icon": "user",
+   "productLabel": "Power Apps",
+   "title": "Assign two new owners to key items",
+   "actions": [
+    "assign two new owners",
+    "important items"
+   ],
+   "evidence": "assign two new owners to important items"
+  },
+  {
+   "product": "powerautomate",
+   "icon": "check",
+   "productLabel": "Power Automate",
+   "title": "Retire items nobody will own",
+   "actions": [
+    "retire",
+    "nobody will own"
+   ],
+   "evidence": "retire anything nobody will own"
+  },
+  {
+   "product": "admin",
+   "icon": "calendar",
+   "productLabel": "Admin",
+   "title": "Repeat checks in offboarding",
+   "actions": [
+    "offboarding",
+    "on a schedule"
+   ],
+   "evidence": "repeat the check during offboarding and on a schedule."
+  }
+ ],
+ "punchline": [
+  "No ownerless assets",
+  "Checks become routine"
+ ]
+}

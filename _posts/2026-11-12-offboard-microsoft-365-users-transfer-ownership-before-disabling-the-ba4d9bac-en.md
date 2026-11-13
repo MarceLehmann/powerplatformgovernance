@@ -40,6 +40,12 @@ faq:
 - question: What happens to Power Automate flows owned by a departed employee?
   answer: They keep running under the departed user's connections and go unmaintained,
     so add a new owner to each flow and app before disabling the account.
+animation:
+  video: /assets/img/animations/ba4d9bac29bbce8f2de9efa1-en.mp4
+  poster: /assets/img/animations/ba4d9bac29bbce8f2de9efa1-en.poster.webp
+  width: 800
+  height: 450
+  alt: "Five stages show offboarding from the HR leaving date, handing over Teams, sites, apps and flows, moving OneDrive content, reclaiming licenses, and verifying later."
 ---
 
 ## TL;DR

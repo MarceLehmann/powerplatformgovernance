@@ -1,0 +1,65 @@
+{
+ "title": "Besitz von Microsoft 365 Workspaces",
+ "subtitle": "Workspaces erfassen, Besitzluecken schliessen und Besitzer je Quartal bestaetigen.",
+ "steps": [
+  {
+   "product": "admin",
+   "icon": "search",
+   "productLabel": "Microsoft 365",
+   "title": "Jeden Workspace erfassen",
+   "actions": [
+    "Teams erfassen",
+    "SharePoint-Sites",
+    "Microsoft 365-Gruppen"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "filter",
+   "productLabel": "Rencore",
+   "title": "Besitzluecken markieren",
+   "actions": [
+    "ohne Besitzer",
+    "weniger als zwei Besitzer",
+    "deaktivierte Konten"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "user",
+   "productLabel": "Microsoft 365",
+   "title": "Aktive Mitarbeiter zuweisen",
+   "actions": [
+    "mindestens zwei Besitzer",
+    "aktive Mitarbeiter",
+    "Besitz neu zuweisen"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "shield",
+   "productLabel": "Microsoft 365",
+   "title": "Riskante Workspaces priorisieren",
+   "actions": [
+    "deaktivierte Besitzer",
+    "externe Gaeste",
+    "sensible Inhalte"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "check",
+   "productLabel": "Microsoft 365",
+   "title": "Zustaendigkeit vierteljaehrlich",
+   "actions": [
+    "vierteljaehrliche Pruefung",
+    "eskaliert",
+    "als Nachweis"
+   ]
+  }
+ ],
+ "punchline": [
+  "Jeder Workspace hat Besitzer",
+  "Nachweis je Quartal"
+ ]
+}

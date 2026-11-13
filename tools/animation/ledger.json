@@ -1008,5 +1008,63 @@
       "Check retention policies, legal holds and linked Teams first.",
       "Set the site read-only and archive it before deletion, with approval recorded."
     ]
+  },
+  "b5a511f4078aa109eb2e7a91": {
+    "gif": true,
+    "reason": "The post gives a concrete five step process for finding, reassigning and retiring ownerless apps and flows.",
+    "at": "2026-11-13",
+    "evidence": [
+      "Export Power Apps and Power Automate flows from every environment with owners, co-owners, creators and last modified dates.",
+      "Compare owners with active and disabled Entra ID users",
+      "assign two new owners to important items",
+      "retire anything nobody will own",
+      "repeat the check during offboarding and on a schedule."
+    ]
+  },
+  "91751c3cfdf761847f63decc": {
+    "gif": true,
+    "reason": "The post gives a concrete four stage governance sequence: inventory agents, assign owners, review site risks, then retire stale agents.",
+    "at": "2026-11-13",
+    "evidence": [
+      "Maintain one scheduled inventory containing each agent, its SharePoint site, knowledge sources and file count",
+      "assign an owner",
+      "Check sensitivity labels, external sharing, edit rights, external site ownership and broken inheritance",
+      "Retire agents connected to stale sites, including sites nobody has opened in 90 days, after the owner decides whether to keep or archive them."
+    ]
+  },
+  "1b850ba2fb5e70f5c1548469": {
+    "gif": true,
+    "reason": "The post describes a concrete five step ownership process from inventory through quarterly confirmation.",
+    "at": "2026-11-13",
+    "evidence": [
+      "Inventory Teams, SharePoint sites and Microsoft 365 groups",
+      "Rencore policies flag Teams, sites and groups that are ownerless, have fewer than two owners, or are owned by disabled accounts.",
+      "Each workspace should have at least two active employee owners, and guests should never be the sole owner.",
+      "Workspaces with disabled owners, external guests or sensitive content should be prioritised",
+      "Quarterly reviews confirm that owners remain responsible and members are appropriate, while unanswered requests are escalated and confirmations retained as evidence."
+    ]
+  },
+  "b7706fa9969b51e06bcb19f3": {
+    "gif": true,
+    "reason": "The post gives a clear 4 stage measurement process: define active use, capture a baseline, compare usage and cost, then review trends.",
+    "at": "2026-11-13",
+    "evidence": [
+      "Define active use consistently, such as activity in the last 30 days plus Copilot active days per month.",
+      "Record a pre-change baseline for Teams, SharePoint, Microsoft 365 groups and Copilot",
+      "then compare licensed users, active users and licence cost by department.",
+      "Review trends monthly or quarterly."
+    ]
+  },
+  "ba4d9bac29bbce8f2de9efa1": {
+    "gif": true,
+    "reason": "The post explicitly describes a concrete five step offboarding flow in order.",
+    "at": "2026-11-13",
+    "evidence": [
+      "Trigger offboarding from the HR leaving date",
+      "add a new owner to every Team, site, group, app and flow",
+      "move needed files to a team site first",
+      "revoke sessions, reclaim licenses",
+      "then verify a week later"
+    ]
   }
 }

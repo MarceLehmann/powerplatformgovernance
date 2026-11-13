@@ -1,0 +1,52 @@
+{
+ "title": "Microsoft 365 Adoption messen",
+ "subtitle": "Nutzung definieren, Basis erfassen, Kosten vergleichen und Trends regelmaessig pruefen.",
+ "steps": [
+  {
+   "product": "admin",
+   "icon": "check",
+   "productLabel": "Microsoft 365 Admin",
+   "title": "Aktive Nutzung definieren",
+   "actions": [
+    "Aktivitaet letzte 30 Tage",
+    "aktive Tage pro Monat"
+   ]
+  },
+  {
+   "product": "teams",
+   "icon": "calendar",
+   "productLabel": "Teams",
+   "title": "Ausgangsbasis vor Aenderung erfassen",
+   "actions": [
+    "Teams",
+    "SharePoint",
+    "Microsoft 365-Gruppen"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "table",
+   "productLabel": "Microsoft 365 Admin",
+   "title": "Nutzung und Lizenzkosten vergleichen",
+   "actions": [
+    "lizenzierte Nutzer",
+    "aktive Nutzer",
+    "Lizenzkosten"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "search",
+   "productLabel": "Microsoft 365 Admin",
+   "title": "Trends nach festem Zyklus pruefen",
+   "actions": [
+    "monatlich",
+    "vierteljaehrlich"
+   ]
+  }
+ ],
+ "punchline": [
+  "Ungenutzte Sitze erkennen",
+  "Schulungen gezielt steuern"
+ ]
+}

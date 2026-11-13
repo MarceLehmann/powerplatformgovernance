@@ -39,6 +39,12 @@ faq:
 - question: Was wird bei der vierteljährlichen Besitzerbestätigung geprüft?
   answer: Die Prüfung bestätigt die weitere Zuständigkeit und passende Mitglieder.
     Unbeantwortete Anfragen werden eskaliert und Bestätigungen als Nachweis aufbewahrt.
+animation:
+  video: /assets/img/animations/1b850ba2fb5e70f5c1548469-de.mp4
+  poster: /assets/img/animations/1b850ba2fb5e70f5c1548469-de.poster.webp
+  width: 800
+  height: 450
+  alt: "Ein fuenfstufiger Ablauf erfasst Microsoft 365 Workspaces, markiert Besitzluecken, weist aktive Besitzer bei Austritten zu, priorisiert riskante Workspaces und bestaetigt die Zustaendigkeit vierteljaehrlich."
 ---
 
 ## TL;DR

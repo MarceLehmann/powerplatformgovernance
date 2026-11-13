@@ -1,0 +1,51 @@
+{
+ "title": "SharePoint-Agenten steuern",
+ "subtitle": "Agenten erfassen, Verantwortliche benennen, Website-Risiken pruefen, dann alte Agenten stilllegen.",
+ "steps": [
+  {
+   "product": "sharepoint",
+   "icon": "table",
+   "productLabel": "SharePoint",
+   "title": "Jeden Agenten und Quellen erfassen",
+   "actions": [
+    "regelmaessiges Inventar",
+    "Wissensquellen",
+    "Dateianzahl"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "user",
+   "productLabel": "Admin",
+   "title": "Benannten Verantwortlichen zuweisen",
+   "actions": [
+    "Verantwortliche benennen"
+   ]
+  },
+  {
+   "product": "sharepoint",
+   "icon": "shield",
+   "productLabel": "SharePoint",
+   "title": "Website-Zugriff und Labels pruefen",
+   "actions": [
+    "Sensitivitaetsbezeichnungen",
+    "externe Freigaben",
+    "Bearbeitungsrechte"
+   ]
+  },
+  {
+   "product": "sharepoint",
+   "icon": "check",
+   "productLabel": "SharePoint",
+   "title": "Agenten bei alten Websites stilllegen",
+   "actions": [
+    "Agenten stilllegen",
+    "90 Tage",
+    "behalten oder archivieren"
+   ]
+  }
+ ],
+ "punchline": [
+  "Datenrisiko senken"
+ ]
+}

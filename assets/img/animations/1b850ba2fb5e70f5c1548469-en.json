@@ -1,0 +1,70 @@
+{
+ "title": "Microsoft 365 workspace ownership",
+ "subtitle": "Map workspaces, fix ownership gaps, and confirm owners each quarter.",
+ "steps": [
+  {
+   "product": "admin",
+   "icon": "search",
+   "productLabel": "Microsoft 365",
+   "title": "Map every workspace",
+   "actions": [
+    "Inventory Teams",
+    "SharePoint sites",
+    "Microsoft 365 groups"
+   ],
+   "evidence": "Inventory Teams, SharePoint sites and Microsoft 365 groups"
+  },
+  {
+   "product": "admin",
+   "icon": "filter",
+   "productLabel": "Rencore",
+   "title": "Flag ownership gaps",
+   "actions": [
+    "ownerless",
+    "fewer than two owners",
+    "disabled accounts"
+   ],
+   "evidence": "Rencore policies flag Teams, sites and groups that are ownerless, have fewer than two owners, or are owned by disabled accounts."
+  },
+  {
+   "product": "admin",
+   "icon": "user",
+   "productLabel": "Microsoft 365",
+   "title": "Assign active employee owners",
+   "actions": [
+    "at least two owners",
+    "active employee owners",
+    "reassign ownership"
+   ],
+   "evidence": "Each workspace should have at least two active employee owners, and guests should never be the sole owner."
+  },
+  {
+   "product": "admin",
+   "icon": "shield",
+   "productLabel": "Microsoft 365",
+   "title": "Prioritise higher risk workspaces",
+   "actions": [
+    "disabled owners",
+    "external guests",
+    "sensitive content"
+   ],
+   "evidence": "Workspaces with disabled owners, external guests or sensitive content should be prioritised"
+  },
+  {
+   "product": "admin",
+   "icon": "check",
+   "productLabel": "Microsoft 365",
+   "title": "Confirm ownership quarterly",
+   "actions": [
+    "quarterly reviews",
+    "escalated",
+    "retained as evidence"
+   ],
+   "evidence": "Quarterly reviews confirm that owners remain responsible and members are appropriate, while unanswered requests are escalated and confirmations retained as evidence."
+  }
+ ],
+ "punchline": [
+  "Every workspace has owners",
+  "Quarterly proof retained"
+ ]
+}

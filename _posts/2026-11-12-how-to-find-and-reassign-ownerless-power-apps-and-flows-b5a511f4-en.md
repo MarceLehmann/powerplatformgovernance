@@ -41,6 +41,12 @@ faq:
 - question: How should I retire a Power App nobody will own?
   answer: Turn off the flow, set the app aside for 30 days, delete it if nobody objects,
     and notify people who had access.
+animation:
+  video: /assets/img/animations/b5a511f4078aa109eb2e7a91-en.mp4
+  poster: /assets/img/animations/b5a511f4078aa109eb2e7a91-en.poster.webp
+  width: 800
+  height: 450
+  alt: "Sequence shows exporting apps and flows from each environment, comparing owners to Entra ID status, assigning two new owners to important items, retiring items nobody will own, and repeating checks during offboarding and on a schedule."
 ---
 
 ## TL;DR

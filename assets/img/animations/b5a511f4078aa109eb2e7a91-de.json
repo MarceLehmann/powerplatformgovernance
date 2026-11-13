@@ -1,0 +1,62 @@
+{
+ "title": "Verwaiste Apps und Flows neu zuweisen",
+ "subtitle": "Assets exportieren, Besitzer pruefen, Wichtiges neu zuweisen, Rest stilllegen, dann wiederholen.",
+ "steps": [
+  {
+   "product": "admin",
+   "icon": "file",
+   "productLabel": "Admin",
+   "title": "Apps und Flows je Umgebung exportieren",
+   "actions": [
+    "Assets exportieren",
+    "Besitzer",
+    "Aenderungsdatum"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "search",
+   "productLabel": "Admin",
+   "title": "Besitzer mit Entra ID Status abgleichen",
+   "actions": [
+    "Besitzer vergleichen",
+    "aktive Benutzer",
+    "deaktivierte Benutzer"
+   ]
+  },
+  {
+   "product": "powerapps",
+   "icon": "user",
+   "productLabel": "Power Apps",
+   "title": "Zwei neue Besitzer zuweisen",
+   "actions": [
+    "zwei neue Besitzer",
+    "wichtige Elemente"
+   ]
+  },
+  {
+   "product": "powerautomate",
+   "icon": "check",
+   "productLabel": "Power Automate",
+   "title": "Nicht uebernommene Assets stilllegen",
+   "actions": [
+    "stilllegen",
+    "niemand uebernimmt"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "calendar",
+   "productLabel": "Admin",
+   "title": "Bei Offboarding erneut pruefen",
+   "actions": [
+    "Offboarding",
+    "regelmaessig"
+   ]
+  }
+ ],
+ "punchline": [
+  "Keine verwaisten Assets",
+  "Pruefungen werden Routine"
+ ]
+}

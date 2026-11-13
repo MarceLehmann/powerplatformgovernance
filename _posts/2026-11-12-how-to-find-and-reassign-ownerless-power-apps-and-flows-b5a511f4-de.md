@@ -44,6 +44,12 @@ faq:
 - question: Wie sollte ich eine Power App ohne verantwortlichen Besitzer stilllegen?
   answer: Schalte den Flow aus, stelle die App 30 Tage zurück und lösche sie, wenn
     niemand widerspricht. Informiere zuvor alle Personen mit Zugriff.
+animation:
+  video: /assets/img/animations/b5a511f4078aa109eb2e7a91-de.mp4
+  poster: /assets/img/animations/b5a511f4078aa109eb2e7a91-de.poster.webp
+  width: 800
+  height: 450
+  alt: "Die Abfolge zeigt den Export von Apps und Flows aus jeder Umgebung, den Vergleich der Besitzer mit dem Entra ID Status, die Zuweisung von zwei neuen Besitzern, die Stilllegung nicht uebernommener Assets und wiederholte Pruefungen."
 ---
 
 ## TL;DR

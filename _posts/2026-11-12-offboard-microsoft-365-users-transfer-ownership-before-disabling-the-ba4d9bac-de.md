@@ -43,6 +43,12 @@ faq:
   answer: Flows laufen unter den Verbindungen des ausgeschiedenen Nutzers weiter und
     werden nicht mehr gepflegt, daher jedem Flow und jeder App vor der Deaktivierung
     einen neuen Owner geben.
+animation:
+  video: /assets/img/animations/ba4d9bac29bbce8f2de9efa1-de.mp4
+  poster: /assets/img/animations/ba4d9bac29bbce8f2de9efa1-de.poster.webp
+  width: 800
+  height: 450
+  alt: "Fuenf Schritte zeigen das Offboarding ab dem HR-Austrittsdatum, die Uebergabe von Teams, Websites, Apps und Flows, das Verschieben von OneDrive-Inhalten, das Zurueckholen von Lizenzen und die spaetere Pruefung."
 ---
 
 ## TL;DR

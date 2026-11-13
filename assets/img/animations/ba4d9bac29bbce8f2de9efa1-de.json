@@ -1,0 +1,61 @@
+{
+ "title": "Nutzer vor Deaktivierung offboarden",
+ "subtitle": "Ab HR starten, Ownership uebergeben, Dateien verschieben, Lizenzen zurueckholen, dann pruefen.",
+ "steps": [
+  {
+   "product": "admin",
+   "icon": "calendar",
+   "productLabel": "Microsoft 365 Admin",
+   "title": "Am HR-Austrittsdatum ausloesen",
+   "actions": [
+    "HR-Austrittsdatum",
+    "Offboarding ausloesen"
+   ]
+  },
+  {
+   "product": "teams",
+   "icon": "user",
+   "productLabel": "Teams",
+   "title": "Workspaces und Apps uebergeben",
+   "actions": [
+    "neuen Owner hinzufuegen",
+    "Team",
+    "Website"
+   ]
+  },
+  {
+   "product": "generic",
+   "icon": "file",
+   "productLabel": "OneDrive",
+   "title": "Noetige OneDrive-Inhalte verschieben",
+   "actions": [
+    "noetige Dateien verschieben",
+    "Teamwebsite"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "key",
+   "productLabel": "Microsoft 365 Admin",
+   "title": "Sitzungen widerrufen und Lizenzen holen",
+   "actions": [
+    "Sitzungen widerrufen",
+    "Lizenzen zurueckholen"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "check",
+   "productLabel": "Microsoft 365 Admin",
+   "title": "Eine Woche spaeter pruefen",
+   "actions": [
+    "pruefen",
+    "eine Woche spaeter"
+   ]
+  }
+ ],
+ "punchline": [
+  "Nichts bleibt deaktiviert",
+  "Keine Lizenzmehrkosten"
+ ]
+}

@@ -35,6 +35,12 @@ faq:
 - question: How can Copilot adoption data avoid monitoring individual employees?
   answer: Report adoption by department and service by default, and inspect individual
     users only when a decision such as reclaiming an unused seat requires it.
+animation:
+  video: /assets/img/animations/b7706fa9969b51e06bcb19f3-en.mp4
+  poster: /assets/img/animations/b7706fa9969b51e06bcb19f3-en.poster.webp
+  width: 800
+  height: 450
+  alt: "A four step sequence shows how to measure adoption by defining active use, capturing a pre rollout baseline, comparing licensed and active users with licence cost by department, and reviewing trends regularly."
 ---
 
 ## TL;DR
