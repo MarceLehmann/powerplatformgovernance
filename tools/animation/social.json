@@ -858,5 +858,77 @@
     "text": "Govern Power BI workspaces: owners, external sharing, quarterly cleanup\n\nPower BI self-service grows faster than oversight. Five steps fix it: list every workspace with admins, members, reports and datasets; assign two admins from the business team per workspace; find workspaces shared with external users, confirm access and restrict external sharing in tenant settings; retire reports, dashboards and datasets unused for 90 days; repeat quarterly and record every confirmation for audits.\n\nSource: Rencore Blog\n\nFull summary: https://powerplatformgovernance.com/en/posts/govern-power-bi-workspaces-owners-external-sharing-quarterly-cleanup-4bdfa89c/\n\n#PowerPlatformGovernanceDaily",
     "bufferPostId": "6af6090ef8af1d04bbd4e981",
     "dueAt": "2026-11-13T14:00:00.000Z"
+  },
+  "c4ba9c3f9a7ebd12ade35b6f": {
+    "status": "expired",
+    "day": "2026-11-12",
+    "title": "Audit SharePoint Field Changes with Power Automate Version History",
+    "expiredAt": "2026-11-13"
+  },
+  "eb83d43284ae938f96e7e1c7": {
+    "status": "expired",
+    "day": "2026-11-12",
+    "title": "Automate Microsoft 365 governance policies: from written rule to enforced policy",
+    "expiredAt": "2026-11-13"
+  },
+  "b585c5eff365704bda9d9fbf": {
+    "status": "expired",
+    "day": "2026-11-12",
+    "title": "Call Microsoft Copilot Harness Agents from Copilot Studio via MCP and A2A",
+    "expiredAt": "2026-11-13"
+  },
+  "b5a511f4078aa109eb2e7a91": {
+    "status": "expired",
+    "day": "2026-11-12",
+    "title": "How to find and reassign ownerless Power Apps and flows",
+    "expiredAt": "2026-11-13"
+  },
+  "91751c3cfdf761847f63decc": {
+    "status": "expired",
+    "day": "2026-11-12",
+    "title": "How to govern SharePoint agents before they become a data risk",
+    "expiredAt": "2026-11-13"
+  },
+  "1b850ba2fb5e70f5c1548469": {
+    "status": "expired",
+    "day": "2026-11-12",
+    "title": "How to make sure every Microsoft 365 workspace has an owner",
+    "expiredAt": "2026-11-13"
+  },
+  "b7706fa9969b51e06bcb19f3": {
+    "status": "expired",
+    "day": "2026-11-12",
+    "title": "How to measure Microsoft 365 and Copilot adoption",
+    "expiredAt": "2026-11-13"
+  },
+  "ba4d9bac29bbce8f2de9efa1": {
+    "status": "expired",
+    "day": "2026-11-12",
+    "title": "Offboard Microsoft 365 users: transfer ownership before disabling the account",
+    "expiredAt": "2026-11-13"
+  },
+  "c85b1c4df1d652c42594997f": {
+    "status": "expired",
+    "day": "2026-11-12",
+    "title": "Prepare Contact Center Intelligence with governance before general availability",
+    "expiredAt": "2026-11-13"
+  },
+  "762dfffcf908fe278b9e4b27": {
+    "status": "expired",
+    "day": "2026-11-12",
+    "title": "Prevent orphaned Power Automate approvals when managers change",
+    "expiredAt": "2026-11-13"
+  },
+  "4076a8e156bd5a2da11bad8c": {
+    "status": "expired",
+    "day": "2026-11-12",
+    "title": "Reduce Microsoft 365 audit preparation with five governance steps",
+    "expiredAt": "2026-11-13"
+  },
+  "36c77773584f80dc1b344e10": {
+    "status": "expired",
+    "day": "2026-11-12",
+    "title": "Stop unmanaged Microsoft 365 workspaces driving up storage and licence costs",
+    "expiredAt": "2026-11-13"
   }
 }
