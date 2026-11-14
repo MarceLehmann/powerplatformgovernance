@@ -957,5 +957,29 @@
     "text": "Dataverse Security Roles Simply Explained: Who Can See, Change and Print Your Data\n\nDataverse protects business data with security roles, not passwords or firewalls. A security role works like a job description for data, deciding what each person can see, change and print. Permissions reach as far as five access levels define, business units mirror departments, and teams grant group access. Dataverse sits inside Microsoft 365, Azure and the Power Platform.\n\nSource: M365.FM Simply Explained (Spreaker)\n\nFull summary: https://powerplatformgovernance.com/en/posts/dataverse-security-roles-simply-explained-who-can-see-change-and-f0d076ab/\n\n#PowerPlatformGovernanceDaily #Dataverse",
     "bufferPostId": "6af75a667d320dbe3ec61ca1",
     "dueAt": "2026-11-14T14:00:00.000Z"
+  },
+  "c51a9a140e9489d69975e234": {
+    "status": "expired",
+    "day": "2026-11-13",
+    "title": "Connection References in Power Platform ALM: Deploy Without Breaks",
+    "expiredAt": "2026-11-14"
+  },
+  "5dfa06a2af1179a0be24f034": {
+    "status": "queued",
+    "day": "2026-11-14",
+    "kind": "image",
+    "title": "Thinking like a Power Platform architect: Keith Atherton on CRM Rocks",
+    "text": "Thinking like a Power Platform architect: Keith Atherton on CRM Rocks\n\nPower Platform architects should ask why before choosing a solution, Keith Atherton of Capgemini tells CRM Rocks in episode 167. Becoming an architect means more than understanding technology: discovery, documentation, business value and architectural decisions matter, and AI accelerating development makes testing, validation and strong foundations even more important.\n\nSource: CRM Rocks\n\nFull summary: https://powerplatformgovernance.com/en/posts/thinking-like-a-power-platform-architect-keith-atherton-on-crm-rocks-5dfa06a2/\n\n#PowerPlatformGovernanceDaily",
+    "bufferPostId": "6af8032281e1228421eb105a",
+    "dueAt": "2026-11-15T08:00:00.000Z"
+  },
+  "696aa8d7a14c765ee663bad6": {
+    "status": "queued",
+    "day": "2026-11-14",
+    "kind": "image",
+    "title": "Power Platform admin center explained: environments, roles and guardrails for every tenant",
+    "text": "Power Platform admin center explained: environments, roles and guardrails for every tenant\n\nThe Power Platform admin center is the portal where admins manage every tenant's environments. Microsoft creates a default environment automatically, and it fills with unplanned apps and flows. Access depends on roles rather than licenses, policies act as guardrails that keep data safe, and admins monitor capacity, licensing and cost from the same place.\n\nSource: Simply Explained by M365.FM\n\nFull summary: https://powerplatformgovernance.com/en/posts/power-platform-admin-center-explained-environments-roles-and-696aa8d7/\n\n#PowerPlatformGovernanceDaily",
+    "bufferPostId": "6af80323bb36d00909f1e4b4",
+    "dueAt": "2026-11-15T11:00:00.000Z"
   }
 }
