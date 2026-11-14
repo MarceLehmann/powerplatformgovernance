@@ -981,5 +981,14 @@
     "text": "Power Platform admin center explained: environments, roles and guardrails for every tenant\n\nThe Power Platform admin center is the portal where admins manage every tenant's environments. Microsoft creates a default environment automatically, and it fills with unplanned apps and flows. Access depends on roles rather than licenses, policies act as guardrails that keep data safe, and admins monitor capacity, licensing and cost from the same place.\n\nSource: Simply Explained by M365.FM\n\nFull summary: https://powerplatformgovernance.com/en/posts/power-platform-admin-center-explained-environments-roles-and-696aa8d7/\n\n#PowerPlatformGovernanceDaily",
     "bufferPostId": "6af80323bb36d00909f1e4b4",
     "dueAt": "2026-11-15T11:00:00.000Z"
+  },
+  "91dd214894f1e50b030a300b": {
+    "status": "queued",
+    "day": "2026-11-14",
+    "kind": "video",
+    "title": "Copilot Studio Knowledge Tuning: Stop Confident Wrong Answers",
+    "text": "Copilot Studio Knowledge Tuning: Stop Confident Wrong Answers\n\nA Copilot Studio agent can sound certain and still be wrong because it answers from its general knowledge or from a document you never intended it to use. Knowledge tuning means deciding which sources the agent may search, how files become answers, and controlling the one setting that determines whether the agent is allowed to guess. Some failure modes and limits cannot be designed away.\n\nSource: M365.FM, Simply Explained\n\nFull summary: https://powerplatformgovernance.com/en/posts/copilot-studio-knowledge-tuning-stop-confident-wrong-answers-91dd2148/\n\n#PowerPlatformGovernanceDaily #CopilotStudio",
+    "bufferPostId": "6af8abe976c23bf1c733ea0f",
+    "dueAt": "2026-11-15T14:00:00.000Z"
   }
 }
