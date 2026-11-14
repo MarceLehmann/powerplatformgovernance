@@ -57,7 +57,7 @@ What differs in practice:
 
 **Decision in these templates (not Microsoft wording)**
 
-- **Default group Blocked in every template.** Microsoft recommends leaving the default group for new connectors at Non-business. These templates use Blocked on purpose, because every connector Microsoft adds later stays closed until an admin opens it. That suits a company with a handful of makers, and it costs maintenance. If you do not want that work, switch the default group to Non-business after you create the policy.
+- **Default group Blocked in every template. This is the recommendation.** New connectors are only usable once someone classifies them on purpose. Nothing enters the company unreviewed, and with a handful of makers the upkeep stays small. Microsoft [suggests Non-business by default](https://learn.microsoft.com/en-us/power-platform/admin/dlp-connector-classification).
 - **Always list the unblockable connectors in Business.** If the default group is Blocked, new unblockable connectors land in Non-business automatically, and mixing them with Business would break flows. Listing them explicitly in Business avoids that.
 - **"Without Copilot" does not mean zero AI.** The core Copilot Studio connector and AI Builder (part of Dataverse) cannot be blocked by a data policy. The templates block channels, knowledge sources, skills, event triggers, generative actions and Azure OpenAI. AI Builder is limited with the tenant setting for unassigned AI Builder credits, not with DLP.
 

@@ -57,7 +57,7 @@ Was sich in der Praxis unterscheidet:
 
 **Entscheid in diesen Vorlagen (nicht Wortlaut von Microsoft)**
 
-- **Standardgruppe Blocked in jeder Vorlage.** Microsoft empfiehlt, die Standardgruppe für neue Connectors auf Non-Business zu lassen. Die Vorlagen nehmen bewusst Blocked, weil jeder Connector, den Microsoft später ergänzt, geschlossen bleibt, bis ein Admin ihn öffnet. Das passt zu einer Firma mit wenigen Makern und kostet Pflegeaufwand. Willst du diesen Aufwand nicht, stell die Standardgruppe nach dem Anlegen auf Non-Business.
+- **Standardgruppe Blocked in jeder Vorlage. Das ist die Empfehlung.** Neue Connectors sind erst nutzbar, wenn jemand sie bewusst einordnet. So landet nichts ungeprüft in der Firma, und bei wenigen Makern bleibt der Pflegeaufwand klein. Microsoft schlägt [standardmässig Non-Business vor](https://learn.microsoft.com/de-de/power-platform/admin/dlp-connector-classification).
 - **Nicht blockierbare Connectors immer ausdrücklich in Business.** Ist die Standardgruppe Blocked, landen neue nicht blockierbare Connectors automatisch in Non-Business, und die Mischung mit Business würde Flows brechen. Die ausdrückliche Zuordnung verhindert das.
 - **«Ohne Copilot» heisst nicht null KI.** Der Kern-Connector von Copilot Studio und AI Builder (Teil von Dataverse) lassen sich per Richtlinie nicht blockieren. Die Vorlagen sperren Kanäle, Wissensquellen, Skills, Ereignis-Trigger, generative Aktionen und Azure OpenAI. AI Builder begrenzt du mit der Tenant-Einstellung für nicht zugewiesene AI-Builder-Credits, nicht mit DLP.
 
