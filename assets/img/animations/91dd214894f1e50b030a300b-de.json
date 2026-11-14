@@ -1,0 +1,43 @@
+{
+ "title": "Copilot Studio Wissen abstimmen",
+ "subtitle": "Quellen waehlen, Dateien einbinden und festlegen, ob der Agent raten darf.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "search",
+   "productLabel": "Copilot Studio",
+   "title": "Durchsuchbare Wissensquellen waehlen",
+   "actions": [
+    "Wissensquellen",
+    "Agent darf durchsuchen",
+    "verbunden"
+   ]
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "file",
+   "productLabel": "Copilot Studio",
+   "title": "Dateien als Antworten einbinden",
+   "actions": [
+    "Dateiaufnahme",
+    "als Wissen hinzufuegen",
+    "Dateiinhalt zu Antworten"
+   ]
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "gear",
+   "productLabel": "Copilot Studio",
+   "title": "Steuern, ob der Agent raten darf",
+   "actions": [
+    "eine Einstellung steuern",
+    "raten darf",
+    "nur aus Quellen"
+   ]
+  }
+ ],
+ "punchline": [
+  "Antworten aus Quellen",
+  "Weniger Fehlantworten"
+ ]
+}

@@ -44,6 +44,12 @@ faq:
 - question: What happens to my files when I add them as knowledge in Copilot Studio?
   answer: The agent searches the sources you plugged in and turns the file content
     into answers. The sources you choose therefore shape what the agent can answer.
+animation:
+  video: /assets/img/animations/91dd214894f1e50b030a300b-en.mp4
+  poster: /assets/img/animations/91dd214894f1e50b030a300b-en.poster.webp
+  width: 800
+  height: 450
+  alt: "Three stages show Copilot Studio knowledge tuning: choose which sources the agent may search, add files that become answer content, and control the setting that allows guessing."
 ---
 
 ## TL;DR

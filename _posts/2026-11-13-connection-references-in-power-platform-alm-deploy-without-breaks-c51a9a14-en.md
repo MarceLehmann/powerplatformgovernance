@@ -40,6 +40,12 @@ faq:
 - question: Why is an imported flow failing even though the solution import succeeded?
   answer: A successful import only confirms the package was accepted. Missing, wrongly
     mapped or unauthorized connections can still keep dependent flows from running.
+animation:
+  video: /assets/img/animations/c51a9a140e9489d69975e234-en.mp4
+  poster: /assets/img/animations/c51a9a140e9489d69975e234-en.poster.webp
+  width: 800
+  height: 450
+  alt: "Four steps show ALM deployment for connection references: create target connections, map each reference to the right identity, import with pipelines or a deployment settings file, then run a functional test."
 ---
 
 ## TL;DR

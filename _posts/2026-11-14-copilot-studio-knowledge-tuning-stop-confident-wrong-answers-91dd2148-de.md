@@ -45,6 +45,12 @@ faq:
     hinterlege?
   answer: Der Agent durchsucht die verbundenen Quellen und macht aus dem Dateiinhalt
     Antworten. Die gewählten Quellen bestimmen daher, was der Agent beantworten kann.
+animation:
+  video: /assets/img/animations/91dd214894f1e50b030a300b-de.mp4
+  poster: /assets/img/animations/91dd214894f1e50b030a300b-de.poster.webp
+  width: 800
+  height: 450
+  alt: "Drei Schritte zeigen das Knowledge Tuning in Copilot Studio: festlegen, welche Quellen der Agent durchsuchen darf, Dateien als Wissensquelle nutzen und die Einstellung zum Raten steuern."
 ---
 
 ## TL;DR

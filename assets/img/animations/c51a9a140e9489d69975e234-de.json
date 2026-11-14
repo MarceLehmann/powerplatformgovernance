@@ -1,0 +1,49 @@
+{
+ "title": "Verbindungsverweise sicher deployen",
+ "subtitle": "Zielverbindungen vorbereiten, Verweise zuordnen, importieren und Flows danach testen.",
+ "steps": [
+  {
+   "product": "powerautomate",
+   "icon": "link",
+   "productLabel": "Power Automate",
+   "title": "Zielverbindungen anlegen",
+   "actions": [
+    "Verbindung anlegen",
+    "Anmelden"
+   ]
+  },
+  {
+   "product": "powerautomate",
+   "icon": "user",
+   "productLabel": "Power Automate",
+   "title": "Jeden Verweis richtig zuordnen",
+   "actions": [
+    "Jeden Verweis zuordnen",
+    "Richtige Identitaet"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "gear",
+   "productLabel": "Power Platform",
+   "title": "Settingsdatei erzeugen",
+   "actions": [
+    "Power Platform Pipelines",
+    "\"pac solution create-settings\""
+   ]
+  },
+  {
+   "product": "powerautomate",
+   "icon": "check",
+   "productLabel": "Power Automate",
+   "title": "Flows nach Import pruefen",
+   "actions": [
+    "Funktionstest",
+    "Flows pruefen"
+   ]
+  }
+ ],
+ "punchline": [
+  "Importe halten Stufen stand"
+ ]
+}

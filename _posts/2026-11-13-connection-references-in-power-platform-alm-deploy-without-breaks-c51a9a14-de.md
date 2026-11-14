@@ -43,6 +43,12 @@ faq:
     war?
   answer: Der Import bestätigt nur die Annahme des Pakets. Fehlende, falsch verknüpfte
     oder nicht berechtigte Verbindungen können abhängige Flows weiter blockieren.
+animation:
+  video: /assets/img/animations/c51a9a140e9489d69975e234-de.mp4
+  poster: /assets/img/animations/c51a9a140e9489d69975e234-de.poster.webp
+  width: 800
+  height: 450
+  alt: "Vier Schritte zeigen das ALM Deployment fuer Verbindungsverweise: Zielverbindungen anlegen, jeden Verweis der richtigen Identitaet zuordnen, mit Pipelines oder Settingsdatei importieren und danach einen Funktionstest ausfuehren."
 ---
 
 ## TL;DR

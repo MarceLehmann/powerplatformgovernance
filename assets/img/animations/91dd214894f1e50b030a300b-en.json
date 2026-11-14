@@ -1,0 +1,46 @@
+{
+ "title": "Tune Copilot Studio knowledge",
+ "subtitle": "Choose sources, ingest files, and decide if the agent may guess.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "search",
+   "productLabel": "Copilot Studio",
+   "title": "Choose searchable knowledge sources",
+   "actions": [
+    "knowledge sources",
+    "agent may search",
+    "connected"
+   ],
+   "evidence": "Knowledge tuning means deciding which sources the agent may search"
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "file",
+   "productLabel": "Copilot Studio",
+   "title": "Add files that become answers",
+   "actions": [
+    "file ingestion",
+    "add them as knowledge",
+    "file content into answers"
+   ],
+   "evidence": "The agent searches the sources you plugged in and turns the file content into answers."
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "gear",
+   "productLabel": "Copilot Studio",
+   "title": "Control whether the agent may guess",
+   "actions": [
+    "control the one setting",
+    "may guess",
+    "answers come only"
+   ],
+   "evidence": "Control the one setting that decides whether the agent may guess."
+  }
+ ],
+ "punchline": [
+  "Answers use intended sources",
+  "Reduce confident wrong answers"
+ ]
+}
