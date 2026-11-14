@@ -1110,5 +1110,15 @@
       "assign focused web roles with only needed operations, and test allowed and denied access, including direct URLs",
       "test allowed and denied access, including direct URLs and Web API requests, before launch."
     ]
+  },
+  "696aa8d7a14c765ee663bad6": {
+    "gif": false,
+    "reason": "The post is governance guidance and explanation, not a concrete 3 to 5 stage procedure named in order.",
+    "at": "2026-11-14"
+  },
+  "5dfa06a2af1179a0be24f034": {
+    "gif": false,
+    "reason": "This post is governance advice and concepts without a concrete 3 to 5 stage procedure stated in order.",
+    "at": "2026-11-14"
   }
 }
