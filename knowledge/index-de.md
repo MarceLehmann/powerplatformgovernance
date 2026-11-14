@@ -22,6 +22,8 @@ Anleitungen, die weniger schnell veralten als Nachrichten: wie Rollen funktionie
   [Deutsch](/de/knowledge/environment-strategies/) · [English](/knowledge/environment-strategies/)
 - **DLP-Richtlinien: was ihr zwingend einstellen müsst**
   [Deutsch](/de/knowledge/dlp-policies/) · [English](/knowledge/dlp-policies/)
+- **Fünf DLP-Vorlagen für KMU**
+   [Deutsch](/de/knowledge/dlp-templates-smb/) · [English](/knowledge/dlp-templates-smb/)
 - **Citizen-Developer im Unternehmen: von der persönlichen Umgebung zur gemeinsamen Lösung**
   [Deutsch](/de/knowledge/citizen-developer-guide/) · [English](/knowledge/citizen-developer-guide/)
 - **KI-Kosten im Vergleich: AI Builder, Copilot Credits, Azure AI Foundry, Document Intelligence**

@@ -23,6 +23,8 @@ Guides that stay relevant longer than news: how roles work, what a company has t
   [English](/knowledge/environment-strategies/) · [Deutsch](/de/knowledge/environment-strategies/)
 - **DLP policies: what you must configure**  
   [English](/knowledge/dlp-policies/) · [Deutsch](/de/knowledge/dlp-policies/)
+- **Five DLP templates for small and mid-sized companies**
+   [English](/knowledge/dlp-templates-smb/) · [Deutsch](/de/knowledge/dlp-templates-smb/)
 - **Citizen developers in the organisation: from the personal environment to the shared solution**  
   [English](/knowledge/citizen-developer-guide/) · [Deutsch](/de/knowledge/citizen-developer-guide/)
 - **AI costs compared: AI Builder, Copilot Credits, Azure AI Foundry, Document Intelligence**  
