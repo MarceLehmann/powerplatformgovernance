@@ -7,156 +7,143 @@ permalink: /flows/
 lang: en
 translation_url: "/de/flows/"
 toc: true
-description: "The ten AdminHelper starter flows for Power Platform admins: inventories for environments, apps, flows and Copilot Studio agents, DLP snapshots, unblockable connectors, capacity and agent authentication. Standard connectors only, read-only, free by e-mail."
+description: "Ten free AdminHelper flows that e-mail you what exists in your Power Platform tenant, what changed overnight and where a risk appeared. Standard licence, read-only."
 ---
 
-The AdminHelper starter set consists of ten Power Automate flows that look at your tenant and report by e-mail: four inventories (environments, apps, cloud flows, Copilot Studio agents), a daily list of newly created environments, a DLP policy snapshot with change log, a weekly report on connectors that DLP cannot block, a list of flows the platform has suspended, a capacity warning and a check for agents without authentication. Two helper flows come with them: F00 checks your configuration and F51 prepares the storage folders. All ten work with standard connectors only (no Premium licence) and change nothing in your tenant. The only thing they write is a daily DLP snapshot file into your own SharePoint library.
+Ten Power Automate flows that watch your Power Platform tenant and send you what matters by e-mail: what exists, what changed overnight and where a risk has appeared. You read a short mail in the morning instead of clicking through the admin center. The flows only read. They change no app, flow, agent or setting, and none of them needs a Premium licence.
 
 [Diese Seite auf Deutsch](/de/flows/)
 
-The starter set is free. You get it by e-mail on [kmupower.com](https://kmupower.com/vorlagen#adminhelper-starter). If you want more, see the [offers](/offers/): Standard (35 flows, CHF 49), Full (51 flows, CHF 99) and the Default environment package (CHF 79). Each paid package is also available with remote setup (CHF 449, CHF 899 and CHF 479).
+The starter set is free. You get it by e-mail on [kmupower.com](https://kmupower.com/vorlagen#adminhelper-starter) (page in German). If you want more, see the [offers](/offers/): Standard (35 flows, CHF 49), Full (51 flows, CHF 99) and the Default environment package (CHF 79). Each paid package is also available with remote setup (CHF 449, CHF 899 and CHF 479).
+
+This page describes AdminHelper version 2.1.1 (November 2026).
+
+## What lands in your inbox
+
+| You want to know | Flows | When they write |
+|---|---|---|
+| What exists in the tenant | F01 environments, F17 apps, F24 flows, F31 agents | every morning |
+| What changed since yesterday | F02 new environments, F11 DLP policies, F15 suspended flows | only when something changed |
+| Where a risk is building up | F08 capacity, F13 connectors DLP cannot block, F32 agents without sign-in | F13 every Monday, the others only when something was found |
+
+Every flow checks that it has read the complete list before it reports. If a read is cut off, you get an error mail instead of a list that looks complete but is not.
 
 ## Your first 10 flows
-
-**Before you start:** none of the ten needs a Premium licence or a custom Dataverse table. They use the **Power Platform for Admins**, **Power Platform for Admins V2**, **Office 365 Outlook** and (for the DLP snapshot) **SharePoint** connectors. The Power Platform admin inventory, the same data source behind the admin center, delivers environments, apps, flows and agents tenant-wide in one paged query. The account that owns the connections needs the Power Platform administrator role and a mailbox for the reports. All flows arrive switched off. Run F51 and F00 first, set the environment variables, then switch the flows on one by one.
 
 ### Starter flow 1: F01 Environment inventory
 
 <!-- autogif:flows-1 -->
 {% include animation.html video="/assets/img/animations/flows-1-en.mp4" poster="/assets/img/animations/flows-1-en.poster.webp" width=800 height=450 alt="Five stages of the environment inventory flow: daily trigger, read all environments, normalise the fields, build an HTML table, send it to the admin." %}
 
-**What it does:** Reads every environment of your tenant once a day (type, region, managed status, Dataverse, creation date) and sends the inventory to the admin team.
+**What you get:** one list of all environments in your tenant every morning, with type, region, managed status, Dataverse and creation date.
 
-**Who needs it:** Admins and CoE teams who want a reliable answer to "how many environments do we have".
-
-**Why it matters:** DLP, backups, capacity and security reviews are all scoped per environment. If the list is incomplete, everything built on it inherits the gap.
-
-**Schedule:** daily at 01:30. **Licence:** Standard. **Needs:** `pp_AdminMail`.
+**Why it matters:** DLP, backups, capacity and security reviews are all planned per environment. With a reliable list you know what you are planning for.
 
 ### Starter flow 2: F02 Detect new environments
 
-**What it does:** Reports every morning which environments were created the previous day, with type, region, creation time and managed status. If there were none, it stays silent.
+**What you get:** a mail in the morning when environments were created the day before, with type, region and managed status. No new environment, no mail.
 
-**Who needs it:** Admins who want to notice shadow environments within a day, not at the next audit.
-
-**Why it matters:** A new environment is where new apps, flows and data appear. Seeing it early lets you decide on a DLP policy and an owner before it grows.
-
-**Schedule:** daily at 02:30. **Licence:** Standard. **Needs:** `pp_AdminMail`, and a connection owned by a Power Platform administrator, because the inventory can only be read with a user sign-in.
+**Why it matters:** new apps, flows and data appear in a new environment. You notice it within a day and can set a DLP policy and an owner before it grows.
 
 ### Starter flow 3: F08 Capacity warning
 
-**What it does:** Checks tenant capacity (database, file, log) every day against a threshold you set and writes to you only when the threshold is reached or a value is missing.
+**What you get:** a warning as soon as database, file or log capacity reaches the threshold you set, or when a value cannot be read.
 
-**Who needs it:** Admins who want to hear about a capacity shortage before environments get blocked.
-
-**Why it matters:** Missing capacity stops new environments and can block Dataverse operations. A flow that speaks only when it matters gets read, and missing data is reported instead of being treated as fine.
-
-**Schedule:** daily at 07:00. **Licence:** Standard. **Needs:** `pp_AdminMail`, `pp_CapacityWarnPercent`. Power Platform administrator role.
+**Why it matters:** once the tenant runs out of capacity, you can no longer create, copy or restore environments. You hear about it while there is still time to clean up or buy capacity.
 
 ### Starter flow 4: F11 DLP policy snapshot
 
-**What it does:** Reads all DLP policies every night, stores them as a daily file in your SharePoint library and compares them with the last snapshot. New, deleted and changed policies are reported by e-mail.
+**What you get:** a nightly copy of all DLP policies as a dated file in your SharePoint library, and a mail when a policy was created, deleted or changed.
 
-**Who needs it:** Admins who want a history of their DLP policies and a notice when someone changes one.
-
-**Why it matters:** A changed connector group can suspend flows or open a data path unnoticed. The daily files show the state before a change.
-
-**Schedule:** daily at 01:00. **Licence:** Standard. **Needs:** `pp_AdminMail`, `pp_SharePointSite`, `pp_SharePointLibrary` (F51 prepares both). It changes no policy and writes only the snapshot file. Restrict access to the folder, because the files contain the names of policy editors.
+**Why it matters:** a changed connector group can suspend flows or open a data path. The daily files show what a policy looked like before the change. The flow saves the files once you switch off test mode, and the folder should be visible to admins only, because the files contain the names of policy editors.
 
 ### Starter flow 5: F13 Unblockable connectors report
 
-**What it does:** Reports every week which connectors cannot be blocked with a DLP policy, with licence tier and usage in canvas apps and flows.
+**What you get:** a weekly list of the connectors that a classic DLP policy cannot block, and which of your apps and flows use them.
 
-**Who needs it:** Admins who plan DLP policies and want to know where a block is not possible.
-
-**Why it matters:** A policy that looks complete but cannot cover certain connectors gives false comfort. The report shows where the gaps are and which of your apps and flows use them.
-
-**Schedule:** Mondays at 10:00. **Licence:** Standard. **Needs:** `pp_AdminMail`. Power Platform administrator role.
+**Why it matters:** a policy can look complete and still leave these connectors open. The report shows where. In managed environments, advanced connector policies can restrict them as well.
 
 ### Starter flow 6: F15 Report suspended flows
 
-**What it does:** Reads every day all cloud flows and agent flows that the platform has suspended and reports them with environment, link and last save. Flows saved in the last 24 hours are marked. Without suspended flows it stays silent.
+**What you get:** a mail with every cloud flow and agent flow the platform has suspended, with environment and direct link. Flows saved in the last 24 hours are marked. No suspended flow, no mail.
 
-**Who needs it:** Admins who need to know when business processes stop without any noise, for example after a DLP change.
-
-**Why it matters:** A suspended flow does not run and nobody is told. The inventory says that a flow is suspended, but not why. The report therefore does not claim DLP as the cause and points to the flow details page, where the platform shows the reason.
-
-**Schedule:** daily at 06:45. **Licence:** Standard. **Needs:** `pp_AdminMail`, user sign-in for the inventory.
+**Why it matters:** a suspended flow stops without anyone being told, for example after a DLP change. The mail points to the flow details, where the platform shows the reason.
 
 ### Starter flow 7: F17 App inventory
 
-**What it does:** Reads all canvas, model-driven and code apps once a day and reports totals, apps per environment and the apps that need a look first: in quarantine or not modified for a long time.
+**What you get:** a daily overview of all canvas, model-driven and code apps: totals, apps per environment and the apps to look at first, because they are in quarantine or have not been changed for a long time.
 
-**Who needs it:** Admins who want an app list without clicking through every environment.
-
-**Why it matters:** You cannot govern what you cannot see. If the inventory cannot be read in full, the flow says so instead of reporting a partial list.
-
-**Schedule:** daily at 01:45. **Licence:** Standard. **Needs:** `pp_AdminMail`, `pp_InactivityDays`. The inventory shows changes with a delay of up to 15 minutes and holds no sharing counts or usage.
+**Why it matters:** you see every app without opening each environment, and old or blocked apps stand out on their own.
 
 ### Starter flow 8: F24 Flow inventory
 
-**What it does:** Reads all cloud flows and agent flows once a day and reports key figures by type, status and trigger, flows per environment and the flows the platform has suspended.
+**What you get:** daily figures on all cloud flows and agent flows by type, status and trigger, per environment, including the suspended ones.
 
-**Who needs it:** Admins who want to know what runs in the tenant.
-
-**Why it matters:** Flow sprawl grows unnoticed. Real numbers every day turn it into a routine check, and an incomplete read is reported as a failure.
-
-**Schedule:** daily at 02:00. **Licence:** Standard. **Needs:** `pp_AdminMail`, user sign-in for the inventory.
+**Why it matters:** flow sprawl grows unnoticed. A daily number turns it into a quick routine check.
 
 ### Starter flow 9: F31 Agent inventory
 
-**What it does:** Reads all Copilot Studio agents once a day and reports the inventory, agents per environment and the agents that are in quarantine, never or not recently published, or shared with the whole tenant.
+**What you get:** a daily list of all Copilot Studio agents per environment, with the ones that need a look marked: in quarantine, never or not recently published, or shared with the whole organisation.
 
-**Who needs it:** Admins who want a tenant-wide agent list without opening every environment.
-
-**Why it matters:** Agents multiply once Copilot Studio is on. A forgotten, unpublished or over-shared agent is a risk nobody sees until something breaks.
-
-**Schedule:** daily at 02:15. **Licence:** Standard. **Needs:** `pp_AdminMail`, `pp_InactivityDays`.
+**Why it matters:** agents multiply quickly once Copilot Studio is in use. A forgotten or over-shared agent is a risk nobody sees until something goes wrong.
 
 ### Starter flow 10: F32 Agents without authentication
 
-**What it does:** Reads all Copilot Studio agents once a day and reports agents with no authentication or with authentication that cannot be read, sorted by severity: published agents before unpublished ones. It writes only when something was found.
+**What you get:** a mail listing agents that have no authentication or whose authentication cannot be read. Published agents come first. Nothing found, no mail.
 
-**Who needs it:** Admins who must make sure no agent answers anonymous users by accident.
-
-**Why it matters:** An agent without authentication can be reached by anyone who has the link. A published one is the urgent case, so it comes first.
-
-**Schedule:** daily at 06:15. **Licence:** Standard. **Needs:** `pp_AdminMail`.
+**Why it matters:** an agent set to "No authentication" can be used by anyone who has the link. Once you know which agents those are, you can decide whether a data policy should require sign-in for all agents.
 
 ### Setup helpers: F00 and F51
 
-**F51 Set up and check** is a manual flow. It checks your SharePoint site and library, creates the storage folders if they are missing and sends you a mail with the values for the environment variables. You can run it as often as you like.
+**F51 Set up and check** prepares your SharePoint library: it checks site and library, creates the missing storage folders and mails you the values for the settings. Since version 2.1.1 it also finishes cleanly on the first run on an empty site. You can run it as often as you like.
 
-**F00 Check configuration** is also manual. It tests every connection with one harmless read action, checks the required settings and mails you the result. It changes nothing.
+**F00 Check configuration** tests every connection with a harmless read and mails you which settings are still missing. It changes nothing.
 
 ---
 
-## Connectors and licences
+## Setup in five steps
 
-| Flow | Connector(s) | Licence |
-|---|---|---|
-| F01 Environment inventory | Power Platform for Admins, Office 365 Outlook | Standard |
-| F02 Detect new environments | Power Platform for Admins V2, Office 365 Outlook | Standard |
-| F08 Capacity warning | Power Platform for Admins V2, Office 365 Outlook | Standard |
-| F11 DLP policy snapshot | Power Platform for Admins, SharePoint, Office 365 Outlook | Standard |
-| F13 Unblockable connectors report | Power Platform for Admins, Office 365 Outlook | Standard |
-| F15 Report suspended flows | Power Platform for Admins V2, Office 365 Outlook | Standard |
-| F17 App inventory | Power Platform for Admins V2, Office 365 Outlook | Standard |
-| F24 Flow inventory | Power Platform for Admins V2, Office 365 Outlook | Standard |
-| F31 Agent inventory | Power Platform for Admins V2, Office 365 Outlook | Standard |
-| F32 Agents without authentication | Power Platform for Admins V2, Office 365 Outlook | Standard |
-| F00, F51 Setup | SharePoint, Office 365 Outlook | Standard |
+1. Import the solution into a separate governance environment, not the Default environment. All flows arrive switched off.
+2. Create the connections with an account that holds the Power Platform administrator role and has a mailbox for the reports.
+3. Switch on and run F51, then enter the values from its mail in the environment variables.
+4. Run F00 and fix what it reports.
+5. Start each flow once by hand, check the mail, then leave it switched on. For F11, switch test mode off once the first report looks right, so that the daily files are saved.
 
-Microsoft licences are not included. The flows are not a backup system, and they have not yet run for weeks in long-term production with a real configuration. Test the reports first. A production admin flow reads the current state completely, checks that the read was not cut off and reports only then. An incomplete read is a failure, not "nothing found".
+Good to know:
+
+- The inventory behind F02, F13, F15, F17, F24, F31 and F32 is the same one the Power Platform admin center uses. It shows new and changed items within about 15 minutes and can only be read with a signed-in user, not with a service principal.
+- If your conditional access requires MFA for Azure Resource Manager, the inventory may not load. Microsoft describes the fix on the [inventory page](https://learn.microsoft.com/en-us/power-platform/admin/power-platform-inventory#known-limitations).
+- The flows are not a backup, and they have not yet been proven over weeks of production use with a real configuration. Test the reports first.
+
+## Schedules and connectors
+
+All times are Central European time. All connectors are standard connectors, so a Microsoft 365 licence with Power Automate is enough. Microsoft licences are not included.
+
+| Flow | Runs | Connectors | Settings it needs |
+|---|---|---|---|
+| F01 Environment inventory | daily 01:30 | Power Platform for Admins, Office 365 Outlook | admin mail |
+| F02 Detect new environments | daily 02:30 | Power Platform for Admins V2, Office 365 Outlook | admin mail |
+| F08 Capacity warning | daily 07:00 | Power Platform for Admins V2, Office 365 Outlook | admin mail, warning threshold in percent |
+| F11 DLP policy snapshot | daily 01:00 | Power Platform for Admins, SharePoint, Office 365 Outlook | admin mail, SharePoint site and library, test mode off |
+| F13 Unblockable connectors | Mondays 10:00 | Power Platform for Admins and V2, Office 365 Outlook | admin mail |
+| F15 Suspended flows | daily 06:45 | Power Platform for Admins V2, Office 365 Outlook | admin mail |
+| F17 App inventory | daily 01:45 | Power Platform for Admins V2, Office 365 Outlook | admin mail, inactivity days |
+| F24 Flow inventory | daily 02:00 | Power Platform for Admins V2, Office 365 Outlook | admin mail |
+| F31 Agent inventory | daily 02:15 | Power Platform for Admins V2, Office 365 Outlook | admin mail, inactivity days |
+| F32 Agents without authentication | daily 06:15 | Power Platform for Admins V2, Office 365 Outlook | admin mail |
+| F51 Set up and check | by hand | SharePoint, Office 365 Outlook | none |
+| F00 Check configuration | by hand | all of the above plus Power Apps for Admins, Power Automate for Admins and Approvals | none |
 
 ## Get more than the starter set
 
-The packages Standard (35 flows) and Full (51 flows) add reports on sharing, agents and connections, clean-up flows for inactive apps and old flows, owner reassignment and role audits. Prices, delivery and the setup option are on the [offers page](/offers/).
+Standard (35 flows) and Full (51 flows) add reports on sharing, connections and roles, clean-up for inactive apps and old flows, and owner reassignment. Flows that change something run in test mode first and only report what they would do. Prices, delivery and the setup option are on the [offers page](/offers/).
 
 ## Further reading
 
-- [Microsoft Power Platform API reference](https://learn.microsoft.com/en-us/rest/api/power-platform/)
+- [Power Platform inventory](https://learn.microsoft.com/en-us/power-platform/admin/power-platform-inventory)
 - [Power Platform inventory API](https://learn.microsoft.com/en-us/power-platform/admin/inventory-api)
-- [Power Platform inventory sample queries](https://learn.microsoft.com/en-us/power-platform/admin/inventory-sample-queries)
 - [Power Platform for Admins V2 connector reference](https://learn.microsoft.com/en-us/connectors/powerplatformadminv2/)
-- [Data loss prevention policies](https://learn.microsoft.com/en-us/power-platform/admin/wp-data-loss-prevention)
+- [Connectors you can't block with data policies](https://learn.microsoft.com/en-us/power-platform/admin/dlp-connector-classification#list-of-connectors-that-you-cant-block)
+- [Advanced connector policies](https://learn.microsoft.com/en-us/power-platform/admin/advanced-connector-policies)
+- [Dataverse capacity: what happens when you exceed it](https://learn.microsoft.com/en-us/power-platform/admin/capacity-storage#changes-for-exceeding-storage-capacity-entitlements)
+- [Configure data policies for Copilot Studio agents](https://learn.microsoft.com/en-us/microsoft-copilot-studio/admin-data-loss-prevention)
