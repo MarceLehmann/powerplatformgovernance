@@ -92,3 +92,48 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  # Entscheid e-1104-indexnow (Marcel 05.11.2026): IndexNow-Ping im bestehenden Deploy, kein eigener Workflow mehr.
+  # Bing, Yandex, Seznam u. a. (Google nutzt IndexNow nicht). Schluesseldatei liegt im Wurzelordner der Seite.
+  indexnow:
+    needs: deploy
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    continue-on-error: true
+    steps:
+      - name: IndexNow melden
+        env:
+          HOST: powerplatformgovernance.com
+          KEY: bc2d7106a7e3443f761906c6b7b7f5b0
+          EVENT: ${{ github.event_name }}
+        run: |
+          sleep 45
+          curl -sS --retry 5 --retry-delay 10 --retry-all-errors "https://$HOST/sitemap.xml" -o sitemap.xml
+          node - <<'EOF'
+          const fs = require('fs');
+          const xml = fs.readFileSync('sitemap.xml', 'utf8');
+          const entries = [...xml.matchAll(/<url>([\s\S]*?)<\/url>/g)].map(m => ({
+            loc: (m[1].match(/<loc>(.*?)<\/loc>/) || [])[1],
+            lastmod: (m[1].match(/<lastmod>(.*?)<\/lastmod>/) || [])[1],
+          })).filter(e => e.loc);
+          let urls = entries.map(e => e.loc);
+          if (urls.length === 0) { console.log('Keine URLs in sitemap.xml, IndexNow uebersprungen.'); process.exit(0); }
+          // Alles ausser Push (Nachtlauf, Kurations-Deploy per workflow_dispatch): nur URLs mit lastmod der letzten 2 Tage.
+          if (process.env.EVENT !== 'push') {
+            const since = Date.now() - 2 * 86400000;
+            urls = entries.filter(e => e.lastmod && Date.parse(e.lastmod) >= since).map(e => e.loc);
+            if (urls.length === 0) { console.log('Keine geaenderten URLs in den letzten 2 Tagen, nichts zu melden.'); process.exit(0); }
+          }
+          fs.writeFileSync('indexnow-payload.json', JSON.stringify({
+            host: process.env.HOST,
+            key: process.env.KEY,
+            keyLocation: `https://${process.env.HOST}/${process.env.KEY}.txt`,
+            urlList: urls,
+          }));
+          console.log(urls.length + ' URLs an IndexNow gemeldet');
+          EOF
+          if [ -f indexnow-payload.json ]; then
+            curl -sS --fail-with-body -X POST https://api.indexnow.org/indexnow \
+              -H 'Content-Type: application/json; charset=utf-8' \
+              --data-binary @indexnow-payload.json
+          fi
