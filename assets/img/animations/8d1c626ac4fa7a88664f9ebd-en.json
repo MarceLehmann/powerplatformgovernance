@@ -1,0 +1,62 @@
+{
+ "title": "Build flow error handling",
+ "subtitle": "Set up run after, scopes, retries, timeouts and logging to catch silent flow failures.",
+ "steps": [
+  {
+   "product": "powerautomate",
+   "icon": "gear",
+   "productLabel": "Power Automate",
+   "title": "Configure run after on actions",
+   "actions": [
+    "configure run after"
+   ],
+   "evidence": "configure run after on actions"
+  },
+  {
+   "product": "powerautomate",
+   "icon": "filter",
+   "productLabel": "Power Automate",
+   "title": "Wrap steps in scopes",
+   "actions": [
+    "scopes",
+    "try-catch blocks"
+   ],
+   "evidence": "wrap steps in scopes as try-catch blocks"
+  },
+  {
+   "product": "powerautomate",
+   "icon": "check",
+   "productLabel": "Power Automate",
+   "title": "Add terminate actions",
+   "actions": [
+    "terminate actions"
+   ],
+   "evidence": "add terminate actions, retry policies and timeouts"
+  },
+  {
+   "product": "powerautomate",
+   "icon": "arrow",
+   "productLabel": "Power Automate",
+   "title": "Set retries and timeouts",
+   "actions": [
+    "retry policies",
+    "timeouts"
+   ],
+   "evidence": "add terminate actions, retry policies and timeouts"
+  },
+  {
+   "product": "powerautomate",
+   "icon": "doc",
+   "productLabel": "Power Automate",
+   "title": "Log failures for monitoring",
+   "actions": [
+    "log failures",
+    "error logging"
+   ],
+   "evidence": "log failures so you hear them before your users do."
+  }
+ ],
+ "punchline": [
+  "No more silent failures"
+ ]
+}

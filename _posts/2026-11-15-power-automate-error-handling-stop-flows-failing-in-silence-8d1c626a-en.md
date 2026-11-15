@@ -42,6 +42,12 @@ faq:
 - question: How do scopes act as try-catch blocks in Power Automate flows?
   answer: Scopes group actions so a failure inside the group can be caught by a later
     branch, mirroring the try-catch pattern from programming.
+animation:
+  video: /assets/img/animations/8d1c626ac4fa7a88664f9ebd-en.mp4
+  poster: /assets/img/animations/8d1c626ac4fa7a88664f9ebd-en.poster.webp
+  width: 800
+  height: 450
+  alt: "A five step sequence shows error handling in Power Automate: configure run after, wrap actions in scopes, add terminate, set retries and timeouts, then log failures."
 ---
 
 ## TL;DR

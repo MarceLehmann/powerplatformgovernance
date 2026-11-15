@@ -44,6 +44,12 @@ faq:
 - question: Wie nutze ich Scopes in Power Automate als Try-Catch für die Fehlerbehandlung?
   answer: Scopes fassen Aktionen zusammen, sodass ein Fehler innerhalb der Gruppe
     von einem nachgelagerten Zweig abgefangen wird, ähnlich wie try-catch beim Programmieren.
+animation:
+  video: /assets/img/animations/8d1c626ac4fa7a88664f9ebd-de.mp4
+  poster: /assets/img/animations/8d1c626ac4fa7a88664f9ebd-de.poster.webp
+  width: 800
+  height: 450
+  alt: "Eine Abfolge mit fünf Schritten zeigt die Fehlerbehandlung in Power Automate: Run After konfigurieren, Aktionen in Scopes kapseln, Terminate hinzufügen, Wiederholungen und Zeitlimits setzen und Fehler protokollieren."
 ---
 
 ## TL;DR

@@ -1141,5 +1141,17 @@
       "The agent searches the sources you plugged in and turns the file content into answers.",
       "Control the one setting that decides whether the agent may guess."
     ]
+  },
+  "8d1c626ac4fa7a88664f9ebd": {
+    "gif": true,
+    "reason": "The post gives a concrete 5 stage error handling build path in Power Automate.",
+    "at": "2026-11-15",
+    "evidence": [
+      "configure run after on actions",
+      "wrap steps in scopes as try-catch blocks",
+      "add terminate actions, retry policies and timeouts",
+      "add terminate actions, retry policies and timeouts",
+      "log failures so you hear them before your users do."
+    ]
   }
 }

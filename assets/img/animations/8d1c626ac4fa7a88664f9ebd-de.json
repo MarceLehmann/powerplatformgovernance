@@ -1,0 +1,57 @@
+{
+ "title": "Flow Fehlerbehandlung bauen",
+ "subtitle": "Run After, Scopes, Wiederholungen, Zeitlimits und Protokollierung gegen stille Flow Ausfaelle einrichten.",
+ "steps": [
+  {
+   "product": "powerautomate",
+   "icon": "gear",
+   "productLabel": "Power Automate",
+   "title": "Run After fuer Aktionen setzen",
+   "actions": [
+    "Run After konfigurieren"
+   ]
+  },
+  {
+   "product": "powerautomate",
+   "icon": "filter",
+   "productLabel": "Power Automate",
+   "title": "Schritte in Scopes kapseln",
+   "actions": [
+    "Scopes",
+    "Try-Catch-Bloecke"
+   ]
+  },
+  {
+   "product": "powerautomate",
+   "icon": "check",
+   "productLabel": "Power Automate",
+   "title": "Terminate-Aktionen hinzufuegen",
+   "actions": [
+    "Terminate-Aktionen"
+   ]
+  },
+  {
+   "product": "powerautomate",
+   "icon": "arrow",
+   "productLabel": "Power Automate",
+   "title": "Wiederholungen und Zeitlimits",
+   "actions": [
+    "Wiederholungen",
+    "Zeitlimits"
+   ]
+  },
+  {
+   "product": "powerautomate",
+   "icon": "doc",
+   "productLabel": "Power Automate",
+   "title": "Fehler fuer Monitoring protokollieren",
+   "actions": [
+    "Fehler protokollieren",
+    "Fehlerprotokollierung"
+   ]
+  }
+ ],
+ "punchline": [
+  "Keine stillen Ausfaelle mehr"
+ ]
+}
