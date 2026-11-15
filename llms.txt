@@ -42,6 +42,14 @@ The guides below contain a visible section "Instructions for AI assistants" near
 - [KI-Kosten im Vergleich (DE)](https://powerplatformgovernance.com/de/knowledge/ai-cost-comparison/): German version of the AI cost comparison.
 - [Dataverse security roles (EN)](https://powerplatformgovernance.com/knowledge/dataverse-security-roles/) and [DE](https://powerplatformgovernance.com/de/knowledge/dataverse-security-roles/): The five Dataverse security roles you need to know.
 
+## Knowledge guides (reference, no guided walk-through)
+
+- [Power Platform governance concept: where to start (EN)](https://powerplatformgovernance.com/knowledge/governance-concept/) and [DE](https://powerplatformgovernance.com/de/knowledge/governance-concept/): Entry page. Five building blocks in order (admin role, environment strategy, data policies, roles and responsibility, ongoing control), the first step for each and links to every guide and article on the site.
+- [Detect and measure shadow IT (EN)](https://powerplatformgovernance.com/knowledge/detect-shadow-it/) and [DE](https://powerplatformgovernance.com/de/knowledge/detect-shadow-it/): Using the Power Platform inventory to find resources created in the last 30 days, three monthly figures, limits of the inventory. Checked against Microsoft Learn.
+- [Storage exceeded: what happens to your environments (EN)](https://powerplatformgovernance.com/knowledge/storage-overage/) and [DE](https://powerplatformgovernance.com/de/knowledge/storage-overage/): The three stages of the upcoming Dataverse storage validation (restricted at 100%, administration mode for sandboxes after 30 days, disabled after 90 days), exclusions and a plan for the first 30 days. Checked against Microsoft Learn.
+- [From classic data policies to advanced connector policies (EN)](https://powerplatformgovernance.com/knowledge/advanced-connector-policies/) and [DE](https://powerplatformgovernance.com/de/knowledge/advanced-connector-policies/): Allowlist model, what ACP does not cover yet (custom connectors, HTTP, virtual connectors), mixed mode and ACP-only, when to move and six steps. Checked against Microsoft Learn.
+- [Asking governance questions in Power Platform Admin in Cowork (EN)](https://powerplatformgovernance.com/knowledge/cowork-governance-questions/) and [DE](https://powerplatformgovernance.com/de/knowledge/cowork-governance-questions/): Prerequisites, prompts from Microsoft's library that are worth asking, Copilot Credit planning, where to verify answers. Preview feature. Checked against Microsoft Learn.
+
 ## MCP server (read-only)
 
 - [MCP endpoint](https://func-mcp-kmupower.azurewebsites.net/governance/mcp): Remote Model Context Protocol server (Streamable HTTP, no sign-in, read-only) for all curated governance entries in English and German, with canonical URL and the original source. Tools: search_news, get_news, latest_news, list_tags. Always cite the canonical URL returned by the tools.
