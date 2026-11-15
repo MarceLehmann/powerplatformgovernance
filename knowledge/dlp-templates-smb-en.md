@@ -52,12 +52,12 @@ What differs in practice:
 - A policy that spans all environments except selected ones, limited to Microsoft 365 and standard services, is the recommended starting point for shared environments. It also covers the default environment and any new environment.
 - If several policies apply to one environment, the most restrictive combination wins.
 - New or changed policies are checked against all active flows within 24 hours. Blocked cloud flows from the last seven days come back by themselves once they no longer violate a policy.
-- Child flows rely on the HTTP connector internally. The group of HTTP therefore decides whether child flows run.
+- Child flows rely on the HTTP connector internally. The group of HTTP can therefore affect whether child flows run.
 - Agents cannot be published without an allowed channel. Copilot Studio connectors (knowledge sources, channels, skills, event triggers) are classified like any other connector.
 
 **Decision in these templates (not Microsoft wording)**
 
-- **Default group Blocked in every template. This is the recommendation.** New connectors are only usable once someone classifies them on purpose. Nothing enters the company unreviewed, and with a handful of makers the upkeep stays small. Microsoft [suggests Non-business by default](https://learn.microsoft.com/en-us/power-platform/admin/dlp-connector-classification).
+- **Default group Blocked in every template. This is the recommendation.** New connectors are only usable once someone classifies them on purpose. Nothing enters the company unreviewed, and with a handful of makers the upkeep stays small. As a general rule Microsoft advises to [keep Non-business as the default group](https://learn.microsoft.com/en-us/power-platform/admin/dlp-connector-classification). For the default environment Microsoft itself recommends [Blocked as the default group](https://learn.microsoft.com/en-us/power-platform/guidance/adoption/secure-default-environment). Templates 1 and 2 therefore follow Microsoft, for templates 3 to 5 Blocked is the decision of these templates.
 - **Always list the unblockable connectors in Business.** If the default group is Blocked, new unblockable connectors land in Non-business automatically, and mixing them with Business would break flows. Listing them explicitly in Business avoids that.
 - **"Without Copilot" does not mean zero AI.** The core Copilot Studio connector and AI Builder (part of Dataverse) cannot be blocked by a data policy. The templates block channels, knowledge sources, skills, event triggers, generative actions and Azure OpenAI. AI Builder is limited with the tenant setting for unassigned AI Builder credits, not with DLP.
 
@@ -65,7 +65,7 @@ What differs in practice:
 
 A data policy is not harmless. Look at what it would block first.
 
-1. **List the connectors your apps, flows and agents use today.** The Power Platform inventory shows them per resource (preview, large tenants may get incomplete lists).
+1. **List the connectors your apps, flows and agents use today.** The Power Platform inventory shows them per resource (built-in actions such as the HTTP action do not appear there as connectors).
 2. **Compare each template against that list.** For every resource the result is one of three: fine, blocked (at least one connector is blocked or unlisted while the default group is Blocked) or mixed (Business and Non-business in one resource).
 3. **Check overlaps.** An environment under two policies gets the stricter combination.
 4. **Roll out in this order:** default environment first, then team and production environments, last developer environments.
@@ -91,6 +91,7 @@ Statements checked against Microsoft Learn on 14.11.2026. The design numbers com
 
 - [Microsoft Learn: Implement a data policy strategy](https://learn.microsoft.com/en-us/power-platform/guidance/adoption/dlp-strategy)
 - [Microsoft Learn: Connector classification](https://learn.microsoft.com/en-us/power-platform/admin/dlp-connector-classification)
+- [Microsoft Learn: Secure the default environment](https://learn.microsoft.com/en-us/power-platform/guidance/adoption/secure-default-environment)
 - [Microsoft Learn: Manage data policies](https://learn.microsoft.com/en-us/power-platform/admin/prevent-data-loss)
 - [Microsoft Learn: Combined effect of multiple data policies](https://learn.microsoft.com/en-us/power-platform/admin/dlp-combined-effect-multiple-policies)
 - [Microsoft Learn: Data loss prevention (DLP) policy creation in Power Automate](https://learn.microsoft.com/en-us/power-automate/prevent-data-loss)

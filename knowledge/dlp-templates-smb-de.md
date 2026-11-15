@@ -52,12 +52,12 @@ Was sich in der Praxis unterscheidet:
 - Eine Richtlinie über alle Umgebungen ausser ausgewählten, beschränkt auf Microsoft 365 und Standarddienste, ist der empfohlene Start für gemeinsame Umgebungen. Sie gilt auch für die Default-Umgebung und für jede neue Umgebung.
 - Gelten mehrere Richtlinien für eine Umgebung, gewinnt die strengste Kombination.
 - Neue oder geänderte Richtlinien werden innerhalb von 24 Stunden gegen alle aktiven Flows geprüft. Gesperrte Cloud-Flows der letzten sieben Tage werden von selbst wieder aktiv, sobald sie nicht mehr verstossen.
-- Child Flows hängen intern am HTTP-Connector. Die Gruppe von HTTP entscheidet darum, ob Child Flows laufen.
+- Child Flows hängen intern am HTTP-Connector. Die Gruppe von HTTP kann darum beeinflussen, ob Child Flows laufen.
 - Ohne erlaubten Kanal lässt sich kein Agent veröffentlichen. Die Connectors von Copilot Studio (Wissensquellen, Kanäle, Skills, Ereignis-Trigger) werden wie jeder andere Connector klassifiziert.
 
 **Entscheid in diesen Vorlagen (nicht Wortlaut von Microsoft)**
 
-- **Standardgruppe Blocked in jeder Vorlage. Das ist die Empfehlung.** Neue Connectors sind erst nutzbar, wenn jemand sie bewusst einordnet. So landet nichts ungeprüft in der Firma, und bei wenigen Makern bleibt der Pflegeaufwand klein. Microsoft schlägt [standardmässig Non-Business vor](https://learn.microsoft.com/de-de/power-platform/admin/dlp-connector-classification).
+- **Standardgruppe Blocked in jeder Vorlage. Das ist die Empfehlung.** Neue Connectors sind erst nutzbar, wenn jemand sie bewusst einordnet. So landet nichts ungeprüft in der Firma, und bei wenigen Makern bleibt der Pflegeaufwand klein. Microsoft rät allgemein, [Non-Business als Standardgruppe zu lassen](https://learn.microsoft.com/de-de/power-platform/admin/dlp-connector-classification). Für die Default-Umgebung empfiehlt Microsoft selbst [Blocked als Standardgruppe](https://learn.microsoft.com/de-de/power-platform/guidance/adoption/secure-default-environment). Die Vorlagen 1 und 2 folgen damit Microsoft, bei den Vorlagen 3 bis 5 ist Blocked der Entscheid dieser Vorlagen.
 - **Nicht blockierbare Connectors immer ausdrücklich in Business.** Ist die Standardgruppe Blocked, landen neue nicht blockierbare Connectors automatisch in Non-Business, und die Mischung mit Business würde Flows brechen. Die ausdrückliche Zuordnung verhindert das.
 - **«Ohne Copilot» heisst nicht null KI.** Der Kern-Connector von Copilot Studio und AI Builder (Teil von Dataverse) lassen sich per Richtlinie nicht blockieren. Die Vorlagen sperren Kanäle, Wissensquellen, Skills, Ereignis-Trigger, generative Aktionen und Azure OpenAI. AI Builder begrenzt du mit der Tenant-Einstellung für nicht zugewiesene AI-Builder-Credits, nicht mit DLP.
 
@@ -65,7 +65,7 @@ Was sich in der Praxis unterscheidet:
 
 Eine Richtlinie ist nicht harmlos. Schau zuerst, was sie blockieren würde.
 
-1. **Liste die Connectors auf, die deine Apps, Flows und Agents heute nutzen.** Das Power-Platform-Inventar zeigt sie je Ressource (Preview, bei grossen Tenants kann die Liste unvollständig sein).
+1. **Liste die Connectors auf, die deine Apps, Flows und Agents heute nutzen.** Das Power-Platform-Inventar zeigt sie je Ressource (eingebaute Aktionen wie die HTTP-Aktion erscheinen dort nicht als Connector).
 2. **Vergleiche jede Vorlage mit dieser Liste.** Je Ressource gibt es drei Ergebnisse: in Ordnung, blockiert (mindestens ein Connector ist blockiert oder nicht aufgeführt, solange die Standardgruppe Blocked ist) oder gemischt (Business und Non-Business in einer Ressource).
 3. **Prüfe Überschneidungen.** Eine Umgebung unter zwei Richtlinien bekommt die strengere Kombination.
 4. **Führe in dieser Reihenfolge ein:** zuerst die Default-Umgebung, dann Team- und Produktiv-Umgebungen, zuletzt Entwickler-Umgebungen.
@@ -91,6 +91,7 @@ Aussagen am 14.11.2026 gegen Microsoft Learn geprüft. Die Zahlen aus dem Entwur
 
 - [Microsoft Learn: Implement a data policy strategy](https://learn.microsoft.com/en-us/power-platform/guidance/adoption/dlp-strategy)
 - [Microsoft Learn: Connector classification](https://learn.microsoft.com/en-us/power-platform/admin/dlp-connector-classification)
+- [Microsoft Learn: Secure the default environment](https://learn.microsoft.com/en-us/power-platform/guidance/adoption/secure-default-environment)
 - [Microsoft Learn: Manage data policies](https://learn.microsoft.com/en-us/power-platform/admin/prevent-data-loss)
 - [Microsoft Learn: Combined effect of multiple data policies](https://learn.microsoft.com/en-us/power-platform/admin/dlp-combined-effect-multiple-policies)
 - [Microsoft Learn: Data loss prevention (DLP) policy creation in Power Automate](https://learn.microsoft.com/en-us/power-automate/prevent-data-loss)
