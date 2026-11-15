@@ -10,7 +10,7 @@ sitemap:
   changefreq: yearly
 ---
 
-**Last Updated:** November 8, 2026
+**Last Updated:** November 15, 2026
 
 ## Introduction
 
@@ -64,10 +64,10 @@ This website does not use cookies, and it does not use local storage or similar 
 
 We use the following third-party services:
 
-### GoatCounter (anonymous visitor counting)
+### GoatCounter (visitor counting without cookies)
 - **Provider**: GoatCounter.com, operated by Martin Tournoij (Ireland); data is stored on servers of Hetzner Online GmbH in Finland and Germany
-- **Purpose**: count anonymous page views so we know which articles and topics are read
-- **Legal basis**: our legitimate interest in understanding how the site is used (Art. 6(1)(f) GDPR); no personal data is stored
+- **Purpose**: count page views so we know which articles and topics are read
+- **Legal basis**: our legitimate interest in understanding how the site is used (Art. 6(1)(f) GDPR); only aggregate counts are stored, the IP address is not stored
 - **No cookies, no IP address stored on disk, no tracking across websites**; apart from its hosting provider Hetzner, no data is shared with third parties
 - The script (`count.js`) is served from this website itself; only the count request goes to GoatCounter
 - GoatCounter's [Privacy Policy](https://www.goatcounter.com/help/privacy) and [GDPR notes](https://www.goatcounter.com/help/gdpr) apply
@@ -97,7 +97,7 @@ We run a Model Context Protocol (MCP) server so that AI assistants can search an
 This website is hosted on GitHub Pages. The provider is GitHub, Inc., USA; pages are delivered through the network of Fastly, Inc., USA. When you open a page, GitHub and Fastly process technical access data (IP address, requested page, date and time, browser information) in their server logs to deliver the site securely and quickly. We do not receive these logs. Legal basis: our legitimate interest in a secure and reachable website (Art. 6(1)(f) GDPR). GitHub and Fastly decide how long the logs are kept. GitHub's [Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement) applies.
 
 ### Transfers abroad
-Some providers are based in the USA or process data there (GitHub, Fastly, Microsoft). Where a provider is certified under the EU-U.S. and the Swiss-U.S. Data Privacy Framework, the transfer relies on that certification (adequacy decision of the European Commission, recognition by the Swiss Federal Council). Where no certification exists, the European Commission's Standard Contractual Clauses apply, in the version recognised for Switzerland. You can request a copy of these safeguards at [info@kmupower.com](mailto:info@kmupower.com).
+Some providers are based in the USA or process data there (GitHub, Fastly, Microsoft). Microsoft Corporation, GitHub, Inc. and Fastly, Inc. state in their privacy statements that they are certified under the EU-U.S. and the Swiss-U.S. Data Privacy Framework. The transfer relies on that (adequacy decision of the European Commission, recognition by the Swiss Federal Council). For Microsoft, the European Commission's Standard Contractual Clauses in the data processing agreement apply in addition. You can ask for information on these safeguards and for the places where the contracts can be found at [info@kmupower.com](mailto:info@kmupower.com).
 
 ### LinkedIn profile links (optional)
 LinkedIn is not a service provider of this website. If you add a LinkedIn profile URL to a content suggestion (form or MCP server) and agree to publication, that URL is displayed on the resulting page as a clickable link. We do not otherwise integrate with or receive data from LinkedIn.
@@ -114,7 +114,7 @@ However, no method of transmission over the internet is 100% secure, and we cann
 
 ## Data Retention
 
-- **Analytics data**: GoatCounter only stores aggregate counts (see above), which contain no personal data; the in-memory visit marker is discarded after at most 8 hours
+- **Analytics data**: GoatCounter only stores aggregate counts (see above), which cannot be linked to a person; the in-memory visit marker (site, IP address and User-Agent) is discarded after at most 8 hours
 - **Content suggestions**: Retained as long as needed to review and, if published, attribute the curated summary; you may request deletion at any time (see "Your Rights" below)
 - **E-mail correspondence and bookings**: Kept as long as needed for the purpose, then deleted. Statutory retention duties (for example 10 years for accounting records, Art. 958f Swiss Code of Obligations) remain reserved.
 - **MCP server operational logs**: 30 days (see above)

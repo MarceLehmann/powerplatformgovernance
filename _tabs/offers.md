@@ -125,6 +125,16 @@ Work is billed by the hour at CHF 225, after a short call to define the scope.
 
 <p><a class="btn btn-primary" href="https://outlook.office.com/book/termin@kmupower.com/">Book an intro call</a></p>
 
+## Terms of purchase in English (summary)
+
+The packages are sold through kmupower.com. The shop pages there and the [full conditions](https://kmupower.com/vorlagen/bedingungen) are in German, and the German conditions are binding. The most important points:
+
+- **Business customers only:** the packages are sold to companies and self-employed people for their business, not to private persons. You confirm this when you order.
+- **Use:** you may install, use and adapt a package in up to three environments (development, test, production) of one Microsoft tenant, for your own company. Further tenants or affiliated companies need a further purchase.
+- **Passing on and resale:** only with prior written consent from KMUpower (e-mail is enough) or as an authorised partner. Passing on or reselling without consent triggers the contractual penalty in clause 12 of the conditions.
+- **Errors:** report an error within 30 days of delivery; it is fixed within 5 working days. If the fix fails twice, your statutory rights apply.
+- **Law:** Swiss law, place of jurisdiction Fehraltorf (Canton of Zurich), mandatory rules remain reserved.
+
 ## Good to know
 
 - All prices are in CHF. KMUpower is a sole proprietorship in Switzerland and not VAT-registered, so prices are final. Customers outside Switzerland receive a reverse-charge note on the invoice.
