@@ -63,11 +63,29 @@ export function intakeDefinition({ requireKey = true } = {}) {
       Store: {
         type: 'Scope', runAfter: after('Validate'), actions: {
           Find_existing: dataverse('ListRecords', {
-            entityName: config.entitySet, $select: 'new_governancesourceid', $top: 1,
+            entityName: config.entitySet, $select: 'new_governancesourceid,new_enabled,new_approval', $top: 1,
             $filter: "@concat('new_contenturl eq ', decodeUriComponent('%27'), replace(outputs('Content_URL'), decodeUriComponent('%27'), decodeUriComponent('%27%27')), decodeUriComponent('%27'))",
           }),
           Create_if_new: {
-            type: 'If', expression: "@empty(body('Find_existing')?['value'])", runAfter: after('Find_existing'), else: { actions: {} },
+            type: 'If', expression: "@empty(body('Find_existing')?['value'])", runAfter: after('Find_existing'),
+            else: {
+              actions: {
+                Reactivate_if_disabled: {
+                  type: 'If', runAfter: {}, else: { actions: {} },
+                  expression: `@and(equals(first(body('Find_existing')?['value'])?['new_enabled'], false), not(equals(first(body('Find_existing')?['value'])?['new_approval'], ${approval.rejected})))`,
+                  actions: {
+                    Reactivate_existing: dataverse('UpdateRecord', {
+                      entityName: config.entitySet,
+                      recordId: "@first(body('Find_existing')?['value'])?['new_governancesourceid']",
+                      'item/new_enabled': true,
+                      'item/new_emptychecks': 0,
+                      'item/new_failures': 0,
+                      'item/new_lastmessage': 'Re-submitted via the website form after being auto-disabled; automatically re-enabled and ready to be checked again.',
+                    }),
+                  },
+                },
+              },
+            },
             actions: {
               Create_submission: dataverse('CreateRecord', {
                 entityName: config.entitySet,
