@@ -51,6 +51,10 @@ No. Environment strategy and DLP policies are set by admins in the Power Platfor
 
 Governance is the set of rules and controls themselves. A CoE is the team and the tooling (often Microsoft's CoE Starter Kit) that applies those rules in practice: inventories, approvals, nudges and reporting. You can have governance without a formal CoE team, especially in smaller organizations.
 
+### What's the difference between Power Platform Governance and Power Platform Daily?
+
+Different scope, same curation approach. Governance covers the administrative side: security, compliance, DLP, ALM, environments and Center of Excellence. Our sister site [Power Platform Daily](https://powerplatformdaily.com/) covers product news and how-to guidance for Copilot Studio, Power Apps, Power Automate, Power BI and Fabric. An article only ever appears on one of the two sites.
+
 ## Still have a question?
 
 Email [info@kmupower.com](mailto:info@kmupower.com) or use the [submission page]({{ '/submit/' | relative_url }}) if it's about a specific article or source.
