@@ -30,7 +30,7 @@ We count page views with [GoatCounter](https://www.goatcounter.com), a privacy-f
 For each page view, GoatCounter receives the page address, the referring page, the User-Agent header, the screen width, the browser language and your IP address (needed for any network connection). It only stores aggregate counts per day or hour:
 - **Page path and referring website or search engine**
 - **Browser and operating system** (name and version only, e.g. "Firefox 139", "Windows 11")
-- **Country** (derived from the IP address, which is then discarded)
+- **Country** (derived from the IP address; the IP address itself is never written to disk)
 - **Browser language and screen width**
 
 To avoid counting a reload as a new visit, a combination of site, IP address and User-Agent is kept in memory only, for at most 8 hours, and is never written to disk. The stored counts cannot be linked to each other or to an individual person.
@@ -67,7 +67,7 @@ We use the following third-party services:
 ### GoatCounter (visitor counting without cookies)
 - **Provider**: GoatCounter.com, operated by Martin Tournoij (Ireland); data is stored on servers of Hetzner Online GmbH in Finland and Germany
 - **Purpose**: count page views so we know which articles and topics are read
-- **Legal basis**: our legitimate interest in understanding how the site is used (Art. 6(1)(f) GDPR); only aggregate counts are stored, the IP address is not stored
+- **Legal basis**: our legitimate interest in understanding how the site is used (Art. 6(1)(f) GDPR); only aggregate counts are stored permanently; the IP address is never written to disk (it is held in memory for at most 8 hours, see above)
 - **No cookies, no IP address stored on disk, no tracking across websites**; apart from its hosting provider Hetzner, no data is shared with third parties
 - The script (`count.js`) is served from this website itself; only the count request goes to GoatCounter
 - GoatCounter's [Privacy Policy](https://www.goatcounter.com/help/privacy) and [GDPR notes](https://www.goatcounter.com/help/gdpr) apply
@@ -97,7 +97,7 @@ We run a Model Context Protocol (MCP) server so that AI assistants can search an
 This website is hosted on GitHub Pages. The provider is GitHub, Inc., USA; pages are delivered through the network of Fastly, Inc., USA. When you open a page, GitHub and Fastly process technical access data (IP address, requested page, date and time, browser information) in their server logs to deliver the site securely and quickly. We do not receive these logs. Legal basis: our legitimate interest in a secure and reachable website (Art. 6(1)(f) GDPR). GitHub and Fastly decide how long the logs are kept. GitHub's [Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement) applies.
 
 ### Transfers abroad
-Some providers are based in the USA or process data there (GitHub, Fastly, Microsoft). Microsoft Corporation, GitHub, Inc. and Fastly, Inc. state in their privacy statements that they are certified under the EU-U.S. and the Swiss-U.S. Data Privacy Framework. The transfer relies on that (adequacy decision of the European Commission, recognition by the Swiss Federal Council). For Microsoft, the European Commission's Standard Contractual Clauses in the data processing agreement apply in addition. You can ask for information on these safeguards and for the places where the contracts can be found at [info@kmupower.com](mailto:info@kmupower.com).
+Some providers are based in the USA or process data there (GitHub, Fastly, Microsoft). According to their privacy statements, Microsoft Corporation, GitHub, Inc. and Fastly, Inc. are certified under the EU-U.S. and the Swiss-U.S. Data Privacy Framework. Transfers to these companies rely on that certification (adequacy decision of the European Commission, Art. 45 GDPR; recognition by the Swiss Federal Council, Annex 1 of the Swiss Data Protection Ordinance). For Microsoft, the European Commission's Standard Contractual Clauses in the [Microsoft Products and Services Data Protection Addendum](https://www.microsoft.com/licensing/docs/view/Microsoft-Products-and-Services-Data-Protection-Addendum-DPA) apply in addition. You can request a copy of these safeguards at [info@kmupower.com](mailto:info@kmupower.com).
 
 ### LinkedIn profile links (optional)
 LinkedIn is not a service provider of this website. If you add a LinkedIn profile URL to a content suggestion (form or MCP server) and agree to publication, that URL is displayed on the resulting page as a clickable link. We do not otherwise integrate with or receive data from LinkedIn.
