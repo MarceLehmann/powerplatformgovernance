@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { approval, processing } from './automation.mjs';
-import { intakeDefinition, intakeSchema } from './intake.mjs';
+import { autoDisabledPrefix, intakeDefinition, intakeSchema } from './intake.mjs';
 
 test('intake accepts only form fields and explicit opt-in', () => {
   assert.equal(intakeSchema.additionalProperties, false);
@@ -49,6 +49,14 @@ test('webhook can only create pending disabled records and cannot fetch content'
   assert.equal(actions.get('Invalid_request').inputs.statusCode, 400);
   assert.equal(actions.get('Storage_failed').inputs.statusCode, 503);
   assert.match(actions.get('Find_existing').inputs.parameters.$filter, /replace.*%27%27/);
+  // Reaktivierung nur fuer automatisch abgeschaltete, freigegebene Quellen: kein Wiedereinschalten von Hand gestoppter
+  // Quellen, kein Ueberschreiben des Quarantaene-Kennzeichens.
+  assert.match(actions.get('Find_existing').inputs.parameters.$select, /new_lastmessage/);
+  const reactivate = actions.get('Reactivate_if_disabled').expression;
+  assert.ok(reactivate.includes(`equals(first(body('Find_existing')?['value'])?['new_approval'], ${approval.approved})`), 'only approved sources');
+  assert.ok(reactivate.includes(`startsWith(coalesce(first(body('Find_existing')?['value'])?['new_lastmessage'], ''), '${autoDisabledPrefix}')`), 'only auto-disabled sources');
+  assert.equal(autoDisabledPrefix, 'Auto-disabled:');
+  assert.equal('Quarantine: the domain is not yet an approved source.'.startsWith(autoDisabledPrefix), false);
 });
 test('secret header: intake checks the key before anything else and stores nothing without it', () => {
   const flow = intakeDefinition();
