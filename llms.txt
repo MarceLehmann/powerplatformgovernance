@@ -19,7 +19,7 @@ Key facts for orientation:
 
 - [About](https://powerplatformgovernance.com/about/): What this site is, why it exists, and what it covers.
 - [Sources](https://powerplatformgovernance.com/sources/): The original blogs and authors behind the curated summaries, with credit and direct links.
-- [Admin Flows](https://powerplatformgovernance.com/flows/): The ten AdminHelper starter flows (free by e-mail, Standard licence, read-only): environment/app/flow/Copilot Studio agent inventories, new environments, DLP snapshot, unblockable connectors, suspended flows, capacity warning, agents without authentication. German version at /de/flows/.
+- [Admin Flows](https://powerplatformgovernance.com/flows/): The ten AdminHelper starter flows (free by e-mail, standard connectors only, read-only): environment/app/flow/Copilot Studio agent inventories, new environments, DLP snapshot, unblockable connectors, suspended flows, capacity warning, agents without authentication. German version at /de/flows/.
 - [Archives](https://powerplatformgovernance.com/archives/): All curated posts by date.
 - [Tags](https://powerplatformgovernance.com/tags/): Browse curated summaries by topic.
 - [Submit content](https://powerplatformgovernance.com/submit/): Suggest a governance blog or article for curation.
