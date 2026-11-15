@@ -7,7 +7,7 @@ permalink: /flows/
 lang: en
 translation_url: "/de/flows/"
 toc: true
-description: "Ten free AdminHelper flows that e-mail you what exists in your Power Platform tenant, what changed overnight and where a risk appeared. Standard licence, read-only."
+description: "Ten free AdminHelper flows e-mail you what exists in your Power Platform tenant, what changed overnight and where a risk appeared."
 ---
 
 Ten Power Automate flows that watch your Power Platform tenant and send you what matters by e-mail: what exists, what changed overnight and where a risk has appeared. You read a short mail in the morning instead of clicking through the admin center. The flows only read. They change no app, flow, agent or setting, and none of them needs a Premium licence.

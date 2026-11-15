@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Admin-Flows"
-description: "Zehn gratis AdminHelper-Flows melden dir per Mail, was es in deinem Power-Platform-Tenant gibt, was sich über Nacht geändert hat und wo ein Risiko entsteht. Nur lesend."
+description: "Zehn gratis AdminHelper-Flows melden dir per Mail, was es in deinem Tenant gibt, was sich über Nacht geändert hat und wo ein Risiko entsteht."
 lang: de
 permalink: "/de/flows/"
 translation_url: "/flows/"
