@@ -33,7 +33,7 @@ Product capabilities change, so verify requirements against current Microsoft do
 
 The site is edited by **Marcel Lehmann**, founder of [KMUpower](https://kmupower.com/), a Swiss Power Platform consultancy and training business.
 
-Marcel also edits PowerPlatformTip. We disclose that connection when featuring it here.
+Marcel also edits PowerPlatformTip and Power Platform Daily. We disclose that connection when featuring either of them here.
 
 Follow [Power Platform Governance Daily](https://www.linkedin.com/company/111059078) on LinkedIn for the same curated entries in your feed, or connect with [Marcel](https://www.linkedin.com/in/marcelehmann/) directly.
 

@@ -26,4 +26,4 @@ You bought a template or an AdminHelper package and received the e-mail with the
 
 If Next stays grey on the connections page, the existing connections often belong to a different account than the one you are signed in with. Create a new connection in each row.
 
-For AdminHelper, the guide in the e-mail adds one thing: the setup flow F51 prepares the storage folders. Run it before you switch on the other flows. See the [AdminHelper packages](/offers/).
+For AdminHelper, the guide in the e-mail adds setup flows: F51 prepares the storage folders and, in the Starter Kit, F00 checks your configuration. Run them before you switch on the other flows. See the [AdminHelper packages](/offers/).

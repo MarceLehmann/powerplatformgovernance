@@ -28,13 +28,13 @@ After the first run you have:
 
 - a list of all environments, apps, flows and Copilot agents, by e-mail
 - the data policies (DLP) that apply, with a snapshot you can compare later
-- a mail as soon as someone creates a new environment
+- a mail every morning that lists the environments created the day before
 - a warning before storage runs short
 - a list of agents that can be reached without sign-in
 
 Good fit if you want to know how things look before you pay anything. The flows change no environments, apps, flows or agents. The only thing they write is a snapshot file into your own SharePoint library.
 
-<p><a class="btn btn-primary" href="https://kmupower.com/vorlagen#adminhelper-starter">Get the free Starter Kit on kmupower.com</a></p>
+<p><a class="btn btn-primary" href="https://kmupower.com/vorlagen#adminhelper-starter">Get the free Starter Kit on kmupower.com (page in German)</a></p>
 
 ### Standard: CHF 49 (CHF 449 with setup)
 
@@ -50,7 +50,7 @@ After the first run you have:
 
 Good fit if you run the platform alone or in a small team and want order without checking by hand every week.
 
-<p><a class="btn btn-primary" href="https://kmupower.com/vorlagen#adminhelper-standard">Buy Standard on kmupower.com</a></p>
+<p><a class="btn btn-primary" href="https://kmupower.com/vorlagen#adminhelper-standard">Buy Standard on kmupower.com (page in German)</a></p>
 
 ### Full: CHF 99 (CHF 899 with setup)
 
@@ -66,7 +66,7 @@ After the first run you have:
 
 Limit: the other 35 flows use standard connectors only, and you can leave the 16 Premium flows switched off. Good fit if you manage several environments or have to reassign owners when people leave.
 
-<p><a class="btn btn-primary" href="https://kmupower.com/vorlagen#adminhelper-voll">Buy Full on kmupower.com</a></p>
+<p><a class="btn btn-primary" href="https://kmupower.com/vorlagen#adminhelper-voll">Buy Full on kmupower.com (page in German)</a></p>
 
 ### Default environment package: CHF 79 (CHF 479 with setup)
 
@@ -82,7 +82,7 @@ After the first run you have:
 
 Limit: this is not a backup. The archive records name, owner and date, not the app itself. The package never deletes agents. Good fit if your people build in the Default environment and you want to bring order into it without banning the Default environment.
 
-<p><a class="btn btn-primary" href="https://kmupower.com/vorlagen#adminhelper-default">Buy Default package on kmupower.com</a></p>
+<p><a class="btn btn-primary" href="https://kmupower.com/vorlagen#adminhelper-default">Buy Default package on kmupower.com (page in German)</a></p>
 
 ### Compared
 
@@ -108,9 +108,9 @@ The flow counts do not include the setup flows: F00 and F51 come on top for the 
 
 Your next step: get the free Starter Kit, look at what is in your platform, then decide.
 
-<p><a class="btn btn-primary" href="https://kmupower.com/vorlagen#adminhelper-starter">Get the free Starter Kit</a> <a class="btn btn-secondary" href="https://kmupower.com/vorlagen#adminhelper">See all packages</a></p>
+<p><a class="btn btn-primary" href="https://kmupower.com/vorlagen#adminhelper-starter">Get the free Starter Kit (page in German)</a> <a class="btn btn-secondary" href="https://kmupower.com/vorlagen#adminhelper">See all packages (page in German)</a></p>
 
-How delivery works for paid packages: after payment you receive an e-mail with the solution (zip) and the guide (PDF) attached. There is no download link. Microsoft licences are not included. You need an account with the Power Platform administrator role and a mailbox for the reports. New to importing a solution? The [video guide](/import/) shows every step.
+How delivery works for paid packages: after payment you usually receive an e-mail within 24 hours with the solution (zip) and the guide (PDF) attached. With setup, you choose your appointment right after payment. There is no download link. Microsoft licences are not included. You need an account with the Power Platform administrator role and a mailbox for the reports. New to importing a solution? The [video guide](/import/) shows every step.
 
 ## Governance consulting
 
@@ -121,7 +121,7 @@ Sometimes the problem is not a missing flow but a missing decision: which model 
 - Hands-on setup of policies, environment strategy or the AdminHelper flows
 - Workshops for your admin team, remote
 
-Work is billed by the hour at CHF 225, after a short call to define the scope.
+Work is billed by the hour at CHF 225, after a free 30-minute call to define the scope.
 
 <p><a class="btn btn-primary" href="https://outlook.office.com/book/termin@kmupower.com/">Book an intro call</a></p>
 

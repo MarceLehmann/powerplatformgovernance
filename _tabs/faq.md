@@ -35,7 +35,7 @@ Either it hasn't been suggested yet, or it didn't pass the relevance check for t
 
 ### Who is behind this site?
 
-**Marcel Lehmann**, founder of [KMUpower](https://kmupower.com/), a Swiss Power Platform consultancy and training business. He also edits [PowerPlatformTip](https://www.powerplatformtip.com); that connection is disclosed when featuring it here.
+**Marcel Lehmann**, founder of [KMUpower](https://kmupower.com/), a Swiss Power Platform consultancy and training business. He also edits [PowerPlatformTip](https://www.powerplatformtip.com) and [Power Platform Daily](https://powerplatformdaily.com); that connection is disclosed when featuring either of them here.
 
 ## Power Platform governance basics
 

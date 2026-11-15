@@ -1,18 +1,18 @@
 ---
 layout: page
 title: "Admin-Flows"
-description: "Die zehn AdminHelper-Starter-Flows für Power-Platform-Admins: Inventare für Umgebungen, Apps, Flows und Copilot-Studio-Agents, DLP-Schnappschuss, nicht blockierbare Connectors, Kapazität und Agents ohne Authentifizierung. Nur Standard-Lizenz, nur lesend, gratis per E-Mail."
+description: "Die zehn AdminHelper-Starter-Flows für Power-Platform-Admins: Inventare für Umgebungen, Apps, Flows und Copilot-Studio-Agents, DLP-Schnappschuss, nicht blockierbare Connectors, Kapazität und Agents ohne Authentifizierung. Nur Standard-Connectors, nur lesend, gratis per E-Mail."
 lang: de
 permalink: "/de/flows/"
 translation_url: "/flows/"
 toc: true
 ---
 
-Das AdminHelper-Starter-Set besteht aus zehn Power-Automate-Flows, die deinen Tenant ansehen und per E-Mail berichten: vier Inventare (Umgebungen, Apps, Cloud-Flows, Copilot-Studio-Agents), eine tägliche Liste neu angelegter Umgebungen, ein DLP-Schnappschuss mit Änderungsprotokoll, ein wöchentlicher Bericht über Connectors, die DLP nicht blockieren kann, eine Liste der von der Plattform suspendierten Flows, eine Kapazitätswarnung und eine Prüfung auf Agents ohne Authentifizierung. Dazu kommen zwei Hilfsflows: F00 prüft deine Konfiguration, F51 bereitet die Ablageordner vor. Alle zehn laufen mit der Standard-Lizenz und ändern nichts in deinem Tenant. Geschrieben wird einzig die tägliche DLP-Schnappschuss-Datei in deine eigene SharePoint-Bibliothek.
+Das AdminHelper-Starter-Set besteht aus zehn Power-Automate-Flows, die deinen Tenant ansehen und per E-Mail berichten: vier Inventare (Umgebungen, Apps, Cloud-Flows, Copilot-Studio-Agents), eine tägliche Liste neu angelegter Umgebungen, ein DLP-Schnappschuss mit Änderungsprotokoll, ein wöchentlicher Bericht über Connectors, die DLP nicht blockieren kann, eine Liste der von der Plattform suspendierten Flows, eine Kapazitätswarnung und eine Prüfung auf Agents ohne Authentifizierung. Dazu kommen zwei Hilfsflows: F00 prüft deine Konfiguration, F51 bereitet die Ablageordner vor. Alle zehn kommen mit Standard-Connectors aus (keine Premium-Lizenz) und ändern nichts in deinem Tenant. Geschrieben wird einzig die tägliche DLP-Schnappschuss-Datei in deine eigene SharePoint-Bibliothek.
 
 [This page in English](/flows/)
 
-Das Starter-Set ist gratis. Du bekommst es per E-Mail über [kmupower.com](https://kmupower.com/vorlagen#adminhelper). Wenn du mehr willst, findest du die [Angebote (auf Englisch)](/offers/): Standard (35 Flows, CHF 49), Voll (51 Flows, CHF 99) und das Default-Paket (CHF 79). Jedes bezahlte Paket gibt es auch mit Einrichtung per Fernzugriff (CHF 449, CHF 899 und CHF 479).
+Das Starter-Set ist gratis. Du bekommst es per E-Mail über [kmupower.com](https://kmupower.com/vorlagen#adminhelper-starter). Wenn du mehr willst, findest du die [Angebote (auf Englisch)](/offers/): Standard (35 Flows, CHF 49), Voll (51 Flows, CHF 99) und das Default-Paket (CHF 79). Jedes bezahlte Paket gibt es auch mit Einrichtung per Fernzugriff (CHF 449, CHF 899 und CHF 479).
 
 ## Deine ersten 10 Flows
 
