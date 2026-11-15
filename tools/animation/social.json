@@ -990,5 +990,14 @@
     "text": "Copilot Studio Knowledge Tuning: Stop Confident Wrong Answers\n\nA Copilot Studio agent can sound certain and still be wrong because it answers from its general knowledge or from a document you never intended it to use. Knowledge tuning means deciding which sources the agent may search, how files become answers, and controlling the one setting that determines whether the agent is allowed to guess. Some failure modes and limits cannot be designed away.\n\nSource: M365.FM, Simply Explained\n\nFull summary: https://powerplatformgovernance.com/en/posts/copilot-studio-knowledge-tuning-stop-confident-wrong-answers-91dd2148/\n\n#PowerPlatformGovernanceDaily #CopilotStudio",
     "bufferPostId": "6af8abe976c23bf1c733ea0f",
     "dueAt": "2026-11-15T14:00:00.000Z"
+  },
+  "8d1c626ac4fa7a88664f9ebd": {
+    "status": "queued",
+    "day": "2026-11-15",
+    "kind": "video",
+    "title": "Power Automate Error Handling: Stop Flows Failing in Silence",
+    "text": "Power Automate Error Handling: Stop Flows Failing in Silence\n\nPower Automate flows usually fail in silence: no alert tells you a flow broke last month. The fix is deliberate error handling: configure run after on actions, wrap steps in scopes as try-catch blocks, add terminate actions, retry policies and timeouts, and log failures so you hear them before your users do.\n\nSource: M365.FM Simply Explained\n\nFull summary: https://powerplatformgovernance.com/en/posts/power-automate-error-handling-stop-flows-failing-in-silence-8d1c626a/\n\n#PowerPlatformGovernanceDaily #PowerAutomate",
+    "bufferPostId": "6af9fd6755ad64be504ee59d",
+    "dueAt": "2026-11-16T08:00:00.000Z"
   }
 }
