@@ -108,7 +108,8 @@ jobs:
           EVENT: ${{ github.event_name }}
         run: |
           sleep 45
-          curl -sS --retry 5 --retry-delay 10 --retry-all-errors "https://$HOST/sitemap.xml" -o sitemap.xml
+          # --fail: HTTP-Fehler (404, 5xx) brechen den Schritt ab, statt eine Fehlerseite als Sitemap zu lesen. --location folgt Weiterleitungen.
+          curl -sS --fail --location --retry 5 --retry-delay 10 --retry-all-errors "https://$HOST/sitemap.xml" -o sitemap.xml
           node - <<'EOF'
           const fs = require('fs');
           const xml = fs.readFileSync('sitemap.xml', 'utf8');
@@ -117,7 +118,7 @@ jobs:
             lastmod: (m[1].match(/<lastmod>(.*?)<\/lastmod>/) || [])[1],
           })).filter(e => e.loc);
           let urls = entries.map(e => e.loc);
-          if (urls.length === 0) { console.log('Keine URLs in sitemap.xml, IndexNow uebersprungen.'); process.exit(0); }
+          if (urls.length === 0) { console.error('Keine URLs in sitemap.xml gefunden, IndexNow nicht gemeldet.'); process.exit(1); }
           // Alles ausser Push (Nachtlauf, Kurations-Deploy per workflow_dispatch): nur URLs mit lastmod der letzten 2 Tage.
           if (process.env.EVENT !== 'push') {
             const since = Date.now() - 2 * 86400000;
