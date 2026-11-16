@@ -999,5 +999,11 @@
     "text": "Power Automate Error Handling: Stop Flows Failing in Silence\n\nPower Automate flows usually fail in silence: no alert tells you a flow broke last month. The fix is deliberate error handling: configure run after on actions, wrap steps in scopes as try-catch blocks, add terminate actions, retry policies and timeouts, and log failures so you hear them before your users do.\n\nSource: M365.FM Simply Explained\n\nFull summary: https://powerplatformgovernance.com/en/posts/power-automate-error-handling-stop-flows-failing-in-silence-8d1c626a/\n\n#PowerPlatformGovernanceDaily #PowerAutomate",
     "bufferPostId": "6af9fd6755ad64be504ee59d",
     "dueAt": "2026-11-16T08:00:00.000Z"
+  },
+  "3f2052a0e9d5e52dfa8c51ce": {
+    "status": "expired",
+    "day": "2026-11-15",
+    "title": "Dataverse for Teams: the free 2 GB database hiding inside Microsoft Teams",
+    "expiredAt": "2026-11-16"
   }
 }
