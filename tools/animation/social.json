@@ -1005,5 +1005,32 @@
     "day": "2026-11-15",
     "title": "Dataverse for Teams: the free 2 GB database hiding inside Microsoft Teams",
     "expiredAt": "2026-11-16"
+  },
+  "ed2f02982b925e9eecaf2f98": {
+    "status": "queued",
+    "day": "2026-11-16",
+    "kind": "video",
+    "title": "Copilot Studio MCP Servers: Choose the Right Build Path",
+    "text": "Copilot Studio MCP Servers: Choose the Right Build Path\n\nCopilot Studio supports MCP through Streamable HTTP, with up to 128 tools per agent and 25 to 30 recommended. Use a connector, prebuilt server or Dataverse custom API first. Build a custom server when logic is complex, tools serve multiple clients, or MCP resources are required, while enforcing ownership and customer identity in server code.\n\nSource: Practical AI, Copilot & Modern Development Insights\n\nFull summary: https://powerplatformgovernance.com/en/posts/copilot-studio-mcp-servers-choose-the-right-build-path-ed2f0298/\n\n#PowerPlatformGovernanceDaily #CopilotStudio",
+    "bufferPostId": "6afb4ef3be9cb91737ef620a",
+    "dueAt": "2026-11-17T08:00:00.000Z"
+  },
+  "dcb7d7ca3cda3ac840ae57b7": {
+    "status": "queued",
+    "day": "2026-11-16",
+    "kind": "video",
+    "title": "Access reviews for Power Apps: owners confirm who still needs their app",
+    "text": "Access reviews for Power Apps: owners confirm who still needs their app\n\nRencore has extended Reviews to Power Apps. On a schedule set once by admins, app owners confirm who can use each app in the Rencore Teams App in Microsoft Teams, alongside Teams and SharePoint reviews. Reviews include people who reach the app through security groups. Owners keep users, hand the app to a new owner or retire it, with every decision recorded for IT.\n\nSource: Rencore Blog\n\nFull summary: https://powerplatformgovernance.com/en/posts/access-reviews-for-power-apps-owners-confirm-who-still-needs-their-app-dcb7d7ca/\n\n#PowerPlatformGovernanceDaily #PowerApps",
+    "bufferPostId": "6afb4ef5016bcbe7f81ef437",
+    "dueAt": "2026-11-17T11:00:00.000Z"
+  },
+  "0ca2fe93adfcb77af06e42cf": {
+    "status": "queued",
+    "day": "2026-11-16",
+    "kind": "image",
+    "title": "Power BI Row-Level Security: control who sees which rows",
+    "text": "Power BI Row-Level Security: control who sees which rows\n\nPower BI Row-Level Security filters which rows of a report each user sees; a report without correct rules can hand viewers data never meant for them, with no attack involved. RLS can be set up without code, using two kinds of rules, and anyone configuring it should know the beginner mistakes and the limits of RLS across Microsoft 365 and Fabric.\n\nSource: M365.FM | Microsoft 365, Azure Cloud, Power Platform & AI (Spreaker)\n\nFull summary: https://powerplatformgovernance.com/en/posts/power-bi-row-level-security-control-who-sees-which-rows-0ca2fe93/\n\n#PowerPlatformGovernanceDaily",
+    "bufferPostId": "6afb4ef508dd01805007ace5",
+    "dueAt": "2026-11-17T14:00:00.000Z"
   }
 }
