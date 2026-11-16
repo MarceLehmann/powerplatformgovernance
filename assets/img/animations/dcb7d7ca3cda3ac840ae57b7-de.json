@@ -1,0 +1,61 @@
+{
+ "title": "Power Apps Zugriff prüfen",
+ "subtitle": "Admins planen Reviews einmal, dann bestaetigen Besitzer den Zugriff und entscheiden je App.",
+ "steps": [
+  {
+   "product": "admin",
+   "icon": "gear",
+   "productLabel": "Admin",
+   "title": "Power Apps im Review Builder",
+   "actions": [
+    "Power Apps",
+    "Review Builder",
+    "Teams und SharePoint"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "calendar",
+   "productLabel": "Admin",
+   "title": "Review Zeitplan einmal festlegen",
+   "actions": [
+    "Zeitplan einmal festlegen"
+   ]
+  },
+  {
+   "product": "teams",
+   "icon": "chat",
+   "productLabel": "Microsoft Teams",
+   "title": "Reviews in Teams erledigen",
+   "actions": [
+    "Rencore Teams App",
+    "Microsoft Teams"
+   ]
+  },
+  {
+   "product": "powerapps",
+   "icon": "user",
+   "productLabel": "Power Apps",
+   "title": "Pruefen, wer die App erreicht",
+   "actions": [
+    "Sicherheitsgruppen",
+    "namentliche Freigaben"
+   ]
+  },
+  {
+   "product": "powerapps",
+   "icon": "check",
+   "productLabel": "Power Apps",
+   "title": "Behalten, uebergeben, ausmustern",
+   "actions": [
+    "Benutzer behalten",
+    "neuer Besitzer",
+    "ausmustern"
+   ]
+  }
+ ],
+ "punchline": [
+  "Jede Entscheidung",
+  "protokolliert"
+ ]
+}

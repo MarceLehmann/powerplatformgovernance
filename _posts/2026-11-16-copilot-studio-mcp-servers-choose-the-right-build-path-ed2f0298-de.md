@@ -43,6 +43,12 @@ faq:
   answer: Der MCP-Zugriff läuft über Power-Platform-Connectoren, daher gelten Datenrichtlinien.
     Ein erlaubter MCP-Server stellt seine gesamte Tool-Oberfläche bereit, nicht einzelne
     Aktionen.
+animation:
+  video: /assets/img/animations/ed2f02982b925e9eecaf2f98-de.mp4
+  poster: /assets/img/animations/ed2f02982b925e9eecaf2f98-de.poster.webp
+  width: 800
+  height: 450
+  alt: "Die Animation zeigt den MCP-Baupfad in Copilot Studio: zuerst Connector, dann vorhandener Server, dann Dataverse Custom API, danach eigener Server mit Governance."
 ---
 
 ## TL;DR

@@ -1,0 +1,66 @@
+{
+ "title": "Review Power Apps access",
+ "subtitle": "Admins schedule reviews once, then owners confirm access and decide what happens to each app.",
+ "steps": [
+  {
+   "product": "admin",
+   "icon": "gear",
+   "productLabel": "Admin",
+   "title": "Add Power Apps to Review Builder",
+   "actions": [
+    "Power Apps",
+    "Review Builder",
+    "Teams and SharePoint"
+   ],
+   "evidence": "Add Power Apps to the Review Builder next to Teams and SharePoint"
+  },
+  {
+   "product": "admin",
+   "icon": "calendar",
+   "productLabel": "Admin",
+   "title": "Set the review schedule once",
+   "actions": [
+    "set the schedule once"
+   ],
+   "evidence": "set the schedule once and use the recorded owner decisions as audit evidence."
+  },
+  {
+   "product": "teams",
+   "icon": "chat",
+   "productLabel": "Microsoft Teams",
+   "title": "Owners complete reviews in Teams",
+   "actions": [
+    "Rencore Teams App",
+    "Microsoft Teams"
+   ],
+   "evidence": "Owners complete Power Apps reviews in the Rencore Teams App inside Microsoft Teams"
+  },
+  {
+   "product": "powerapps",
+   "icon": "user",
+   "productLabel": "Power Apps",
+   "title": "Check who can reach the app",
+   "actions": [
+    "security groups",
+    "named shares"
+   ],
+   "evidence": "Owners see security group members as well as named shares"
+  },
+  {
+   "product": "powerapps",
+   "icon": "check",
+   "productLabel": "Power Apps",
+   "title": "Keep, hand over or retire app",
+   "actions": [
+    "keep users",
+    "new owner",
+    "retire it"
+   ],
+   "evidence": "Owners keep users, hand the app to a new owner or retire it, with every decision recorded for IT."
+  }
+ ],
+ "punchline": [
+  "Every decision recorded",
+  "for IT"
+ ]
+}

@@ -43,6 +43,12 @@ faq:
   answer: Der aktuelle Besitzer kann die App im Review an einen neuen Besitzer übergeben
     oder sie ausmustern, wenn sie niemand mehr braucht, und die Entscheidung wird
     protokolliert.
+animation:
+  video: /assets/img/animations/dcb7d7ca3cda3ac840ae57b7-de.mp4
+  poster: /assets/img/animations/dcb7d7ca3cda3ac840ae57b7-de.poster.webp
+  width: 800
+  height: 450
+  alt: "Die Abfolge zeigt, wie Admins Power Apps im Review Builder hinzufügen und einen Zeitplan festlegen, dann Besitzer den Zugriff in der Rencore Teams App pruefen, Mitglieder von Sicherheitsgruppen sehen und die App behalten, uebergeben oder ausmustern."
 ---
 
 ## TL;DR

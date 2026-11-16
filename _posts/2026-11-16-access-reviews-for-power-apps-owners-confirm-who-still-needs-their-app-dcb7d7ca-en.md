@@ -41,6 +41,12 @@ faq:
 - question: What happens to a Power App whose original maker has left the team?
   answer: The current owner can hand the app to a new owner during the review, or
     retire it if nobody needs it, and the record shows who made the call.
+animation:
+  video: /assets/img/animations/dcb7d7ca3cda3ac840ae57b7-en.mp4
+  poster: /assets/img/animations/dcb7d7ca3cda3ac840ae57b7-en.poster.webp
+  width: 800
+  height: 450
+  alt: "Sequence shows admins adding Power Apps to Review Builder and setting a schedule, then owners reviewing access in the Rencore Teams App, seeing security group members, and deciding to keep, hand over, or retire the app."
 ---
 
 ## TL;DR

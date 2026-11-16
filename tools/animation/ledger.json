@@ -1158,5 +1158,33 @@
     "gif": false,
     "reason": "This post is a descriptive overview and governance summary without a concrete 3 to 5 stage procedure stated in order.",
     "at": "2026-11-16"
+  },
+  "0ca2fe93adfcb77af06e42cf": {
+    "gif": false,
+    "reason": "The post explains a concept and risks of Row-Level Security, but it does not state a concrete 3 to 5 stage procedure or sequence.",
+    "at": "2026-11-16"
+  },
+  "dcb7d7ca3cda3ac840ae57b7": {
+    "gif": true,
+    "reason": "The post describes a clear review flow with setup, review, visibility of access, and owner decisions.",
+    "at": "2026-11-16",
+    "evidence": [
+      "Add Power Apps to the Review Builder next to Teams and SharePoint",
+      "set the schedule once and use the recorded owner decisions as audit evidence.",
+      "Owners complete Power Apps reviews in the Rencore Teams App inside Microsoft Teams",
+      "Owners see security group members as well as named shares",
+      "Owners keep users, hand the app to a new owner or retire it, with every decision recorded for IT."
+    ]
+  },
+  "ed2f02982b925e9eecaf2f98": {
+    "gif": true,
+    "reason": "The post gives a clear 4 stage decision path from simpler options to custom server governance.",
+    "at": "2026-11-16",
+    "evidence": [
+      "Use a connector, prebuilt server or Dataverse custom API first.",
+      "Use a connector, prebuilt server or Dataverse custom API first.",
+      "Use a connector, prebuilt server or Dataverse custom API first.",
+      "Build a custom server when logic is complex, tools serve multiple clients, or MCP resources are required, while enforcing ownership and customer identity in server code."
+    ]
   }
 }

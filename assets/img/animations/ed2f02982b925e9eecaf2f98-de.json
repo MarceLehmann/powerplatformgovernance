@@ -1,0 +1,50 @@
+{
+ "title": "MCP-Baupfad auswaehlen",
+ "subtitle": "Zuerst einfache Optionen nutzen, dann eigene Server mit Governance absichern.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "link",
+   "productLabel": "Copilot Studio",
+   "title": "Mit Connector beginnen",
+   "actions": [
+    "Connector",
+    "duenne API-Huelle"
+   ]
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "cloud",
+   "productLabel": "Copilot Studio",
+   "title": "Vorhandenen MCP-Server pruefen",
+   "actions": [
+    "vorhandener Server",
+    "MCP-Server"
+   ]
+  },
+  {
+   "product": "dataverse",
+   "icon": "db",
+   "productLabel": "Dataverse",
+   "title": "Dataverse Custom API pruefen",
+   "actions": [
+    "Dataverse Custom API"
+   ]
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "shield",
+   "productLabel": "Copilot Studio",
+   "title": "Eigenen Server mit Governance bauen",
+   "actions": [
+    "eigener Server",
+    "Besitz",
+    "Kundenidentitaet"
+   ]
+  }
+ ],
+ "punchline": [
+  "Tools und Identitaet steuern",
+  "Server-Besitz festhalten"
+ ]
+}

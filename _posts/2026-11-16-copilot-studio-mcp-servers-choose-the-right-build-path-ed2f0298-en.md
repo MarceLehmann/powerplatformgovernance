@@ -41,6 +41,12 @@ faq:
 - question: How does Copilot Studio apply DLP to MCP servers?
   answer: MCP access runs through Power Platform connectors, so data policies apply.
     An allowed MCP server exposes its full tool surface rather than individual actions.
+animation:
+  video: /assets/img/animations/ed2f02982b925e9eecaf2f98-en.mp4
+  poster: /assets/img/animations/ed2f02982b925e9eecaf2f98-en.poster.webp
+  width: 800
+  height: 450
+  alt: "Animation shows choosing an MCP build path in Copilot Studio: start with a connector, consider a prebuilt server, use a Dataverse custom API, then build a custom server with governance."
 ---
 
 ## TL;DR

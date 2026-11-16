@@ -1,0 +1,54 @@
+{
+ "title": "Choose the MCP build path",
+ "subtitle": "Start with simpler options, then govern custom servers when needed.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "link",
+   "productLabel": "Copilot Studio",
+   "title": "Start with a connector",
+   "actions": [
+    "connector",
+    "thin API wrapper"
+   ],
+   "evidence": "Use a connector, prebuilt server or Dataverse custom API first."
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "cloud",
+   "productLabel": "Copilot Studio",
+   "title": "Consider a prebuilt MCP server",
+   "actions": [
+    "prebuilt server",
+    "MCP server"
+   ],
+   "evidence": "Use a connector, prebuilt server or Dataverse custom API first."
+  },
+  {
+   "product": "dataverse",
+   "icon": "db",
+   "productLabel": "Dataverse",
+   "title": "Try a Dataverse custom API",
+   "actions": [
+    "Dataverse custom API"
+   ],
+   "evidence": "Use a connector, prebuilt server or Dataverse custom API first."
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "shield",
+   "productLabel": "Copilot Studio",
+   "title": "Build custom and enforce governance",
+   "actions": [
+    "custom server",
+    "ownership",
+    "customer identity"
+   ],
+   "evidence": "Build a custom server when logic is complex, tools serve multiple clients, or MCP resources are required, while enforcing ownership and customer identity in server code."
+  }
+ ],
+ "punchline": [
+  "Govern tools and identity",
+  "Record server ownership"
+ ]
+}
