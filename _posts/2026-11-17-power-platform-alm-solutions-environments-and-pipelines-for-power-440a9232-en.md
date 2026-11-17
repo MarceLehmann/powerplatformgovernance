@@ -41,6 +41,12 @@ faq:
 - question: Do Power Platform Pipelines require Managed Environments as targets?
   answer: Yes, Pipelines deploy managed solutions and require the target environments
     to be Managed Environments. Enable managed on test and production before deploying.
+animation:
+  video: /assets/img/animations/440a923230331d6fb1ff91d0-en.mp4
+  poster: /assets/img/animations/440a923230331d6fb1ff91d0-en.poster.webp
+  width: 800
+  height: 450
+  alt: "A four step sequence shows building a flow in a solution in dev, preparing per environment connections and variables, exporting as managed, and deploying to test and production via Pipelines."
 ---
 
 ## TL;DR

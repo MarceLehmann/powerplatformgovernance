@@ -1191,5 +1191,21 @@
     "gif": false,
     "reason": "The post is guidance and a checklist of accessibility practices and tests, not a concrete 3 to 5 stage procedure stated in order.",
     "at": "2026-11-17"
+  },
+  "295e69025542da0e52768e2d": {
+    "gif": false,
+    "reason": "This post is governance guidance and limitations, not a concrete 3 to 5 stage procedure named in the text.",
+    "at": "2026-11-17"
+  },
+  "440a923230331d6fb1ff91d0": {
+    "gif": true,
+    "reason": "The post gives a concrete 4 stage path for moving a flow from dev to test and production with solutions and Pipelines.",
+    "at": "2026-11-17",
+    "evidence": [
+      "Build the flow in a solution in dev, export it as managed, and import it into test and production via Pipelines.",
+      "The connection reference points to it, and you choose a connection for each environment at import.",
+      "environment-specific values like SharePoint sites belong in environment variables.",
+      "Pipelines deploy managed solutions and require the target environments to be Managed Environments."
+    ]
   }
 }

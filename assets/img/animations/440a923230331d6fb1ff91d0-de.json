@@ -1,0 +1,52 @@
+{
+ "title": "Flow von Dev nach Produktion bringen",
+ "subtitle": "In Lösung bauen, Verbindungen und Variablen zuordnen, dann mit Pipelines bereitstellen.",
+ "steps": [
+  {
+   "product": "powerautomate",
+   "icon": "doc",
+   "productLabel": "Power Automate",
+   "title": "Flow in Dev in Lösung bauen",
+   "actions": [
+    "Lösung",
+    "Dev",
+    "Publisher"
+   ]
+  },
+  {
+   "product": "powerautomate",
+   "icon": "link",
+   "productLabel": "Power Automate",
+   "title": "Verbindungen je Umgebung setzen",
+   "actions": [
+    "Verbindungsverweise",
+    "Verbindung",
+    "Import"
+   ]
+  },
+  {
+   "product": "powerautomate",
+   "icon": "key",
+   "productLabel": "Power Automate",
+   "title": "Umgebungsspezifische Werte nutzen",
+   "actions": [
+    "Umgebungsvariablen",
+    "SharePoint sites"
+   ]
+  },
+  {
+   "product": "powerautomate",
+   "icon": "arrow",
+   "productLabel": "Power Automate",
+   "title": "Managed nach Test und Prod",
+   "actions": [
+    "managed",
+    "Pipelines",
+    "Managed Environments"
+   ]
+  }
+ ],
+ "punchline": [
+  "Managed nach Test und Prod"
+ ]
+}

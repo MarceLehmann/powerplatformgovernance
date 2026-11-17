@@ -1,0 +1,56 @@
+{
+ "title": "Move a flow from dev to production",
+ "subtitle": "Build in a solution, map connections and variables, then deploy with Pipelines.",
+ "steps": [
+  {
+   "product": "powerautomate",
+   "icon": "doc",
+   "productLabel": "Power Automate",
+   "title": "Build the flow in a solution in dev",
+   "actions": [
+    "solution",
+    "dev",
+    "publisher"
+   ],
+   "evidence": "Build the flow in a solution in dev, export it as managed, and import it into test and production via Pipelines."
+  },
+  {
+   "product": "powerautomate",
+   "icon": "link",
+   "productLabel": "Power Automate",
+   "title": "Set connections per environment",
+   "actions": [
+    "connection references",
+    "connection",
+    "import"
+   ],
+   "evidence": "The connection reference points to it, and you choose a connection for each environment at import."
+  },
+  {
+   "product": "powerautomate",
+   "icon": "key",
+   "productLabel": "Power Automate",
+   "title": "Use environment specific values",
+   "actions": [
+    "environment variables",
+    "SharePoint sites"
+   ],
+   "evidence": "environment-specific values like SharePoint sites belong in environment variables."
+  },
+  {
+   "product": "powerautomate",
+   "icon": "arrow",
+   "productLabel": "Power Automate",
+   "title": "Deploy managed to test and prod",
+   "actions": [
+    "managed",
+    "Pipelines",
+    "Managed Environments"
+   ],
+   "evidence": "Pipelines deploy managed solutions and require the target environments to be Managed Environments."
+  }
+ ],
+ "punchline": [
+  "Managed to test and prod"
+ ]
+}

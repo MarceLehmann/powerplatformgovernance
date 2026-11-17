@@ -41,6 +41,12 @@ faq:
 - question: Brauchen Pipelines in Power Platform Managed Environments als Ziel?
   answer: Ja, Pipelines setzen voraus, dass die Zielumgebungen Managed Environments
     sind. Richte das für Test und Produktion ein, bevor du verteilst.
+animation:
+  video: /assets/img/animations/440a923230331d6fb1ff91d0-de.mp4
+  poster: /assets/img/animations/440a923230331d6fb1ff91d0-de.poster.webp
+  width: 800
+  height: 450
+  alt: "Eine Abfolge mit vier Schritten zeigt den Aufbau eines Flows in einer Lösung in Dev, das Vorbereiten von Verbindungen und Variablen je Umgebung, den Export als managed und die Bereitstellung per Pipelines nach Test und Produktion."
 ---
 
 ## TL;DR
