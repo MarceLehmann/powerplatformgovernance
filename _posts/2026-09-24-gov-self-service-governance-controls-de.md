@@ -39,7 +39,7 @@ Get-MSCommerceProductPolicies -PolicyId AllowSelfServicePurchase
 Update-MSCommerceProductPolicy -PolicyId AllowSelfServicePurchase -ProductId <ProductId> -Enabled $False
 ```
 
-Zwei Dinge sollte man wissen, bevor man das tenantweit durchzieht: Das Deaktivieren der Richtlinie blockiert sowohl Käufe als auch Testversionen für dieses Produkt, und das Abschalten des Hinweises entfernt nicht die "Premium holen"-Anstösse in der App, die erscheinen weiterhin, können nur keine Testversion mehr starten. Und verlässt ein Self-Service-Käufer irgendwann das Unternehmen, kündigt sich das Abonnement nicht von selbst; es läuft weiter, bis es jemand aktiv kündigt oder ein Admin das über den Support anstösst. Bestehende Self-Service-Käufe zu prüfen (Microsoft-365-Admin-Center → **Abrechnung → Ihre Produkte**) lohnt sich, bevor man anfängt, neue zu blockieren.
+Zwei Dinge sollte man wissen, bevor man das tenantweit durchzieht: Das Deaktivieren der Richtlinie blockiert sowohl Käufe als auch Testversionen für dieses Produkt, und das Abschalten des Hinweises entfernt nicht die "Premium holen"-Anstösse in der App. Diese erscheinen weiterhin, können nur keine Testversion mehr starten. Und verlässt ein Self-Service-Käufer irgendwann das Unternehmen, kündigt sich das Abonnement nicht von selbst; es läuft weiter, bis es jemand aktiv kündigt oder ein Admin das über den Support anstösst. Bestehende Self-Service-Käufe zu prüfen (Microsoft-365-Admin-Center → **Abrechnung → Ihre Produkte**) lohnt sich, bevor man anfängt, neue zu blockieren.
 
 ## Quarantäne: eine App herausnehmen, ohne etwas zu löschen
 

@@ -26,7 +26,7 @@ faq:
 
 ## TL;DR
 
-Data Loss Prevention in der Power Platform ist ein Klassifizierungssystem: Jeder Connector landet in Business, Non-Business oder Blocked, und eine Ressource kann nur Connectors aus einer Gruppe kombinieren. Was DLP in der Praxis gut macht, ist selten die Blockieren/Erlauben-Entscheidung selbst, es ist, die Standardgruppe unangetastet zu lassen, vor einer pauschalen Blockade zuerst Aktions- und Endpunktkontrolle zu prüfen, und zu wissen, dass Tenant-Isolation eine völlig separate Kontrolle ist, über die eine Connector-Richtlinie nichts aussagt. Advanced Connector Policies sind die Zukunftsrichtung: ein Default-Deny-Modell, das das Klassifizierungssystem für zertifizierte Connectors komplett ersetzt.
+Data Loss Prevention in der Power Platform ist ein Klassifizierungssystem: Jeder Connector landet in Business, Non-Business oder Blocked, und eine Ressource kann nur Connectors aus einer Gruppe kombinieren. Was DLP in der Praxis gut macht, ist selten die Blockieren/Erlauben-Entscheidung selbst. Es ist, die Standardgruppe unangetastet zu lassen, vor einer pauschalen Blockade zuerst Aktions- und Endpunktkontrolle zu prüfen, und zu wissen, dass Tenant-Isolation eine völlig separate Kontrolle ist, über die eine Connector-Richtlinie nichts aussagt. Advanced Connector Policies sind die Zukunftsrichtung: ein Default-Deny-Modell, das das Klassifizierungssystem für zertifizierte Connectors komplett ersetzt.
 
 ## Die Standardgruppe auf Non-Business belassen
 
