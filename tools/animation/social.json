@@ -1041,5 +1041,23 @@
     "text": "Power Apps accessible forms: structure, labels and tests for keyboard and screen-reader users\n\nAccessible Power Apps canvas forms need a logical field order, a clear AccessibleLabel on every input and a visible focus indicator. Keep decorative controls out of the tab sequence, pair color cues with text, make validation errors specific, and verify with the Accessibility checker, keyboard-only testing and screen readers such as Narrator with Edge or NVDA.\n\nSource: Softchief Blog\n\nFull summary: https://powerplatformgovernance.com/en/posts/power-apps-accessible-forms-structure-labels-and-tests-for-keyboard-999276a4/\n\n#PowerPlatformGovernanceDaily #PowerApps",
     "bufferPostId": "6afbf852df36f4d825752ab0",
     "dueAt": "2026-11-18T08:00:00.000Z"
+  },
+  "440a923230331d6fb1ff91d0": {
+    "status": "queued",
+    "day": "2026-11-17",
+    "kind": "video",
+    "title": "Power Platform ALM: solutions, environments and pipelines for Power Automate flows",
+    "text": "Power Platform ALM: solutions, environments and pipelines for Power Automate flows\n\nFlows should be built in a solution with a dedicated publisher and moved through separate dev, test and production environments. Connections never travel; connection references get a connection per environment, and environment-specific values like SharePoint sites belong in environment variables. Test and production receive managed solutions via Pipelines, which require Managed Environments.\n\nSource: andersjensen.org\n\nFull summary: https://powerplatformgovernance.com/en/posts/power-platform-alm-solutions-environments-and-pipelines-for-power-440a9232/\n\n#PowerPlatformGovernanceDaily #PowerAutomate",
+    "bufferPostId": "6afca06a32ea84693c36f864",
+    "dueAt": "2026-11-18T11:00:00.000Z"
+  },
+  "295e69025542da0e52768e2d": {
+    "status": "queued",
+    "day": "2026-11-17",
+    "kind": "image",
+    "title": "EU AI Act and Copilot Studio agents: where Microsoft Purview helps and where it stops",
+    "text": "EU AI Act and Copilot Studio agents: where Microsoft Purview helps and where it stops\n\nThe high-risk AI deadline moved to 2 December 2027, but transparency rules stayed: since 2 August 2026, agents and chatbots must tell people they are AI. Purview DSPM lists AI apps, sensitivity labels and DLP control what Copilot reads, and audit logs last 180 days to one year. Purview still cannot name agent owners or inventory them.\n\nSource: Rencore Blog\n\nFull summary: https://powerplatformgovernance.com/en/posts/eu-ai-act-and-copilot-studio-agents-where-microsoft-purview-helps-and-295e6902/\n\n#PowerPlatformGovernanceDaily #CopilotStudio",
+    "bufferPostId": "6afca06bd4c8ef4106f703c5",
+    "dueAt": "2026-11-18T14:00:00.000Z"
   }
 }
