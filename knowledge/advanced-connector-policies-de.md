@@ -37,7 +37,7 @@ ACP zeigt auch MCP-Server an. Du kannst einen MCP-Server als Ganzes sperren, ein
 ACP gilt nur für zertifizierte Connectors. Daraus folgen vier Lücken.
 
 - **Custom Connectors und HTTP-Connectors.** Microsoft plant dafür einen eigenen Regeltyp. Bis dahin steuerst du sie mit der klassischen Richtlinie und, bei HTTP, mit Endpunkt-Filtern.
-- **Virtuelle Connectors von Copilot Studio**, also Kanäle und Wissensquellen. Virtuelle Connectors unterstützt ACP laut Microsoft auch künftig nicht. Die von Copilot Studio bekommen eigene Regeln ausserhalb von ACP. Bis dahin bleibt die klassische Richtlinie zuständig.
+- **Virtuelle Connectors von Copilot Studio**, etwa Kanäle, Wissensquellen und Skills. Virtuelle Connectors unterstützt ACP laut Microsoft auch künftig nicht. Die von Copilot Studio bekommen eigene Regeln ausserhalb von ACP. Bis dahin bleibt die klassische Richtlinie zuständig.
 - **Virtuelle Connectors für Desktop Flows.** Sie werden zu zertifizierten Connectors und lassen sich danach über ACP steuern.
 - **Umgebungen ohne Managed Environments.** ACP funktioniert dort auf einer einzelnen Umgebung, die nicht blockierbaren Connectors bleiben aber nicht blockierbar.
 
@@ -83,6 +83,7 @@ Empfehlung aus der Praxis, abgeleitet aus den Eigenschaften oben.
 ## Weiterlesen
 
 - [DLP-Richtlinien: was ihr zwingend einstellen müsst](/de/knowledge/dlp-policies/)
+- [Fünf DLP-Vorlagen für KMU](/de/knowledge/dlp-templates-smb/)
 - [DLP ist eine Leitplanke, keine Mauer](/de/posts/gov-dlp-in-practice/)
 - [Fünf Environment-Strategien im Vergleich](/de/knowledge/environment-strategies/)
 - [Power Platform Governance-Konzept: wo du anfängst](/de/knowledge/governance-concept/)

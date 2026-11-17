@@ -59,6 +59,7 @@ Data policies define which connectors can be used in which environment. They com
 
 - [DLP policies: what you must configure](/knowledge/dlp-policies/)
 - [From classic data policies to advanced connector policies](/knowledge/advanced-connector-policies/)
+- [Five DLP templates for small and mid-sized companies](/knowledge/dlp-templates-smb/)
 - [DLP is a guardrail, not a wall: the mechanics that matter](/en/posts/gov-dlp-in-practice/)
 - [Your data gateway is a single point of failure until you cluster it](/en/posts/gov-data-gateway-ownership/)
 

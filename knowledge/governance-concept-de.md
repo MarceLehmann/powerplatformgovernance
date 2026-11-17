@@ -46,7 +46,7 @@ Die Umgebung ist die Einheit, an der Richtlinien, Sicherungen und Kapazität hä
 **Dein erster Schritt:** Entscheide, wofür die Default-Umgebung gedacht ist, und lege eine Produktivumgebung für Geschäftslösungen an. Die Seite mit den fünf Strategien hilft bei der Wahl.
 
 - [Fünf Environment-Strategien im Vergleich](/de/knowledge/environment-strategies/)
-- [Einmal konfigurieren, viele regieren: Environment Routing und Environment Groups](/de/posts/gov-environment-lifecycle-automation/)
+- [Einmal konfigurieren, viele regieren: Die Umgebungsfunktionen, die schon bezahlt sind](/de/posts/gov-environment-lifecycle-automation/)
 - [Wer nicht zurückrollen kann, deployt nicht](/de/posts/gov-test-to-prod-discipline/)
 - [Qualitätstore statt Qualitätshoffnung: Solution Checker beim Import erzwingen](/de/posts/gov-solution-checker-enforcement/)
 - [Speicher überschritten: was mit deinen Umgebungen passiert](/de/knowledge/storage-overage/)
@@ -59,6 +59,7 @@ Datenrichtlinien legen fest, welche Connectors in welcher Umgebung nutzbar sind.
 
 - [DLP-Richtlinien: was ihr zwingend einstellen müsst](/de/knowledge/dlp-policies/)
 - [Von klassischen Datenrichtlinien zu Advanced Connector Policies](/de/knowledge/advanced-connector-policies/)
+- [Fünf DLP-Vorlagen für KMU](/de/knowledge/dlp-templates-smb/)
 - [DLP ist eine Leitplanke, keine Mauer](/de/posts/gov-dlp-in-practice/)
 - [Dein Daten-Gateway ist ein Single Point of Failure](/de/posts/gov-data-gateway-ownership/)
 
@@ -70,7 +71,7 @@ Microsoft unterscheidet Power Platform Admins, die Regeln festlegen, Environment
 
 - [Dataverse-Sicherheitsrollen: die fünf, die ihr kennen müsst](/de/knowledge/dataverse-security-roles/)
 - [Citizen-Developer im Unternehmen: von der persönlichen Umgebung bis zur geteilten Lösung](/de/knowledge/citizen-developer-guide/)
-- [Zwei Namen pro Lösung: Besitz, der Offboarding übersteht](/de/posts/gov-ownership-offboarding/)
+- [Zwei Namen pro Lösung, immer: Besitz, der Offboarding übersteht](/de/posts/gov-ownership-offboarding/)
 - [Ein deaktivierter Besitzer deaktiviert nicht den Flow](/de/posts/gov-disabled-owner-zombie-flows/)
 - [Das einzige Handbuch, das je existierte, ging um 17 Uhr nach Hause](/de/posts/gov-documentation-debt/)
 - [Drei Self-Service-Kontrollen, die die meisten Tenants nie aktivieren](/de/posts/gov-self-service-governance-controls/)

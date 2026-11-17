@@ -37,7 +37,7 @@ ACP also lists MCP servers. You can block an MCP server as a whole, but not yet 
 ACP applies to certified connectors only. Four gaps follow from that.
 
 - **Custom connectors and HTTP connectors.** Microsoft plans a separate rule type for them. Until then you govern them with the classic policy and, for HTTP, with endpoint filtering.
-- **Virtual connectors of Copilot Studio**, meaning channels and knowledge sources. According to Microsoft ACP will not support virtual connectors in the future either. The Copilot Studio ones get their own rules outside ACP. Until then the classic policy stays in charge.
+- **Virtual connectors of Copilot Studio**, for example channels, knowledge sources and skills. According to Microsoft ACP will not support virtual connectors in the future either. The Copilot Studio ones get their own rules outside ACP. Until then the classic policy stays in charge.
 - **Desktop flow virtual connectors.** They are becoming certified connectors and can then be governed through ACP.
 - **Environments that are not managed.** ACP works there on a single environment, but the nonblockable connectors stay nonblockable.
 
@@ -83,6 +83,7 @@ A recommendation from practice, derived from the properties above.
 ## Read on
 
 - [DLP policies: what you must configure](/knowledge/dlp-policies/)
+- [Five DLP templates for small and mid-sized companies](/knowledge/dlp-templates-smb/)
 - [DLP is a guardrail, not a wall: the mechanics that matter](/en/posts/gov-dlp-in-practice/)
 - [Five environment strategies for Power Platform compared](/knowledge/environment-strategies/)
 - [Power Platform governance concept: where to start](/knowledge/governance-concept/)
