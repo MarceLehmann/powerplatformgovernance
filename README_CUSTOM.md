@@ -45,10 +45,6 @@ Die Idee ist ein Blog, der nicht manuell gepflegt wird, sondern durch einen Powe
 - GitHub-Publishing: GitHub REST API oder GitHub Action
 - AI: optional Copilot bzw. Azure OpenAI für TL;DR / Summary
 
-## Doku
-
-- Architektur-Detail: [2026-09-18_architektur_rss_blog.md](2026-09-18_architektur_rss_blog.md)
-
 ## Nächste Schritte
 
 1. SharePoint- oder Dataverse-Struktur aufsetzen

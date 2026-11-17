@@ -2,8 +2,8 @@
 import { stagingConfig, site as dedupSite, stagingStatus } from './dedup-staging.mjs';
 
 export const config = {
-  environment: '7bf06bc7-6b19-e10e-ade3-9337f010d45e',
-  organization: 'https://kmupower.crm17.dynamics.com',
+  environment: process.env.PP_ENVIRONMENT_ID || '00000000-0000-0000-0000-000000000000',
+  organization: process.env.DATAVERSE_URL || 'https://example.crm.dynamics.com',
   solution: 'PowerPlatformGovernance',
   table: 'new_governancesource',
   entitySet: 'new_governancesources',
