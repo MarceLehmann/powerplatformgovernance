@@ -12,6 +12,9 @@ export const intakeSchema = {
   },
 };
 
+// Kennzeichen einer automatisch abgeschalteten Quelle am Anfang von new_lastmessage. Nur damit darf das Formular wieder einschalten.
+export const autoDisabledPrefix = 'Auto-disabled:';
+
 const after = (...names) => Object.fromEntries(names.map(name => [name, ['Succeeded']]));
 const secure = { secureData: { properties: ['inputs', 'outputs'] } };
 const secureInput = { secureData: { properties: ['inputs'] } };
@@ -63,16 +66,18 @@ export function intakeDefinition({ requireKey = true } = {}) {
       Store: {
         type: 'Scope', runAfter: after('Validate'), actions: {
           Find_existing: dataverse('ListRecords', {
-            entityName: config.entitySet, $select: 'new_governancesourceid,new_enabled,new_approval', $top: 1,
+            entityName: config.entitySet, $select: 'new_governancesourceid,new_enabled,new_approval,new_lastmessage', $top: 1,
             $filter: "@concat('new_contenturl eq ', decodeUriComponent('%27'), replace(outputs('Content_URL'), decodeUriComponent('%27'), decodeUriComponent('%27%27')), decodeUriComponent('%27'))",
           }),
           Create_if_new: {
             type: 'If', expression: "@empty(body('Find_existing')?['value'])", runAfter: after('Find_existing'),
             else: {
               actions: {
+                // Nur Quellen, die eine Automatik abgeschaltet hat (lastmessage beginnt mit 'Auto-disabled:'), gehen wieder an.
+                // Von Hand gestoppte Quellen, Quarantaene ('Quarantine:') und noch nicht gepruefte Einsendungen bleiben unveraendert.
                 Reactivate_if_disabled: {
                   type: 'If', runAfter: {}, else: { actions: {} },
-                  expression: `@and(equals(first(body('Find_existing')?['value'])?['new_enabled'], false), not(equals(first(body('Find_existing')?['value'])?['new_approval'], ${approval.rejected})))`,
+                  expression: `@and(equals(first(body('Find_existing')?['value'])?['new_enabled'], false), equals(first(body('Find_existing')?['value'])?['new_approval'], ${approval.approved}), startsWith(coalesce(first(body('Find_existing')?['value'])?['new_lastmessage'], ''), '${autoDisabledPrefix}'))`,
                   actions: {
                     Reactivate_existing: dataverse('UpdateRecord', {
                       entityName: config.entitySet,
