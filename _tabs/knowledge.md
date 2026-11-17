@@ -29,6 +29,16 @@ Guides that stay relevant longer than news: how roles work, what a company has t
   [English](/knowledge/citizen-developer-guide/) · [Deutsch](/de/knowledge/citizen-developer-guide/)
 - **AI costs compared: AI Builder, Copilot Credits, Azure AI Foundry, Document Intelligence**  
   [English](/knowledge/ai-cost-comparison/) · [Deutsch](/de/knowledge/ai-cost-comparison/)
+- **Power Platform governance concept: where to start**  
+  [English](/knowledge/governance-concept/) · [Deutsch](/de/knowledge/governance-concept/)
+- **Detect and measure shadow IT in Power Platform**  
+  [English](/knowledge/detect-shadow-it/) · [Deutsch](/de/knowledge/detect-shadow-it/)
+- **Storage exceeded: what happens to your environments**  
+  [English](/knowledge/storage-overage/) · [Deutsch](/de/knowledge/storage-overage/)
+- **From classic data policies to advanced connector policies**  
+  [English](/knowledge/advanced-connector-policies/) · [Deutsch](/de/knowledge/advanced-connector-policies/)
+- **Asking governance questions in Power Platform Admin in Cowork**  
+  [English](/knowledge/cowork-governance-questions/) · [Deutsch](/de/knowledge/cowork-governance-questions/)
 
 ## How to use the guides with AI
 

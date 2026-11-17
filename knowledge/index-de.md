@@ -28,6 +28,16 @@ Anleitungen, die weniger schnell veralten als Nachrichten: wie Rollen funktionie
   [Deutsch](/de/knowledge/citizen-developer-guide/) · [English](/knowledge/citizen-developer-guide/)
 - **KI-Kosten im Vergleich: AI Builder, Copilot Credits, Azure AI Foundry, Document Intelligence**
   [Deutsch](/de/knowledge/ai-cost-comparison/) · [English](/knowledge/ai-cost-comparison/)
+- **Power Platform Governance-Konzept: wo du anfängst**
+  [Deutsch](/de/knowledge/governance-concept/) · [English](/knowledge/governance-concept/)
+- **Schatten-IT in der Power Platform erkennen und messen**
+  [Deutsch](/de/knowledge/detect-shadow-it/) · [English](/knowledge/detect-shadow-it/)
+- **Speicher überschritten: was mit deinen Umgebungen passiert**
+  [Deutsch](/de/knowledge/storage-overage/) · [English](/knowledge/storage-overage/)
+- **Von klassischen Datenrichtlinien zu Advanced Connector Policies**
+  [Deutsch](/de/knowledge/advanced-connector-policies/) · [English](/knowledge/advanced-connector-policies/)
+- **Governance-Fragen an Power Platform Admin in Cowork stellen**
+  [Deutsch](/de/knowledge/cowork-governance-questions/) · [English](/knowledge/cowork-governance-questions/)
 
 ## So nutzt du die Seiten mit KI
 
