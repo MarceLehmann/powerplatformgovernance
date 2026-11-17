@@ -1032,5 +1032,14 @@
     "text": "Power BI Row-Level Security: control who sees which rows\n\nPower BI Row-Level Security filters which rows of a report each user sees; a report without correct rules can hand viewers data never meant for them, with no attack involved. RLS can be set up without code, using two kinds of rules, and anyone configuring it should know the beginner mistakes and the limits of RLS across Microsoft 365 and Fabric.\n\nSource: M365.FM | Microsoft 365, Azure Cloud, Power Platform & AI (Spreaker)\n\nFull summary: https://powerplatformgovernance.com/en/posts/power-bi-row-level-security-control-who-sees-which-rows-0ca2fe93/\n\n#PowerPlatformGovernanceDaily",
     "bufferPostId": "6afb4ef508dd01805007ace5",
     "dueAt": "2026-11-17T14:00:00.000Z"
+  },
+  "999276a45db80a375ecf37f1": {
+    "status": "queued",
+    "day": "2026-11-17",
+    "kind": "image",
+    "title": "Power Apps accessible forms: structure, labels and tests for keyboard and screen-reader users",
+    "text": "Power Apps accessible forms: structure, labels and tests for keyboard and screen-reader users\n\nAccessible Power Apps canvas forms need a logical field order, a clear AccessibleLabel on every input and a visible focus indicator. Keep decorative controls out of the tab sequence, pair color cues with text, make validation errors specific, and verify with the Accessibility checker, keyboard-only testing and screen readers such as Narrator with Edge or NVDA.\n\nSource: Softchief Blog\n\nFull summary: https://powerplatformgovernance.com/en/posts/power-apps-accessible-forms-structure-labels-and-tests-for-keyboard-999276a4/\n\n#PowerPlatformGovernanceDaily #PowerApps",
+    "bufferPostId": "6afbf852df36f4d825752ab0",
+    "dueAt": "2026-11-18T08:00:00.000Z"
   }
 }
