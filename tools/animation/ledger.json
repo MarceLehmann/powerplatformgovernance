@@ -1186,5 +1186,10 @@
       "Use a connector, prebuilt server or Dataverse custom API first.",
       "Build a custom server when logic is complex, tools serve multiple clients, or MCP resources are required, while enforcing ownership and customer identity in server code."
     ]
+  },
+  "999276a45db80a375ecf37f1": {
+    "gif": false,
+    "reason": "The post is guidance and a checklist of accessibility practices and tests, not a concrete 3 to 5 stage procedure stated in order.",
+    "at": "2026-11-17"
   }
 }
