@@ -1068,5 +1068,14 @@
     "text": "Shipping Power Platform solutions with many dependencies: a release checklist\n\nFor Power Platform solutions where apps, flows, Dataverse tables, connection references, environment variables and integrations interlock, inventory dependencies first, confirm ownership and deployment order, map environment variables and connections per target, test with production identities, deploy prerequisites before dependent packages, treat Solution Checker as one signal, and keep release evidence for traceability.\n\nSource: Softchief Technologies\n\nFull summary: https://powerplatformgovernance.com/en/posts/shipping-power-platform-solutions-with-many-dependencies-a-release-2da859f5/\n\n#PowerPlatformGovernanceDaily #Dataverse #PowerApps",
     "bufferPostId": "6afd49c8fac814181369fd32",
     "dueAt": "2026-11-19T08:00:00.000Z"
+  },
+  "df35f40be83dfcf777dc4e5e": {
+    "status": "queued",
+    "day": "2026-11-18",
+    "kind": "video",
+    "title": "Copilot Studio Model Assessment: test agents before a model switch",
+    "text": "Copilot Studio Model Assessment: test agents before a model switch\n\nModel Assessment in Copilot Agent Kit tests a Copilot Studio agent on evaluation test sets before a model switch. The example compares GPT-6 Luna, 14 passed checks, with GPT-6.1 Sol, 12, recommending Luna at Medium confidence while both runs stay Critical. Credits appear per run and per test case, a partial flag blocks savings claims, and AI analysis consumed around 120-150 Copilot Credits per assessment.\n\nSource: The Custom Engine (Microsoft Copilot Studio CAT team blog)\n\nFull summary: https://powerplatformgovernance.com/en/posts/copilot-studio-model-assessment-test-agents-before-a-model-switch-df35f40b/\n\n#PowerPlatformGovernanceDaily #CopilotStudio",
+    "bufferPostId": "6afdf1f3163805d09275fa17",
+    "dueAt": "2026-11-19T11:00:00.000Z"
   }
 }
