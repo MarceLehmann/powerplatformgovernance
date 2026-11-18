@@ -45,6 +45,12 @@ faq:
   answer: The recommendation compares the two selected runs, while Critical is each
     run's own status. In the example the preferred model still had four failing classification
     checks.
+animation:
+  video: /assets/img/animations/df35f40be83dfcf777dc4e5e-en.mp4
+  poster: /assets/img/animations/df35f40be83dfcf777dc4e5e-en.poster.webp
+  width: 800
+  height: 450
+  alt: "Sequence shows how to prepare and run a Copilot Studio Model Assessment: open Advanced Testing in Copilot Agent Kit, create active MODELCHECK test sets, capture a baseline, then compare runs before switching models."
 ---
 
 ## TL;DR

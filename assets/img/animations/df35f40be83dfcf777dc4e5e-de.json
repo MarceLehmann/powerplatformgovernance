@@ -1,0 +1,51 @@
+{
+ "title": "Model Assessment vorbereiten",
+ "subtitle": "Testsets einrichten, Baseline erfassen und Laeufe vor dem Modellwechsel vergleichen.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "gear",
+   "productLabel": "Copilot Studio",
+   "title": "Advanced Testing oeffnen",
+   "actions": [
+    "Advanced Testing",
+    "Copilot Agent Kit"
+   ]
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "check",
+   "productLabel": "Copilot Studio",
+   "title": "Aktive MODELCHECK-Testsets erstellen",
+   "actions": [
+    "Evaluationstestsets erstellen",
+    "MODELCHECK",
+    "aktiv halten"
+   ]
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "clip",
+   "productLabel": "Copilot Studio",
+   "title": "Zuerst eine Baseline erfassen",
+   "actions": [
+    "Baseline zuerst erfassen"
+   ]
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "arrow",
+   "productLabel": "Copilot Studio",
+   "title": "Laeufe vor Modellwechsel vergleichen",
+   "actions": [
+    "Model Assessment",
+    "Modellwechsel",
+    "gemeinsame Evaluationschecks"
+   ]
+  }
+ ],
+ "punchline": [
+  "Laeufe zuerst vergleichen",
+  "Mit Nachweisen wechseln"
+ ]
+}

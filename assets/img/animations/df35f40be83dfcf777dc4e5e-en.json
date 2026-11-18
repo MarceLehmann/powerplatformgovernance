@@ -1,0 +1,55 @@
+{
+ "title": "Prepare Model Assessment",
+ "subtitle": "Set up test sets, capture a baseline, then compare runs before a model switch.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "gear",
+   "productLabel": "Copilot Studio",
+   "title": "Open Advanced Testing",
+   "actions": [
+    "Advanced Testing",
+    "Copilot Agent Kit"
+   ],
+   "evidence": "The tool sits under Advanced Testing in Copilot Agent Kit."
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "check",
+   "productLabel": "Copilot Studio",
+   "title": "Create active MODELCHECK test sets",
+   "actions": [
+    "Create evaluation test sets",
+    "MODELCHECK",
+    "keep them active"
+   ],
+   "evidence": "Create evaluation test sets whose names include MODELCHECK, keep them active, and capture a baseline first."
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "clip",
+   "productLabel": "Copilot Studio",
+   "title": "Capture a baseline first",
+   "actions": [
+    "capture a baseline first"
+   ],
+   "evidence": "Create evaluation test sets whose names include MODELCHECK, keep them active, and capture a baseline first."
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "arrow",
+   "productLabel": "Copilot Studio",
+   "title": "Compare runs before model switch",
+   "actions": [
+    "Model Assessment",
+    "model change",
+    "shared evaluation checks"
+   ],
+   "evidence": "Model Assessment in Copilot Agent Kit tests a Copilot Studio agent on evaluation test sets before a model switch."
+  }
+ ],
+ "punchline": [
+  "Compare runs first",
+  "Switch with evidence"
+ ]
+}

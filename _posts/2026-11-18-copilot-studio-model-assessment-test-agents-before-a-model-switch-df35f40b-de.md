@@ -45,6 +45,12 @@ faq:
   answer: Die Empfehlung vergleicht nur die beiden ausgewählten Läufe, Critical ist
     der eigene Status jedes Laufs. Im Beispiel blieben vier Klassifizierungschecks
     auch beim bevorzugten Modell erfolglos.
+animation:
+  video: /assets/img/animations/df35f40be83dfcf777dc4e5e-de.mp4
+  poster: /assets/img/animations/df35f40be83dfcf777dc4e5e-de.poster.webp
+  width: 800
+  height: 450
+  alt: "Die Abfolge zeigt, wie ein Copilot Studio Model Assessment vorbereitet und genutzt wird: Advanced Testing im Copilot Agent Kit oeffnen, aktive MODELCHECK-Testsets erstellen, eine Baseline erfassen und vor dem Modellwechsel Laeufe vergleichen."
 ---
 
 ## TL;DR

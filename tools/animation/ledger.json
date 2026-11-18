@@ -1218,5 +1218,16 @@
       "deploy prerequisites before dependent packages",
       "test with production identities"
     ]
+  },
+  "df35f40be83dfcf777dc4e5e": {
+    "gif": true,
+    "reason": "The post gives a concrete 4 stage setup and assessment sequence in the FAQ and governance text.",
+    "at": "2026-11-18",
+    "evidence": [
+      "The tool sits under Advanced Testing in Copilot Agent Kit.",
+      "Create evaluation test sets whose names include MODELCHECK, keep them active, and capture a baseline first.",
+      "Create evaluation test sets whose names include MODELCHECK, keep them active, and capture a baseline first.",
+      "Model Assessment in Copilot Agent Kit tests a Copilot Studio agent on evaluation test sets before a model switch."
+    ]
   }
 }
