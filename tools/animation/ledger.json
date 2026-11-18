@@ -1207,5 +1207,16 @@
       "environment-specific values like SharePoint sites belong in environment variables.",
       "Pipelines deploy managed solutions and require the target environments to be Managed Environments."
     ]
+  },
+  "2da859f5ef7e75527596f4f2": {
+    "gif": true,
+    "reason": "The post states a concrete four stage release sequence for interdependent solutions.",
+    "at": "2026-11-18",
+    "evidence": [
+      "inventory dependencies first, confirm ownership and deployment order",
+      "map environment variables and connections per target",
+      "deploy prerequisites before dependent packages",
+      "test with production identities"
+    ]
   }
 }

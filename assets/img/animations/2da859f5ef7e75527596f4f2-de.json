@@ -1,0 +1,49 @@
+{
+ "title": "Abhaengige Loesungen ausliefern",
+ "subtitle": "Folgen Sie der Checkliste fuer Vorbereitung, Reihenfolge und Tests der ganzen Kette.",
+ "steps": [
+  {
+   "product": "powerapps",
+   "icon": "link",
+   "productLabel": "Power Apps",
+   "title": "Abhaengigkeiten zuerst erfassen",
+   "actions": [
+    "Abhaengigkeitsansicht",
+    "Komponenten erfassen"
+   ]
+  },
+  {
+   "product": "powerautomate",
+   "icon": "gear",
+   "productLabel": "Power Automate",
+   "title": "Zielwerte der Umgebung vorbereiten",
+   "actions": [
+    "Umgebungsvariablen",
+    "Verbindungsverweise"
+   ]
+  },
+  {
+   "product": "powerapps",
+   "icon": "arrow",
+   "productLabel": "Power Apps",
+   "title": "Voraussetzungen geordnet deployen",
+   "actions": [
+    "Loesung importieren",
+    "Deployment-Reihenfolge"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "user",
+   "productLabel": "Admin",
+   "title": "Mit Produktiv-Identitaeten testen",
+   "actions": [
+    "testen",
+    "Produktiv-Identitaeten"
+   ]
+  }
+ ],
+ "punchline": [
+  "Nachvollziehbarkeit"
+ ]
+}

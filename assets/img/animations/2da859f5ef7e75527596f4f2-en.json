@@ -1,0 +1,53 @@
+{
+ "title": "Release interdependent solutions",
+ "subtitle": "Follow the checklist to prepare, deploy in order, and test the full chain.",
+ "steps": [
+  {
+   "product": "powerapps",
+   "icon": "link",
+   "productLabel": "Power Apps",
+   "title": "Map dependencies first",
+   "actions": [
+    "dependency view",
+    "inventory components"
+   ],
+   "evidence": "inventory dependencies first, confirm ownership and deployment order"
+  },
+  {
+   "product": "powerautomate",
+   "icon": "gear",
+   "productLabel": "Power Automate",
+   "title": "Prepare target environment values",
+   "actions": [
+    "environment variables",
+    "connection references"
+   ],
+   "evidence": "map environment variables and connections per target"
+  },
+  {
+   "product": "powerapps",
+   "icon": "arrow",
+   "productLabel": "Power Apps",
+   "title": "Deploy prerequisites in order",
+   "actions": [
+    "import solution",
+    "deployment order"
+   ],
+   "evidence": "deploy prerequisites before dependent packages"
+  },
+  {
+   "product": "admin",
+   "icon": "user",
+   "productLabel": "Admin",
+   "title": "Test with production identities",
+   "actions": [
+    "test",
+    "production identities"
+   ],
+   "evidence": "test with production identities"
+  }
+ ],
+ "punchline": [
+  "Release traceability"
+ ]
+}

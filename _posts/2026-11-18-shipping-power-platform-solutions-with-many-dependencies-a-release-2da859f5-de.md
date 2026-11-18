@@ -42,6 +42,12 @@ faq:
     Deployment bereit für den Go-Live ist?
   answer: Nein. Die statische Analyse kennt keine Umgebungseinstellungen des Ziels;
     prüfen Sie zusätzlich Verbindungen, Berechtigungen und Verhalten.
+animation:
+  video: /assets/img/animations/2da859f5ef7e75527596f4f2-de.mp4
+  poster: /assets/img/animations/2da859f5ef7e75527596f4f2-de.poster.webp
+  width: 800
+  height: 450
+  alt: "Ein Ablauf in vier Schritten zeigt das Erfassen von Abhaengigkeiten, das Vorbereiten von Zielwerten und Verbindungen, das Deployen von Voraussetzungen vor abhaengigen Paketen und das Testen mit Produktiv-Identitaeten."
 ---
 
 ## TL;DR

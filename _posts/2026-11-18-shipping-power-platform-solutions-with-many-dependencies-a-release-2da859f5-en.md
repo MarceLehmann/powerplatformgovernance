@@ -43,6 +43,12 @@ faq:
     is ready for go-live?
   answer: No, static analysis cannot see destination environment settings; treat the
     report as one signal and still verify connections, permissions and behaviour.
+animation:
+  video: /assets/img/animations/2da859f5ef7e75527596f4f2-en.mp4
+  poster: /assets/img/animations/2da859f5ef7e75527596f4f2-en.poster.webp
+  width: 800
+  height: 450
+  alt: "A four step release flow shows mapping solution dependencies, preparing target environment values and connections, deploying prerequisites before dependent packages, and testing with production identities."
 ---
 
 ## TL;DR
