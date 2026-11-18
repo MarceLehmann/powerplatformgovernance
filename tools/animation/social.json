@@ -1059,5 +1059,14 @@
     "text": "EU AI Act and Copilot Studio agents: where Microsoft Purview helps and where it stops\n\nThe high-risk AI deadline moved to 2 December 2027, but transparency rules stayed: since 2 August 2026, agents and chatbots must tell people they are AI. Purview DSPM lists AI apps, sensitivity labels and DLP control what Copilot reads, and audit logs last 180 days to one year. Purview still cannot name agent owners or inventory them.\n\nSource: Rencore Blog\n\nFull summary: https://powerplatformgovernance.com/en/posts/eu-ai-act-and-copilot-studio-agents-where-microsoft-purview-helps-and-295e6902/\n\n#PowerPlatformGovernanceDaily #CopilotStudio",
     "bufferPostId": "6afca06bd4c8ef4106f703c5",
     "dueAt": "2026-11-18T14:00:00.000Z"
+  },
+  "2da859f5ef7e75527596f4f2": {
+    "status": "queued",
+    "day": "2026-11-18",
+    "kind": "video",
+    "title": "Shipping Power Platform solutions with many dependencies: a release checklist",
+    "text": "Shipping Power Platform solutions with many dependencies: a release checklist\n\nFor Power Platform solutions where apps, flows, Dataverse tables, connection references, environment variables and integrations interlock, inventory dependencies first, confirm ownership and deployment order, map environment variables and connections per target, test with production identities, deploy prerequisites before dependent packages, treat Solution Checker as one signal, and keep release evidence for traceability.\n\nSource: Softchief Technologies\n\nFull summary: https://powerplatformgovernance.com/en/posts/shipping-power-platform-solutions-with-many-dependencies-a-release-2da859f5/\n\n#PowerPlatformGovernanceDaily #Dataverse #PowerApps",
+    "bufferPostId": "6afd49c8fac814181369fd32",
+    "dueAt": "2026-11-19T08:00:00.000Z"
   }
 }
