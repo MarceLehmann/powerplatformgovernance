@@ -1,0 +1,58 @@
+{
+ "title": "Test external user access",
+ "subtitle": "Verify sign-in, Contact linking, unique emails and denied access paths.",
+ "steps": [
+  {
+   "product": "generic",
+   "icon": "user",
+   "productLabel": "Power Pages",
+   "title": "Register and sign in test users",
+   "actions": [
+    "registration",
+    "repeat sign-in",
+    "three identities"
+   ],
+   "evidence": "Test registration, repeat sign-in and account linking in a dev environment with three identities"
+  },
+  {
+   "product": "dataverse",
+   "icon": "link",
+   "productLabel": "Dataverse",
+   "title": "Verify Contact association",
+   "actions": [
+    "contact-mapping-with-email",
+    "invitation flow",
+    "Contact ID"
+   ],
+   "evidence": "Use the contact-mapping-with-email setting in Microsoft Entra External ID or an invitation flow, then verify the Contact ID after sign-in."
+  },
+  {
+   "product": "dataverse",
+   "icon": "check",
+   "productLabel": "Dataverse",
+   "title": "Check unique emails and no duplicates",
+   "actions": [
+    "unique Contact emails",
+    "duplicate Contact",
+    "authentication"
+   ],
+   "evidence": "Power Pages requires unique Contact email addresses, and duplicates, even on inactive records, can prevent authentication."
+  },
+  {
+   "product": "generic",
+   "icon": "shield",
+   "productLabel": "Power Pages",
+   "title": "Test scoped and denied access",
+   "actions": [
+    "table permissions",
+    "Contact scope",
+    "anonymous visitor"
+   ],
+   "evidence": "Sign in as both test customers and as an anonymous visitor, then confirm table permissions with Contact scope deny the other customer's records."
+  }
+ ],
+ "punchline": [
+  "Catch over-broad access",
+  "before production"
+ ]
+}

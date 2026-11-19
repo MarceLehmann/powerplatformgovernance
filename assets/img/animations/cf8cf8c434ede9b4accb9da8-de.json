@@ -1,0 +1,54 @@
+{
+ "title": "Externen Benutzerzugriff testen",
+ "subtitle": "Anmeldung, Kontaktverknuepfung, eindeutige E-Mails und verweigerte Zugriffe pruefen.",
+ "steps": [
+  {
+   "product": "generic",
+   "icon": "user",
+   "productLabel": "Power Pages",
+   "title": "Testbenutzer registrieren und anmelden",
+   "actions": [
+    "Registrierung",
+    "erneute Anmeldung",
+    "drei Identitaeten"
+   ]
+  },
+  {
+   "product": "dataverse",
+   "icon": "link",
+   "productLabel": "Dataverse",
+   "title": "Kontaktzuordnung pruefen",
+   "actions": [
+    "E-Mail-Kontaktzuordnung",
+    "Einladungsflow",
+    "Contact ID"
+   ]
+  },
+  {
+   "product": "dataverse",
+   "icon": "check",
+   "productLabel": "Dataverse",
+   "title": "Eindeutige E-Mails und Duplikate pruefen",
+   "actions": [
+    "eindeutige Kontakt-E-Mails",
+    "doppelter Kontakt",
+    "Authentifizierung"
+   ]
+  },
+  {
+   "product": "generic",
+   "icon": "shield",
+   "productLabel": "Power Pages",
+   "title": "Begrenzten und verweigerten Zugriff testen",
+   "actions": [
+    "Tabellenberechtigungen",
+    "Kontaktbereich",
+    "anonymer Besucher"
+   ]
+  }
+ ],
+ "punchline": [
+  "Zu breiten Zugriff finden",
+  "vor der Produktion"
+ ]
+}

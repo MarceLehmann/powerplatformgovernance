@@ -46,6 +46,12 @@ faq:
   answer: Melden Sie sich als beide Testkunden und als anonymer Besucher an und prüfen
     Sie, ob Tabellenberechtigungen im Kontaktbereich fremde Datensätze verweigern.
     Testen Sie auch die verweigerten Zugriffe.
+animation:
+  video: /assets/img/animations/cf8cf8c434ede9b4accb9da8-de.mp4
+  poster: /assets/img/animations/cf8cf8c434ede9b4accb9da8-de.poster.webp
+  width: 800
+  height: 450
+  alt: "Ein vierstufiger Testablauf zeigt Registrierung und Anmeldung, die Pruefung von Kontaktzuordnung und Duplikatvermeidung, eindeutige E-Mails sowie verweigerten Zugriff mit begrenzten Berechtigungen."
 ---
 
 ## TL;DR

@@ -1234,5 +1234,16 @@
     "gif": false,
     "reason": "This post is a news and governance summary listing capabilities across products, not a concrete 3 to 5 stage procedure stated in order.",
     "at": "2026-11-19"
+  },
+  "cf8cf8c434ede9b4accb9da8": {
+    "gif": true,
+    "reason": "The post describes a concrete 4 stage testing sequence for external user registration, sign-in, contact linking and access denial checks.",
+    "at": "2026-11-19",
+    "evidence": [
+      "Test registration, repeat sign-in and account linking in a dev environment with three identities",
+      "Use the contact-mapping-with-email setting in Microsoft Entra External ID or an invitation flow, then verify the Contact ID after sign-in.",
+      "Power Pages requires unique Contact email addresses, and duplicates, even on inactive records, can prevent authentication.",
+      "Sign in as both test customers and as an anonymous visitor, then confirm table permissions with Contact scope deny the other customer's records."
+    ]
   }
 }

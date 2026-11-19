@@ -46,6 +46,12 @@ faq:
   answer: Sign in as both test customers and as an anonymous visitor, then confirm
     table permissions with Contact scope deny the other customer's records. Test the
     denied paths, not just the success path.
+animation:
+  video: /assets/img/animations/cf8cf8c434ede9b4accb9da8-en.mp4
+  poster: /assets/img/animations/cf8cf8c434ede9b4accb9da8-en.poster.webp
+  width: 800
+  height: 450
+  alt: "A four step test flow shows registration and sign-in, checking Contact mapping and duplicate prevention, enforcing unique emails, and validating denied access with scoped permissions."
 ---
 
 ## TL;DR
