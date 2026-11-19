@@ -1083,5 +1083,14 @@
     "day": "2026-11-18",
     "title": "Microsoft Ignite 2026: bringing AI agents under formal control",
     "expiredAt": "2026-11-19"
+  },
+  "cf8cf8c434ede9b4accb9da8": {
+    "status": "queued",
+    "day": "2026-11-19",
+    "kind": "video",
+    "title": "Power Pages: Testing External User Registration, Authentication and Account Linking",
+    "text": "Power Pages: Testing External User Registration, Authentication and Account Linking\n\nA Power Pages site that signs in external users through Microsoft Entra External ID must be tested beyond login: confirm the identity links to the intended Dataverse Contact, no duplicate Contact is created, unique Contact emails are enforced, web roles and table permissions scope case access per Contact or Account, and denied-access scenarios are exercised.\n\nSource: Softchief Blog\n\nFull summary: https://powerplatformgovernance.com/en/posts/power-pages-testing-external-user-registration-authentication-and-cf8cf8c4/\n\n#PowerPlatformGovernanceDaily #Dataverse",
+    "bufferPostId": "6aff4378e3ce990685fd88e3",
+    "dueAt": "2026-11-20T08:00:00.000Z"
   }
 }
