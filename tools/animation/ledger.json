@@ -1229,5 +1229,10 @@
       "Create evaluation test sets whose names include MODELCHECK, keep them active, and capture a baseline first.",
       "Model Assessment in Copilot Agent Kit tests a Copilot Studio agent on evaluation test sets before a model switch."
     ]
+  },
+  "6358d46dd14cac1d3c817312": {
+    "gif": false,
+    "reason": "This post is a news and governance summary listing capabilities across products, not a concrete 3 to 5 stage procedure stated in order.",
+    "at": "2026-11-19"
   }
 }
