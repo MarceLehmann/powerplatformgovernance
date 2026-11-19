@@ -1077,5 +1077,11 @@
     "text": "Copilot Studio Model Assessment: test agents before a model switch\n\nModel Assessment in Copilot Agent Kit tests a Copilot Studio agent on evaluation test sets before a model switch. The example compares GPT-6 Luna, 14 passed checks, with GPT-6.1 Sol, 12, recommending Luna at Medium confidence while both runs stay Critical. Credits appear per run and per test case, a partial flag blocks savings claims, and AI analysis consumed around 120-150 Copilot Credits per assessment.\n\nSource: The Custom Engine (Microsoft Copilot Studio CAT team blog)\n\nFull summary: https://powerplatformgovernance.com/en/posts/copilot-studio-model-assessment-test-agents-before-a-model-switch-df35f40b/\n\n#PowerPlatformGovernanceDaily #CopilotStudio",
     "bufferPostId": "6afdf1f3163805d09275fa17",
     "dueAt": "2026-11-19T11:00:00.000Z"
+  },
+  "6358d46dd14cac1d3c817312": {
+    "status": "expired",
+    "day": "2026-11-18",
+    "title": "Microsoft Ignite 2026: bringing AI agents under formal control",
+    "expiredAt": "2026-11-19"
   }
 }
