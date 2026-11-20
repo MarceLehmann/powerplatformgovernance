@@ -1245,5 +1245,10 @@
       "Power Pages requires unique Contact email addresses, and duplicates, even on inactive records, can prevent authentication.",
       "Sign in as both test customers and as an anonymous visitor, then confirm table permissions with Contact scope deny the other customer's records."
     ]
+  },
+  "4af99a91f72a395b586885d5": {
+    "gif": false,
+    "reason": "The post gives rollback guidance and options, but not one concrete 3 to 5 stage procedure that can be shown without guessing.",
+    "at": "2026-11-20"
   }
 }
