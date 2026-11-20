@@ -1092,5 +1092,14 @@
     "text": "Power Pages: Testing External User Registration, Authentication and Account Linking\n\nA Power Pages site that signs in external users through Microsoft Entra External ID must be tested beyond login: confirm the identity links to the intended Dataverse Contact, no duplicate Contact is created, unique Contact emails are enforced, web roles and table permissions scope case access per Contact or Account, and denied-access scenarios are exercised.\n\nSource: Softchief Blog\n\nFull summary: https://powerplatformgovernance.com/en/posts/power-pages-testing-external-user-registration-authentication-and-cf8cf8c4/\n\n#PowerPlatformGovernanceDaily #Dataverse",
     "bufferPostId": "6aff4378e3ce990685fd88e3",
     "dueAt": "2026-11-20T08:00:00.000Z"
+  },
+  "4af99a91f72a395b586885d5": {
+    "status": "queued",
+    "day": "2026-11-20",
+    "kind": "image",
+    "title": "Power Platform: Planning a Controlled Rollback When a New Release Breaks Production",
+    "text": "Power Platform: Planning a Controlled Rollback When a New Release Breaks Production\n\nA failed Power Platform release needs a planned rollback, not a quick solution import. Classify the failure first: application-level issues may need a previous solution version, automation failures need flow and connection checks, and data corruption may require environment restore.\n\nSource: Softchief Technologies\n\nFull summary: https://powerplatformgovernance.com/en/posts/power-platform-planning-a-controlled-rollback-when-a-new-release-4af99a91/\n\n#PowerPlatformGovernanceDaily #Dataverse #PowerAutomate",
+    "bufferPostId": "6b0094ec6f199ec35b71d89a",
+    "dueAt": "2026-11-21T08:00:00.000Z"
   }
 }
