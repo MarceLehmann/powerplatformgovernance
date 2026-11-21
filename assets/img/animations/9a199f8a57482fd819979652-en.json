@@ -1,0 +1,55 @@
+{
+ "title": "Set up weekly credit reports",
+ "subtitle": "Enable the plugin, connect, ask for charts, then schedule recurring environment reports.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "gear",
+   "productLabel": "Copilot Cowork",
+   "title": "Enable the preview plugin",
+   "actions": [
+    "Customize",
+    "Power Platform Admin (Preview)"
+   ],
+   "evidence": "Enable it under Customize"
+  },
+  {
+   "product": "admin",
+   "icon": "key",
+   "productLabel": "Power Platform Admins",
+   "title": "Connect with admin OAuth",
+   "actions": [
+    "Power Platform for Admins V2",
+    "OAuth"
+   ],
+   "evidence": "connect via Power Platform for Admins V2 OAuth with an admin role"
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "table",
+   "productLabel": "Copilot Cowork",
+   "title": "Ask for environment charts",
+   "actions": [
+    "plain-language questions",
+    "charts"
+   ],
+   "evidence": "ask plain-language questions, and chart Copilot Credit consumption per environment"
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "calendar",
+   "productLabel": "Copilot Cowork",
+   "title": "Schedule the weekly report",
+   "actions": [
+    "scheduled prompts",
+    "schedule",
+    "delivery settings"
+   ],
+   "evidence": "approve the schedule, time zone and delivery settings"
+  }
+ ],
+ "punchline": [
+  "Weekly environment chart",
+  "Plugin stays read-only"
+ ]
+}

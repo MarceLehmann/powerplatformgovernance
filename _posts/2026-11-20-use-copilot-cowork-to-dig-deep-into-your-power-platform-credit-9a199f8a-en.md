@@ -45,6 +45,12 @@ faq:
   answer: Yes, Cowork scheduled prompts can prepare a recurring per-environment report
     with a chart; approve the schedule, time zone and delivery settings, and email
     delivery depends on your setup.
+animation:
+  video: /assets/img/animations/9a199f8a57482fd819979652-en.mp4
+  poster: /assets/img/animations/9a199f8a57482fd819979652-en.poster.webp
+  width: 800
+  height: 450
+  alt: "Four steps show how to use Copilot Cowork for credit reporting: enable the Power Platform Admin preview plugin, connect with Power Platform for Admins V2 OAuth, ask for per environment charts, and schedule a weekly report."
 ---
 
 ## TL;DR

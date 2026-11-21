@@ -1250,5 +1250,16 @@
     "gif": false,
     "reason": "The post gives rollback guidance and options, but not one concrete 3 to 5 stage procedure that can be shown without guessing.",
     "at": "2026-11-20"
+  },
+  "9a199f8a57482fd819979652": {
+    "gif": true,
+    "reason": "The post gives a clear 4 stage setup and reporting sequence: enable the plugin, connect with OAuth, ask for charts, then schedule weekly reports.",
+    "at": "2026-11-21",
+    "evidence": [
+      "Enable it under Customize",
+      "connect via Power Platform for Admins V2 OAuth with an admin role",
+      "ask plain-language questions, and chart Copilot Credit consumption per environment",
+      "approve the schedule, time zone and delivery settings"
+    ]
   }
 }

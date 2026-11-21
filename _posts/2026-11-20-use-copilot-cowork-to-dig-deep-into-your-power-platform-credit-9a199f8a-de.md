@@ -44,6 +44,12 @@ faq:
   answer: Ja, geplante Prompts wiederholen den Bericht mit Chart; Zeitplan, Zeitzone
     und Zustellung vor der Freigabe prüfen, der E-Mail-Versand hängt von den Berechtigungen
     ab.
+animation:
+  video: /assets/img/animations/9a199f8a57482fd819979652-de.mp4
+  poster: /assets/img/animations/9a199f8a57482fd819979652-de.poster.webp
+  width: 800
+  height: 450
+  alt: "Vier Schritte zeigen den Ablauf fuer Credit Reporting in Copilot Cowork: Power Platform Admin Plugin aktivieren, mit Power Platform for Admins V2 per OAuth verbinden, Charts je Umgebung abfragen und einen woechentlichen Report planen."
 ---
 
 ## TL;DR

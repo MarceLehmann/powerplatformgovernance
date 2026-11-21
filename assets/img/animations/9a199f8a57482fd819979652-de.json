@@ -1,0 +1,51 @@
+{
+ "title": "Woechentliche Credit-Reports einrichten",
+ "subtitle": "Plugin aktivieren, verbinden, Charts abfragen und wiederkehrende Reports pro Umgebung planen.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "gear",
+   "productLabel": "Copilot Cowork",
+   "title": "Vorschau Plugin aktivieren",
+   "actions": [
+    "Customize",
+    "Power Platform Admin (Preview)"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "key",
+   "productLabel": "Power Platform Admins",
+   "title": "Mit Admin OAuth verbinden",
+   "actions": [
+    "Power Platform for Admins V2",
+    "OAuth"
+   ]
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "table",
+   "productLabel": "Copilot Cowork",
+   "title": "Charts je Umgebung abfragen",
+   "actions": [
+    "Fragen in natuerlicher Sprache",
+    "Charts"
+   ]
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "calendar",
+   "productLabel": "Copilot Cowork",
+   "title": "Woechentlichen Report planen",
+   "actions": [
+    "geplante Prompts",
+    "Zeitplan",
+    "Zustellung"
+   ]
+  }
+ ],
+ "punchline": [
+  "Woechentlicher Umgebungs Chart",
+  "Plugin bleibt rein lesend"
+ ]
+}
