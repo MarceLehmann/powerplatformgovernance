@@ -39,6 +39,12 @@ faq:
     parameter in Dataverse?
   answer: No, KingswaySoft did not support UnMaskedData reads, so custom code in a
     Script Component or Script Task was needed to retrieve unmasked data.
+animation:
+  video: /assets/img/animations/dbb33a57195cdb71e9db17de-en.mp4
+  poster: /assets/img/animations/dbb33a57195cdb71e9db17de-en.poster.webp
+  width: 800
+  height: 450
+  alt: "A three step flow shows a long Dataverse pagination run hitting an unauthorized error, renewing IOrganizationService in a catch block, waiting three seconds, and retrying the request."
 ---
 
 ## TL;DR

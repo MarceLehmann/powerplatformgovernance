@@ -41,6 +41,12 @@ faq:
     ändern?
   answer: Nicht über Copilot allein, denn Copilot in Apps ist rein lesend; der Agent
     braucht eigene Tools wie einen Agent Flow zum Ändern von Datensätzen.
+animation:
+  video: /assets/img/animations/2dc960073f29719dc46b39ac-de.mp4
+  poster: /assets/img/animations/2dc960073f29719dc46b39ac-de.poster.webp
+  width: 800
+  height: 450
+  alt: "Vier Schritte: Den Agent in Teams und Microsoft 365 veroeffentlichen, Microsoft 365 Copilot in den Admin-Einstellungen fuer die Umgebung aktivieren, in der App einschalten und dann die App veroeffentlichen."
 ---
 
 ## TL;DR

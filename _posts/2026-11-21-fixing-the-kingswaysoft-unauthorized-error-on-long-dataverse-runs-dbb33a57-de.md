@@ -40,6 +40,12 @@ faq:
     in Dataverse?
   answer: Nein, KingswaySoft unterstützte die UnMaskedData-Funktion nicht, weshalb
     eigener Code in einer Script Component oder einem Script Task nötig war.
+animation:
+  video: /assets/img/animations/dbb33a57195cdb71e9db17de-de.mp4
+  poster: /assets/img/animations/dbb33a57195cdb71e9db17de-de.poster.webp
+  width: 800
+  height: 450
+  alt: "Ein Ablauf in drei Schritten zeigt bei langer Dataverse-Pagination einen Unauthorized-Fehler, dann das Erneuern von IOrganizationService im Catch-Block, drei Sekunden Warten und das Wiederholen der Anfrage."
 ---
 
 ## TL;DR

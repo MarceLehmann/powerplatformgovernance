@@ -1,0 +1,55 @@
+{
+ "title": "Add a Copilot Studio agent to Power Apps",
+ "subtitle": "Use the supported path: publish the agent, enable Microsoft 365 Copilot, switch it on in the app, then publish.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "chat",
+   "productLabel": "Copilot Studio",
+   "title": "Publish the agent to channels",
+   "actions": [
+    "Publish",
+    "Teams",
+    "Microsoft 365"
+   ],
+   "evidence": "publish the agent to Teams and Microsoft 365"
+  },
+  {
+   "product": "admin",
+   "icon": "gear",
+   "productLabel": "Power Platform admin",
+   "title": "Enable it for the environment",
+   "actions": [
+    "Copilot",
+    "Microsoft 365 Copilot",
+    "canvas apps to On"
+   ],
+   "evidence": "open Copilot, then Microsoft 365 Copilot, and set canvas apps to On for the chosen environment"
+  },
+  {
+   "product": "powerapps",
+   "icon": "check",
+   "productLabel": "Power Apps",
+   "title": "Switch on M365 Copilot in the app",
+   "actions": [
+    "M365 Copilot",
+    "make.preview.powerapps.com"
+   ],
+   "evidence": "set M365 Copilot in the app on make.preview.powerapps.com before publishing"
+  },
+  {
+   "product": "powerapps",
+   "icon": "play",
+   "productLabel": "Power Apps",
+   "title": "Publish the canvas app",
+   "actions": [
+    "Publish"
+   ],
+   "evidence": "switch it on in the app, then publish"
+  }
+ ],
+ "punchline": [
+  "Supported path for",
+  "new canvas apps"
+ ]
+}

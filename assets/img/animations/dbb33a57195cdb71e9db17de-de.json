@@ -1,0 +1,42 @@
+{
+ "title": "Lange Dataverse-Laeufe absichern",
+ "subtitle": "Dienst nach Token-Ablauf erneuern, warten und die Anfrage erneut senden.",
+ "steps": [
+  {
+   "product": "dataverse",
+   "icon": "search",
+   "productLabel": "Dataverse",
+   "title": "Lange Pagination laesst Token ablaufen",
+   "actions": [
+    "Pagination",
+    "HTTP unauthorized",
+    "Anonymous"
+   ]
+  },
+  {
+   "product": "generic",
+   "icon": "gear",
+   "productLabel": "KingswaySoft",
+   "title": "IOrganizationService im Catch erneuern",
+   "actions": [
+    "Catch-Block",
+    "erneuern",
+    "IOrganizationService"
+   ]
+  },
+  {
+   "product": "generic",
+   "icon": "arrow",
+   "productLabel": "KingswaySoft",
+   "title": "Drei Sekunden warten und wiederholen",
+   "actions": [
+    "drei Sekunden warten",
+    "wiederholen",
+    "Anfrage"
+   ]
+  }
+ ],
+ "punchline": [
+  "Lauf bleibt aktiv"
+ ]
+}

@@ -1,0 +1,45 @@
+{
+ "title": "Retry long Dataverse runs safely",
+ "subtitle": "Renew the service after token expiry, wait, then retry the request.",
+ "steps": [
+  {
+   "product": "dataverse",
+   "icon": "search",
+   "productLabel": "Dataverse",
+   "title": "Long pagination hits token expiry",
+   "actions": [
+    "pagination",
+    "HTTP unauthorized",
+    "Anonymous"
+   ],
+   "evidence": "can fail with an HTTP unauthorized Anonymous error when Dataverse pagination runs long"
+  },
+  {
+   "product": "generic",
+   "icon": "gear",
+   "productLabel": "KingswaySoft",
+   "title": "Renew IOrganizationService in catch",
+   "actions": [
+    "catch block",
+    "renews",
+    "IOrganizationService"
+   ],
+   "evidence": "The fix renews the CRM service inside a catch block"
+  },
+  {
+   "product": "generic",
+   "icon": "arrow",
+   "productLabel": "KingswaySoft",
+   "title": "Wait three seconds and retry",
+   "actions": [
+    "wait three seconds",
+    "retry",
+    "request"
+   ],
+   "evidence": "waits three seconds and retries the request"
+  }
+ ],
+ "punchline": [
+  "Keep the run alive"
+ ]
+}

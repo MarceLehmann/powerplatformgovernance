@@ -1261,5 +1261,26 @@
       "ask plain-language questions, and chart Copilot Credit consumption per environment",
       "approve the schedule, time zone and delivery settings"
     ]
+  },
+  "2dc960073f29719dc46b39ac": {
+    "gif": true,
+    "reason": "The post gives a supported 4 stage path to add a Copilot Studio agent to a canvas app, plus the admin settings path.",
+    "at": "2026-11-21",
+    "evidence": [
+      "publish the agent to Teams and Microsoft 365",
+      "open Copilot, then Microsoft 365 Copilot, and set canvas apps to On for the chosen environment",
+      "set M365 Copilot in the app on make.preview.powerapps.com before publishing",
+      "switch it on in the app, then publish"
+    ]
+  },
+  "dbb33a57195cdb71e9db17de": {
+    "gif": true,
+    "reason": "The post gives a clear 3 stage fix sequence: renew the service in a catch block, wait three seconds, then retry the request.",
+    "at": "2026-11-21",
+    "evidence": [
+      "can fail with an HTTP unauthorized Anonymous error when Dataverse pagination runs long",
+      "The fix renews the CRM service inside a catch block",
+      "waits three seconds and retries the request"
+    ]
   }
 }

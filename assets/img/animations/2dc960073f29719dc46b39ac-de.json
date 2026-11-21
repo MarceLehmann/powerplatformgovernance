@@ -1,0 +1,51 @@
+{
+ "title": "Copilot Studio Agent zu Power Apps",
+ "subtitle": "Unterstuetzten Weg nutzen: Agent veroeffentlichen, Copilot aktivieren, in der App einschalten, dann publizieren.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "chat",
+   "productLabel": "Copilot Studio",
+   "title": "Agent in Kanaelen veroeffentlichen",
+   "actions": [
+    "Veroeffentlichen",
+    "Teams",
+    "Microsoft 365"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "gear",
+   "productLabel": "Power Platform Admin",
+   "title": "Fuer Umgebung aktivieren",
+   "actions": [
+    "Copilot",
+    "Microsoft 365 Copilot",
+    "Canvas-Apps auf On"
+   ]
+  },
+  {
+   "product": "powerapps",
+   "icon": "check",
+   "productLabel": "Power Apps",
+   "title": "M365 Copilot in App einschalten",
+   "actions": [
+    "M365 Copilot",
+    "make.preview.powerapps.com"
+   ]
+  },
+  {
+   "product": "powerapps",
+   "icon": "play",
+   "productLabel": "Power Apps",
+   "title": "Canvas-App veroeffentlichen",
+   "actions": [
+    "Veroeffentlichen"
+   ]
+  }
+ ],
+ "punchline": [
+  "Unterstuetzter Weg fuer",
+  "neue Canvas-Apps"
+ ]
+}

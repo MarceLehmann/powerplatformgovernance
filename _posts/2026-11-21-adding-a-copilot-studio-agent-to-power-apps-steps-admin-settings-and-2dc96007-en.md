@@ -39,6 +39,12 @@ faq:
 - question: Can a Copilot Studio agent update SharePoint list data from a canvas app?
   answer: Not through Copilot alone, because Copilot in apps is read-only; the agent
     needs its own tools such as an agent flow to change records.
+animation:
+  video: /assets/img/animations/2dc960073f29719dc46b39ac-en.mp4
+  poster: /assets/img/animations/2dc960073f29719dc46b39ac-en.poster.webp
+  width: 800
+  height: 450
+  alt: "Four steps: publish the agent to Teams and Microsoft 365, enable Microsoft 365 Copilot for the environment in admin settings, turn it on in the app, then publish the app."
 ---
 
 ## TL;DR
