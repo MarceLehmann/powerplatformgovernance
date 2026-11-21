@@ -1101,5 +1101,11 @@
     "text": "Power Platform: Planning a Controlled Rollback When a New Release Breaks Production\n\nA failed Power Platform release needs a planned rollback, not a quick solution import. Classify the failure first: application-level issues may need a previous solution version, automation failures need flow and connection checks, and data corruption may require environment restore.\n\nSource: Softchief Technologies\n\nFull summary: https://powerplatformgovernance.com/en/posts/power-platform-planning-a-controlled-rollback-when-a-new-release-4af99a91/\n\n#PowerPlatformGovernanceDaily #Dataverse #PowerAutomate",
     "bufferPostId": "6b0094ec6f199ec35b71d89a",
     "dueAt": "2026-11-21T08:00:00.000Z"
+  },
+  "9a199f8a57482fd819979652": {
+    "status": "expired",
+    "day": "2026-11-20",
+    "title": "Use Copilot Cowork to dig deep into your Power Platform credit consumption data",
+    "expiredAt": "2026-11-21"
   }
 }
