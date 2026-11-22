@@ -1125,5 +1125,14 @@
     "text": "Adding a Copilot Studio Agent to Power Apps: Steps, Admin Settings and Limits\n\nThe Chatbot control is gone from Power Apps Studio, and since 2 February 2026 the Copilot control cannot be added to new canvas apps. The supported path: publish the agent to Teams and Microsoft 365, have an admin enable Microsoft 365 Copilot for the environment, switch it on in the app, then publish. Regional rollout, per-user licensing and read-only answers still apply.\n\nSource: SPGuides\n\nFull summary: https://powerplatformgovernance.com/en/posts/adding-a-copilot-studio-agent-to-power-apps-steps-admin-settings-and-2dc96007/\n\n#PowerPlatformGovernanceDaily #PowerApps #CopilotStudio",
     "bufferPostId": "6b01e675d864a01105690dfd",
     "dueAt": "2026-11-22T11:00:00.000Z"
+  },
+  "8640964915902fecaede98af": {
+    "status": "queued",
+    "day": "2026-11-22",
+    "kind": "image",
+    "title": "Stop attaching files to SharePoint list items: the case for document libraries",
+    "text": "Stop attaching files to SharePoint list items: the case for document libraries\n\nSharePoint list attachments live in hidden folders, inherit the item's permissions and are never versioned; a single attachment is capped at 250 MB. Power Automate needs two actions plus a loop, Graph only reports whether attachments exist, Purview retention policies skip list items, and Copilot agents cannot see attachments. Document libraries with a lookup column deliver versioning, metadata, retention and agent access.\n\nSource: MVPTreff\n\nFull summary: https://powerplatformgovernance.com/en/posts/stop-attaching-files-to-sharepoint-list-items-the-case-for-document-86409649/\n\n#PowerPlatformGovernanceDaily #PowerAutomate #CopilotStudio",
+    "bufferPostId": "6b03380bd5eabfb8cccec9ef",
+    "dueAt": "2026-11-23T08:00:00.000Z"
   }
 }
