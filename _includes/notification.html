@@ -1,7 +1,8 @@
-{% comment %} Override von jekyll-theme-chirpy 7.6.0 _includes/notification.html (10von10, 22.11.2026): role="alert" am aside entfernt (W3C: ungueltige Rolle, aria-live bleibt). {% endcomment %}
-<aside
+{% comment %} Override von jekyll-theme-chirpy 7.6.0 _includes/notification.html (10von10, 22.11.2026): div statt aside, denn role="alert" ist am aside ungueltig (W3C); die Meldung wird weiter beim Einblenden angesagt. {% endcomment %}
+<div
   id="notification"
   class="toast w-auto rounded-5 text-nowrap"
+  role="alert"
   aria-live="assertive"
   aria-atomic="true"
   data-bs-animation="true"
@@ -25,4 +26,4 @@
       aria-label="Close"
     ></button>
   </div>
-</aside>
+</div>

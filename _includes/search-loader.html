@@ -1,4 +1,4 @@
-{% comment %} Override von jekyll-theme-chirpy 7.6.0 _includes/search-loader.html (10von10, 22.11.2026): Suchindex erst beim ersten Zugriff laden. {% endcomment %}
+{% comment %} Override von jekyll-theme-chirpy 7.6.0 _includes/search-loader.html (10von10, 22.11.2026): Suchindex erst beim ersten Zugriff laden (per fetch, dann an Simple-Jekyll-Search uebergeben). {% endcomment %}
 <!--
   Jekyll Simple Search loader
   See: <https://github.com/christian-fei/Simple-Jekyll-Search>
@@ -21,46 +21,55 @@
 
 <script>
   {% comment %} Note: dependent library will be loaded in `js-selector.html` {% endcomment %}
-  /* 10von10 (22.11.2026): Der Suchindex (search.json, bis 250 KB) wird erst beim ersten Zugriff auf die Suche geladen, nicht bei jedem Seitenaufruf. */
+  /* 10von10 (22.11.2026): Der Suchindex (search.json, bis 250 KB) wird erst beim ersten Zugriff auf die Suche geladen, nicht bei jedem Seitenaufruf. Er kommt per fetch und wird als Array an Simple-Jekyll-Search uebergeben; danach wird mit dem schon eingetippten Begriff gesucht. Bei einem Ladefehler ist ein neuer Versuch moeglich. */
   document.addEventListener('DOMContentLoaded', () => {
     const input = document.getElementById('search-input');
-    let started = false;
+    const url = '{{ '/assets/js/data/search.json' | relative_url }}';
+    let loading = false;
+    let ready = false;
     const start = () => {
-      if (started) { return; }
-      started = true;
-      SimpleJekyllSearch({
-        searchInput: input,
-        resultsContainer: document.getElementById('search-results'),
-        json: '{{ '/assets/js/data/search.json' | relative_url }}',
-        searchResultTemplate: '{{ result_elem | strip_newlines }}',
-        noResultsText: '{{ not_found }}',
-        templateMiddleware: function(prop, value, template) {
-          if (prop === 'categories') {
-            if (value === '') {
-              return `${value}`;
-            } else {
-              return `<div class="me-sm-4"><i class="far fa-folder fa-fw"></i>${value}</div>`;
-            }
-          }
+      if (loading || ready) { return; }
+      loading = true;
+      fetch(url)
+        .then((response) => {
+          if (!response.ok) { throw new Error('search.json ' + response.status); }
+          return response.json();
+        })
+        .then((data) => {
+          const search = SimpleJekyllSearch({
+            searchInput: input,
+            resultsContainer: document.getElementById('search-results'),
+            json: data,
+            searchResultTemplate: '{{ result_elem | strip_newlines }}',
+            noResultsText: '{{ not_found }}',
+            templateMiddleware: function(prop, value, template) {
+              if (prop === 'categories') {
+                if (value === '') {
+                  return `${value}`;
+                } else {
+                  return `<div class="me-sm-4"><i class="far fa-folder fa-fw"></i>${value}</div>`;
+                }
+              }
 
-          if (prop === 'tags') {
-            if (value === '') {
-              return `${value}`;
-            } else {
-              return `<div><i class="fa fa-tag fa-fw"></i>${value}</div>`;
+              if (prop === 'tags') {
+                if (value === '') {
+                  return `${value}`;
+                } else {
+                  return `<div><i class="fa fa-tag fa-fw"></i>${value}</div>`;
+                }
+              }
             }
-          }
-        },
-        success: function() {
-          /* wurde schon getippt, bevor der Index da war: Suche jetzt nachholen */
-          if (input && input.value) { input.dispatchEvent(new Event('input', { bubbles: true })); }
-        }
-      });
+          });
+          ready = true;
+          loading = false;
+          if (input && input.value) { search.search(input.value); }
+        })
+        .catch(() => { loading = false; });
     };
     if (input) {
-      ['focus', 'pointerdown', 'keydown'].forEach((type) => input.addEventListener(type, start, { once: true }));
+      ['focus', 'pointerdown', 'keydown'].forEach((type) => input.addEventListener(type, start));
     }
     const trigger = document.getElementById('search-trigger');
-    if (trigger) { trigger.addEventListener('pointerdown', start, { once: true }); }
+    if (trigger) { trigger.addEventListener('pointerdown', start); }
   });
 </script>

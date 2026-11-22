@@ -96,7 +96,6 @@ def prune_css(names):
 
 def main():
     names = used_names()
-    prune_css(names)
     keep, missing = codepoints(names)
     keep |= set(THEME_CODEPOINTS)
     print(len(names), 'Namen,', len(keep), 'Zeichen (mit Theme-Zeichen); ohne Zuordnung im CSS:', ', '.join(missing) or '-')
@@ -113,6 +112,7 @@ def main():
         dst = os.path.join(OUT, name + '.woff2')
         subset.save_font(font, dst, opts)
         print(name, os.path.getsize(os.path.join(FULL, name + '.woff2')), '->', os.path.getsize(dst))
+    prune_css(names)  # erst nach erfolgreichem Subsetting der Schriften
 
 
 if __name__ == '__main__':

@@ -10,7 +10,7 @@ WebP-Dateien daneben, beide verlustfrei (gleiche Pixel wie das PNG, bei diesen f
 Das Original-PNG bleibt unveraendert (Lightbox, Open Graph, Social-Posts). Die Templates (_layouts/post.html,
 _layouts/home.html) nutzen die WebP-Dateien nur, wenn sie existieren.
 
-Aufruf: python tools/hero_webp.py            (alle PNG ohne Varianten, nachziehen)
+Aufruf: python tools/hero_webp.py            (alle PNG ohne Varianten oder mit neuerem PNG, nachziehen)
         python tools/hero_webp.py --force    (alle neu schreiben)
 Wird ausserdem von tools/render_card.py fuer jede neue Karte aufgerufen.
 """
@@ -28,10 +28,15 @@ def variant_paths(png_path):
     return f'{base}-hero.webp', f'{base}-card.webp'
 
 
+def _is_current(png_path, webp_path):
+    """Die WebP-Datei existiert und ist nicht aelter als das PNG (wird ein PNG neu gerendert, wird sie erneuert)."""
+    return os.path.exists(webp_path) and os.path.getmtime(webp_path) >= os.path.getmtime(png_path)
+
+
 def make_variants(png_path, force=False):
     """Schreibt die WebP-Varianten zu einem PNG. Gibt die Liste der neu geschriebenen Dateien zurueck."""
     hero_path, card_path = variant_paths(png_path)
-    if not force and os.path.exists(hero_path) and os.path.exists(card_path):
+    if not force and _is_current(png_path, hero_path) and _is_current(png_path, card_path):
         return []
     with Image.open(png_path) as im:
         im = im.convert('RGB')

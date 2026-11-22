@@ -53,22 +53,22 @@ script_includes:
 
         {%- comment -%}
           10von10 (22.11.2026): WebP per srcset, wenn vorhanden (siehe _includes/hero-image.html). Kein Leerzeichen vor einem
-          Schraegstrich im srcset (refactor-content.html entfernt ' /'). Der Wrapper ist ein figure, weil figcaption nur dort gueltig ist.
+          Schraegstrich im srcset und kein doppeltes Leerzeichen zwischen den Attributen (refactor-content.html entfernt ' /'). Der Wrapper ist ein figure, weil figcaption nur dort gueltig ist.
         {%- endcomment -%}
         {%- include hero-image.html -%}
         {%- assign hero_srcset = '' -%}
         {%- if hero_found > 0 -%}
-          {%- capture hero_srcset -%}srcset="{{ hero_webp }} 1080w"{%- endcapture -%}
+          {%- capture hero_srcset %} srcset="{{ hero_webp }} 1080w"{%- endcapture -%}
         {%- endif -%}
 
         {% if page.image.alt %}
         <figure class="mt-3 mb-3">
-          <img {{ src }} {{ hero_srcset }} {{ class }} {{ alt }} w="1200" h="630" {{ lqip }} fetchpriority="high">
-          <figcaption class="text-center pt-2 pb-2">{{ page.image.alt }}</figcaption>
+          <img {{ src }}{{ hero_srcset }} {{ class }} {{ alt }} w="1200" h="630" {{ lqip }} fetchpriority="high">
+          <figcaption class="text-center pt-2 pb-2">{{ page.image.alt | escape }}</figcaption>
         </figure>
         {% else %}
         <div class="mt-3 mb-3">
-          <img {{ src }} {{ hero_srcset }} {{ class }} {{ alt }} w="1200" h="630" {{ lqip }} fetchpriority="high">
+          <img {{ src }}{{ hero_srcset }} {{ class }} {{ alt }} w="1200" h="630" {{ lqip }} fetchpriority="high">
         </div>
         {% endif %}
       {% endif %}

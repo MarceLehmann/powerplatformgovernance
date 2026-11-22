@@ -203,3 +203,8 @@ header .post-desc, #toc-bar .label, #search-results a, h1, h2, h3, h4, h5 {
 	-webkit-hyphens: none;
 	hyphens: none;
 }
+
+// 10von10 (22.11.2026): Richtungsbeschriftung der Beitragsnavigation aus data-label (siehe _includes/post-nav.html). Chirpy nimmt sonst attr(aria-label).
+.post-navigation .btn::before {
+	content: attr(data-label);
+}
