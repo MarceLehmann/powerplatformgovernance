@@ -46,8 +46,8 @@ if (sel.picked.length < minPosts) { console.log('Weniger als 3 Beitraege mit DE 
 // Sprechtext: zuerst TL;DR-Saetze streichen (Budget maxChars). Reicht das nicht, darf der Text bis 10 % ueber dem Budget liegen (Marcel 22.11.2026).
 // Erst darueber faellt der Beitrag mit dem tiefsten Wert weg (mindestens minPosts bleiben).
 const toleranz = 1.1;
-const build = (lang, whyMap) => { try { return buildScript({ picked: sel.picked, lang, site, week: kw, maxChars, whyMap }); } catch { return buildScript({ picked: sel.picked, lang, site, week: kw, maxChars: Math.round(maxChars * toleranz), whyMap }); } };
-const fitsAll = () => langs.every(lang => { try { build(lang); return true; } catch { return false; } });
+const build = (lang, whyMap) => { try { return buildScript({ picked: sel.picked, lang, site, week: kw, maxChars, whyMap }); } catch { return buildScript({ picked: sel.picked, lang, site: { ...site, tldrSentence: false }, week: kw, maxChars: Math.round(maxChars * toleranz), whyMap }); } };
+const fitsAll = () => { try { return langs.reduce((a, lang) => a + build(lang).chars, 0) <= Math.round(budget * toleranz); } catch { return false; } };
 while (!fitsAll() && sel.picked.length > minPosts) {
   const drop = [...sel.picked].sort((x, y) => x.score - y.score || y.en.day.localeCompare(x.en.day))[0];
   sel.picked = sel.picked.filter(x => x !== drop);
