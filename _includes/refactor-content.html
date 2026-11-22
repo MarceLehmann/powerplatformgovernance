@@ -23,7 +23,7 @@
   {% for _thead_part in _thead_parts offset: 1 %}
     {% assign _thead_row = _thead_part | split: '</tr>' | first | strip_newlines | remove: ' ' %}
     {% if _thead_row contains '<tr><th></th>' %}
-      {% assign _thead_part = _thead_part | replace_first: '<th></th>', '<th><span class="visually-hidden">Property</span></th>' %}
+      {% assign _thead_part = _thead_part | replace_first: '<th></th>', '<td></td>' %}
     {% endif %}
     {% assign _thead_out = _thead_out | append: '<thead>' | append: _thead_part %}
   {% endfor %}
