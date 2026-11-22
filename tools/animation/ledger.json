@@ -1282,5 +1282,10 @@
       "The fix renews the CRM service inside a catch block",
       "waits three seconds and retries the request"
     ]
+  },
+  "8640964915902fecaede98af": {
+    "gif": false,
+    "reason": "The post is governance advice and comparison content, not a concrete 3 to 5 stage procedure explicitly described as a single sequence.",
+    "at": "2026-11-22"
   }
 }
