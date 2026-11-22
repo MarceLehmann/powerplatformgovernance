@@ -17,11 +17,28 @@ css = File.read(File.join(site_dir, 'assets/css/jekyll-theme-chirpy.css'))
   raise "Missing production CSS: #{selector}" unless css.include?(selector)
 end
 
+# Font Awesome ist auf die benutzten Symbole gekuerzt (tools/subset-fontawesome.py): jede fa-Klasse im Build braucht eine Regel im CSS
+fa_css = File.read(File.join(site_dir, 'assets/lib/fontawesome-free/css/all.min.css'))
+fa_missing = Dir.glob(File.join(site_dir, '**/*.html')).flat_map do |html_path|
+  File.read(html_path).scan(/class="([^"]*)"/).flatten.flat_map { |value| value.scan(/(?<![\w-])fa-[a-z0-9]+(?:-[a-z0-9]+)*/) }
+end.uniq.reject { |name| fa_css.include?(".#{name}") }
+raise "Font Awesome classes without CSS rule (run tools/subset-fontawesome.py): #{fa_missing.join(', ')}" unless fa_missing.empty?
+
 pages = required_pages + Dir.glob(File.join(site_dir, '**/posts/*/index.html')).map { |path| path.delete_prefix("#{site_dir}/") }
 pages.each do |path|
   document = Nokogiri::HTML(File.read(File.join(site_dir, path)))
   title = document.at_css('title')&.text.to_s.strip
   raise "Empty page title: #{path}" if title.empty? || title.start_with?('|')
+  # Bild-Varianten (srcset, tools/hero_webp.py): jede lokale Datei aus dem srcset muss im Build liegen.
+  # Externe und absolute URLs werden nicht als lokale Pfade geprueft, seitenrelative Pfade gegen die Seite aufgeloest.
+  document.css('img[srcset], link[imagesrcset]').each do |node|
+    (node['srcset'] || node['imagesrcset']).split(',').map { |candidate| candidate.strip.split(/\s+/).first }.compact.each do |src|
+      next if src.empty? || src.match?(%r{\A([a-z][a-z0-9+.-]*:|//)}i)
+      local = src.sub(/[?#].*\z/, '')
+      target = local.start_with?('/') ? local.delete_prefix('/') : File.join(File.dirname(path), local)
+      raise "Missing image file from srcset: #{src} (#{path})" unless File.file?(File.join(site_dir, target))
+    end
+  end
   ids = document.css('[id]').map { |node| node['id'] }
   raise "Duplicate IDs: #{path}" unless ids.uniq == ids
   canonical = document.at_css('link[rel="canonical"]')

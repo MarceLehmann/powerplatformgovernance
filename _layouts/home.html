@@ -106,8 +106,22 @@ layout: default
 
           {% assign alt = post.image.alt | xml_escape | default: 'Preview Image' %}
 
+          {%- comment -%}
+            10von10 (22.11.2026): die ganze Karte als verlustfreies WebP (tools/hero_webp.py, Datei <id>-card.webp) per srcset, wenn vorhanden;
+            das PNG bleibt src. Gleiche Pixel wie das PNG, nur kleiner.
+          {%- endcomment -%}
+          {%- assign card_srcset = '' -%}
+          {%- if src contains '.png' -%}
+            {%- assign card_webp = src | replace: '.png', '-card.webp' -%}
+            {%- assign card_found = site.static_files | where_exp: 'f', 'f.path contains card_webp' | size -%}
+            {%- if card_found > 0 -%}
+              {%- assign card_webp_url = card_webp | relative_url -%}
+              {%- capture card_srcset %} srcset="{{ card_webp_url }} 1080w" sizes="(min-width: 768px) 360px, 100vw"{%- endcapture -%}
+            {%- endif -%}
+          {%- endif -%}
+
           <div class="col-md-5">
-            <img src="{{ src }}" alt="{{ alt }}" width="{{ post.image.width | default: 1080 }}" height="{{ post.image.height | default: 1350 }}" {{ lqip_attr }}>
+            <img src="{{ src }}"{{ card_srcset }} alt="{{ alt }}" width="{{ post.image.width | default: 1080 }}" height="{{ post.image.height | default: 1350 }}" {{ lqip_attr }}>
           </div>
 
           {% assign card_body_col = '7' %}

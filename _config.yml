@@ -16,6 +16,9 @@ timezone: Europe/Zurich
 
 title: Power Platform Governance # the main title
 
+# Kurzer Zusatz fuer sehr kurze Seitentitel (unter 30 Zeichen), siehe _includes/head.html
+seo_title_pad: "Standards and guidance"
+
 tagline: Governance, standards, and practical guidance # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
@@ -220,7 +223,8 @@ sass:
 compress_html:
   clippings: all
   comments: all
-  endings: all
+  # </head> bleibt erhalten (Parser ohne HTML5-Regel fuer optionale End-Tags, z. B. einfache Crawler und Messskripte, werten sonst den ganzen Body als Head)
+  endings: [html, body, li, dt, dd, optgroup, option, colgroup, caption, thead, tbody, tfoot, tr, td, th]
   profile: false
   blanklines: false
   ignore:

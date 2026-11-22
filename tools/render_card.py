@@ -14,8 +14,12 @@ import json
 import math
 import os
 import random
+import sys
 
 from PIL import Image, ImageDraw, ImageFont
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import hero_webp  # noqa: E402
 
 W, H = 1080, 1350
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -161,6 +165,12 @@ def main():
         out = os.path.join(OUT_DIR, f"{entry['id']}.png")
         img.save(out, optimize=True)
         print(out, os.path.getsize(out))
+        # WebP-Kopfbilder fuer die Beitragsseite (siehe tools/hero_webp.py); ein Fehler hier darf die Karte nicht verhindern
+        try:
+            for extra in hero_webp.make_variants(out):
+                print(extra, os.path.getsize(extra))
+        except Exception as exc:  # noqa: BLE001
+            print('WebP-Varianten nicht erzeugt:', exc)
 
 
 if __name__ == '__main__':

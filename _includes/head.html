@@ -4,7 +4,7 @@
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1b1b1e">
   <meta
     name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
   >
 
   {%- capture seo_tags -%}
@@ -130,6 +130,11 @@
       {%- endcapture -%}
       {%- assign title = title | strip | strip_newlines -%}
       {%- assign title_full = title | append: ' | ' | append: site.title -%}
+      {%- comment -%} zu kurz (unter 30 Zeichen): kurzer Zusatz aus _config.yml (seo_title_pad), nur wenn das Ergebnis hoechstens 60 Zeichen hat {%- endcomment -%}
+      {%- if title_full.size < 30 and site.seo_title_pad -%}
+        {%- assign title_padded = title_full | append: ': ' | append: site.seo_title_pad -%}
+        {%- if title_padded.size <= 60 -%}{%- assign title_full = title_padded -%}{%- endif -%}
+      {%- endif -%}
       {%- if title_full.size <= 60 -%}
         {{- title_full -}}
       {%- else -%}
@@ -137,7 +142,8 @@
         {%- include seo-trim.html text=title max=60 -%}
       {%- endif -%}
     {%- else -%}
-      {{- site.title -}}
+      {%- if site.title.size < 30 and site.seo_title_pad -%}{{- site.title }}: {{ site.seo_title_pad -}}{%- else -%}{{- site.title -}}{%- endif -%}
+      {%- if paginator.page and paginator.page > 1 %} (page {{ paginator.page }}){% endif -%}
     {%- endunless -%}
   </title>
 
@@ -156,6 +162,14 @@
   {% unless jekyll.environment == 'production' %}
     <link rel="stylesheet" href="{{ site.data.origin.cors.bootstrap.css }}">
   {% endunless %}
+
+  {%- comment -%} 10von10 (22.11.2026): Kopfbild des Beitrags (LCP-Element) fruehzeitig laden, parallel zu den Stylesheets {%- endcomment -%}
+  {% if page.layout == 'post' and page.image and page.animation == nil %}
+    {% include hero-image.html %}
+    {% if hero_found > 0 %}
+      <link rel="preload" as="image" type="image/webp" href="{{ hero_webp }}" fetchpriority="high">
+    {% endif %}
+  {% endif %}
 
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ '/assets/css/:THEME.css' | replace: ':THEME', site.theme | relative_url }}">

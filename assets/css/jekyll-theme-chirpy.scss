@@ -181,3 +181,30 @@
 	.content .table-wrapper > table td:first-child { font-weight: 600; font-size: 1rem; }
 	.content .table-wrapper > table td[data-label]:not(:first-child)::before { content: attr(data-label) ": "; color: var(--text-muted-color, #777); }
 }
+
+// 10von10 (22.11.2026): Links im Einleitungstext der Startseite sind unterstrichen, damit sie sich nicht nur durch die Farbe vom Fliesstext unterscheiden (axe link-in-text-block, WCAG 1.4.1).
+.home-intro .lead a {
+	text-decoration: underline;
+	text-underline-offset: 0.15em;
+}
+
+// 10von10 (22.11.2026): Ersatzschriften mit angepassten Massen (siehe assets/lib/fonts/main.css), damit der Schrifttausch keinen Layoutsprung (CLS) mehr erzeugt.
+body { font-family: "Source Sans Pro", "Source Sans Pro Fallback", "Microsoft Yahei", sans-serif; }
+header .post-desc, #toc-bar .label, #search-results a, h1, h2, h3, h4, h5 {
+	font-family: Lato, "Lato Fallback", "Microsoft Yahei", sans-serif;
+}
+
+// 10von10 (22.11.2026): .code-block ersetzt das code-Element um die Rouge-Zeilennummern-Tabelle (siehe _includes/refactor-content.html), gleiche Darstellung wie `code`.
+.highlight .code-block {
+	font-family: var(--bs-font-monospace);
+	font-size: 0.875em;
+	color: var(--code-color);
+	word-wrap: break-word;
+	-webkit-hyphens: none;
+	hyphens: none;
+}
+
+// 10von10 (22.11.2026): Richtungsbeschriftung der Beitragsnavigation aus data-label (siehe _includes/post-nav.html). Chirpy nimmt sonst attr(aria-label).
+.post-navigation .btn::before {
+	content: attr(data-label);
+}

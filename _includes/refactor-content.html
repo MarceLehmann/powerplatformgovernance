@@ -16,6 +16,20 @@
   %}
 {% endif %}
 
+<!-- 10von10 (22.11.2026): Eckzelle (leere erste Kopfzelle) von Matrix-Tabellen mit Zeilentiteln in der ersten Spalte bekommt einen unsichtbaren Namen, sonst fehlt der ersten Spalte ein Tabellenkopf (axe td-has-header). Nur die erste Kopfzelle der Kopfzeile, keine andere leere Zelle. -->
+{% if _content contains '<thead>' %}
+  {% assign _thead_parts = _content | split: '<thead>' %}
+  {% assign _thead_out = _thead_parts[0] %}
+  {% for _thead_part in _thead_parts offset: 1 %}
+    {% assign _thead_row = _thead_part | split: '</tr>' | first | strip_newlines | remove: ' ' %}
+    {% if _thead_row contains '<tr><th></th>' %}
+      {% assign _thead_part = _thead_part | replace_first: '<th></th>', '<td></td>' %}
+    {% endif %}
+    {% assign _thead_out = _thead_out | append: '<thead>' | append: _thead_part %}
+  {% endfor %}
+  {% assign _content = _thead_out %}
+{% endif %}
+
 <!--
   Fixed kramdown code highlight rendering:
   https://github.com/penibelst/jekyll-compress-html/issues/101
@@ -153,7 +167,10 @@
       {% assign _left = _left | replace: 'src=', 'data-src=' | replace: ' lqip=', ' data-lqip="true" src=' %}
 
     {% else %}
-      {% assign _wrapper_class = _wrapper_class | append: ' shimmer' %}
+      <!-- 10von10 (22.11.2026): das Kopfbild (fetchpriority="high") bekommt kein shimmer: Das Theme-JS nimmt die Klasse nur beim load-Ereignis weg. Laedt das (jetzt kleinere) Bild vor dem Skript, bliebe der Platzhalter sonst stehen. -->
+      {% unless _left contains 'fetchpriority="high"' %}
+        {% assign _wrapper_class = _wrapper_class | append: ' shimmer' %}
+      {% endunless %}
     {% endif %}
 
     <!-- Lokale Anpassung (SEO 02.11.2026): ein Bild mit fetchpriority="high" (Kopfbild des Beitrags, LCP-Kandidat) wird nicht lazy geladen -->
@@ -181,7 +198,7 @@
         <!-- add class to existing <a> tag -->
         {% assign _size = _img_content | size | minus: 1 %}
         {% capture _class %}
-          class="img-link{% unless _lqip %} shimmer{% endunless %}"
+          class="img-link{% unless _lqip or _left contains 'fetchpriority="high"' %} shimmer{% endunless %}"
         {% endcapture %}
         {% assign _img_content = _img_content | slice: 0, _size | append: _class | append: '>' %}
 
@@ -290,6 +307,30 @@
 {% endfor %}
 
 {% assign _content = _heading_content %}
+
+<!-- 10von10 (22.11.2026): Code-Bloecke koennen horizontal scrollen und sind darum per Tastatur erreichbar (axe scrollable-region-focusable) -->
+{% if _content contains '<div class="highlight">' %}
+  {% assign _content = _content | replace: '<div class="highlight">', '<div class="highlight" tabindex="0">' %}
+{% endif %}
+
+<!-- 10von10 (22.11.2026): Rouge-Zeilennummern sind eine table; in einem code-Element ist das ungueltiges HTML (W3C). Das Element wird zum div mit .code-block (Darstellung wie code, siehe assets/css) -->
+{% if _content contains '<code><table class="rouge-table">' %}
+  {% assign _content = _content
+    | replace: '<code><table class="rouge-table">', '<div class="code-block"><table class="rouge-table">'
+    | replace: '</table></code>', '</table></div>'
+  %}
+  {% comment %} Chirpys Kopieren-Knopf sucht 'code .rouge-code'. Damit das weiter klappt, wird das div im Browser wieder zum code-Element (im ausgelieferten HTML bleibt es ein gueltiges div). {% endcomment %}
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.highlight > div.code-block').forEach((block) => {
+        const code = document.createElement('code');
+        code.className = block.className;
+        while (block.firstChild) { code.appendChild(block.firstChild); }
+        block.replaceWith(code);
+      });
+    });
+  </script>
+{% endif %}
 
 <!-- return -->
 {{ _content }}

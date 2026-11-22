@@ -1,0 +1,12 @@
+{%- comment -%}
+  10von10 (22.11.2026): Kopfbild eines Beitrags. Setzt hero_path, hero_webp (URL mit baseurl) und hero_found (Anzahl, 0 = keine WebP-Variante).
+  Die WebP-Datei (tools/hero_webp.py, verlustfrei, derselbe Ausschnitt 40:21 wie im Theme) wird nur genutzt, wenn sie im Build liegt;
+  das PNG bleibt src, Lightbox-Link und Open Graph.
+{%- endcomment -%}
+{%- assign hero_found = 0 -%}
+{%- assign hero_path = page.image.path | default: page.image -%}
+{%- if hero_path contains '.png' -%}
+  {%- assign hero_webp_file = hero_path | replace: '.png', '-hero.webp' -%}
+  {%- assign hero_found = site.static_files | where_exp: 'f', 'f.path contains hero_webp_file' | size -%}
+  {%- assign hero_webp = hero_webp_file | relative_url -%}
+{%- endif -%}
