@@ -1,0 +1,66 @@
+{% comment %} Override von jekyll-theme-chirpy 7.6.0 _includes/search-loader.html (10von10, 22.11.2026): Suchindex erst beim ersten Zugriff laden. {% endcomment %}
+<!--
+  Jekyll Simple Search loader
+  See: <https://github.com/christian-fei/Simple-Jekyll-Search>
+-->
+
+{% capture result_elem %}
+  <article class="px-1 px-sm-2 px-lg-4 px-xl-0">
+    <header>
+      <h2><a href="{url}">{title}</a></h2>
+      <div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1">
+        {categories}
+        {tags}
+      </div>
+    </header>
+    <p>{content}</p>
+  </article>
+{% endcapture %}
+
+{% capture not_found %}<p class="mt-5">{{ site.data.locales[include.lang].search.no_results }}</p>{% endcapture %}
+
+<script>
+  {% comment %} Note: dependent library will be loaded in `js-selector.html` {% endcomment %}
+  /* 10von10 (22.11.2026): Der Suchindex (search.json, bis 250 KB) wird erst beim ersten Zugriff auf die Suche geladen, nicht bei jedem Seitenaufruf. */
+  document.addEventListener('DOMContentLoaded', () => {
+    const input = document.getElementById('search-input');
+    let started = false;
+    const start = () => {
+      if (started) { return; }
+      started = true;
+      SimpleJekyllSearch({
+        searchInput: input,
+        resultsContainer: document.getElementById('search-results'),
+        json: '{{ '/assets/js/data/search.json' | relative_url }}',
+        searchResultTemplate: '{{ result_elem | strip_newlines }}',
+        noResultsText: '{{ not_found }}',
+        templateMiddleware: function(prop, value, template) {
+          if (prop === 'categories') {
+            if (value === '') {
+              return `${value}`;
+            } else {
+              return `<div class="me-sm-4"><i class="far fa-folder fa-fw"></i>${value}</div>`;
+            }
+          }
+
+          if (prop === 'tags') {
+            if (value === '') {
+              return `${value}`;
+            } else {
+              return `<div><i class="fa fa-tag fa-fw"></i>${value}</div>`;
+            }
+          }
+        },
+        success: function() {
+          /* wurde schon getippt, bevor der Index da war: Suche jetzt nachholen */
+          if (input && input.value) { input.dispatchEvent(new Event('input', { bubbles: true })); }
+        }
+      });
+    };
+    if (input) {
+      ['focus', 'pointerdown', 'keydown'].forEach((type) => input.addEventListener(type, start, { once: true }));
+    }
+    const trigger = document.getElementById('search-trigger');
+    if (trigger) { trigger.addEventListener('pointerdown', start, { once: true }); }
+  });
+</script>

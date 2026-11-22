@@ -4,3 +4,9 @@
 @font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:600;font-display:swap;src:url(files/source-sans-pro-latin-600-normal.woff2) format('woff2')}
 @font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:700;font-display:swap;src:url(files/source-sans-pro-latin-700-normal.woff2) format('woff2')}
 @font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:900;font-display:swap;src:url(files/source-sans-pro-latin-900-normal.woff2) format('woff2')}
+@font-face{font-family:'Source Sans Pro Fallback';font-style:normal;font-weight:400;src:local('Arial'),local('ArialMT');size-adjust:94.7%;ascent-override:103.9%;descent-override:28.8%;line-gap-override:0%}
+@font-face{font-family:'Source Sans Pro Fallback';font-style:normal;font-weight:600;src:local('Arial Bold'),local('Arial-BoldMT');size-adjust:97.6%;ascent-override:100.9%;descent-override:28%;line-gap-override:0%}
+@font-face{font-family:'Source Sans Pro Fallback';font-style:normal;font-weight:700;src:local('Arial Bold'),local('Arial-BoldMT');size-adjust:92.6%;ascent-override:106.3%;descent-override:29.5%;line-gap-override:0%}
+@font-face{font-family:'Source Sans Pro Fallback';font-style:normal;font-weight:900;src:local('Arial Bold'),local('Arial-BoldMT');size-adjust:94.6%;ascent-override:104%;descent-override:28.9%;line-gap-override:0%}
+@font-face{font-family:'Lato Fallback';font-style:normal;font-weight:300;src:local('Arial'),local('ArialMT');size-adjust:95.2%;ascent-override:103.7%;descent-override:22.4%;line-gap-override:0%}
+@font-face{font-family:'Lato Fallback';font-style:normal;font-weight:400;src:local('Arial'),local('ArialMT');size-adjust:98.1%;ascent-override:100.6%;descent-override:21.7%;line-gap-override:0%}

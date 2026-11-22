@@ -16,6 +16,7 @@
       "@id": "https://powerplatformgovernance.com/#organization",
       "name": "Power Platform Governance",
       "url": "https://powerplatformgovernance.com/",
+      "logo": { "@type": "ImageObject", "url": "https://powerplatformgovernance.com/assets/img/social-preview.jpg", "width": 1200, "height": 630 },
       "description": "A curated collection of Microsoft Power Platform governance articles: short, source-credited summaries with a clear governance takeaway and a direct link to the original article.",
       "sameAs": [
         "https://kmupower.com",
@@ -141,7 +142,7 @@
   "inLanguage": {{ page.lang | jsonify }},
   "mainEntityOfPage": { "@type": "WebPage", "@id": {{ page.url | absolute_url | jsonify }} },
   {% if page.image -%}
-  "image": { "@type": "ImageObject", "url": {{ page.image.path | jsonify }}, "caption": {{ page.image.alt | jsonify }} },
+  "image": { "@type": "ImageObject", "url": {{ page.image.path | absolute_url | jsonify }}, "caption": {{ page.image.alt | jsonify }} },
   {%- endif %}
   {% unless is_original %}{% if page.source_url %}"isBasedOn": {{ page.source_url | jsonify }},{% endif %}{% endunless %}
   "author": { "@id": "https://powerplatformgovernance.com/{% if is_original %}about/#person{% else %}#organization{% endif %}" },

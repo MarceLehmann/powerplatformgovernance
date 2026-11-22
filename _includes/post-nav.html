@@ -1,0 +1,35 @@
+{% comment %} Override von jekyll-theme-chirpy 7.6.0 _includes/post-nav.html (10von10, 22.11.2026): kein aria-label am disabled div (W3C), Link-Name beginnt mit Label und enthaelt den sichtbaren Titel (axe label-content-name-mismatch). {% endcomment %}
+<!-- Navigation buttons at the bottom of the post. -->
+
+<nav class="post-navigation d-flex justify-content-between" aria-label="Post Navigation">
+  {% assign previous = site.data.locales[include.lang].post.button.previous %}
+  {% assign next = site.data.locales[include.lang].post.button.next %}
+
+  {% if page.previous.url %}
+    <a
+      href="{{ site.baseurl }}{{ page.previous.url }}"
+      class="btn btn-outline-primary"
+      aria-label="{{ previous }}: {{ page.previous.title | strip_html | escape }}"
+    >
+      <p>{{ page.previous.title }}</p>
+    </a>
+  {% else %}
+    <div class="btn btn-outline-primary disabled">
+      <p>-</p>
+    </div>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a
+      href="{{ site.baseurl }}{{page.next.url}}"
+      class="btn btn-outline-primary"
+      aria-label="{{ next }}: {{ page.next.title | strip_html | escape }}"
+    >
+      <p>{{ page.next.title }}</p>
+    </a>
+  {% else %}
+    <div class="btn btn-outline-primary disabled">
+      <p>-</p>
+    </div>
+  {% endif %}
+</nav>

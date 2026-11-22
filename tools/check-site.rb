@@ -22,6 +22,12 @@ pages.each do |path|
   document = Nokogiri::HTML(File.read(File.join(site_dir, path)))
   title = document.at_css('title')&.text.to_s.strip
   raise "Empty page title: #{path}" if title.empty? || title.start_with?('|')
+  # Kopfbild-Varianten (srcset, tools/hero_webp.py): jede genannte Datei muss im Build liegen
+  document.css('img[srcset]').each do |img|
+    img['srcset'].split(',').map { |candidate| candidate.strip.split(/\s+/).first }.each do |src|
+      raise "Missing image file from srcset: #{src} (#{path})" unless File.file?(File.join(site_dir, src.sub(%r{\A/}, '')))
+    end
+  end
   ids = document.css('[id]').map { |node| node['id'] }
   raise "Duplicate IDs: #{path}" unless ids.uniq == ids
   canonical = document.at_css('link[rel="canonical"]')
