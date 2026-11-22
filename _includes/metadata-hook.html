@@ -16,6 +16,7 @@
       "@id": "https://powerplatformgovernance.com/#organization",
       "name": "Power Platform Governance",
       "url": "https://powerplatformgovernance.com/",
+      "logo": { "@type": "ImageObject", "url": "https://powerplatformgovernance.com/assets/img/logo-512.png", "width": 512, "height": 512 },
       "description": "A curated collection of Microsoft Power Platform governance articles: short, source-credited summaries with a clear governance takeaway and a direct link to the original article.",
       "sameAs": [
         "https://kmupower.com",
@@ -145,7 +146,7 @@
   {%- endif %}
   {% unless is_original %}{% if page.source_url %}"isBasedOn": {{ page.source_url | jsonify }},{% endif %}{% endunless %}
   "author": { "@id": "https://powerplatformgovernance.com/{% if is_original %}about/#person{% else %}#organization{% endif %}" },
-  "publisher": { "@id": "https://powerplatformgovernance.com/#organization" }
+  "publisher": { "@type": "Organization", "@id": "https://powerplatformgovernance.com/#organization", "name": "Power Platform Governance", "logo": { "@type": "ImageObject", "url": "https://powerplatformgovernance.com/assets/img/logo-512.png" } }
 }
 </script>
 {%- endif -%}
@@ -165,7 +166,7 @@
   "url": {{ page.url | absolute_url | jsonify }},
   "inLanguage": {{ page.lang | default: site.lang | jsonify }},
   "isPartOf": { "@type": "WebSite", "name": {{ site.title | jsonify }}, "url": "https://powerplatformgovernance.com/" },
-  "publisher": { "@id": "https://powerplatformgovernance.com/#organization" }
+  "publisher": { "@type": "Organization", "@id": "https://powerplatformgovernance.com/#organization", "name": "Power Platform Governance", "logo": { "@type": "ImageObject", "url": "https://powerplatformgovernance.com/assets/img/logo-512.png" } }
 }
 </script>
 {%- endunless -%}
