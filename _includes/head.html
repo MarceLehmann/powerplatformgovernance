@@ -167,7 +167,7 @@
   {% if page.layout == 'post' and page.image and page.animation == nil %}
     {% include hero-image.html %}
     {% if hero_found > 0 %}
-      <link rel="preload" as="image" type="image/webp" href="{{ hero_webp }}" imagesrcset="{{ hero_webp }} 1080w" fetchpriority="high">
+      <link rel="preload" as="image" type="image/webp" href="{{ hero_webp }}" fetchpriority="high">
     {% endif %}
   {% endif %}
 

@@ -58,7 +58,7 @@ script_includes:
         {%- include hero-image.html -%}
         {%- assign hero_srcset = '' -%}
         {%- if hero_found > 0 -%}
-          {%- capture hero_srcset %} srcset="{{ hero_webp }} 1080w"{%- endcapture -%}
+          {%- capture hero_srcset %} srcset="{{ hero_webp }}"{%- endcapture -%}
         {%- endif -%}
 
         {% if page.image.alt %}
