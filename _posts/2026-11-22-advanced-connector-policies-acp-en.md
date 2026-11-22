@@ -41,7 +41,7 @@ ACP replaces the classification model Business, Non-Business and Blocked of clas
 | | Advanced connector policies | Classic DLP |
 |---|---|---|
 | Model | Strict allowlist, default deny | Business, Non-Business, Blocked |
-| Granularity | Connectors, actions and triggers, including internal actions. MCP servers as a whole | Classification per connector |
+| Granularity | Connectors, actions and triggers, including internal actions. MCP servers as a whole | Classification per connector, actions via connector action control |
 | Covered connectors | Certified connectors only | Also custom connectors and the HTTP connector |
 | Managed Environments | Can also block connectors that classic DLP cannot block | Some connectors cannot be blocked |
 

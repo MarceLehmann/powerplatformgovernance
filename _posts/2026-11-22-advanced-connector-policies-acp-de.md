@@ -41,7 +41,7 @@ ACP ersetzt das Klassifizierungsmodell Business, Non-Business und Blocked der kl
 | | Advanced Connector Policies | Klassische DLP |
 |---|---|---|
 | Modell | Strikte Allowlist, Default deny | Business, Non-Business, Blocked |
-| Feinheit | Connectors, Aktionen und Trigger, auch interne Aktionen. MCP-Server als Ganzes | Einteilung pro Connector |
+| Feinheit | Connectors, Aktionen und Trigger, auch interne Aktionen. MCP-Server als Ganzes | Einteilung pro Connector, Aktionen über Connector Action Control |
 | Abgedeckte Connectors | Nur zertifizierte Connectors | Auch Custom Connectors und HTTP-Connector |
 | Managed Environments | Kann auch Connectors sperren, die klassische DLP nicht sperren kann | Manche Connectors lassen sich nicht sperren |
 
