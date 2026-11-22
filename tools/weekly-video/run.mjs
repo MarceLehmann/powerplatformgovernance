@@ -43,8 +43,11 @@ const sel = selectPosts(posts, { from: win.from, to: win.to, site, topIds, max: 
 console.log(`${site.name} ${wk} (${win.from} bis ${win.to}): Kandidaten ${sel.poolSize}, gewaehlt ${sel.picked.length}`);
 const minPosts = Math.min(3, site.topCount);
 if (sel.picked.length < minPosts) { console.log('Weniger als 3 Beitraege mit DE und EN in dieser Woche, kein Video.'); process.exit(0); }
-// Passt der Sprechtext auch ohne TL;DR-Saetze nicht ins Budget, den Beitrag mit dem tiefsten Wert weglassen (mindestens minPosts bleiben)
-const fitsAll = () => langs.every(lang => { try { buildScript({ picked: sel.picked, lang, site, week: kw, maxChars }); return true; } catch { return false; } });
+// Sprechtext: zuerst TL;DR-Saetze streichen (Budget maxChars). Reicht das nicht, darf der Text bis 10 % ueber dem Budget liegen (Marcel 22.11.2026).
+// Erst darueber faellt der Beitrag mit dem tiefsten Wert weg (mindestens minPosts bleiben).
+const toleranz = 1.1;
+const build = (lang, whyMap) => { try { return buildScript({ picked: sel.picked, lang, site, week: kw, maxChars, whyMap }); } catch { return buildScript({ picked: sel.picked, lang, site, week: kw, maxChars: Math.round(maxChars * toleranz), whyMap }); } };
+const fitsAll = () => langs.every(lang => { try { build(lang); return true; } catch { return false; } });
 while (!fitsAll() && sel.picked.length > minPosts) {
   const drop = [...sel.picked].sort((x, y) => x.score - y.score || y.en.day.localeCompare(x.en.day))[0];
   sel.picked = sel.picked.filter(x => x !== drop);
@@ -57,15 +60,15 @@ const scripts = {};
 let total = 0;
 for (const lang of langs) {
   // Relevanz-Saetze umschreiben (LLM, mit Rueckfall auf den Originalsatz)
-  const orig = buildScript({ picked: sel.picked, lang, site, week: kw, maxChars }).segs.filter(s => s.kind === 'item');
+  const orig = build(lang).segs.filter(s => s.kind === 'item');
   const whyMap = await rewriteRelevance({ lang, items: orig.map(s => ({ id: s.id, title: s.title, why: s.origWhy })) });
-  try { scripts[lang] = buildScript({ picked: sel.picked, lang, site, week: kw, maxChars, whyMap }); }
-  catch (e) { console.log(`[${lang}] umgeschriebene Saetze zu lang (${e.message}), Originalsaetze verwendet`); scripts[lang] = buildScript({ picked: sel.picked, lang, site, week: kw, maxChars }); }
+  try { scripts[lang] = build(lang, whyMap); }
+  catch (e) { console.log(`[${lang}] umgeschriebene Saetze zu lang (${e.message}), Originalsaetze verwendet`); scripts[lang] = build(lang); }
   total += scripts[lang].chars;
   console.log(`\n[${lang}] ${scripts[lang].chars} Zeichen\n${scripts[lang].text}`);
 }
 console.log(`\nZeichen gesamt: ${total} (Budget ${budget})`);
-if (total > budget) { console.error('Budget ueberschritten, nichts erzeugt.'); process.exit(2); }
+if (total > Math.round(budget * toleranz)) { console.error('Budget ueberschritten, nichts erzeugt.'); process.exit(2); }
 fs.mkdirSync(outDir, { recursive: true });
 fs.writeFileSync(path.join(outDir, 'auswahl.md'), selectionDoc(sel, win, site));
 if (dry) process.exit(0);
