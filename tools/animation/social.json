@@ -1134,5 +1134,17 @@
     "text": "Stop attaching files to SharePoint list items: the case for document libraries\n\nSharePoint list attachments live in hidden folders, inherit the item's permissions and are never versioned; a single attachment is capped at 250 MB. Power Automate needs two actions plus a loop, Graph only reports whether attachments exist, Purview retention policies skip list items, and Copilot agents cannot see attachments. Document libraries with a lookup column deliver versioning, metadata, retention and agent access.\n\nSource: MVPTreff\n\nFull summary: https://powerplatformgovernance.com/en/posts/stop-attaching-files-to-sharepoint-list-items-the-case-for-document-86409649/\n\n#PowerPlatformGovernanceDaily #PowerAutomate #CopilotStudio",
     "bufferPostId": "6b03380bd5eabfb8cccec9ef",
     "dueAt": "2026-11-23T08:00:00.000Z"
+  },
+  "orig-advanced-connector-policies-acp": {
+    "status": "expired",
+    "day": "2026-11-22",
+    "title": "Advanced connector policies (ACP): what they are, where to set them and what can break",
+    "expiredAt": "2026-11-23"
+  },
+  "be4ac728b4535c1aea1aa253": {
+    "status": "expired",
+    "day": "2026-11-22",
+    "title": "Connect MCP Servers To Declarative Agents With M365 Agents Toolkit",
+    "expiredAt": "2026-11-23"
   }
 }
