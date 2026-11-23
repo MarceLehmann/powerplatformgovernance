@@ -39,6 +39,12 @@ faq:
 - question: How do scheduled access reviews for Power Apps work in Rencore Governance?
   answer: Admins set them up in the Review Builder in Rencore Governance, owners complete
     them inside Microsoft Teams, and each decision is recorded as evidence.
+animation:
+  video: /assets/img/animations/4b51c702c45d169dc373417a-en.mp4
+  poster: /assets/img/animations/4b51c702c45d169dc373417a-en.poster.webp
+  width: 800
+  height: 450
+  alt: "Three steps show the Power Apps review flow: set up reviews in Review Builder, complete them inside Microsoft Teams, then record each decision as evidence."
 ---
 
 ## TL;DR

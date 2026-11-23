@@ -1,0 +1,38 @@
+{
+ "title": "Power Apps Zugriffsreview Ablauf",
+ "subtitle": "Reviews einrichten, in Teams erledigen und Nachweise behalten.",
+ "steps": [
+  {
+   "product": "admin",
+   "icon": "gear",
+   "productLabel": "Rencore Governance",
+   "title": "Reviews im Review Builder einrichten",
+   "actions": [
+    "Review Builder",
+    "einrichten"
+   ]
+  },
+  {
+   "product": "teams",
+   "icon": "check",
+   "productLabel": "Microsoft Teams",
+   "title": "Owner erledigen Reviews in Teams",
+   "actions": [
+    "erledigen",
+    "Microsoft Teams"
+   ]
+  },
+  {
+   "product": "admin",
+   "icon": "doc",
+   "productLabel": "Rencore Governance",
+   "title": "Jede Entscheidung als Nachweis",
+   "actions": [
+    "als Nachweis protokolliert"
+   ]
+  }
+ ],
+ "punchline": [
+  "Entscheide als Nachweis"
+ ]
+}

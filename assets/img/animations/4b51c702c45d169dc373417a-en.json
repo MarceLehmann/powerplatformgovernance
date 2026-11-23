@@ -1,0 +1,41 @@
+{
+ "title": "Power Apps access review flow",
+ "subtitle": "Set up reviews, complete them in Teams, and keep evidence.",
+ "steps": [
+  {
+   "product": "admin",
+   "icon": "gear",
+   "productLabel": "Rencore Governance",
+   "title": "Set up reviews in Review Builder",
+   "actions": [
+    "Review Builder",
+    "set them up"
+   ],
+   "evidence": "Admins set them up in the Review Builder in Rencore Governance"
+  },
+  {
+   "product": "teams",
+   "icon": "check",
+   "productLabel": "Microsoft Teams",
+   "title": "Owners complete reviews in Teams",
+   "actions": [
+    "complete them",
+    "Microsoft Teams"
+   ],
+   "evidence": "owners complete them inside Microsoft Teams"
+  },
+  {
+   "product": "admin",
+   "icon": "doc",
+   "productLabel": "Rencore Governance",
+   "title": "Record each decision as evidence",
+   "actions": [
+    "recorded as evidence"
+   ],
+   "evidence": "each decision is recorded as evidence."
+  }
+ ],
+ "punchline": [
+  "Decisions kept as evidence"
+ ]
+}

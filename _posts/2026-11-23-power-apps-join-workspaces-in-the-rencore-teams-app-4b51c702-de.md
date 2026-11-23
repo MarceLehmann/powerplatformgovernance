@@ -40,6 +40,12 @@ faq:
     Governance?
   answer: Admins richten sie im Review Builder ein, Owner bestätigen in Microsoft
     Teams, wer Zugriff noch braucht, und jede Entscheidung wird als Nachweis protokolliert.
+animation:
+  video: /assets/img/animations/4b51c702c45d169dc373417a-de.mp4
+  poster: /assets/img/animations/4b51c702c45d169dc373417a-de.poster.webp
+  width: 800
+  height: 450
+  alt: "Drei Schritte zeigen den Ablauf fuer Power Apps Ueberpruefungen: Reviews im Review Builder einrichten, in Microsoft Teams erledigen und jede Entscheidung als Nachweis protokollieren."
 ---
 
 ## TL;DR

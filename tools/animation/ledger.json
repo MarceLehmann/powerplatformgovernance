@@ -1299,5 +1299,15 @@
       "Each agent is provisioned from VS Code",
       "tested in M365 Copilot"
     ]
+  },
+  "4b51c702c45d169dc373417a": {
+    "gif": true,
+    "reason": "The post states a clear 3 stage review flow: admins set up reviews, owners complete them in Teams, and decisions are recorded as evidence.",
+    "at": "2026-11-23",
+    "evidence": [
+      "Admins set them up in the Review Builder in Rencore Governance",
+      "owners complete them inside Microsoft Teams",
+      "each decision is recorded as evidence."
+    ]
   }
 }
