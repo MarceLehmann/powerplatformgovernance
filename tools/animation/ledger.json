@@ -1287,5 +1287,17 @@
     "gif": false,
     "reason": "The post is governance advice and comparison content, not a concrete 3 to 5 stage procedure explicitly described as a single sequence.",
     "at": "2026-11-22"
+  },
+  "be4ac728b4535c1aea1aa253": {
+    "gif": true,
+    "reason": "The post states a concrete 5 stage path across three MCP server auth setups, then provisioning and testing.",
+    "at": "2026-11-23",
+    "evidence": [
+      "Microsoft Learn's MCP server needs no authentication",
+      "Atlassian's uses OAuth with dynamic registration and prompts the user to sign in",
+      "GitHub's requires a registered OAuth app with client ID, secret and scopes such as repo and read:org.",
+      "Each agent is provisioned from VS Code",
+      "tested in M365 Copilot"
+    ]
   }
 }

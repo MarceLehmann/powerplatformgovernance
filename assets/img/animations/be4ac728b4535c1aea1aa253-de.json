@@ -1,0 +1,62 @@
+{
+ "title": "MCP-Server mit Agents verbinden",
+ "subtitle": "Authentifizierung je Server setzen, dann in VS Code provisionieren und in M365 Copilot testen.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "link",
+   "productLabel": "M365 Agents Toolkit",
+   "title": "Microsoft Learn MCP-Server anbinden",
+   "actions": [
+    "Microsoft Learn",
+    "ohne Authentifizierung"
+   ]
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "key",
+   "productLabel": "M365 Agents Toolkit",
+   "title": "Atlassian mit OAuth verbinden",
+   "actions": [
+    "Atlassian",
+    "dynamisches OAuth",
+    "anmelden"
+   ]
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "shield",
+   "productLabel": "M365 Agents Toolkit",
+   "title": "GitHub OAuth-App registrieren",
+   "actions": [
+    "GitHub",
+    "Client-ID",
+    "read:org"
+   ]
+  },
+  {
+   "product": "generic",
+   "icon": "play",
+   "productLabel": "VS Code",
+   "title": "Jeden Agent provisionieren",
+   "actions": [
+    "VS Code",
+    "provisioniert"
+   ]
+  },
+  {
+   "product": "generic",
+   "icon": "check",
+   "productLabel": "M365 Copilot",
+   "title": "Den Agent testen",
+   "actions": [
+    "M365 Copilot",
+    "getestet"
+   ]
+  }
+ ],
+ "punchline": [
+  "Drei Auth-Muster",
+  "Provisionieren, dann testen"
+ ]
+}

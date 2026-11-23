@@ -40,6 +40,12 @@ faq:
 - question: Which OAuth scopes do I need for the GitHub MCP server?
   answer: The walkthrough uses the scopes repo, read:org and read:user. They tell
     the GitHub MCP server what access the OAuth app has, such as reading repositories.
+animation:
+  video: /assets/img/animations/be4ac728b4535c1aea1aa253-en.mp4
+  poster: /assets/img/animations/be4ac728b4535c1aea1aa253-en.poster.webp
+  width: 800
+  height: 450
+  alt: "A declarative agent connects to Microsoft Learn with no authentication, to Atlassian with dynamic OAuth sign in, to GitHub with a registered OAuth app and scopes, then is provisioned from VS Code and tested in M365 Copilot."
 ---
 
 ## TL;DR

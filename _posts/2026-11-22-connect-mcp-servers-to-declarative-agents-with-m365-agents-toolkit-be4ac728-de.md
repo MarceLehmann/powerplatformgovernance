@@ -40,6 +40,12 @@ faq:
 - question: Welche OAuth-Scopes braucht die GitHub-App für den GitHub MCP-Server?
   answer: Verwendet werden die Scopes repo, read:org und read:user. Sie bestimmen,
     worauf die OAuth-App beim GitHub MCP-Server zugreifen darf, etwa Repositorys lesen.
+animation:
+  video: /assets/img/animations/be4ac728b4535c1aea1aa253-de.mp4
+  poster: /assets/img/animations/be4ac728b4535c1aea1aa253-de.poster.webp
+  width: 800
+  height: 450
+  alt: "Ein deklarativer Agent verbindet Microsoft Learn ohne Authentifizierung, Atlassian mit dynamischem OAuth und Anmeldung sowie GitHub mit registrierter OAuth-App und Scopes, wird dann aus VS Code provisioniert und in M365 Copilot getestet."
 ---
 
 ## TL;DR

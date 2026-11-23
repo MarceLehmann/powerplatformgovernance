@@ -1,0 +1,67 @@
+{
+ "title": "Connect MCP servers to agents",
+ "subtitle": "Set auth per MCP server, then provision in VS Code and test in M365 Copilot.",
+ "steps": [
+  {
+   "product": "copilotstudio",
+   "icon": "link",
+   "productLabel": "M365 Agents Toolkit",
+   "title": "Add Microsoft Learn MCP server",
+   "actions": [
+    "Microsoft Learn",
+    "no authentication"
+   ],
+   "evidence": "Microsoft Learn's MCP server needs no authentication"
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "key",
+   "productLabel": "M365 Agents Toolkit",
+   "title": "Connect Atlassian with OAuth",
+   "actions": [
+    "Atlassian",
+    "dynamic OAuth",
+    "sign in"
+   ],
+   "evidence": "Atlassian's uses OAuth with dynamic registration and prompts the user to sign in"
+  },
+  {
+   "product": "copilotstudio",
+   "icon": "shield",
+   "productLabel": "M365 Agents Toolkit",
+   "title": "Register GitHub OAuth app",
+   "actions": [
+    "GitHub",
+    "client ID",
+    "read:org"
+   ],
+   "evidence": "GitHub's requires a registered OAuth app with client ID, secret and scopes such as repo and read:org."
+  },
+  {
+   "product": "generic",
+   "icon": "play",
+   "productLabel": "VS Code",
+   "title": "Provision each agent",
+   "actions": [
+    "VS Code",
+    "provisioned"
+   ],
+   "evidence": "Each agent is provisioned from VS Code"
+  },
+  {
+   "product": "generic",
+   "icon": "check",
+   "productLabel": "M365 Copilot",
+   "title": "Test the agent",
+   "actions": [
+    "M365 Copilot",
+    "tested"
+   ],
+   "evidence": "tested in M365 Copilot"
+  }
+ ],
+ "punchline": [
+  "Three auth patterns",
+  "Provision, then test"
+ ]
+}
