@@ -1146,5 +1146,14 @@
     "day": "2026-11-22",
     "title": "Connect MCP Servers To Declarative Agents With M365 Agents Toolkit",
     "expiredAt": "2026-11-23"
+  },
+  "4b51c702c45d169dc373417a": {
+    "status": "queued",
+    "day": "2026-11-23",
+    "kind": "video",
+    "title": "Power Apps join Workspaces in the Rencore Teams App",
+    "text": "Power Apps join Workspaces in the Rencore Teams App\n\nPower Apps now appear in Workspaces in the Rencore Teams App, next to Teams, SharePoint sites, Viva Engage communities and Microsoft 365 groups. From one list inside Microsoft Teams, owners can see who owns and uses each app, manage access, and complete scheduled access reviews whose decisions are recorded as evidence.\n\nSource: Rencore Blog\n\nFull summary: https://powerplatformgovernance.com/en/posts/power-apps-join-workspaces-in-the-rencore-teams-app-4b51c702/\n\n#PowerPlatformGovernanceDaily #PowerApps",
+    "bufferPostId": "6b0489710191a6ffcb85e2a2",
+    "dueAt": "2026-11-24T08:00:00.000Z"
   }
 }
