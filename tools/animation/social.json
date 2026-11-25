@@ -1155,5 +1155,14 @@
     "text": "Power Apps join Workspaces in the Rencore Teams App\n\nPower Apps now appear in Workspaces in the Rencore Teams App, next to Teams, SharePoint sites, Viva Engage communities and Microsoft 365 groups. From one list inside Microsoft Teams, owners can see who owns and uses each app, manage access, and complete scheduled access reviews whose decisions are recorded as evidence.\n\nSource: Rencore Blog\n\nFull summary: https://powerplatformgovernance.com/en/posts/power-apps-join-workspaces-in-the-rencore-teams-app-4b51c702/\n\n#PowerPlatformGovernanceDaily #PowerApps",
     "bufferPostId": "6b0489710191a6ffcb85e2a2",
     "dueAt": "2026-11-24T08:00:00.000Z"
+  },
+  "0bfa253fddeea7cf2f4dd888": {
+    "status": "queued",
+    "day": "2026-11-25",
+    "kind": "image",
+    "title": "Copilot UI overhaul merges Chat and Cowork: billable features now easier to trigger",
+    "text": "Copilot UI overhaul merges Chat and Cowork: billable features now easier to trigger\n\nMicrosoft's Copilot app UI in Frontier replaces separate Chat and Cowork tabs with a Home tab, moves the mode selector into the chat box, and adds Plugins, Automations, Workspaces and personal Projects. The merged interface makes it far easier to trigger usage-based billable Cowork features by accident; scheduled Chat prompts remain under the chat's three-dot menu, not Automations.\n\nSource: Bright Ideas Agency Blog\n\nFull summary: https://powerplatformgovernance.com/en/posts/copilot-ui-overhaul-merges-chat-and-cowork-billable-features-now-0bfa253f/\n\n#PowerPlatformGovernanceDaily",
+    "bufferPostId": "6b072c70827512a7c4cbb2eb",
+    "dueAt": "2026-11-26T08:00:00.000Z"
   }
 }
