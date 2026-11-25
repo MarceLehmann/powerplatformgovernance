@@ -1309,5 +1309,10 @@
       "owners complete them inside Microsoft Teams",
       "each decision is recorded as evidence."
     ]
+  },
+  "0bfa253fddeea7cf2f4dd888": {
+    "gif": false,
+    "reason": "The post is governance advice and UI change news, not a concrete 3 to 5 stage procedure stated in the text.",
+    "at": "2026-11-25"
   }
 }
