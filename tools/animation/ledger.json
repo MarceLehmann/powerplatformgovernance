@@ -1314,5 +1314,10 @@
     "gif": false,
     "reason": "The post is governance advice and UI change news, not a concrete 3 to 5 stage procedure stated in the text.",
     "at": "2026-11-25"
+  },
+  "05dd912fc354fb13922d27df": {
+    "gif": false,
+    "reason": "This is governance advice listing habits and responsibilities, not a concrete 3 to 5 stage procedure stated in order.",
+    "at": "2026-11-26"
   }
 }
