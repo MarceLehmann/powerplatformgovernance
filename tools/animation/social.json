@@ -1164,5 +1164,14 @@
     "text": "Copilot UI overhaul merges Chat and Cowork: billable features now easier to trigger\n\nMicrosoft's Copilot app UI in Frontier replaces separate Chat and Cowork tabs with a Home tab, moves the mode selector into the chat box, and adds Plugins, Automations, Workspaces and personal Projects. The merged interface makes it far easier to trigger usage-based billable Cowork features by accident; scheduled Chat prompts remain under the chat's three-dot menu, not Automations.\n\nSource: Bright Ideas Agency Blog\n\nFull summary: https://powerplatformgovernance.com/en/posts/copilot-ui-overhaul-merges-chat-and-cowork-billable-features-now-0bfa253f/\n\n#PowerPlatformGovernanceDaily",
     "bufferPostId": "6b072c70827512a7c4cbb2eb",
     "dueAt": "2026-11-26T08:00:00.000Z"
+  },
+  "05dd912fc354fb13922d27df": {
+    "status": "queued",
+    "day": "2026-11-26",
+    "kind": "image",
+    "title": "EU AI Act: every AI agent needs an owner",
+    "text": "EU AI Act: every AI agent needs an owner\n\nThe EU AI Act boils down to three habits for teams deploying AI: know every agent you run, give each one an owner, and prove it is under control. An agent built for an ended project can still run after its builder is gone, and the Act reads that as missing oversight. Use-case classification sits with risk or compliance; IT keeps the inventory.\n\nSource: Rencore Blog\n\nFull summary: https://powerplatformgovernance.com/en/posts/eu-ai-act-every-ai-agent-needs-an-owner-05dd912f/\n\n#PowerPlatformGovernanceDaily #CopilotStudio",
+    "bufferPostId": "6b087deff0a96d0f217fdac3",
+    "dueAt": "2026-11-27T08:00:00.000Z"
   }
 }
