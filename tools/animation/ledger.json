@@ -1319,5 +1319,10 @@
     "gif": false,
     "reason": "This is governance advice listing habits and responsibilities, not a concrete 3 to 5 stage procedure stated in order.",
     "at": "2026-11-26"
+  },
+  "3d58732f267ae1b7aadd6609": {
+    "gif": false,
+    "reason": "This is a governance and change announcement about a retiring setting and its replacement, not a concrete 3 to 5 stage procedure stated in the post.",
+    "at": "2026-11-27"
   }
 }
