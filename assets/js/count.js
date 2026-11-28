@@ -2,6 +2,9 @@
 // sha256 of the unmodified upstream file: 792b7abd26c1fb6ae62906833e09a301251e2641816e69e4f95aba518f3fe3f0
 // GoatCounter: https://www.goatcounter.com
 // This file is released under the ISC license: https://opensource.org/licenses/ISC
+// Local change 2026-11-28: no query string or fragment is sent (neither q, path, referrer nor URLs in the
+// title). Pages listed in NOT_COUNTED are not counted, neither as current page nor as counted path, and are
+// left out as referrer. This file is identical on all of our sites.
 ;(function() {
 	'use strict';
 
@@ -29,7 +32,6 @@
 			e: !!(vars.event || goatcounter.event),
 			s: window.screen.width,
 			b: is_bot(),
-			q: location.search,
 		}
 
 		var rcb, pcb, tcb  // Save callbacks to apply later.
@@ -45,7 +47,37 @@
 		if (rcb) data.r = rcb(data.r)
 		if (tcb) data.t = tcb(data.t)
 		if (pcb) data.p = pcb(data.p)
+		// Check the final values (after callbacks): only strings may leave the browser.
+		data.p = strip_query(data.p)
+		if (data.p === '' || is_not_counted(data.p))
+			data.p = null  // Not counted.
+		data.r = strip_query(data.r)
+		if (data.r === null || is_not_counted(data.r))
+			data.r = ''
+		data.t = clean_title(data.t)
 		return data
+	}
+
+	// Query strings and fragments can carry personal keys (e.g. ?id=...&t=...); never send them.
+	var strip_query = function(v) { return typeof(v) === 'string' ? v.split(/[?#]/)[0] : null }
+
+	// Remove query strings and fragments of URLs and any key=value query from the title.
+	var clean_title = function(v) {
+		if (typeof(v) !== 'string')
+			return ''
+		return v.replace(/((?:https?:\/\/|\/)[^\s?#]*)[?#]\S*/gi, '$1').replace(/\?[^\s=?]+=\S*/g, '')
+	}
+
+	// These paths and everything below them are never counted (page views and events).
+	var NOT_COUNTED = ['/abmelden', '/adventskalender/abmelden', '/trainerinfo', '/kundenportal']
+	var is_not_counted = function(value) {
+		if (typeof(value) !== 'string')
+			return false
+		var p = value.replace(/^[a-z][a-z0-9+.-]*:\/\/[^\/]*/i, '')  // Full URL (referrer) to path.
+		try         { p = decodeURIComponent(p) }
+		catch (err) {}
+		p = p.toLowerCase().replace(/\/{2,}/g, '/').replace(/\/+$/, '')
+		return NOT_COUNTED.some(function(x) { return p === x || p.indexOf(x + '/') === 0 })
 	}
 
 	// Check if a value is "empty" for the purpose of get_data().
@@ -98,7 +130,7 @@
 			if (a.hostname.replace(/^www\./, '') === location.hostname.replace(/^www\./, ''))
 				loc = a
 		}
-		return (loc.pathname + loc.search) || '/'
+		return loc.pathname || '/'
 	}
 
 	// Run function after DOM is loaded.
@@ -111,6 +143,8 @@
 
 	// Filter some requests that we (probably) don't want to count.
 	window.goatcounter.filter = function() {
+		if (is_not_counted(location.pathname))
+			return 'path is not counted'
 		if ('visibilityState' in document && document.visibilityState === 'prerender')
 			return 'visibilityState'
 		if (!goatcounter.allow_frame && location !== parent.location)
